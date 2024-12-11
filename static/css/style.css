@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+
+/*======================================*/
+/*======================================*/
+/* 화면 공통 */
+/* 공통 Element ************************/
+/* 슬라이드 swiper  */
+
+
+
+
+@media screen and (min-width: 480px) {
+	.sec_event {
+		padding: var(--dx-section-pad-y) calc(var(--dx-section-pad-x) + 0.313rem);
+	}
+}
+
+@media only screen and ( max-width: 360px ){
+	html {font-size: 16px;}
+}

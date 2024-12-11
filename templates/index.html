@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<!-- 카카오 -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0, viewport-fit=cover ,interactive-widget=resizes-visual">
+	<!-- <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0, viewport-fit=cover ,interactive-widget=resizes-content"> -->
+	<!-- <meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0, viewport-fit=cover ,interactive-widget=overlays-content"> -->
+	<!-- 토스 -->
+	<!-- <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"> -->
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<meta name="theme-color" content="#ffffff">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/common.css" /> -->
+	
+	<!-- Scripts -->
+</head>
+
+<style>
+	.hidden {
+		display: none !important;
+	}
+	.page-wrapper {
+		width: 100%;
+		height: 100%;
+	}
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 56px;
+		background-color: #fff;
+		padding: 0 12px;
+	}
+	.header__inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+	}
+	.header__inner_page {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		gap: 6px;
+	}
+	.header__inner_utility {
+		margin-left: auto;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		gap: 6px;
+	}
+	.content {
+		width: 100%;
+		height: auto;
+		min-height: 100%;
+		padding: 56px 0;
+	}
+	.toast-pop {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 8px;
+	}
+	.toast-pop .toast {
+		width: 100%;
+		padding: auto;
+		text-align: center;
+		background: rgba(0, 0, 0, 0.7);
+		border-radius: 24PX;
+		padding: 12px;
+	}
+	.toast-pop .toast p {
+		font-size: 14px;
+		color: #fff;
+	}
+	.footer {
+		display: none;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+</style>
+
+<body>
+
+<div class="page-wrapper main detail">
+	<header class="header">
+		<div class="header__inner">
+			<div class="header__inner_home hidden">
+				<span class="logo"></span>
+				<h1>눈으로 보는 ARS</h1>
+			</div>
+			<div class="header__inner_page">
+				<button type="button" class="btn close hidden">닫기</button>
+				<button type="button" class="btn prev">이전</button>
+				<p class="header__title">화면 타이틀</p>
+			</div>
+			<div class="header__inner_utility">
+				<button type="button" class="btn utility councel">상담사</button>
+				<button type="button" class="btn utility callEnd">종료</button>
+			</div>
+		</div>
+	</header>
+
+	<div class="content">
+		<div>
+			<p>궁금하신 내용을 아래에서 선택해주세요</p>
+		</div>
+		<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px;">
+			<input type="text">
+			<input type="text">
+			<input type="text">
+			<input type="text">
+			<input type="text">
+			<input type="text">
+			<input type="text">
+		</div>
+
+		<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 16px;">
+			<p>많이 찾는 문의</p>
+			<ul>
+				<li>
+					<a href="">
+						<span>최근사용</span>
+						<img src="" alt="">
+						<span>청구 요금</span>
+						<span>이번달과 지난달 요금 조회</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<span>최근사용</span>
+						<img src="" alt="">
+						<span>나의 요금제</span>
+						<span>요금제 확인·변경</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>부가서비스 신청</span>
+						<!-- <span>청구요금 미납 납부</span> -->
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>실시간 요금</span>
+						<span>오늘까지 사용한 요금 조회</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>요금 납부 방법 변경</span>
+						<span>계좌·카드로 매달 자동이체</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>청구서 받는 방법 변경</span>
+						<!-- <span>계좌·카드로 매달 자동이체</span> -->
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>해외로밍 신청</span>
+						<!-- <span>계좌·카드로 매달 자동이체</span> -->
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<!-- <span>최근사용</span> -->
+						<img src="" alt="">
+						<span>통화품질 문의</span>
+						<!-- <span>계좌·카드로 매달 자동이체</span> -->
+					</a>
+				</li>
+			</ul>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="toast-pop">
+		<div class="toast">
+			<p>토스트 팝업입니다</p>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<button style="width: 100%; height: 40px;">버튼테스트</button>
+	</footer>
+</div>
+
+</body>
+
+</html>
