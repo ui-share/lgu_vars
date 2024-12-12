@@ -54,7 +54,6 @@ pre, code, samp, kbd, textarea {font-family: 'Consolas', 'Courier New', 'Lucida 
 	--dt-error: #E22A21;
 
 
-
 	/* sight design - font */
 	/* font style - font size */
 	--dt-fz30: 30px;
@@ -77,33 +76,17 @@ pre, code, samp, kbd, textarea {font-family: 'Consolas', 'Courier New', 'Lucida 
 
 
 
+
 	/* common */
 	--dt-font-family: "Pretendard", system-ui, sans-serif;
 	--dt-body-font-size: var(--dt-fz16);
 	--dt-body-line-height: var(--dt-lh150);
 
-
-	--dwp-shadow-inset: inset 0 0 0 9999px rgba(var(--dwp-gray-900-rgb), 0.3);
-	--dwp-primary-shadow: 0 0 0.625em rgba(var(--dwp-primary-600-rgb), 0.45);	
-	--dwp-shadow: 0 0 0.625em 0 rgba(var(--dwp-gray-600-rgb), 0.25);
-	--dwp-shadow-bottom: 0 0.5rem 0.5rem rgba(var(--dwp-gray-600-rgb), 0.3);
-	--dwp-shadow-right: 0.25rem 0.25rem 0.25rem rgba(var(--dwp-gray-600-rgb), 0.4);
-		
-	--dwp-shadow-400: 0  0.25rem  0.25rem rgba(var(--dwp-gray-400-rgb), 0.25);
-	--dwp-shadow-600: 0  0.5em  0.5em rgba(var(--dwp-gray-400-rgb), 0.4);
-	--dwp-shadow-900: 0  0.5em  0.5em rgba(var(--dwp-gray-900-rgb), 0.45);
-
-
-		
-	/* *** UI color *** */
-	/* form */
-	--dwp-form-bg: var(--dwp-light);
-	--dwp-form-color: var(--dwp-gray-900);
-	--dwp-form-border-color: var(--dwp-gray-500);
-	--dwp-form-focus-color: var(--dwp-primary);
-	--dwp-form-shadow: 0 0 0 0.25rem rgba(var(--dwp-primary-rgb), .4);
-	--dwp-form-select-indicate: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
-	--dwp-form-checked-bg: var(--dwp-primary);
+	/* shadow */
+	/* card-shadow */
+	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-grayscale18), 0.04);
+	/* bottomsheet-shadow */
+	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-grayscale18), 0.04);
 }
 
 .dwp_dark:root {
@@ -138,7 +121,6 @@ pre, code, samp, kbd, textarea {font-family: 'Consolas', 'Courier New', 'Lucida 
 	--dwp-gray-900-rgb: 159, 166, 188;
 	--dwp-gray-1000-rgb: 203, 208, 221;
 	--dwp-gray-1100-rgb: 227, 230, 237;
-
 }
 
 /*======================================*/
