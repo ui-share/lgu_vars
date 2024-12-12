@@ -71,7 +71,7 @@
 body { 
     font-family: "Pretendard", system-ui, sans-serif;
     font-weight: var(--dt-fw400);
-    line-height: var(--dt-lh120); 
+    line-height: 1; 
     /* 폰트사이즈의 값을 그대로 따른다 */
     font-size: var(--dt-fz16); 
     text-overflow: ellipsis;

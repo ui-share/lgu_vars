@@ -18,54 +18,25 @@
 
 //font-style
 // @include fontStyle($fc, $lh);
-
 // font-family
-@mixin g-7($fs: 0.875rem, $lh:1.875rem) {
-    font-family: 'GmarketSans';
-    font-weight: 700;
-    transform: rotate(0.03deg);
-    font-size: $fs;
-    line-height: $lh;
-}
-@mixin g-5($fs: 1.125rem, $lh:1.75rem) {
-    font-family: 'GmarketSans';
-    font-weight: 500;
-    transform: rotate(0.03deg);
-    font-size: $fs;
-    line-height: $lh;
-}
-
-@mixin pre-7($fs: 2.25rem, $lh:2.25rem) {
+@mixin pre-7($fs: 16px, $lh:120%) {
     font-family: 'Pretendard'; 
     font-weight: 700;
     font-size: $fs;
     line-height: $lh;
 }
-@mixin pre-6($fs: 2.25rem, $lh:2.25rem) {
+@mixin pre-6($fs: 16px, $lh:120%) {
     font-family: 'Pretendard'; 
     font-weight: 600;
     font-size: $fs;
     line-height: $lh;
 }
-@mixin pre-5($fs: 1.125rem, $lh:1.75rem) {
-    font-family: 'Pretendard'; 
-    font-weight: 500;
-    font-size: $fs;
-    line-height: $lh;
-}
-@mixin pre-4($fs: 1.375rem, $lh:1.875rem) {
+@mixin pre-4($fs: 16px, $lh:120%) {
     font-family: 'Pretendard'; 
     font-weight: 400;
     font-size: $fs;
     line-height: $lh;
 }
-@mixin pre-3($fs: 1.125rem, $lh:1.75rem) {
-    font-family: 'Pretendard'; 
-    font-weight: 300;
-    font-size: $fs;
-    line-height: $lh;
-}
-
 
 
 //flex-box
@@ -91,14 +62,16 @@ $flex-map: (
 
 
 //grid-box
-
 @mixin gridBox($num:3) {
     display: grid;
     grid-template-columns: repeat($num, 1fr);
     grid-template-rows: max-content;
 }
 
-//btn-style
+// btn-style
+// btn 선언 방식
+// btn-형태
+// eg)btn-sol, btn-line
 @mixin btnPill-01 {
     padding: 10px 13px;
     color: var(--d-fc1);
@@ -200,7 +173,7 @@ $flex-map: (
 }
 
 // box-shadow
-@mixin boxShadow    ($x:0, 
+@mixin boxShadow   ($x:0, 
                     $y:3px, 
                     $blur:20px, 
                     $spread:10px, 
