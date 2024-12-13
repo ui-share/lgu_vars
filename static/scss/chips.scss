@@ -1,0 +1,10 @@
+.chips-group {
+	display: block;
+	.chips-box {
+		color:aliceblue;
+	}
+	.chips {
+		display: block;
+		color: adjust-hue($color: #000000, $degrees: 0);
+	}
+}

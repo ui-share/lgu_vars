@@ -1,4 +1,7 @@
 @charset "utf-8";
+/*======================================
+	Reset
+======================================*/
 /* http://meyerweb.com/eric/tools/css/reset/ 
 	v2.0 | 20110126
 	License: none (public domain)
@@ -96,7 +99,7 @@ a {
 	--dt-gray15: #181A1B;
 	--dt-black: #000000;
 
-	/* Color Style - system */
+	/* color Style - system */
 	--dt-primary: #E30084;
 	--dt-success: #00AA02;
 	--dt-warning: #F86800;
@@ -122,10 +125,11 @@ a {
 	--dt-lh140: 140%;
 	--dt-lh120: 120%;
 
-	/* shadow */
-	/* card-shadow */
+	/* sight design - shadow */
+	/* shadow style - card */
 	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-grayscale18), 0.04);
-	/* bottom sheet-shadow */
+
+	/* shadow style - bottom sheet */
 	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-grayscale18), 0.04);
 }
 
@@ -133,7 +137,7 @@ a {
 
 
 /*======================================
-	body style 정의
+	common
 ======================================*/
 body { 
     font-family: "Pretendard", system-ui, sans-serif;
