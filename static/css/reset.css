@@ -1,95 +1,8 @@
 @charset "utf-8";
-/* 
-	css reset, 자주 사용하는 변수 정리
-
-*/ 
-
-/*======================================
-	ROOT
-	사용할 변수 정리   
-======================================*/
-:root {	
-	/* sight design - color */
-	/* color style - grayscale */
-	--dt-white: #FFFFFF;
-	--dt-gray01: #F9FAFB;
-	--dt-gray02: #F6F7FC;
-	--dt-gray03: #F3F5F6;
-	--dt-gray04: #F3F4F6;
-	--dt-gray05: #EEF1FD;
-	--dt-gray06: #E3E6F1;
-	--dt-gray07: #DCE6FF;
-	--dt-gray07: #DCE0E5;
-	--dt-gray08: #A8B3BD;
-	--dt-gray09: #7F8A94;
-	--dt-gray10: #66707A;
-	--dt-gray11: #525960;
-	--dt-gray12: #4B506A;
-	--dt-gray13: #3B4044;
-	--dt-gray14:: #31354D;
-	--dt-gray15: #181A1B;
-	--dt-black: #000000;
-
-
-	/* Color Style - system */
-	--dt-primary: #E30084;
-	--dt-success: #00AA02;
-	--dt-warning: #F86800;
-	--dt-error: #E22A21;
-
-
-	/* sight design - font */
-	/* font style - font size */
-	--dt-fz30: 30px;
-	--dt-fz24: 24px;
-	--dt-fz22: 22px;
-	--dt-fz18: 18px;
-	--dt-fz16: 16px;
-	--dt-fz14: 14px;
-	--dt-fz12: 12px;
-
-	/* font style - font weight */
-	--dt-fw700: 700;
-	--dt-fw600: 600;
-	--dt-fw400: 400;
-
-	/* font style - line height */
-	--dt-lh150: 150%;
-	--dt-lh140: 140%;
-	--dt-lh120: 120%;
-
-	/* shadow */
-	/* card-shadow */
-	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-grayscale18), 0.04);
-	/* bottom sheet-shadow */
-	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-grayscale18), 0.04);
-}
-
-
-/*======================================
-	body style을 정의한다.
-======================================*/
-body { 
-    font-family: "Pretendard", system-ui, sans-serif;
-    font-weight: var(--dt-fw400);
-    line-height: 1; 
-    /* 폰트사이즈의 값을 그대로 따른다 */
-    font-size: var(--dt-fz16); 
-    text-overflow: ellipsis;
-    max-width:100%;
-    background-color: var(--dt-white);
-}
-
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
 	v2.0 | 20110126
 	License: none (public domain)
 */
-
-
-
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -152,4 +65,82 @@ a {
     color:#000;
     text-decoration:none;
     cursor: pointer;
+}
+
+
+
+
+/*======================================
+	ROOT
+	사용할 변수 정리   
+======================================*/
+:root {	
+	/* sight design - color */
+	/* color style - grayscale */
+	--dt-white: #FFFFFF;
+	--dt-gray01: #F9FAFB;
+	--dt-gray02: #F6F7FC;
+	--dt-gray03: #F3F5F6;
+	--dt-gray04: #F3F4F6;
+	--dt-gray05: #EEF1FD;
+	--dt-gray06: #E3E6F1;
+	--dt-gray07: #DCE6FF;
+	--dt-gray07: #DCE0E5;
+	--dt-gray08: #A8B3BD;
+	--dt-gray09: #7F8A94;
+	--dt-gray10: #66707A;
+	--dt-gray11: #525960;
+	--dt-gray12: #4B506A;
+	--dt-gray13: #3B4044;
+	--dt-gray14:: #31354D;
+	--dt-gray15: #181A1B;
+	--dt-black: #000000;
+
+	/* Color Style - system */
+	--dt-primary: #E30084;
+	--dt-success: #00AA02;
+	--dt-warning: #F86800;
+	--dt-error: #E22A21;
+
+	/* sight design - font */
+	/* font style - font size */
+	--dt-fz30: 30px;
+	--dt-fz24: 24px;
+	--dt-fz22: 22px;
+	--dt-fz18: 18px;
+	--dt-fz16: 16px;
+	--dt-fz14: 14px;
+	--dt-fz12: 12px;
+
+	/* font style - font weight */
+	--dt-fw700: 700;
+	--dt-fw600: 600;
+	--dt-fw400: 400;
+
+	/* font style - line height */
+	--dt-lh150: 150%;
+	--dt-lh140: 140%;
+	--dt-lh120: 120%;
+
+	/* shadow */
+	/* card-shadow */
+	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-grayscale18), 0.04);
+	/* bottom sheet-shadow */
+	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-grayscale18), 0.04);
+}
+
+
+
+
+/*======================================
+	body style 정의
+======================================*/
+body { 
+    font-family: "Pretendard", system-ui, sans-serif;
+    font-weight: var(--dt-fw400);
+    line-height: 1;
+    font-size: var(--dt-fz16); 
+    text-overflow: ellipsis;
+    max-width:100%;
+    background-color: var(--dt-white);
 }
