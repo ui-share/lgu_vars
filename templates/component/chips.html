@@ -12,9 +12,9 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/font.css">
-	<link rel="stylesheet" type="text/css" href="../static/css/chips.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/font.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/chips.css">
 	
 	<!-- Scripts -->
 </head>
@@ -27,27 +27,116 @@
 
 	<!-- container -->
 	<div class="container">
-		<ul class="chips-group">
-			<li class="chips-box">
-				<span href="" class="chips">
-					<span class="txt">자주 찾는 문의</span>
-				</span>
-			</li>
-		</ul>
+		<!-- chips : date 날짜 -->
+		<!-- date : 기본 -->
+		<div class="chips-box">
+			<a href="" class="chips date">
+				<span class="chips-text">24년</span>
+				<span class="chips-text">03월</span>
+				<span class="chips-shevron"></span>
+			</a>
+		</div>
+		<!-- date : disabled -->
+		<div class="chips-box">
+			<a href="" class="chips date disabled">
+				<span class="chips-text">24년</span>
+				<span class="chips-text">03월</span>
+				<span class="chips-shevron"></span>
+			</a>
+		</div>
 
+
+		<!-- chips: select 펼침/접힘 -->
+		<!-- 펼침/접힘 : 기본 -->
+		<div class="chips-box">
+			<a href="" class="chips openAll">
+				<span class="chips-text">전체펼침</span>
+				<span class="chips-shevron"></span>
+			</a>
+		</div>
+		<!-- 펼침/접힘 : active -->
+		<div class="chips-box">
+			<a href="" class="chips openAll active">
+				<span class="chips-text">전체펼침</span>
+				<span class="chips-shevron"></span>
+			</a>
+		</div>
+		<!-- 펼침/접힘 : disabled -->
+		<div class="chips-box">
+			<a href="" class="chips openAll disabled">
+				<span class="chips-text">전체펼침</span>
+				<span class="chips-shevron"></span>
+			</a>
+		</div>
+
+
+		<!-- chips : 홈/텍스트 칩 -->
 		<ul class="chips-group">
 			<li class="chips-box">
-				<a href="" class="chips">
-					<span class="txt">자주 찾는 문의</span>
+				<a href="" class="chips home title">
+					<span class="chips-icon"></span>
+					<span class="chips-text">많이 찾는 문의</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">요금 및 납부</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">가입정보</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">사용현황</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">휴대폰 결제</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">해외로밍</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home">
+					<span class="chips-text">해외로밍</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips home more">
+					<span class="chips-shevron"></span>
 				</a>
 			</li>
 		</ul>
 
-		<div class="chips-box">
-			<span href="" class="chips">
-				<span class="txt">자주 찾는 문의</span>
-			</span>
-		</div>
+
+		<!-- chips : 은행명 박스 -->
+		<ul class="chips-group">
+			<li class="chips-box">
+				<a href="" class="chips bank">
+					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
+					<span class="chips-text">신한은행</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips bank">
+					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
+					<span class="chips-text">신한은행</span>
+				</a>
+			</li>
+			<li class="chips-box">
+				<a href="" class="chips bank">
+					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
+					<span class="chips-text">신한은행</span>
+				</a>
+			</li>
+		</ul>
 	</div>
 	<!-- //container -->
 

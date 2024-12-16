@@ -1,10 +1,113 @@
 .chips-group {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-.chips-group .chips-box {
-  color: aliceblue;
+
+.chips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  line-height: var(--dt-lh120);
+  color: var(--dt-gray15);
+  border-radius: 999px;
 }
-.chips-group .chips {
-  display: block;
-  color: black;
+.chips .chips-text {
+  font-size: var(--dt-fz16);
+  font-weight: var(--dt-fw600);
+}
+.chips .chips-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/ic-flag.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.chips .chips-shevron {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-chips-chevron.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.chips.date {
+  height: 36px;
+  background-color: #D0DBF8;
+  padding: 6px 6px 6px 16px;
+}
+.chips.date .chips-text {
+  width: 42px;
+  font-size: var(--dt-fz18);
+}
+.chips.date.disabled {
+  box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+}
+.chips.date.disabled .chips-text {
+  opacity: 0.6;
+}
+.chips.date.disabled .chips-shevron {
+  opacity: 0.6;
+}
+.chips.date:active, .chips.date:focus {
+  box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+}
+.chips.openAll {
+  height: 35px;
+  border: 1px solid var(--dt-gray07);
+  padding: 4px 8px 4px 12px;
+}
+.chips.openAll .chips-text {
+  font-size: var(--dt-fz14);
+  color: var(--dt-gray11);
+}
+.chips.openAll.active .chips-shevron {
+  transform: rotate(-180deg);
+}
+.chips.openAll.disabled {
+  box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+}
+.chips.openAll.disabled .chips-text {
+  opacity: 0.6;
+}
+.chips.openAll.disabled .chips-shevron {
+  opacity: 0.6;
+}
+.chips.home {
+  height: 35px;
+  border: 1px solid rgba(24, 26, 27, 0.04);
+  background-color: var(--dt-gray03);
+  padding: 8px 12px;
+  gap: 4px;
+}
+.chips.home.title {
+  color: var(--dt-white);
+  background-color: var(--dt-gray12);
+}
+.chips.home.more {
+  width: 35px;
+}
+.chips.home.more .chips-shevron {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/ic-chevron_up_line_16.png);
+  background-size: 16px 16px;
+}
+.chips.bank {
+  flex-wrap: nowrap;
+  background-color: var(--dt-gray05);
+  border-radius: 4px;
+  padding: 8px 12px;
+  gap: 4px;
+}
+.chips.bank .chips-text {
+  font-size: var(--dt-fz14);
+}
+.chips.bank .img-bank {
+  display: inline;
+  width: 100%;
+  height: 100%;
 }
