@@ -72,13 +72,25 @@ $flex-map: (
 // btn 선언 방식
 // btn-형태
 // eg)btn-sol, btn-line
-@mixin btnPill-01 {
-    padding: 10px 13px;
-    color: var(--d-fc1);
-    border-radius: 2.5rem;
-    border: 1px solid var(--d-lc3);
-    background-color: var(--d-bg2);
+@mixin btn-sol ($fs: 16px, $lh:120%, $py:16.5px, $px:16.5px) {
+    @include pre-6($fs, $lh);
+    color: var(--dt-white);
+    background-color: var(--dt-primary);
+    border: 1px solid var(--dt-primary);
+    border-radius: 4px;
+    padding: $py $px;
+    text-align: center;
 }
+@mixin btn-line ($fs: 16px, $lh:120%, $py:16.5px, $px:16.5px) {
+    @include pre-7($fs, $lh);
+    color: var(--dt-primary);
+    background-color: transparent;
+    border: 1px solid var(--dt-primary);
+    border-radius: 4px;
+    padding: $py $px;
+    text-align: center;
+}
+
 @mixin btnPill-02 ($left:76px) {
     padding: 10px 38px 10px 20px;
     color: var(--d-fc1);

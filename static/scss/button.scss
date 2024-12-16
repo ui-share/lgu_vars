@@ -1,6 +1,122 @@
-.btn {
-    display: block;
-    .fc {
-        color:aliceblue;
+@import "../scss/dt-mixin.scss";
+
+// single button
+.btn-group {
+    .btn-box {
+        &.btn-sol {
+            /* large button */
+            .btn-lg {
+                &:active {
+                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+                }
+                @include btn-sol();
+                &.btn-sec {
+                    background-color: var(--dt-gray12);
+                    border: 1px solid var(--dt-gray12);
+                }
+                &.btn-neu {
+                    // ==========================
+                    // #E7EBEE 색상 정의 필요함
+                    // ==========================
+                    color: var(--dt-gray10);
+                    background-color: var(--dt-gray03);
+                    border: 1px solid var(--dt-gray03); 
+                }
+                width: 100%;
+                &.disabled {
+                    border: 1px solid rgba(255, 255, 255, 0.60);
+                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+                }
+            }
+            /* medium button */
+            .btn-md {
+                &:active {
+                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+                }
+                @include btn-sol(12px, 120%, 9px, 9px);
+                &.btn-sec {
+                    background-color: var(--dt-gray12);
+                    border: 1px solid var(--dt-gray12);
+                }
+                &.btn-neu {
+                    // ==========================
+                    // #E7EBEE 색상 정의 필요함
+                    // ==========================
+                    color: var(--dt-gray10);
+                    background-color: var(--dt-gray03);
+                    border: 1px solid var(--dt-gray03); 
+                }
+                width: 100%;
+                &.disabled {
+                    border: 1px solid rgba(255, 255, 255, 0.60);
+                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+                }
+            }
+        } 
+        &.btn-line {
+            .btn-lg {
+                &:active {
+                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+                }
+                @include btn-line();
+                &.btn-sec {
+                    color: var(--dt-gray12);
+                    background-color: transparent;
+                    border: 1px solid var(--dt-gray12);
+                }
+                &.btn-neu {
+                    // ==========================
+                    // #E7EBEE 색상 정의 필요함
+                    // ==========================
+                    color: var(--dt-gray10);
+                    background-color: var(--dt-gray03);
+                    border: 1px solid var(--dt-gray03); 
+                }
+                width: 100%;
+                &.disabled {
+                    // border: 1px solid rgba(255, 255, 255, 0.60);
+                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+                }
+            }
+            .btn-md {
+                &:active {
+                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+                }
+                @include btn-line(12px, 120%, 9px, 9px);
+                &.btn-sec {
+                    color: var(--dt-gray12);
+                    background-color: transparent;
+                    border: 1px solid var(--dt-gray12);
+                }
+                &.btn-neu {
+                    // ==========================
+                    // #E7EBEE 색상 정의 필요함
+                    // ==========================
+                    color: var(--dt-gray10);
+                    background-color: var(--dt-gray03);
+                    border: 1px solid var(--dt-gray03); 
+                }
+                width: 100%;
+                &.disabled {
+                    // border: 1px solid rgba(255, 255, 255, 0.60);
+                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+                }
+            }
+        }
+    }
+    &.flex-row {
+        @include flexBox();
+        column-gap: 8px;
+        .btn-box {
+            flex: 1;
+        }
+    }
+    &.flex-column {
+        @include flexBox();
+        flex-direction: column;
+        row-gap: 8px;
+        .btn-box {
+            width: 100%;
+        }
     }
 }

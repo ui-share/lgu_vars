@@ -1,3 +1,4 @@
+/* ========= button component ========= */
 .btn-group .btn-box.btn-sol {
   /* large button */
   /* medium button */
@@ -138,3 +139,23 @@
 .btn-group.flex-column .btn-box {
   width: 100%;
 }
+
+/* ========= //button component ========= */
+/*
+
+
+
+*/
+/* ========= chips component ========= */
+.chips-group {
+  display: block;
+}
+.chips-group .chips-box {
+  color: aliceblue;
+}
+.chips-group .chips {
+  display: block;
+  color: black;
+}
+
+/* ========= //chips component ========= */
