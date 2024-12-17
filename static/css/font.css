@@ -35,12 +35,12 @@ http://scripts.sil.org/OFL
 	src: local('Pretendard SemiBold'), url(../font/Pretendard-SemiBold.woff2) format('woff2'), url(../font/Pretendard-SemiBold.woff) format('woff'), url(../font/Pretendard-SemiBold.otf) format('opentype');
 }
 
-/* @font-face {
+@font-face {
 	font-family: 'Pretendard';
 	font-weight: 500;
 	font-display: swap;
 	src: local('Pretendard Medium'), url(./woff/Pretendard-Medium.woff) format('woff');
-} */
+}
 
 @font-face {
 	font-family: 'Pretendard';
