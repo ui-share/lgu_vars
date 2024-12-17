@@ -70,7 +70,16 @@ a {
     cursor: pointer;
 }
 
-
+/* 버튼 스타일 reset */
+button{
+	background: inherit; 
+	border: none; 
+	box-shadow: none; 
+	border-radius: 0; 
+	padding: 0; 
+	overflow: visible; 
+	cursor: pointer;
+} 
 
 
 /*======================================
@@ -95,7 +104,7 @@ a {
 	--dt-gray11: #525960;
 	--dt-gray12: #4B506A;
 	--dt-gray13: #3B4044;
-	--dt-gray14:: #31354D;
+	--dt-gray14: #31354D;
 	--dt-gray15: #181A1B;
 	--dt-gray16: #E7EBEE;
 	--dt-gray17: #D0DBF8;
