@@ -29,114 +29,87 @@
 	<div class="container">
 		<!-- chips : date 날짜 -->
 		<!-- date : 기본 -->
-		<div class="chips-box">
-			<a href="" class="chips date">
-				<span class="chips-text">24년</span>
-				<span class="chips-text">03월</span>
-				<span class="chips-shevron"></span>
-			</a>
-		</div>
+		<button type="button" class="chips chips-date">
+			<span class="txt">24년</span> 
+			<span class="txt">03월</span>
+			<span class="arrow"></span>
+		</button>
 		<!-- date : disabled -->
-		<div class="chips-box">
-			<a href="" class="chips date disabled">
-				<span class="chips-text">24년</span>
-				<span class="chips-text">03월</span>
-				<span class="chips-shevron"></span>
-			</a>
-		</div>
+		<button type="button" class="chips chips-date disabled">
+			<span class="txt">24년</span>
+			<span class="txt">03월</span>
+			<span class="arrow"></span>
+		</button>
 
 
 		<!-- chips: select 펼침/접힘 -->
 		<!-- 펼침/접힘 : 기본 -->
-		<div class="chips-box">
-			<a href="" class="chips openAll">
-				<span class="chips-text">전체펼침</span>
-				<span class="chips-shevron"></span>
-			</a>
-		</div>
+		<button type="button" class="chips chips-all">
+			<span class="txt">전체펼침</span>
+			<span class="arrow"></span>
+		</button>
 		<!-- 펼침/접힘 : active -->
-		<div class="chips-box">
-			<a href="" class="chips openAll active">
-				<span class="chips-text">전체펼침</span>
-				<span class="chips-shevron"></span>
-			</a>
-		</div>
+		<button type="button" class="chips chips-all active">
+			<span class="txt">전체펼침</span>
+			<span class="arrow"></span>
+		</button>
 		<!-- 펼침/접힘 : disabled -->
-		<div class="chips-box">
-			<a href="" class="chips openAll disabled">
-				<span class="chips-text">전체펼침</span>
-				<span class="chips-shevron"></span>
-			</a>
-		</div>
+		<button type="button" class="chips chips-all disabled">
+			<span class="txt">전체펼침</span>
+			<span class="arrow"></span> 
+		</button>
 
 
 		<!-- chips : 홈/텍스트 칩 -->
-		<ul class="chips-group">
-			<li class="chips-box">
-				<a href="" class="chips home title">
-					<span class="chips-icon"></span>
-					<span class="chips-text">많이 찾는 문의</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">요금 및 납부</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">가입정보</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">사용현황</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">휴대폰 결제</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">해외로밍</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home">
-					<span class="chips-text">해외로밍</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips home more">
-					<span class="chips-shevron"></span>
-				</a>
-			</li>
-		</ul>
+		<div class="chips-group">
+			<button type="button" class="chips chips-menu active">
+				<span class="icon"><img src="../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
+				<span class="txt">많이 찾는 문의</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">요금 및 납부</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">가입정보</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">사용현황</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">휴대폰 결제</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">해외로밍</span>
+			</button>
+			<button type="button" class="chips chips-menu">
+				<!-- <span class="icon"></span> -->
+				<span class="txt">해외로밍 부가서비스</span>
+			</button>
+			<button type="button" class="chips chips-menu chips-more">
+				<span class="arrow"></span>
+			</button>
+			<button type="button" class="chips chips-menu chips-more active">
+				<span class="arrow"></span>
+			</button>
+		</div>
 
 
 		<!-- chips : 은행명 박스 -->
-		<ul class="chips-group">
-			<li class="chips-box">
-				<a href="" class="chips bank">
-					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
-					<span class="chips-text">신한은행</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips bank">
-					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
-					<span class="chips-text">신한은행</span>
-				</a>
-			</li>
-			<li class="chips-box">
-				<a href="" class="chips bank">
-					<span class="chips-icon"><img class="img-bank" src="../../static/images/icon/ic-img_bank_16.png" alt="신한은행"></span>
-					<span class="chips-text">신한은행</span>
-				</a>
-			</li>
-		</ul>
+		<div class="chips-group">
+			<button type="button" class="chips chips-bank">
+				<span class="icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+				<span class="txt">신한은행</span>
+			</button>
+			<button type="button" class="chips chips-bank">
+				<span class="icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+				<span class="txt">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이</span>
+			</button>
+		</div>
 	</div>
 	<!-- //container -->
 
