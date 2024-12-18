@@ -1,85 +1,39 @@
 @charset "utf-8";
-/*======================================
-	Reset
-======================================*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-	v2.0 | 20110126
-	License: none (public domain)
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul, dl, li {
-	list-style: none;
-	margin-block-start: 0;
-    margin-block-end: 0;
-    margin-bottom: 0;
-    padding-inline-start: 0;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	vertical-align: middle;
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff'), url(../font/Pretendard-Bold.otf) format('opentype');
 }
 
-i, em, address {
-	font-style: normal;
-	font-weight: normal;
-}
-input, textarea, select, button {
-	vertical-align: middle;
-}
-a { 
-    color:#000;
-    text-decoration:none;
-    cursor: pointer;
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../font/Pretendard-SemiBold.woff2) format('woff2'), url(../font/Pretendard-SemiBold.woff) format('woff'), url(../font/Pretendard-SemiBold.otf) format('opentype');
 }
 
-/* 버튼 스타일 reset */
-button{
-	background: inherit; 
-	border: none; 
-	box-shadow: none; 
-	border-radius: 0; 
-	padding: 0; 
-	overflow: visible; 
-	cursor: pointer;
-} 
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../font/Pretendard-Medium.woff2) format('woff2'), url(../font/Pretendard-Medium.woff) format('woff'), url(../font/Pretendard-Medium.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard-Regular.woff) format('woff'), url(../font/Pretendard-Regular.otf) format('opentype');
+}
 
 
 /*======================================
@@ -143,25 +97,98 @@ button{
 
 	/* shadow style - bottom sheet */
 	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-black), 0.04);
+
+	/* iOS 웹뷰 safe area inset  */
+	--dt-sat: env(safe-area-inset-top);
+	--dt-sab: env(safe-area-inset-bottom);
+	--dt-sar: env(safe-area-inset-right);
+	--dt-sal: env(safe-area-inset-left);
 }
-
-
 
 
 /*======================================
-	common
+	Common
 ======================================*/
-body { 
+html {
+    height: 100%;
+}
+body {
 	width: 100%;
     max-width:100%;
 	height: 100%;
-    font-size: var(--dt-fz16); 
-    text-overflow: ellipsis;
+	font-family: 'Pretendard', system-ui, sans-serif;
+	font-weight: var(--dt-fw400);
+    font-size: var(--dt-fz16);
+    line-height: 1;
+	color: var(--dt-black);
+	text-overflow: ellipsis;
     background-color: var(--dt-white);
 }
-body * {
+body  * {
 	font-family: 'Pretendard', system-ui, sans-serif;
-    font-weight: var(--dt-fw400);
-    line-height: 1;
+    font-size: inherit;
+	font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+/* Box Model */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+a {          
+    text-decoration: none;
+    cursor: pointer;
+}
+a:focus,
+.button:focus {
+    outline: 0;
+}  
+strong {
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+strong, b {
+    font-weight: 800;
+}
+em {
+    font-style: normal;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+iframe {
+    border: 0;
+    vertical-align: middle;
+}
+sub {
+    font-size: 0.3em;
+    position: relative;
+    top: 0.5em;
+}
+sup {
+    font-size: 0.3em;
+    position: relative;
+    top: -0.5em;
+}
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--dt-black);
+    margin: 0.75em 0;
+    color: inherit;
+}
+button {
+	background: inherit; 
+	border: none; 
+	box-shadow: none; 
+	border-radius: 0; 
+	padding: 0; 
+	overflow: visible; 
+	cursor: pointer;
 }
 
+
+/* Component Common */
