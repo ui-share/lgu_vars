@@ -20,20 +20,20 @@
 // @include fontStyle($fc, $lh);
 // font-weight
 @mixin fw-7($fs: 16px) {
-    font-weight: 700;
     font-size: $fs;
+    font-weight: 700;
 }
 @mixin fw-6($fs: 16px) {
-    font-weight: 600;
     font-size: $fs;
+    font-weight: 600;
 }
 @mixin fw-5($fs: 16px) {
-    font-weight: 500;
     font-size: $fs;
+    font-weight: 500;
 }
 @mixin fw-4($fs: 16px) {
-    font-weight: 400;
     font-size: $fs;
+    font-weight: 400;
 }
 
 // font-size
