@@ -18,26 +18,28 @@
 
 //font-style
 // @include fontStyle($fc, $lh);
-// font-family
-@mixin pre-7($fs: 16px, $lh:120%) {
-    font-family: 'Pretendard'; 
+// font-weight
+@mixin fw-7($fs: 16px) {
     font-weight: 700;
     font-size: $fs;
-    line-height: $lh;
 }
-@mixin pre-6($fs: 16px, $lh:120%) {
-    font-family: 'Pretendard'; 
+@mixin fw-6($fs: 16px) {
     font-weight: 600;
     font-size: $fs;
-    line-height: $lh;
 }
-@mixin pre-4($fs: 16px, $lh:120%) {
-    font-family: 'Pretendard'; 
+@mixin fw-5($fs: 16px) {
+    font-weight: 500;
+    font-size: $fs;
+}
+@mixin fw-4($fs: 16px) {
     font-weight: 400;
     font-size: $fs;
-    line-height: $lh;
 }
 
+// font-size
+@mixin fz($fz: 16px) {
+    font-size: $fz;
+}
 
 //flex-box
 //  @include flexBox(start, end) 이런식으로 대입
