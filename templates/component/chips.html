@@ -12,8 +12,8 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/font.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/chips.css">
 	
 	<!-- Scripts -->
@@ -30,14 +30,12 @@
 		<!-- chips : date 날짜 -->
 		<!-- date : 기본 -->
 		<button type="button" class="chips chips-date">
-			<span class="txt">24년</span> 
-			<span class="txt">03월</span>
+			<span class="txt">24년 03월</span>
 			<span class="arrow"></span>
 		</button>
 		<!-- date : disabled -->
-		<button type="button" class="chips chips-date disabled">
-			<span class="txt">24년</span>
-			<span class="txt">03월</span>
+		<button type="button" class="chips chips-date is-disabled">
+			<span class="txt">24년 03월</span>
 			<span class="arrow"></span>
 		</button>
 
@@ -49,12 +47,12 @@
 			<span class="arrow"></span>
 		</button>
 		<!-- 펼침/접힘 : active -->
-		<button type="button" class="chips chips-all active">
+		<button type="button" class="chips chips-all is-selected">
 			<span class="txt">전체펼침</span>
 			<span class="arrow"></span>
 		</button>
 		<!-- 펼침/접힘 : disabled -->
-		<button type="button" class="chips chips-all disabled">
+		<button type="button" class="chips chips-all is-disabled" readonly>
 			<span class="txt">전체펼침</span>
 			<span class="arrow"></span> 
 		</button>
@@ -62,38 +60,46 @@
 
 		<!-- chips : 홈/텍스트 칩 -->
 		<div class="chips-group">
-			<button type="button" class="chips chips-menu active">
-				<span class="icon"><img src="../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
+			<button type="button" class="chips chips-menu is-selected">
+				<span class="img-box icon"><img src="../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
 				<span class="txt">많이 찾는 문의</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">요금 및 납부</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">가입정보</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">사용현황</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">휴대폰 결제</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">해외로밍</span>
 			</button>
+
 			<button type="button" class="chips chips-menu">
 				<!-- <span class="icon"></span> -->
 				<span class="txt">해외로밍 부가서비스</span>
 			</button>
+
 			<button type="button" class="chips chips-menu chips-more">
 				<span class="arrow"></span>
 			</button>
-			<button type="button" class="chips chips-menu chips-more active">
+
+			<button type="button" class="chips chips-menu chips-more is-selected">
 				<span class="arrow"></span>
 			</button>
 		</div>
@@ -102,18 +108,115 @@
 		<!-- chips : 은행명 박스 -->
 		<div class="chips-group">
 			<button type="button" class="chips chips-bank">
-				<span class="icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+				<span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
 				<span class="txt">신한은행</span>
 			</button>
+
+			<button type="button" class="chips chips-bank is-selected">
+				<span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+				<span class="txt">신한은행</span>
+			</button>
+
 			<button type="button" class="chips chips-bank">
-				<span class="icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+				<span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
 				<span class="txt">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이</span>
 			</button>
+		</div>
+
+
+		<!-- chips : 새로고침  -->
+		<button type="button" class="chips chips-refresh">
+			<span class="time">00:00</span>
+			<span class="line"></span>
+			<span class="text-box">
+				<span class="txt">새로고침</span>
+				<span class="icon"></span>
+			</span>
+		</button>
+
+
+		<!-- chips : other (tag) -->
+		<div class="chips chips-tag">
+			<span class="txt">이용불가</span>
+		</div>
+
+		<div class="chips chips-tag primary">
+			<span class="txt">이용가능</span>
+		</div>
+
+		<div class="chips chips-tag tag-lg primary">
+			<span class="txt">전액</span>
+		</div>
+
+		<button type="button" class="chips chips-tag tag-lg">
+			<span class="txt">빠른 문제해결</span>
+		</button>
+
+		<button type="button" class="chips chips-tag tag-lg primary-bg">
+			<span class="txt">충분한 정보 제공</span>
+		</button>
+
+		<div class="chips chips-tag tag-sm">
+			<span class="txt">모바일</span>
+		</div>
+
+
+		<!-- flag -->
+		<div class="flag flag-line primary">
+			<span class="txt">이용예정</span>
+		</div>
+
+		<div class="flag primary">
+			<span class="txt">이용중</span>
+		</div>
+
+		<div class="flag">
+			<span class="txt">이용완료</span>
+		</div>
+
+		<div class="flag success">
+			<span class="txt">납부완료</span>
+		</div>
+
+		<div class="flag error">
+			<span class="txt">납부실패</span>
+		</div>
+
+		<div class="flag flag-recent">
+			<span class="txt">최근사용</span>
+		</div>
+
+		<div class="flag flag-etc">
+			<span class="txt">텍스트</span>
+		</div>
+
+
+		<!-- badge -->
+		<div class="badge badge-round">
+			<span class="txt">A</span>
+		</div>
+
+		<div class="badge badge-round">
+			<span class="txt">A+B+C</span>
+		</div>
+
+		<div class="badge badge-tip">
+			<span class="txt">TIPS</span>
+		</div>
+
+		<div class="badge badge-time">
+			<span class="icon"></span>
+			<span class="txt">02:56</span>
+		</div>
+		
+		<div class="badge badge-time error">
+			<span class="icon"></span>
+			<span class="txt">03:00</span>
 		</div>
 	</div>
 	<!-- //container -->
 
-	<!-- footer -->
+	<!-- footer --> 
 	<footer class="footer"></footer>
 	<!-- //footer -->
 </div>
