@@ -1,70 +1,59 @@
-.btn-group .btn-box.btn-sol {
-  /* large button */
+/* single button */
+.btn-group .btn {
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--dt-primary);
+  border: 1px solid var(--dt-primary);
+  padding: 16.5px 16.5px;
+  font-weight: var(--dt-fw600);
+}
+.btn-group .btn .txt {
+  color: var(--dt-white);
+}
+.btn-group .btn.btn-sol {
+  color: var(--dt-white);
   /* medium button */
 }
-.btn-group .btn-box.btn-sol .btn-lg {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 120%;
-  color: var(--dt-white);
-  background-color: var(--dt-primary);
-  border: 1px solid var(--dt-primary);
-  border-radius: 4px;
-  padding: 16.5px 16.5px;
-  text-align: center;
-  width: 100%;
+.btn-group .btn.btn-sol.btn-lg.btn-sec {
+  background-color: var(--dt-gray13);
+  border: 1px solid var(--dt-gray13);
 }
-.btn-group .btn-box.btn-sol .btn-lg:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
-.btn-group .btn-box.btn-sol .btn-lg.btn-sec {
-  background-color: var(--dt-gray12);
-  border: 1px solid var(--dt-gray12);
-}
-.btn-group .btn-box.btn-sol .btn-lg.btn-neu {
-  color: var(--dt-gray10);
+.btn-group .btn.btn-sol.btn-lg.btn-neu {
   background-color: var(--dt-gray03);
   border: 1px solid var(--dt-gray03);
 }
-.btn-group .btn-box.btn-sol .btn-lg.disabled {
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
+.btn-group .btn.btn-sol.btn-lg.btn-neu .txt {
+  color: var(--dt-gray10);
 }
-.btn-group .btn-box.btn-sol .btn-md {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 120%;
-  color: var(--dt-white);
+.btn-group .btn.btn-sol.btn-md {
   background-color: var(--dt-primary);
   border: 1px solid var(--dt-primary);
-  border-radius: 4px;
   padding: 9px 9px;
-  text-align: center;
   width: 100%;
 }
-.btn-group .btn-box.btn-sol .btn-md:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+.btn-group .btn.btn-sol.btn-md .txt {
+  font-size: var(--dt-fz12);
 }
-.btn-group .btn-box.btn-sol .btn-md.btn-sec {
-  background-color: var(--dt-gray12);
-  border: 1px solid var(--dt-gray12);
+.btn-group .btn.btn-sol.btn-md.btn-sec {
+  background-color: var(--dt-gray13);
+  border: 1px solid var(--dt-gray13);
 }
-.btn-group .btn-box.btn-sol .btn-md.btn-neu {
-  color: var(--dt-gray10);
+.btn-group .btn.btn-sol.btn-md.btn-neu {
   background-color: var(--dt-gray03);
   border: 1px solid var(--dt-gray03);
 }
-.btn-group .btn-box.btn-sol .btn-md.disabled {
+.btn-group .btn.btn-sol.btn-md.btn-neu .txt {
+  color: var(--dt-gray10);
+}
+.btn-group .btn.btn-sol:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.btn-group .btn.btn-sol.is-disabled {
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
 }
-.btn-group .btn-box.btn-line .btn-lg {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 120%;
+.btn-group .btn.btn-line.btn-lg {
   color: var(--dt-primary);
   background-color: transparent;
   border: 1px solid var(--dt-primary);
@@ -73,59 +62,65 @@
   text-align: center;
   width: 100%;
 }
-.btn-group .btn-box.btn-line .btn-lg:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+.btn-group .btn.btn-line.btn-lg .txt {
+  color: var(--dt-primary);
 }
-.btn-group .btn-box.btn-line .btn-lg.btn-sec {
-  color: var(--dt-gray12);
+.btn-group .btn.btn-line.btn-lg.btn-sec {
   background-color: transparent;
-  border: 1px solid var(--dt-gray12);
+  border: 1px solid var(--dt-gray13);
 }
-.btn-group .btn-box.btn-line .btn-lg.btn-neu {
-  color: var(--dt-gray10);
-  background-color: var(--dt-gray03);
-  border: 1px solid var(--dt-gray03);
+.btn-group .btn.btn-line.btn-lg.btn-sec .txt {
+  color: var(--dt-gray13);
 }
-.btn-group .btn-box.btn-line .btn-lg.disabled {
-  box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
+.btn-group .btn.btn-line.btn-lg.btn-neu {
+  background-color: transparent;
+  border: 1px solid var(--dt-gray17);
 }
-.btn-group .btn-box.btn-line .btn-md {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 120%;
+.btn-group .btn.btn-line.btn-lg.btn-neu .txt {
+  color: var(--dt-gray11);
+}
+.btn-group .btn.btn-line.btn-md {
   color: var(--dt-primary);
   background-color: transparent;
   border: 1px solid var(--dt-primary);
   border-radius: 4px;
   padding: 9px 9px;
   text-align: center;
-  width: 100%;
 }
-.btn-group .btn-box.btn-line .btn-md:active {
+.btn-group .btn.btn-line.btn-md .txt {
+  font-size: var(--dt-fz12);
+  color: var(--dt-primary);
+}
+.btn-group .btn.btn-line.btn-md.btn-sec {
+  background-color: transparent;
+  border: 1px solid var(--dt-gray13);
+}
+.btn-group .btn.btn-line.btn-md.btn-sec .txt {
+  color: var(--dt-gray13);
+}
+.btn-group .btn.btn-line.btn-md.btn-neu {
+  background-color: transparent;
+  border: 1px solid var(--dt-gray17);
+}
+.btn-group .btn.btn-line.btn-md.btn-neu .txt {
+  color: var(--dt-gray11);
+}
+.btn-group .btn.btn-line:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.btn-group .btn-box.btn-line .btn-md.btn-sec {
-  color: var(--dt-gray12);
-  background-color: transparent;
-  border: 1px solid var(--dt-gray12);
-}
-.btn-group .btn-box.btn-line .btn-md.btn-neu {
-  color: var(--dt-gray10);
-  background-color: var(--dt-gray03);
-  border: 1px solid var(--dt-gray03);
-}
-.btn-group .btn-box.btn-line .btn-md.disabled {
+.btn-group .btn.btn-line.is-disabled {
+  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
 }
+
+/* multi button */
 .btn-group.flex-row {
   display: flex;
   align-items: center;
-  justify-content: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  justify-content: space-between;
+  gap: 8px;
 }
-.btn-group.flex-row .btn-box {
+.btn-group.flex-row .btn {
   flex: 1;
 }
 .btn-group.flex-column {
@@ -133,8 +128,93 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  row-gap: 8px;
+  gap: 8px;
 }
-.btn-group.flex-column .btn-box {
+.btn-group.flex-column .btn {
   width: 100%;
 }
+
+/* util button */
+.btn.btn-top {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.btn.btn-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+}
+.btn.btn-center.btn-scroll {
+  padding: 12.5px 22px;
+  background-color: rgba(0, 0, 0, 0.74);
+  border-radius: 100px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.btn.btn-center.btn-icBox {
+  padding: 14px 0;
+  column-gap: 0;
+  background-color: var(--dt-gray06);
+  border-radius: 4px;
+  width: 100%;
+}
+.btn.btn-center.btn-icBox .txt {
+  font-size: 14px;
+  color: var(--dt-gray11);
+}
+.btn.btn-center.btn-icBox .img-box img {
+  transition: all 0.2s linear;
+}
+.btn.btn-center.btn-icBox:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.btn.btn-center.btn-icBox:active .img-box img {
+  transform: rotate(180deg);
+}
+.btn.btn-center.btn-icBox.is-selected .img-box {
+  transition: all 0.2s linear;
+}
+.btn.btn-center.btn-icBox.is-selected .img-box img {
+  transform: rotate(180deg);
+}
+.btn.btn-center .txt {
+  color: var(--dt-white);
+}
+.btn.btn-center .img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.btn.btn-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 4px;
+}
+.btn.btn-between:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.btn.btn-between.is-disabled {
+  box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
+}
+.btn.btn-between.bg-withdraw {
+  column-gap: 6px;
+  background-color: var(--dt-white);
+  padding: 8px 10px;
+  color: var(--dt-gray10);
+}
+.btn.btn-between.bg-bank {
+  column-gap: 8px;
+  background-color: var(--dt-gray07);
+  padding: 8px;
+  color: var(--dt-gray10);
+}
+.btn.btn-between .txt {
+  font-size: 14px;
+  color: var(--dt-gray11);
+}/*# sourceMappingURL=button.css.map */

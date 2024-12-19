@@ -11,8 +11,8 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../static/css/font.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/button.css">
 	
 	<!-- Scripts -->
@@ -265,8 +265,8 @@
 				</li>
 				<li>
 					<button class="btn btn-top">
-						<span class="btn--img_wrap">
-							<img class="ic-btn-top" src="../../static/images/icon/ic-btn-top.png">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-btn-top.png">
 						</span>
 					</button>
 				</li>
@@ -274,10 +274,10 @@
 					<h3>Scroll Button</h3>
 				</li>
 				<li>
-					<button class="btn btn-scroll">
+					<button class="btn btn-center btn-scroll">
 						<span class="txt">선택약정 할인 예약</span>
-						<span class="btn--img_wrap">
-							<img class="ic-btn-top" src="../../static/images/icon/ic-btn-arrow-double-down.png">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-btn-arrow-double-down.png">
 						</span>
 					</button>
 				</li>
@@ -285,11 +285,11 @@
 					<h3>solid icon button</h3>
 				</li>
 				<li>
-					<button class="btn btn-icBox">
+					<button class="btn btn-center btn-icBox is-selected">
 					<!-- <button class="btn btn-icBox is-selected"> -->
 						<span class="txt">버튼명</span>
-						<span class="btn--img_wrap">
-							<img class="ic-btn-arrow" src="../../static/images/icon/ic-btn-arrow-up-sm.png">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-btn-arrow-up-sm.png">
 						</span>
 					</button>
 				</li>
@@ -297,26 +297,45 @@
 					<h3>solid box button</h3>
 				</li>
 				<li>
-					<button class="btn btn-solBox bg-withdraw">
-						<span class="btn--img_wrap">
-							<img class="ic-btn-document" src="../../static/images/icon/ic-btn-dcmnt.png">
+					<button class="btn btn-between bg-withdraw">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-btn-dcmnt.png">
 						</span>
 						<span class="txt">버튼명</span>
-						<span class="btn--img_wrap">
-							<img class="ic-btn-right" src="../../static/images/icon/ic-btn-arrow-right-sm.png">
+						<span class="img-box ml-auto">
+							<img src="../../static/images/icon/ic-btn-arrow-right-sm.png">
 						</span>
 					</button>
 				</li>
 				<li>
-					<button class="btn btn-solBox bg-bank">
-						<span class="btn--img_wrap">
-							<img class="ic-btn-document" src="../../static/images/icon/ic-btn-shinhan.png">
+					<button class="btn btn-between bg-bank">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-btn-shinhan.png">
 						</span>
-						<span class="txt">버튼명</span>
-						<span class="btn--img_wrap">
-							<img class="ic-btn-right" src="../../static/images/icon/ic-btn-arrow-right-sm.png">
+						<span class="txt">1234-5678-****-****</span>
+						<span class="img-box ml-auto">
+							<img src="../../static/images/icon/ic-btn-arrow-right-sm.png">
 						</span>
 					</button>
+				</li>
+				<li>
+					<h3>outline icon button</h3>
+				</li>
+				<li>
+					<div class="btn-group flex-row">
+						<button class="btn btn-line btn-lg btn-neu btn-jc-center" type="button">
+							<span class="txt">버튼명</span>
+							<span class="img-box">
+								<img src="../../static/images/icon/ic-btn-play.png">
+							</span>
+						</button>
+						<button class="btn btn-line btn-lg btn-neu btn-jc-center is-disabled" type="button">
+							<span class="txt">버튼명</span>
+							<span class="img-box">
+								<img src="../../static/images/icon/ic-btn-write.png">
+							</span>
+						</button>
+					</div>
 				</li>
 			</ul>
 		</div>

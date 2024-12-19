@@ -7,92 +7,101 @@
         border-radius: 4px;
         text-align: center;
         @include btn-sol();
-
-        // @include pre-6();
+        font-weight: var(--dt-fw600);
+        .txt {
+            color: var(--dt-white);
+        }
         &.btn-sol {
-            /* large button */
+            color: var(--dt-white);
             &.btn-lg {
-                &:active {
-                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-                }
                 &.btn-sec {
-                    background-color: var(--dt-gray12);
-                    border: 1px solid var(--dt-gray12);
+                    background-color: var(--dt-gray13);
+                    border: 1px solid var(--dt-gray13);
                 }
                 &.btn-neu {
-                    color: var(--dt-gray10);
                     background-color: var(--dt-gray03);
                     border: 1px solid var(--dt-gray03); 
-                }
-
-                &.is-disabled {
-                    border: 1px solid rgba(255, 255, 255, 0.60);
-                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+                    .txt {
+                        color: var(--dt-gray10);
+                    }
                 }
             }
             /* medium button */
             &.btn-md {
-                font-size: var(--dt-fz12);
-                &:active {
-                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-                }
                 @include btn-sol(9px, 9px);
+                .txt {
+                    font-size: var(--dt-fz12);
+                }
                 &.btn-sec {
-                    background-color: var(--dt-gray12);
-                    border: 1px solid var(--dt-gray12);
+                    background-color: var(--dt-gray13);
+                    border: 1px solid var(--dt-gray13);
                 }
                 &.btn-neu {
-                    color: var(--dt-gray10);
                     background-color: var(--dt-gray03);
-                    border: 1px solid var(--dt-gray03); 
+                    border: 1px solid var(--dt-gray03);
+                    .txt {
+                        color: var(--dt-gray10);
+                    } 
                 }
                 width: 100%;
-                &.is-disabled {
-                    border: 1px solid rgba(255, 255, 255, 0.60);
-                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-                }
+            }
+            &:active {
+                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+            }
+            &.is-disabled {
+                border: 1px solid rgba(255, 255, 255, 0.60);
+                box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
             }
         } 
         &.btn-line {
             &.btn-lg {
-                &:active {
-                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-                }
                 @include btn-line();
+                .txt {
+                    color: var(--dt-primary);
+                }
                 &.btn-sec {
-                    color: var(--dt-gray12);
                     background-color: transparent;
-                    border: 1px solid var(--dt-gray12);
+                    border: 1px solid var(--dt-gray13);
+                    .txt {
+                        color: var(--dt-gray13);
+                    }
                 }
                 &.btn-neu {
-                    color: var(--dt-gray10);
                     background-color: transparent;
-                    border: 1px solid var(--dt-gray16); 
+                    border: 1px solid var(--dt-gray17); 
+                    .txt {
+                        color: var(--dt-gray11);
+                    }
                 }
                 width: 100%;
-                &.is-disabled {
-                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-                }
-            }
+            } 
             &.btn-md {
-                font-size: var(--dt-fz12);
-                &:active {
-                    box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-                }
                 @include btn-line(9px, 9px);
+                .txt {
+                    font-size: var(--dt-fz12);
+                    color: var(--dt-primary);
+                }
                 &.btn-sec {
-                    color: var(--dt-gray12);
                     background-color: transparent;
-                    border: 1px solid var(--dt-gray12);
+                    border: 1px solid var(--dt-gray13);
+                    .txt {
+                        color: var(--dt-gray13);
+                    }
                 }
                 &.btn-neu {
-                    color: var(--dt-gray10);
                     background-color: transparent;
-                    border: 1px solid var(--dt-gray16); 
+                    border: 1px solid var(--dt-gray17);
+                    .txt {
+                        color: var(--dt-gray11);
+                    } 
                 }
-                &.is-disabled {
-                    box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-                }
+            }
+            &:active {
+                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+            }
+            &.is-disabled {
+                border: 1px solid rgba(255, 255, 255, 0.60);
+                box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
             }
         }
     }
@@ -123,63 +132,102 @@
     &.btn-top {
         width: 48px;
         height: 48px;
-        /* =====================
-            rgba에 대한 색상 정의
-        ===================== */ 
-        // background-color: var(--dt-black);
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 50%;
         @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
-        // .btn--img_wrap {
-
-        // }
     }
-    &.btn-scroll {
+    &.btn-center {
         @include flexBox();
         column-gap: 4px;
-        padding: 12.5px 22px;
-        background-color: rgba(0, 0, 0, 0.74);
-        border-radius: 100px;
-        @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+        &.btn-scroll {
+            padding: 12.5px 22px;
+            background-color: rgba(0, 0, 0, 0.74);
+            border-radius: 100px;
+            @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+        }
+        &.btn-icBox {
+            padding: 14px 0;
+            column-gap: 0;
+            background-color: var(--dt-gray06);
+            border-radius: 4px;
+            width: 100%;
+            .txt {
+                @include fz(14px);
+                color: var(--dt-gray11);
+            }
+            .img-box {
+                img {
+                    transition: all .2s linear;
+                }
+            }
+            &:active {
+                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+                .img-box {                
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            &.is-selected {
+                .img-box {
+                    transition: all .2s linear;
+                    img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
         .txt {
-            @include pre-6();
+            // @include pre-6();
             color: var(--dt-white);
         }
-        .btn--img_wrap {
+        .img-box {
             @include flexBox();
             flex-direction: column;
         }
     }
-    &.btn-icBox {
-        @include flexBox();
-        padding: 14px 0;
-        background-color: var(--dt-gray06);
-        border-radius: 4px;
-        width: 100%;
-        .txt {
-            @include pre-6(14px, 120%);
-            color: var(--dt-gray11);
-        }
-        // .btn--img_wrap {
-        //     @include flexBox();
-        //     flex-direction: column;
-        // }
-        &.is-selected {
-            .btn--img_wrap {
-                transition: all .2s linear;
-                .ic-btn-top {
-                    transform: rotate(180deg);
-                }
-            }
-        }
-        &:active {
-            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-        }
-    }
-    &.btn-solBox {
+    // &.btn-icBox {
+    //     @include flexBox();
+    //     padding: 14px 0;
+    //     background-color: var(--dt-gray06);
+    //     border-radius: 4px;
+    //     width: 100%;
+    //     .txt {
+    //         @include fz(14px);
+    //         color: var(--dt-gray11);
+    //     }
+    //     .img-box {
+    //         img {
+    //             transition: all .2s linear;
+    //         }
+    //     }
+    //     &:active {
+    //         box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+    //         .img-box {                
+    //             img {
+    //                 transform: rotate(180deg);
+    //             }
+    //         }
+    //     }
+    //     &.is-selected {
+    //         .img-box {
+    //             transition: all .2s linear;
+    //             img {
+    //                 transform: rotate(180deg);
+    //             }
+    //         }
+    //     }
+    // }
+    &.btn-between {
         @include flexBox(between, center);
         width: 100%;
         border-radius: 4px;
+        &:active {
+            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+        }
+        &.is-disabled {
+            box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
+        }
         &.bg-withdraw {
             column-gap: 6px;
             background-color: var(--dt-white);
@@ -193,13 +241,8 @@
             color: var(--dt-gray10);
         }
         .txt {
-            @include pre-6(14px, 120%);
+            @include fz(14px);
             color: var(--dt-gray11);
-        }
-        .btn--img_wrap {
-            &:last-child {
-                margin-left: auto;
-            }
         }
     }
 }

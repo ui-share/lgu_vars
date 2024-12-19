@@ -75,7 +75,6 @@ $flex-map: (
 // btn-형태
 // eg)btn-sol, btn-line
 @mixin btn-sol ($py:16.5px, $px:16.5px) {
-    color: var(--dt-white);
     background-color: var(--dt-primary);
     border: 1px solid var(--dt-primary);
     padding: $py $px;
