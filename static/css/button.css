@@ -50,7 +50,6 @@
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
 .btn-group .btn.btn-sol.is-disabled {
-  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
 }
 .btn-group .btn.btn-line.btn-lg {
@@ -77,7 +76,7 @@
   border: 1px solid var(--dt-gray17);
 }
 .btn-group .btn.btn-line.btn-lg.btn-neu .txt {
-  color: var(--dt-gray11);
+  color: var(--dt-gray12);
 }
 .btn-group .btn.btn-line.btn-md {
   color: var(--dt-primary);
@@ -109,7 +108,6 @@
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
 .btn-group .btn.btn-line.is-disabled {
-  border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
 }
 
@@ -148,6 +146,11 @@
   justify-content: center;
   column-gap: 4px;
 }
+.btn.btn-center .txt {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-white);
+}
 .btn.btn-center.btn-scroll {
   padding: 12.5px 22px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -180,9 +183,6 @@
 .btn.btn-center.btn-icBox.is-selected .img-box img {
   transform: rotate(180deg);
 }
-.btn.btn-center .txt {
-  color: var(--dt-white);
-}
 .btn.btn-center .img-box {
   display: flex;
   align-items: center;
@@ -196,6 +196,11 @@
   width: 100%;
   border-radius: 4px;
 }
+.btn.btn-between .txt {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
 .btn.btn-between:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
@@ -208,13 +213,63 @@
   padding: 8px 10px;
   color: var(--dt-gray10);
 }
+.btn.btn-between.bg-withdraw .txt {
+  font-weight: var(--dt-fw500);
+}
 .btn.btn-between.bg-bank {
   column-gap: 8px;
   background-color: var(--dt-gray07);
   padding: 8px;
   color: var(--dt-gray10);
 }
-.btn.btn-between .txt {
+.btn.btn-between.btn-payment .txt-box {
+  display: none;
+}
+.btn.btn-between.btn-payment.is-selected .txt-box {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.btn.btn-between.btn-payment.is-selected .txt-box .txt {
   font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-primary);
+}
+.btn.btn-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  border-radius: 4px;
+}
+.btn.btn-start.btn-data {
+  border: 1px solid var(--dt-gray17);
+  background-color: var(--dt-white);
+}
+.btn.btn-start.btn-data .txt-box .txt:nth-child(1) {
+  font-weight: var(--dt-fw600);
+  color: var(--dt-gray16);
+}
+.btn.btn-start.btn-data .txt-box .txt:nth-child(1)::after {
+  display: inline-block;
+  content: "";
+  margin: 0 12px;
+  width: 1px;
+  height: 10px;
+  background-color: var(--dt-gray09);
+}
+.btn.btn-start.btn-data .txt-box .txt:nth-child(2) {
+  font-size: 14px;
+  font-weight: 500;
   color: var(--dt-gray11);
-}/*# sourceMappingURL=button.css.map */
+}
+.btn.btn-start.btn-data.is-selected {
+  border: 2px solid var(--dt-primary);
+}
+.btn.btn-start.btn-data.is-selected .txt-box .txt {
+  color: var(--dt-primary);
+}
+.btn.btn-start.btn-data.is-selected .txt-box .txt:nth-child(1)::after {
+  background-color: var(--dt-primary);
+}

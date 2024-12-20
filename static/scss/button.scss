@@ -49,7 +49,6 @@
                 box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
             }
             &.is-disabled {
-                border: 1px solid rgba(255, 255, 255, 0.60);
                 box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
             }
         } 
@@ -70,7 +69,7 @@
                     background-color: transparent;
                     border: 1px solid var(--dt-gray17); 
                     .txt {
-                        color: var(--dt-gray11);
+                        color: var(--dt-gray12);
                     }
                 }
                 width: 100%;
@@ -100,7 +99,6 @@
                 box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
             }
             &.is-disabled {
-                border: 1px solid rgba(255, 255, 255, 0.60);
                 box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
             }
         }
@@ -139,6 +137,10 @@
     &.btn-center {
         @include flexBox();
         column-gap: 4px;
+        .txt {
+            @include fw-6();
+            color: var(--dt-white);
+        }
         &.btn-scroll {
             padding: 12.5px 22px;
             background-color: rgba(0, 0, 0, 0.74);
@@ -176,10 +178,6 @@
                     }
                 }
             }
-        }
-        .txt {
-            // @include pre-6();
-            color: var(--dt-white);
         }
         .img-box {
             @include flexBox();
@@ -222,6 +220,10 @@
         @include flexBox(between, center);
         width: 100%;
         border-radius: 4px;
+        .txt {
+            @include fw-6(14px);
+            color: var(--dt-gray11);
+        }
         &:active {
             box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
         }
@@ -233,16 +235,75 @@
             background-color: var(--dt-white);
             padding: 8px 10px;
             color: var(--dt-gray10);
+            .txt {
+                font-weight: var(--dt-fw500);
+            }
         }
         &.bg-bank {
             column-gap: 8px;
             background-color: var(--dt-gray07);
             padding: 8px;
             color: var(--dt-gray10);
+
         }
-        .txt {
-            @include fz(14px);
-            color: var(--dt-gray11);
+        &.btn-payment {
+            .txt-box {
+                display: none;
+            }
+            &.is-selected {
+                .txt-box {
+                    display: block;
+                    @include flexBox(end, center);
+                    .txt {
+                        @include fw-5(14px);
+                        color: var(--dt-primary);
+                    } 
+                }
+            }
+        }
+
+    }
+    &.btn-start {
+        @include flexBox(start, center);
+        width: 100%;
+        border-radius: 4px;
+        &.btn-data {
+            @include border(var(--dt-gray17));
+            background-color: var(--dt-white);
+            .txt-box {
+                // @include flexBox(start, center);
+                .txt {
+                    &:nth-child(1) {
+                        font-weight: var(--dt-fw600);
+                        color: var(--dt-gray16);
+                        &::after {
+                            display: inline-block;
+                            content: '';
+                            margin: 0 12px;
+                            width: 1px;
+                            height: 10px;
+                            background-color: var(--dt-gray09);
+                        }
+                    }
+                    &:nth-child(2) {
+                        @include fw-5(14px);
+                        color: var(--dt-gray11);
+                    }
+                }
+            }
+            &.is-selected {
+                border: 2px solid var(--dt-primary);
+                .txt-box {
+                    .txt {
+                        color: var(--dt-primary);
+                        &:nth-child(1) {
+                            &::after {
+                                background-color: var(--dt-primary);
+                            }
+                        }
+                    } 
+                }
+            }
         }
     }
 }
