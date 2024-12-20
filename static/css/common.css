@@ -128,7 +128,7 @@ body  * {
 	font-family: 'Pretendard', system-ui, sans-serif;
     font-size: var(--dt-fz16);
 	font-weight: var(--dt-fw400);
-    line-height: 1;
+    line-height: 1.2;
 	color: var(--dt-black);
 }
 /* Box Model */
@@ -229,4 +229,7 @@ button {
 	background-size: 24px 24px;
 	background-repeat: no-repeat;
 	background-position: center center;
+}
+.ml-auto {
+	margin-left: auto;
 }
