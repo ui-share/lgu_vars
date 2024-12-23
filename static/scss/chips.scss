@@ -169,6 +169,7 @@
 
 	// chips: 상세 - other (tag)
 	&.chips-tag {
+		min-height: 28px;
 		border-color: var(--dt-gray08);
 		background-color: var(--dt-white);
 		padding: 7px 12px;
@@ -182,7 +183,7 @@
 				color: var(--dt-primary);
 			}
 		}
-
+		
 		// chips-tag-sm
 		&.tag-sm {
 			border: none;
