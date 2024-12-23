@@ -1,7 +1,11 @@
 @import "../scss/dt-mixin.scss";
 .header {
     @include flexBox(between, center);
+    width: 100%;
     padding: 11px 20px 11px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
     .header__util {
         @include flexBox(start, center);
         .logo {
