@@ -207,17 +207,6 @@
 
 // flag
 .flag {
-	display: inline-flex;
-	flex-wrap: wrap;
-	align-items: center;
-	border-radius: 4px;
-	border: 1px solid var(--dt-gray10);
-	background-color: var(--dt-gray10);
-	padding: 4px 6px;
-	.txt {
-		@include fw-5(11px);
-		color: var(--dt-white);
-	}
 	&.primary {
 		border-color: var(--dt-primary);
 		background-color: var(--dt-primary);
@@ -271,22 +260,6 @@
 
 // badge
 .badge {
-	display: inline-flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	border: 1px solid var(--dt-gray10);
-	background-color: var(--dt-gray10);
-	gap: 4px;
-	.txt {
-		@include fw-6(12px);
-		color: var(--dt-white);
-	}
-	.icon {
-		width: 18px;
-		min-width: 18px;
-		height: 18px;
-	}
 	&.badge-round {
 		min-width: 26px;
 		min-height: 26px;
