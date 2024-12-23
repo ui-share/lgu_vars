@@ -144,7 +144,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
 .btn.btn-center .txt {
   font-size: 16px;
@@ -159,7 +160,8 @@
 }
 .btn.btn-center.btn-icBox {
   padding: 14px 0;
-  column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
   background-color: var(--dt-gray06);
   border-radius: 4px;
   width: 100%;
@@ -208,7 +210,8 @@
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
 }
 .btn.btn-between.bg-withdraw {
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   background-color: var(--dt-white);
   padding: 8px 10px;
   color: var(--dt-gray10);
@@ -217,7 +220,8 @@
   font-weight: var(--dt-fw500);
 }
 .btn.btn-between.bg-bank {
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   background-color: var(--dt-gray07);
   padding: 8px;
   color: var(--dt-gray10);

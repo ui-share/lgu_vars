@@ -1,4 +1,18 @@
 @import "../scss/dt-mixin.scss";
+.card-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	.card {
+		flex: 1 1 40%;
+		max-width: 50%;
+	}
+	&.threeby {
+		.card {
+			flex: 1 1 30%;
+		}
+	}
+}
 .card {
 	display: flex;
 	flex-direction: column;
@@ -36,6 +50,7 @@
 	}
 	.card-footer {
 		display: flex;
+		margin-top: auto;
 		.btn-group {
 			flex: auto;
 		}
@@ -46,6 +61,7 @@
 		}
 	}
 	&.solid {
+		background-color: var(--dt-gray02);
 		box-shadow: none;
 	}
 	&.sub {

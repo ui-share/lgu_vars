@@ -1,3 +1,16 @@
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.card-group .card {
+  flex: 1 1 40%;
+  max-width: 50%;
+}
+.card-group.threeby .card {
+  flex: 1 1 30%;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -40,6 +53,7 @@
 }
 .card .card-footer {
   display: flex;
+  margin-top: auto;
 }
 .card .card-footer .btn-group {
   flex: auto;
@@ -50,6 +64,7 @@
   align-items: center;
 }
 .card.solid {
+  background-color: var(--dt-gray02);
   box-shadow: none;
 }
 .card.sub .tit {
