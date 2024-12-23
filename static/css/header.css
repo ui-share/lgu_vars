@@ -1,0 +1,59 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 20px 11px 12px;
+}
+.header .header__util {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header .header__util .logo {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/img/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.header .header__util .btn-util {
+  text-indent: -999px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 6px;
+}
+.header .header__util .btn-util.prev {
+  background-image: url(../images/icon/chevron_prev_line.png);
+}
+.header .header__util .btn-util.end {
+  background-image: url(../images/icon/close_line.png);
+}
+.header .header__util .header-tit {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dt-gray16);
+}
+.header .header__util .header-tit .header-txt {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dt-gray10);
+}
+.header .header__btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.header .header__btn .btn-callEnd {
+  color: var(--dt-white);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  background-color: var(--dt-primary);
+  background-image: url(../images/icon/call_end.png);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left 12px center;
+  padding: 9px 12px 9px 32px;
+}

@@ -192,8 +192,11 @@ button {
 
 
 /* Component Common */
+.hidden {
+	display: none !important;
+}
 .ml-auto {
-	margin-left: auto;
+	margin-left: auto !important;
 }
 
 
