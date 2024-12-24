@@ -324,3 +324,9 @@ button {
 	min-width: 18px;
 	height: 18px;
 }
+
+/* tooltip 기본 */
+.tooltip img {
+	width: 18px;
+	height: 18px;
+}
