@@ -191,7 +191,7 @@ button {
 }
 
 
-/* Component Common */
+/* Element */
 .hidden {
 	display: none !important;
 }
@@ -200,6 +200,49 @@ button {
 }
 
 
+/* Component Common */
+/* bullet List */
+.bullet {
+	--bulletList-font-size : 0.750rem;
+	--bulletList-bullet-size : 0.1667em;
+	--bullet-to-section-mg : 0.5000em; /* 들여쓰기 */
+	--bulletList-between-pd : 0.1667em; /* 행간 */
+
+	--bulletList-font-color : #666;
+	--bulletList-font-weight : 400;
+	--bulletList-font-lineHeight : 1.4;
+	--bulletList-bullet-color : var(--bulletList-font-color);
+
+	--bulletList-bullet-translateY : calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size)/2 ) ) );
+	--bulletList-bullet-translateX : calc( calc( var(--bulletList-font-size)/2 ) - var(--bulletList-font-size) );
+	--bullet-to-word-pd : calc( var(--bulletList-font-size)/2 );
+
+	font-size: var(--bulletList-font-size);
+	font-weight: var(--bulletList-font-weight);
+	color: var(--bulletList-font-color);
+	line-height: var(--bulletList-font-lineHeight);
+	padding-left: var(--bullet-to-word-pd);
+	margin-left: var(--bullet-to-section-mg);
+}
+.bullet > li {
+	display: block;
+	position: relative;
+	font-size: 1em;
+	line-height: unset;
+	padding: var(--bulletList-between-pd) 0;
+}
+.bullet > li::before {
+	content: " ";
+	display: inline-block;
+	width: var(--bulletList-bullet-size);
+	height: var(--bulletList-bullet-size);
+	border-radius: var(--bulletList-bullet-size);
+	background-color: var(--bulletList-bullet-color);
+	position: absolute;
+	top: 0;
+	transform: translateY( var(--bulletList-bullet-translateY) );
+	left: var(--bulletList-bullet-translateX);  
+}
 
 
 /* img-box */
@@ -210,6 +253,8 @@ button {
 	width: 100%;
 	height: 100%;
 }
+
+
 /* chips 기본 */
 .chips {
 	display: inline-flex;
@@ -240,6 +285,8 @@ button {
 	background-repeat: no-repeat;
 	background-position: center center;
 }
+
+
 /* flag 기본 */
 .flag {
 	display: inline-flex;
@@ -255,6 +302,8 @@ button {
 	font-weight: 500;
 	color: var(--dt-white);
 }
+
+
 /* badge 기본 */
 .badge {
 	display: inline-flex;
