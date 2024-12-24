@@ -1,0 +1,176 @@
+@import "../scss/dt-mixin.scss";
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+}
+.section__divider {
+    width: 100%;
+    min-height: 10px;
+    background-color: var(--dt-gray03);
+    box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
+}
+.section__cont {
+    padding: 0 20px;
+    &:first-child {
+        background-color: var(--dt-gray07);
+        padding: 56px 10px 18px 20px;
+    }
+    .cont__txt-box {
+        background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+        background-repeat: no-repeat;
+        background-size: 140px 140px;
+        background-position: right 0 bottom -20px;
+        @include flexBox(end, start);
+        flex-direction: column;
+        row-gap: 4px;
+        padding-top: 58px;
+        padding-bottom: 56px;
+        .txt-date {
+            .date {
+                @include fw-5(14px);
+                color: var(--dt-gray13);
+            }
+        }
+        .txt-main {
+            @include fw-6(22px);
+            color: var(--dt-gray16);
+        }
+        .txt-sub {
+            @include fw-6(18px);
+            color: var(--dt-gray14);
+            .txt-point {
+                @include fw-7(22px);
+                color: var(--dt-primary);
+            }
+        }
+    }
+    .cont__info-box {
+        background-color: var(--dt-white);
+        border-radius: 8px;
+        @include flexBox();
+        column-gap: 6px;
+        padding: 16px 0;
+        .info-txt {
+            @include fw-6(16px);
+            color: var(--dt-gray11);
+            .num-won {
+                @include fw-7(18px);
+                color: var(--dt-gray16);
+            }
+        }
+        .img-box {
+            img {
+                width: 18px;
+                height: 18px;
+            }
+        }
+    }
+    .con__tit-box {
+        @include flexBox(between, center);
+        margin-bottom: 16px;
+        .tit-head {
+            @include flexBox(start, center);
+            @include fw-7(18px);
+            color: var(--dt-gray16);
+        }
+        .tit-tail {
+            @include flexBox(end, center);
+        }
+    }
+    .cont__list {
+        background-color: var(--dt-gray02);
+        border-radius: 8px;
+        padding: 20px;
+        &.cont-billing {
+            margin-bottom: 16px;
+            // 해당 마진의 경우 리스트되는 모든 마진이 동일할 때 상단으로 옮길 예정
+            .list-item {
+                &:not(:last-child) {
+                    border-bottom: 1px solid var(--dt-gray06);
+                    padding-bottom: 16px;
+                }
+                &:not(:first-child) {
+                    padding-top: 16px;
+                }
+                @include flexBox(between, center);
+                .list-head {
+                    @include fw-5(14px);
+                    color: var(--dt-gray14);
+                }
+                .list-tail {
+                    @include flexBox(end, center);
+                    column-gap: 4px;
+                    .img-box {
+                        img {
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                    .tail-txt {
+                        @include fw-5(14px);
+                        color: var(--dt-black);
+                    }
+                    .btn-right {
+                        img {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.section__cont-counsel {
+        padding: 32px 20px 48px;
+        background-color: var(--dt-gray05);
+        .con__tit-box {
+            flex-direction: column;
+            justify-content: center
+        }
+        .txt-head {
+            @include fw-5(14px);
+            color: var(--dt-gray11);
+        }
+    }
+}
+.bullet-list {
+    @include flexBox(start, start);
+    flex-direction: column;
+    row-gap: 4px;
+    margin-top: 24px;
+    .bullet-tit {
+        @include fw-6(12px);
+        color: var(--dt-gray11);
+        // padding-left: 20px;
+        &::before {
+            content: '';
+            display: inline;
+            padding-left: 20px;
+            background-image: url(../images/icon/ic-bullet-info.png);
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: left 0 center;
+        }
+    }
+    .bullet-item {
+        @include flexBox(start, start);
+        column-gap: 2px;
+        .bullet-asterisk {
+            text-indent: -999px;
+            &::before {
+                content: '';
+                display: block;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background-color:  var(--dt-gray11);
+                margin: 5px 4px 0 4px;
+            }
+        }
+        .bullet-txt {
+            @include fw-5(12px);
+            color: var(--dt-gray11);
+        }
+    }
+}
