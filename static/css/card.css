@@ -19,37 +19,42 @@
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
   border-radius: 8px;
   padding: 16px;
-  gap: 8px;
+  gap: 16px;
 }
 .card[role=button] {
   cursor: pointer;
 }
-.card .card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.card .card-header .img-box {
+.card .img-box {
   width: 28px;
   min-width: 28px;
   height: 28px;
 }
-.card .card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.card .card-body .tit {
+.card .tit {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--dt-gray16);
 }
-.card .card-body .txt {
+.card .txt {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--dt-gray11);
+}
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.card .card-body .card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card .card-body .card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .card .card-footer {
   display: flex;
@@ -90,21 +95,22 @@
 .card.horizon .card-body {
   gap: 0;
 }
-.card.horizon .card-body .tit {
+.card.horizon .tit {
   font-size: 18px;
 }
 .card.horizon .card-footer {
   margin-left: auto;
 }
-.card.is-selected, .card .is-pressed {
+.card:active {
   box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
 }
-.card.is-selected .card-header, .card.is-selected .card-body, .card .is-pressed .card-header, .card .is-pressed .card-body {
-  opacity: 0.6;
+.card.is-selected {
+  box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
 }
 .card.is-disabled {
   box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
 }
-.card.is-disabled .card-header, .card.is-disabled .card-body {
+.card.is-disabled .card-body,
+.card.is-disabled .card-footer {
   opacity: 0.6;
 }
