@@ -93,15 +93,15 @@
   align-items: center;
   justify-content: flex-end;
 }
-.section__cont.section__cont-councel {
+.section__cont.section__cont-counsel {
   padding: 32px 20px 48px;
   background-color: var(--dt-gray05);
 }
-.section__cont.section__cont-councel .con__tit-box {
+.section__cont.section__cont-counsel .con__tit-box {
   flex-direction: column;
   justify-content: center;
 }
-.section__cont.section__cont-councel .txt-head {
+.section__cont.section__cont-counsel .txt-head {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
