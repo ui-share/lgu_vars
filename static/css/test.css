@@ -1,11 +1,11 @@
 .page-wrapper.is-scrolled .header {
   background-color: var(--dt-white);
+  border-bottom: 1px solid var(--dt-gray17);
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 48px;
   padding-top: 56px;
 }
 
@@ -32,8 +32,6 @@
 .cont__wrap .cont__txt-box {
   min-height: 188px;
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
-  background-repeat: no-repeat;
-  background-size: 140px 140px;
   background-position: right 0 bottom -22px;
   padding-top: 58px;
   padding-right: 110px;
@@ -51,12 +49,10 @@
 .cont__wrap .cont__txt-box .txt-sub {
   font-size: 18px;
   font-weight: 600;
-  color: var(--dt-gray14);
 }
 .cont__wrap .cont__txt-box .txt-sub .txt-point {
   font-size: 22px;
   font-weight: 700;
-  color: var(--dt-primary);
 }
 .cont__wrap .cont__info-box {
   background-color: var(--dt-white);
@@ -64,7 +60,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   padding: 16px 0;
 }
 .cont__wrap .cont__info-box .info-txt {
@@ -80,25 +77,6 @@
 .cont__wrap .cont__info-box .img-box img {
   width: 18px;
   height: 18px;
-}
-.cont__wrap .con__tit-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.cont__wrap .con__tit-box .tit-head {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--dt-gray16);
-}
-.cont__wrap .con__tit-box .tit-tail {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
 }
 .cont__wrap .cont__list {
   background-color: var(--dt-gray02);
@@ -129,7 +107,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
 .cont__wrap .cont__list.cont-billing .list-item .list-tail .img-box img {
   width: 16px;

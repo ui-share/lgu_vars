@@ -1,0 +1,133 @@
+@import "../scss/dt-mixin.scss";
+.page-wrapper {
+	&.is-scrolled {
+		.header {
+			background-color: var(--dt-white);
+			border-bottom: 1px solid var(--dt-gray17);
+		}
+	}
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 56px;
+}
+.section__divider {
+	width: 100%;
+	min-height: 10px;
+	background-color: var(--dt-gray03);
+	box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
+}
+.section__cont {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+}
+.cont__wrap {
+	padding: 0 20px;
+	&.cont__wrap-info {
+		background-color: var(--dt-gray07);
+		padding: 0 10px 18px 20px;
+	}
+	.cont__txt-box {
+		min-height: 188px;
+		background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+		background-position: right 0 bottom -22px;
+		padding-top: 58px;
+		padding-right: 110px;
+		.txt-date {
+			.date {
+				@include fw-5(14px);
+				color: var(--dt-gray13);
+			}
+		}
+		.txt-main {
+			@include fw-6(22px);
+			color: var(--dt-gray16);
+		}
+		.txt-sub {
+			@include fw-6(18px);
+			.txt-point {
+				@include fw-7(22px);
+			}
+		}
+	}
+	.cont__info-box {
+		background-color: var(--dt-white);
+		border-radius: 8px;
+		@include flexBox();
+		column-gap: 6px;
+		padding: 16px 0;
+		.info-txt {
+			@include fw-6(16px);
+			color: var(--dt-gray11);
+			.num-won {
+				@include fw-7(18px);
+				color: var(--dt-gray16);
+			}
+		}
+		.img-box {
+			img {
+				width: 18px;
+				height: 18px;
+			}
+		}
+	}
+	.cont__list {
+		background-color: var(--dt-gray02);
+		border-radius: 8px;
+		padding: 20px;
+		&.cont-billing {
+			margin-bottom: 16px;
+			// 해당 마진의 경우 리스트되는 모든 마진이 동일할 때 상단으로 옮길 예정
+			.list-item {
+				&:not(:last-child) {
+					border-bottom: 1px solid var(--dt-gray06);
+					padding-bottom: 16px;
+				}
+				&:not(:first-child) {
+					padding-top: 16px;
+				}
+				@include flexBox(between, center);
+				.list-head {
+					@include fw-5(14px);
+					color: var(--dt-gray14);
+				}
+				.list-tail {
+					@include flexBox(end, center);
+					column-gap: 4px;
+					.img-box {
+						img {
+							width: 16px;
+							height: 16px;
+						}
+					}
+					.tail-txt {
+						@include fw-5(14px);
+						color: var(--dt-black);
+					}
+					.btn-right {
+						img {
+							width: 20px;
+							height: 20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.cont__wrap-counsel {
+		padding: 32px 20px 48px;
+		background-color: var(--dt-gray05);
+		.con__tit-box {
+			flex-direction: column;
+			justify-content: center;
+			gap: 4px;
+		}
+		.txt-head {
+			@include fw-5(14px);
+			color: var(--dt-gray11);
+		}
+	}
+}
+
