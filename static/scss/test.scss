@@ -134,15 +134,8 @@
 			}
 		}
 	}
-}
-.section__cont-counsel {
-	.card-group {
-		.card {
-			// max-width: calc(50% - 4px);
-		}
-	}
-	.cont__wrap-counsel {
-	padding: 32px 20px 48px;
+	&.cont__wrap-counsel {
+		padding: 32px 20px 48px;
 		background-color: var(--dt-gray05);
 		.con__tit-box {
 			flex-direction: column;
@@ -155,3 +148,4 @@
 		}
 	}
 }
+

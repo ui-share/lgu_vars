@@ -150,17 +150,16 @@
   width: 20px;
   height: 20px;
 }
-
-.section__cont-counsel .cont__wrap-counsel {
+.cont__wrap.cont__wrap-counsel {
   padding: 32px 20px 48px;
   background-color: var(--dt-gray05);
 }
-.section__cont-counsel .cont__wrap-counsel .con__tit-box {
+.cont__wrap.cont__wrap-counsel .con__tit-box {
   flex-direction: column;
   justify-content: center;
   gap: 4px;
 }
-.section__cont-counsel .cont__wrap-counsel .txt-head {
+.cont__wrap.cont__wrap-counsel .txt-head {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
