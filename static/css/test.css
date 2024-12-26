@@ -30,17 +30,13 @@
   padding: 0 10px 18px 20px;
 }
 .cont__wrap .cont__txt-box {
-  height: 188px;
+  min-height: 188px;
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
   background-repeat: no-repeat;
   background-size: 140px 140px;
   background-position: right 0 bottom -22px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  flex-direction: column;
-  row-gap: 4px;
-  padding-bottom: 56px;
+  padding-top: 58px;
+  padding-right: 110px;
 }
 .cont__wrap .cont__txt-box .txt-date .date {
   font-size: 14px;
@@ -68,8 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   padding: 16px 0;
 }
 .cont__wrap .cont__info-box .info-txt {
@@ -134,8 +129,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .cont__wrap .cont__list.cont-billing .list-item .list-tail .img-box img {
   width: 16px;

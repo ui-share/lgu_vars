@@ -18,13 +18,14 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/button.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/chips.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/card.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/popup.css">
 </head>
 <body>
 	<!-- 
 		스크롤 감지시 is-scrolled 
 		<div class="page-wrapper is-scrolled">
 	-->
-	<div class="page-wrapper">
+	<div class="page-wrapper is-scrolled">
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
@@ -258,6 +259,34 @@
 			</div>
 		</div>
 		<footer class="footer"></footer>
+	</div>
+	<div class="popup-wrapper popup__tit">
+		<div class="popup-header">
+			<div class="popup-tit">
+				<span class="txt">
+					팝업 타이틀텍스트
+				</span>
+			</div>
+			<button class="btn btn-popup-close" type="button" alt="닫기">
+				<img src="../static/images/icon/close_line.png">
+			</button>
+		</div>
+		<div class="popup-body">
+			<div>
+				테스트를 위한 임시 div<br>
+
+			</div>
+		</div>
+		<div class="popup-footer">
+			<div class="btn-group flex-row">
+				<button class="btn btn-line btn-lg btn-neu" type="button">
+					<span class="txt">취소</span>
+				</button>
+				<button class="btn btn-sol btn-lg" type="button">
+					<span class="txt">확인</span>
+				</button>
+			</div>
+		</div>
 	</div>
 </body>
 </html>

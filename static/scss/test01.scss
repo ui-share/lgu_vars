@@ -30,15 +30,17 @@
 		padding: 0 10px 18px 20px;
 	}
 	.cont__txt-box {
-		height: 188px;
+		min-height: 188px;
 		background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 		background-repeat: no-repeat;
 		background-size: 140px 140px;
 		background-position: right 0 bottom -22px;
-		@include flexBox(end, start);
-		flex-direction: column;
-		row-gap: 4px;
-		padding-bottom: 56px;
+		// @include flexBox(end, start);
+		// flex-direction: column;
+		// row-gap: 4px;
+		// padding-bottom: 56px;
+		padding-top: 58px;
+    	padding-right: 110px;
 		.txt-date {
 			.date {
 				@include fw-5(14px);

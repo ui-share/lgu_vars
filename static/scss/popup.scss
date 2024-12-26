@@ -1,0 +1,48 @@
+@import "../scss/dt-mixin.scss";
+.popup-wrapper {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: var(--dt-white);
+    // popup-title
+    &.popup__tit {
+        .popup-header {
+            margin-bottom: 4px;
+            padding: 28px 16px 16px 20px;
+        }
+    }
+    // popup-common 
+    .popup-header {
+        @include flexBox(between, center);
+        column-gap: 20px;
+        margin-bottom: 4px;
+        padding: 16px 16px 8px 0;
+        .popup-tit {
+            @include flexBox(start, center);
+            .txt {
+                color: var(--dt-gray16);
+                @include fw-7(20px);
+            }
+        }
+        .btn-popup-close {
+            @include flexBox(end, center);
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    .popup-body {
+        overflow-y: auto;
+        min-height: 84px;
+        max-height: 513px;
+        padding: 0 20px;
+    }
+    .popup-footer {
+        padding: 0 20px;
+        margin: 40px 0 20px;
+    } 
+}
