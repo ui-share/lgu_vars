@@ -375,7 +375,6 @@ button {
 .section__cont {
 	display: flex;
 	flex-direction: column;
-	gap: 48px;
 }
 
 .cont__wrap {
@@ -386,8 +385,6 @@ button {
 	align-items: flex-start;
 	justify-content: flex-end;
 	flex-direction: column;
-	background-repeat: no-repeat;
-	background-size: 140px 140px;
 	row-gap: 4px;
 }
 .cont__wrap .cont__txt-box .txt-main {
