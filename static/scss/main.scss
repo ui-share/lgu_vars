@@ -1,0 +1,29 @@
+@import "../scss/dt-mixin.scss";
+.cont__wrap {
+	.cont__txt-box {
+		background-image: url(../images/img/img-hm-home.png);
+		background-position: right -20px bottom -8px;
+		padding: 32px 120px 28px 0;
+	}
+}
+
+.section__cont-menu {
+	padding: 36px 0 48px 0;
+	background-color: var(--dt-gray02);
+	.cont__wrap-freqMenu {
+		.con__tit-box {
+			justify-content: flex-start;
+			gap: 4px;
+			.img-box {
+				width: 20px;
+				min-width: 20px;
+				height: 20px;
+			}
+		}
+		.txt-head {
+			@include fw-5(14px);
+			color: var(--dt-gray11);
+		}
+	}
+}
+
