@@ -1,16 +1,11 @@
 @import "../scss/dt-mixin.scss";
 .card-group {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 8px;
-	.card {
-		flex: 1 1 40%;
-		max-width: 50%;
-	}
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);  // 두 열로 구성
+	gap: 8px;  // 카드 사이의 간격
+	grid-auto-rows: 1fr;  // 각 카드의 높이가 동일하게 맞춰지도록 설정
 	&.threeby {
-		.card {
-			flex: 1 1 30%;
-		}
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 .card {

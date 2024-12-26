@@ -1,14 +1,11 @@
 .card-group {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 8px;
+  grid-auto-rows: 1fr;
 }
-.card-group .card {
-  flex: 1 1 40%;
-  max-width: 50%;
-}
-.card-group.threeby .card {
-  flex: 1 1 30%;
+.card-group.threeby {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {

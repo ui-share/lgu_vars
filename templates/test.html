@@ -41,7 +41,7 @@
 		<div class="container">
 			<!-- 본문 컨텐츠 영역 -->
 			<div class="section__cont">
-				<div class="cont__wrap">
+				<div class="cont__wrap cont__wrap-info">
 					<div class="cont__txt-box">
 						<!-- 상단 작은 날짜 부분 -->
 						<div class="txt-date hidden">
@@ -138,13 +138,15 @@
 						<li class="bullet-item">
 							납부방법은 동일하나 결제 카드 및 은행계좌만 변경한 경우, 변경신청 후 영업일 기준 2~3일 후 해당 은행계좌 또는 카드로 요금이 결제됩니다. 
 						</li>
+						<!-- <li>은행계좌에서 카드로 변경 시, 결제일은 매달 9일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다.</li> -->
+						<!-- <li>납부방법은 동일하나 결제 카드 및 은행계좌만 변경한 경우, 변경신청 후 영업일 기준 2~3일 후 해당 은행계좌 또는 카드로 요금이 결제됩니다. </li> -->
 					</ul>
 				</div>
 			</div>
 			<!-- 디바이더 영역 -->
 			<div class="section__divider"></div>
 			<!-- 상담 컨텐츠 영역 -->
-			<div class="section__counsel">
+			<div class="section__cont">
 				<div class="cont__wrap">
 					<div class="con__tit-box">
 						<div class="tit-head">
@@ -154,7 +156,7 @@
 							칩스?
 						</div>
 					</div>
-					<!-- <div class="card-group flex-column">
+					<div class="card-group flex-column">
 						<div class="card solid" role="button" tabindex="0">
 							<div class="card-body">
 								<div class="card-top">
@@ -172,7 +174,7 @@
 							<div class="card-body">
 								<div class="card-top">
 									<span class="img-box">
-										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
 									</span>
 								</div>
 								<div class="card-bottom">
@@ -194,77 +196,9 @@
 								</div>
 							</div>
 						</div>
-					</div> -->
-					<div class="card-group">
-						<div class="card">
-							<div class="card-head">
-								<div class="img-box">
-									<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
-								</div>
-								<div class="card-headTxt">
-									텍스트
-								</div>
-							</div>
-							<div class="card-body">
-								<span class="body-tit">
-									타이틀
-								</span>
-								<span class="body-txt">
-									설명문구를 입력해주세요
-								</span>
-							</div>
-							<div class="card-foot hidden">
-								<button class="btn btn-card">버튼명</button>
-								<span class="chips-card hidden">텍스트</span>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-head">
-								<span class="img-box">
-									<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
-								</span>
-								<span class="card-headTxt">
-									텍스트
-								</span>
-							</div>
-							<div class="card-body">
-								<div class="body-tit">
-									타이틀
-								</div>
-								<div class="body-txt">
-									설명문구를 입력해주세요
-								</div>
-							</div>
-							<div class="card-foot hidden">
-								<button class="btn btn-card">버튼명</button>
-								<span class="chips-card hidden">텍스트</span>
-							</div>
-						</div>
-						<div class="card">
-							<div class="card-head">
-								<span class="img-box">
-									<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
-								</span>
-								<span class="card-headTxt">
-									텍스트
-								</span>
-							</div>
-							<div class="card-body">
-								<div class="body-tit">
-									타이틀
-								</div>
-								<div class="body-txt hidden">
-									설명문구를 입력해주세요
-								</div>
-							</div>
-							<div class="card-foot hidden">
-								<button class="btn btn-card">버튼명</button>
-								<span class="chips-card hidden">텍스트</span>
-							</div>
-						</div>
 					</div>
 				</div>
-				<div class="cont__wrap">
+				<div class="cont__wrap cont__wrap-counsel">
 					<div class="con__tit-box">
 						<span class="txt-head">문의사항을 찾기 어려우신가요</span>
 						<div class="tit-head">
@@ -289,7 +223,7 @@
 							</div>
 							<div class="card-footer">
 								<div class="chips chips-tag">
-									<span class="txt">대기시간 약 3분</span>3
+									<span class="txt">점심시간</span>
 								</div>
 							</div> 
 						</div>
@@ -297,7 +231,7 @@
 							<div class="card-body">
 								<div class="card-top">
 									<span class="img-box">
-										<img src="../static/images/icon/ic-card-calls.png" alt="전화상담">
+										<img src="../static/images/icon/ic-card-ars-ai.png" alt="AI상담">
 									</span>
 								</div>
 								<div class="card-bottom">
@@ -305,29 +239,19 @@
 									<span class="txt">언제든지 빠른</span>
 								</div>
 							</div>
-							<div class="card-footer">
-								<div class="chips chips-tag">
-									<span class="txt">대기없음</span>
-								</div>
-							</div> 
 						</div>
 						<div class="card sub detail" role="button" tabindex="0">
 							<div class="card-body">
 								<div class="card-top">
 									<span class="img-box">
-										<img src="../static/images/icon/ic-card-calls.png" alt="전화상담">
+										<img src="../static/images/icon/ic-card-calls.png" alt="챗봇봇상담">
 									</span>
 								</div>
 								<div class="card-bottom">
-									<span class="tit">AI 상담사</span>
+									<span class="tit">챗봇 상담</span>
 									<span class="txt">언제든지 빠른</span>
 								</div>
 							</div>
-							<div class="card-footer">
-								<div class="chips chips-tag">
-									<span class="txt">대기없음</span>
-								</div>
-							</div> 
 						</div>
 					</div>
 				</div>
