@@ -1,14 +1,16 @@
 .card-group {
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 .card-group .card {
   flex: 1 1 40%;
-  max-width: 50%;
+  max-width: calc(50% - 4px);
 }
 .card-group.threeby .card {
   flex: 1 1 30%;
+  max-width: calc(33% - 2.6666666667px);
 }
 
 .card {

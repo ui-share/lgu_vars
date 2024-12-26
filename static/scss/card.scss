@@ -1,15 +1,19 @@
 @import "../scss/dt-mixin.scss";
 .card-group {
+	$gap: 8px;
+
+	height: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px;
+	gap: $gap;
 	.card {
 		flex: 1 1 40%;
-		max-width: 50%;
+		max-width: calc(50% - $gap/2);
 	}
 	&.threeby {
 		.card {
 			flex: 1 1 30%;
+			max-width: calc(33% - $gap/3);
 		}
 	}
 }

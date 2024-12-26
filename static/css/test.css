@@ -5,7 +5,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 48px;
   padding-top: 56px;
 }
 
@@ -19,13 +19,13 @@
 .section__cont {
   display: flex;
   flex-direction: column;
-  gap: 46px;
+  gap: 48px;
 }
 
 .cont__wrap {
   padding: 0 20px;
 }
-.cont__wrap:first-child {
+.cont__wrap.cont__wrap-info {
   background-color: var(--dt-gray07);
   padding: 0 10px 18px 20px;
 }
@@ -68,7 +68,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   padding: 16px 0;
 }
 .cont__wrap .cont__info-box .info-txt {
@@ -133,7 +134,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
 }
 .cont__wrap .cont__list.cont-billing .list-item .list-tail .img-box img {
   width: 16px;
@@ -149,15 +151,16 @@
   height: 20px;
 }
 
-.section__counsel {
+.section__cont-counsel .cont__wrap-counsel {
   padding: 32px 20px 48px;
   background-color: var(--dt-gray05);
 }
-.section__counsel .con__tit-box {
+.section__cont-counsel .cont__wrap-counsel .con__tit-box {
   flex-direction: column;
   justify-content: center;
+  gap: 4px;
 }
-.section__counsel .txt-head {
+.section__cont-counsel .cont__wrap-counsel .txt-head {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
