@@ -1,10 +1,10 @@
 @import "../scss/dt-mixin.scss";
-.cont__wrap {
-	.cont__txt-box {
-		background-image: url(../images/img/img-hm-home.png);
-		background-position: right -20px bottom -8px;
-		padding: 32px 120px 28px 0;
-	}
+.message {
+	padding: 32px 120px 28px 20px;
+	background-image: url(../images/img/img-hm-home.png);
+	background-position: right -20px bottom -8px;
+	background-repeat: no-repeat;
+	background-size: 140px 140px;
 }
 
 .section__cont-menu {

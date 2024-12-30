@@ -1,6 +1,7 @@
 @import "../scss/dt-mixin.scss";
 .header {
     @include flexBox(between, center);
+    flex-wrap: wrap;
     width: 100%;
     padding: 11px 20px 11px 12px;
     position: fixed;
@@ -40,6 +41,7 @@
     }
     .header__btn {
         @include flexBox(end, center);
+        margin-left: auto;
         .btn-callEnd {
             // width: 24px;
             // height: 24px;
