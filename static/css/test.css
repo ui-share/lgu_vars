@@ -74,7 +74,7 @@
   align-items: center;
   justify-content: center;
   -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   padding: 16px 0;
 }
 .cont__wrap .cont__info-box .info-txt {

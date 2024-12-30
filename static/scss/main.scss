@@ -7,10 +7,14 @@
 	background-size: 140px 140px;
 }
 
-.section__cont-menu {
+.category {
+	padding-bottom: 32px;
+}
+.menu {
 	padding: 36px 0 48px 0;
 	background-color: var(--dt-gray02);
-	.cont__wrap-freqMenu {
+	gap: 48px;
+	.freqMenu {
 		.con__tit-box {
 			justify-content: flex-start;
 			gap: 4px;
@@ -26,4 +30,16 @@
 		}
 	}
 }
-
+.is-scrolled .category {
+	position: sticky;
+	top: 57px;
+	left: 0;
+	background-color: var(--dt-white);
+	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+	overflow: hidden;
+	.chips-group {
+		padding: 8px 0;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+	}
+}

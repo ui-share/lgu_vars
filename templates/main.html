@@ -24,7 +24,7 @@
 		스크롤 감지시 is-scrolled 
 		<div class="page-wrapper is-scrolled">
 	-->
-	<div class="page-wrapper is-scrolled">
+	<div class="page-wrapper">
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
@@ -40,7 +40,7 @@
 		<!-- //header -->
 		<div class="container">
 			<!-- 배너 영역 -->
-			<div class="section__cont hidden">
+			<div class="section__cont banner hidden">
 				<div class="cont__wrap">
 				</div>
 			</div>
@@ -58,6 +58,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
+
+			<div class="section__cont category">
 				<div class="cont__wrap">
 					<div class="chips-group">
 						<button type="button" class="chips chips-menu is-selected">
@@ -101,14 +104,11 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__cont">
-				
-			</div>
 
 			<!-- 전체 메뉴 카드 리스트 영역 -->
-			<div class="section__cont section__cont-menu">
-				<!-- 많이 찾는 문의의 -->
-				<div class="cont__wrap cont__wrap-freqMenu">
+			<div class="section__cont menu">
+				<!-- 많이 찾는 문의 -->
+				<div class="cont__wrap freqMenu">
 					<div class="con__tit-box">
 						<div class="img-box">
 							<img src="../static/images/icon/ic-chips-flag.png">
@@ -118,6 +118,7 @@
 						</div>
 					</div>
 					<div class="card-group flex-column">
+						
 						<div class="card" role="button" tabindex="0">
 							<div class="card-body">
 								<div class="card-top">
