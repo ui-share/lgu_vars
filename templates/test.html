@@ -57,6 +57,8 @@
 							<span class="txt-point">신용카드 자동이체</span>예요
 						</div>
 					</div>
+				</div>
+				<div class="cont__wrap">
 					<div class="cont__info-box hidden">
 						<div class="info-txt">
 							<span class="txt">지난 달보다</span>
@@ -260,33 +262,39 @@
 		</div>
 		<footer class="footer"></footer>
 	</div>
-	<div class="popup-wrapper popup__tit">
-		<div class="popup-header">
-			<div class="popup-tit">
-				<span class="txt">
-					팝업 타이틀텍스트
-				</span>
+	<div class="popup-wrapper show fade popup__tit">
+		<div class="back-drop"></div>
+		<div class="popup-container">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt">
+						팝업 타이틀텍스트
+					</span>
+				</div>
+				<button class="btn btn-popup-close" type="button" alt="닫기">
+					<img src="../static/images/icon/close_line.png">
+				</button>
 			</div>
-			<button class="btn btn-popup-close" type="button" alt="닫기">
-				<img src="../static/images/icon/close_line.png">
-			</button>
-		</div>
-		<div class="popup-body">
-			<div>
-				테스트를 위한 임시 div<br>
+			<div class="popup-body">
+				<div>
+					테스트를 위한 임시 div<br>
+	
+				</div>
+			</div>
+			<div class="popup-footer">
+				<div class="btn-group flex-row">
+					<button class="btn btn-line btn-lg btn-neu" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn btn-sol btn-lg" type="button">
+						<span class="txt">확인</span>
+					</button>
+				</div>
+			</div>
 
-			</div>
 		</div>
-		<div class="popup-footer">
-			<div class="btn-group flex-row">
-				<button class="btn btn-line btn-lg btn-neu" type="button">
-					<span class="txt">취소</span>
-				</button>
-				<button class="btn btn-sol btn-lg" type="button">
-					<span class="txt">확인</span>
-				</button>
-			</div>
-		</div>
+
 	</div>
+
 </body>
 </html>
