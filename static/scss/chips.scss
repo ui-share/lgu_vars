@@ -208,6 +208,10 @@
 
 // flag
 .flag {
+	width: fit-content;
+	.txt {
+		text-align: center;
+	}
 	&.primary {
 		border-color: var(--dt-primary);
 		background-color: var(--dt-primary);

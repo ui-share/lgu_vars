@@ -25,6 +25,26 @@
 		min-width: 28px;
 		height: 28px;
 	}
+	.card-header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+	}
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+	.card__util {
+		@include flexBox(between);
+	}
+	.card__text {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
 	.tit {
 		@include fw-7();
 		line-height: 1.5;
@@ -34,19 +54,6 @@
 		@include fw-5(14px);
 		line-height: 1.5;
 		color: var(--dt-gray11);
-	}
-	.card-body {
-		display: flex;
-		flex-direction: column;
-		gap: 8px;
-		.card-top {
-			@include flexBox(between);
-		}
-		.card-bottom {
-			display: flex;
-			flex-direction: column;
-			gap: 8px;
-		}
 	}
 	.card-footer {
 		display: flex;
@@ -75,37 +82,240 @@
 			}
 		}
 	}
-	&.horizon {
-		align-items: center;
-		flex-direction: row;
-		padding: 23px 16px;
-		gap: 12px;
-		.img-box {
-			width: 32px;
-			min-width: 32px;
-			height: 32px;
-		}
-		.card-body {
-			gap: 0;
-		}
-		.tit {
-			font-size: 18px;
-		}
-		.card-footer {
-			margin-left: auto;
-		}
-	}
-	&:active {
-		box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+	> .flag {
+		font-size: 12px;
+		padding: 4px 10px;
 	}
 	&.is-selected {
 		box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+		.card-body,
+		.card-footer {
+			opacity: 0.6;
+		}
 	}
 	&.is-disabled {
 		box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
 		.card-body,
 		.card-footer {
 			opacity: 0.6;
+		}
+	}
+}
+
+.horizon {
+	align-items: center;
+	flex-direction: row;
+	padding: 23px 16px;
+	gap: 12px;
+	.img-box {
+		width: 32px;
+		min-width: 32px;
+		height: 32px;
+	}
+	.card-body {
+		align-items: center;
+		flex-direction: row;
+		gap: 12px;
+	}
+	.card__text {
+		gap: 0;
+	}
+	.tit {
+		font-size: 18px;
+	}
+	.card-footer {
+		margin-top: 0;
+		margin-left: auto;
+	}
+	&.solid {
+		.card-body {
+			width: 100%;
+			gap: 8px;
+		}
+		.card__text {
+			flex-direction: row;
+			align-items: center;
+			flex: 1;
+		}
+		.img-box {
+			width: 28px;
+			min-width: 28px;
+			height: 28px;
+		}
+		.tit {
+			@include fw-6();
+			color: var(--dt-gray12);
+		}
+		.txt {
+			margin-left: auto;
+		}
+	}
+}
+
+.chatbot {
+	background-color: #FBDAED;
+	box-shadow: none;
+	.img-box {
+		width: 48px;
+		min-width: 48px;
+		height: 48px;
+	}
+	.card-footer {
+		.btn-group {
+			.btn {
+				width: max-content;
+				height: 34px;
+				padding: 10px 12px;
+			}
+		}
+	}
+}
+
+.home {
+	background-color: #C3E4FE;
+	box-shadow: none;
+	.img-box {
+		width: 48px;
+		min-width: 48px;
+		height: 48px;
+	}
+	.card-footer {
+		.btn-group {
+			.btn {
+				width: max-content;
+				height: 34px;
+				padding: 10px 12px;
+			}
+		}
+	}
+}
+
+.bank {
+	.card-header {
+		align-items: start;
+	}
+	.img-box {
+		width: 20px;
+		min-width: 20px;
+		height: 20px;
+	}
+	.card__text {
+		gap: 0;
+		.txt {
+			color: var(--dt-gray13);
+		}
+	}
+	.card__btn {
+		margin-left: auto;
+		.end {
+			width: 24px;
+			height: 24px;
+			text-indent: -9999px;
+			background-image: url(../images/icon/ic-card-end.png);
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+			background-position: center center;
+		}
+	}
+	.card-footer {
+		.btn-group {
+			.btn {
+				background-color: var(--dt-gray06);
+				border-color: var(--dt-gray06);
+				.txt {
+					color: var(--dt-gray11);
+				}
+			}
+		}
+	}
+}
+
+.bill {
+	.card__text {
+		flex-direction: row;
+		align-items: center;
+		.flag {
+			padding: 4px 8px;
+			margin-left: auto;
+			.txt {
+				font-size: 12px;
+			}
+		}
+		.pay-txt {
+			@include fw-7();
+		}
+	}
+	.bill-explain {
+		@include fw-5(12px);
+		color: var(--dt-gray11);
+		text-align: right;
+	}
+	.card-footer {
+		.btn-group {
+			.btn {
+				border-color: var(--dt-gray06);
+			}
+		}
+	}
+}
+
+.center {
+	padding: 30px 20px;
+	.card-body {
+		align-items: center;
+	}
+	.img-box {
+		width: 40px;
+		min-width: 40px;
+		height: 40px;
+	}
+	.card__text {
+		text-align: center;
+		gap: 4px;
+		.tit {
+			font-weight: 500;
+		}
+	}
+}
+
+.alert {
+	gap: 10px;
+	.img-box {
+		width: 24px;
+		min-width: 24px;
+		height: 24px;
+	}
+	> .card-header {
+		justify-content: flex-start;
+		.tit {
+			font-size: 14px;
+		}
+	}
+	.message {
+		gap: 0;
+		padding: 12px 16px;
+		.tit {
+			font-size: 12px;
+		}
+		.time {
+			@include fw-5(11px);
+			color: var(--dt-gray10);
+			margin-left: auto;
+		}
+		.card__text {
+			gap: 2px;
+			.tel {
+				@include fw-6(11px);
+				color: var(--dt-gray11);
+			}
+			.msg {
+				width: 100%;
+				font-size: 11px;
+				color: var(--dt-gray11);
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
 		}
 	}
 }

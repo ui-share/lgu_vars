@@ -186,6 +186,13 @@
   color: var(--dt-primary);
 }
 
+.flag {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.flag .txt {
+  text-align: center;
+}
 .flag.primary {
   border-color: var(--dt-primary);
   background-color: var(--dt-primary);
