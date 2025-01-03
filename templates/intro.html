@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="theme-color" content="#ffffff">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/header.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/button.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/chips.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/card.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/intro.css">
+</head>
+<body>
+	<!-- 
+		스크롤 감지시 is-scrolled 
+		<div class="page-wrapper is-scrolled">
+	-->
+	<div class="page-wrapper is-scrolled">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<h1 class="logo"></h1>
+				<!-- <button type="button" class="btn btn-util prev"><span>이전</span></button>
+				<button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+				<span class="header-tit"><span class="header-txt">눈으로 보는 ARS</span></span>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd">종료</button>
+			</div>
+		</header>
+		<!-- //header -->
+		<div class="container">
+			<!-- 배너 영역 -->
+			<div class="section__cont banner hidden">
+				<div class="cont__wrap">
+				</div>
+			</div>
+			<!-- 웰컴 메시지 & 메뉴카테고리 영역 -->
+			<div class="section__cont">
+				<div class="cont__wrap message">
+					<div class="cont__txt-box">
+						<!-- 검정색 메인 글자 -->
+						<div class="txt-main">
+							궁금하신 내용을
+						</div>
+						<!-- primary 색 들어가는 포인트 영역 -->
+						<div class="txt-sub">
+							<span class="txt-point">아래에서 선택</span>해주세요
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="section__cont category">
+				<!-- 스크롤 맨 앞일 경우 scroll class 삭제 -->
+				<!-- 스크롤 중일 경우 cont__wrap 에 scroll-start 클래스 추가 -->
+				<!-- 스크롤 맨 뒤일 경우 scroll-start를 scroll-end로 변경 -->
+				<div class="cont__wrap">
+					<div class="chips-group">
+						<button type="button" class="chips chips-menu is-selected">
+							<span class="img-box icon"><img src="../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
+							<span class="txt">많이 찾는 문의</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">요금 및 납부</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">가입정보</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">사용현황</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">휴대폰 결제</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">해외로밍</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">해외로밍 부가서비스</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu chips-more">
+							<span class="arrow"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 전체 메뉴 카드 리스트 영역 -->
+			<div class="section__cont menu">
+				<!-- 많이 찾는 문의 -->
+				<div class="cont__wrap freqMenu">
+					<div class="con__tit-box">
+						<div class="img-box">
+							<img src="../static/images/icon/ic-chips-flag.png">
+						</div>
+						<div class="tit-head">
+							많이 찾는 문의
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+									<div class="flag flag-recent">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-myplan.png" alt="나의요금제">
+									</span>
+									<div class="flag flag-recent">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">나의 요금제</h3>
+									<p class="txt">요금제 확인 · 변경</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-added-service.png" alt="부가서비스신청해지">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">부가서비스<br>신청 · 해지</h3>
+									<!-- <p class="txt">청구요금 미리납부</p> -->
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">실시간 요금</h3>
+									<p class="txt">오늘까지 사용한<br>요금 조회</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="cont__wrap">
+					<div class="card horizon chatbot">
+						<div class="card-body">
+							<div class="card__util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-home-holeman.png" alt="챗봇에 문의">
+								</span>
+							</div>
+							<div class="card__text">
+								<h3 class="tit">챗봇에 문의</h3>
+								<p class="txt">24시간 대기없이 바로 문의</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="btn-group">
+								<button class="btn btn-sol btn-md" type="button">
+									<span class="txt">연결</span>
+								</button>
+							</div>
+						</div> 
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							요금 및 납부
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">실시간 요금</h3>
+									<p class="txt">오늘까지 사용한<br>요금 조회</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-change_payment.png" alt="요금 납부방법 변경">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 납부방법 변경</h3>
+									<p class="txt">계좌 · 카드로<br>매달 자동이체</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							가입정보
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							사용현황
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							휴대폰결제
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							해외로밍
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<div class="tit-head">
+							정지·분실·통화품질
+						</div>
+					</div>
+					<div class="card-group flex-column">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="card__text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="card__util">
+									<span class="img-box">
+										<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+								</div>
+								<div class="card__text">
+									<h3 class="tit">요금 바로납부</h3>
+									<p class="txt">청구요금 미리납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="card horizon home">
+						<div class="card-body">
+							<div class="card__util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-home-iptv.png" alt="홈 고객센터 문의">
+								</span>
+							</div>
+							<div class="card__text">
+								<h3 class="tit">홈 고객센터 문의</h3>
+								<p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="btn-group">
+								<button class="btn btn-sol btn-md" type="button">
+									<span class="txt">연결</span>
+								</button>
+							</div>
+						</div> 
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="btn-group conversion">
+						<button class="btn btn-sol btn-lg" type="button">
+							<span class="txt">음성 ARS로 전환</span>
+						</button>
+						<span class="divider"></span>
+						<button class="btn btn-sol btn-lg" type="button">
+							<span class="txt">AI상담사로 전환</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer class="footer"></footer>
+	</div>
+</body>
+</html>

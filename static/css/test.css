@@ -120,8 +120,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .cont__wrap .cont__list.cont-billing .list-item .list-tail .img-box img {
   width: 16px;

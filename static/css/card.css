@@ -163,7 +163,6 @@
   height: 48px;
 }
 .chatbot .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -179,7 +178,6 @@
   height: 48px;
 }
 .home .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
