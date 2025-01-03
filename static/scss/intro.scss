@@ -1,0 +1,54 @@
+@import "../scss/dt-mixin.scss";
+.page-wrapper {
+    background-color: var(--dt-gray05);
+    height: 100vh; 
+    // 높이 설정 문의
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 56px;
+	gap: 48px;
+}
+
+.section__cont {
+	display: flex;
+	flex-direction: column;
+    &.intro {
+        row-gap: 48px;
+        .cont__wrap {
+            &.intro-top {
+                @include flexBox();
+                flex-direction: column;
+                .intro-logo {
+                    &.img-box {
+                        width: 68px;
+                        height: 68px;
+                    } 
+                }
+                .con__tit-box {
+                    @include flexBox();
+                    flex-direction: column;
+                    margin-top: 12px;
+                    .tit {
+                        @include fw-6(22px);
+                        color: var(--dt-gray16);
+                        line-height: var(--dt-lh150);
+                    }
+                }
+            }
+            .card-group {
+                @include gridBox(1);
+                row-gap: 12px;
+                .btn-group {
+                    .btn-sol {
+                        &.btn-md {
+                            padding: 10px 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
