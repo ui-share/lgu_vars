@@ -18,9 +18,6 @@
   padding: 16px;
   gap: 16px;
 }
-.card[role=button] {
-  cursor: pointer;
-}
 .card .img-box {
   width: 28px;
   min-width: 28px;
@@ -49,10 +46,24 @@
   gap: 8px;
 }
 .card .tit {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--dt-gray16);
+}
+.card .tit .icon {
+  display: inline-block;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background-image: url(../images/icon/ic-card-headphone.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 .card .txt {
   font-size: 14px;
@@ -86,8 +97,20 @@
   flex: none;
 }
 .card > .flag {
-  font-size: 12px;
   padding: 4px 10px;
+}
+.card > .flag .txt {
+  font-size: 12px;
+}
+.card[role=button] {
+  cursor: pointer;
+}
+.card[role=button]:active {
+  box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+}
+.card[role=button]:active .card-body,
+.card[role=button]:active .card-footer {
+  opacity: 0.6;
 }
 .card.is-selected {
   box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
@@ -153,6 +176,55 @@
   margin-left: auto;
 }
 
+.banner {
+  position: relative;
+  padding: 15px 48px 15px 20px;
+  background-color: var(--dt-gray02);
+  box-shadow: none;
+}
+.banner .img-box {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+}
+.banner .card__text {
+  gap: 2px;
+}
+.banner .tit {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dt-gray11);
+}
+.banner .txt {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.banner .end {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background-image: url(../images/icon/ic-card-end.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+}
+.banner .page {
+  font-size: 12px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+}
+.banner .deco {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dt-primary);
+}
+
 .chatbot {
   background-color: #FBDAED;
   box-shadow: none;
@@ -163,6 +235,7 @@
   height: 48px;
 }
 .chatbot .card-footer .btn-group .btn {
+  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -178,11 +251,15 @@
   height: 48px;
 }
 .home .card-footer .btn-group .btn {
+  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
 }
 
+.bank {
+  position: relative;
+}
 .bank .card-header {
   align-items: start;
 }
@@ -190,6 +267,7 @@
   width: 20px;
   min-width: 20px;
   height: 20px;
+  margin-top: 2px;
 }
 .bank .card__text {
   gap: 0;
@@ -197,10 +275,10 @@
 .bank .card__text .txt {
   color: var(--dt-gray13);
 }
-.bank .card__btn {
-  margin-left: auto;
-}
-.bank .card__btn .end {
+.bank .end {
+  position: absolute;
+  top: 16px;
+  right: 16px;
   width: 24px;
   height: 24px;
   text-indent: -9999px;
@@ -241,6 +319,11 @@
 .bill .card-footer .btn-group .btn {
   border-color: var(--dt-gray06);
 }
+.bill .card-footer .btn-group .btn .img-box {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+}
 
 .center {
   padding: 30px 20px;
@@ -278,6 +361,7 @@
 .alert .message {
   gap: 0;
   padding: 12px 16px;
+  box-shadow: none;
 }
 .alert .message .tit {
   font-size: 12px;

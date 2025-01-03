@@ -187,6 +187,7 @@
 }
 
 .flag {
+  width: -moz-fit-content;
   width: fit-content;
 }
 .flag .txt {

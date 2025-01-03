@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="theme-color" content="#ffffff">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/card.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/swiper.css">
+	
+	<!-- Scripts -->
+	<script src="../../static/js/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+	<script src="../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+</head>
+
+<style>
+/* Swiper : swiper-type-step */
+.swiper-container {
+	position: relative;	
+	border: 1px solid #e3e3e3;
+	border-radius: 8px;		
+	padding: 20px 20px 68px;
+	margin: 8px auto 20px;
+	overflow: visible;
+}
+.swiper-wrapper {
+	position: relative;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+	z-index: auto;
+	transform: translateZ(0);
+}
+.swiper-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;		
+	align-items: center;
+}
+.swiper-slide {
+	flex-shrink: 0;
+	width: 100%;
+	position: relative;
+	vertical-align: top;
+	transform: translateZ(0);
+}
+.swiper-pagination {
+	width: auto;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 13px;
+	text-align: center;
+	letter-spacing: 4px;
+	border-top: 1px solid #e3e3e3;
+	transform: translateX(0);
+	transition: opacity .3s;
+}
+.swiper-pagination-current {
+	color: #000;
+	letter-spacing: 0;
+	margin-left: 5px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+	--swiper-navigation-size: 13px;
+	--swiper-theme-color: #333;
+	display: flex;
+	width: 24px;
+	height: 24px;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: auto;
+	bottom: 0;
+	background: none;
+	transform: translateY(-50%);
+}
+.swiper-button-prev {
+	left: 10px;
+	right: auto;
+}
+.swiper-button-next {
+	right: 10px;
+	left: auto;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	font-weight: 700;
+}
+</style>
+
+<body>
+	<div class="page-wrapper">
+		<!-- header -->
+		<header class="header"></header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont">
+				<div class="cont__wrap">
+					<!-- 슬라이드 Slider main container -->
+					<div class="swiper swiper-type-step callChange-direct">
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">가입 매장 상담사 연결</h3>
+												<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+											<div class="page"><span class="deco">1</span>/5</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">가입 매장 상담사 연결</h3>
+												<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+											<div class="page"><span class="deco">1</span>/5</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">가입 매장 상담사 연결</h3>
+												<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+											<div class="page"><span class="deco">1</span>/5</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- pagination -->
+							<div class="swiper-pagination"></div>
+
+							<!-- navigation buttons -->
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>								
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	
+		<!-- footer -->
+		<footer class="footer"></footer>
+		<!-- //footer -->
+	</div>
+
+	<script>
+		const swiper = new Swiper('.swiper .swiper-container', {
+			spaceBetween: 22,
+			
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+	
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+</body>
+</html>
