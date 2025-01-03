@@ -1,14 +1,13 @@
 @import "../scss/dt-mixin.scss";
 .page-wrapper {
     background-color: var(--dt-gray05);
-    height: 100vh; 
+    height: 100%; 
     // 높이 설정 문의
 }
 .container {
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
-	// padding-top: 56px;
+	padding-top: 56px;
 	gap: 48px;
 }
 
