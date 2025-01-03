@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="theme-color" content="#ffffff">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../static/js/jquery-ui-1.13.2/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../static/js/swiper-11.1.5/swiper-bundle.css" />
+	<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/card.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/chips.css">
+	<link rel="stylesheet" type="text/css" href="../static/js/swiper-11.1.5/swiper.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/splash.css">
+	
+	<!-- Scripts -->
+	<script src="../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+</head>
+
+<style>
+
+
+
+</style>
+
+<body>
+	<div class="page-wrapper">
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont splash">
+				<!-- 상단 로고 & 타이틀 -->
+				<div class="cont__wrap splash-box">
+					<span class="splash-logo img-box">
+						<img src="../static/images/img/logo-w.svg">
+					</span>
+					<div class="con__txt-box">
+						<span class="tit">눈으로 보는 ARS로</span>
+						<span class="tit">연결 중이에요</span>
+					</div>
+				</div>
+				<div class="cont__wrap splash-swiper">
+					<!-- splash main container -->
+					<div class="swiper">
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="img-box">
+										<img src="../static/images/img/img-splash01.svg">
+									</div>
+									<span class="txt">
+										언제든 기다림 없이
+									</span>
+								</div>
+								<div class="swiper-slide">
+									<div class="img-box">
+										<img src="../static/images/img/img-splash02.svg">
+									</div>
+									<span class="txt">
+										화면을 보고 선택하는
+									</span>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="img-box">
+										<img src="../static/images/img/img-splash03.svg">
+									</div>
+									<span class="txt">
+										쉽고 빠르게 해결하는
+									</span>
+								</div>
+							</div>
+							<!-- pagination -->
+							<div class="swiper-pagination"></div>
+						</div>								
+					</div>
+				</div>
+				<div class="cont__wrap splash-box">
+					<div class="badge badge-tip">
+						<span class="txt">TIPS</span>
+					</div>
+					<div class="con__txt-box">
+						<span class="txt">스피커 모드로 전환하거나 이어폰을 착용하면</span>
+						<span class="txt">음성안내를 들으며 더 편리하게 이용할 수 있어요</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	
+		<!-- footer -->
+		<footer class="footer"></footer>
+		<!-- //footer -->
+	</div>
+
+	<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+
+    // 복제된 슬라이드 개수 출력
+    console.log(document.querySelectorAll('.swiper-slide-duplicate').length);
+});
+
+
+	</script>
+</body>
+</html>

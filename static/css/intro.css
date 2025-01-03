@@ -1,12 +1,12 @@
 .page-wrapper {
   background-color: var(--dt-gray05);
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-top: 56px;
   gap: 48px;
 }
 

@@ -3,15 +3,16 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 1100;
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    
+    background-color: var(--dt-white);
     // popup-title
     &.popup__tit {
         .popup-header {
             margin-bottom: 4px;
-            padding: 28px 16px 16px 20px;
+
         }
     }
     // popup-common 
@@ -19,7 +20,8 @@
         @include flexBox(between, center);
         column-gap: 20px;
         margin-bottom: 4px;
-        padding: 16px 16px 8px 0;
+        padding: 28px 16px 16px 20px;
+
         .popup-tit {
             @include flexBox(start, center);
             .txt {
@@ -29,6 +31,7 @@
         }
         .btn-popup-close {
             @include flexBox(end, center);
+            margin-left: auto;
             img {
                 width: 24px;
                 height: 24px;
@@ -39,10 +42,20 @@
         overflow-y: auto;
         min-height: 84px;
         max-height: 513px;
-        padding: 0 20px;
+        padding: 0 20px 20px;
     }
     .popup-footer {
         padding: 0 20px;
-        margin: 40px 0 20px;
+        margin: 20px 0 20px;
     } 
+}
+.back-drop {
+    background-color: var(--dt-black);
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
