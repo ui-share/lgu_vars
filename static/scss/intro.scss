@@ -7,7 +7,8 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	padding-top: 56px;
+    justify-content: center;
+	// padding-top: 56px;
 	gap: 48px;
 }
 
