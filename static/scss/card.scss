@@ -208,16 +208,6 @@
 		background-size: 24px 24px;
 		background-position: center center;
 	}
-	.page {
-		@include fw-5(12px);
-		position: absolute;
-		bottom: 16px;
-		right: 20px;
-	}
-	.deco {
-		@include fw-5(12px);
-		color: var(--dt-primary);
-	}
 }
 
 .chatbot {

@@ -212,18 +212,6 @@
   background-size: 24px 24px;
   background-position: center center;
 }
-.banner .page {
-  font-size: 12px;
-  font-weight: 500;
-  position: absolute;
-  bottom: 16px;
-  right: 20px;
-}
-.banner .deco {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--dt-primary);
-}
 
 .chatbot {
   background-color: #FBDAED;
