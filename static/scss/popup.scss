@@ -1,61 +1,147 @@
 @import "../scss/dt-mixin.scss";
 .popup-wrapper {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 1100;
-    width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background-color: var(--dt-white);
-    // popup-title
-    &.popup__tit {
-        .popup-header {
-            margin-bottom: 4px;
-
-        }
-    }
-    // popup-common 
-    .popup-header {
-        @include flexBox(between, center);
-        column-gap: 20px;
-        margin-bottom: 4px;
-        padding: 28px 16px 16px 20px;
-
-        .popup-tit {
-            @include flexBox(start, center);
-            .txt {
-                color: var(--dt-gray16);
-                @include fw-7(20px);
-            }
-        }
-        .btn-popup-close {
-            @include flexBox(end, center);
-            margin-left: auto;
-            img {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
-    .popup-body {
-        overflow-y: auto;
-        min-height: 84px;
-        max-height: 513px;
-        padding: 0 20px 20px;
-    }
-    .popup-footer {
-        padding: 0 20px;
-        margin: 20px 0 20px;
-    } 
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	// popup-title
+	&.popup__tit {
+		.popup-header {
+			margin-bottom: 4px;
+		}
+	}
+	.popup__wrap {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		background-color: var(--dt-white);
+	}
+	// popup-common 
+	.popup-header {
+		@include flexBox(between, center);
+		column-gap: 20px;
+		margin-bottom: 4px;
+		padding: 28px 16px 16px 20px;
+		&:has(.popup-tit.hidden) {
+			padding: 16px;
+		}
+		.popup-tit {
+			@include flexBox(start, center);
+			.txt {
+				color: var(--dt-gray16);
+				@include fw-7(20px);
+			}
+		}
+		.btn-popup-close {
+			@include flexBox(end, center);
+			margin-left: auto;
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+	.popup-body {
+		overflow-y: auto;
+		min-height: 84px;
+		max-height: 513px;
+		padding: 0 20px 20px;
+	}
+	.popup-footer {
+		padding: 0 20px;
+		margin: 20px 0 20px;
+	} 
 }
 .back-drop {
-    background-color: var(--dt-black);
-    opacity: .6;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+	background-color: var(--dt-black);
+	opacity: .6;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.authorization {
+	.auth {
+		text-align: center;
+		.txt {
+			@include fw-5();
+			color: var(--dt-gray11);
+			margin-bottom: 10px;
+		}
+		.tit {
+			@include fw-6(24px);
+			color: var(--dt-black);
+		}
+		.deco {
+			@include fw-6(24px);
+			color: var(--dt-primary);
+		}
+	}
+	.input_code {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 42px 0 26px;
+		gap: 6px;
+		.code-group {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 6px;
+			.code-box {
+				display: inline-block;
+				width: 48px;
+				min-height: 52px;
+				padding: 12px 8px;
+				border-radius: 4px;
+				background: var(--dt-gray02);
+				.num {
+					@include fw-7(24px);
+					color: var(--dt-gray16);
+					&.placeholder {
+						color: var(--dt-gray11);
+					}
+				}
+			}
+		}
+	}
+	.tab__wrap {
+		display: none;
+	}
+	.auth_birth {
+		display: none;
+	}
+	.auth_business {
+		display: none;
+	}
+	.auth_corporation {
+		display: none;
+	}
+	&.tab {
+		.tab__wrap {
+			display: block;
+		}
+	}
+	&.birth {
+		.auth_birth {
+			display: block;
+		}
+	}
+	&.business {
+        .auth_business {
+            display: block;
+        }
+    }
+	&.corporation {
+        .auth_corporation {
+            display: block;
+        }
+    }
 }
