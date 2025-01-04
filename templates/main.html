@@ -11,6 +11,7 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../static/js/swiper-11.1.5/swiper-bundle.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/header.css">
@@ -19,13 +20,16 @@
 	<link rel="stylesheet" type="text/css" href="../static/css/card.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
 	<link rel="stylesheet" type="text/css" href="../static/css/counsel.css">
+
+	<!-- Scripts -->
+	<script src="../static/js/swiper-11.1.5/swiper-bundle.js"></script>
 </head>
 <body>
 	<!-- 
 		스크롤 감지시 is-scrolled 
 		<div class="page-wrapper is-scrolled">
 	-->
-	<div class="page-wrapper is-scrolle">
+	<div class="page-wrapper is-scrolled">
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
@@ -41,9 +45,67 @@
 		<!-- //header -->
 		<div class="container">
 			<!-- 선제안 배너 영역 -->
-			<div class="section__cont banner">
-				<div class="cont__wrap">
-					
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-banner">
+					<!-- 슬라이드 Slider main container -->
+					<div class="swiper">
+						<div class="swiper-container">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">가입 매장 상담사 연결</h3>
+												<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../static/images/icon/ic-banner-phone.png" alt="휴대폰 할부/선택약정">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">휴대폰 할부/선택약정</h3>
+												<p class="txt">선택약정 할인을 신청하고<br>25% 요금할인을 받아보세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="card horizon banner">
+										<div class="card-body">
+											<div class="card__util">
+												<span class="img-box">
+													<img src="../static/images/icon/ic-banner-clock.png" alt="납부확인서 신청">
+												</span>
+											</div>
+											<div class="card__text">
+												<h3 class="tit">납부확인서 신청</h3>
+												<p class="txt">종합소득세 신고기간입니다.<br>신고용 서류를 신청해 보세요!</p>
+											</div>
+											<button type="button" class="btn end">종료</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- pagination -->
+							<div class="swiper-pagination"></div>
+						</div>								
+					</div>
 				</div>
 			</div>
 			<!-- 웰컴 메시지 & 메뉴카테고리 영역 -->
@@ -604,5 +666,23 @@
 		</div>
 		<footer class="footer"></footer>
 	</div>
+
+	<script>
+		const swiper = new Swiper('.swiper .swiper-container', {
+			spaceBetween: 22,
+			speed: 1000,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: true,
+				stopOnLastSlide: true,
+			},
+			
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+	</script>
 </body>
 </html>

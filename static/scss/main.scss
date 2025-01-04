@@ -1,4 +1,75 @@
 @import "../scss/dt-mixin.scss";
+.cont__wrap {
+	&.cont__wrap-banner {
+		min-height: 132px;
+		padding: 20px;
+		.swiper {
+			z-index: -1;
+		}
+		.swiper-container {
+			animation: fadeInDown 1s;
+		}
+		.swiper-pagination {
+			position: absolute;
+			bottom: 16px;
+			@include fw-5(12px);
+			text-align: right;
+			padding-right: 18px;
+			.swiper-pagination-fraction {
+				color: var(--dt-gray10);
+			}
+			.swiper-pagination-current{
+				@include fw-5(12px);
+				color: var(--dt-primary);
+			}
+			.swiper-pagination-total {
+				@include fw-5(12px);
+			}
+		}
+	}
+	.cont__txt-box {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		row-gap: 4px;
+		.txt-main {
+			font-size: 22px;
+			font-weight: 600;
+			color: var(--dt-gray16);
+		}
+		.txt-sub {
+			font-size: 22px;
+			font-weight: 600;
+			color: var(--dt-gray14);
+			.txt-point {
+				font-size: 22px;
+				font-weight: 600;
+				color: var(--dt-primary);
+			}
+		}
+	}
+	.con__tit-box {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 16px;
+		.tit-head {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--dt-gray16);
+		}
+		.tit-tail {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+	}
+}
+
 .message {
 	padding: 32px 120px 28px 20px;
 	background-image: url(../images/img/img-hm-home.png);
@@ -81,44 +152,5 @@
 		padding: 8px 20px;
 		overflow-x: auto;
 		gap: 4px;
-	}
-}
-
-.conversion {
-	@include flexBox();
-	border: 1px solid rgba(24, 26, 27, 0.02);
-	border-radius: 8px;
-	background-color: var(--dt-gray17);
-	gap: 0;
-	.btn {
-		border-color: transparent;
-		background-color: var(--dt-gray17);
-		.txt {
-			@include fw-6();
-			color: var(--dt-gray12);
-		}
-	}
-	.divider {
-		display: inline-block;
-		content: "";
-		width: 1px;
-		height: 18px;
-		background-color: var(--dt-gray09);
-		margin: 0 1px;
-	}
-}
-
-
-@media (max-width: 359px) {
-	.conversion {
-		flex-direction: column;
-		background-color: transparent;
-		gap: 8px;
-		.btn {
-			border-color: rgba(24, 26, 27, 0.02);
-		}
-		.divider {
-			display: none;
-		}
 	}
 }
