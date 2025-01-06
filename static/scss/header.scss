@@ -1,51 +1,52 @@
 @import "../scss/dt-mixin.scss";
 .header {
-	@include flexBox(between, center);
-	flex-wrap: wrap;
-	width: 100%;
-	padding: 11px 20px 11px 12px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	.header__util {
-		@include flexBox(start, center);
-		.logo {
-			width: 24px;
-			height: 24px;
-			background-image: url(../images/img/logo.png);
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		.btn-util {
-			text-indent: -999px;
-			width: 24px;
-			height: 24px;
-			background-repeat: no-repeat;
-			background-size: cover;
-			margin-right: 6px;
-			&.prev {
-				background-image: url(../images/icon/chevron_prev_line.png);
-			}
-			&.end {
-				background-image: url(../images/icon/close_line.png);
-			}
-		}
-		.header-tit {
-			@include fw-7(16px);
-			color: var(--dt-gray16);
-			.header-txt {
-				@include fw-7(16px);
-				color: var(--dt-gray10);
-			}
-		}
-	}
-	.header__btn {
-		@include flexBox(end, center);
-		margin-left: auto;
-		.btn-callEnd {
+    @include flexBox(between, center);
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 11px 20px 11px 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    .header__util {
+        @include flexBox(start, center);
+        .logo {
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/img/logo.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .btn-util {
+            text-indent: -999px;
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 6px;
+            &.prev {
+                background-image: url(../images/icon/chevron_prev_line.png);
+            }
+            &.end {
+                background-image: url(../images/icon/close_line.png);
+            }
+        }
+        .header-tit {
+            @include fw-7(16px);
+            color: var(--dt-gray16);
+            .header-txt {
+                @include fw-7(16px);
+                color: var(--dt-gray10);
+            }
+        }
+    }
+    .header__btn {
+        @include flexBox(end, center);
+        margin-left: auto;
+        .btn-callEnd {
 			display: flex;
-			border-radius: 4px;
-			background-color: var(--dt-primary);
+            border-radius: 4px;
+            background-color: var(--dt-primary);
 			padding: 9px 12px;
 			gap: 2px;
 			.icon {
@@ -54,14 +55,14 @@
 				width: 16px;
 				min-width: 16px;
 				height: 16px;
-				background-image: url(../images/icon/call_end.png);
-				background-repeat: no-repeat;
-				background-size: 16px 16px;
+            background-image: url(../images/icon/call_end.png);
+            background-repeat: no-repeat;
+            background-size: 16px 16px;
 			}
 			.txt {
 				color: var(--dt-white);
 				@include fw-6(14px);
 			}
-		}
-	}
+        }
+    }
 }

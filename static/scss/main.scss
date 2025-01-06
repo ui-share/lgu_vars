@@ -2,9 +2,6 @@
 .cont__wrap {
 	&.cont__wrap-banner {
 		padding: 0 20px;
-		.swiper {
-			z-index: -1;
-		}
 		.swiper-container {
 			animation: fadeInDown 1s;
 		}

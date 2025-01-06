@@ -17,11 +17,6 @@
 	border-radius: 8px;
 	padding: 16px;
 	gap: 16px;
-	.img-box {
-		width: 28px;
-		min-width: 28px;
-		height: 28px;
-	}
 	.card-header {
 		display: flex;
 		flex-direction: row;
@@ -33,14 +28,34 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+		.item {
+			display: flex;
+			&.util {
+				justify-content: space-between;
+				align-items: center;
+			}
+			&.text {
+				flex-direction: column;
+				gap: 8px;
+			}
+		}
 	}
-	.card__util {
-		@include flexBox(between);
-	}
-	.card__text {
+	.card-footer {
 		display: flex;
-		flex-direction: column;
-		gap: 8px;
+		margin-top: auto;
+		.btn-group {
+			flex: auto;
+		}
+		.btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+	.img-box {
+		width: 28px;
+		min-width: 28px;
+		height: 28px;
 	}
 	.tit {
 		display: flex;
@@ -65,18 +80,6 @@
 		@include fw-5(14px);
 		line-height: 1.5;
 		color: var(--dt-gray11);
-	}
-	.card-footer {
-		display: flex;
-		margin-top: auto;
-		.btn-group {
-			flex: auto;
-		}
-		.btn {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 	&.solid {
 		background-color: var(--dt-gray02);
