@@ -1,4 +1,5 @@
 .popup-wrapper {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -60,8 +61,7 @@
   padding: 0 20px;
   margin: 20px 0 20px;
 }
-
-.back-drop {
+.popup-wrapper .back-drop {
   background-color: var(--dt-black);
   opacity: 0.6;
   width: 100%;
@@ -70,7 +70,9 @@
   top: 0;
   left: 0;
 }
-
+.popup-wrapper.show {
+  display: block;
+}
 .authorization .auth {
   text-align: center;
 }

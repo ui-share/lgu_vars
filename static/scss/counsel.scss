@@ -1,0 +1,93 @@
+@import "../scss/dt-mixin.scss";
+
+.counsel {
+	.cont__wrap {
+		padding: 48px 20px;
+		&.cont__wrap-counsel {
+			padding: 32px 20px 48px;
+			background-color: var(--dt-gray05);
+			.con__tit-box {
+				flex-direction: column;
+				justify-content: center;
+				gap: 4px;
+			}
+			.card__text {
+				gap: 2px;
+				.txt {
+					font-size: 11px;
+				}
+			}
+		}
+		.txt-head {
+			@include fw-5(14px);
+			color: var(--dt-gray11);
+		}
+	}
+}
+
+// 음성 ARS 전환, 홈 고객센터 문의 버튼
+.conversion {
+	@include flexBox();
+	margin-top: 48px;
+	border: 1px solid rgba(24, 26, 27, 0.02);
+	border-radius: 8px;
+	background-color: var(--dt-gray17);
+	gap: 0;
+	.btn {
+		border-color: transparent;
+		background-color: var(--dt-gray17);
+		.txt {
+			@include fw-6();
+			color: var(--dt-gray12);
+		}
+	}
+	.divider {
+		display: inline-block;
+		content: "";
+		width: 1px;
+		height: 18px;
+		background-color: var(--dt-gray09);
+		margin: 0 1px;
+	}
+}
+
+
+
+
+
+@media (max-width: 359px) {
+	.cont__wrap-counsel {
+		.card-group {
+			grid-template-columns: repeat(1, 1fr);
+			.card {
+				align-items: center;
+				flex-direction: row;
+				padding: 23px 16px;
+				gap: 12px;
+				.card-body {
+					align-items: center;
+					flex-direction: row;
+					gap: 12px;
+				}
+				.card__text {
+					gap: 0;
+				}
+				.card-footer {
+					margin-top: 0;
+					margin-left: auto;
+				}
+			}
+		}
+	}
+	.conversion {
+		flex-direction: column;
+		background-color: transparent;
+		gap: 8px;
+		.btn {
+			border-color: rgba(24, 26, 27, 0.02);
+		}
+		.divider {
+			display: none;
+		}
+	}
+}

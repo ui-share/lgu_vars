@@ -1,5 +1,6 @@
 @import "../scss/dt-mixin.scss";
 .popup-wrapper {
+    display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -56,15 +57,22 @@
 		padding: 0 20px;
 		margin: 20px 0 20px;
 	} 
-}
-.back-drop {
-	background-color: var(--dt-black);
-	opacity: .6;
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
+    .back-drop {
+        background-color: var(--dt-black);
+        opacity: .6;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    // show animation
+    &.show {
+        display: block;
+        .popup__wrap {
+
+        }
+    }
 }
 
 .authorization {
