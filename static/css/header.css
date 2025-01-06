@@ -52,14 +52,24 @@
   margin-left: auto;
 }
 .header .header__btn .btn-callEnd {
-  color: var(--dt-white);
-  font-size: 14px;
-  font-weight: 600;
+  display: flex;
   border-radius: 4px;
   background-color: var(--dt-primary);
+  padding: 9px 12px;
+  gap: 2px;
+}
+.header .header__btn .btn-callEnd .icon {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
   background-image: url(../images/icon/call_end.png);
   background-repeat: no-repeat;
   background-size: 16px 16px;
-  background-position: left 12px center;
-  padding: 9px 12px 9px 32px;
+}
+.header .header__btn .btn-callEnd .txt {
+  color: var(--dt-white);
+  font-size: 14px;
+  font-weight: 600;
 }

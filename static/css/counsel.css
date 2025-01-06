@@ -8,6 +8,7 @@
 .counsel .cont__wrap.cont__wrap-counsel .con__tit-box {
   flex-direction: column;
   justify-content: center;
+  text-align: center;
   gap: 4px;
 }
 .counsel .cont__wrap.cont__wrap-counsel .card__text {

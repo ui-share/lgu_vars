@@ -39,7 +39,7 @@
 				<span class="header-tit"><span class="header-txt">눈으로 보는 ARS</span></span>
 			</div>
 			<div class="header__btn">
-				<button type="button" class="btn btn-callEnd">종료</button>
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
 		</header>
 		<!-- //header -->
@@ -110,25 +110,21 @@
 			</div>
 			<!-- 웰컴 메시지 & 메뉴카테고리 영역 -->
 			<div class="section__cont">
-				<div class="cont__wrap message">
+				<div class="cont__wrap cont__wrap-message">
 					<div class="cont__txt-box">
-						<!-- 검정색 메인 글자 -->
-						<div class="txt-main">
-							궁금하신 내용을
-						</div>
-						<!-- primary 색 들어가는 포인트 영역 -->
-						<div class="txt-sub">
-							<span class="txt-point">아래에서 선택</span>해주세요
+						<div class="txt">
+							궁금하신 내용을<br>
+							<span class="deco">아래에서 선택</span>해주세요
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="section__cont category">
+			<div class="section__cont">
 				<!-- 스크롤 맨 앞일 경우 scroll class 삭제 -->
 				<!-- 스크롤 중일 경우 cont__wrap 에 scroll-start 클래스 추가 -->
 				<!-- 스크롤 맨 뒤일 경우 scroll-start를 scroll-end로 변경 -->
-				<div class="cont__wrap">
+				<div class="cont__wrap cont__wrap-category">
 					<div class="chips-group">
 						<button type="button" class="chips chips-menu is-selected">
 							<span class="img-box icon"><img src="../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
@@ -175,7 +171,7 @@
 			<!-- 전체 메뉴 카드 리스트 영역 -->
 			<div class="section__cont menu">
 				<!-- 많이 찾는 문의 -->
-				<div class="cont__wrap freqMenu">
+				<div class="cont__wrap cont__wrap-freqMenu">
 					<div class="con__tit-box">
 						<div class="img-box">
 							<img src="../static/images/icon/ic-chips-flag.png">
@@ -664,7 +660,6 @@
 				</div>
 			</div>
 		</div>
-		<footer class="footer"></footer>
 	</div>
 
 	<script>

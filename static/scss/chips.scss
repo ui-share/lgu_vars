@@ -70,14 +70,14 @@
 			color: var();
 			white-space: nowrap;
 		}
-		&:active {
-			border-color: transparent;
-			background-color: var(--dt-gray13);
-			box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.12);
-			.txt {
-				color: var(--dt-white);
-			}
-		}
+		// &:active {
+		// 	border-color: transparent;
+		// 	background-color: var(--dt-gray13);
+		// 	box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.12);
+		// 	.txt {
+		// 		color: var(--dt-white);
+		// 	}
+		// }
 		&.is-selected {
 			background-color: var(--dt-gray13);
 			.txt {

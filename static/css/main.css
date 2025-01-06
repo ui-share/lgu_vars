@@ -1,6 +1,5 @@
 .cont__wrap.cont__wrap-banner {
-  min-height: 132px;
-  padding: 20px;
+  padding: 0 20px;
 }
 .cont__wrap.cont__wrap-banner .swiper {
   z-index: -1;
@@ -35,17 +34,12 @@
   flex-direction: column;
   row-gap: 4px;
 }
-.cont__wrap .cont__txt-box .txt-main {
+.cont__wrap .cont__txt-box .txt {
   font-size: 22px;
   font-weight: 600;
   color: var(--dt-gray16);
 }
-.cont__wrap .cont__txt-box .txt-sub {
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--dt-gray14);
-}
-.cont__wrap .cont__txt-box .txt-sub .txt-point {
+.cont__wrap .cont__txt-box .txt .deco {
   font-size: 22px;
   font-weight: 600;
   color: var(--dt-primary);
@@ -70,15 +64,18 @@
   justify-content: flex-end;
 }
 
-.message {
-  padding: 32px 120px 28px 20px;
+.cont__wrap-message {
+  padding: 27px 120px 27px 20px;
   background-image: url(../images/img/img-hm-home.png);
-  background-position: right -20px bottom -8px;
+  background-position: right 0 bottom -13px;
   background-repeat: no-repeat;
-  background-size: 140px 140px;
+  background-size: 146px 146px;
+}
+.cont__wrap-message .txt {
+  line-height: 1.4;
 }
 
-.category {
+.cont__wrap-category {
   padding-bottom: 32px;
 }
 
@@ -87,22 +84,22 @@
   background-color: var(--dt-gray02);
   gap: 48px;
 }
-.menu .freqMenu .con__tit-box {
+.menu .cont__wrap-freqMenu .con__tit-box {
   justify-content: flex-start;
   gap: 4px;
 }
-.menu .freqMenu .con__tit-box .img-box {
+.menu .cont__wrap-freqMenu .con__tit-box .img-box {
   width: 20px;
   min-width: 20px;
   height: 20px;
 }
-.menu .freqMenu .txt-head {
+.menu .cont__wrap-freqMenu .txt-head {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
 }
 
-.is-scrolled .category {
+.is-scrolled .section__cont:has(.cont__wrap-category) {
   position: sticky;
   top: 57px;
   left: 0;
@@ -111,11 +108,11 @@
   overflow: hidden;
   padding-bottom: 0;
 }
-.is-scrolled .category .cont__wrap {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap {
   position: relative;
   padding: 0;
 }
-.is-scrolled .category .cont__wrap::before {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap::before {
   position: absolute;
   content: "";
   display: none;
@@ -125,7 +122,7 @@
   left: 0;
   background: linear-gradient(-270deg, #FFF 10%, rgba(255, 255, 255, 0) 100%);
 }
-.is-scrolled .category .cont__wrap::after {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap::after {
   position: absolute;
   content: "";
   display: inline;
@@ -135,16 +132,16 @@
   right: 0;
   background: linear-gradient(270deg, #FFF 10%, rgba(255, 255, 255, 0) 100%);
 }
-.is-scrolled .category .cont__wrap.scroll-start::before {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap.scroll-start::before {
   display: inline;
 }
-.is-scrolled .category .cont__wrap.scroll-end::before {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap.scroll-end::before {
   display: inline;
 }
-.is-scrolled .category .cont__wrap.scroll-end::after {
+.is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap.scroll-end::after {
   display: none;
 }
-.is-scrolled .category .chips-group {
+.is-scrolled .section__cont:has(.cont__wrap-category) .chips-group {
   flex-wrap: nowrap;
   border-top: 1px solid var(--dt-gray17);
   padding: 8px 20px;
