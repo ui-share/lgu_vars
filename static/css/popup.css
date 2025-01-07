@@ -73,6 +73,10 @@
 .popup-wrapper.show {
   display: block;
 }
+.popup-wrapper.show .popup__wrap {
+  animation: slideInUp 0.6s;
+}
+
 .authorization .auth {
   text-align: center;
 }

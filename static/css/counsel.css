@@ -1,5 +1,38 @@
+.card-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  grid-auto-rows: 1fr;
+}
+.card-group.threeby {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .counsel .cont__wrap {
   padding: 48px 20px;
+}
+.counsel .cont__wrap .con__tit-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.counsel .cont__wrap .con__tit-box .tit-head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray16);
+}
+.counsel .cont__wrap .con__tit-box .tit-tail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.counsel .cont__wrap .card {
+  background-color: var(--dt-gray02);
+  box-shadow: none;
 }
 .counsel .cont__wrap.cont__wrap-counsel {
   padding: 32px 20px 48px;
@@ -11,11 +44,25 @@
   text-align: center;
   gap: 4px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card__text {
+.counsel .cont__wrap.cont__wrap-counsel .card {
+  background-color: var(--dt-white);
+  box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+  gap: 0;
+}
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text {
   gap: 2px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card__text .txt {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .tit {
+  font-size: 14px;
+}
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .txt {
   font-size: 11px;
+}
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer {
+  justify-content: flex-end;
+}
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer .btn-group {
+  flex: none;
 }
 .counsel .cont__wrap .txt-head {
   font-size: 14px;
@@ -58,7 +105,7 @@
   .cont__wrap-counsel .card-group .card {
     align-items: center;
     flex-direction: row;
-    padding: 23px 16px;
+    padding: 16px;
     gap: 12px;
   }
   .cont__wrap-counsel .card-group .card .card-body {
@@ -66,7 +113,7 @@
     flex-direction: row;
     gap: 12px;
   }
-  .cont__wrap-counsel .card-group .card .card__text {
+  .cont__wrap-counsel .card-group .card .text {
     gap: 0;
   }
   .cont__wrap-counsel .card-group .card .card-footer {

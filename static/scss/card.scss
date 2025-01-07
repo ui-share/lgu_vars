@@ -1,4 +1,5 @@
 @import "../scss/dt-mixin.scss";
+// card 그룹 필요시
 .card-group {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);  // 두 열로 구성
@@ -8,6 +9,8 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
+
+// card 기본
 .card {
 	display: flex;
 	flex-direction: column;
@@ -81,21 +84,6 @@
 		line-height: 1.5;
 		color: var(--dt-gray11);
 	}
-	&.solid {
-		background-color: var(--dt-gray02);
-		box-shadow: none;
-	}
-	&.sub {
-		.tit {
-			font-size: 14px;
-		}
-		.card-footer {
-			justify-content: flex-end;
-			.btn-group {
-				flex: none;
-			}
-		}
-	}
 	> .flag {
 		padding: 4px 10px;
 		.txt {
@@ -128,7 +116,25 @@
 	}
 }
 
-.horizon {
+// sub:detail card (상담연결-챗봇/AI/전화 등)
+.detail {
+	background-color: var(--dt-white);
+	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+	.tit {
+		font-size: 14px;
+	}
+	.txt {
+		@include fw-5(14px);
+	}
+	.card-footer {
+		justify-content: flex-end;
+		.btn-group {
+			flex: none;
+		}
+	}
+}
+
+.horizon { 
 	align-items: center;
 	flex-direction: row;
 	padding: 23px 16px;
