@@ -1,6 +1,6 @@
-@import "../scss/dt-mixin.scss";
+@import "../scss/base/mixin";
 .page-wrapper {
-    background-color: var(--dt-gray05);
+    background: var(--dt-gray05);
     height: 100%; 
     // 높이 설정 문의
 }

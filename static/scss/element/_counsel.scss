@@ -1,4 +1,4 @@
-@import "../scss/dt-mixin.scss";
+@import '../base/mixin';
 .card-group {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);  // 두 열로 구성

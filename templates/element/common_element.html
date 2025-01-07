@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공통 element</title>
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <style>
+        .prototype-title {font-size:22px;font-weight:bold;padding:24px 20px 10px;}
+        .prototype-component-wrap {padding:0 20px 20px;}
+        .chips-wrap {display: flex;flex-direction: column;row-gap:16px;}
+        .chips-wrap .chips, .chips-wrap .badge {width:fit-content}
+		ul {margin: 20px 0;} 
+		ul > li {margin: 20px 0;}
+	</style>
+
+</head>
+<body>
+    <div class="lg-prototype">
+        <div class="lg-component-container">
+            <div class="lg-component">
+                <div class="prototype-title">버튼</div>
+                <div class="prototype-component-wrap">
+                    <ul>
+                        <li>
+                            <h3>Large button :: solid</h3>
+                        </li>
+                        <!-- 
+                            **single button 
+                            **크기+색상+disable :  btn btn-sol btn-lg btn-sec btn-neu is-disabled
+                        -->	
+                        <li>
+                            <!-- ===== solid Primary ===== 
+                                <button class="btn btn-sol btn-lg" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>	
+                        </li>
+                        <li>
+                            <!-- ===== solid Secondary ===== 
+                                <button class="btn btn-sol btn-lg btn-sec" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg btn-sec" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>
+        
+                        </li>
+                        <li>
+                            <!-- ===== solid Neutral ===== 
+                                <button class="btn btn-sol btn-lg btn-neu" type="button">
+                            -->			
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg btn-neu" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>					
+                        </li>
+                        <li>
+                            <!-- ===== solid Disabled ===== 
+                                <button class="btn btn-sol btn-lg is-disabled" type="button">
+                            -->		
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg is-disabled" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>
+                        </li>
+                        <!-- //single button -->
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Large button :: line</h3>
+                        </li>
+                        <!-- 
+                            **single button 
+                            **크기+색상+disable :  btn btn-line btn-lg btn-sec btn-neu disabled
+                        -->	
+                        <li>
+                            <!-- ===== line Primary ===== 
+                                <button class="btn btn-line" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-lg" type="button">
+                                    <span class="txt">큰라인버튼</span>
+                                </button>
+                            </div>	
+                        </li>
+                        <li>	
+                            <!-- ===== line Secondary ===== 
+                                <button class="btn btn-linel btn-lg btn-sec" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-lg btn-sec" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>					
+                        </li>
+                            <!-- ===== line Neutral ===== 
+                                <button class="btn btn-line btn-lg btn-neu" type="button">
+                            -->			
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-lg btn-neu" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>			
+                        </li>
+                        <li>
+                            <!-- ===== solid Disabled ===== 
+                                <button class="btn btn-line btn-lg is-disabled" type="button">
+                            -->		
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-lg is-disabled" type="button">
+                                    <span class="txt">큰솔리드버튼</span>
+                                </button>
+                            </div>
+                        </li>
+                        <!-- //single button -->
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Medium button :: solid</h3>
+                        </li>
+                        <!-- 
+                            **single button 
+                            **크기+색상+disable :  btn btn-line btn-md btn-sec btn-neu disabled
+                        -->	
+                        <li>
+                            <!-- ===== solid Primary ===== 
+                                <button class="btn btn-sol btn-md" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-md" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>			
+                        </li>
+                        <li>
+                            <!-- ===== solid Secondary ===== 
+                                <button class="btn btn-sol btn-md btn-sec" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-md btn-sec" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>
+        
+                        <li>
+                            <!-- ===== solid Neutral ===== 
+                                <button class="btn btn-sol btn-md btn-neu" type="button">
+                            -->			
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-md btn-neu" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>					
+                        </li>
+                        <li>
+                            <!-- ===== solid Disabled ===== 
+                                <button class="btn btn-line btn-md is-disabled" type="button">
+                            -->		
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-md is-disabled" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>
+                        </li>
+                        <!-- //single button -->
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>Medium button :: line</h3>
+                        </li>
+                        <!-- 
+                            **single button 
+                            **크기+색상+disable :  btn btn-line btn-md btn-sec btn-neu is-disabled
+                        -->	
+                        <li>
+                            <!-- ===== line Primary ===== 
+                                <button class="btn btn-line btn-md" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-md" type="button">
+                                    <span class="txt">중간라인버튼</span>
+                                </button>
+                            </div>	
+                        </li>
+                        <li>	
+                            <!-- ===== line Secondary ===== 
+                                <button class="btn btn-linel btn-md btn-sec" type="button">
+                            -->
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-md btn-sec" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>					
+                        </li>
+                            <!-- ===== line Neutral ===== 
+                                <button class="btn btn-line btn-md btn-neu" type="button">
+                            -->			
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-md btn-neu" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>			
+                        </li>
+                        <li>
+                            <!-- ===== solid Disabled ===== 
+                                <button class="btn btn-line btn-md is-disabled" type="button">
+                            -->		
+                            <div class="btn-group">
+                                <button class="btn btn-line btn-md is-disabled" type="button">
+                                    <span class="txt">중간솔리드버튼</span>
+                                </button>
+                            </div>
+                        </li>
+                        <!-- //single button -->
+                    </ul>
+        
+        
+                    <!-- flex-row 다중버튼 -->
+                    <div class="btn-group flex-row">
+                        <button class="btn btn-sol btn-lg btn-sec" type="button">
+                            <span class="txt">큰솔리드버튼</span>
+                        </button>
+                        <button class="btn btn-sol btn-lg" type="button">
+                            <span class="txt">큰솔리드버튼</span>
+                        </button>
+                    </div>
+                    <!-- //flex-row 다중버튼 -->
+        
+        
+                    <div style="margin: 20px 0;"></div>
+                    <!-- flex-column 다중버튼 -->
+                    <div class="btn-group flex-column">
+                        <button class="btn btn-sol btn-lg" type="button">
+                            <span class="txt">큰솔리드버튼</span>
+                        </button>
+                        <button class="btn btn-sol btn-lg btn-neu" type="button">
+                            <span class="txt">큰솔리드버튼</span>
+                        </button>
+                    </div>
+                    <!-- //flex-column 다중버튼 -->
+        
+                    <!-- 기능 button -->
+                    <ul>
+                        <li>
+                            <h3>Top button</h3>
+                        </li>
+                        <li>
+                            <button class="btn btn-top">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-btn-top.png">
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <h3>Scroll Button</h3>
+                        </li>
+                        <li>
+                            <button class="btn btn-center btn-scroll">
+                                <span class="txt">선택약정 할인 예약</span>
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-btn-arrow-double-down.png">
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <h3>solid icon button</h3>
+                        </li>
+                        <li>
+                            <button class="btn btn-center btn-icBox is-selected">
+                            <!-- <button class="btn btn-icBox is-selected"> -->
+                                <span class="txt">버튼명</span>
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-btn-arrow-up-sm.png">
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <h3>solid box button</h3>
+                        </li>
+                        <li>
+                            <button class="btn btn-between bg-withdraw">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-btn-dcmnt.png">
+                                </span>
+                                <span class="txt">버튼명</span>
+                                <span class="img-box ml-auto">
+                                    <img src="../../static/images/icon/ic-btn-arrow-right-sm.png">
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn btn-between bg-bank">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-btn-shinhan.png">
+                                </span>
+                                <span class="txt">1234-5678-****-****</span>
+                                <span class="img-box ml-auto">
+                                    <img src="../../static/images/icon/ic-btn-arrow-right-sm.png">
+                                </span>
+                            </button>
+                        </li>
+                        <li>
+                            <h3>outline icon button</h3>
+                        </li>
+                        <li>
+                            <div class="btn-group flex-row">
+                                <button class="btn btn-line btn-lg btn-neu btn-center" type="button">
+                                    <span class="txt">버튼명</span>
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-btn-play.png">
+                                    </span>
+                                </button>
+                                <button class="btn btn-line btn-lg btn-neu btn-center is-disabled" type="button">
+                                    <span class="txt">버튼명</span>
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-btn-write.png">
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>popup_solid button</h3>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg btn-neu btn-center" type="button">
+                                <!-- <button class="btn btn-icBox is-selected"> -->
+                                    <span class="txt">텍스트</span>
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-btn-audio.png">
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>popup_solid icon button</h3>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <button class="btn btn-sol btn-lg btn-neu btn-between btn-payment" type="button">
+                                <!-- <button class="btn btn-icBox is-selected"> -->
+                                    <span class="txt">텍스트</span>
+                                    <!-- selected 되었을 때 나타나는 부분 -->
+                                    <span class="txt-box">
+                                        <span class="txt">
+                                            텍스트
+                                        </span>
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-btn-chck.png">
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <!-- 선택시 is-selected 클래스 붙음 -->
+                                <button class="btn btn-sol btn-lg btn-neu btn-between btn-payment is-selected" type="button">
+                                <!-- <button class="btn btn-icBox is-selected"> -->
+                                    <span class="txt">텍스트</span>
+                                    <!-- selected 되었을 때 나타나는 부분 -->
+                                    <span class="txt-box">
+                                        <span class="txt">
+                                            텍스트
+                                        </span>
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-btn-chck.png">
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <!-- default data btn -->
+                                <button class="btn btn-sol btn-lg btn-start btn-data" type="button">
+                                    <span class="txt-box">
+                                        <span class="txt">
+                                            0GB
+                                        </span>
+                                        <span class="txt">
+                                            NN원
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                        <li>	
+                            <div class="btn-group">
+                                <!-- 선택시 is-selected 클래스 붙음 -->
+                                <button class="btn btn-sol btn-lg btn-start btn-data is-selected" type="button">
+                                    <span class="txt-box">
+                                        <span class="txt">
+                                            0GB
+                                        </span>
+                                        <span class="txt">
+                                            NN원
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prototype-title">스위치버튼</div>
+                <div class="prototype-component-wrap">
+                    <ul>
+                        <li>
+                            <h3>normal</h3>
+                        </li>
+                            <!-- 
+                                @@@@ 퍼블 공지 : 개발 후 주석 삭제 요청 @@@@
+        
+                                ##label클릭시 활성화를 위해 체크박스 id값 동일하게 맞춤
+                                <label for="switch01" class="switch-label">
+                                <input type="checkbox" id="switch01" class="switch-input">
+                                ##개발시 아이디값 필요하면 새 아이디 추가 후 개발 요함
+                            -->
+                        <li>
+                            <div class="switch-group">
+                                <input type="checkbox" id="switch01" class="switch-input">
+                                <label for="switch01" class="switch-label">
+                                    라벨명1
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <h3>pressed disabled</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group is-disabled">
+                                <input type="checkbox" id="switch02" class="switch-input" checked>
+                                <label for="switch02" class="switch-label">
+                                    라벨명2
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>pressed</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group">
+                                <input type="checkbox" id="switch03" class="switch-input" checked>
+                                <label for="switch03" class="switch-label">
+                                    라벨명3
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>disabled</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group is-disabled">
+                                <input type="checkbox" id="switch04" class="switch-input">
+                                <label for="switch04" class="switch-label">
+                                    라벨명4
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h3>normal</h3>
+                        </li>
+                            <!-- 
+                                @@@@ 퍼블 공지 : 개발 후 주석 삭제 요청 @@@@
+        
+                                ##label클릭시 활성화를 위해 체크박스 id값 동일하게 맞춤
+                                <label for="switch01" class="switch-label">
+                                <input type="checkbox" id="switch01" class="switch-input">
+                                ##개발시 아이디값 필요하면 새 아이디 추가 후 개발 요함
+                            -->
+                        <li>
+                            <div class="switch-group">
+                                <input type="checkbox" id="switch05" class="switch-input">
+                                <label for="switch05" class="switch-label">
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+        
+                        <li>
+                            <h3>pressed disabled</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group is-disabled">
+                                <input type="checkbox" id="switch06" class="switch-input" checked>
+                                <label for="switch06" class="switch-label">
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>pressed</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group">
+                                <input type="checkbox" id="switch07" class="switch-input" checked>
+                                <label for="switch07" class="switch-label">
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>disabled</h3>
+                        </li>
+                        <li>
+                            <div class="switch-group is-disabled">
+                                <input type="checkbox" id="switch08" class="switch-input">
+                                <label for="switch08" class="switch-label">
+                                    <span class="switch-box"></span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prototype-title">카드</div>
+                <div class="prototype-component-wrap">
+                    <div style="display: flex; flex-direction: column; width: 100%; padding: 16px; background-color: #eeeeee; gap: 8px;">
+                        <!-- card : 기본 -->
+                        <strong>card::정방형</strong>
+                        <p>[정방형 기본]</p>
+                        <div class="card" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
+                                    </span>
+                                    <div class="flag flag-recent">
+                                        <span class="txt">최근사용</span>
+                                    </div>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">청구 요금<span class="icon"></span></span>
+                                    <span class="txt">이번달과 지난달<br>요금 조회</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[정방형 기본] - is-selected</p>
+                        <div class="card is-selected" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
+                                    </span>
+                                    <div class="flag flag-recent">
+                                        <span class="txt">최근사용</span>
+                                    </div>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">청구 요금</span>
+                                    <span class="txt">이번달과 지난달<br>요금 조회</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>[정방형 기본] - is-disabled</p>
+                        <div class="card is-disabled" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
+                                    </span>
+                                    <div class="flag flag-recent">
+                                        <span class="txt">최근사용</span>
+                                    </div>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">청구 요금</span>
+                                    <span class="txt">이번달과 지난달<br>요금 조회</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[정방형 solid]</p>
+                        <!-- card : solid -->
+                        <div class="card solid" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-billing.png" alt="나의요금제">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">나의 요금제</span>
+                                    <span class="txt">요금제 확인·변경</span>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[정방형 sub]</p>
+                        <!-- card : sub -->
+                        <div class="card sub">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-billing.png" alt="나의요금제">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">나의 요금제</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-sol btn-md btn-sec" type="button">
+                                        <span class="txt">버튼명</span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[정방형 sub detail]</p>
+                        <!-- card : shadow -->
+                        <div class="card sub detail" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-card-calls.png" alt="나의요금제">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <span class="tit">나의 요금제</span>
+                                    <span class="txt">설명문구</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="chips chips-tag">
+                                    <span class="txt">모바일</span>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <strong style="margin-top: 16px;">card::가로형</strong>
+                        <p>[가로형 메인]</p>
+                        <div class="card horizon">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-card-arseye.png" alt="타이틀">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <h3 class="tit">타이틀</h3>
+                                    <p class="txt">설명문구를 입력해주세요</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-sol btn-md" type="button">
+                                        <span class="txt">버튼명</span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[가로형 solid]</p>
+                        <div class="card horizon solid" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-card-arseye.png" alt="타이틀">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <h3 class="tit">타이틀</h3>
+                                    <p class="txt">대기 N시간 이상</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[가로형 챗봇]</p>
+                        <div class="card horizon chatbot">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-holeman.png" alt="챗봇에 문의">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <h3 class="tit">챗봇에 문의</h3>
+                                    <p class="txt">24시간 대기없이 바로 문의</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-sol btn-md" type="button">
+                                        <span class="txt">연결</span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[가로형 홈 고객센터 문의]</p>
+                        <div class="card horizon home">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-home-iptv.png" alt="홈 고객센터 문의">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <h3 class="tit">홈 고객센터 문의</h3>
+                                    <p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-sol btn-md" type="button">
+                                        <span class="txt">연결</span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[가로형 Bank]</p>
+                        <div class="card solid bank">
+                            <div class="card-body">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-bank-ibk.png" alt="ibk은행">
+                                </span>
+                                <div class="card__text">
+                                    <h3 class="tit">은행 계좌번호</h3>
+                                    <p class="txt">이름</p>
+                                </div>
+                                <button type="button" class="btn end">종료</button>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group flex-row">
+                                    <button class="btn btn-sol btn-md" type="button">
+                                        <span class="txt">버튼명</span>
+                                    </button>
+                                    <button class="btn btn-sol btn-md" type="button">
+                                        <span class="txt">버튼명</span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[가로형 Banner]</p>
+                        <div class="card horizon banner">
+                            <div class="card-body">
+                                <div class="card__util">
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+                                    </span>
+                                </div>
+                                <div class="card__text">
+                                    <h3 class="tit">가입 매장 상담사 연결</h3>
+                                    <p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+                                </div>
+                                <button type="button" class="btn end">종료</button>
+                            </div>
+                        </div>
+            
+                        <p>[bill card]</p>
+                        <div class="card solid bill">
+                            <div class="card-body">
+                                <div class="card__text">
+                                    <h3 class="tit">타이틀</h3>
+                                    <div class="flag flag-line primary">
+                                        <span class="txt">이용예정</span>
+                                    </div>
+                                    <p class="pay-txt">0원</p> 
+                                </div>
+                                <div class="bill-explain">설명문구</div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="btn-group">
+                                    <button class="btn btn-between bg-withdraw">
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-btn-dcmnt.png">
+                                        </span>
+                                        <span class="txt">버튼명</span>
+                                        <span class="img-box ml-auto">
+                                            <img src="../../static/images/icon/ic-btn-arrow-right-sm.png">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div> 
+                        </div>
+            
+                        <p>[center card]</p>
+                        <div class="card solid center">
+                            <div class="card-body">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-roaming_x.png" alt="로밍내역 없음">
+                                </span>
+                                <div class="card__text">
+                                    <p class="txt">사용하신 로밍 내역이 없어요</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card solid center">
+                            <div class="card-body">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-roaming.png" alt="가입 정보 없음">
+                                </span>
+                                <div class="card__text">
+                                    <h3 class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</h3>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="card solid center">
+                            <div class="card-body">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-address_x.png" alt="검색결과 없음">
+                                </span>
+                                <div class="card__text">
+                                    <h3 class="tit">검색결과가 없어요</h3>
+                                    <p class="txt">도로명 주소로 다시 검색해 주세요</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[chips card]</p>
+                        <div class="card solid">
+                            <div class="flag flag-line primary">
+                                <span class="txt">무료</span>
+                            </div>
+                            <div class="card-body">
+                                <div class="card__text">
+                                    <h3 class="tit">타이틀</h3>
+                                    <p class="txt">설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <p>[alert card]</p>
+                        <div class="card solid alert">
+                            <div class="card-header">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-message.png" alt="도착알림문자">
+                                </span>
+                                <div class="card__text">
+                                    <h3 class="tit">도착 알림 문자</h3>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="card message">
+                                    <div class="card-header">
+                                        <h3 class="tit">LG U+</h3>
+                                        <p class="time">오후 2:56</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="card__text">
+                                            <h3 class="tel">02-3416-7010</h3>
+                                            <p class="msg">[LG U+](휴대폰번호) 고객님이(한국기준날짜,시간,도착국가)에 도착하였습니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="prototype-component-wrap">
+                    <div class="chips-wrap">
+
+                        <!-- chips : date 날짜 -->
+                        <!-- date : 기본 -->
+                        <button type="button" class="chips chips-date">
+                            <span class="txt">24년 03월</span>
+                            <span class="arrow"></span>
+                        </button>
+                        <!-- date : disabled -->
+                        <button type="button" class="chips chips-date is-disabled">
+                            <span class="txt">24년 03월</span>
+                            <span class="arrow"></span>
+                        </button>
+    
+    
+                        <!-- chips: select 펼침/접힘 -->
+                        <!-- 펼침/접힘 : 기본 -->
+                        <button type="button" class="chips chips-all">
+                            <span class="txt">전체펼침</span>
+                            <span class="arrow"></span>
+                        </button>
+                        <!-- 펼침/접힘 : active -->
+                        <button type="button" class="chips chips-all is-selected">
+                            <span class="txt">전체펼침</span>
+                            <span class="arrow"></span>
+                        </button>
+                        <!-- 펼침/접힘 : disabled -->
+                        <button type="button" class="chips chips-all is-disabled" readonly>
+                            <span class="txt">전체펼침</span>
+                            <span class="arrow"></span> 
+                        </button>
+    
+    
+                        <!-- chips : 홈/텍스트 칩 -->
+                        <div class="chips-group">
+                            <button type="button" class="chips chips-menu is-selected">
+                                <span class="img-box icon"><img src="../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
+                                <span class="txt">많이 찾는 문의</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">요금 및 납부</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">가입정보</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">사용현황</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">휴대폰 결제</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">해외로밍</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu">
+                                <!-- <span class="icon"></span> -->
+                                <span class="txt">해외로밍 부가서비스</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu chips-more">
+                                <span class="arrow"></span>
+                            </button>
+    
+                            <button type="button" class="chips chips-menu chips-more is-selected">
+                                <span class="arrow"></span>
+                            </button>
+                        </div>
+    
+    
+                        <!-- chips : 은행명 박스 -->
+                        <div class="chips-group">
+                            <button type="button" class="chips chips-bank">
+                                <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+                                <span class="txt">신한은행</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-bank is-selected">
+                                <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+                                <span class="txt">신한은행</span>
+                            </button>
+    
+                            <button type="button" class="chips chips-bank">
+                                <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
+                                <span class="txt">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이</span>
+                            </button>
+                        </div>
+    
+    
+                        <!-- chips : 새로고침  -->
+                        <button type="button" class="chips chips-refresh">
+                            <span class="time">00:00</span>
+                            <span class="line"></span>
+                            <span class="text-box">
+                                <span class="txt">새로고침</span>
+                                <span class="icon"></span>
+                            </span>
+                        </button>
+    
+    
+                        <!-- chips : other (tag) -->
+                        <div class="chips chips-tag">
+                            <span class="txt">이용불가</span>
+                        </div>
+    
+                        <div class="chips chips-tag primary">
+                            <span class="txt">이용가능</span>
+                        </div>
+    
+                        <div class="chips chips-tag tag-lg primary">
+                            <span class="txt">전액</span>
+                        </div>
+    
+                        <button type="button" class="chips chips-tag tag-lg">
+                            <span class="txt">빠른 문제해결</span>
+                        </button>
+    
+                        <button type="button" class="chips chips-tag tag-lg primary-bg">
+                            <span class="txt">충분한 정보 제공</span>
+                        </button>
+    
+                        <div class="chips chips-tag tag-sm">
+                            <span class="txt">모바일</span>
+                        </div>
+    
+    
+                        <!-- flag -->
+                        <div class="flag flag-line primary">
+                            <span class="txt">이용예정</span>
+                        </div>
+    
+                        <div class="flag primary">
+                            <span class="txt">이용중</span>
+                        </div>
+    
+                        <div class="flag">
+                            <span class="txt">이용완료</span>
+                        </div>
+    
+                        <div class="flag success">
+                            <span class="txt">납부완료</span>
+                        </div>
+    
+                        <div class="flag error">
+                            <span class="txt">납부실패</span>
+                        </div>
+    
+                        <div class="flag flag-recent">
+                            <span class="txt">최근사용</span>
+                        </div>
+    
+                        <div class="flag flag-etc">
+                            <span class="txt">텍스트</span>
+                        </div>
+    
+    
+                        <!-- badge -->
+                        <div class="badge badge-round">
+                            <span class="txt">A</span>
+                        </div>
+    
+                        <div class="badge badge-round">
+                            <span class="txt">A+B+C</span>
+                        </div>
+    
+                        <div class="badge badge-tip">
+                            <span class="txt">TIPS</span>
+                        </div>
+    
+                        <div class="badge badge-time">
+                            <span class="icon"></span>
+                            <span class="txt">02:56</span>
+                        </div>
+                        
+                        <div class="badge badge-time error">
+                            <span class="icon"></span>
+                            <span class="txt">03:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

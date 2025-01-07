@@ -1,0 +1,418 @@
+@import '../base/mixin';
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(../font/Pretendard-Bold.woff2) format('woff2'), url(../font/Pretendard-Bold.woff) format('woff'), url(../font/Pretendard-Bold.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url(../font/Pretendard-SemiBold.woff2) format('woff2'), url(../font/Pretendard-SemiBold.woff) format('woff'), url(../font/Pretendard-SemiBold.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url(../font/Pretendard-Medium.woff2) format('woff2'), url(../font/Pretendard-Medium.woff) format('woff'), url(../font/Pretendard-Medium.otf) format('opentype');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(../font/Pretendard-Regular.woff2) format('woff2'), url(../font/Pretendard-Regular.woff) format('woff'), url(../font/Pretendard-Regular.otf) format('opentype');
+}
+
+/*======================================
+	ROOT
+	사용할 변수 정리   
+======================================*/
+:root {	
+	/* sight design - color */
+	/* color style - grayscale */
+	--dt-white: #FFFFFF;
+	--dt-gray01: #F9FAFB;
+	--dt-gray02: #F6F7FC;
+	--dt-gray03: #F3F5F6;
+	--dt-gray04: #F3F4F6;
+	--dt-gray05: #EEF1FD;
+	--dt-gray06: #E3E6F1;
+	--dt-gray07: #DCE6FF;
+	--dt-gray08: #DCE0E5;
+	--dt-gray09: #A8B3BD;
+	--dt-gray10: #7F8A94;
+	--dt-gray11: #66707A;
+	--dt-gray12: #525960;
+	--dt-gray13: #4B506A;
+	--dt-gray14: #3B4044;
+	--dt-gray15: #31354D;
+	--dt-gray16: #181A1B;
+	--dt-gray17: #E7EBEE;
+	--dt-gray18: #D0DBF8;
+	--dt-black: #000000;
+
+	/* color Style - system */
+	--dt-primary: #E30084;
+	--dt-success: #00AA02;
+	--dt-warning: #F86800;
+	--dt-error: #E22A21;
+
+	/* sight design - font */
+	/* font style - font size */
+	--dt-fz30: 30px;
+	--dt-fz24: 24px;
+	--dt-fz22: 22px;
+	--dt-fz18: 18px;
+	--dt-fz16: 16px;
+	--dt-fz14: 14px;
+	--dt-fz12: 12px;
+
+	/* font style - font weight */
+	--dt-fw700: 700;
+	--dt-fw600: 600;
+	--dt-fw500: 500;
+	--dt-fw400: 400;
+
+	/* font style - line height */
+	--dt-lh150: 150%;
+	--dt-lh140: 140%;
+	--dt-lh120: 120%;
+
+	/* sight design - shadow */
+	/* shadow style - card */
+	--dt-shadow01: 0 8px 13px 8px rgba(var(--dt-black), 0.04);
+
+	/* shadow style - bottom sheet */
+	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-black), 0.04);
+
+	/* iOS 웹뷰 safe area inset  */
+	--dt-sat: env(safe-area-inset-top);
+	--dt-sab: env(safe-area-inset-bottom);
+	--dt-sar: env(safe-area-inset-right);
+	--dt-sal: env(safe-area-inset-left);
+}
+
+
+/*======================================
+	Common
+======================================*/
+html {
+    height: 100%;
+}
+body {
+	width: 100%;
+    max-width:100%;
+	height: 100%;
+	font-family: 'Pretendard', system-ui, sans-serif;
+    font-size: var(--dt-fz16);
+	font-weight: var(--dt-fw400);
+    line-height: 1;
+	color: var(--dt-black);
+	text-overflow: ellipsis;
+    background-color: var(--dt-white);
+}
+body  * {
+	font-family: 'Pretendard', system-ui, sans-serif;
+    font-size: var(--dt-fz16);
+	font-weight: var(--dt-fw400);
+    line-height: 1.2;
+	color: var(--dt-black);
+}
+/* Box Model */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+a {          
+    text-decoration: none;
+    cursor: pointer;
+}
+a:focus,
+.button:focus {
+    outline: 0;
+}  
+strong {
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+}
+strong, b {
+    font-weight: 800;
+}
+em {
+    font-style: normal;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+iframe {
+    border: 0;
+    vertical-align: middle;
+}
+sub {
+    font-size: 0.3em;
+    position: relative;
+    top: 0.5em;
+}
+sup {
+    font-size: 0.3em;
+    position: relative;
+    top: -0.5em;
+}
+hr {
+    border: 0;
+    border-bottom: 1px solid var(--dt-black);
+    margin: 0.75em 0;
+    color: inherit;
+}
+button {
+	background: inherit; 
+	border: none; 
+	box-shadow: none; 
+	border-radius: 0; 
+	padding: 0; 
+	overflow: visible; 
+	cursor: pointer;
+}
+/* Element */
+.hidden {
+	display: none !important;
+}
+.ml-auto {
+	margin-left: auto !important;
+}
+/* animation */
+@keyframes fadeInDown {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}
+@keyframes slideInUp {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 100%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translateZ(0);
+	}
+}
+
+
+
+/* Component Common */
+/* bullet List */
+.bullet-caption {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--dt-gray11);
+	margin-top: 24px;
+	margin-bottom: 4px;
+}
+.bullet-caption::before {
+	content: "";
+	display: inline;
+	padding-left: 20px;
+	background-image: url(../images/icon/ic-bullet-info.png);
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-position: left 0 center;
+}
+.bullet-list {
+    --bulletList-font-size : 0.750rem;
+    --bulletList-bullet-size : 0.1667em;
+    --bullet-to-section-mg : 0.5000em; /* 들여쓰기 */
+    --bulletList-between-pd : 0.1667em; /* 행간 */
+    --bulletList-font-color : var(--dt-gray11);
+    --bulletList-font-weight : var(--dt-fw500);
+    --bulletList-font-lineHeight : 1.5;
+    --bulletList-bullet-color : var(--bulletList-font-color);
+    --bulletList-bullet-translateY : calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size)/2 ) ) );
+    --bulletList-bullet-translateX : calc( calc( var(--bulletList-font-size)/2 ) - var(--bulletList-font-size) );
+    --bullet-to-word-pd : calc( var(--bulletList-font-size)/2 );
+    
+	font-size: var(--bulletList-font-size);
+    font-weight: var(--bulletList-font-weight);
+    color: var(--bulletList-font-color);
+    line-height: var(--bulletList-font-lineHeight);
+    padding-left: var(--bullet-to-word-pd);
+    margin-left: var(--bullet-to-section-mg);
+}
+.bullet-list .bullet-item {
+	display: block;
+	position: relative;
+	font-size: 1em;
+	color: var(--bulletList-font-color);
+	line-height: unset;
+	padding: var(--bulletList-between-pd) 0;
+}
+.bullet-list .bullet-item::before {
+	content: " ";
+	display: inline-block;
+	width: var(--bulletList-bullet-size);
+	height: var(--bulletList-bullet-size);
+	border-radius: var(--bulletList-bullet-size);
+	background-color: var(--bulletList-bullet-color);
+	position: absolute;
+	top: 0;
+	transform: translateY(var(--bulletList-bullet-translateY));
+	left: var(--bulletList-bullet-translateX);
+}
+
+/* card 기본 */
+// .card {
+// 	display: flex;
+// 	flex-direction: column;
+// 	width: 100%;
+// 	background-color: var(--dt-white);
+// 	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+// 	border-radius: 8px;
+// 	padding: 16px;
+// 	gap: 16px;
+// }
+// .card .card-header {
+// 	display: flex;
+// 	flex-direction: row;
+// 	justify-content: space-between;
+// 	align-items: center;
+// 	gap: 8px;
+// }
+// .card .card-body {
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 8px;
+// }
+// .card .card-body .item {
+// 	display: flex;
+// }
+// .card .card-body .item.util {
+// 	justify-content: space-between;
+// 	align-items: center;
+// }
+// .card .card-body .item.text {
+// 	flex-direction: column;
+// 	gap: 8px;
+// }
+// .card .card-footer {
+// 	display: flex;
+// 	margin-top: auto;
+// }
+// .card .card-footer .btn-group {
+// 	flex: auto;
+// }
+// .card .card-footer .btn {
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// }
+// .card .img-box {
+// 	width: 28px;
+// 	min-width: 28px;
+// 	height: 28px;
+// }
+// .card .tit {
+// 	display: flex;
+// 	flex-direction: row;
+// 	gap: 4px;
+// 	align-items: center;
+// 	font-size: 16px;
+// 	font-weight: 700;
+// 	line-height: 1.5;
+// 	color: var(--dt-gray16);
+// }
+// .card .tit .icon {
+// 	display: inline-block;
+// 	width: 20px;
+// 	min-width: 20px;
+// 	height: 20px;
+// 	background-image: url(../images/icon/ic-card-headphone.png);
+// 	background-repeat: no-repeat;
+// 	background-size: contain;
+// 	background-position: center center;
+// }
+// .card .txt {
+// 	font-size: 14px;
+// 	font-weight: 500;
+// 	line-height: 1.5;
+// 	color: var(--dt-gray11);
+// }
+// .card[role=button] {
+// 	cursor: pointer;
+// }
+// .card[role=button]:active {
+// 	box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+// }
+// .card[role=button]:active .card-body,
+// .card[role=button]:active .card-footer {
+// 	opacity: 0.6;
+// }
+// .card.is-selected {
+// 	box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+// }
+// .card.is-selected .card-body,
+// .card.is-selected .card-footer {
+// 	opacity: 0.6;
+// }
+// .card.is-disabled {
+// 	box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+// }
+// .card.is-disabled .card-body,
+// .card.is-disabled .card-footer {
+// 	opacity: 0.6;
+// }
+
+
+/* Layout Common */
+.page-wrapper.is-scrolled .header {
+	background-color: var(--dt-white);
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 56px;
+}
+.section__divider {
+	width: 100%;
+	min-height: 10px;
+	background-color: var(--dt-gray03);
+	box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
+}
+.section__cont {
+	display: flex;
+	flex-direction: column;
+}
+.cont__wrap {
+	padding: 0 20px;
+}
+/* img-box */
+.img-box {
+	display: inline-block;
+}
+.img-box img {
+	width: 100%;
+	height: 100%;
+}
+/* tooltip 기본 */
+.tooltip img {
+	width: 18px;
+	height: 18px;
+}

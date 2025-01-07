@@ -1,4 +1,4 @@
-@import "../scss/dt-mixin.scss";
+@import '../base/mixin';
 .chips-group {
 	@include flexBox();
 	flex-wrap: wrap;
@@ -8,6 +8,33 @@
 }
 
 .chips {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	border: 1px solid var(--dt-gray12);
+	background-color: var(--dt-white);
+	border-radius: 18px;
+	padding: 7px 12px;
+	.txt {
+		font-size: 12px;
+		font-weight: 600;
+		text-align: left;
+		color: var(--dt-gray12);
+	}
+	.icon {
+		width: 16px;
+		min-width: 16px;
+		height: 16px;
+	}
+	.arrow {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background-image: url(../images/icon/ic-chips-arrow-black.png);
+		background-size: 24px 24px;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
 	// chips: select - date (날짜)
 	&.chips-date {
 		height: 36px;
@@ -208,9 +235,19 @@
 
 // flag
 .flag {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
 	width: fit-content;
+	background-color: var(--dt-gray10);
+	padding: 4px 6px;
+	border-radius: 4px;
+	border: 1px solid var(--dt-gray10);
 	.txt {
+		color: var(--dt-white);
 		text-align: center;
+		font-size: 11px;
+		font-weight: 500;
 	}
 	&.primary {
 		border-color: var(--dt-primary);
@@ -265,6 +302,23 @@
 
 // badge
 .badge {
+	display: inline-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--dt-gray10);
+	background-color: var(--dt-gray10);
+	gap: 4px;
+	.txt {
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--dt-white);
+	}
+	.icon {
+		width: 18px;
+		min-width: 18px;
+		height: 18px;
+	}
 	&.badge-round {
 		min-width: 26px;
 		min-height: 26px;

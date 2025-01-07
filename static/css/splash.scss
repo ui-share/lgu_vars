@@ -1,4 +1,4 @@
-@import "../scss/dt-mixin.scss";
+@import '../scss/base/mixin';
 .page-wrapper {
     background: linear-gradient(135deg, #C77CF4 0%, #E36BA1 100%), #E30084;
     // filter: blur(200px);
@@ -118,14 +118,14 @@
                                 }
                             }
                         }
-                    
-                    
+
                         .swiper-pagination {
                             position: absolute;
                             top: -12px;
                             left: 50%;
                             transform: translateX(-50%);
                             margin-top: 20px;
+                            height: max-content;
                             .swiper-pagination-bullet {
                                 width: 6px;
                                 height: 6px;

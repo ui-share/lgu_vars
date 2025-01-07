@@ -1,4 +1,5 @@
-@import "../scss/dt-mixin.scss";
+@import '../base/mixin';
+
 .header {
     @include flexBox(between, center);
     flex-wrap: wrap;
