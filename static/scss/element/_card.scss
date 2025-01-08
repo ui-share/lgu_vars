@@ -31,28 +31,16 @@
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-		.item {
-			display: flex;
-			&.util {
-				justify-content: space-between;
-				align-items: center;
-			}
-			&.text {
-				flex-direction: column;
-				gap: 8px;
-			}
-		}
 	}
-	.card-footer {
+	.item {
 		display: flex;
-		margin-top: auto;
-		.btn-group {
-			flex: auto;
-		}
-		.btn {
-			display: flex;
-			justify-content: center;
+		&.util {
+			justify-content: space-between;
 			align-items: center;
+		}
+		&.text {
+			flex-direction: column;
+			gap: 8px;
 		}
 	}
 	.img-box {
@@ -83,6 +71,18 @@
 		@include fw-5(14px);
 		line-height: 1.5;
 		color: var(--dt-gray11);
+	}
+	.card-footer {
+		display: flex;
+		margin-top: auto;
+		.btn-group {
+			flex: auto;
+		}
+		.btn {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
 	> .flag {
 		padding: 4px 10px;
@@ -116,10 +116,22 @@
 	}
 }
 
+.solid {
+	background-color: var(--dt-white);
+	box-shadow: none;
+}
+
 // sub:detail card (상담연결-챗봇/AI/전화 등)
 .detail {
 	background-color: var(--dt-white);
 	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+	.card-body {
+	}
+	.item {
+		&.text {
+			gap: 0;
+		}
+	}
 	.tit {
 		font-size: 14px;
 	}
@@ -149,8 +161,10 @@
 		flex-direction: row;
 		gap: 12px;
 	}
-	.card__text {
-		gap: 0;
+	.item {
+		&.text {
+			gap: 0;
+		}
 	}
 	.tit {
 		font-size: 18px;
@@ -164,10 +178,12 @@
 			width: 100%;
 			gap: 8px;
 		}
-		.card__text {
-			flex-direction: row;
-			align-items: center;
-			flex: 1;
+		.item {
+			&.text {
+				flex-direction: row;
+				align-items: center;
+				flex: 1;
+			}
 		}
 		.img-box {
 			width: 28px;
@@ -181,41 +197,6 @@
 		.txt {
 			margin-left: auto;
 		}
-	}
-}
-
-.banner {
-	position: relative;
-	padding: 15px 48px 15px 20px;
-	background-color: var(--dt-gray02);
-	box-shadow: none;
-	.img-box {
-		width: 36px;
-		min-width: 36px;
-		height: 36px;
-	}
-	.card__text {
-		gap: 2px;
-	}
-	.tit {
-		@include fw-5(12px);
-		color: var(--dt-gray11);
-	}
-	.txt {
-		@include fw-7(14px);
-		color: var(--dt-gray14);
-	}
-	.end {
-		position: absolute;
-		top: 16px;
-		right: 16px;
-		width: 24px;
-		height: 24px;
-		text-indent: -9999px;
-		background-image: url(../images/icon/ic-card-end.png);
-		background-repeat: no-repeat;
-		background-size: 24px 24px;
-		background-position: center center;
 	}
 }
 
@@ -260,6 +241,7 @@
 .bank {
 	position: relative;
 	.card-header {
+		justify-content: flex-start;
 		align-items: start;
 	}
 	.img-box {
@@ -268,8 +250,10 @@
 		height: 20px;
 		margin-top: 2px;
 	}
-	.card__text {
-		gap: 0;
+	.item {
+		&.text {
+			gap: 0;
+		}
 		.txt {
 			color: var(--dt-gray13);
 		}
@@ -299,12 +283,51 @@
 	}
 }
 
+.banner {
+	position: relative;
+	padding: 15px 48px 15px 20px;
+	background-color: var(--dt-gray02);
+	box-shadow: none;
+	.img-box {
+		width: 36px;
+		min-width: 36px;
+		height: 36px;
+	}
+	.item {
+		&.text {
+			gap: 2px;
+		}
+	}
+	.tit {
+		@include fw-5(12px);
+		color: var(--dt-gray11);
+	}
+	.txt {
+		@include fw-7(14px);
+		color: var(--dt-gray14);
+	}
+	.end {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		width: 24px;
+		height: 24px;
+		text-indent: -9999px;
+		background-image: url(../images/icon/ic-card-end.png);
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		background-position: center center;
+	}
+}
+
 .bill {
-	.card__text {
-		flex-direction: row;
-		align-items: center;
+	.item {
+		&.util {
+			flex-direction: row;
+			gap: 6px;
+		}
 		.flag {
-			padding: 4px 8px;
+			padding: 1.5px 8px;
 			margin-left: auto;
 			.txt {
 				font-size: 12px;
@@ -313,11 +336,11 @@
 		.pay-txt {
 			@include fw-7();
 		}
-	}
-	.bill-explain {
-		@include fw-5(12px);
-		color: var(--dt-gray11);
-		text-align: right;
+		.txt {
+			@include fw-5(12px);
+			color: var(--dt-gray11);
+			text-align: right;
+		}
 	}
 	.card-footer {
 		.btn-group {
@@ -343,9 +366,11 @@
 		min-width: 40px;
 		height: 40px;
 	}
-	.card__text {
-		text-align: center;
-		gap: 4px;
+	.item {
+		&.text {
+			gap: 4px;
+			text-align: center;
+		}
 		.tit {
 			font-weight: 500;
 		}

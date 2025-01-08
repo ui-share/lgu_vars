@@ -111,7 +111,7 @@
 			position: absolute;
 			content: "";
 			display: none;
-			width: 38px;
+			width: 24px;
 			height: 52px;
 			top: 0;
 			left: 0;
@@ -120,8 +120,8 @@
 		&::after {
 			position: absolute;
 			content: "";
-			display: inline;
-			width: 38px;
+			display: inline-block;
+			width: 24px;
 			height: 52px;
 			top: 0;
 			right: 0;
@@ -129,15 +129,15 @@
 		}
 		&.scroll-start {
 			&::before {
-				display: inline;
+				display: inline-block;
 			}
 		}
 		&.scroll-end {
 			&::before {
-				display: inline;
+				display: inline-block;
 			}
 			&::after {
-				display: none;
+				display: inline-block;
 			}
 		}
 	}

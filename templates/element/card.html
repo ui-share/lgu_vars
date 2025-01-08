@@ -12,6 +12,7 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
 	
 	<!-- Scripts -->
@@ -27,11 +28,11 @@
 	<div class="container" style="padding: 0;">
 		<div style="display: flex; flex-direction: column; width: 100%; padding: 16px; background-color: #eeeeee; gap: 8px;">
 			<!-- card : 기본 -->
-			<strong>card::정방형</strong>
-			<p>[정방형 기본]</p>
+			<strong>card</strong>
+			<p>card::menu</p>
 			<div class="card" role="button" tabindex="0">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
 						</span>
@@ -39,17 +40,17 @@
 							<span class="txt">최근사용</span>
 						</div>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<span class="tit">청구 요금<span class="icon"></span></span>
 						<span class="txt">이번달과 지난달<br>요금 조회</span>
 					</div>
 				</div>
 			</div>
 
-			<p>[정방형 기본] - is-selected</p>
+			<p>card::menu - is-selected</p>
 			<div class="card is-selected" role="button" tabindex="0">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
 						</span>
@@ -57,56 +58,57 @@
 							<span class="txt">최근사용</span>
 						</div>
 					</div>
-					<div class="card__text">
-						<span class="tit">청구 요금</span>
-						<span class="txt">이번달과 지난달<br>요금 조회</span>
-					</div>
-				</div>
-			</div>
-			<p>[정방형 기본] - is-disabled</p>
-			<div class="card is-disabled" role="button" tabindex="0">
-				<div class="card-body">
-					<div class="card__util">
-						<span class="img-box">
-							<img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
-						</span>
-						<div class="flag flag-recent">
-							<span class="txt">최근사용</span>
-						</div>
-					</div>
-					<div class="card__text">
-						<span class="tit">청구 요금</span>
+					<div class="item text">
+						<span class="tit">청구 요금<span class="icon"></span></span>
 						<span class="txt">이번달과 지난달<br>요금 조회</span>
 					</div>
 				</div>
 			</div>
 
-			<p>[정방형 solid]</p>
+			<p>card::menu - is-disabled</p>
+			<div class="card is-disabled" role="button" tabindex="0">
+				<div class="card-body">
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
+						</span>
+						<div class="flag flag-recent">
+							<span class="txt">최근사용</span>
+						</div>
+					</div>
+					<div class="item text">
+						<span class="tit">청구 요금<span class="icon"></span></span>
+						<span class="txt">이번달과 지난달<br>요금 조회</span>
+					</div>
+				</div>
+			</div>
+
+			<p>card::solid (배경색/그림자없음)</p>
 			<!-- card : solid -->
 			<div class="card solid" role="button" tabindex="0">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-billing.png" alt="나의요금제">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<span class="tit">나의 요금제</span>
 						<span class="txt">요금제 확인·변경</span>
 					</div>
 				</div>
 			</div>
 
-			<p>[정방형 sub]</p>
-			<!-- card : sub -->
-			<div class="card sub">
+			<p>card::detail</p>
+			<!-- card : detail -->
+			<div class="card detail">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-billing.png" alt="나의요금제">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<span class="tit">나의 요금제</span>
 					</div>
 				</div>
@@ -119,16 +121,16 @@
 				</div> 
 			</div>
 
-			<p>[정방형 sub detail]</p>
+			<p>card::detail (챗봇/AI/전화상담)]</p>
 			<!-- card : shadow -->
-			<div class="card sub detail" role="button" tabindex="0">
+			<div class="card detail" role="button" tabindex="0">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-card-calls.png" alt="나의요금제">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<span class="tit">나의 요금제</span>
 						<span class="txt">설명문구</span>
 					</div>
@@ -141,15 +143,15 @@
 			</div>
 
 			<strong style="margin-top: 16px;">card::가로형</strong>
-			<p>[가로형 메인]</p>
+			<p>card::horizon</p>
 			<div class="card horizon">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-card-arseye.png" alt="타이틀">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">타이틀</h3>
 						<p class="txt">설명문구를 입력해주세요</p>
 					</div>
@@ -163,30 +165,30 @@
 				</div> 
 			</div>
 
-			<p>[가로형 solid]</p>
+			<p>card::horizon solid</p>
 			<div class="card horizon solid" role="button" tabindex="0">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-card-arseye.png" alt="타이틀">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">타이틀</h3>
 						<p class="txt">대기 N시간 이상</p>
 					</div>
 				</div>
 			</div>
 
-			<p>[가로형 챗봇]</p>
+			<p>card::horizon chatbot</p>
 			<div class="card horizon chatbot">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-holeman.png" alt="챗봇에 문의">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">챗봇에 문의</h3>
 						<p class="txt">24시간 대기없이 바로 문의</p>
 					</div>
@@ -200,15 +202,15 @@
 				</div> 
 			</div>
 
-			<p>[가로형 홈 고객센터 문의]</p>
+			<p>card::horizon home</p>
 			<div class="card horizon home">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-home-iptv.png" alt="홈 고객센터 문의">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">홈 고객센터 문의</h3>
 						<p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
 					</div>
@@ -222,13 +224,15 @@
 				</div> 
 			</div>
 
-			<p>[가로형 Bank]</p>
+			<p>card::bank</p>
 			<div class="card solid bank">
-				<div class="card-body">
-					<span class="img-box">
-						<img src="../../static/images/icon/ic-card-bank-ibk.png" alt="ibk은행">
-					</span>
-					<div class="card__text">
+				<div class="card-header">
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-card-bank-ibk.png" alt="ibk은행">
+						</span>
+					</div>
+					<div class="item text">
 						<h3 class="tit">은행 계좌번호</h3>
 						<p class="txt">이름</p>
 					</div>
@@ -246,15 +250,15 @@
 				</div> 
 			</div>
 
-			<p>[가로형 Banner]</p>
+			<p>card::선제안 팝업</p>
 			<div class="card horizon banner">
 				<div class="card-body">
-					<div class="card__util">
+					<div class="item util">
 						<span class="img-box">
 							<img src="../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
 						</span>
 					</div>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">가입 매장 상담사 연결</h3>
 						<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
 					</div>
@@ -262,17 +266,19 @@
 				</div>
 			</div>
 
-			<p>[bill card]</p>
+			<p>card::bill</p>
 			<div class="card solid bill">
 				<div class="card-body">
-					<div class="card__text">
+					<div class="item util">
 						<h3 class="tit">타이틀</h3>
 						<div class="flag flag-line primary">
-							<span class="txt">이용예정</span>
+							<span class="txt">텍스트</span>
 						</div>
 						<p class="pay-txt">0원</p> 
 					</div>
-					<div class="bill-explain">설명문구</div>
+					<div class="item text">
+						<span class="txt">설명문구</span>
+					</div>
 				</div>
 				<div class="card-footer">
 					<div class="btn-group">
@@ -289,13 +295,15 @@
 				</div> 
 			</div>
 
-			<p>[center card]</p>
+			<p>card::center</p>
 			<div class="card solid center">
 				<div class="card-body">
-					<span class="img-box">
-						<img src="../../static/images/icon/ic-card-roaming_x.png" alt="로밍내역 없음">
-					</span>
-					<div class="card__text">
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-card-roaming_x.png" alt="로밍내역 없음">
+						</span>
+					</div>
+					<div class="item text">
 						<p class="txt">사용하신 로밍 내역이 없어요</p>
 					</div>
 				</div>
@@ -303,10 +311,12 @@
 
 			<div class="card solid center">
 				<div class="card-body">
-					<span class="img-box">
-						<img src="../../static/images/icon/ic-card-roaming.png" alt="가입 정보 없음">
-					</span>
-					<div class="card__text">
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-card-roaming.png" alt="가입 정보 없음">
+						</span>
+					</div>
+					<div class="item text">
 						<h3 class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</h3>
 					</div>
 				</div>
@@ -314,10 +324,12 @@
 
 			<div class="card solid center">
 				<div class="card-body">
-					<span class="img-box">
-						<img src="../../static/images/icon/ic-card-address_x.png" alt="검색결과 없음">
-					</span>
-					<div class="card__text">
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-card-address_x.png" alt="검색결과 없음">
+						</span>
+					</div>
+					<div class="item text">
 						<h3 class="tit">검색결과가 없어요</h3>
 						<p class="txt">도로명 주소로 다시 검색해 주세요</p>
 					</div>
@@ -330,7 +342,7 @@
 					<span class="txt">무료</span>
 				</div>
 				<div class="card-body">
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">타이틀</h3>
 						<p class="txt">설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다.</p>
 					</div>
@@ -343,7 +355,7 @@
 					<span class="img-box">
 						<img src="../../static/images/icon/ic-card-message.png" alt="도착알림문자">
 					</span>
-					<div class="card__text">
+					<div class="item text">
 						<h3 class="tit">도착 알림 문자</h3>
 					</div>
 				</div>
@@ -354,7 +366,7 @@
 							<p class="time">오후 2:56</p>
 						</div>
 						<div class="card-body">
-							<div class="card__text">
+							<div class="item text">
 								<h3 class="tel">02-3416-7010</h3>
 								<p class="msg">[LG U+](휴대폰번호) 고객님이(한국기준날짜,시간,도착국가)에 도착하였습니다.</p>
 							</div>
@@ -365,10 +377,6 @@
 		</div>
 	</div>
 	<!-- //container -->
-
-	<!-- footer -->  
-	<footer class="footer"></footer>
-	<!-- //footer -->
 </div>
 
 </body>

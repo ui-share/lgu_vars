@@ -384,28 +384,16 @@ input, textarea, select, button {
   flex-direction: column;
   gap: 8px;
 }
-.card .card-body .item {
+.card .item {
   display: flex;
 }
-.card .card-body .item.util {
+.card .item.util {
   justify-content: space-between;
   align-items: center;
 }
-.card .card-body .item.text {
+.card .item.text {
   flex-direction: column;
   gap: 8px;
-}
-.card .card-footer {
-  display: flex;
-  margin-top: auto;
-}
-.card .card-footer .btn-group {
-  flex: auto;
-}
-.card .card-footer .btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .card .img-box {
   width: 28px;
@@ -438,6 +426,18 @@ input, textarea, select, button {
   line-height: 1.5;
   color: var(--dt-gray11);
 }
+.card .card-footer {
+  display: flex;
+  margin-top: auto;
+}
+.card .card-footer .btn-group {
+  flex: auto;
+}
+.card .card-footer .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card > .flag {
   padding: 4px 10px;
 }
@@ -469,9 +469,17 @@ input, textarea, select, button {
   opacity: 0.6;
 }
 
+.solid {
+  background-color: var(--dt-white);
+  box-shadow: none;
+}
+
 .detail {
   background-color: var(--dt-white);
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+}
+.detail .item.text {
+  gap: 0;
 }
 .detail .tit {
   font-size: 14px;
@@ -503,7 +511,7 @@ input, textarea, select, button {
   flex-direction: row;
   gap: 12px;
 }
-.horizon .card__text {
+.horizon .item.text {
   gap: 0;
 }
 .horizon .tit {
@@ -517,7 +525,7 @@ input, textarea, select, button {
   width: 100%;
   gap: 8px;
 }
-.horizon.solid .card__text {
+.horizon.solid .item.text {
   flex-direction: row;
   align-items: center;
   flex: 1;
@@ -534,43 +542,6 @@ input, textarea, select, button {
 }
 .horizon.solid .txt {
   margin-left: auto;
-}
-
-.banner {
-  position: relative;
-  padding: 15px 48px 15px 20px;
-  background-color: var(--dt-gray02);
-  box-shadow: none;
-}
-.banner .img-box {
-  width: 36px;
-  min-width: 36px;
-  height: 36px;
-}
-.banner .card__text {
-  gap: 2px;
-}
-.banner .tit {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--dt-gray11);
-}
-.banner .txt {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--dt-gray14);
-}
-.banner .end {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
-  text-indent: -9999px;
-  background-image: url(../images/icon/ic-card-end.png);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: center center;
 }
 
 .chatbot {
@@ -609,6 +580,7 @@ input, textarea, select, button {
   position: relative;
 }
 .bank .card-header {
+  justify-content: flex-start;
   align-items: start;
 }
 .bank .img-box {
@@ -617,10 +589,10 @@ input, textarea, select, button {
   height: 20px;
   margin-top: 2px;
 }
-.bank .card__text {
+.bank .item.text {
   gap: 0;
 }
-.bank .card__text .txt {
+.bank .item .txt {
   color: var(--dt-gray13);
 }
 .bank .end {
@@ -643,22 +615,59 @@ input, textarea, select, button {
   color: var(--dt-gray11);
 }
 
-.bill .card__text {
-  flex-direction: row;
-  align-items: center;
+.banner {
+  position: relative;
+  padding: 15px 48px 15px 20px;
+  background-color: var(--dt-gray02);
+  box-shadow: none;
 }
-.bill .card__text .flag {
-  padding: 4px 8px;
+.banner .img-box {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+}
+.banner .item.text {
+  gap: 2px;
+}
+.banner .tit {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dt-gray11);
+}
+.banner .txt {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.banner .end {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  background-image: url(../images/icon/ic-card-end.png);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+}
+
+.bill .item.util {
+  flex-direction: row;
+  gap: 6px;
+}
+.bill .item .flag {
+  padding: 1.5px 8px;
   margin-left: auto;
 }
-.bill .card__text .flag .txt {
+.bill .item .flag .txt {
   font-size: 12px;
 }
-.bill .card__text .pay-txt {
+.bill .item .pay-txt {
   font-size: 16px;
   font-weight: 700;
 }
-.bill .bill-explain {
+.bill .item .txt {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray11);
@@ -684,11 +693,11 @@ input, textarea, select, button {
   min-width: 40px;
   height: 40px;
 }
-.center .card__text {
-  text-align: center;
+.center .item.text {
   gap: 4px;
+  text-align: center;
 }
-.center .card__text .tit {
+.center .item .tit {
   font-weight: 500;
 }
 
@@ -1833,4 +1842,4 @@ button {
 .switch-group.is-disabled .switch-label .switch-box {
   box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6); /* 비활성화 상태에서 배경색 */
   cursor: not-allowed; /* 비활성화된 상태에서 커서 변경 */
-}/*# sourceMappingURL=common.css.map */
+}
