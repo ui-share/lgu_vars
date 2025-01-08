@@ -278,109 +278,6 @@ button {
 	left: var(--bulletList-bullet-translateX);
 }
 
-/* card 기본 */
-// .card {
-// 	display: flex;
-// 	flex-direction: column;
-// 	width: 100%;
-// 	background-color: var(--dt-white);
-// 	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
-// 	border-radius: 8px;
-// 	padding: 16px;
-// 	gap: 16px;
-// }
-// .card .card-header {
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: space-between;
-// 	align-items: center;
-// 	gap: 8px;
-// }
-// .card .card-body {
-// 	display: flex;
-// 	flex-direction: column;
-// 	gap: 8px;
-// }
-// .card .card-body .item {
-// 	display: flex;
-// }
-// .card .card-body .item.util {
-// 	justify-content: space-between;
-// 	align-items: center;
-// }
-// .card .card-body .item.text {
-// 	flex-direction: column;
-// 	gap: 8px;
-// }
-// .card .card-footer {
-// 	display: flex;
-// 	margin-top: auto;
-// }
-// .card .card-footer .btn-group {
-// 	flex: auto;
-// }
-// .card .card-footer .btn {
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
-// }
-// .card .img-box {
-// 	width: 28px;
-// 	min-width: 28px;
-// 	height: 28px;
-// }
-// .card .tit {
-// 	display: flex;
-// 	flex-direction: row;
-// 	gap: 4px;
-// 	align-items: center;
-// 	font-size: 16px;
-// 	font-weight: 700;
-// 	line-height: 1.5;
-// 	color: var(--dt-gray16);
-// }
-// .card .tit .icon {
-// 	display: inline-block;
-// 	width: 20px;
-// 	min-width: 20px;
-// 	height: 20px;
-// 	background-image: url(../images/icon/ic-card-headphone.png);
-// 	background-repeat: no-repeat;
-// 	background-size: contain;
-// 	background-position: center center;
-// }
-// .card .txt {
-// 	font-size: 14px;
-// 	font-weight: 500;
-// 	line-height: 1.5;
-// 	color: var(--dt-gray11);
-// }
-// .card[role=button] {
-// 	cursor: pointer;
-// }
-// .card[role=button]:active {
-// 	box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
-// }
-// .card[role=button]:active .card-body,
-// .card[role=button]:active .card-footer {
-// 	opacity: 0.6;
-// }
-// .card.is-selected {
-// 	box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
-// }
-// .card.is-selected .card-body,
-// .card.is-selected .card-footer {
-// 	opacity: 0.6;
-// }
-// .card.is-disabled {
-// 	box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
-// }
-// .card.is-disabled .card-body,
-// .card.is-disabled .card-footer {
-// 	opacity: 0.6;
-// }
-
-
 /* Layout Common */
 .page-wrapper.is-scrolled .header {
 	background-color: var(--dt-white);
@@ -402,6 +299,26 @@ button {
 }
 .cont__wrap {
 	padding: 0 20px;
+}
+.con__tit-box {
+	@include flexRow();
+	justify-content:space-between;
+	margin-bottom: 16px;
+	.tit-head {
+		display: flex;
+		align-items: center;
+		gap:4px;
+		.ico {
+			@include ico();
+			width:20px;height:20px;
+			background-image: url('../images/icon/ic-chips-flag.png');
+		}
+		.txt-title {
+			font-size: 18px;
+			font-weight: 700;
+			color: var(--dt-gray16);
+		}
+	}
 }
 /* img-box */
 .img-box {

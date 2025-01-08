@@ -62,6 +62,19 @@ $flex-map: (
     justify-content: _get-flex-value($jc);
 }
 
+@mixin flexRow() {
+    display:flex;
+    flex-direction:row;
+}
+@mixin flexColum() {
+    display:flex;
+    flex-direction:column;
+}
+@mixin ico(){
+    display:inline-block;
+    font-size:0;
+    background:no-repeat center / cover;
+}
 
 //grid-box
 @mixin gridBox($num:3) {
@@ -178,7 +191,7 @@ $flex-map: (
 
 // transition
 @mixin hoverTrans () {
-    transition: all .2s linear;
+    transition: all .2s ease;
 }
 
 // box-shadow

@@ -41,25 +41,6 @@
 			}
 		}
 	}
-	.con__tit-box {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-bottom: 16px;
-		.tit-head {
-			display: flex;
-			align-items: center;
-			justify-content: flex-start;
-			font-size: 18px;
-			font-weight: 700;
-			color: var(--dt-gray16);
-		}
-		.tit-tail {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-		}
-	}
 }
 
 .cont__wrap-message {
@@ -82,7 +63,6 @@
 	gap: 48px;
 	.cont__wrap-freqMenu {
 		.con__tit-box {
-			justify-content: flex-start;
 			gap: 4px;
 			.img-box {
 				width: 20px;

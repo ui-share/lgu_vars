@@ -1365,7 +1365,6 @@ button {
   left: var(--bulletList-bullet-translateX);
 }
 
-/* card 기본 */
 /* Layout Common */
 .page-wrapper.is-scrolled .header {
   background-color: var(--dt-white);
@@ -1391,6 +1390,31 @@ button {
 
 .cont__wrap {
   padding: 0 20px;
+}
+
+.con__tit-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.con__tit-box .tit-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.con__tit-box .tit-head .ico {
+  display: inline-block;
+  font-size: 0;
+  background: no-repeat center/cover;
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon/ic-chips-flag.png");
+}
+.con__tit-box .tit-head .txt-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray16);
 }
 
 /* img-box */
@@ -1420,33 +1444,12 @@ button {
 }
 
 .counsel .cont__wrap {
-  padding: 48px 20px;
-}
-.counsel .cont__wrap .con__tit-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.counsel .cont__wrap .con__tit-box .tit-head {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--dt-gray16);
-}
-.counsel .cont__wrap .con__tit-box .tit-tail {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-.counsel .cont__wrap .card {
-  background-color: var(--dt-gray02);
-  box-shadow: none;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 .counsel .cont__wrap.cont__wrap-counsel {
-  padding: 32px 20px 48px;
+  padding-top: 32px;
+  padding-bottom: 48px;
   background-color: var(--dt-gray05);
 }
 .counsel .cont__wrap.cont__wrap-counsel .con__tit-box {
@@ -1454,6 +1457,14 @@ button {
   justify-content: center;
   text-align: center;
   gap: 4px;
+}
+.counsel .cont__wrap.cont__wrap-counsel .con__tit-box .txt-sub {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  line-height: normal;
+}
+.counsel .cont__wrap.cont__wrap-counsel .con__tit-box .tit-head {
+  justify-content: center;
 }
 .counsel .cont__wrap.cont__wrap-counsel .card {
   background-color: var(--dt-white);

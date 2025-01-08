@@ -9,6 +9,8 @@
         .prototype-title {font-size:22px;font-weight:bold;padding:24px 20px 10px;}
         .prototype-component-wrap {padding:0 20px 20px;}
         .prototype-component-wrap > .container {padding-top:0;}
+        .prototype-component-wrap .desc-prototype {margin-bottom:10px;color:#4B506A;font-size:14px;}
+        .prototype-component-wrap .desc-prototype + .con__tit-box {max-width:360px;}
         .chips-wrap {display: flex;flex-direction: column;row-gap:16px;}
         .chips-wrap .chips, .chips-wrap .badge {width:fit-content}
 		ul {margin: 20px 0;} 
@@ -19,52 +21,79 @@
     <div class="lg-prototype">
         <div class="lg-component-container">
             <div class="lg-component">
+                <div class="prototype-title">박스 타이틀(레이블)</div>
+                <div class="prototype-component-wrap">
+                    <p class="desc-prototype">default</p>
+                    <div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">타이틀타이틀</span>
+						</h6>
+					</div>
+                    <p class="desc-prototype">tit-head에 ico 있는 경우</p>
+                    <div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="ico"></span>
+							<span class="txt-title">많이 찾는 문의</span>
+						</h6>
+					</div>
+                    <p class="desc-prototype">tit-tail 있는 경우</p>
+                    <div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">박스타이틀영역</span>
+						</h6>
+						<div class="tit-tail">
+							<div class="flag flag-line primary">
+								<span class="txt">배지 버튼 등</span>
+							</div>
+						</div>
+					</div>
+                </div>
+
                 <div class="prototype-title">하단 counsel</div>
                 <div class="prototype-component-wrap">
                     <div class="container">
                         <div class="section__cont counsel">
                             <div class="cont__wrap">
                                 <div class="con__tit-box">
-                                    <div class="tit-head">
-                                        아래 메뉴도 추천해요
-                                    </div>
-                                    <div class="tit-tail hidden"></div>
+                                    <h6 class="tit-head">
+                                        <span class="txt-title">아래 메뉴도 추천해요</span>
+                                    </h6>
                                 </div>
                                 <div class="card-group flex-column">
-                                    <div class="card" role="button" tabindex="0">
+                                    <div class="card solid" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <span class="tit">청구 요금</span>
                                                 <span class="txt">이번달과 지난달<br>요금 조회</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card" role="button" tabindex="0">
+                                    <div class="card solid" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <h3 class="tit">요금 바로납부</h3>
                                                 <p class="txt">청구요금 미리납부</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card" role="button" tabindex="0">
+                                    <div class="card solid" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-home-billing.png" alt="청구요금">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <h3 class="tit">요금 바로납부</h3>
                                                 <p class="txt">청구요금 미리납부</p>
                                             </div>
@@ -72,50 +101,50 @@
                                     </div>
                                 </div>
                             </div>
-                
+            
                             <div class="cont__wrap cont__wrap-counsel">
                                 <div class="con__tit-box">
-                                    <span class="txt-head">문의사항을 찾기 어려우신가요</span>
-                                    <div class="tit-head">
-                                        상담사와 이야기 해보세요
-                                    </div>
+                                    <span class="txt-sub">문의사항을 찾기 어려우신가요</span>
+                                    <h6 class="tit-head">
+                                        <span class="txt-title">상담사와 이야기 해보세요</span>
+                                    </h6>
                                     <div class="tit-tail hidden"></div>
                                 </div>
                                 <div class="card-group threeby">
-                                    <div class="card detail" role="button" tabindex="0">
+                                    <div class="card sub detail" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-card-chatbot.png" alt="챗봇상담">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <span class="tit">챗봇 상담</span>
                                                 <span class="txt">대기없이 바로</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card detail" role="button" tabindex="0">
+                                    <div class="card sub detail" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-card-ars-ai.png" alt="AI상담">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <span class="tit">AI 상담사</span>
                                                 <span class="txt">언제든지 빠른</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card detail" role="button" tabindex="0">
+                                    <div class="card sub detail" role="button" tabindex="0">
                                         <div class="card-body">
-                                            <div class="item util">
+                                            <div class="card__util">
                                                 <span class="img-box">
                                                     <img src="../../static/images/icon/ic-card-calls.png" alt="챗봇상담">
                                                 </span>
                                             </div>
-                                            <div class="item text">
+                                            <div class="card__text">
                                                 <span class="tit">전화 상담</span>
                                                 <span class="txt">상세하고 친절한</span>
                                             </div>
@@ -127,7 +156,7 @@
                                         </div> 
                                     </div>
                                 </div>
-                
+            
                                 <div class="btn-group conversion">
                                     <button class="btn btn-sol btn-lg" type="button">
                                         <span class="txt">음성 ARS로 전환</span>
@@ -135,8 +164,6 @@
                                     <span class="divider"></span>
                                     <button class="btn btn-sol btn-lg" type="button">
                                         <span class="txt">홈 고객센터 문의</span>
-                
-                                        
                                     </button>
                                 </div>
                             </div>
