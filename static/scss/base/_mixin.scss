@@ -17,7 +17,7 @@
 
 
 //font-style
-// @include fontStyle($fc, $lh);
+// @include fw-7($fc: 16px);
 // font-weight
 @mixin fw-7($fs: 16px) {
     font-size: $fs;
