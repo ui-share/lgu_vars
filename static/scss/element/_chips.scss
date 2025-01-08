@@ -156,6 +156,15 @@
 		}
 	}
 
+	//chips: neutral
+	&.neutral { 
+		padding:10px 12px;
+		@include fw-6(12px);
+		color:var(--dt-gray12);
+		border:1px solid var(--dt-gray09);
+		border-radius:4px;
+	}
+
 	// chips: 상세 - refresh (새로고침 박스)
 	&.chips-refresh {
 		min-height: 36px;

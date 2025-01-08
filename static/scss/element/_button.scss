@@ -2,62 +2,12 @@
 
 /* util button */
 .btn {
-    &.btn-top {
+    &.btn-top { // 탑버튼
         width: 48px;
         height: 48px;
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 50%;
         @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
-    }
-    &.btn-center {
-        @include flexBox();
-        column-gap: 4px;
-        .txt {
-            @include fw-6();
-            color: var(--dt-white);
-        }
-        &.btn-scroll {
-            padding: 12.5px 22px;
-            background-color: rgba(0, 0, 0, 0.74);
-            border-radius: 100px;
-            @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
-        }
-        &.btn-icBox {
-            padding: 14px 0;
-            column-gap: 0;
-            background-color: var(--dt-gray06);
-            border-radius: 4px;
-            width: 100%;
-            .txt {
-                @include fz(14px);
-                color: var(--dt-gray11);
-            }
-            .img-box {
-                img {
-                    transition: all .2s linear;
-                }
-            }
-            &:active {
-                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-                .img-box {                
-                    img {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-            &.is-selected {
-                .img-box {
-                    transition: all .2s linear;
-                    img {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-        }
-        .img-box {
-            @include flexBox();
-            flex-direction: column;
-        }
     }
     &.btn-between {
         @include flexBox(between, center);
@@ -159,11 +109,17 @@
         background-color:var(--dt-gray03);
         border: 1px solid var(--dt-gray03);
         text-align: center;
+        vertical-align:middle;
         border-radius: 4px;
         .txt {
             color: var(--dt-gray11);
             @include fw-6($fs: 16px);
             letter-spacing: -0.5px;
+        }
+        .img-box{
+            &.ico16 {
+                img {margin-top:2px;}
+            }
         }
         &.is-disabled {
             opacity: 0.6;

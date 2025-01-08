@@ -80,57 +80,6 @@ input, textarea, select, button {
   border-radius: 50%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 }
-.btn.btn-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
-}
-.btn.btn-center .txt {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--dt-white);
-}
-.btn.btn-center.btn-scroll {
-  padding: 12.5px 22px;
-  background-color: rgba(0, 0, 0, 0.74);
-  border-radius: 100px;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
-}
-.btn.btn-center.btn-icBox {
-  padding: 14px 0;
-  -moz-column-gap: 0;
-       column-gap: 0;
-  background-color: var(--dt-gray06);
-  border-radius: 4px;
-  width: 100%;
-}
-.btn.btn-center.btn-icBox .txt {
-  font-size: 14px;
-  color: var(--dt-gray11);
-}
-.btn.btn-center.btn-icBox .img-box img {
-  transition: all 0.2s linear;
-}
-.btn.btn-center.btn-icBox:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
-.btn.btn-center.btn-icBox:active .img-box img {
-  transform: rotate(180deg);
-}
-.btn.btn-center.btn-icBox.is-selected .img-box {
-  transition: all 0.2s linear;
-}
-.btn.btn-center.btn-icBox.is-selected .img-box img {
-  transform: rotate(180deg);
-}
-.btn.btn-center .img-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 .btn.btn-between {
   display: flex;
   align-items: center;
@@ -225,6 +174,7 @@ input, textarea, select, button {
   background-color: var(--dt-gray03);
   border: 1px solid var(--dt-gray03);
   text-align: center;
+  vertical-align: middle;
   border-radius: 4px;
   /* sizing */
 }
@@ -233,6 +183,9 @@ input, textarea, select, button {
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.5px;
+}
+.btn-group .btn .img-box.ico16 img {
+  margin-top: 2px;
 }
 .btn-group .btn.is-disabled {
   opacity: 0.6;
@@ -449,6 +402,9 @@ input, textarea, select, button {
   flex-direction: row;
   padding: 23px 16px;
   gap: 12px;
+}
+.horizon .con__tit-box {
+  width: 100%;
 }
 .horizon .img-box {
   width: 32px;
@@ -848,6 +804,14 @@ input, textarea, select, button {
 }
 .chips.chips-bank.is-selected {
   background-color: var(--dt-gray07);
+}
+.chips.neutral {
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dt-gray12);
+  border: 1px solid var(--dt-gray09);
+  border-radius: 4px;
 }
 .chips.chips-refresh {
   min-height: 36px;
@@ -1393,10 +1357,18 @@ button {
 .img-box {
   display: inline-block;
 }
-
+.img-box.ico16 {
+  width: 16px;
+  height: 16px;
+}
+.img-box.ico20 {
+  width: 20px;
+  height: 20px;
+}
 .img-box img {
   width: 100%;
   height: 100%;
+  vertical-align: top;
 }
 
 /* tooltip 기본 */
