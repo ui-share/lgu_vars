@@ -1,130 +1,5 @@
 @import '../base/mixin';
 
-/* single button */
-.btn-group {
-    .btn {
-        width: 100%;
-        border-radius: 4px;
-        text-align: center;
-        @include btn-sol();
-        font-weight: var(--dt-fw600);
-        .txt {
-            color: var(--dt-white);
-        }
-        &.btn-sol {
-            color: var(--dt-white);
-            &.btn-lg {
-                &.btn-sec {
-                    background-color: var(--dt-gray13);
-                    border: 1px solid var(--dt-gray13);
-                }
-                &.btn-neu {
-                    background-color: var(--dt-gray03);
-                    border: 1px solid var(--dt-gray03); 
-                    .txt {
-                        color: var(--dt-gray10);
-                    }
-                }
-            }
-            /* medium button */
-            &.btn-md {
-                @include btn-sol(9px, 9px);
-                .txt {
-                    font-size: var(--dt-fz12);
-                }
-                &.btn-sec {
-                    background-color: var(--dt-gray13);
-                    border: 1px solid var(--dt-gray13);
-                }
-                &.btn-neu {
-                    background-color: var(--dt-gray03);
-                    border: 1px solid var(--dt-gray03);
-                    .txt {
-                        color: var(--dt-gray10);
-                    } 
-                }
-                width: 100%;
-            }
-            &:active {
-                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-            }
-            &.is-disabled {
-                box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-            }
-        } 
-        &.btn-line {
-            &.btn-lg {
-                @include btn-line();
-                .txt {
-                    color: var(--dt-primary);
-                }
-                &.btn-sec {
-                    background-color: transparent;
-                    border: 1px solid var(--dt-gray13);
-                    .txt {
-                        color: var(--dt-gray13);
-                    }
-                }
-                &.btn-neu {
-                    background-color: transparent;
-                    border: 1px solid var(--dt-gray17); 
-                    .txt {
-                        color: var(--dt-gray12);
-                    }
-                }
-                width: 100%;
-            } 
-            &.btn-md {
-                @include btn-line(9px, 9px);
-                .txt {
-                    font-size: var(--dt-fz12);
-                    color: var(--dt-primary);
-                }
-                &.btn-sec {
-                    background-color: transparent;
-                    border: 1px solid var(--dt-gray13);
-                    .txt {
-                        color: var(--dt-gray13);
-                    }
-                }
-                &.btn-neu {
-                    background-color: transparent;
-                    border: 1px solid var(--dt-gray17);
-                    .txt {
-                        color: var(--dt-gray11);
-                    } 
-                }
-            }
-            &:active {
-                box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-            }
-            &.is-disabled {
-                box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-            }
-        }
-    }
-
-}
-
-/* multi button */
-.btn-group {
-    &.flex-row {
-        @include flexBox(between, center);
-        gap: 8px;
-        .btn {
-            flex: 1;
-        }
-    }
-    &.flex-column {
-        @include flexBox();
-        flex-direction: column;
-        gap: 8px;
-        .btn {
-            width: 100%;
-        }
-    }
-}
-
 /* util button */
 .btn {
     &.btn-top {
@@ -184,38 +59,6 @@
             flex-direction: column;
         }
     }
-    // &.btn-icBox {
-    //     @include flexBox();
-    //     padding: 14px 0;
-    //     background-color: var(--dt-gray06);
-    //     border-radius: 4px;
-    //     width: 100%;
-    //     .txt {
-    //         @include fz(14px);
-    //         color: var(--dt-gray11);
-    //     }
-    //     .img-box {
-    //         img {
-    //             transition: all .2s linear;
-    //         }
-    //     }
-    //     &:active {
-    //         box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-    //         .img-box {                
-    //             img {
-    //                 transform: rotate(180deg);
-    //             }
-    //         }
-    //     }
-    //     &.is-selected {
-    //         .img-box {
-    //             transition: all .2s linear;
-    //             img {
-    //                 transform: rotate(180deg);
-    //             }
-    //         }
-    //     }
-    // }
     &.btn-between {
         @include flexBox(between, center);
         width: 100%;
@@ -304,6 +147,95 @@
                     } 
                 }
             }
+        }
+    }
+}
+
+/* single button */
+.btn-group {
+    .btn {
+        width: 100%;
+        padding:17px 4px 16px;
+        background-color:var(--dt-gray03);
+        border: 1px solid var(--dt-gray03);
+        text-align: center;
+        border-radius: 4px;
+        .txt {
+            color: var(--dt-gray11);
+            @include fw-6($fs: 16px);
+            letter-spacing: -0.5px;
+        }
+        &.is-disabled {
+            opacity: 0.6;
+        }
+        &:active { // pressed 인터렉션
+            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+        }
+
+        &.btn-prim { // 버튼 1레벨
+            background-color: var(--dt-primary);
+            border: 1px solid var(--dt-primary);
+        }
+        &.btn-sec { // 버튼 2레벨
+            background-color: var(--dt-gray13);
+            border: 1px solid var(--dt-gray13);
+        }
+        &.btn-prim, &.btn-sec {
+            .txt {color:var(--dt-white);}
+        }
+        &.line {
+            padding:16px 4px 15px;
+            background-color:transparent;
+            border: 1px solid var(--dt-gray17);
+            &.btn-prim {
+                border: 1px solid var(--dt-primary);
+                .txt {color:var(--dt-primary);}
+            }
+            &.btn-sec {
+                border: 1px solid var(--dt-gray13);
+                .txt {color:var(--dt-gray13);}
+            }
+        }
+
+        /* sizing */
+        &.btn-md { // 중간높이
+            width:100%;
+            padding-top:10px;
+            padding-bottom:10px;
+            .txt {
+                letter-spacing:normal;
+                font-size:12px;
+            }
+        }
+    }
+
+}
+
+/* multi button */
+.btn-group {
+    &.flex-row {
+        @include flexRow();
+        justify-content: space-between;align-items:center;
+        gap: 8px;
+        .btn {
+            flex: 1;
+        }
+        &.is-confirm {// 버튼2개 + 확인,취소 영역의 경우 우측버튼(마지막버튼) 언제나 primary full bg
+            .btn {
+                &:last-of-type {
+                    background-color: var(--dt-primary);
+                    border: 1px solid var(--dt-primary);
+                    .txt {color:var(--dt-white);}
+                }
+            }
+        }
+    }
+    &.flex-column {
+        @include flexColum();
+        justify-content: center;align-items:flex-start;
+        row-gap: 8px;
+        .btn {
+            width: 100%;
         }
     }
 }
