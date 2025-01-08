@@ -863,6 +863,9 @@ input, textarea, select, button {
   background-image: url(../images/icon/ic-chips-arrow-sm.png);
   background-size: 16px 16px;
 }
+.chips.chips-menu.chips-more.is-selected {
+  background-color: var(--dt-gray03);
+}
 .chips.chips-menu.chips-more.is-selected .arrow {
   transform: rotate(-180deg);
 }
