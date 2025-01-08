@@ -152,8 +152,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">타이틀</h3>
-						<p class="txt">설명문구를 입력해주세요</p>
+						<span class="tit">타이틀</span>
+						<span class="txt">설명문구를 입력해주세요</span>
 					</div>
 				</div>
 				<div class="card-footer">
@@ -174,8 +174,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">타이틀</h3>
-						<p class="txt">대기 N시간 이상</p>
+						<span class="tit">타이틀</span>
+						<span class="txt">대기 N시간 이상</span>
 					</div>
 				</div>
 			</div>
@@ -189,8 +189,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">챗봇에 문의</h3>
-						<p class="txt">24시간 대기없이 바로 문의</p>
+						<span class="tit">챗봇에 문의</span>
+						<span class="txt">24시간 대기없이 바로 문의</span>
 					</div>
 				</div>
 				<div class="card-footer">
@@ -211,8 +211,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">홈 고객센터 문의</h3>
-						<p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
+						<span class="tit">홈 고객센터 문의</span>
+						<span class="txt">IPTVㆍ인터넷ㆍU+스마트홈</span>
 					</div>
 				</div>
 				<div class="card-footer">
@@ -233,8 +233,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">은행 계좌번호</h3>
-						<p class="txt">이름</p>
+						<span class="tit">은행 계좌번호</span>
+						<span class="txt">이름</span>
 					</div>
 					<button type="button" class="btn end">종료</button>
 				</div>
@@ -259,8 +259,8 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">가입 매장 상담사 연결</h3>
-						<p class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</p>
+						<span class="tit">가입 매장 상담사 연결</span>
+						<span class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</span>
 					</div>
 					<button type="button" class="btn end">종료</button>
 				</div>
@@ -270,11 +270,11 @@
 			<div class="card solid bill">
 				<div class="card-body">
 					<div class="item util">
-						<h3 class="tit">타이틀</h3>
+						<span class="tit">타이틀</span>
 						<div class="flag flag-line primary">
 							<span class="txt">텍스트</span>
 						</div>
-						<p class="pay-txt">0원</p> 
+						<span class="pay-txt">0원</span> 
 					</div>
 					<div class="item text">
 						<span class="txt">설명문구</span>
@@ -304,7 +304,7 @@
 						</span>
 					</div>
 					<div class="item text">
-						<p class="txt">사용하신 로밍 내역이 없어요</p>
+						<span class="txt">사용하신 로밍 내역이 없어요</span>
 					</div>
 				</div>
 			</div>
@@ -317,7 +317,7 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</h3>
+						<span class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</span>
 					</div>
 				</div>
 			</div>
@@ -330,45 +330,49 @@
 						</span>
 					</div>
 					<div class="item text">
-						<h3 class="tit">검색결과가 없어요</h3>
-						<p class="txt">도로명 주소로 다시 검색해 주세요</p>
+						<span class="tit">검색결과가 없어요</span>
+						<span class="txt">도로명 주소로 다시 검색해 주세요</span>
 					</div>
 				</div>
 			</div>
 
-			<p>[chips card]</p>
-			<div class="card solid">
-				<div class="flag flag-line primary">
-					<span class="txt">무료</span>
+			<p>card::explain</p>
+			<div class="card solid explain">
+				<div class="card-header">
+					<div class="flag flag-line primary">
+						<span class="txt">무료</span>
+					</div>
 				</div>
 				<div class="card-body">
 					<div class="item text">
-						<h3 class="tit">타이틀</h3>
-						<p class="txt">설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다.</p>
+						<span class="tit">타이틀</span>
+						<span class="txt">설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다. 설명 문구 입니다.</span>
 					</div>
 				</div>
 			</div>
 
-			<p>[alert card]</p>
+			<p>card::alert</p>
 			<div class="card solid alert">
 				<div class="card-header">
-					<span class="img-box">
-						<img src="../../static/images/icon/ic-card-message.png" alt="도착알림문자">
-					</span>
+					<div class="item util">
+						<span class="img-box">
+							<img src="../../static/images/icon/ic-card-message.png" alt="도착알림문자">
+						</span>
+					</div>
 					<div class="item text">
-						<h3 class="tit">도착 알림 문자</h3>
+						<span class="tit">도착 알림 문자</span>
 					</div>
 				</div>
 				<div class="card-body">
 					<div class="card message">
 						<div class="card-header">
-							<h3 class="tit">LG U+</h3>
-							<p class="time">오후 2:56</p>
+							<span class="tit">LG U+</span>
+							<span class="time">오후 2:56</span>
 						</div>
 						<div class="card-body">
 							<div class="item text">
-								<h3 class="tel">02-3416-7010</h3>
-								<p class="msg">[LG U+](휴대폰번호) 고객님이(한국기준날짜,시간,도착국가)에 도착하였습니다.</p>
+								<span class="tel">02-3416-7010</span>
+								<span class="msg">[LG U+](휴대폰번호) 고객님이(한국기준날짜,시간,도착국가)에 도착하였습니다.</span>
 							</div>
 						</div>
 					</div>

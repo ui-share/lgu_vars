@@ -84,12 +84,6 @@
 			align-items: center;
 		}
 	}
-	> .flag {
-		padding: 4px 10px;
-		.txt {
-			font-size: 12px;
-		}
-	}
 	&[role=button] {
 		cursor: pointer;
 		&:active {
@@ -117,7 +111,7 @@
 }
 
 .solid {
-	background-color: var(--dt-white);
+	background-color: var(--dt-gray02);
 	box-shadow: none;
 }
 
@@ -367,12 +361,22 @@
 		height: 40px;
 	}
 	.item {
+		align-items: center;
 		&.text {
 			gap: 4px;
 			text-align: center;
 		}
 		.tit {
 			font-weight: 500;
+		}
+	}
+}
+
+.explain {
+	.flag {
+		padding: 2px 8px;
+		.txt {
+			@include fw-5(12px);
 		}
 	}
 }
@@ -402,19 +406,21 @@
 			color: var(--dt-gray10);
 			margin-left: auto;
 		}
-		.card__text {
-			gap: 2px;
-			.tel {
-				@include fw-6(11px);
-				color: var(--dt-gray11);
-			}
-			.msg {
-				width: 100%;
-				font-size: 11px;
-				color: var(--dt-gray11);
-				overflow: hidden;
-				white-space: nowrap;
-				text-overflow: ellipsis;
+		.item {
+			&.text {
+				gap: 2px;
+				.tel {
+					@include fw-6(11px);
+					color: var(--dt-gray11);
+				}
+				.msg {
+					width: 100%;
+					font-size: 11px;
+					color: var(--dt-gray11);
+					overflow: hidden;
+					white-space: nowrap;
+					text-overflow: ellipsis;
+				}
 			}
 		}
 	}
