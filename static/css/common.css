@@ -400,25 +400,25 @@ input, textarea, select, button {
   min-width: 28px;
   height: 28px;
 }
+.card .img-box.no-icon img {
+  display: none;
+}
 .card .tit {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  align-items: center;
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--dt-gray16);
 }
-.card .tit .icon {
+.card .tit.icon::after {
   display: inline-block;
+  content: "";
   width: 20px;
   min-width: 20px;
   height: 20px;
+  background: no-repeat center/cover;
   background-image: url(../images/icon/ic-card-headphone.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  margin-left: 4px;
+  margin-bottom: -4px;
 }
 .card .txt {
   font-size: 14px;

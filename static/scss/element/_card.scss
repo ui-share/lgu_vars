@@ -47,24 +47,28 @@
 		width: 28px;
 		min-width: 28px;
 		height: 28px;
+		&.no-icon {
+			img {
+				display: none;
+			}
+		}
 	}
 	.tit {
-		display: flex;
-		flex-direction: row;
-		gap: 4px;
-		align-items: center;
 		@include fw-7();
 		line-height: 1.5;
 		color: var(--dt-gray16);
-		.icon {
-			display: inline-block;
-			width: 20px;
-			min-width: 20px;
-			height: 20px;
-			background-image: url(../images/icon/ic-card-headphone.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center center;
+		&.icon {
+			&::after {
+				display: inline-block;
+				content: "";
+				width: 20px;
+				min-width: 20px;
+				height: 20px;
+				background: no-repeat center / cover;
+				background-image: url(../images/icon/ic-card-headphone.png);
+				margin-left: 4px;
+				margin-bottom: -4px;
+			}
 		}
 	}
 	.txt {
