@@ -1,108 +1,125 @@
 @import '../base/mixin';
-
-/* util button */
-.btn {
-    &.btn-top { // 탑버튼
-        width: 48px;
-        height: 48px;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 50%;
-        @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+/* single button util */
+.btn-top { // 탑버튼
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+}
+.btn-scroll {
+    @include flexBox(center, center);
+    column-gap:4px;
+    min-width: 184px;
+    padding:13px 4px 12px;
+    background-color: rgba(0, 0, 0, 0.74);
+    border-radius:100px;
+    @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+    .txt {
+        @include fw-6(16px);
+        color:var(--dt-white);
     }
-    &.btn-between {
-        @include flexBox(between, center);
-        width: 100%;
-        border-radius: 4px;
+}
+.btn-between {
+    @include flexBox(between, center);
+    width: 100%;
+    border-radius: 4px;
+    .txt {
+        @include fw-6(14px);
+        color: var(--dt-gray11);
+    }
+    .txt-wrap {
+        @include flexBox(center, center);
+        column-gap:6px;
         .txt {
-            @include fw-6(14px);
-            color: var(--dt-gray11);
-        }
-        &:active {
-            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-        }
-        &.is-disabled {
-            box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.60);
-        }
-        &.bg-withdraw {
-            column-gap: 6px;
-            background-color: var(--dt-white);
-            padding: 8px 10px;
-            color: var(--dt-gray10);
-            .txt {
-                font-weight: var(--dt-fw500);
+            &, > span {
+                color: var(--dt-gray11);
+                font-weight:var(--dt-fw500);;
             }
         }
-        &.bg-bank {
-            column-gap: 8px;
-            background-color: var(--dt-gray07);
-            padding: 8px;
-            color: var(--dt-gray10);
-
-        }
-        &.btn-payment {
-            .txt-box {
-                display: none;
-            }
-            &.is-selected {
-                .txt-box {
-                    display: block;
-                    @include flexBox(end, center);
-                    .txt {
-                        @include fw-5(14px);
-                        color: var(--dt-primary);
-                    } 
-                }
-            }
-        }
-
     }
-    &.btn-start {
-        @include flexBox(start, center);
-        width: 100%;
-        border-radius: 4px;
-        &.btn-data {
-            @include border(var(--dt-gray17));
-            background-color: var(--dt-white);
-            .txt-box {
-                // @include flexBox(start, center);
+    &:active {
+        box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+    }
+    &.is-disabled {
+        opacity: 0.6;
+    }
+    &.bg-withdraw {
+        padding: 8px 10px;
+        background-color: var(--dt-white);
+        border:1px solid var(--dt-gray07);
+    }
+    &.bg-bank {
+        padding: 8px;
+        background-color: var(--dt-gray07);
+        .txt-wrap {
+            .img-box {width:24px;height:24px;}
+            .txt {margin-left:2px;}
+        }
+    }
+    &.btn-payment {
+        padding:16px 20px;
+        background-color:var(--dt-gray02);
+        .txt {
+            @include fw-6(16px);
+            color:var(--dt-gray12);
+        }
+        .txt-wrap {
+            visibility:hidden;
+        }
+        &.is-selected {
+            .txt-wrap {
+                visibility:visible;
                 .txt {
-                    &:nth-child(1) {
-                        font-weight: var(--dt-fw600);
-                        color: var(--dt-gray16);
-                        &::after {
-                            display: inline-block;
-                            content: '';
-                            margin: 0 12px;
-                            width: 1px;
-                            height: 10px;
-                            background-color: var(--dt-gray09);
-                        }
+                    @include fw-5(14px);
+                    color: var(--dt-primary);
+                } 
+            }
+        }
+    }
+    &.btn-remain-data {
+        padding:16px 20px;
+        background-color: var(--dt-white);
+        @include border(var(--dt-gray17));
+        .txt-wrap {
+            .txt {
+                &:nth-of-type(1) {
+                    @include fw-6();
+                    color: var(--dt-gray16);
+                    &::after {
+                        display: inline-block;
+                        content: '';
+                        margin: 0 12px;
+                        width: 1px;
+                        height: 10px;
+                        background-color: var(--dt-gray09);
                     }
-                    &:nth-child(2) {
-                        @include fw-5(14px);
-                        color: var(--dt-gray11);
-                    }
+                }
+                &:nth-of-type(2) {
+                    color: var(--dt-gray11);
                 }
             }
-            &.is-selected {
-                border: 2px solid var(--dt-primary);
-                .txt-box {
-                    .txt {
-                        color: var(--dt-primary);
-                        &:nth-child(1) {
-                            &::after {
-                                background-color: var(--dt-primary);
-                            }
+        }
+        &.is-selected {
+            border: 2px solid var(--dt-primary);
+            .txt-wrap {
+                .txt {
+                    color: var(--dt-primary);
+                    &:nth-of-type(1) {
+                        &::after {
+                            background-color: var(--dt-primary);
                         }
-                    } 
-                }
+                    }
+                } 
             }
         }
     }
 }
 
-/* single button */
+
+/* btn-group button */
 .btn-group {
+    //default
     .btn {
         width: 100%;
         padding:17px 4px 16px;
@@ -116,18 +133,15 @@
             @include fw-6($fs: 16px);
             letter-spacing: -0.5px;
         }
-        .img-box{
-            &.ico16 {
-                img {margin-top:2px;}
-            }
-        }
-        &.is-disabled {
-            opacity: 0.6;
+        .img-box.ht16{
+            img {margin-top: 2px;}
         }
         &:active { // pressed 인터렉션
             box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
         }
-
+        &.is-disabled {
+            opacity: 0.6;
+        }
         &.btn-prim { // 버튼 1레벨
             background-color: var(--dt-primary);
             border: 1px solid var(--dt-primary);
@@ -165,10 +179,7 @@
         }
     }
 
-}
-
-/* multi button */
-.btn-group {
+    // multi
     &.flex-row {
         @include flexRow();
         justify-content: space-between;align-items:center;

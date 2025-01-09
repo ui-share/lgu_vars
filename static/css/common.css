@@ -72,77 +72,107 @@ input, textarea, select, button {
   vertical-align: middle;
 }
 
-/* util button */
-.btn.btn-top {
+/* single button util */
+.btn-top {
   width: 48px;
   height: 48px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 }
-.btn.btn-between {
+
+.btn-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  min-width: 184px;
+  padding: 13px 4px 12px;
+  background-color: rgba(0, 0, 0, 0.74);
+  border-radius: 100px;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-scroll .txt {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-white);
+}
+
+.btn-between {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   border-radius: 4px;
 }
-.btn.btn-between .txt {
+.btn-between .txt {
   font-size: 14px;
   font-weight: 600;
   color: var(--dt-gray11);
 }
-.btn.btn-between:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
-.btn.btn-between.is-disabled {
-  box-shadow: inset 0px 0px 0px 100px rgba(255, 255, 255, 0.6);
-}
-.btn.btn-between.bg-withdraw {
-  column-gap: 6px;
-  background-color: var(--dt-white);
-  padding: 8px 10px;
-  color: var(--dt-gray10);
-}
-.btn.btn-between.bg-withdraw .txt {
-  font-weight: var(--dt-fw500);
-}
-.btn.btn-between.bg-bank {
-  column-gap: 8px;
-  background-color: var(--dt-gray07);
-  padding: 8px;
-  color: var(--dt-gray10);
-}
-.btn.btn-between.btn-payment .txt-box {
-  display: none;
-}
-.btn.btn-between.btn-payment.is-selected .txt-box {
-  display: block;
+.btn-between .txt-wrap {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+  column-gap: 6px;
 }
-.btn.btn-between.btn-payment.is-selected .txt-box .txt {
+.btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
+  color: var(--dt-gray11);
+  font-weight: var(--dt-fw500);
+}
+.btn-between:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.btn-between.is-disabled {
+  opacity: 0.6;
+}
+.btn-between.bg-withdraw {
+  padding: 8px 10px;
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray07);
+}
+.btn-between.bg-bank {
+  padding: 8px;
+  background-color: var(--dt-gray07);
+}
+.btn-between.bg-bank .txt-wrap .img-box {
+  width: 24px;
+  height: 24px;
+}
+.btn-between.bg-bank .txt-wrap .txt {
+  margin-left: 2px;
+}
+.btn-between.btn-payment {
+  padding: 16px 20px;
+  background-color: var(--dt-gray02);
+}
+.btn-between.btn-payment .txt {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray12);
+}
+.btn-between.btn-payment .txt-wrap {
+  visibility: hidden;
+}
+.btn-between.btn-payment.is-selected .txt-wrap {
+  visibility: visible;
+}
+.btn-between.btn-payment.is-selected .txt-wrap .txt {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-primary);
 }
-.btn.btn-start {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-  border-radius: 4px;
-}
-.btn.btn-start.btn-data {
-  border: 1px solid var(--dt-gray17);
+.btn-between.btn-remain-data {
+  padding: 16px 20px;
   background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray17);
 }
-.btn.btn-start.btn-data .txt-box .txt:nth-child(1) {
-  font-weight: var(--dt-fw600);
+.btn-between.btn-remain-data .txt-wrap .txt:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: 600;
   color: var(--dt-gray16);
 }
-.btn.btn-start.btn-data .txt-box .txt:nth-child(1)::after {
+.btn-between.btn-remain-data .txt-wrap .txt:nth-of-type(1)::after {
   display: inline-block;
   content: "";
   margin: 0 12px;
@@ -150,22 +180,20 @@ input, textarea, select, button {
   height: 10px;
   background-color: var(--dt-gray09);
 }
-.btn.btn-start.btn-data .txt-box .txt:nth-child(2) {
-  font-size: 14px;
-  font-weight: 500;
+.btn-between.btn-remain-data .txt-wrap .txt:nth-of-type(2) {
   color: var(--dt-gray11);
 }
-.btn.btn-start.btn-data.is-selected {
+.btn-between.btn-remain-data.is-selected {
   border: 2px solid var(--dt-primary);
 }
-.btn.btn-start.btn-data.is-selected .txt-box .txt {
+.btn-between.btn-remain-data.is-selected .txt-wrap .txt {
   color: var(--dt-primary);
 }
-.btn.btn-start.btn-data.is-selected .txt-box .txt:nth-child(1)::after {
+.btn-between.btn-remain-data.is-selected .txt-wrap .txt:nth-of-type(1)::after {
   background-color: var(--dt-primary);
 }
 
-/* single button */
+/* btn-group button */
 .btn-group .btn {
   width: 100%;
   padding: 17px 4px 16px;
@@ -182,14 +210,14 @@ input, textarea, select, button {
   font-weight: 600;
   letter-spacing: -0.5px;
 }
-.btn-group .btn .img-box.ico16 img {
+.btn-group .btn .img-box.ht16 img {
   margin-top: 2px;
-}
-.btn-group .btn.is-disabled {
-  opacity: 0.6;
 }
 .btn-group .btn:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.btn-group .btn.is-disabled {
+  opacity: 0.6;
 }
 .btn-group .btn.btn-prim {
   background-color: var(--dt-primary);
@@ -228,8 +256,6 @@ input, textarea, select, button {
   letter-spacing: normal;
   font-size: 12px;
 }
-
-/* multi button */
 .btn-group.flex-row {
   display: flex;
   flex-direction: row;
@@ -343,6 +369,11 @@ input, textarea, select, button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card .card-footer .img-box {
+  width: unset;
+  min-width: unset;
+  height: unset;
 }
 .card[role=button] {
   cursor: pointer;
