@@ -43,26 +43,37 @@
     }
     .header__btn {
         @include flexBox(end, center);
+        column-gap:6px;
         margin-left: auto;
-        .btn-callEnd {
-			display: flex;
+        .btn {
+            display: flex;
             border-radius: 4px;
+            padding: 9px 12px 8px;
+            gap: 2px;
+            min-width:max-content;
+            .txt {@include fw-6(14px);}
+            &.line {
+                padding-left:32px;
+                background-size: 16px;
+                background-position: left 12px center;
+                background-repeat:no-repeat;
+                background-image: url(../images/icon/ic-btn-audio-black.svg);
+            }
+        }
+        .btn-callEnd { // 종료버튼
             background-color: var(--dt-primary);
-			padding: 9px 12px;
-			gap: 2px;
 			.icon {
 				display: inline-block;
 				content: "";
 				width: 16px;
 				min-width: 16px;
 				height: 16px;
-            background-image: url(../images/icon/call_end.png);
-            background-repeat: no-repeat;
-            background-size: 16px 16px;
+                background-image: url(../images/icon/call_end.svg);
+                background-repeat: no-repeat;
+                background-size: 16px 16px;
 			}
 			.txt {
 				color: var(--dt-white);
-				@include fw-6(14px);
 			}
         }
     }

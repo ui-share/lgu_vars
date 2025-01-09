@@ -1573,14 +1573,29 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  column-gap: 6px;
   margin-left: auto;
 }
-.header .header__btn .btn-callEnd {
+.header .header__btn .btn {
   display: flex;
   border-radius: 4px;
-  background-color: var(--dt-primary);
-  padding: 9px 12px;
+  padding: 9px 12px 8px;
   gap: 2px;
+  min-width: max-content;
+}
+.header .header__btn .btn .txt {
+  font-size: 14px;
+  font-weight: 600;
+}
+.header .header__btn .btn.line {
+  padding-left: 32px;
+  background-size: 16px;
+  background-position: left 12px center;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon/ic-btn-audio-black.svg);
+}
+.header .header__btn .btn-callEnd {
+  background-color: var(--dt-primary);
 }
 .header .header__btn .btn-callEnd .icon {
   display: inline-block;
@@ -1588,14 +1603,12 @@ button {
   width: 16px;
   min-width: 16px;
   height: 16px;
-  background-image: url(../images/icon/call_end.png);
+  background-image: url(../images/icon/call_end.svg);
   background-repeat: no-repeat;
   background-size: 16px 16px;
 }
 .header .header__btn .btn-callEnd .txt {
   color: var(--dt-white);
-  font-size: 14px;
-  font-weight: 600;
 }
 
 .popup-wrapper {
