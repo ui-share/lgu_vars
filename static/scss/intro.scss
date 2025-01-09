@@ -41,10 +41,8 @@
                 @include gridBox(1);
                 row-gap: 12px;
                 .btn-group {
-                    .btn-sol {
-                        &.btn-md {
-                            padding: 10px 12px;
-                        }
+                    .btn-md {
+                        padding: 10px 12px;
                     }
                 }
             }

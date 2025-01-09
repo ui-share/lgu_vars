@@ -46,6 +46,6 @@
   grid-template-rows: max-content;
   row-gap: 12px;
 }
-.section__cont.intro .cont__wrap .card-group .btn-group .btn-sol.btn-md {
+.section__cont.intro .cont__wrap .card-group .btn-group .btn-md {
   padding: 10px 12px;
 }
