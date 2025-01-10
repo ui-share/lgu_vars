@@ -1,0 +1,106 @@
+@import "../base/mixin";
+
+// 아코디언 인터랙션 실행 관련 코드
+.accordion-container {
+    .accordion-content {
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+    }
+
+    .accordion-header {
+        cursor: pointer;
+        &.info-price {
+            .txt-price .img-box {
+                transition: transform 0.25s ease 0.2s;
+            }
+        }
+    }
+    &[data-open="true"] {
+        .accordion-header {
+            &.info-price {
+                .txt-price .img-box {
+                    transform:rotate(180deg);
+                }
+            }
+        }
+        > .accordion-content {
+            overflow: visible;
+            height: auto;
+            opacity: 1;
+        }
+    }
+}
+
+.accordion-header {
+    @include flexRow;
+    justify-content: space-between;
+    width: 100%;
+    padding: 22px 20px 16px;
+    gap: 6px;
+    .row {
+        @include flexRow;
+        align-items:center;
+    }
+    .txt-title {
+        flex: 1;
+        column-gap: 4px;
+        text-align: left;
+        line-height: 23px;
+        .badge-round {
+            align-self:baseline;
+            margin-right:4px;
+            & + span {
+                @include fw-7(16px);
+                // @include ellipsis(2);
+            }
+        }
+    }
+    .txt-price {
+        justify-content: flex-end;
+        span:first-of-type {@include fw-7(16px);}
+        .img-box {margin-left:4px;}
+    }
+}
+.accordion-content {
+    .info-price-detail {
+        padding:16px 20px;
+        @include flexColum;
+        row-gap:8px;
+        .info-wrap {
+            .row {
+                justify-content:space-between;
+            }
+        }
+        .txt-title {
+            padding-left:10px;
+            &.ico {
+                padding-left:22px;
+                background-image:url(../images/icon/ic-list-brace.svg);
+                background-position:10px 3px;
+                background-size:8px;
+                background-repeat:no-repeat;
+            }
+        }
+        .txt-title, .txt-price {
+            @include fw-5(14px); 
+            color:var(--dt-gray14);
+        }
+        .txt-title {
+            @include ellipsis(3);
+        }
+        .txt-price {
+            min-width:82px;text-align:right;
+        }
+        .list-detail {
+            padding-top:4px;
+            padding-left:14px;
+            row-gap:4px;
+            .txt-title, .txt-price {
+                @include fw-5(12px);
+                color:var(--dt-gray11);
+                line-height:18px; 
+            }
+        }
+    }
+}

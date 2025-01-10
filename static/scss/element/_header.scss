@@ -1,13 +1,15 @@
 @import '../base/mixin';
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%);
     @include flexBox(between, center);
     flex-wrap: wrap;
     width: 100%;
+    max-width:var(--max-devicewidth) !important;
     padding: 11px 20px 11px 12px;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 2;
     .header__util {
         @include flexBox(start, center);

@@ -170,8 +170,9 @@
         /* sizing */
         &.btn-md { // 중간높이
             width:100%;
-            padding-top:10px;
-            padding-bottom:10px;
+            padding:10px 12px;
+            @include flexColum();
+            align-items:center;
             .txt {
                 letter-spacing:normal;
                 font-size:12px;

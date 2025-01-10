@@ -66,7 +66,7 @@
 			@include fz(14px);
 		}
 		.arrow {
-			background-image: url(../images/icon/ic-chips-arrow-gray.png);
+			background-image: url(../images/icon/ic-chips-arrow-gray.svg);
 		}
 		&:active, &.is-selected {
 			.arrow {
@@ -331,12 +331,14 @@
 	}
 	&.badge-round {
 		min-width: 26px;
+		max-width:max-content;
 		min-height: 26px;
-		border-radius: 100px;
+		border-radius: 27.78vw;
 		border: 1px solid var(--dt-gray08);
 		background-color: var(--dt-gray08);
-		padding: 4px 9px;
 		.txt {
+			padding:0 8px;
+			line-height: 12px;
 			color: var(--dt-gray13);
 		}
 	}

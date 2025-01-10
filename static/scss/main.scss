@@ -24,43 +24,23 @@
 			}
 		}
 	}
-	.cont__txt-box {
-		display: flex;
-		align-items: flex-start;
-		justify-content: flex-end;
-		flex-direction: column;
-		row-gap: 4px;
+	&.cont__wrap-message {
+		padding: 27px 120px 27px 20px;
+		background-image: url(../images/img/img-hm-home.png);
+		background-position: right 0 bottom -13px;
+		background-repeat: no-repeat;
+		background-size: 146px 146px;
 		.txt {
-			font-size: 22px;
-			font-weight: 600;
-			color: var(--dt-gray16);
-			.deco {
-				font-size: 22px;
-				font-weight: 600;
-				color: var(--dt-primary);
-			}
+			line-height: 1.4;
 		}
 	}
-}
-
-.cont__wrap-message {
-	padding: 27px 120px 27px 20px;
-	background-image: url(../images/img/img-hm-home.png);
-	background-position: right 0 bottom -13px;
-	background-repeat: no-repeat;
-	background-size: 146px 146px;
-	.txt {
-		line-height: 1.4;
+	&.cont__wrap-category {
+		padding-bottom: 32px;
 	}
 }
 
-.cont__wrap-category {
-	padding-bottom: 32px;
-}
 .menu {
-	padding: 36px 0 48px 0;
 	background-color: var(--dt-gray02);
-	gap: 48px;
 	.cont__wrap-freqMenu {
 		.con__tit-box {
 			gap: 4px;
