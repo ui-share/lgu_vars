@@ -1627,6 +1627,10 @@ button {
   padding-top: 36px;
   padding-bottom: 36px;
 }
+.counsel .cont__wrap .card {
+  background-color: var(--dt-gray02);
+  box-shadow: none;
+}
 .counsel .cont__wrap.cont__wrap-counsel {
   padding-top: 32px;
   padding-bottom: 48px;

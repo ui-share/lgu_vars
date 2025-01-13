@@ -8,11 +8,14 @@
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
-
 .counsel {
 	.cont__wrap {
 		padding-top:36px;
 		padding-bottom:36px;
+		.card {
+			background-color: var(--dt-gray02);
+			box-shadow: none;
+		}
 		&.cont__wrap-counsel {
 			padding-top:32px;
 			padding-bottom:48px;
