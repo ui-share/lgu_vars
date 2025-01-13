@@ -15,11 +15,12 @@
     .header__util {
         @include flexBox(start, center);
         .btn-util {
-            width: 24px;
-            height: 24px;
+            width: 32px;
+            height: 32px;
             background-repeat: no-repeat;
-            background-size: cover;
-            margin-right: 6px;
+            background-size: 24px 24px;
+            background-position: center center;
+            padding: 4px;
             font-size:0px;
             text-indent: -9999px;
             &.prev {
@@ -32,6 +33,7 @@
         .header-tit {
             @include fw-7(16px);
             color: var(--dt-gray16);
+            margin-left: 4px;
             .header-txt {
                 @include fw-7(16px);
                 color: var(--dt-gray10);
