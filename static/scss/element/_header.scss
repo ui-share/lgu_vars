@@ -15,12 +15,13 @@
     .header__util {
         @include flexBox(start, center);
         .btn-util {
-            text-indent: -999px;
             width: 24px;
             height: 24px;
             background-repeat: no-repeat;
             background-size: cover;
             margin-right: 6px;
+            font-size:0px;
+            text-indent: -9999px;
             &.prev {
                 background-image: url(../images/icon/chevron_prev_line.png);
             }
@@ -54,6 +55,8 @@
                 background-position: left 12px center;
                 background-repeat:no-repeat;
                 background-image: url(../images/icon/ic-btn-audio-black.svg);
+                border-color:rgba(59, 64, 68, 0.15);
+                .txt{color:var(--dt-gray14);}
             }
         }
         .btn-callEnd { // 종료버튼
