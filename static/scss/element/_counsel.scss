@@ -15,6 +15,37 @@
 		.card {
 			background-color: var(--dt-gray02);
 			box-shadow: none;
+			&[role=button] {
+				cursor: pointer;
+				&:active {
+					box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+					.card-body,
+					.card-footer {
+						opacity: 0.6;
+					}
+				}
+			}
+			&.is-selected {
+				box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
+				.card-body,
+				.card-footer {
+					opacity: 0.6;
+				}
+			}
+			&.is-disabled {
+				box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+				.card-body,
+				.card-footer {
+					opacity: 0.6;
+				}
+			}
+			&.is-disabled:active {
+				box-shadow: inset 0 0 0 300px rgba(255, 255, 255, 0.6);
+				.card-body,
+				.card-footer {
+					opacity: 0.6;
+				}
+			}
 		}
 		&.cont__wrap-counsel {
 			padding-top:32px;
@@ -54,7 +85,7 @@
 					}
 				}
 			}
-			}
+		}
 		.txt-head {
 			@include fw-5(14px);
 			color: var(--dt-gray11);
