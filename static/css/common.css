@@ -1754,13 +1754,6 @@ button {
   align-items: center;
   justify-content: flex-start;
 }
-.header .header__util .logo {
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/img/logo.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 .header .header__util .btn-util {
   text-indent: -999px;
   width: 24px;

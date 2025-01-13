@@ -9,17 +9,11 @@
     flex-wrap: wrap;
     width: 100%;
     max-width:var(--max-devicewidth) !important;
-    padding: 11px 20px 11px 12px;
+    min-height: 56px;
+    padding: 2px 20px 2px 12px;
     z-index: 2;
     .header__util {
         @include flexBox(start, center);
-        .logo {
-            width: 24px;
-            height: 24px;
-            background-image: url(../images/img/logo.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
         .btn-util {
             text-indent: -999px;
             width: 24px;

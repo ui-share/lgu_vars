@@ -301,7 +301,6 @@ button {
 .container {
 	display: flex;
 	flex-direction: column;
-	padding-top: 56px;
 }
 .section__divider {
 	width: 100%;
@@ -312,6 +311,9 @@ button {
 .section__cont {
 	display: flex;
 	flex-direction: column;
+	&:first-child {
+		padding-top: 56px;
+	}
 	&.menu {
 		padding: 36px 0 48px 0;
 		gap: 48px;

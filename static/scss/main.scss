@@ -1,5 +1,22 @@
 @import "../scss/base/mixin";
 
+.header {
+	.header-tit {
+		display: flex;
+		align-items: center;
+		padding-left: 8px;
+		&::before {
+			display: inline-block;
+			content: "";
+			width: 24px;
+			height: 24px;
+			background-image: url(../images/img/logo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
 .cont__wrap {
 	&.cont__wrap-banner {
 		padding: 10px 20px 0;
