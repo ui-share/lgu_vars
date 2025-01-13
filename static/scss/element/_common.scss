@@ -335,7 +335,7 @@ button {
 	.cont__txt-box {
 		@include flexColum;
 		align-items: flex-start;
-		justify-content: flex-end;
+		justify-content: center;
 		row-gap: 4px;
 		.txt { //h4
 			color: var(--dt-gray16);
@@ -362,12 +362,14 @@ button {
 	&.cont__wrap-bill {
 		padding-right:120px;
 		background-image: url(../images/img/img-hm-bill.png);
-		background-position: right 10px top 16px;
+		background-position: right 10px top 14px;
 		background-repeat: no-repeat;
 		background-size:140px;
 		&:has(.select-billdate) {
-			background-position: right 10px top 39px;
+			background-position: right 10px top 36px;
+			.cont__txt-box {min-height:36px;}
 		}
+		.cont__txt-box {min-height:110px;}
 		.select-billdate {
 			@include flexColum;
 			.txt-due {
