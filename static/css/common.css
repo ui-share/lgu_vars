@@ -1765,6 +1765,8 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   margin-right: 6px;
+  font-size: 0px;
+  text-indent: -9999px;
 }
 .header .header__util .btn-util.prev {
   background-image: url(../images/icon/chevron_prev_line.png);
