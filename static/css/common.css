@@ -1401,7 +1401,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: center;
   row-gap: 4px;
 }
 .cont__wrap .cont__txt-box .txt {
@@ -1436,12 +1436,18 @@ button {
 .cont__wrap.cont__wrap-bill {
   padding-right: 120px;
   background-image: url(../images/img/img-hm-bill.png);
-  background-position: right 10px top 16px;
+  background-position: right 10px top 14px;
   background-repeat: no-repeat;
   background-size: 140px;
 }
 .cont__wrap.cont__wrap-bill:has(.select-billdate) {
-  background-position: right 10px top 39px;
+  background-position: right 10px top 36px;
+}
+.cont__wrap.cont__wrap-bill:has(.select-billdate) .cont__txt-box {
+  min-height: 36px;
+}
+.cont__wrap.cont__wrap-bill .cont__txt-box {
+  min-height: 110px;
 }
 .cont__wrap.cont__wrap-bill .select-billdate {
   display: flex;
@@ -1824,6 +1830,7 @@ button {
 }
 .header .header__btn .btn-callEnd {
   background-color: var(--dt-primary);
+  border-color: var(--dt-primary);
 }
 .header .header__btn .btn-callEnd .icon {
   display: inline-block;
@@ -1988,6 +1995,31 @@ button {
 }
 .authorization.corporation .auth_corporation {
   display: block;
+}
+
+.list-month {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 60px;
+  gap: 2px;
+}
+.list-month li {
+  border: 1px solid red;
+}
+.list-month li .btn-month {
+  padding: 19px 0 17px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.list-month li .btn-month.current {
+  color: var(--dt-primary);
+}
+.list-month li .btn-month.is-selected {
+  color: var(--dt-primary);
+  border-color: var(--dt-primary);
 }
 
 .switch-group .switch-input {
