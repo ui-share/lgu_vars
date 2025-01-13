@@ -16,7 +16,7 @@
             }
         }
     }
-    &[data-open="true"] {
+    &.open {
         .accordion-header {
             &.info-price {
                 .txt-price .img-box {
@@ -69,6 +69,7 @@
         row-gap:8px;
         .info-wrap {
             .row {
+                display:flex;
                 justify-content:space-between;
             }
         }

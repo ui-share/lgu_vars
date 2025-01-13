@@ -314,9 +314,20 @@ button {
 	&:first-child {
 		padding-top: 56px;
 	}
-	&.menu {
+	&.menu, &.detail {
 		padding: 36px 0 48px 0;
 		gap: 48px;
+	}
+	&.summary {
+		padding-bottom:20px;
+		background-color:#DCE6FF;
+		.cont__wrap-bill {
+			@include flexColum;
+			position:relative;
+			min-height:174px;
+			height:max-content;
+			padding-top:28px;
+		}
 	}
 }
 .cont__wrap {
@@ -326,11 +337,6 @@ button {
 		align-items: flex-start;
 		justify-content: flex-end;
 		row-gap: 4px;
-		.txt-due {
-			margin-bottom:2px;
-			color: var(--dt-gray13);
-			@include fw-5(14px);
-		}
 		.txt { //h4
 			color: var(--dt-gray16);
 			font-size: 22px;
@@ -341,127 +347,40 @@ button {
 				font-weight: 600;
 				color: var(--dt-primary);
 			}
-		}
-		.txt-select-wrap {
-			color:var(--dt-gray16);
-			@include fw-6(18px);
-			.chips-date {margin-right:4px;}
-		}
-		.txt-price {
-			@include flexRow;
-			align-items: center;
-			margin-top:4px;
-			@include fw-6(18px);
-			line-height:36px;
-			.deco {margin-right:2px;font-size:30px;}
-			.color-prim {@include fw-6(18px);}
-		}
-
-	}
-	.info-col-wrap { // default : bg-gray
-		@include flexColum;
-		gap: 12px;
-		padding:22px 20px;
-		border-radius:8px;
-		background-color:var(--dt-gray02);
-		.row {
-			@include flexRow;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-		.txt-title {
-			color: var(--dt-gray12);
-			@include fw-5(14px);
-		}
-		.txt-desc {
-			color:var(--dt-black);
-			@include fw-5(14px);
-			.flag:first-child {margin-right:8px;}
-		}
-	}
-
-	.info-price-wrap{
-		padding-bottom:22px;
-		background-color:var(--dt-gray02);
-		border-radius:8px;
-		overflow:hidden;
-		.row {
-			@include flexRow;
-		}
-		.col {
-			@include flexColum;
-		}
-		.info-price, .info-price-detail {
-			&:not(.total-last) {
-				position:relative;
-				&::after {
-					content:'';
-					display:block;
-					position:absolute;bottom:0;left:50%;
-					transform:translateX(-50%);
-					width:calc(100% - 40px);
-					height:1px;background-color:var(--dt-gray08);
-				}
-			}
-			&.total-last {
-				row-gap:4px;
-				padding:16px 20px 0;
-				.row {justify-content: space-between;margin-top:4px;}
-				.txt-title {@include fw-7(16px);}
-				.txt-price {
-					color:var(--dt-primary);
-					@include fw-7(20px);
-					line-height:24px;
-				}
-				.txt-sub {
-					margin-left:auto;
-					color:var(--dt-gray11);
-					@include fw-5(12px);
-				}
+			&.price {
+				@include flexRow;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-top:4px;
+				@include fw-6(18px);
+				line-height:36px;
+				.deco {margin-right:2px;font-size:30px;}
+				.color-prim {@include fw-6(18px);}
 			}
 		}
-	}
-	.info-price-single {
-		@include flexRow;
-		align-items:center;
-		justify-content:center;
-		column-gap: 6px;
-		padding:18px 20px;
-		background-color:var(--dt-white);
-		border-radius:8px;
-		.txt-info {
-			color:var(--dt-gray11);
-			@include fw-6();
-			.txt-price {
-				margin:0 4px;
-				color:var(--dt-gray16);
-				@include fw-7(18px);
-			}
-		}
-		.img-box {img {margin-top:1px;}}
 	}
 	&.cont__wrap-bill {
+		padding-right:120px;
 		background-image: url(../images/img/img-hm-bill.png);
-		background-position: right 20px top 39px;
+		background-position: right 10px top 16px;
 		background-repeat: no-repeat;
 		background-size:140px;
-	}
-	&.bg-point { // 요금및납부 공통
-		@include flexColum;
-		justify-content:space-between;
-		row-gap:56px;
-		position:relative;
-		min-height:202px;
-		height:max-content;
-		padding-top:28px;
-		padding-bottom:20px;
-		background-color:#DCE6FF;
-		// &::before {
-		// 	content:'';display:block;
-		// 	position:absolute;top:-56px;left:0;
-		// 	width:100%;height:56px;
-		// 	background-color:#DCE6FF;
-		// }
+		&:has(.select-billdate) {
+			background-position: right 10px top 39px;
+		}
+		.select-billdate {
+			@include flexColum;
+			.txt-due {
+				margin-bottom:4px;
+				color: var(--dt-gray13);
+				@include fw-5(14px);
+			}
+			.txt-select-wrap {
+				color:var(--dt-gray16);
+				@include fw-6(18px);
+				.chips-date {margin-right:4px;}
+			}
+		}
 	}
 }
 
@@ -512,4 +431,93 @@ button {
 .tooltip img {
 	width: 18px;
 	height: 18px;
+}
+
+.info-col-wrap { // default 회색, 배경 바뀔 시 &.bg-color 형태로 적용
+	@include flexColum;
+	gap: 12px;
+	padding:22px 20px;
+	border-radius:8px;
+	background-color:var(--dt-gray02);
+	.row {
+		@include flexRow;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.txt-title {
+		color: var(--dt-gray12);
+		@include fw-5(14px);
+	}
+	.txt-desc {
+		color:var(--dt-black);
+		@include fw-5(14px);
+		text-align:right;
+		.flag:first-child {margin-right:8px;}
+	}
+}
+.info-price-wrap{
+	padding-bottom:22px;
+	background-color:var(--dt-gray02);
+	border-radius:8px;
+	overflow:hidden;
+	.row {
+		@include flexRow;
+	}
+	.col {
+		@include flexColum;
+	}
+	.info-price, .info-price-detail {
+		&:not(.total-last) {
+			position:relative;
+			&::after {
+				content:'';
+				display:block;
+				position:absolute;bottom:0;left:50%;
+				transform:translateX(-50%);
+				width:calc(100% - 40px);
+				height:1px;background-color:var(--dt-gray08);
+			}
+		}
+		&.total-last {
+			row-gap:4px;
+			padding:16px 20px 0;
+			.row {justify-content: space-between;margin-top:4px;}
+			.txt-title {@include fw-7(16px);}
+			.txt-price {
+				color:var(--dt-primary);
+				@include fw-7(20px);
+				line-height:24px;
+			}
+			.txt-sub {
+				margin-left:auto;
+				color:var(--dt-gray11);
+				@include fw-5(12px);
+			}
+		}
+	}
+}
+.info-price-single {
+	@include flexRow;
+	align-items:center;
+	justify-content:center;
+	column-gap: 6px;
+	margin:0 20px;
+	padding:18px 20px;
+	background-color:var(--dt-white);
+	border-radius:8px;
+	.txt-info {
+		color:var(--dt-gray11);
+		@include fw-6();
+		.txt-price {
+			display:inline-block;
+			margin:0 4px;
+			color:var(--dt-gray16);
+			@include fw-7(18px);
+		}
+		&:has(+ .img-box) {max-width:calc(100% - 24px);}
+	}
+	.img-box {
+		width:18px;height:18px;
+		img {margin-top:1px;}
+	}
 }

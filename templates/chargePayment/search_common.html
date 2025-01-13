@@ -34,11 +34,80 @@
 	
 		<!-- container -->
 		<div class="container">
+            <!-- 홀맨 배너 영역// -->
+            <div class="section__cont summary">
+                <div class="cont__wrap cont__wrap-bill">
+                    <div class="select-billdate">
+                        <span class="txt-due">2월 1일 ~ 2월 28일</span>
+                        <span class="txt-select-wrap">
+                            <button type="button" class="chips chips-date">
+                                <span class="txt">24년 03월</span>
+                                <span class="arrow"></span>
+                            </button>
+                            청구요금은
+                        </span>
+                    </div>
+                    <div class="cont__txt-box">
+						<h4 class="txt price">
+                            <span class="deco">89,000</span>
+                            <span class="color-prim">원</span>이에요
+						</h4>
+					</div>
+				</div>
+                <div class="info-price-single">
+                      <span class="txt-info">
+                        지난 달보다<span class="txt-price">38,000원</span>늘었어요
+                      </span>
+                      <span class="img-box">
+                            <img src="../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+                      </span>
+                </div>
+            </div>
+             <!-- 청구 예정 상태 -->
+            <div class="section__cont summary">
+                <div class="cont__wrap cont__wrap-bill">
+                    <div class="select-billdate">
+                        <span class="txt-due">2월 1일 ~ 2월 28일</span>
+                        <span class="txt-select-wrap">
+                            <button type="button" class="chips chips-date">
+                                <span class="txt">24년 03월</span>
+                                <span class="arrow"></span>
+                            </button>
+                            청구요금은
+                        </span>
+                    </div>
+					<div class="cont__txt-box">
+						<h4 class="txt price">
+                            <span class="deco">청구 예정</span>이에요
+						</h4>
+					</div>
+				</div>
+            </div>
+            <!-- 발행 전 -->
+            <div class="section__cont summary">
+                <div class="cont__wrap cont__wrap-bill">
+					<div class="cont__txt-box">
+						<h4 class="txt">아직 청구서가<br />발행되지 않았어요</h4>
+					</div>
+				</div>
+            </div>
+            <!-- //홀맨 배너 영역 -->
 
             <!-- 아코디언 영역 -->
-            <div class="section__cont detail" style="padding-top:86px;">
+            <div class="section__cont detail">
                 <!-- 발행된 청구서가 있을 경우 -->
                 <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">요금 상세</span>
+                        </h6>
+                        <div class="tit-tail">
+                            <button type="button" class="chips chips-all is-selected">
+                                <span class="txt">전체접힘</span>
+                                <span class="arrow"></span>
+                            </button>
+                        </div>
+                    </div>
                     <div class="info-price-wrap">
                         <!-- data-open="true/false"로 아코디언 실행 -->
                         <div class="list-info-price accordion-container open">
@@ -54,6 +123,7 @@
                                     <span class="img-box">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
+                                    <!-- unactive : style="translate: none; rotate: none; scale: none; transform: scale(1, -1);" -->
                                 </span>
                             </button>
                             <div class="accordion-content"><!-- 아코디언 컨텐트 -->
@@ -188,6 +258,70 @@
                             </span>
                             <span class="txt-sub">(부가세 포함)</span>
                         </div>
+                    </div>
+                </div>
+
+                <!-- 발행된 청구서가 없을 경우 -->
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">요금 상세</span>
+                        </h6>
+                    </div>
+                    <div class="card solid center">
+                        <div class="card-body">
+                            <div class="item util">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-roaming_x.png" alt="">
+                                </span>
+                            </div>
+                            <div class="item text">
+                                <span class="txt">아직 발행된 청구서가 없어요</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">납부 상세</span>
+                        </h6>
+                        <div class="tit-tail btn-group">
+                            <button type="button" class="btn btn-sec btn-md">
+                                <span class="txt">변경</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row">
+                            <span class="txt-title">납부방법</span>
+                            <span class="txt-desc">
+                                은행자동이체
+                            </span>
+                        </div>
+                        <div class="row">
+                            <span class="txt-title">납부 예정일</span>
+                            <span class="txt-desc">
+                                <span class="flag flag-line primary">
+                                    <span class="txt">이용예정</span>
+                                </span>
+                                N월 NN일
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bullet-wrap caution">
+                        <h5 class="bullet-caption">
+                            유의사항
+                        </h5>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                청구서는 2024년 3월 4일 기준으로 작성되었습니다.
+                            </li>
+                            <li class="bullet-item">
+                                납기일 이후 납부하는 경우 다음달 요금에 2% 연체가산금이 추가됩니다.
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>

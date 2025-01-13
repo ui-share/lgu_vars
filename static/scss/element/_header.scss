@@ -1,65 +1,66 @@
 @import '../base/mixin';
 
 .header {
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform:translateX(-50%);
-	@include flexBox(between, center);
-	flex-wrap: wrap;
-	width: 100%;
-	max-width:var(--max-devicewidth) !important;
-	min-height: 56px;
-	padding: 2px 20px 2px 12px;
-	z-index: 2;
-	.header__util {
-		@include flexBox(start, center);
-		.btn-util {
-			text-indent: -999px;
-			width: 24px;
-			height: 24px;
-			background-repeat: no-repeat;
-			background-size: cover;
-			margin-right: 6px;
-			font-size: 0px;
-			text-indent: -9999px;
-			&.prev {
-				background-image: url(../images/icon/chevron_prev_line.png);
-			}
-			&.end {
-				background-image: url(../images/icon/close_line.png);
-			}
-		}
-		.header-tit {
-			@include fw-7(16px);
-			color: var(--dt-gray16);
-			.header-txt {
-				@include fw-7(16px);
-				color: var(--dt-gray10);
-			}
-		}
-	}
-	.header__btn {
-		@include flexBox(end, center);
-		column-gap:6px;
-		margin-left: auto;
-		.btn {
-			display: flex;
-			border-radius: 4px;
-			padding: 9px 12px 8px;
-			gap: 2px;
-			min-width:max-content;
-			.txt {@include fw-6(14px);}
-			&.line {
-				padding-left:32px;
-				background-size: 16px;
-				background-position: left 12px center;
-				background-repeat:no-repeat;
-				background-image: url(../images/icon/ic-btn-audio-black.svg);
-			}
-		}
-		.btn-callEnd { // 종료버튼
-			background-color: var(--dt-primary);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform:translateX(-50%);
+    @include flexBox(between, center);
+    flex-wrap: wrap;
+    width: 100%;
+    max-width:var(--max-devicewidth) !important;
+    min-height: 56px;
+    padding: 2px 20px 2px 12px;
+    z-index: 2;
+    .header__util {
+        @include flexBox(start, center);
+        .btn-util {
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 6px;
+            font-size:0px;
+            text-indent: -9999px;
+            &.prev {
+                background-image: url(../images/icon/chevron_prev_line.png);
+            }
+            &.end {
+                background-image: url(../images/icon/close_line.png);
+            }
+        }
+        .header-tit {
+            @include fw-7(16px);
+            color: var(--dt-gray16);
+            .header-txt {
+                @include fw-7(16px);
+                color: var(--dt-gray10);
+            }
+        }
+    }
+    .header__btn {
+        @include flexBox(end, center);
+        column-gap:6px;
+        margin-left: auto;
+        .btn {
+            display: flex;
+            border-radius: 4px;
+            padding: 9px 12px 8px;
+            gap: 2px;
+            min-width:max-content;
+            .txt {@include fw-6(14px);}
+            &.line {
+                padding-left:32px;
+                background-size: 16px;
+                background-position: left 12px center;
+                background-repeat:no-repeat;
+                background-image: url(../images/icon/ic-btn-audio-black.svg);
+                border-color:rgba(59, 64, 68, 0.15);
+                .txt{color:var(--dt-gray14);}
+            }
+        }
+        .btn-callEnd { // 종료버튼
+            background-color: var(--dt-primary);
 			.icon {
 				display: inline-block;
 				content: "";
