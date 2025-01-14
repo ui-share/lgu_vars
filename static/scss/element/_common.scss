@@ -197,7 +197,7 @@ button {
 	overflow: visible; 
 	cursor: pointer;
 }
-/* Element */
+/* Util class */
 .hidden {
 	display: none !important;
 }
@@ -205,6 +205,9 @@ button {
 	margin-left: auto !important;
 }
 .color-prim {color:var(--dt-primary);}
+.row {@include flexRow;}
+.col {@include flexColum;}
+
 /* animation */
 @keyframes fadeInDown {
 	0% {
@@ -319,14 +322,19 @@ button {
 		gap: 48px;
 	}
 	&.summary {
-		padding-bottom:20px;
+		padding-bottom:18px;
 		background-color:#DCE6FF;
-		.cont__wrap-bill {
+		.cont__wrap {
 			@include flexColum;
 			position:relative;
-			min-height:174px;
 			height:max-content;
 			padding-top:28px;
+			background-repeat: no-repeat;
+			background-size:140px;
+			&:has(.select-billdate) {
+				.cont__txt-box {min-height:36px;}
+			}
+			.cont__txt-box {min-height:110px;}
 		}
 	}
 }
@@ -359,33 +367,38 @@ button {
 			}
 		}
 	}
+	.select-billdate {
+		@include flexColum;
+		.txt-due {
+			margin-bottom:4px;
+			color: var(--dt-gray13);
+			@include fw-5(14px);
+			line-height:21px;
+		}
+		.txt-select-wrap {
+			color:var(--dt-gray16);
+			@include fw-6(18px);
+			.chips-date {margin-right:4px;}
+		}
+	}
 	&.cont__wrap-bill {
+		min-height:174px;
 		padding-right:120px;
 		background-image: url(../images/img/img-hm-bill.png);
 		background-position: right 10px top 14px;
-		background-repeat: no-repeat;
-		background-size:140px;
 		&:has(.select-billdate) {
 			background-position: right 10px top 36px;
-			.cont__txt-box {min-height:36px;}
-		}
-		.cont__txt-box {min-height:110px;}
-		.select-billdate {
-			@include flexColum;
-			.txt-due {
-				margin-bottom:4px;
-				color: var(--dt-gray13);
-				@include fw-5(14px);
-			}
-			.txt-select-wrap {
-				color:var(--dt-gray16);
-				@include fw-6(18px);
-				.chips-date {margin-right:4px;}
-			}
 		}
 	}
+	&.cont__wrap-realtime {
+		min-height:164px;
+		padding-right:120px;
+		background-image: url(../images/img/img-hm-realtime.png);
+		background-position: right 10px top 35px;
+		.select-billdate .txt-due {margin-bottom:9px}
+		.cont__txt-box {row-gap:0}
+	}
 }
-
 .con__tit-box {
 	@include flexRow();
 	justify-content:space-between;
@@ -463,6 +476,23 @@ button {
 	width: 18px;
 	height: 18px;
 }
+/* 진행률 바 default */
+.progress-area {
+	.progress-bg {
+		@include flexRow;
+		width:100%;height:10px;
+		border-radius: 100px;
+		background-color:var(--dt-gray08);
+		.progress-bar {
+			display:block;
+			width:0;
+			height:100%;
+			background-color:var(--dt-primary);
+			border-radius: 100px;
+			transition:width 0.3s ease-in;
+		}
+	}
+}
 
 .info-col-wrap { // default 회색, 배경 바뀔 시 &.bg-color 형태로 적용
 	@include flexColum;
@@ -471,9 +501,46 @@ button {
 	border-radius:8px;
 	background-color:var(--dt-gray02);
 	.row {
-		@include flexRow;
 		justify-content: space-between;
 		align-items: flex-start;
+		&.title-wrap {
+			align-items: center;
+			.txt-title {
+				&.ico {
+					@include flexRow;
+					align-items:center;
+					column-gap:6px;
+					.img-box {
+						width:28px;height:28px;
+						img {width:100%}
+					}
+				}
+				color:var(--dt-gray12);
+				@include fw-5();
+				line-height:24px;
+			}
+			.chips.neutral {background-color:transparent;}
+		}
+	}
+	.col {
+		&.plan-wrap {
+			row-gap:8px;
+			.txt-plan {
+				margin-bottom:4px;
+				.current {
+					display:inline-block;margin-right:6px;
+					color:var(--dt-gray16);
+					@include fw-6(20px); 
+					line-height:24px;
+				}
+			}
+			.txt-plan .total, .txt-caution {
+				color:var(--dt-gray11);
+				@include fw-5(14px); 
+				line-height:21px;
+			}
+			.txt-caution {text-align:right;}
+		}
 	}
 	.txt-title {
 		color: var(--dt-gray12);
@@ -491,12 +558,6 @@ button {
 	background-color:var(--dt-gray02);
 	border-radius:8px;
 	overflow:hidden;
-	.row {
-		@include flexRow;
-	}
-	.col {
-		@include flexColum;
-	}
 	.info-price, .info-price-detail {
 		&:not(.total-last) {
 			position:relative;
