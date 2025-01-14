@@ -1993,39 +1993,39 @@ button {
   animation: slideInUp 0.6s;
 }
 
-.authorization .auth {
+.popup-body .authorization .auth {
   text-align: center;
 }
-.authorization .auth .txt {
+.popup-body .authorization .auth .txt {
   font-size: 16px;
   font-weight: 500;
   color: var(--dt-gray11);
   margin-bottom: 10px;
 }
-.authorization .auth .tit {
+.popup-body .authorization .auth .tit {
   font-size: 24px;
   font-weight: 600;
   color: var(--dt-black);
 }
-.authorization .auth .deco {
+.popup-body .authorization .auth .deco {
   font-size: 24px;
   font-weight: 600;
   color: var(--dt-primary);
 }
-.authorization .input_code {
+.popup-body .authorization .input_code {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 42px 0 26px;
   gap: 6px;
 }
-.authorization .input_code .code-group {
+.popup-body .authorization .input_code .code-group {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 6px;
 }
-.authorization .input_code .code-group .code-box {
+.popup-body .authorization .input_code .code-group .code-box {
   display: inline-block;
   width: 48px;
   min-height: 52px;
@@ -2033,40 +2033,39 @@ button {
   border-radius: 4px;
   background: var(--dt-gray02);
 }
-.authorization .input_code .code-group .code-box .num {
+.popup-body .authorization .input_code .code-group .code-box .num {
   font-size: 24px;
   font-weight: 700;
   color: var(--dt-gray16);
 }
-.authorization .input_code .code-group .code-box .num.placeholder {
+.popup-body .authorization .input_code .code-group .code-box .num.placeholder {
   color: var(--dt-gray11);
 }
-.authorization .tab__wrap {
+.popup-body .authorization .tab__wrap {
   display: none;
 }
-.authorization .auth_birth {
+.popup-body .authorization .auth_birth {
   display: none;
 }
-.authorization .auth_business {
+.popup-body .authorization .auth_business {
   display: none;
 }
-.authorization .auth_corporation {
+.popup-body .authorization .auth_corporation {
   display: none;
 }
-.authorization.tab .tab__wrap {
+.popup-body .authorization.tab .tab__wrap {
   display: block;
 }
-.authorization.birth .auth_birth {
+.popup-body .authorization.birth .auth_birth {
   display: block;
 }
-.authorization.business .auth_business {
+.popup-body .authorization.business .auth_business {
   display: block;
 }
-.authorization.corporation .auth_corporation {
+.popup-body .authorization.corporation .auth_corporation {
   display: block;
 }
-
-.calendar-box {
+.popup-body .calendar-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2075,7 +2074,10 @@ button {
   max-width: 320px;
   margin: auto;
 }
-.calendar-box .nav-schedule {
+.popup-body .calendar-box.year-month {
+  padding-top: 12px;
+}
+.popup-body .calendar-box .nav-schedule {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2084,44 +2086,45 @@ button {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.calendar-box .nav-schedule button > span {
+.popup-body .calendar-box .nav-schedule button > span {
   font-size: 0;
 }
-.calendar-box .nav-schedule .img-box {
+.popup-body .calendar-box .nav-schedule .img-box {
   width: 24px;
   height: 24px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.calendar-box .nav-schedule .img-box.is-disabled {
+.popup-body .calendar-box .nav-schedule .img-box.is-disabled {
   pointer-events: none;
   opacity: 30%;
 }
-.calendar-box .nav-schedule .img-box.btn-prev {
+.popup-body .calendar-box .nav-schedule .img-box.btn-prev {
   background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
 }
-.calendar-box .nav-schedule .img-box.btn-next {
+.popup-body .calendar-box .nav-schedule .img-box.btn-next {
   transform: rotate(180deg);
   background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
 }
-.calendar-box .nav-schedule .txt-wrap {
+.popup-body .calendar-box .nav-schedule .txt-wrap {
   margin-left: 36px;
   margin-right: 36px;
   text-align: center;
 }
-.calendar-box .nav-schedule .txt-wrap span {
+.popup-body .calendar-box .nav-schedule .txt-wrap span {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
-.calendar-box .schedule-cont-wrap.list-month {
+.popup-body .calendar-box .schedule-cont-wrap.list-month {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 14px;
 }
-.calendar-box .schedule-cont-wrap.list-month li {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li {
   position: relative;
   display: flex;
   align-items: center;
@@ -2130,7 +2133,7 @@ button {
   height: 72px;
   overflow: hidden;
 }
-.calendar-box .schedule-cont-wrap.list-month li .btn-month {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li .btn-month {
   position: relative;
   width: calc(100% - 12px);
   height: calc(100% - 12px);
@@ -2141,38 +2144,36 @@ button {
   border-radius: 50%;
   border: 2px solid transparent;
 }
-.calendar-box .schedule-cont-wrap.list-month li.current .btn-month {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.current .btn-month {
   color: var(--dt-primary);
 }
-.calendar-box .schedule-cont-wrap.list-month li.is-selected::before {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected::before {
   content: "";
   display: block;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  z-index: -1;
   width: 100%;
   height: 42px;
   background-color: rgba(227, 0, 132, 0.2);
 }
-.calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed)::before {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed)::before {
   width: 42px;
 }
-.calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed):nth-child(4n)::before {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed):nth-child(4n)::before {
   left: unset;
   right: 0;
 }
-.calendar-box .schedule-cont-wrap.list-month li.is-selected .btn-month.pointed {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected .btn-month.pointed {
   color: var(--dt-primary);
   background-color: var(--dt-white);
   border-color: var(--dt-primary);
 }
-.calendar-box .schedule-cont-wrap.list-month li.is-disabled .btn-month {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-disabled .btn-month {
   color: var(--dt-gray09);
   pointer-events: none;
 }
-
 .switch-group .switch-input {
   /* input은 숨김 */
   display: none;
