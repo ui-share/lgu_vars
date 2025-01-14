@@ -1904,15 +1904,15 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
   width: 100%;
   height: 100%;
+  z-index: 9999;
 }
 .popup-wrapper.popup__tit .popup-header {
   margin-bottom: 4px;
 }
 .popup-wrapper .popup__wrap {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1953,23 +1953,23 @@ button {
   background-position: center center;
 }
 .popup-wrapper .popup-body {
-  overflow-y: auto;
   min-height: 84px;
   max-height: 513px;
   padding: 0 20px 20px;
+  overflow-y: auto;
 }
 .popup-wrapper .popup-footer {
-  padding: 0 20px;
   margin: 20px 0 20px;
+  padding: 0 20px;
 }
 .popup-wrapper .back-drop {
-  background-color: var(--dt-black);
-  opacity: 0.6;
-  width: 100%;
-  height: 100%;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dt-black);
+  opacity: 0.6;
 }
 .popup-wrapper.show {
   display: block;
