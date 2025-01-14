@@ -51,15 +51,6 @@
             gap: 2px;
             min-width:max-content;
             .txt {@include fw-6(14px);}
-            &.line {
-                padding-left:32px;
-                background-size: 16px;
-                background-position: left 12px center;
-                background-repeat:no-repeat;
-                background-image: url(../images/icon/ic-btn-audio-black.svg);
-                border-color:rgba(59, 64, 68, 0.15);
-                .txt{color:var(--dt-gray14);}
-            }
         }
         .btn-callEnd { // 종료버튼
             background-color: var(--dt-primary);
