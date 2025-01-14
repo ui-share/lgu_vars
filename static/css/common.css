@@ -283,8 +283,15 @@ button {
   margin-left: auto !important;
 }
 
+.center {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
 .color-prim {
-  color: var(--dt-primary);
+  color: var(--dt-primary) !important;
 }
 
 /* animation */
@@ -414,6 +421,7 @@ button {
   flex-direction: column;
   position: relative;
   min-height: 174px;
+  height: -moz-max-content;
   height: max-content;
   padding-top: 28px;
 }
@@ -701,7 +709,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   min-width: 184px;
   padding: 13px 4px 12px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -730,7 +739,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
 }
 .btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
   color: var(--dt-gray11);
@@ -993,6 +1003,22 @@ button {
   min-width: unset;
   height: unset;
 }
+.card.center {
+  min-height: 130px;
+  padding: 20px;
+}
+.card.center .card-body {
+  align-items: center;
+}
+.card.center .img-box {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+.card.center .text-box .tit {
+  font-size: 16px;
+  font-weight: 600;
+}
 .card[role=button] {
   cursor: pointer;
 }
@@ -1113,6 +1139,7 @@ button {
   height: 48px;
 }
 .chatbot .card-footer .btn-group .btn {
+  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1128,6 +1155,7 @@ button {
   height: 48px;
 }
 .home .card-footer .btn-group .btn {
+  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1238,24 +1266,6 @@ button {
   width: 20px;
   min-width: 20px;
   height: 20px;
-}
-
-.center {
-  min-height: 130px;
-  justify-content: center;
-  padding: 20px;
-}
-.center .card-body {
-  align-items: center;
-}
-.center .img-box {
-  width: 40px;
-  min-width: 40px;
-  height: 40px;
-}
-.center .text-box .tit {
-  font-size: 16px;
-  font-weight: 600;
 }
 
 .explain .flag {
@@ -1534,6 +1544,7 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--dt-gray10);
   padding: 4px 6px;
@@ -1618,6 +1629,7 @@ button {
 }
 .badge.badge-round {
   min-width: 26px;
+  max-width: -moz-max-content;
   max-width: max-content;
   min-height: 26px;
   border-radius: 27.78vw;
@@ -1873,7 +1885,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
   margin-left: auto;
 }
 .header .header__btn .btn {
@@ -1881,6 +1894,7 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .header .header__btn .btn .txt {
@@ -1932,7 +1946,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   margin-bottom: 4px;
   padding: 20px 8px 8px 20px;
 }
@@ -2270,7 +2285,8 @@ button {
 }
 .accordion-header .txt-title {
   flex: 1;
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   text-align: left;
   line-height: 23px;
 }

@@ -204,7 +204,13 @@ button {
 .ml-auto {
 	margin-left: auto !important;
 }
-.color-prim {color:var(--dt-primary);}
+.center {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
+}
+.color-prim {color:var(--dt-primary) !important;}
 /* animation */
 @keyframes fadeInDown {
 	0% {
