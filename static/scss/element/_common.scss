@@ -327,6 +327,13 @@ button {
 		padding: 36px 0 48px 0;
 		gap: 48px;
 	}
+	&.detail {
+		.info-col-wrap {
+			& + .btn-group {
+				margin-top:16px;
+			}
+		}
+	}
 	&.summary {
 		padding-bottom:18px;
 		background-color:#DCE6FF;
