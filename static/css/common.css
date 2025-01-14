@@ -274,7 +274,7 @@ button {
   cursor: pointer;
 }
 
-/* Element */
+/* Util class */
 .hidden {
   display: none !important;
 }
@@ -292,6 +292,16 @@ button {
 
 .color-prim {
   color: var(--dt-primary) !important;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 /* animation */
@@ -413,17 +423,23 @@ button {
   gap: 48px;
 }
 .section__cont.summary {
-  padding-bottom: 20px;
+  padding-bottom: 18px;
   background-color: #DCE6FF;
 }
-.section__cont.summary .cont__wrap-bill {
+.section__cont.summary .cont__wrap {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 174px;
-  height: -moz-max-content;
   height: max-content;
   padding-top: 28px;
+  background-repeat: no-repeat;
+  background-size: 140px;
+}
+.section__cont.summary .cont__wrap:has(.select-billdate) .cont__txt-box {
+  min-height: 36px;
+}
+.section__cont.summary .cont__wrap .cont__txt-box {
+  min-height: 110px;
 }
 
 .cont__wrap {
@@ -465,39 +481,45 @@ button {
   font-size: 18px;
   font-weight: 600;
 }
-.cont__wrap.cont__wrap-bill {
-  padding-right: 120px;
-  background-image: url(../images/img/img-hm-bill.png);
-  background-position: right 10px top 14px;
-  background-repeat: no-repeat;
-  background-size: 140px;
-}
-.cont__wrap.cont__wrap-bill:has(.select-billdate) {
-  background-position: right 10px top 36px;
-}
-.cont__wrap.cont__wrap-bill:has(.select-billdate) .cont__txt-box {
-  min-height: 36px;
-}
-.cont__wrap.cont__wrap-bill .cont__txt-box {
-  min-height: 110px;
-}
-.cont__wrap.cont__wrap-bill .select-billdate {
+.cont__wrap .select-billdate {
   display: flex;
   flex-direction: column;
 }
-.cont__wrap.cont__wrap-bill .select-billdate .txt-due {
+.cont__wrap .select-billdate .txt-due {
   margin-bottom: 4px;
   color: var(--dt-gray13);
   font-size: 14px;
   font-weight: 500;
+  line-height: 21px;
 }
-.cont__wrap.cont__wrap-bill .select-billdate .txt-select-wrap {
+.cont__wrap .select-billdate .txt-select-wrap {
   color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 600;
 }
-.cont__wrap.cont__wrap-bill .select-billdate .txt-select-wrap .chips-date {
+.cont__wrap .select-billdate .txt-select-wrap .chips-date {
   margin-right: 4px;
+}
+.cont__wrap.cont__wrap-bill {
+  min-height: 174px;
+  padding-right: 120px;
+  background-image: url(../images/img/img-hm-bill.png);
+  background-position: right 10px top 14px;
+}
+.cont__wrap.cont__wrap-bill:has(.select-billdate) {
+  background-position: right 10px top 36px;
+}
+.cont__wrap.cont__wrap-realtime {
+  min-height: 164px;
+  padding-right: 120px;
+  background-image: url(../images/img/img-hm-realtime.png);
+  background-position: right 10px top 35px;
+}
+.cont__wrap.cont__wrap-realtime .select-billdate .txt-due {
+  margin-bottom: 9px;
+}
+.cont__wrap.cont__wrap-realtime .cont__txt-box {
+  row-gap: 0;
 }
 
 .con__tit-box {
@@ -579,6 +601,24 @@ button {
   height: 18px;
 }
 
+/* 진행률 바 default */
+.progress-area .progress-bg {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10px;
+  border-radius: 100px;
+  background-color: var(--dt-gray08);
+}
+.progress-area .progress-bg .progress-bar {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: var(--dt-primary);
+  border-radius: 100px;
+  transition: width 0.3s ease-in;
+}
+
 .info-col-wrap {
   display: flex;
   flex-direction: column;
@@ -588,10 +628,56 @@ button {
   background-color: var(--dt-gray02);
 }
 .info-col-wrap .row {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+}
+.info-col-wrap .row.title-wrap {
+  align-items: center;
+}
+.info-col-wrap .row.title-wrap .txt-title {
+  color: var(--dt-gray12);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.info-col-wrap .row.title-wrap .txt-title.ico {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 6px;
+}
+.info-col-wrap .row.title-wrap .txt-title.ico .img-box {
+  width: 28px;
+  height: 28px;
+}
+.info-col-wrap .row.title-wrap .txt-title.ico .img-box img {
+  width: 100%;
+}
+.info-col-wrap .row.title-wrap .chips.neutral {
+  background-color: transparent;
+}
+.info-col-wrap .col.plan-wrap {
+  row-gap: 8px;
+}
+.info-col-wrap .col.plan-wrap .txt-plan {
+  margin-bottom: 4px;
+}
+.info-col-wrap .col.plan-wrap .txt-plan .current {
+  display: inline-block;
+  margin-right: 6px;
+  color: var(--dt-gray16);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.info-col-wrap .col.plan-wrap .txt-plan .total, .info-col-wrap .col.plan-wrap .txt-caution {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.info-col-wrap .col.plan-wrap .txt-caution {
+  text-align: right;
 }
 .info-col-wrap .txt-title {
   color: var(--dt-gray12);
@@ -613,14 +699,6 @@ button {
   background-color: var(--dt-gray02);
   border-radius: 8px;
   overflow: hidden;
-}
-.info-price-wrap .row {
-  display: flex;
-  flex-direction: row;
-}
-.info-price-wrap .col {
-  display: flex;
-  flex-direction: column;
 }
 .info-price-wrap .info-price:not(.total-last), .info-price-wrap .info-price-detail:not(.total-last) {
   position: relative;
@@ -709,8 +787,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   min-width: 184px;
   padding: 13px 4px 12px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -739,8 +816,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
   color: var(--dt-gray11);
@@ -1139,7 +1215,6 @@ button {
   height: 48px;
 }
 .chatbot .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1155,7 +1230,6 @@ button {
   height: 48px;
 }
 .home .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1544,7 +1618,6 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--dt-gray10);
   padding: 4px 6px;
@@ -1629,7 +1702,6 @@ button {
 }
 .badge.badge-round {
   min-width: 26px;
-  max-width: -moz-max-content;
   max-width: max-content;
   min-height: 26px;
   border-radius: 27.78vw;
@@ -1885,8 +1957,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   margin-left: auto;
 }
 .header .header__btn .btn {
@@ -1894,7 +1965,6 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .header .header__btn .btn .txt {
@@ -1946,8 +2016,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin-bottom: 4px;
   padding: 20px 8px 8px 20px;
 }
@@ -2261,11 +2330,23 @@ button {
   cursor: not-allowed; /* 비활성화된 상태에서 커서 변경 */
 }
 
+.accordion-container:only-child .info-price, .accordion-container:only-child .info-price-detail {
+  padding-bottom: 0;
+}
+.accordion-container:only-child .info-price::after, .accordion-container:only-child .info-price-detail::after {
+  display: none;
+}
+.accordion-container:only-child.open .info-price {
+  padding-bottom: 16px;
+}
+.accordion-container:only-child.open .info-price::after {
+  display: block;
+}
 .accordion-container .accordion-header {
   cursor: pointer;
 }
 .accordion-container .accordion-header.info-price .txt-price .img-box {
-  transition: transform 0.3s ease 0.2s;
+  transition: transform 0.3s ease;
 }
 .accordion-container .accordion-content {
   visibility: hidden;
@@ -2294,8 +2375,7 @@ button {
 }
 .accordion-header .txt-title {
   flex: 1;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   text-align: left;
   line-height: 23px;
 }
