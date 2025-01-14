@@ -367,7 +367,9 @@
 }
 
 .center {
-	padding: 30px 20px;
+	min-height: 130px;
+	justify-content: center;
+	padding: 20px;
 	.card-body {
 		align-items: center;
 	}
@@ -376,14 +378,9 @@
 		min-width: 40px;
 		height: 40px;
 	}
-	.item {
-		align-items: center;
-		&.text {
-			gap: 4px;
-			text-align: center;
-		}
+	.text-box {
 		.tit {
-			font-weight: 500;
+			@include fw-6();
 		}
 	}
 }

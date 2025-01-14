@@ -524,16 +524,46 @@ button {
 }
 .img-box.ico16 {
   width: 16px;
+  min-width: 16px;
   height: 16px;
 }
 .img-box.ico20 {
   width: 20px;
+  min-width: 20px;
   height: 20px;
+}
+.img-box.ico40 {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+.img-box.ico96 {
+  width: 96px;
+  min-width: 96px;
+  height: 96px;
 }
 .img-box img {
   width: 100%;
   height: 100%;
   vertical-align: top;
+}
+
+/* text-box */
+.text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: center;
+}
+.text-box .tit {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.text-box .txt {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-gray11);
 }
 
 /* tooltip 기본 */
@@ -1216,7 +1246,9 @@ button {
 }
 
 .center {
-  padding: 30px 20px;
+  min-height: 130px;
+  justify-content: center;
+  padding: 20px;
 }
 .center .card-body {
   align-items: center;
@@ -1226,15 +1258,9 @@ button {
   min-width: 40px;
   height: 40px;
 }
-.center .item {
-  align-items: center;
-}
-.center .item.text {
-  gap: 4px;
-  text-align: center;
-}
-.center .item .tit {
-  font-weight: 500;
+.center .text-box .tit {
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .explain .flag {
