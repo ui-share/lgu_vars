@@ -58,12 +58,19 @@
 		max-height: 513px;
 		padding: 0 20px 20px;
 		overflow-y: auto;
-		.text-box {
-			.tit {
-				font-size: 24px;
-				.color-prim {
+		&.center {
+			gap: 20px;
+			.text-box {
+				gap: 12px;
+				.tit {
 					font-size: 24px;
-					font-weight: 600;
+					.color-prim {
+						font-size: 24px;
+						font-weight: 600;
+					}
+				}
+				.txt {
+					font-size: 16px;
 				}
 			}
 		}
