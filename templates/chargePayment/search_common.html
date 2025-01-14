@@ -35,7 +35,7 @@
 		<!-- container -->
 		<div class="container">
             <!-- 홀맨 배너 영역// -->
-            <div class="section__cont summary">
+            <div class="section__cont summary"><!-- 청구요금조회 -->
                 <div class="cont__wrap cont__wrap-bill">
                     <div class="select-billdate">
                         <span class="txt-due">2월 1일 ~ 2월 28일</span>
@@ -55,16 +55,18 @@
 					</div>
 				</div>
                 <div class="info-price-single">
-                      <span class="txt-info">
-                        지난 달보다<span class="txt-price">38,000원</span>늘었어요
+                    <span class="txt-info">
+                      지난 달보다
+                      <span>
+                          <span class="txt-price">38,000원</span>늘었어요
+                          <span class="img-box">
+                                <img src="../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+                          </span>
                       </span>
-                      <span class="img-box">
-                            <img src="../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
-                      </span>
-                </div>
+                    </span>
+              </div>
             </div>
-             <!-- 청구 예정 상태 -->
-            <div class="section__cont summary">
+            <div class="section__cont summary"><!-- 청구 예정 상태 -->
                 <div class="cont__wrap cont__wrap-bill">
                     <div class="select-billdate">
                         <span class="txt-due">2월 1일 ~ 2월 28일</span>
@@ -83,11 +85,25 @@
 					</div>
 				</div>
             </div>
-            <!-- 발행 전 -->
-            <div class="section__cont summary">
+            <div class="section__cont summary"><!-- 청구요금서 발행 전 -->
                 <div class="cont__wrap cont__wrap-bill">
 					<div class="cont__txt-box">
 						<h4 class="txt">아직 청구서가<br />발행되지 않았어요</h4>
+					</div>
+				</div>
+            </div>
+
+            <div class="section__cont summary"><!-- 실시간요금조회 -->
+                <div class="cont__wrap cont__wrap-realtime">
+                    <div class="select-billdate">
+                        <span class="txt-due">7월 1일부터 ~ 오늘까지</span>
+                    </div>
+                    <div class="cont__txt-box">
+                        <h4 class="txt">이번 달 실시간 요금은</h4>
+						<h4 class="txt price">
+                            <span class="deco">32,000</span>
+                            <span class="color-prim">원</span>이에요
+						</h4>
 					</div>
 				</div>
             </div>
@@ -163,7 +179,7 @@
                             </div>
                         </div>
 
-                        <div class="list-info-price accordion-container open">
+                        <div class="list-info-price accordion-container">
                             <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
                                 <span class="row txt-title">
                                     <div class="badge badge-round">
@@ -202,7 +218,7 @@
                             </div>
                         </div>
 
-                        <div class="list-info-price accordion-container open">
+                        <div class="list-info-price accordion-container">
                             <button class="info-price accordion-header">
                                 <span class="row txt-title">
                                     <div class="badge badge-round">
@@ -265,7 +281,7 @@
                 <div class="cont__wrap">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
-                            <span class="txt-title">요금 상세</span>
+                            <span class="txt-title">[청구서 미발행 케이스]_요금 상세</span>
                         </h6>
                     </div>
                     <div class="card solid center">
@@ -322,6 +338,212 @@
                                 납기일 이후 납부하는 경우 다음달 요금에 2% 연체가산금이 추가됩니다.
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section__cont detail">
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">실시간 요금 상세</span>
+                        </h6> 
+                    </div>
+                    <div class="info-price-wrap">
+                        <!-- open 클래스로 show/hide 조정 -->
+                        <div class="list-info-price accordion-container open">
+                            <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+                                <span class="row txt-title">
+                                    <div class="badge badge-round">
+                                        <span class="txt">A</span>
+                                    </div>
+                                    <span>휴대폰 이용요금</span>
+                                </span>
+                                <span class="row txt-price">
+                                    <span>60,000원</span>
+                                    <span class="img-box">
+                                        <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+                                    </span>
+                                    
+                                </span>
+                            </button>
+                            <div class="accordion-content"><!-- 아코디언 컨텐트 -->
+                                <ul class="info-price-detail">
+                                    <li class="info-wrap">
+                                        <!-- default -->
+                                        <div class="row">
+                                            <span class="txt-title ico">
+                                                월정액
+                                            </span>
+                                            <span class="txt-price">105,000원</span>
+                                        </div>
+                                    </li>
+                                    <li class="info-wrap">
+                                        <div class="row">
+                                            <span class="txt-title ico">
+                                                할인요금
+                                            </span>
+                                            <span class="txt-price">-45,000원</span>
+                                        </div>
+                                        <ul class="col list-detail">
+                                            <li class="row">
+                                                <span class="txt-title">선택약정 25% 할인</span>
+                                                <span class="txt-price">-18,000원</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 무제한 요금제 -->
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">[무제한 케이스]_실시간 데이터 상세</span>
+                        </h6> 
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-chart.svg" alt="">
+                                </span>
+                                데이터
+                            </span>
+                            <button class="chips neutral">
+                                <span class="txt">충전/선물</span>
+                            </button>
+                        </div>
+                        <div class="col plan-wrap">
+                            <div class="txt-plan">
+                                <span class="current">12GB</span>
+                                <span class="total">/ 무제한</span>
+                            </div>
+                            <div class="progress-area realtime">
+                                <span class="progress-bg">
+                                    <!-- style.width %로 조절 -->
+                                    <span class="progress-bar" style="width:100%;"></span>
+                                </span>
+                            </div>
+                            <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">실시간 사용량 보기</span>
+                        </button>
+                    </div>
+                    <div class="bullet-wrap caution">
+                        <h5 class="bullet-caption">
+                            유의사항
+                        </h5>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                청구서는 2024년 3월 4일 기준으로 작성되었습니다.
+                            </li>
+                            <li class="bullet-item">
+                                납기일 이후 납부하는 경우 다음달 요금에 2% 연체가산금이 추가됩니다.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 속도제한 요금제 -->
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">[속도제한 케이스]_실시간 데이터 상세</span>
+                        </h6> 
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-chart.svg" alt="">
+                                </span>
+                                데이터
+                            </span>
+                            <button class="chips neutral">
+                                <span class="txt">충전/선물</span>
+                            </button>
+                        </div>
+                        <div class="col plan-wrap">
+                            <div class="txt-plan">
+                                <span class="current">8.49GB</span>
+                                <span class="total">/ 14GB</span>
+                            </div>
+                            <div class="progress-area realtime">  
+                                <span class="progress-bg">
+                                    <!-- style.width %로 조절 -->
+                                    <span class="progress-bar" style="width:37%;"></span>
+                                </span>
+                            </div>
+                            <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 종량형 요금제 -->
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">[종량형 케이스]_실시간 데이터 상세</span>
+                        </h6> 
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-chart.svg" alt="">
+                                </span>
+                                데이터
+                            </span>
+                            <button class="chips neutral">
+                                <span class="txt">충전/선물</span>
+                            </button>
+                        </div>
+                        <div class="col plan-wrap">
+                            <div class="txt-plan">
+                                <span class="current">8.49GB</span>
+                                <span class="total">/ 14GB</span>
+                            </div>
+                            <div class="progress-area realtime">  
+                                <span class="progress-bg">
+                                    <!-- style.width %로 조절 -->
+                                    <span class="progress-bar" style="width:37%;"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 쓰는만큼내는 요금제 -->
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">[쓰는만큼내는 케이스]_실시간 데이터 상세</span>
+                        </h6> 
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-chart.svg" alt="">
+                                </span>
+                                데이터
+                            </span>
+                            <button class="chips neutral">
+                                <span class="txt">충전/선물</span>
+                            </button>
+                        </div>
+                        <div class="col plan-wrap">
+                            <div class="txt-plan">
+                                <span class="current">10GB</span>
+                                <span class="total">/ 1MB당 286.72원</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

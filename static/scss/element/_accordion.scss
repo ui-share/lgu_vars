@@ -2,11 +2,23 @@
 
 // 아코디언 인터랙션 실행 관련 코드
 .accordion-container {
+    &:only-child {
+        .info-price, .info-price-detail {
+            padding-bottom:0;
+            &::after {display:none}
+        }
+        &.open { 
+            .info-price{
+                padding-bottom:16px;
+                &::after {display:block}
+            }
+        }
+    }
     .accordion-header {
         cursor: pointer;
         &.info-price {
             .txt-price .img-box {
-                transition: transform 0.3s ease 0.2s;
+                transition: transform 0.3s ease;
             }
         }
     }
