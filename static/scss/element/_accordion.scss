@@ -2,19 +2,17 @@
 
 // 아코디언 인터랙션 실행 관련 코드
 .accordion-container {
-    .accordion-content {
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-    }
-
     .accordion-header {
         cursor: pointer;
         &.info-price {
             .txt-price .img-box {
-                transition: transform 0.25s ease 0.2s;
+                transition: transform 0.3s ease 0.2s;
             }
         }
+    }
+    .accordion-content {
+        visibility:hidden;
+        height:0;
     }
     &.open {
         .accordion-header {
@@ -25,9 +23,8 @@
             }
         }
         > .accordion-content {
-            overflow: visible;
-            height: auto;
-            opacity: 1;
+            visibility:visible;
+            height:auto
         }
     }
 }

@@ -3,10 +3,13 @@
     display: none;
 	position: fixed;
 	top: 0;
-	left: 0;
-	z-index: 9999;
-	width: 100%;
+	left: 50%;
+	transform:translateX(-50%);
+	width: 100vw;
+	max-width:var(--max-devicewidth);
 	height: 100%;
+	z-index: 9999;
+
 	// popup-title
 	&.popup__tit {
 		.popup-header {
@@ -14,7 +17,7 @@
 		}
 	}
 	.popup__wrap {
-		position: fixed;
+		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
@@ -36,6 +39,7 @@
 			.txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
+				word-break: keep-all;
 			}
 		}
 		.btn-util {
@@ -50,23 +54,32 @@
 		}
 	}
 	.popup-body {
-		overflow-y: auto;
 		min-height: 84px;
 		max-height: 513px;
 		padding: 0 20px 20px;
+		overflow-y: auto;
+		.text-box {
+			.tit {
+				font-size: 24px;
+				.color-prim {
+					font-size: 24px;
+					font-weight: 600;
+				}
+			}
+		}
 	}
 	.popup-footer {
-		padding: 0 20px;
 		margin: 20px 0 20px;
+		padding: 0 20px;
 	} 
     .back-drop {
-        background-color: var(--dt-black);
-        opacity: .6;
-        width: 100%;
-        height: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--dt-black);
+        opacity: .6;
     }
     // show animation
     &.show {
@@ -77,105 +90,191 @@
     }
 }
 
-.authorization {
-	.auth {
-		text-align: center;
-		.txt {
-			@include fw-5();
-			color: var(--dt-gray11);
-			margin-bottom: 10px;
+// popbody 내 content
+.popup-body {
+	.authorization {
+		.auth {
+			text-align: center;
+			.txt {
+				@include fw-5();
+				color: var(--dt-gray11);
+				margin-bottom: 10px;
+			}
+			.tit {
+				@include fw-6(24px);
+				color: var(--dt-black);
+			}
+			.deco {
+				@include fw-6(24px);
+				color: var(--dt-primary);
+			}
 		}
-		.tit {
-			@include fw-6(24px);
-			color: var(--dt-black);
+		.input_code {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 42px 0 26px;
+			gap: 6px;
+			.code-group {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 6px;
+				.code-box {
+					display: inline-block;
+					width: 48px;
+					min-height: 52px;
+					padding: 12px 8px;
+					border-radius: 4px;
+					background: var(--dt-gray02);
+					.num {
+						@include fw-7(24px);
+						color: var(--dt-gray16);
+						&.placeholder {
+							color: var(--dt-gray11);
+						}
+					}
+				}
+			}
 		}
-		.deco {
-			@include fw-6(24px);
-			color: var(--dt-primary);
+		.tab__wrap {
+			display: none;
+		}
+		.auth_birth {
+			display: none;
+		}
+		.auth_business {
+			display: none;
+		}
+		.auth_corporation {
+			display: none;
+		}
+		&.tab {
+			.tab__wrap {
+				display: block;
+			}
+		}
+		&.birth {
+			.auth_birth {
+				display: block;
+			}
+		}
+		&.business {
+			.auth_business {
+				display: block;
+			}
+		}
+		&.corporation {
+			.auth_corporation {
+				display: block;
+			}
 		}
 	}
-	.input_code {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 42px 0 26px;
-		gap: 6px;
-		.code-group {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 6px;
-			.code-box {
-				display: inline-block;
-				width: 48px;
-				min-height: 52px;
-				padding: 12px 8px;
-				border-radius: 4px;
-				background: var(--dt-gray02);
-				.num {
-					@include fw-7(24px);
-					color: var(--dt-gray16);
-					&.placeholder {
-						color: var(--dt-gray11);
+	
+	.calendar-box {
+		@include flexBox(center, center);
+		flex-direction:column;
+		min-width:220px;
+		max-width:320px;
+		margin: auto;
+		&.year-month {padding-top:12px;}
+		.nav-schedule {
+			@include flexRow;
+			justify-content:space-between;
+			align-items:center;
+			min-width:172px;
+			padding-top:12px;
+			padding-bottom:12px;
+			button > span {font-size:0;}
+			.img-box {
+				width:24px;height:24px;
+				background-position:center;
+				background-repeat:no-repeat;
+				background-size:100%;
+				&.is-disabled {
+					pointer-events:none;
+					opacity: 30%;
+				}
+				&.btn-prev {
+					background-image:url(../images/icon/ic-btn-arrow-right-lg.svg);
+				}
+				&.btn-next {
+					transform:rotate(180deg);
+					background-image:url(../images/icon/ic-btn-arrow-right-lg.svg);
+				}
+			}
+			.txt-wrap {
+				margin-left:36px;margin-right:36px;
+				text-align: center;
+				span {
+					@include fw-7(20px);
+					line-height:24px;
+				}
+			}
+		}
+		.schedule-cont-wrap {
+			&.list-month {
+				@include flexRow;
+				justify-content:center;
+				flex-wrap:wrap;
+				margin-top:14px;
+				li {
+					position:relative;
+					@include flexBox(center, center);
+					width:72px;height:72px;
+					overflow:hidden;
+					.btn-month {
+						position:relative;
+						width:calc(100% - 12px);
+						height:calc(100% - 12px);
+						padding:17px 0;
+						@include fw-6(16px);
+						text-align:center;
+						border-radius:50%;
+						border:2px solid transparent;
+					}
+					&.current {
+						.btn-month{color:var(--dt-primary);}
+					}
+					&.is-selected {
+						&::before {
+							content:'';display:block;
+							position:absolute;
+							top:50%;transform:translateY(-50%);left:0;
+							// z-index:-1;
+							width:100%;height:42px;
+							background-color:rgba(227, 0, 132, 0.2);
+						}
+						&:has(.pointed) {
+							&::before {
+								width:42px;
+							}
+							&:nth-child(4n) {
+								&::before {
+									left:unset;right:0;
+								}
+							}
+						}
+						.btn-month{
+							&.pointed {
+								color:var(--dt-primary);
+								background-color:var(--dt-white);
+								border-color:var(--dt-primary);
+							}
+						}
+					}
+					&.is-disabled {
+						.btn-month {
+							color:var(--dt-gray09);
+							pointer-events:none;
+						}
 					}
 				}
 			}
 		}
 	}
-	.tab__wrap {
-		display: none;
-	}
-	.auth_birth {
-		display: none;
-	}
-	.auth_business {
-		display: none;
-	}
-	.auth_corporation {
-		display: none;
-	}
-	&.tab {
-		.tab__wrap {
-			display: block;
-		}
-	}
-	&.birth {
-		.auth_birth {
-			display: block;
-		}
-	}
-	&.business {
-        .auth_business {
-            display: block;
-        }
-    }
-	&.corporation {
-        .auth_corporation {
-            display: block;
-        }
-    }
-}
-
-.list-month {
-	display:grid;
-	grid-template-columns:repeat(4, 1fr);
-	grid-template-rows:60px;
-	gap:2px;
-	li {
-		border:1px solid red;
-		.btn-month {
-			padding:19px 0 17px;
-			text-align:center;
-			border-radius:50%;
-			@include fw-6(16px);
-			border:1px solid transparent;
-			&.current {
-				color:var(--dt-primary);
-			}
-			&.is-selected {
-				color:var(--dt-primary);
-				border-color:var(--dt-primary);
-			}
-		}
+	
+	.guide {
+	
 	}
 }
