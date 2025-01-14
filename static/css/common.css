@@ -1600,36 +1600,37 @@ button {
 }
 
 .info-price-single {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 6px;
   margin: 0 20px;
   padding: 18px 20px;
   background-color: var(--dt-white);
   border-radius: 8px;
 }
+.info-price-single span {
+  text-align: center;
+}
 .info-price-single .txt-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   color: var(--dt-gray11);
   font-size: 16px;
   font-weight: 600;
 }
 .info-price-single .txt-info .txt-price {
   display: inline-block;
-  margin: 0 4px;
+  margin-left: 4px;
+  margin-right: 4px;
   color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 700;
 }
-.info-price-single .txt-info:has(+ .img-box) {
-  max-width: calc(100% - 24px);
-}
-.info-price-single .img-box {
+.info-price-single .txt-info .img-box {
   width: 18px;
   height: 18px;
+  margin-left: 4px;
 }
-.info-price-single .img-box img {
+.info-price-single .txt-info .img-box img {
   margin-top: 1px;
 }
 
@@ -1817,17 +1818,6 @@ button {
   font-size: 14px;
   font-weight: 600;
 }
-.header .header__btn .btn.line {
-  padding-left: 32px;
-  background-size: 16px;
-  background-position: left 12px center;
-  background-repeat: no-repeat;
-  background-image: url(../images/icon/ic-btn-audio-black.svg);
-  border-color: rgba(59, 64, 68, 0.15);
-}
-.header .header__btn .btn.line .txt {
-  color: var(--dt-gray14);
-}
 .header .header__btn .btn-callEnd {
   background-color: var(--dt-primary);
   border-color: var(--dt-primary);
@@ -1850,10 +1840,12 @@ button {
   display: none;
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  max-width: var(--max-devicewidth);
   height: 100%;
+  z-index: 9999;
 }
 .popup-wrapper.popup__tit .popup-header {
   margin-bottom: 4px;
@@ -1887,6 +1879,7 @@ button {
   color: var(--dt-gray16);
   font-size: 20px;
   font-weight: 700;
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .btn-popup-close {
   display: flex;
@@ -1997,29 +1990,111 @@ button {
   display: block;
 }
 
-.list-month {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 60px;
-  gap: 2px;
+.calendar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 220px;
+  max-width: 320px;
+  margin: auto;
 }
-.list-month li {
-  border: 1px solid red;
+.calendar-box .nav-schedule {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 172px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
-.list-month li .btn-month {
-  padding: 19px 0 17px;
+.calendar-box .nav-schedule button > span {
+  font-size: 0;
+}
+.calendar-box .nav-schedule .img-box {
+  width: 24px;
+  height: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.calendar-box .nav-schedule .img-box.is-disabled {
+  pointer-events: none;
+  opacity: 30%;
+}
+.calendar-box .nav-schedule .img-box.btn-prev {
+  background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
+}
+.calendar-box .nav-schedule .img-box.btn-next {
+  transform: rotate(180deg);
+  background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
+}
+.calendar-box .nav-schedule .txt-wrap {
+  margin-left: 36px;
+  margin-right: 36px;
   text-align: center;
-  border-radius: 50%;
+}
+.calendar-box .nav-schedule .txt-wrap span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.calendar-box .schedule-cont-wrap.list-month {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.calendar-box .schedule-cont-wrap.list-month li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+.calendar-box .schedule-cont-wrap.list-month li .btn-month {
+  position: relative;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  padding: 17px 0;
   font-size: 16px;
   font-weight: 600;
-  border: 1px solid transparent;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid transparent;
 }
-.list-month li .btn-month.current {
+.calendar-box .schedule-cont-wrap.list-month li.current .btn-month {
   color: var(--dt-primary);
 }
-.list-month li .btn-month.is-selected {
+.calendar-box .schedule-cont-wrap.list-month li.is-selected::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 42px;
+  background-color: rgba(227, 0, 132, 0.2);
+}
+.calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed)::before {
+  width: 42px;
+}
+.calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed):nth-child(4n)::before {
+  left: unset;
+  right: 0;
+}
+.calendar-box .schedule-cont-wrap.list-month li.is-selected .btn-month.pointed {
   color: var(--dt-primary);
+  background-color: var(--dt-white);
   border-color: var(--dt-primary);
+}
+.calendar-box .schedule-cont-wrap.list-month li.is-disabled .btn-month {
+  color: var(--dt-gray09);
+  pointer-events: none;
 }
 
 .switch-group .switch-input {
@@ -2085,24 +2160,22 @@ button {
   cursor: not-allowed; /* 비활성화된 상태에서 커서 변경 */
 }
 
-.accordion-container .accordion-content {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-}
 .accordion-container .accordion-header {
   cursor: pointer;
 }
 .accordion-container .accordion-header.info-price .txt-price .img-box {
-  transition: transform 0.25s ease 0.2s;
+  transition: transform 0.3s ease 0.2s;
+}
+.accordion-container .accordion-content {
+  visibility: hidden;
+  height: 0;
 }
 .accordion-container.open .accordion-header.info-price .txt-price .img-box {
   transform: rotate(180deg);
 }
 .accordion-container.open > .accordion-content {
-  overflow: visible;
+  visibility: visible;
   height: auto;
-  opacity: 1;
 }
 
 .accordion-header {

@@ -26,7 +26,6 @@
                 <button type="button" class="btn btn-util prev"><span>이전</span></button>
             </div>
             <div class="header__btn btn-group">
-                <button type="button" class="btn line btn-md"><span class="txt">상담사</span></button>
                 <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
             </div>
         </header>
@@ -56,10 +55,13 @@
 				</div>
                 <div class="info-price-single">
                       <span class="txt-info">
-                        지난 달보다<span class="txt-price">38,000원</span>늘었어요
-                      </span>
-                      <span class="img-box">
-                            <img src="../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+                        지난 달보다
+                        <span>
+                            <span class="txt-price">38,000원</span>늘었어요
+                            <span class="img-box">
+                                  <img src="../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+                            </span>
+                        </span>
                       </span>
                 </div>
             </div>
@@ -80,7 +82,7 @@
                         </div>
                     </div>
                     <div class="info-price-wrap">
-                        <!-- data-open="true/false"로 아코디언 실행 -->
+                        <!-- open 클래스로 show/hide 조정 -->
                         <div class="list-info-price accordion-container open">
                             <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
                                 <span class="row txt-title">
@@ -94,7 +96,7 @@
                                     <span class="img-box">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
-                                    <!-- unactive : style="translate: none; rotate: none; scale: none; transform: scale(1, -1);" -->
+                                    
                                 </span>
                             </button>
                             <div class="accordion-content"><!-- 아코디언 컨텐트 -->
@@ -135,7 +137,7 @@
                         </div>
 
                         <div class="list-info-price accordion-container open">
-                            <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+                            <button class="info-price accordion-header">
                                 <span class="row txt-title">
                                     <div class="badge badge-round">
                                         <span class="txt">B</span>
@@ -149,7 +151,7 @@
                                     </span>
                                 </span>
                             </button>
-                            <div class="accordion-content"><!-- 아코디언 컨텐트 -->
+                            <div class="accordion-content">
                                 <ul class="info-price-detail">
                                     <li class="info-wrap">
                                         <!-- default -->
@@ -314,31 +316,41 @@
 			<div class="popup-body">
                 <div class="calendar-box year-month">
                     <div class="nav-schedule">
-                        <span class="btn-prev img-box">
+                        <!-- 
+                            btn-prev, btn-next에 is-disabled 추가 시 비활성화, 클릭 동작 비활성화
+                        -->
+                        <button type="button" class="btn-prev img-box">
                             <span>이전버튼</span>
-                        </span>
+                        </button>
                         <span class="txt-wrap">
                             <span>2024</span>
                             <!-- <span>24년</span>
                             <span>11월</span> -->
                         </span>
-                        <span class="btn-next img-box">
+                        <button type="button" class="btn-next img-box is-disabled">
                             <span>다음버튼</span>
-                        </span>
+                        </button>
                     </div>
-                    <div class="schedule-cont-wrap">
-                        <ul class="list-month">
-                            <li><button class="btn-month">1월</button></li>
-                            <li><button class="btn-month">2월</button></li>
-                            <li><button class="btn-month">3월</button></li>
-                            <li><button class="btn-month is-selected">4월</button></li>
+                    <ul class="schedule-cont-wrap list-month">
+                        <!--
+                            li is-selected(선택함) / current(당월) / is-disabled(선택할수없음) 클래스로 스타일 조작
+                            기간 선택 시 : 선택된 기간개수만큼 li에 is-selected 추가 및 시작월, 종료월 btn-month에는 각 pointed 클래스 추가
+                        -->
+                        <li><button class="btn-month">1월</button></li>
+                        <li><button class="btn-month">2월</button></li>
+                        <li><button class="btn-month">3월</button></li>
+                        <li class="is-selected"><button class="btn-month pointed">4월</button></li>
 
-                            <li><button class="btn-month">5월</button></li>
-                            <li><button class="btn-month current">6월</button></li>
-                            <li><button class="btn-month is-disabled">7월</button></li>
-                            <li><button class="btn-month is-disabled">8월</button></li>
-                        </ul>
-                    </div>
+                        <li class="is-selected"><button class="btn-month">5월</button></li>
+                        <li class="is-selected"><button class="btn-month">6월</button></li>
+                        <li class="is-selected"><button class="btn-month pointed">7월</button></li>
+                        <li><button class="btn-month">8월</button></li>
+
+                        <li class="current"><button class="btn-month">9월</button></li>
+                        <li><button class="btn-month">10월</button></li>
+                        <li class="is-disabled"><button class="btn-month">11월</button></li>
+                        <li class="is-disabled"><button class="btn-month ">12월</button></li>
+                    </ul>
                 </div>
             </div>
 			<div class="popup-footer"></div>

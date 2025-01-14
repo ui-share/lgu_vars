@@ -109,7 +109,7 @@ http://scripts.sil.org/OFL
 	--max-devicewidth: 568px !important;
 }
 @media (hover: hover), (-moz-touch-enabled: 0), (pointer:fine) {
-    body {
+    body{
         --max-devicewidth: 580px !important;
     }
 }
@@ -499,27 +499,27 @@ button {
 	}
 }
 .info-price-single {
-	@include flexRow;
-	align-items:center;
-	justify-content:center;
-	column-gap: 6px;
 	margin:0 20px;
 	padding:18px 20px;
 	background-color:var(--dt-white);
 	border-radius:8px;
+	span {text-align:center}
 	.txt-info {
+		@include flexBox(center, center);
+		flex-wrap:wrap;
 		color:var(--dt-gray11);
 		@include fw-6();
 		.txt-price {
 			display:inline-block;
-			margin:0 4px;
+			margin-left:4px;
+			margin-right:4px;
 			color:var(--dt-gray16);
 			@include fw-7(18px);
 		}
-		&:has(+ .img-box) {max-width:calc(100% - 24px);}
-	}
-	.img-box {
-		width:18px;height:18px;
-		img {margin-top:1px;}
+		.img-box {
+			width:18px;height:18px;
+			margin-left:4px;
+			img {margin-top:1px;}
+		}
 	}
 }
