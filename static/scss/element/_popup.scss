@@ -58,6 +58,15 @@
 		max-height: 513px;
 		padding: 0 20px 20px;
 		overflow-y: auto;
+		.text-box {
+			.tit {
+				font-size: 24px;
+				.color-prim {
+					font-size: 24px;
+					font-weight: 600;
+				}
+			}
+		}
 	}
 	.popup-footer {
 		margin: 20px 0 20px;
@@ -260,4 +269,8 @@
 			}
 		}
 	}
+}
+
+.guide {
+
 }
