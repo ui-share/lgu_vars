@@ -11,10 +11,10 @@
 	<title>팝업 공통 레이아웃</title>
 
 	<!-- Css -->
-	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css">
 </head>
 <body>
-	<div class="page-wrapper is-scrolled">
+	<div class="page-wrapper">
 		<div class="container">
 			<div class="section__cont"></div>
 		</div>
@@ -28,16 +28,21 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<!-- 타이틀 사용 안하시면 hidden 처리 
-					<div class="popup-tit hidden">
-				-->
 				<div class="popup-tit hidden">
-					<span class="txt">	팝업 타이틀텍스트</span>
+					<span class="txt"></span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
-			<div class="popup-body"></div>
-			<!-- footer안 쓸 때는 hidden -->
+			<div class="popup-body center">
+				<span class="img-box ico96">
+					<img src="../../../static/images/img/img_chatbot.png" alt="챗봇봇으로 연결">
+				</span>
+				<div class="text-box">
+					<span class="tit">눈으로 보는 ARS 종료 후,<br><span class="color-prim">챗봇</span>으로 연결됩니다</span>
+					<span class="txt">챗봇으로 자동 이동합니다.</span>
+				</div>
+			</div>
+			
 			<div class="popup-footer">
 				<div class="btn-group flex-row is-confirmed">
 					<button class="btn btn-sec" type="button">
