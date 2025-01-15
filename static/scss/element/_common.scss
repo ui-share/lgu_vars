@@ -442,6 +442,11 @@ button {
 			.chips-date {margin-right:4px;}
 		}
 	}
+	&.cont__wrap-vertical {
+		@include flexColum;
+		row-gap:16px;
+		.bullet-caption {margin-top:8px;}
+	}
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
@@ -537,11 +542,7 @@ button {
 		color: var(--dt-gray11);
 	}
 }
-/* tooltip 기본 */
-.tooltip img {
-	width: 18px;
-	height: 18px;
-}
+
 /* 진행률 바 default */
 .progress-area {
 	.progress-bg {
@@ -585,7 +586,8 @@ button {
 		.txt-caution {text-align:right;}
 	}
 	.list-plan {
-		margin-bottom:12px;
+		&.accordion-content {margin-bottom:12px;}
+		.row + .row {margin-top:12px;}
 		.txt-phone {
 			display:block;width:100%;margin-top:2px;
 			color:var(--dt-gray11);
@@ -621,15 +623,6 @@ button {
 		&.title-wrap {
 			align-items: center;
 			.txt-title {
-				&.ico {
-					@include flexRow;
-					align-items:center;
-					column-gap:6px;
-					.img-box {
-						width:28px;height:28px;
-						img {width:100%}
-					}
-				}
 				color:var(--dt-gray12);
 				@include fw-5();
 				line-height:24px;
@@ -640,6 +633,15 @@ button {
 	.txt-title {
 		color: var(--dt-gray12);
 		@include fw-5(14px);
+		&.ico {
+			@include flexRow;
+			align-items:center;
+			column-gap:6px;
+			.img-box {
+				width:28px;height:28px;
+				img {width:100%}
+			}
+		}
 	}
 	.txt-desc {
 		color:var(--dt-black);

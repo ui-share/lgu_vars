@@ -52,12 +52,7 @@
             <!-- 아코디언 영역 -->
             <div class="section__cont detail">
                 <!-- 발행된 청구서가 있을 경우 -->
-                <div class="cont__wrap">
-                    <div class="con__tit-box">
-                        <h6 class="tit-head">
-                            <span class="txt-title">실시간 요금 상세</span>
-                        </h6>
-                    </div>
+                <div class="cont__wrap cont__wrap-vertical">
                     <div class="info-col-wrap">
                         <div class="row title-wrap">
                             <span class="txt-title ico">
@@ -70,7 +65,7 @@
                                 <span class="txt">충전/선물</span>
                             </button>
                         </div>
-                        <div class="plan-wrap">
+                        <div class="plan-wrap"> 
                             <div class="col">
                                 <div class="txt-plan">
                                     <span class="current">12GB</span>
@@ -84,10 +79,12 @@
                                 </div>
                                 <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
                             </div>
+
+                            <!-- open 클래스 삭제 시 .accordion-header > .txt innerText '간단히 보기' to '자세히 보기' -->
                             <div class="col accordion-container open">
                                 <div class="list-plan accordion-content">
                                     <div class="row">
-                                        <span class="txt-title ico">
+                                        <span class="txt-title">
                                             참 쉬운 가족 데이터
                                             <span class="img-box tooltip">
                                                 <img src="../../static/images/icon/" alt="">
@@ -99,7 +96,7 @@
                                         </span>
                                     </div>
                                     <div class="row">
-                                        <span class="txt-title ico">
+                                        <span class="txt-title">
                                             자회선 월 기본제공 데이터
                                             <span class="img-box tooltip">
                                                 <img src="../../static/images/icon/" alt="">
@@ -113,7 +110,7 @@
                                     </div>
                                 </div>
                                 <button class="btn-toggle accordion-header">
-                                    <span class="txt">자세히 보기</span>
+                                    <span class="txt">간단히 보기</span>
                                     <span class="img-box ico20">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
                                     </span>
@@ -121,21 +118,111 @@
                             </div>
                         </div>
                     </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-sharing.svg" alt="">
+                                </span>
+                                쉐어링
+                            </span>
+                        </div>
+                        <div class="plan-wrap">
+                            <div class="col">
+                                <div class="txt-plan">
+                                    <span class="current">8GB</span>
+                                    <span class="total">/ 50GB</span>
+                                </div>
+                                <div class="progress-area realtime">
+                                    <span class="progress-bg">
+                                        <!-- style.width %로 조절 -->
+                                        <span class="progress-bar" style="width:40%;"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-circle-tethering.svg" alt="">
+                                </span>
+                                테더링
+                            </span>
+                        </div>
+                        <div class="plan-wrap">
+                            <div class="col">
+                                <div class="txt-plan">
+                                    <span class="current">8GB</span>
+                                    <span class="total">/ 50GB</span>
+                                </div>
+                                <div class="progress-area realtime">
+                                    <span class="progress-bg">
+                                        <!-- style.width %로 조절 -->
+                                        <span class="progress-bar" style="width:40%;"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-col-wrap">
+                        <div class="plan-wrap">
+                            <div class="list-plan">
+                                <div class="row">
+                                    <span class="txt-title ico">
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-circle-call.svg" alt="">
+                                        </span>
+                                        이통3사&유무선
+                                    </span>
+                                    <span class="txt-desc">
+                                        <span class="current">54분 56초</span>
+                                        <span class="total">/ 무제한</span>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-title ico">
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-circle-video.svg" alt="">
+                                        </span>
+                                        영상&부가
+                                    </span>
+                                    <span class="txt-desc">
+                                        <span class="current">40분</span>
+                                        <span class="total">/ 300분</span>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-title ico">
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-circle-message.svg" alt="">
+                                        </span>
+                                        문자
+                                    </span>
+                                    <span class="txt-desc">
+                                        <span class="current">11건</span>
+                                        <span class="total">/ 무제한</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="bullet-wrap caution">
                         <h5 class="bullet-caption">
                             유의사항
                         </h5>
                         <ul class="bullet-list">
                             <li class="bullet-item">
-                                청구서는 2024년 3월 4일 기준으로 작성되었습니다.
-                            </li>
-                            <li class="bullet-item">
-                                납기일 이후 납부하는 경우 다음달 요금에 2% 연체가산금이 추가됩니다.
+                                사용량 표시는 시스템 전산 반영으로 지연될 수 있습니다.
                             </li>
                         </ul>
                     </div>
                 </div>
+                
             </div>
+
 		</div>
 		<!-- //container -->
 	</div>

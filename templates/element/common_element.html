@@ -31,7 +31,176 @@
         <div class="lg-prototype">
             <div class="lg-component-container">
                 <div class="lg-component">
-        
+                    <div class="prototype-title">불릿 문단</div>
+                    <div class="prototype-component-wrap">
+                        <!-- 유의사항 영역 -->
+                        <h5 class="bullet-caption">
+                            유의사항
+                        </h5>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">
+                                카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다. 출금날짜에 잔고가 부족할 경우 추가로 출금됩니다. 
+                            </li>
+                            <li class="bullet-item">
+                                은행계좌에서 카드로 변경 시, 결제일은 매달 9일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다.
+                            </li>
+                            <li class="bullet-item">
+                                납부방법은 동일하나 결제 카드 및 은행계좌만 변경한 경우, 변경신청 후 영업일 기준 2~3일 후 해당 은행계좌 또는 카드로 요금이 결제됩니다. 
+                            </li>
+                            <!-- <li>은행계좌에서 카드로 변경 시, 결제일은 매달 9일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다.</li> -->
+                            <!-- <li>납부방법은 동일하나 결제 카드 및 은행계좌만 변경한 경우, 변경신청 후 영업일 기준 2~3일 후 해당 은행계좌 또는 카드로 요금이 결제됩니다. </li> -->
+                        </ul>
+
+                        <!-- 인포버튼 있는 블릿 -->
+                        <ul class="bullet-list info">
+                            <li class="bullet-item">
+                                신청일을 기준으로 25개월 전 납부내역까지 신청할 수 있습니다. 줄바꿈을 위해 텏흐트의 글자수를 늘려봅니다.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="prototype-title">체크박스</div>
+                    <div class="prototype-component-wrap">
+                        <ul>
+                            <li>
+                                <h3>normal</h3>
+                            </li>
+                                <!-- 
+                                    @@@@ 퍼블 공지 : 개발 후 주석 삭제 요청 @@@@
+            
+                                    ##label클릭시 활성화를 위해 체크박스 id값 동일하게 맞춤
+                                    <input type="checkbox" id="chck01" class="chck-input">
+                                    <label for="chck01" class="chck01-label">
+                                    ##개발시 아이디값 필요하면 새 아이디 추가 후 개발 요함
+                                -->
+                            <li>
+                                <div class="chck-group">
+                                    <input type="checkbox" id="chck01" class="chck-input">
+                                    <label for="chck01" class="chck-label">
+                                        <span class="chck-box"></span>
+                                        라벨명1
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>pressed disabled</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group is-disabled">
+                                    <input type="checkbox" id="chck02" class="chck-input" checked>
+                                    <label for="chck02" class="chck-label">
+                                        <span class="chck-box"></span>
+                                        체크드된 disabled
+                                    </label>
+                                </div>
+                            <li>
+                                <h3>pressed</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group">
+                                    <input type="checkbox" id="chck03" class="chck-input" checked>
+                                    <label for="chck03" class="chck-label">
+                                        <span class="chck-box"></span>
+                                        체크드됨
+                                    </label>
+                                </div>
+                            <li>
+                            <li>
+                                <h3>disabled</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group is-disabled">
+                                    <input type="checkbox" id="chck04" class="chck-input">
+                                    <label for="chck04" class="chck-label">
+                                        <span class="chck-box"></span>
+                                        기본 disabled
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h3>normal</h3>
+                            </li>
+                                <!-- 
+                                    @@@@ 퍼블 공지 : 개발 후 주석 삭제 요청 @@@@
+            
+                                    ##label클릭시 활성화를 위해 체크박스 id값 동일하게 맞춤
+                                    <label for="switch01" class="switch-label">
+                                    <input type="checkbox" id="switch01" class="switch-input">
+                                    ##개발시 아이디값 필요하면 새 아이디 추가 후 개발 요함
+                                -->
+                            <li>
+                                <div class="chck-group">
+                                    <input type="checkbox" id="chck05" class="chck-input">
+                                    <label for="chck05" class="chck-label">
+                                        <span class="chck-box"></span>
+                                    </label>
+                                </div>
+                            </li>
+            
+                            <li>
+                                <h3>pressed disabled</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group is-disabled">
+                                    <input type="checkbox" id="chck06" class="chck-input" checked>
+                                    <label for="chck06" class="chck-label">
+                                        <span class="chck-box"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>pressed</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group">
+                                    <input type="checkbox" id="chck07" class="chck-input" checked>
+                                    <label for="chck07" class="chck-label">
+                                        <span class="chck-box"></span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <h3>disabled</h3>
+                            </li>
+                            <li>
+                                <div class="chck-group is-disabled">
+                                    <input type="checkbox" id="chck06" class="chck-input">
+                                    <label for="chck06" class="chck-label">
+                                        <span class="chck-box"></span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="prototype-title">TAB UI 탭</div>
+                    <div class="prototype-component-wrap">
+                        <h3>tab</h3>
+                        <div class="tabnav__wrap">
+                            <ul class="tabnav">
+                                <li class="tab"><a href="javascript:void(0)" role="button" class="active">데이터 내역</a></li>
+                                <li class="tab"><a href="javascript:void(0)" role="button" class="">데이터 선물</a></li>
+                                <li class="tab"><a href="javascript:void(0)" role="button" class="">데이터 자동주기 설정</a></li>
+                            </ul>
+                        </div>
+            
+                        <br>
+            
+                        <h3>segment</h3>
+                        <div class="tabnav__wrap segment">
+                            <ul class="tabnav">
+                                <li class="tab"><a href="javascript:void(0)" role="button" class="active">데이터 내역</a></li>
+                                <li class="tab"><a href="javascript:void(0)" role="button" class="">데이터 선물선물</a></li>
+                            </ul>
+                            <!-- 기본 / success / error -->
+                            <span class="support-txt">도움 내용을 기입해주세요</span>
+                            <span class="support-txt">도움 내용을 기입해주세요</span>
+                            <span class="support-txt">도움 내용을 기입해주세요</span>
+                        </div>
+                    </div>
+                    
                     <div class="prototype-title">버튼</div>
                     <div class="prototype-component-wrap">
                         <p style="margin-top:30px;font-size:18px;font-weight:600;">- Btn-group button util -</p>
@@ -863,7 +1032,6 @@
     
                     <div class="prototype-component-wrap">
                         <div class="chips-wrap">
-    
                             <!-- chips : date 날짜 -->
                             <!-- date : 기본 -->
                             <button type="button" class="chips chips-date">
@@ -875,8 +1043,8 @@
                                 <span class="txt">24년 03월</span>
                                 <span class="arrow"></span>
                             </button>
-        
-        
+
+
                             <!-- chips: select 펼침/접힘 -->
                             <!-- 펼침/접힘 : 기본 -->
                             <button type="button" class="chips chips-all">
@@ -893,74 +1061,74 @@
                                 <span class="txt">전체펼침</span>
                                 <span class="arrow"></span> 
                             </button>
-        
-        
+
+
                             <!-- chips : 홈/텍스트 칩 -->
                             <div class="chips-group">
                                 <button type="button" class="chips chips-menu is-selected">
                                     <span class="img-box icon"><img src="../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
                                     <span class="txt">많이 찾는 문의</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">요금 및 납부</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">가입정보</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">사용현황</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">휴대폰 결제</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">해외로밍</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu">
                                     <!-- <span class="icon"></span> -->
                                     <span class="txt">해외로밍 부가서비스</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu chips-more">
                                     <span class="arrow"></span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-menu chips-more is-selected">
                                     <span class="arrow"></span>
                                 </button>
                             </div>
-        
-        
+
+
                             <!-- chips : 은행명 박스 -->
                             <div class="chips-group">
                                 <button type="button" class="chips chips-bank">
                                     <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
                                     <span class="txt">신한은행</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-bank is-selected">
                                     <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
                                     <span class="txt">신한은행</span>
                                 </button>
-        
+
                                 <button type="button" class="chips chips-bank">
                                     <span class="img-box icon"><img src="../../static/images/icon/ic-chips-shinhan.png" alt="신한은행"></span>
                                     <span class="txt">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이</span>
                                 </button>
                             </div>
-        
-        
+
+
                             <!-- chips : 새로고침  -->
                             <button type="button" class="chips chips-refresh">
                                 <span class="time">00:00</span>
@@ -970,77 +1138,77 @@
                                     <span class="icon"></span>
                                 </span>
                             </button>
-        
-        
+
+
                             <!-- chips : other (tag) -->
                             <div class="chips chips-tag">
                                 <span class="txt">이용불가</span>
                             </div>
-        
+
                             <div class="chips chips-tag primary">
                                 <span class="txt">이용가능</span>
                             </div>
-        
+
                             <div class="chips chips-tag tag-lg primary">
                                 <span class="txt">전액</span>
                             </div>
-        
+
                             <button type="button" class="chips chips-tag tag-lg">
                                 <span class="txt">빠른 문제해결</span>
                             </button>
-        
+
                             <button type="button" class="chips chips-tag tag-lg primary-bg">
                                 <span class="txt">충분한 정보 제공</span>
                             </button>
-        
+
                             <div class="chips chips-tag tag-sm">
                                 <span class="txt">모바일</span>
                             </div>
-        
-        
+
+
                             <!-- flag -->
                             <div class="flag flag-line primary">
                                 <span class="txt">이용예정</span>
                             </div>
-        
+
                             <div class="flag primary">
                                 <span class="txt">이용중</span>
                             </div>
-        
+
                             <div class="flag">
                                 <span class="txt">이용완료</span>
                             </div>
-        
+
                             <div class="flag success">
                                 <span class="txt">납부완료</span>
                             </div>
-        
+
                             <div class="flag error">
                                 <span class="txt">납부실패</span>
                             </div>
-        
+
                             <div class="flag flag-recent">
                                 <span class="txt">최근사용</span>
                             </div>
-        
+
                             <div class="flag flag-etc">
                                 <span class="txt">텍스트</span>
                             </div>
-        
-        
+
+
                             <!-- badge -->
                             <div class="badge badge-round">
                                 <span class="txt">A</span>
                             </div>
-        
+
                             <div class="badge badge-round">
                                 <span class="txt">A+B+C</span>
                             </div>
-        
+
                             <div class="badge badge-tip">
                                 <span class="txt">TIPS</span>
                             </div>
-        
+
                             <div class="badge badge-time">
                                 <span class="icon"></span>
                                 <span class="txt">02:56</span>

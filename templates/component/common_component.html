@@ -11,6 +11,7 @@
         .prototype-component-wrap .desc-prototype {margin-bottom:10px;color:#4B506A;font-size:14px;}
         .prototype-component-wrap .chips-wrap {display: flex;flex-direction: column;row-gap:16px;}
         .prototype-component-wrap .chips-wrap .chips, .prototype-component-wrap .chips-wrap .badge {width:fit-content}
+        .prototype-component-wrap > .header {position:relative;}
 	</style>
     <link rel="stylesheet" href="../../static/css/common.css">
     <script>
@@ -30,6 +31,67 @@
     <div class="page-wrapper">
         <div class="lg-prototype">
             <div class="lg-component-container">
+                <div class="lg-component">
+                    <div class="prototype-title">헤더</div>
+                    <div class="prototype-component-wrap">
+                        <!-- header -->
+                        <header class="header">
+                            <div class="header__util">
+                                <!-- 
+                                    이전 prev / 닫기 end / 없을 경우 hidden 처리
+                                    <button type="button" class="btn btn-util end hidden"><span>닫기</span></button>
+                                -->
+                                <button type="button" class="btn btn-util prev hidden"><span>이전</span></button>
+                                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+                                <span class="header-tit"><span class="header-txt">눈으로 보는 ARS</span></span>
+                            </div>
+                            <div class="header__btn">
+                                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+                            </div>
+                        </header>
+                        <!-- //header -->
+
+                        <!-- header -->
+                        <header class="header">
+                            <div class="header__util">
+                                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+                                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+                                <span class="header-tit">페이지 타이틀<span class="header-txt"></span></span>
+                            </div>
+                            <div class="header__btn">
+                                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+                            </div>
+                        </header>
+                        <!-- //header -->
+
+                        <!-- header -->
+                        <header class="header">
+                            <div class="header__util">
+                                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+                                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+                                <span class="header-tit">눈으로 보는 ARS<span class="header-txt">로 돌아가기</span></span>
+                            </div>
+                            <div class="header__btn hidden">
+                                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+                            </div>
+                        </header>
+                        <!-- //header -->
+
+                        <!-- header -->
+                        <header class="header">
+                            <div class="header__util">
+                                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+                                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+                                <span class="header-tit"><span class="header-txt"></span></span>
+                            </div>
+                            <div class="header__btn">
+                                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+                            </div>
+                        </header>
+                        <!-- //header -->
+                    </div>
+                </div>
+
                 <div class="lg-component">
                     <div class="prototype-title">박스 타이틀(레이블)</div>
                     <div class="prototype-component-wrap">
@@ -61,30 +123,57 @@
                         </div>
                     </div>
     
-                    <div class="prototype-title">자세히보기 토글 박스</div>
-                    <div class="prototype-component-wrap">
-                        <div class="card horizon">
-                            <div class="con__tit-box">
-                                <h6 class="tit-head ico">
-                                    <span class="img-box">
-                                        <img src="../../static/images/icon/ic-circle-chart.png" alt="">
-                                    </span>
-                                    <span class="txt-title">데이터</span>
-                                </h6>
-                                <div class="tit-tail">
-                                    <button class="chips neutral">
-                                        <span class="txt">충전/선물</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
                     <div class="prototype-title">아코디언</div>
                     <div class="prototype-component-wrap">
                         <div class="info-price-wrap">
-                            <!-- open 클래스로 show/hide 조정 -->
-                            <div class="list-info-price accordion-container open">
+                            <div class="list-info-price accordion-container">
+                                <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+                                    <span class="row txt-title">
+                                        <div class="badge badge-round">
+                                            <span class="txt">A</span>
+                                        </div>
+                                        <span>휴대폰 이용요금</span>
+                                    </span>
+                                    <span class="row txt-price">
+                                        <span>60,000원</span>
+                                        <span class="img-box">
+                                            <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+                                        </span>
+                                        
+                                    </span>
+                                </button>
+                                <div class="accordion-content"><!-- 아코디언 컨텐트 -->
+                                    <ul class="info-price-detail">
+                                        <li class="info-wrap">
+                                            <!-- default -->
+                                            <div class="row">
+                                                <span class="txt-title ico">
+                                                    월정액
+                                                </span>
+                                                <span class="txt-price">105,000원</span>
+                                            </div>
+                                        </li>
+                                        <li class="info-wrap">
+                                            <div class="row">
+                                                <span class="txt-title ico">
+                                                    할인요금
+                                                </span>
+                                                <span class="txt-price">-45,000원</span>
+                                            </div>
+                                            <ul class="col list-detail">
+                                                <li class="row">
+                                                    <span class="txt-title">선택약정 25% 할인</span>
+                                                    <span class="txt-price">-18,000원</span>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-price-wrap" style="margin-top:30px;">
+                            <div class="list-info-price accordion-container">
                                 <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
                                     <span class="row txt-title">
                                         <div class="badge badge-round">
@@ -136,7 +225,7 @@
                                 </div>
                             </div>
     
-                            <div class="list-info-price accordion-container open">
+                            <div class="list-info-price accordion-container">
                                 <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
                                     <span class="row txt-title">
                                         <div class="badge badge-round">
@@ -175,7 +264,7 @@
                                 </div>
                             </div>
     
-                            <div class="list-info-price accordion-container open">
+                            <div class="list-info-price accordion-container">
                                 <button class="info-price accordion-header">
                                     <span class="row txt-title">
                                         <div class="badge badge-round">

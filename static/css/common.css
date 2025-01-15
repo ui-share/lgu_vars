@@ -555,6 +555,14 @@ button {
 .cont__wrap .select-billdate .txt-select-wrap .chips-date {
   margin-right: 4px;
 }
+.cont__wrap.cont__wrap-vertical {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.cont__wrap.cont__wrap-vertical .bullet-caption {
+  margin-top: 8px;
+}
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;
   background-image: url(../images/img/img-hm-bill.png);
@@ -657,12 +665,6 @@ button {
   color: var(--dt-gray11);
 }
 
-/* tooltip 기본 */
-.tooltip img {
-  width: 18px;
-  height: 18px;
-}
-
 /* 진행률 바 default */
 .progress-area .progress-bg {
   display: flex;
@@ -709,8 +711,11 @@ button {
 .plan-wrap .col .txt-caution {
   text-align: right;
 }
-.plan-wrap .list-plan {
+.plan-wrap .list-plan.accordion-content {
   margin-bottom: 12px;
+}
+.plan-wrap .list-plan .row + .row {
+  margin-top: 12px;
 }
 .plan-wrap .list-plan .txt-phone {
   display: block;
@@ -759,19 +764,6 @@ button {
   font-weight: 500;
   line-height: 24px;
 }
-.info-col-wrap .row.title-wrap .txt-title.ico {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 6px;
-}
-.info-col-wrap .row.title-wrap .txt-title.ico .img-box {
-  width: 28px;
-  height: 28px;
-}
-.info-col-wrap .row.title-wrap .txt-title.ico .img-box img {
-  width: 100%;
-}
 .info-col-wrap .row.title-wrap .chips.neutral {
   background-color: transparent;
 }
@@ -779,6 +771,19 @@ button {
   color: var(--dt-gray12);
   font-size: 14px;
   font-weight: 500;
+}
+.info-col-wrap .txt-title.ico {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 6px;
+}
+.info-col-wrap .txt-title.ico .img-box {
+  width: 28px;
+  height: 28px;
+}
+.info-col-wrap .txt-title.ico .img-box img {
+  width: 100%;
 }
 .info-col-wrap .txt-desc {
   color: var(--dt-black);
