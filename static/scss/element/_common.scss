@@ -308,7 +308,24 @@ button {
 				background-image: url(../images/icon/ic-bullet-info-gray.svg);
 				background-repeat: no-repeat;
 				background-position: center;
+				background-size: cover;
 				transform: translateY(var(--bulletList-infoBullet-translateY));
+			}
+		}
+		&.error {
+			.bullet-item {
+				color: var(--dt-error);
+				&::before {
+					background-image: url(../images/icon/ic-bullet-info-error.svg);
+				}
+			}
+		}
+		&.success {
+			.bullet-item {
+				color: var(--dt-success);
+				&::before {
+					background-image: url(../images/icon/ic-bullet-info-success.svg);
+				}
 			}
 		}
 	}
