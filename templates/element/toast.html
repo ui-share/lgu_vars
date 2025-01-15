@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="theme-color" content="#ffffff">
+	<title>toast</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	
+	<!-- Scripts -->
+	<style>
+
+	</style>
+</head>
+<body>
+	<div class="page-wrapper" margin-top: 20px;">
+		<!-- header -->
+		<header class="header"></header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div style="height: 300px;"></div>
+			<button class="toast-btn01">토스트 인</button>
+			<button class="toast-btn02">토스트 아웃</button>
+			<!-- 
+				####### 퍼블공지 #######
+				default: <div class="toast-group">
+				toast-in: <div class="toast-group show">
+				toast-out: <div class="toast-group hide">
+			-->
+			<div class="toast-group">
+				<div class="toast">
+					<div class="toast-txt">
+						계좌번호를 입력해 주세요
+						토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다.
+					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
+					<button class="btn btn-util close" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	
+		<!-- footer -->
+		<footer class="footer"></footer>
+		<!-- //footer -->
+	</div>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const toastGroup = document.querySelector('.toast-group');
+			const toastInBtn = document.querySelector('.toast-btn01');
+			const toastOutBtn = document.querySelector('.toast-btn02');
+
+			// 토스트 인 버튼 클릭 시
+			toastInBtn.addEventListener('click', () => {
+				toastGroup.classList.add('show'); // .show 클래스 추가
+				toastGroup.classList.remove('hide'); // .hide 클래스 제거
+			});
+
+			// 토스트 아웃 버튼 클릭 시
+			toastOutBtn.addEventListener('click', () => {
+				toastGroup.classList.add('hide'); // .hide 클래스 추가
+				toastGroup.classList.remove('show'); // .show 클래스 제거
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import '../base/mixin.scss';
+
+.toast-group {
+  display: none;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate3d(-50%, -40px, 0);
+	z-index: 9999;
+  &.show {
+    display: block;
+    animation: toast-in 0.6s ease-out;
+  }
+  &.hide {
+    display: block;
+    transform: translate3d(-50%, 110%, 0);
+    animation: toast-out 0.6s ease-out;
+  }
+  .toast {
+    @include flexBox(between, center);
+    background-color: var(--dt-gray16);
+    opacity: .9;
+    border-radius: 36px;
+    padding: 12px 20px;
+    @include flexBox(between, center);
+    column-gap: 10px;
+    min-height: 48px;
+    // width: 320px;
+    min-width: 280px;
+    margin: 0 auto;
+    box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
+    &:has(.btn-util.hidden) {
+      justify-content: center;
+      .toast-txt {
+        text-align: center;
+      }
+    }
+  
+    .toast-txt {
+      @include fw-5(16px);
+      color: var(--dt-white);
+      padding: 0 5px;
+    }
+    .btn-util {
+      width: 24px;
+      height: 24px;
+      // margin-left: auto;
+      background-image: url(../images/icon/ic-toast-close.svg);
+      background-repeat: no-repeat;
+      background-size: 24px 24px;
+      background-position: center center;
+    }
+  }
+}
+/* 해상도 변경 */
+@media (max-width: 359px) {
+	.toast {
+    min-width: 240px;
+	}
+}
+/* toast animation */
+@keyframes toast-in {
+  0% {
+      transform: translate3d(-50%, 110%,0);
+      opacity: 0;
+      visibility: visible
+  }
+  to {
+    opacity: 1;
+      transform: translate3d(-50%, -40px, 0);
+  }
+}
+
+@keyframes toast-out {
+  0% {
+    opacity: 1;
+    transform: translate3d(-50%, -40px, 0);
+    visibility: visible
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-50%,110%,0);
+    visibility: hidden;
+}
+}
+
+
