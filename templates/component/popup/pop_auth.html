@@ -41,17 +41,33 @@
 					<div class="authorization tab">
 				-->
 				<div class="authorization tab birth">
-					<div class="tab__wrap">
-						<ul class="tab">
-							<li><a class="tab" href="javascript:void(0)" role="button" tabindex="0">개인</a></li>
-							<li><a class="tab" href="javascript:void(0)" role="button" tabindex="0">사업자</a></li>
+					<div class="segment__wrap">
+						<p class="seg-label hidden">레이블</p>
+						<div class="segnav">
+							<input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
+							<label for="seg1" class="segment">개인</label>
+							
+							<input type="radio" class="seg-trigger seg2" id="seg2" name="tab">
+							<label for="seg2" class="segment">사업자</label>
+							
+							<div class="marker-box">
+								<div class="marker"></div>
+							</div>
+						</div>
+		
+						<ul class="bullet-list info hidden">
+							<li class="bullet-item">
+								도움 내용을 기입해주세요
+							</li>
 						</ul>
 					</div>
+
 					<div class="auth auth_birth">
 						<p class="txt">안전한 정보 확인을 위해</p>
-						<h3 class="tit"><span class="deco">본인 생년월일</span>을 입력해 주세요</h3>
+						<h3 class="tit"><span class="color-prim">본인 생년월일</span>을 입력해 주세요</h3>
 						<div class="input_code">
 							<div class="code-group">
+								<!-- 숫자 입력 시 placeholder 삭제 -->
 								<span class="code-box"><span class="num">9</span></span>
 								<span class="code-box"><span class="num placeholder">Y</span></span>
 								<span class="code-box"><span class="num placeholder">M</span></span>
@@ -63,7 +79,7 @@
 					</div>
 					<div class="auth auth_business">
 						<p class="txt">안전한 정보 확인을 위해</p>
-						<h3 class="tit"><span class="deco">사업자번호 10자리</span>를<br>입력해 주세요</h3>
+						<h3 class="tit"><span class="color-prim">사업자번호 10자리</span>를<br>입력해 주세요</h3>
 						<div class="input_code">
 							<div class="code-group">
 								<span class="code-box"></span>
@@ -83,7 +99,7 @@
 					</div>
 					<div class="auth auth_corporation">
 						<p class="txt">안전한 정보 확인을 위해</p>
-						<h3 class="tit"><span class="deco">법인등록번호 뒤 7자리</span>를<br>입력해 주세요</h3>
+						<h3 class="tit"><span class="color-prim">법인등록번호 뒤 7자리</span>를<br>입력해 주세요</h3>
 						<div class="input_code">
 							<div class="code-group">
 								<span class="code-box"></span>
