@@ -473,6 +473,7 @@ button {
   position: relative;
   height: max-content;
   padding-top: 28px;
+  padding-right: 120px;
   background-repeat: no-repeat;
   background-size: 140px;
 }
@@ -571,7 +572,6 @@ button {
 }
 
 .con__tit-box {
-  max-width: max-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
