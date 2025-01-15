@@ -443,7 +443,6 @@ button {
 .page-wrapper {
   max-width: var(--max-devicewidth);
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 .page-wrapper.is-scrolled .header {
@@ -599,8 +598,6 @@ button {
 }
 
 .con__tit-box {
-  max-width: -moz-max-content;
-  max-width: max-content;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1124,6 +1121,10 @@ button {
 .card-group.threeby {
   grid-template-columns: repeat(3, 1fr);
 }
+.card-group.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 
 .card {
   display: flex;
@@ -1308,6 +1309,9 @@ button {
 .horizon .card-footer {
   margin-top: 0;
   margin-left: auto;
+}
+.horizon.solid {
+  padding: 18px 16px;
 }
 .horizon.solid .card-body {
   width: 100%;
@@ -2379,7 +2383,8 @@ button {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  column-gap: 33.5px;
+  -moz-column-gap: 33.5px;
+       column-gap: 33.5px;
   min-width: 220px;
   max-width: unset;
   margin: 20px auto 0;
@@ -2502,7 +2507,8 @@ button {
 
 @media (max-width: 359px) {
   .popup-body .calendar-box.mnth-prd {
-    column-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }
 .switch-group .switch-input {
