@@ -114,7 +114,7 @@
   display: inline-block;
 }
 .is-scrolled .section__cont:has(.cont__wrap-category) .cont__wrap.scroll-end::after {
-  display: inline-block;
+  display: none;
 }
 .is-scrolled .section__cont:has(.cont__wrap-category) .chips-group {
   flex-wrap: nowrap;
