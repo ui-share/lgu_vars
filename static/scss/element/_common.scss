@@ -98,10 +98,10 @@ http://scripts.sil.org/OFL
 	--dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-black), 0.04);
 
 	/* iOS 웹뷰 safe area inset  */
-	--dt-sat: env(safe-area-inset-top);
-	--dt-sab: env(safe-area-inset-bottom);
-	--dt-sar: env(safe-area-inset-right);
-	--dt-sal: env(safe-area-inset-left);
+	--dt-safeTop: env(safe-area-inset-top);
+	--dt-safeBottom: env(safe-area-inset-bottom);
+	--dt-safeRight: env(safe-area-inset-right);
+	--dt-safeLeft: env(safe-area-inset-left);
 
 	--vh: 100vh;
 	--max-devicewidth: 100vw;
@@ -382,9 +382,9 @@ button {
 			padding-right:120px;
 			background-repeat: no-repeat;
 			background-size:140px;
-			> div {width:max-content;}
+			background-position: right 10px top 14px;
 			&:has(.select-billdate) {
-				background-position: right 10px top 35px;
+			background-position: right 10px top 35px;
 				.cont__txt-box {min-height:36px;}
 			}			
 			.cont__txt-box {min-height:110px;}
@@ -423,10 +423,18 @@ button {
 	.select-billdate {
 		@include flexColum;
 		.txt-due {
-			margin-bottom:9px;
+			margin-bottom:4px;
 			color: var(--dt-gray13);
 			@include fw-5(14px);
 			line-height:21px;
+		}
+		.txt-notice {
+			&:not(:first-child) {
+				margin-top:5px;
+			}
+			color: var(--dt-gray16);
+			@include fw-6(22px);
+			line-height:33px;
 		}
 		.txt-select-wrap {
 			color:var(--dt-gray16);
@@ -437,9 +445,8 @@ button {
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
-		background-position: right 10px top 14px;
 		&:has(.select-billdate) {
-			.select-billdate .txt-due {margin-bottom:9px}
+			.select-billdate .txt-due {margin-bottom:6px}
 		}
 	}
 	&.cont__wrap-realtime {
@@ -452,7 +459,11 @@ button {
 		background-image: url(../images/img/img-hm-usestate.png);
 		.cont__txt-box {row-gap:0}
 	}
-	
+	&.cont__wrap-account {
+		min-height:164px;
+		background-image: url(../images/img/img-hm-account.png);
+		.cont__txt-box {row-gap:0}
+	}
 }
 .con__tit-box {
 	@include flexRow();

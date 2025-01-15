@@ -160,10 +160,10 @@ http://scripts.sil.org/OFL
   /* shadow style - bottom sheet */
   --dt-shadow02: 0 16.8px 27.3px 0px rgba(var(--dt-black), 0.04);
   /* iOS 웹뷰 safe area inset  */
-  --dt-sat: env(safe-area-inset-top);
-  --dt-sab: env(safe-area-inset-bottom);
-  --dt-sar: env(safe-area-inset-right);
-  --dt-sal: env(safe-area-inset-left);
+  --dt-safeTop: env(safe-area-inset-top);
+  --dt-safeBottom: env(safe-area-inset-bottom);
+  --dt-safeRight: env(safe-area-inset-right);
+  --dt-safeLeft: env(safe-area-inset-left);
   --vh: 100vh;
   --max-devicewidth: 100vw;
 }
@@ -476,9 +476,7 @@ button {
   padding-right: 120px;
   background-repeat: no-repeat;
   background-size: 140px;
-}
-.section__cont.summary .cont__wrap > div {
-  width: max-content;
+  background-position: right 10px top 14px;
 }
 .section__cont.summary .cont__wrap:has(.select-billdate) {
   background-position: right 10px top 35px;
@@ -534,11 +532,20 @@ button {
   flex-direction: column;
 }
 .cont__wrap .select-billdate .txt-due {
-  margin-bottom: 9px;
+  margin-bottom: 4px;
   color: var(--dt-gray13);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
+}
+.cont__wrap .select-billdate .txt-notice {
+  color: var(--dt-gray16);
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 33px;
+}
+.cont__wrap .select-billdate .txt-notice:not(:first-child) {
+  margin-top: 5px;
 }
 .cont__wrap .select-billdate .txt-select-wrap {
   color: var(--dt-gray16);
@@ -551,10 +558,9 @@ button {
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;
   background-image: url(../images/img/img-hm-bill.png);
-  background-position: right 10px top 14px;
 }
 .cont__wrap.cont__wrap-bill:has(.select-billdate) .select-billdate .txt-due {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 }
 .cont__wrap.cont__wrap-realtime {
   min-height: 164px;
@@ -568,6 +574,13 @@ button {
   background-image: url(../images/img/img-hm-usestate.png);
 }
 .cont__wrap.cont__wrap-usestate .cont__txt-box {
+  row-gap: 0;
+}
+.cont__wrap.cont__wrap-account {
+  min-height: 164px;
+  background-image: url(../images/img/img-hm-account.png);
+}
+.cont__wrap.cont__wrap-account .cont__txt-box {
   row-gap: 0;
 }
 
