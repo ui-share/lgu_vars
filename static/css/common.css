@@ -347,20 +347,17 @@ button {
 
 .bullet-list {
   --bulletList-font-size: 0.750rem;
-  --bulletList-infoFont-size: 0.875rem; /* 인포의 블릿 사이즈 현:14px */
   --bulletList-bullet-size: 0.1667em;
-  --bulletList-infoBullet-size: 1em; /* 인포의 블릿 사이즈 현:16px */
+  --bulletList-bullet-info-size: 0.1667em;
   --bullet-to-section-mg: 0.5000em; /* 들여쓰기 */
   --bulletList-between-pd: 0.1667em; /* 행간 */
   --bulletList-font-color: var(--dt-gray11);
   --bulletList-font-weight: var(--dt-fw500);
   --bulletList-font-lineHeight: 1.5;
-  --bulletList-infoFont-lineHeight: 1.2; /* 인포의 블릿 l-h:120% */
   --bulletList-bullet-color: var(--bulletList-font-color);
   --bulletList-bullet-translateY: calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size)/2 ) ) );
   --bulletList-bullet-translateX: calc( calc( var(--bulletList-font-size)/2 ) - var(--bulletList-font-size) );
   --bullet-to-word-pd: calc( var(--bulletList-font-size)/2 );
-  
   font-size: var(--bulletList-font-size);
   font-weight: var(--bulletList-font-weight);
   color: var(--bulletList-font-color);
@@ -436,7 +433,6 @@ button {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 174px;
   height: max-content;
   padding-top: 28px;
   background-repeat: no-repeat;
@@ -755,11 +751,6 @@ button {
 }
 
 .info-price-single {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  column-gap: 6px;
   margin: 0 20px;
   padding: 18px 20px;
   background-color: var(--dt-white);
