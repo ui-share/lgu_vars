@@ -347,22 +347,41 @@ button {
 
 .bullet-list {
   --bulletList-font-size: 0.750rem;
+  --bulletList-infoFont-size: 0.875rem; /* 인포의 블릿 사이즈 현:14px */
   --bulletList-bullet-size: 0.1667em;
+  --bulletList-infoBullet-size: 1em; /* 인포의 블릿 사이즈 현:16px */
   --bullet-to-section-mg: 0.5000em; /* 들여쓰기 */
   --bulletList-between-pd: 0.1667em; /* 행간 */
   --bulletList-font-color: var(--dt-gray11);
   --bulletList-font-weight: var(--dt-fw500);
   --bulletList-font-lineHeight: 1.5;
+  --bulletList-infoFont-lineHeight: 1.2; /* 인포의 블릿 l-h:120% */
   --bulletList-bullet-color: var(--bulletList-font-color);
   --bulletList-bullet-translateY: calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size)/2 ) ) );
   --bulletList-bullet-translateX: calc( calc( var(--bulletList-font-size)/2 ) - var(--bulletList-font-size) );
   --bullet-to-word-pd: calc( var(--bulletList-font-size)/2 );
+  
   font-size: var(--bulletList-font-size);
   font-weight: var(--bulletList-font-weight);
   color: var(--bulletList-font-color);
   line-height: var(--bulletList-font-lineHeight);
   padding-left: var(--bullet-to-word-pd);
   margin-left: var(--bullet-to-section-mg);
+}
+.bullet-list.info {
+  --bulletList-infoFont-size: 0.875rem; /* 인포의 블릿 사이즈 현:14px */
+  --bulletList-infoBullet-size: 1em; /* 인포의 블릿 사이즈 현:16px */
+  --bulletList-infoFont-lineHeight: 1.5; /* 인포의 블릿 l-h:120% */
+  --bulletList-bullet-color: var(--bulletList-font-color);
+  --bulletList-infoBullet-translateY: calc( var(--bulletList-infoFont-size) - calc( var(--bulletList-infoBullet-size) - calc( var(--bulletList-infoBullet-size)/3 ) ) );
+  --bulletList-bullet-translateX: calc( calc( var(--bulletList-font-size)/2 ) - var(--bulletList-font-size) );
+  --bulletInfo-to-word-pd: calc( var(--bulletList-infoFont-size) + 6px );
+  font-size: var(--bulletList-font-size);
+  font-weight: var(--bulletList-font-weight);
+  color: var(--bulletList-font-color);
+  line-height: var(--bulletList-font-lineHeight);
+  padding-left: var(--bulletInfo-to-word-pd);
+  margin-left: 0;
 }
 
 .bullet-list .bullet-item {
@@ -385,6 +404,33 @@ button {
   top: 0;
   transform: translateY(var(--bulletList-bullet-translateY));
   left: var(--bulletList-bullet-translateX);
+}
+
+.bullet-list.info .bullet-item {
+  display: block;
+  position: relative;
+  font-size: var(--bulletList-infoFont-size);
+  color: var(--bulletList-font-color);
+  line-height: var(--bulletList-infoFont-lineHeight);
+  padding: var(--bulletList-between-pd) 0;
+}
+
+
+.bullet-list.info .bullet-item::before {
+  content: " ";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: var(--bulletList-infoBullet-size);
+  height: var(--bulletList-infoBullet-size);
+  transform: translate(-50%, -50%);
+  background-color: unset;
+  background-image: url(../images/icon/ic-bullet-info-gray.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateY(var(--bulletList-infoBullet-translateY));
+
 }
 
 /* Layout Common */
