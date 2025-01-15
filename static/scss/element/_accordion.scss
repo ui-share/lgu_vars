@@ -16,10 +16,9 @@
     }
     .accordion-header {
         cursor: pointer;
-        &.info-price {
-            .txt-price .img-box {
-                transition: transform 0.3s ease;
-            }
+        &.info-price .txt-price .img-box,
+        &.btn-toggle .img-box {
+            transition: transform 0.3s ease;
         }
     }
     .accordion-content {
@@ -28,10 +27,9 @@
     }
     &.open {
         .accordion-header {
-            &.info-price {
-                .txt-price .img-box {
-                    transform:rotate(180deg);
-                }
+            &.info-price .txt-price .img-box,
+            &.btn-toggle .img-box {
+                transform:rotate(180deg);
             }
         }
         > .accordion-content {
@@ -69,6 +67,12 @@
         justify-content: flex-end;
         span:first-of-type {@include fw-7(16px);}
         .img-box {margin-left:4px;}
+    }
+    &.btn-toggle { // 자세히보기 버튼
+        justify-content: center;
+        align-items: center;
+        padding:14px;
+        gap:0;
     }
 }
 .accordion-content {
