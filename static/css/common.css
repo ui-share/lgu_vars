@@ -2284,6 +2284,35 @@ button {
   min-width: 220px;
   max-width: 320px;
   margin: auto;
+  /* 캘린더 선택시 텍스트로 노출되는 영역 */
+}
+.popup-body .calendar-box.mnth-prd {
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  column-gap: 33.5px;
+  min-width: 220px;
+  max-width: unset;
+  margin: 20px auto 0;
+}
+.popup-body .calendar-box.mnth-prd .mnthPrd-box {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-gray11);
+}
+.popup-body .calendar-box.mnth-prd .mnthPrd-box .txt-Mnth {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.popup-body .calendar-box.mnth-prd .mnthPrd-box .hyphen {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray10);
 }
 .popup-body .calendar-box.year-month {
   padding-top: 12px;
@@ -2384,6 +2413,12 @@ button {
 .popup-body .calendar-box .schedule-cont-wrap.list-month li.is-disabled .btn-month {
   color: var(--dt-gray09);
   pointer-events: none;
+}
+
+@media (max-width: 359px) {
+  .popup-body .calendar-box.mnth-prd {
+    column-gap: 20px;
+  }
 }
 .switch-group .switch-input {
   /* input은 숨김 */

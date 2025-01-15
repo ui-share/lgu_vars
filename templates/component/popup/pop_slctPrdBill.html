@@ -41,14 +41,22 @@
                     </li>
                 </ul>
                 <!-- 캘린더 선택 후 텍스트 노출 영역 -->
-                <div class="calendar-box mnth-due">
-                    <div class="mnthDue-box">
-                        <span class="selected-Mnth"></span>
+                <div class="calendar-box mnth-prd">
+                    <div class="mnthPrd-box">
+                        <span class="txt-Mnth">
+                            24년 11월
+                        </span>
                         부터
                     </div>
-                    <div class="mnth-Duebox hypen"></div>
-                    <div class="mnth-Duebox">
-                        <span class="selected-Mnth"></span>
+                    <div class="mnthPrd-box">
+                        <div class="hyphen">
+                            ~
+                        </div>
+                    </div>
+                    <div class="mnthPrd-box">
+                        <span class="txt-Mnth">
+                            24년 12월
+                        </span>
                         까지
                     </div>
                 </div>
@@ -92,7 +100,17 @@
                     </ul>
                 </div>
             </div>
-			<div class="popup-footer"></div>
+            <!-- 푸터 버튼 영역 -->
+			<div class="popup-footer">
+                <div class="btn-group flex-row is-confirm" style="margin-top:10px;">
+                    <button class="btn line" type="button">
+                        <span class="txt">취소</span>
+                    </button>
+                    <button class="btn" type="button">
+                        <span class="txt">확인</span>
+                    </button>
+                </div>
+            </div>
 		</div>
 	</div>
 </body>
