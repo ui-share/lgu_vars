@@ -20,6 +20,14 @@
         color:var(--dt-white);
     }
 }
+.btn-toggle { // 자세히보기 버튼
+    background-color:var(--dt-gray06);
+    border-radius:4px;
+    .txt {
+        @include fw-6(14px);
+        color: var(--dt-gray12);
+    }
+}
 .btn-between {
     @include flexBox(between, center);
     width: 100%;
@@ -184,7 +192,9 @@
     &.flex-row {
         @include flexRow();
         justify-content: space-between;align-items:center;
-        gap: 8px;
+        &:not(.accordion-header) {
+            gap: 8px;
+        }
         .btn {
             flex: 1;
         }
