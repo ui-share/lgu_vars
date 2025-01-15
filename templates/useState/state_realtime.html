@@ -38,9 +38,9 @@
                 <div class="cont__wrap cont__wrap-usestate">
                     <div class="select-billdate">
                         <span class="txt-due">남은 기간 7일</span>
+                        <span class="txt-notice">이번 달 남은 데이터는</span>
                     </div>
                     <div class="cont__txt-box">
-                        <h4 class="txt">이번 달 남은 데이터는</h4>
 						<h4 class="txt price">
                             <span class="deco">5.51</span>
                             <span class="color-prim">GB</span>이에요
@@ -58,62 +58,6 @@
                             <span class="txt-title">실시간 요금 상세</span>
                         </h6>
                     </div>
-                    <div class="info-price-wrap">
-                        <!-- open 클래스로 show/hide 조정 -->
-                        <div class="list-info-price accordion-container open">
-                            <button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-                                <span class="row txt-title">
-                                    <div class="badge badge-round">
-                                        <span class="txt">A</span>
-                                    </div>
-                                    <span>휴대폰 이용요금</span>
-                                </span>
-                                <span class="row txt-price">
-                                    <span>60,000원</span>
-                                    <span class="img-box">
-                                        <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-                                    </span>
-                                    
-                                </span>
-                            </button>
-                            <div class="accordion-content"><!-- 아코디언 컨텐트 -->
-                                <ul class="info-price-detail">
-                                    <li class="info-wrap">
-                                        <!-- default -->
-                                        <div class="row">
-                                            <span class="txt-title ico">
-                                                월정액
-                                            </span>
-                                            <span class="txt-price">105,000원</span>
-                                        </div>
-                                    </li>
-                                    <li class="info-wrap">
-                                        <div class="row">
-                                            <span class="txt-title ico">
-                                                할인요금
-                                            </span>
-                                            <span class="txt-price">-45,000원</span>
-                                        </div>
-                                        <ul class="col list-detail">
-                                            <li class="row">
-                                                <span class="txt-title">선택약정 25% 할인</span>
-                                                <span class="txt-price">-18,000원</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 무제한 요금제 -->
-                <div class="cont__wrap">
-                    <div class="con__tit-box">
-                        <h6 class="tit-head">
-                            <span class="txt-title">실시간 데이터 상세</span>
-                        </h6> 
-                    </div>
                     <div class="info-col-wrap">
                         <div class="row title-wrap">
                             <span class="txt-title ico">
@@ -126,24 +70,56 @@
                                 <span class="txt">충전/선물</span>
                             </button>
                         </div>
-                        <div class="col plan-wrap">
-                            <div class="txt-plan">
-                                <span class="current">12GB</span>
-                                <span class="total">/ 무제한</span>
+                        <div class="plan-wrap">
+                            <div class="col">
+                                <div class="txt-plan">
+                                    <span class="current">12GB</span>
+                                    <span class="total">/ 무제한</span>
+                                </div>
+                                <div class="progress-area realtime">
+                                    <span class="progress-bg">
+                                        <!-- style.width %로 조절 -->
+                                        <span class="progress-bar" style="width:100%;"></span>
+                                    </span>
+                                </div>
+                                <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
                             </div>
-                            <div class="progress-area realtime">
-                                <span class="progress-bg">
-                                    <!-- style.width %로 조절 -->
-                                    <span class="progress-bar" style="width:100%;"></span>
-                                </span>
+                            <div class="col accordion-container open">
+                                <div class="list-plan accordion-content">
+                                    <div class="row">
+                                        <span class="txt-title ico">
+                                            참 쉬운 가족 데이터
+                                            <span class="img-box tooltip">
+                                                <img src="../../static/images/icon/" alt="">
+                                            </span>
+                                        </span>
+                                        <span class="txt-desc">
+                                            <span class="current">0GB</span>
+                                            <span class="total">/ 50GB</span>
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="txt-title ico">
+                                            자회선 월 기본제공 데이터
+                                            <span class="img-box tooltip">
+                                                <img src="../../static/images/icon/" alt="">
+                                            </span>
+                                            <span class="txt-phone">(010-75**-64**)</span>
+                                        </span>
+                                        <span class="txt-desc">
+                                            <span class="current">250MB</span>
+                                            <span class="total">/ 500MB</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn-toggle accordion-header">
+                                    <span class="txt">자세히 보기</span>
+                                    <span class="img-box ico20">
+                                        <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
+                                    </span>
+                                </button>
                             </div>
-                            <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
                         </div>
-                    </div>
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sec">
-                            <span class="txt">실시간 사용량 보기</span>
-                        </button>
                     </div>
                     <div class="bullet-wrap caution">
                         <h5 class="bullet-caption">

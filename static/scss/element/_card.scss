@@ -8,6 +8,10 @@
 	&.threeby {
 		grid-template-columns: repeat(3, 1fr);
 	}
+	&.flex-column {
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 // card 기본
@@ -200,6 +204,7 @@
 		margin-left: auto;
 	}
 	&.solid {
+		padding: 18px 16px;
 		.card-body {
 			width: 100%;
 			gap: 8px;

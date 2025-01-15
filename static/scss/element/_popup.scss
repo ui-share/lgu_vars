@@ -111,9 +111,8 @@
 				@include fw-6(24px);
 				color: var(--dt-black);
 			}
-			.deco {
+			.color-prim {
 				@include fw-6(24px);
-				color: var(--dt-primary);
 			}
 		}
 		.input_code {
@@ -144,8 +143,9 @@
 				}
 			}
 		}
-		.tab__wrap {
+		.segment__wrap {
 			display: none;
+			margin-bottom: 48px;
 		}
 		.auth_birth {
 			display: none;
@@ -157,7 +157,7 @@
 			display: none;
 		}
 		&.tab {
-			.tab__wrap {
+			.segment__wrap {
 				display: block;
 			}
 		}
@@ -304,10 +304,6 @@
 			}
 		}
 	}
-	
-	// .guide {
-	
-	// }
 }
 
 @media (max-width: 359px) {
