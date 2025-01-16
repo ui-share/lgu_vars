@@ -277,7 +277,7 @@
 					<li>
 						<h3>Top button</h3>
 					</li>
-					<li>
+					<li>      
 						<button class="btn-top" type="button"></button>
 					</li>
 					<li>
@@ -296,7 +296,7 @@
 						<h3>solid box button</h3>
 					</li>
 					<li>
-						<button class="btn-between bg-withdraw">
+						<button class="btn btn-between bg-withdraw">
 							<span class="txt-wrap">
 								<span class="img-box">
 									<img src="../../static/images/icon/ic-btn-dcmnt.png" alt="">
@@ -311,7 +311,7 @@
 						</button>
 					</li>
 					<li>
-						<button class="btn-between bg-bank">
+						<button class="btn btn-between bg-bank">
 							<span class="txt-wrap">
 								<span class="img-box">
 									<img src="../../static/images/icon/ic-btn-shinhan.png" alt="">
@@ -328,29 +328,54 @@
 					</li>
 					<li>
 						<div class="btn-group flex-column">
-							<button class="btn-between btn-payment" type="button">
+							<button class="btn btn-popSolid" type="button">
 								<span class="txt">텍스트</span>
 							</button>
+
+							<button class="btn btn-popSolid" type="button">
+								<span class="txt">텍스트</span>
+								<span class="img-box ico20">
+									<img src="../../static/images/icon/ic-btn-headphone.png">
+								</span>
+							</button>
+
+							<button class="btn btn-popSolid between" type="button">
+								<span class="txt">텍스트</span>
+								<span class="img-box ico20">
+									<img src="../../static/images/icon/ic-btn-headphone.png">
+								</span>
+							</button>
+
 							<!-- 선택시 is-selected 클래스 붙음 -->
-							<button class="btn-between btn-payment is-selected" type="button">
+							<button class="btn btn-popSolid between" type="button">
 								<!-- <button class="btn btn-icBox is-selected"> -->
+								<span class="txt">텍스트</span>
+								<!-- selected 되었을 때 나타나는 부분 -->
+								<span class="txt-wrap">
 									<span class="txt">텍스트</span>
-									<!-- selected 되었을 때 나타나는 부분 -->
-									<span class="txt-wrap">
-										<span class="txt">
-											텍스트
-										</span>
-										<span class="img-box">
-											<img src="../../static/images/icon/ic-btn-chck.png">
-										</span>
+									<span class="img-box">
+										<img src="../../static/images/icon/ic-btn-chck.svg">
 									</span>
-								</button>
+								</span>
+							</button>
+
+							<button class="btn btn-popSolid between is-selected" type="button">
+								<!-- <button class="btn btn-icBox is-selected"> -->
+								<span class="txt">텍스트</span>
+								<!-- selected 되었을 때 나타나는 부분 -->
+								<span class="txt-wrap">
+									<span class="txt">텍스트</span>
+									<span class="img-box">
+										<img src="../../static/images/icon/ic-btn-chck.svg">
+									</span>
+								</span>
+							</button>
 						</div>
 					</li>
 					<li>
 						<div class="btn-group">
 							<!-- default data btn -->
-							<button class="btn-between btn-remain-data" type="button">
+							<button class="btn btn-between btn-remain-data" type="button">
 								<span class="txt-wrap">
 									<span class="txt">0GB</span>
 									<span class="txt">NN원</span>
@@ -358,7 +383,7 @@
 							</button>
 
 							<!-- 선택시 is-selected 클래스 붙음 -->
-							<button class="btn-between btn-remain-data is-selected" type="button" style="margin-top:10px;">
+							<button class="btn btn-between btn-remain-data is-selected" type="button" style="margin-top:10px;">
 								<span class="txt-wrap">
 									<span class="txt">0GB</span>
 									<span class="txt">NN원</span>

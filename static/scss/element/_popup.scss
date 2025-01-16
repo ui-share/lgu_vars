@@ -47,10 +47,15 @@
             height: 40px;
 			margin-left: auto;
 			padding: 8px;
+			border: none;
+			background-color: transparent;
 			background-image: url(../../static/images/icon/close_line.png);
             background-repeat: no-repeat;
             background-size: 24px 24px;
             background-position: center center;
+			&:active { 
+				box-shadow: none;
+			}
 		}
 	}
 	.popup-body {
@@ -309,9 +314,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		.btn {
-			background-color: var(--dt-gray02);
-		}
 	}
 }
 
