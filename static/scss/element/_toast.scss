@@ -1,11 +1,11 @@
 @import '../base/mixin.scss';
 
 .toast-group {
-  display: none;
+  display: block;
 	position: fixed;
-	bottom: 0;
+	bottom: 92px;
 	left: 50%;
-	transform: translate3d(-50%, -40px, 0);
+	transform: translate3d(-50%, 0, 0);
 	z-index: 9999;
   &.show {
     display: block;
