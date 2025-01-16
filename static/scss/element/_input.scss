@@ -1,0 +1,148 @@
+// 변수 선언
+$primary-color: #ff0080;
+$success-color: green;
+$error-color: red;
+$label-color: #aaa;
+$input-border-color: #ccc;
+
+// 공통 스타일
+%hidden {
+    display: none;
+    }
+
+    %visible {
+    display: block;
+    }
+
+    // Input Container 스타일
+    .input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    // 라벨 스타일
+    .input-label {
+        position: absolute;
+        top: 50%; // 기본 상태에서 필드 중앙에 배치
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: $label-color;
+        transition: all 0.2s ease-in-out;
+        pointer-events: none;
+    }
+
+    // 입력 필드 스타일
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $input-border-color;
+        border-radius: 4px;
+        font-size: 16px;
+        outline: none;
+        transition: border-color 0.2s ease-in-out;
+    }
+
+    // Clear 버튼
+    .clear-button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 16px;
+        color: $label-color;
+        cursor: pointer;
+
+        // 기본 상태에서는 숨김
+        @extend %hidden;
+    }
+
+    // 헬퍼 텍스트
+    .helper-text {
+        font-size: 12px;
+        margin-top: 4px;
+
+        &.success {
+        color: $success-color;
+        @extend %hidden;
+        }
+
+        &.error {
+        color: $error-color;
+        @extend %hidden;
+        }
+    }
+
+    // 상태별 스타일
+    &.focused,
+    &.typing,
+    &.done {
+        .input-label {
+        top: -16px; // 라벨이 위로 올라가도록 변경
+        font-size: 12px; // 작아지면서 플로팅 효과
+        color: $primary-color;
+        }
+    }
+
+    &.success {
+        .input-field {
+        border-color: $success-color;
+        }
+
+        .input-label {
+        color: $success-color;
+        }
+
+        .helper-text.success {
+        @extend %visible;
+        }
+    }
+
+    &.error {
+        .input-field {
+        border-color: $error-color;
+        }
+
+        .input-label {
+        color: $error-color;
+        }
+
+        .helper-text.error {
+        @extend %visible;
+        }
+    }
+
+    &.typing {
+        .clear-button {
+        @extend %visible;
+        }
+    }
+
+    &.disabled {
+        .input-field {
+        background-color: #f5f5f5;
+        color: #ccc;
+        border-color: #ddd;
+        pointer-events: none;
+        }
+
+        .clear-button {
+        pointer-events: none;
+        }
+    }
+
+    &.read-only {
+        .input-field {
+        background-color: #f5f5f5;
+        color: #666;
+        border-color: #ddd;
+        pointer-events: none;
+        }
+
+        .clear-button {
+        display: none;
+        }
+    }
+}
