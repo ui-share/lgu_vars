@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>실시간 사용량</title>
-    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/search.css">
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
         function initCheckDevice() {
@@ -17,6 +18,7 @@
             initCheckDevice();
         }
     </script>
+    <script src="../../../../static/js/tooltip/popper.js"></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -57,7 +59,7 @@
                         <div class="row title-wrap">
                             <span class="txt-title ico">
                                 <span class="img-box">
-                                    <img src="../../static/images/icon/ic-circle-chart.svg" alt="">
+                                    <img src="../../../../static/images/icon/ic-circle-chart.svg" alt="">
                                 </span>
                                 데이터
                             </span>
@@ -86,8 +88,8 @@
                                     <div class="row">
                                         <span class="txt-title">
                                             참 쉬운 가족 데이터
-                                            <span class="img-box tooltip">
-                                                <img src="../../static/images/icon/" alt="">
+                                            <span class="img-box tooltip"  aria-describedby="tooltip">
+                                                <img src="../../../../static/images/icon/ic-circle-quesition.svg" alt="">
                                             </span>
                                         </span>
                                         <span class="txt-desc">
@@ -98,8 +100,8 @@
                                     <div class="row">
                                         <span class="txt-title">
                                             자회선 월 기본제공 데이터
-                                            <span class="img-box tooltip">
-                                                <img src="../../static/images/icon/" alt="">
+                                            <span class="img-box tooltip"  aria-describedby="tooltip">
+                                                <img src="../../../../static/images/icon/ic-circle-quesition.svg" alt="">
                                             </span>
                                             <span class="txt-phone">(010-75**-64**)</span>
                                         </span>
@@ -112,7 +114,7 @@
                                 <button class="btn-toggle accordion-header">
                                     <span class="txt">간단히 보기</span>
                                     <span class="img-box ico20">
-                                        <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
+                                        <img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
                                     </span>
                                 </button>
                             </div>
@@ -122,7 +124,7 @@
                         <div class="row title-wrap">
                             <span class="txt-title ico">
                                 <span class="img-box">
-                                    <img src="../../static/images/icon/ic-circle-sharing.svg" alt="">
+                                    <img src="../../../../static/images/icon/ic-circle-sharing.svg" alt="">
                                 </span>
                                 쉐어링
                             </span>
@@ -146,7 +148,7 @@
                         <div class="row title-wrap">
                             <span class="txt-title ico">
                                 <span class="img-box">
-                                    <img src="../../static/images/icon/ic-circle-tethering.svg" alt="">
+                                    <img src="../../../../static/images/icon/ic-circle-tethering.svg" alt="">
                                 </span>
                                 테더링
                             </span>
@@ -172,7 +174,7 @@
                                 <div class="row">
                                     <span class="txt-title ico">
                                         <span class="img-box">
-                                            <img src="../../static/images/icon/ic-circle-call.svg" alt="">
+                                            <img src="../../../../static/images/icon/ic-circle-call.svg" alt="">
                                         </span>
                                         이통3사&유무선
                                     </span>
@@ -184,7 +186,7 @@
                                 <div class="row">
                                     <span class="txt-title ico">
                                         <span class="img-box">
-                                            <img src="../../static/images/icon/ic-circle-video.svg" alt="">
+                                            <img src="../../../../static/images/icon/ic-circle-video.svg" alt="">
                                         </span>
                                         영상&부가
                                     </span>
@@ -196,7 +198,7 @@
                                 <div class="row">
                                     <span class="txt-title ico">
                                         <span class="img-box">
-                                            <img src="../../static/images/icon/ic-circle-message.svg" alt="">
+                                            <img src="../../../../static/images/icon/ic-circle-message.svg" alt="">
                                         </span>
                                         문자
                                     </span>
