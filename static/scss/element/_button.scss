@@ -1,11 +1,23 @@
 @import '../base/mixin';
 /* single button util */
 .btn-top { // 탑버튼
+    display: flex;
+	justify-content: center;
+    align-items: center;
     width: 48px;
     height: 48px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 50%;
     @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+    padding: 9px;
+    &::before {
+		content: "";
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		background: url(../images/icon/top-btn-arrow.svg) center center no-repeat;
+		background-size: cover;
+	}
 }
 .btn-scroll {
     @include flexBox(center, center);

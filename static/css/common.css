@@ -788,7 +788,8 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  column-gap: 6px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
 }
 .info-col-wrap .txt-title.ico .img-box {
   width: 28px;
@@ -889,11 +890,23 @@ button {
 
 /* single button util */
 .btn-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 50%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
+  padding: 9px;
+}
+.btn-top::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url(../images/icon/top-btn-arrow.svg) center center no-repeat;
+  background-size: cover;
 }
 
 .btn-scroll {
@@ -2496,6 +2509,14 @@ button {
 .popup-body .calendar-box .schedule-cont-wrap.list-month li.is-disabled .btn-month {
   color: var(--dt-gray09);
   pointer-events: none;
+}
+.popup-body .slctInfo-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.popup-body .slctInfo-box .btn {
+  background-color: var(--dt-gray02);
 }
 
 @media (max-width: 359px) {

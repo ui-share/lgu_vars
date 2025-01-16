@@ -304,6 +304,15 @@
 			}
 		}
 	}
+	// 방법 선택 팝업 
+	.slctInfo-box {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		.btn {
+			background-color: var(--dt-gray02);
+		}
+	}
 }
 
 @media (max-width: 359px) {
