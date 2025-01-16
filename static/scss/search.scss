@@ -19,20 +19,48 @@
 			}			
 			.cont__txt-box {min-height:110px;}
 		}
+        .info-price-single {
+            margin:0 20px;
+            padding:18px 20px;
+            background-color:var(--dt-white);
+            border-radius:8px;
+            span {text-align:center}
+            .txt-info {
+                @include flexBox(center, center);
+                flex-wrap:wrap;
+                color:var(--dt-gray11);
+                @include fw-6();
+                .txt-price {
+                    display:inline-block;
+                    margin-left:4px;
+                    margin-right:4px;
+                    color:var(--dt-gray16);
+                    @include fw-7(18px);
+                }
+                .img-box {
+                    min-width:18px;
+                    width:18px;height:18px;
+                    margin-left:2px;
+                    img {margin-top:1px;}
+                }
+            }
+        }
 	}
 }
 
 .cont__wrap {
     .cont__txt-box {
-        &.price {
-            @include flexRow;
-            align-items: center;
-            flex-wrap: wrap;
-            margin-top:4px;
-            @include fw-6(18px);
-            line-height:36px;
-            .deco {margin-right:2px;font-size:30px;}
-            .color-prim {@include fw-6(18px);}
+        .txt {
+            &.price {
+                @include flexRow;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top:4px;
+                @include fw-6(18px);
+                line-height:36px;
+                .deco {margin-right:2px;font-size:30px;}
+                .color-prim {@include fw-6(18px);line-height:22px;}
+            }
         }
     }
     .select-billdate {
@@ -57,10 +85,24 @@
 			.chips-date {margin-right:4px;}
 		}
 	}
-	&.cont__wrap-vertical {
-		@include flexColum;
-		row-gap:16px;
-		.bullet-caption {margin-top:8px;}
+    .btn-srch-childline {
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+		padding:10px 20px;
+		border-radius:0;
+		background-color:var(--dt-gray15);
+		.txt-title {
+            @include fw-7(14px);line-height:21px;
+            color:var(--dt-white);
+            text-align:left;
+            .txt-phone {
+                display:block;
+                color:var(--dt-gray09);
+                font-weight:500;
+            }
+        }
+        .img-box {width:24px;height:24px;}
 	}
 	&.cont__wrap-bill {
 		min-height:174px;

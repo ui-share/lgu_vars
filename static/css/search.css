@@ -22,8 +22,43 @@
 .section__cont.summary .cont__wrap .cont__txt-box {
   min-height: 110px;
 }
+.section__cont.summary .info-price-single {
+  margin: 0 20px;
+  padding: 18px 20px;
+  background-color: var(--dt-white);
+  border-radius: 8px;
+}
+.section__cont.summary .info-price-single span {
+  text-align: center;
+}
+.section__cont.summary .info-price-single .txt-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: var(--dt-gray11);
+  font-size: 16px;
+  font-weight: 600;
+}
+.section__cont.summary .info-price-single .txt-info .txt-price {
+  display: inline-block;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 700;
+}
+.section__cont.summary .info-price-single .txt-info .img-box {
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
+  margin-left: 2px;
+}
+.section__cont.summary .info-price-single .txt-info .img-box img {
+  margin-top: 1px;
+}
 
-.cont__wrap .cont__txt-box.price {
+.cont__wrap .cont__txt-box .txt.price {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,13 +68,14 @@
   font-weight: 600;
   line-height: 36px;
 }
-.cont__wrap .cont__txt-box.price .deco {
+.cont__wrap .cont__txt-box .txt.price .deco {
   margin-right: 2px;
   font-size: 30px;
 }
-.cont__wrap .cont__txt-box.price .color-prim {
+.cont__wrap .cont__txt-box .txt.price .color-prim {
   font-size: 18px;
   font-weight: 600;
+  line-height: 22px;
 }
 .cont__wrap .select-billdate {
   display: flex;
@@ -69,13 +105,29 @@
 .cont__wrap .select-billdate .txt-select-wrap .chips-date {
   margin-right: 4px;
 }
-.cont__wrap.cont__wrap-vertical {
-  display: flex;
-  flex-direction: column;
-  row-gap: 16px;
+.cont__wrap .btn-srch-childline {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: var(--dt-gray15);
 }
-.cont__wrap.cont__wrap-vertical .bullet-caption {
-  margin-top: 8px;
+.cont__wrap .btn-srch-childline .txt-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: var(--dt-white);
+  text-align: left;
+}
+.cont__wrap .btn-srch-childline .txt-title .txt-phone {
+  display: block;
+  color: var(--dt-gray09);
+  font-weight: 500;
+}
+.cont__wrap .btn-srch-childline .img-box {
+  width: 24px;
+  height: 24px;
 }
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;

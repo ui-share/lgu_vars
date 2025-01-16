@@ -381,11 +381,10 @@ button {
 		padding: 36px 0 48px 0;
 		gap: 48px;
 	}
-	&.detail {
-		.info-col-wrap {
-			& + .btn-group {
-				margin-top:16px;
-			}
+	&.wdFull {
+		.cont__wrap {
+			padding-right:0;
+			padding-left:0;
 		}
 	}
 }
@@ -408,6 +407,13 @@ button {
 			}
 		}
 	}
+	&.cont__wrap-vertical {
+		@include flexColum;
+		row-gap:16px;
+		.con__tit-box {margin-bottom:0;}
+		.bullet-caption {margin-top:8px;}
+	}
+	&.tabnav {padding:0;}
 }
 .con__tit-box {
 	@include flexRow();
@@ -502,11 +508,6 @@ button {
 /* 요금제 및 아코디언 관련 컴포넌트 */
 .plan-wrap {
 	.col {
-		&:nth-of-type(2) {
-			margin-top: 20px;
-			padding-top: 20px;
-			border-top: 1px solid var(--dt-gray06);
-		}
 		row-gap:8px;
 		.txt-plan {
 			margin-bottom:4px;
@@ -623,32 +624,6 @@ button {
 				color:var(--dt-gray11);
 				@include fw-5(12px);
 			}
-		}
-	}
-}
-.info-price-single {
-	margin:0 20px;
-	padding:18px 20px;
-	background-color:var(--dt-white);
-	border-radius:8px;
-	span {text-align:center}
-	.txt-info {
-		@include flexBox(center, center);
-		flex-wrap:wrap;
-		color:var(--dt-gray11);
-		@include fw-6();
-		.txt-price {
-			display:inline-block;
-			margin-left:4px;
-			margin-right:4px;
-			color:var(--dt-gray16);
-			@include fw-7(18px);
-		}
-		.img-box {
-			min-width:18px;
-			width:18px;height:18px;
-			margin-left:4px;
-			img {margin-top:1px;}
 		}
 	}
 }
