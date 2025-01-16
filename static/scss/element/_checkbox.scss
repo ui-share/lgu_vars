@@ -25,11 +25,12 @@
   }
   .chck-label {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     cursor: pointer;
-    @include fw-5(14px);
     color: var(--dt-gray16);
+    @include fw-5(14px);
+    line-height:16px;
     .chck-box {
       position: relative;
       width: 20px;
@@ -38,6 +39,7 @@
       border-radius: 4px;
       border: 2px solid var(--dt-gray09);
       transition: background-color 0.3s ease;
+      align-self:baseline;
       &::before {
         content: '';
         position: absolute;

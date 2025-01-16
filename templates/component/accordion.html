@@ -38,17 +38,95 @@
             <!-- 아코디언 영역 -->
             <div class="section__cont detail" style="padding-top:86px;">
                 <div class="cont__wrap">
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:12px;">[체크박스가 포함된 케이스]</h3>
+                    <!-- 체크박스가 포함된 경우 -->
                     <div class="accordion-container open">
-                        
+                        <div class="chckbox-area accordion-header">
+                            <div class="chck-group">
+                                <input type="checkbox" id="chck01" class="chck-input">
+                                <label for="chck01" class="chck-label">
+                                    <span class="chck-box"></span>
+                                    전자서명을 위한 고객정보 활용동의
+                                </label>
+                            </div>
+                            <button type="button" class="btn-toggle">
+                                <span class="img-box ico-toggle">
+                                    <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="bullet-list">
+                                <li class="bullet-item">
+                                    카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다. 카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 
+                                    결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다. 카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 
+                                    결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="chck-group">
-						<input type="checkbox" id="chck01" class="chck-input">
-						<label for="chck01" class="chck-label">
-							<span class="chck-box"></span>
-							라벨명1
-						</label>
-					</div>
                 </div>
+
+                <!-- 자세히보기-간단히보기 버튼의 경우 -->
+                <div class="cont__wrap">
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:12px;">[자세히보기-간단히보기 버튼 케이스]</h3>
+                    <div class="info-col-wrap">
+                        <div class="plan-wrap"> 
+                            <div class="col">
+                                <div class="txt-plan">
+                                    <span class="current">12GB</span>
+                                    <span class="total">/ 무제한</span>
+                                </div>
+                                <div class="progress-area realtime">
+                                    <span class="progress-bg">
+                                        <!-- style.width %로 조절 -->
+                                        <span class="progress-bar" style="width:100%;"></span>
+                                    </span>
+                                </div>
+                                <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
+                            </div>
+                            <div class="col accordion-container open">
+                                <div class="list-plan accordion-content">
+                                    <div class="row">
+                                        <span class="txt-title">
+                                            참 쉬운 가족 데이터
+                                            <span class="img-box tooltip">
+                                                <img src="../../static/images/icon/" alt="">
+                                            </span>
+                                        </span>
+                                        <span class="txt-desc">
+                                            <span class="current">0GB</span>
+                                            <span class="total">/ 50GB</span>
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <span class="txt-title">
+                                            자회선 월 기본제공 데이터
+                                            <span class="img-box tooltip">
+                                                <img src="../../static/images/icon/" alt="">
+                                            </span>
+                                            <span class="txt-phone">(010-75**-64**)</span>
+                                        </span>
+                                        <span class="txt-desc">
+                                            <span class="current">250MB</span>
+                                            <span class="total">/ 500MB</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button class="btn-toggle accordion-header">
+                                    <span class="txt">자세히 보기</span>
+                                    <span class="img-box ico-toggle">
+                                        <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- 발행된 청구서가 있을 경우 -->
                 <div class="cont__wrap">
                     <div class="info-price-wrap">
@@ -63,7 +141,7 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>60,000원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
                                 </span>
@@ -115,7 +193,7 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>10,000원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
                                 </span>
@@ -154,7 +232,7 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>999,999원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
                                 </span>
