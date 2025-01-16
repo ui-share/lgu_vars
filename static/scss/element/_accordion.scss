@@ -75,12 +75,19 @@
         border-radius:4px;
     }
     &.chckbox-area {
+        align-items:center;
         padding:20px 0 0;
+        .chck-group {
+            width:calc(100% - 30px);
+        }
+        .btn-toggle .img-box {
+            width:24px;height:24px;
+        }
         & + .accordion-content {
+            max-height:112px;
+            overflow-y:auto;
             .bullet-list {
-                padding-top:12px;
-                max-height:112px;
-                overflow-y:auto;
+                margin-top:12px;
             }
         }
     }
