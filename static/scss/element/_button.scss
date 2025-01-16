@@ -10,6 +10,7 @@
     border-radius: 50%;
     @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
     padding: 9px;
+    font-size:0;text-indent:-9999px;
     &::before {
 		content: "";
 		display: inline-block;
