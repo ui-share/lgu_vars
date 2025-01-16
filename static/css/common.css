@@ -789,8 +789,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .info-col-wrap .txt-title.ico .img-box {
   width: 28px;
@@ -928,14 +927,14 @@ button {
   color: var(--dt-white);
 }
 
-.btn-toggle {
-  background-color: var(--dt-gray06);
-  border-radius: 4px;
-}
 .btn-toggle .txt {
   font-size: 14px;
   font-weight: 600;
   color: var(--dt-gray12);
+}
+.btn-toggle .img-box {
+  width: 20px;
+  height: 20px;
 }
 
 .btn-between {
@@ -1563,12 +1562,13 @@ button {
 }
 .chck-group .chck-label {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 8px;
   cursor: pointer;
+  color: var(--dt-gray16);
   font-size: 14px;
   font-weight: 500;
-  color: var(--dt-gray16);
+  line-height: 16px;
 }
 .chck-group .chck-label .chck-box {
   position: relative;
@@ -1578,6 +1578,7 @@ button {
   border-radius: 4px;
   border: 2px solid var(--dt-gray09);
   transition: background-color 0.3s ease;
+  align-self: baseline;
 }
 .chck-group .chck-label .chck-box::before {
   content: "";
@@ -2614,14 +2615,14 @@ button {
 .accordion-container .accordion-header {
   cursor: pointer;
 }
-.accordion-container .accordion-header.info-price .txt-price .img-box, .accordion-container .accordion-header.btn-toggle .img-box {
+.accordion-container .accordion-header .ico-toggle {
   transition: transform 0.3s ease;
 }
 .accordion-container .accordion-content {
   visibility: hidden;
   height: 0;
 }
-.accordion-container.open .accordion-header.info-price .txt-price .img-box, .accordion-container.open .accordion-header.btn-toggle .img-box {
+.accordion-container.open .accordion-header .ico-toggle {
   transform: rotate(180deg);
 }
 .accordion-container.open > .accordion-content {
@@ -2672,6 +2673,16 @@ button {
   align-items: center;
   padding: 14px;
   gap: 0;
+  background-color: var(--dt-gray06);
+  border-radius: 4px;
+}
+.accordion-header.chckbox-area {
+  padding: 20px 0 0;
+}
+.accordion-header.chckbox-area + .accordion-content .bullet-list {
+  padding-top: 12px;
+  max-height: 112px;
+  overflow-y: auto;
 }
 
 .accordion-content .info-price-detail {

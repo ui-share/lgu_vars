@@ -33,12 +33,11 @@
     }
 }
 .btn-toggle { // 자세히보기 버튼
-    background-color:var(--dt-gray06);
-    border-radius:4px;
     .txt {
         @include fw-6(14px);
         color: var(--dt-gray12);
     }
+    .img-box {width:20px;height:20px;}
 }
 .btn-between {
     @include flexBox(between, center);

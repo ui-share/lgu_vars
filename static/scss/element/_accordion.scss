@@ -16,8 +16,7 @@
     }
     .accordion-header {
         cursor: pointer;
-        &.info-price .txt-price .img-box,
-        &.btn-toggle .img-box {
+        .ico-toggle{
             transition: transform 0.3s ease;
         }
     }
@@ -27,8 +26,7 @@
     }
     &.open {
         .accordion-header {
-            &.info-price .txt-price .img-box,
-            &.btn-toggle .img-box {
+            .ico-toggle{
                 transform:rotate(180deg);
             }
         }
@@ -73,6 +71,18 @@
         align-items: center;
         padding:14px;
         gap:0;
+        background-color:var(--dt-gray06);
+        border-radius:4px;
+    }
+    &.chckbox-area {
+        padding:20px 0 0;
+        & + .accordion-content {
+            .bullet-list {
+                padding-top:12px;
+                max-height:112px;
+                overflow-y:auto;
+            }
+        }
     }
 }
 .accordion-content {
