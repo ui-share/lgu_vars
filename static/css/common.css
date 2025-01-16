@@ -2213,6 +2213,95 @@ button {
   color: var(--dt-white);
 }
 
+.input-container .helper-text.error, .input-container .helper-text.success, .input-container .clear-button {
+  display: none;
+}
+
+.input-container.typing .clear-button, .input-container.error .helper-text.error, .input-container.success .helper-text.success {
+  display: block;
+}
+
+.input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.input-container .input-label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+.input-container .input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out;
+}
+.input-container .clear-button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #aaa;
+  cursor: pointer;
+}
+.input-container .helper-text {
+  font-size: 12px;
+  margin-top: 4px;
+}
+.input-container .helper-text.success {
+  color: green;
+}
+.input-container .helper-text.error {
+  color: red;
+}
+.input-container.focused .input-label, .input-container.typing .input-label, .input-container.done .input-label {
+  top: -16px;
+  font-size: 12px;
+  color: #ff0080;
+}
+.input-container.success .input-field {
+  border-color: green;
+}
+.input-container.success .input-label {
+  color: green;
+}
+.input-container.error .input-field {
+  border-color: red;
+}
+.input-container.error .input-label {
+  color: red;
+}
+.input-container.disabled .input-field {
+  background-color: #f5f5f5;
+  color: #ccc;
+  border-color: #ddd;
+  pointer-events: none;
+}
+.input-container.disabled .clear-button {
+  pointer-events: none;
+}
+.input-container.read-only .input-field {
+  background-color: #f5f5f5;
+  color: #666;
+  border-color: #ddd;
+  pointer-events: none;
+}
+.input-container.read-only .clear-button {
+  display: none;
+}
+
 .popup-wrapper {
   display: none;
   position: fixed;
