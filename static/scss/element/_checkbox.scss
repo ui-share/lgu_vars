@@ -25,7 +25,7 @@
   }
   .chck-label {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     cursor: pointer;
     @include fw-5(14px);
