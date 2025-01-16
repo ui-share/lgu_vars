@@ -221,7 +221,7 @@
         }
     }
     &.flex-column {
-        @include flexColum();
+        @include flexColum;
         justify-content: center;align-items:flex-start;
         row-gap: 8px;
         .btn {

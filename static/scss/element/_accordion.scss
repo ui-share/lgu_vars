@@ -2,18 +2,21 @@
 
 // 아코디언 인터랙션 실행 관련 코드
 .accordion-container {
-    &:only-child {
+    /* 마지막요소일 경우 */
+    &:last-of-type {
         .info-price, .info-price-detail {
             padding-bottom:0;
             &::after {display:none}
         }
-        &.open { 
+        &.open {
             .info-price{
                 padding-bottom:16px;
                 &::after {display:block}
             }
         }
     }
+
+    /* default */
     .accordion-header {
         cursor: pointer;
         .ico-toggle{
@@ -32,7 +35,11 @@
         }
         > .accordion-content {
             visibility:visible;
-            height:auto
+            height:auto;
+            &:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
+                border-top:1px solid var(--dt-gray06);
+                margin-top:20px;padding-top:20px;
+            }
         }
     }
 }
@@ -46,6 +53,9 @@
     .row {
         @include flexRow;
         align-items:center;
+        &.txt-title {
+            >span {@include fw-7(16px);}
+        }
     }
     .txt-title {
         flex: 1;
@@ -57,7 +67,6 @@
             margin-right:4px;
             & + span {
                 @include fw-7(16px);
-                // @include ellipsis(2);
             }
         }
     }
@@ -74,7 +83,7 @@
         background-color:var(--dt-gray06);
         border-radius:4px;
     }
-    &.chckbox-area {
+    &.chckbox-area { // 체크박스 영역의 경우
         align-items:center;
         padding:20px 0 0;
         .chck-group {

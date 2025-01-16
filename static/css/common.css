@@ -472,8 +472,9 @@ button {
   padding: 36px 0 48px 0;
   gap: 48px;
 }
-.section__cont.detail .info-col-wrap + .btn-group {
-  margin-top: 16px;
+.section__cont.wdFull .cont__wrap {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .cont__wrap {
@@ -496,6 +497,20 @@ button {
   font-size: 22px;
   font-weight: 600;
   color: var(--dt-primary);
+}
+.cont__wrap.cont__wrap-vertical {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.cont__wrap.cont__wrap-vertical .con__tit-box {
+  margin-bottom: 0;
+}
+.cont__wrap.cont__wrap-vertical .bullet-caption {
+  margin-top: 8px;
+}
+.cont__wrap.tabnav {
+  padding: 0;
 }
 
 .con__tit-box {
@@ -592,11 +607,6 @@ button {
 /* 요금제 및 아코디언 관련 컴포넌트 */
 .plan-wrap .col {
   row-gap: 8px;
-}
-.plan-wrap .col:nth-of-type(2) {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid var(--dt-gray06);
 }
 .plan-wrap .col .txt-plan {
   margin-bottom: 4px;
@@ -749,42 +759,6 @@ button {
   color: var(--dt-gray11);
   font-size: 12px;
   font-weight: 500;
-}
-
-.info-price-single {
-  margin: 0 20px;
-  padding: 18px 20px;
-  background-color: var(--dt-white);
-  border-radius: 8px;
-}
-.info-price-single span {
-  text-align: center;
-}
-.info-price-single .txt-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: var(--dt-gray11);
-  font-size: 16px;
-  font-weight: 600;
-}
-.info-price-single .txt-info .txt-price {
-  display: inline-block;
-  margin-left: 4px;
-  margin-right: 4px;
-  color: var(--dt-gray16);
-  font-size: 18px;
-  font-weight: 700;
-}
-.info-price-single .txt-info .img-box {
-  min-width: 18px;
-  width: 18px;
-  height: 18px;
-  margin-left: 4px;
-}
-.info-price-single .txt-info .img-box img {
-  margin-top: 1px;
 }
 
 /* single button util */
@@ -2580,16 +2554,20 @@ button {
   cursor: not-allowed; /* 비활성화된 상태에서 커서 변경 */
 }
 
-.accordion-container:only-child .info-price, .accordion-container:only-child .info-price-detail {
+.accordion-container {
+  /* 마지막요소일 경우 */
+  /* default */
+}
+.accordion-container:last-of-type .info-price, .accordion-container:last-of-type .info-price-detail {
   padding-bottom: 0;
 }
-.accordion-container:only-child .info-price::after, .accordion-container:only-child .info-price-detail::after {
+.accordion-container:last-of-type .info-price::after, .accordion-container:last-of-type .info-price-detail::after {
   display: none;
 }
-.accordion-container:only-child.open .info-price {
+.accordion-container:last-of-type.open .info-price {
   padding-bottom: 16px;
 }
-.accordion-container:only-child.open .info-price::after {
+.accordion-container:last-of-type.open .info-price::after {
   display: block;
 }
 .accordion-container .accordion-header {
@@ -2609,6 +2587,11 @@ button {
   visibility: visible;
   height: auto;
 }
+.accordion-container.open > .accordion-content:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
+  border-top: 1px solid var(--dt-gray06);
+  margin-top: 20px;
+  padding-top: 20px;
+}
 
 .accordion-header {
   display: flex;
@@ -2622,6 +2605,10 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+.accordion-header .row.txt-title > span {
+  font-size: 16px;
+  font-weight: 700;
 }
 .accordion-header .txt-title {
   flex: 1;
