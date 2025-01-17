@@ -2472,8 +2472,7 @@ input {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   margin: 20px auto 0;
   padding: 14px 16px;
   background-color: var(--dt-gray02);
@@ -2490,7 +2489,7 @@ input {
   max-width: 144px;
   text-align: center;
 }
-.popup-body .txt-perd-wrap .txt-perd .hyppen {
+.popup-body .txt-perd-wrap .txt-perd .hyphen {
   margin-right: 10px;
   font-size: 18px;
   font-weight: 600;
