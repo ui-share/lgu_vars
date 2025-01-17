@@ -1,20 +1,23 @@
 @import '../base/mixin.scss';
 
-.toast-group {
-  display: block;
+.toast-wrap {
+  display: none;
 	position: fixed;
 	bottom: 92px;
 	left: 50%;
 	transform: translate3d(-50%, 0, 0);
 	z-index: 9999;
+  width: 100%;
+  padding: 0 20px;
   &.show {
     display: block;
-    animation: toast-in 0.6s ease-out;
+    animation: toast-in 0.4s ease-out;
   }
   &.hide {
     display: block;
-    transform: translate3d(-50%, 110%, 0);
-    animation: toast-out 0.6s ease-out;
+    bottom: -99px;
+    transform: translate3d(-50%, 0, 0);
+    animation: toast-out 0.2s ease-out;
   }
   .toast {
     @include flexBox(between, center);
@@ -24,26 +27,30 @@
     padding: 12px 20px;
     @include flexBox(between, center);
     column-gap: 10px;
-    min-height: 48px;
-    // width: 320px;
-    min-width: 280px;
     margin: 0 auto;
+    min-height: 48px;
+    min-width: 220px;
+    max-width: 320px;
     box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
     &:has(.btn-util.hidden) {
       justify-content: center;
       .toast-txt {
+        width: 100%;
         text-align: center;
       }
     }
   
     .toast-txt {
       @include fw-5(16px);
+      width: 100%;
+      max-width: 240px;
       color: var(--dt-white);
       padding: 0 5px;
     }
     .btn-util {
-      width: 24px;
-      height: 24px;
+      min-width: 40px;
+      width: 40px;
+      height: 40px;
       // margin-left: auto;
       background-image: url(../images/icon/ic-toast-close.svg);
       background-repeat: no-repeat;
@@ -53,34 +60,38 @@
   }
 }
 /* 해상도 변경 */
-@media (max-width: 359px) {
-	.toast {
-    min-width: 240px;
-	}
-}
+// @media (max-width: 359px) {
+// 	.toast {
+//     min-width: 240px;
+// 	}
+// }
 /* toast animation */
 @keyframes toast-in {
   0% {
-      transform: translate3d(-50%, 110%,0);
+      transform: translate3d(-50%, 0, 0);
       opacity: 0;
+      bottom: 0;
       visibility: visible
   }
   to {
     opacity: 1;
-      transform: translate3d(-50%, -40px, 0);
+    bottom: 92px;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @keyframes toast-out {
   0% {
     opacity: 1;
-    transform: translate3d(-50%, -40px, 0);
+    bottom: 92px;
+    transform: translate3d(-50%, 0, 0);
     visibility: visible
   }
   to {
     opacity: 0;
-    transform: translate3d(-50%,110%,0);
-    visibility: hidden;
+    bottom: 0;
+    transform: translate3d(-50%, 0, 0);
+    display: none;
 }
 }
 

@@ -48,6 +48,9 @@
                 .txt {color:var(--dt-gray13);}
             }
         }
+        &.full {
+            border-radius: 0;
+        }
 
         /* sizing */
         &.btn-md { // 중간높이

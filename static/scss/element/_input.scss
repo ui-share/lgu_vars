@@ -41,6 +41,7 @@ input {
 
 // Input Container 스타일
 .input-control {   
+    padding-top: 14px;
     .input-group {
         position: relative;
         width: 100%;
@@ -107,7 +108,7 @@ input {
     &.normal {
         .input-group {
             .input-label {
-                top: -10px; // 라벨이 위로 올라가도록 변경
+                top: -6px; // 라벨이 위로 올라가도록 변경
                 font-size: 12px; // 작아지면서 플로팅 효과
                 @extend %visible;
             }
@@ -193,7 +194,7 @@ input {
             }
             .input-group {
                 .input-label {
-                    top: -10px; // 라벨이 위로 올라가도록 변경
+                    top: -6px; // 라벨이 위로 올라가도록 변경
                     @extend %visible;
                 }
                 .input-row {

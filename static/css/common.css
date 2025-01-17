@@ -283,6 +283,11 @@ button {
   margin-left: auto !important;
 }
 
+.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .center {
   display: flex !important;
   flex-direction: column !important;
@@ -513,6 +518,9 @@ button {
 .cont__wrap.tabnav__wrap {
   padding-right: 0;
   padding-left: 0;
+}
+.cont__wrap.cont__wrap-singleCont {
+  height: 100%;
 }
 
 .con__tit-box {
@@ -763,6 +771,66 @@ button {
   font-weight: 500;
 }
 
+/* 캘린더 선택시 월일자텍스트 노출영역 */
+.txt-perd-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  margin: 20px auto 0;
+  padding: 14px 16px;
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+}
+.txt-perd-wrap.slct {
+  margin: 8px auto 24px;
+  border-radius: 10px;
+  padding: 13px 12px;
+  background-color: transparent;
+  border: 2px solid var(--dt-gray08);
+}
+.txt-perd-wrap.slct .txt-perd {
+  color: var(--dt-gray11);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  min-width: 115px;
+  max-width: 144px;
+}
+.txt-perd-wrap.slct .txt-perd .cal-slct {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.txt-perd-wrap.slct .txt-perd .hyphen {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.txt-perd-wrap > span {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.txt-perd-wrap .txt-perd {
+  min-width: 86px;
+  max-width: 144px;
+  text-align: center;
+}
+.txt-perd-wrap .txt-perd .hyphen {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray10);
+}
+.txt-perd-wrap .txt-perd .point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+
 /* btn-group button */
 .btn-group .btn {
   width: 100%;
@@ -816,6 +884,9 @@ button {
 }
 .btn-group .btn.line.btn-sec .txt {
   color: var(--dt-gray13);
+}
+.btn-group .btn.full {
+  border-radius: 0;
 }
 .btn-group .btn.btn-md {
   width: 100%;
@@ -2108,6 +2179,9 @@ input {
   display: block;
 }
 
+.input-control {
+  padding-top: 14px;
+}
 .input-control .input-group {
   position: relative;
   width: 100%;
@@ -2167,7 +2241,7 @@ input {
   color: var(--dt-gray16);
 }
 .input-control.normal .input-group .input-label {
-  top: -10px;
+  top: -6px;
   font-size: 12px;
 }
 .input-control.normal .input-group .input-row {
@@ -2215,7 +2289,7 @@ input {
   opacity: 1;
 }
 .input-control.floating.focused .input-group .input-label {
-  top: -10px;
+  top: -6px;
 }
 .input-control.floating.focused .input-group .input-row {
   border-bottom: 2px solid var(--dt-primary);
@@ -2393,9 +2467,6 @@ input {
   animation: slideInUp 0.6s;
 }
 
-.popup-body {
-  /* 캘린더 선택시 월일자텍스트 노출영역 */
-}
 .popup-body .authorization .auth {
   text-align: center;
 }
@@ -2467,39 +2538,6 @@ input {
 }
 .popup-body .authorization.corporation .auth_corporation {
   display: block;
-}
-.popup-body .txt-perd-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 12px;
-  margin: 20px auto 0;
-  padding: 14px 16px;
-  background-color: var(--dt-gray02);
-  border-radius: 8px;
-}
-.popup-body .txt-perd-wrap > span {
-  color: var(--dt-gray11);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-}
-.popup-body .txt-perd-wrap .txt-perd {
-  min-width: 86px;
-  max-width: 144px;
-  text-align: center;
-}
-.popup-body .txt-perd-wrap .txt-perd .hyphen {
-  margin-right: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray10);
-}
-.popup-body .txt-perd-wrap .txt-perd .point {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
 }
 .popup-body .calendar-box {
   display: flex;
@@ -2994,24 +3032,27 @@ input {
   left: -16px;
 }
 
-.toast-group {
-  display: block;
+.toast-wrap {
+  display: none;
   position: fixed;
   bottom: 92px;
   left: 50%;
   transform: translate3d(-50%, 0, 0);
   z-index: 9999;
+  width: 100%;
+  padding: 0 20px;
 }
-.toast-group.show {
+.toast-wrap.show {
   display: block;
-  animation: toast-in 0.6s ease-out;
+  animation: toast-in 0.4s ease-out;
 }
-.toast-group.hide {
+.toast-wrap.hide {
   display: block;
-  transform: translate3d(-50%, 110%, 0);
-  animation: toast-out 0.6s ease-out;
+  bottom: -99px;
+  transform: translate3d(-50%, 0, 0);
+  animation: toast-out 0.2s ease-out;
 }
-.toast-group .toast {
+.toast-wrap .toast {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3023,26 +3064,31 @@ input {
   align-items: center;
   justify-content: space-between;
   column-gap: 10px;
-  min-height: 48px;
-  min-width: 280px;
   margin: 0 auto;
+  min-height: 48px;
+  min-width: 220px;
+  max-width: 320px;
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
 }
-.toast-group .toast:has(.btn-util.hidden) {
+.toast-wrap .toast:has(.btn-util.hidden) {
   justify-content: center;
 }
-.toast-group .toast:has(.btn-util.hidden) .toast-txt {
+.toast-wrap .toast:has(.btn-util.hidden) .toast-txt {
+  width: 100%;
   text-align: center;
 }
-.toast-group .toast .toast-txt {
+.toast-wrap .toast .toast-txt {
   font-size: 16px;
   font-weight: 500;
+  width: 100%;
+  max-width: 240px;
   color: var(--dt-white);
   padding: 0 5px;
 }
-.toast-group .toast .btn-util {
-  width: 24px;
-  height: 24px;
+.toast-wrap .toast .btn-util {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
   background-image: url(../images/icon/ic-toast-close.svg);
   background-repeat: no-repeat;
   background-size: 24px 24px;
@@ -3050,33 +3096,32 @@ input {
 }
 
 /* 해상도 변경 */
-@media (max-width: 359px) {
-  .toast {
-    min-width: 240px;
-  }
-}
 /* toast animation */
 @keyframes toast-in {
   0% {
-    transform: translate3d(-50%, 110%, 0);
+    transform: translate3d(-50%, 0, 0);
     opacity: 0;
+    bottom: 0;
     visibility: visible;
   }
   to {
     opacity: 1;
-    transform: translate3d(-50%, -40px, 0);
+    bottom: 92px;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 @keyframes toast-out {
   0% {
     opacity: 1;
-    transform: translate3d(-50%, -40px, 0);
+    bottom: 92px;
+    transform: translate3d(-50%, 0, 0);
     visibility: visible;
   }
   to {
     opacity: 0;
-    transform: translate3d(-50%, 110%, 0);
-    visibility: hidden;
+    bottom: 0;
+    transform: translate3d(-50%, 0, 0);
+    display: none;
   }
 }
 .inform-wrap {
