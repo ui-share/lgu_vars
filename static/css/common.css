@@ -283,13 +283,13 @@ button {
   margin-left: auto !important;
 }
 
+.mt-40 {
+  margin-top: 40px !important;
+}
+
 .px-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-.pt-40 {
-  padding-top: 40 !important;
 }
 
 .center {
@@ -866,6 +866,14 @@ button {
   font-weight: 500;
   color: var(--dt-black);
   text-align: right;
+}
+
+/* h7 txt 스타일*/
+.h7-tit {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+  margin-bottom: 16px;
 }
 
 /* btn-group button */

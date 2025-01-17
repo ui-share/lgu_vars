@@ -204,13 +204,14 @@ button {
 .ml-auto {
 	margin-left: auto !important;
 }
+.mt-40 {
+	margin-top: 40px !important;
+}
 .px-0 {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
-.pt-40 {
-	padding-top: 40 !important;
-}
+
 .center {
 	display: flex !important;
 	flex-direction: column !important;
@@ -712,5 +713,11 @@ button {
 		}
 	}
 
+}
+/* h7 txt 스타일*/
+.h7-tit {
+	@include fw-6(16px);
+	color: var(--dt-gray16);
+	margin-bottom: 16px;
 }
 

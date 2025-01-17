@@ -12,8 +12,12 @@
 	}
 }
 .cont__wrap {
+	&:first-child {
+		height: 100%;
+		overflow-y: auto;
+	}
 	.btn-group {
-		padding-bottom: 20px;
+		padding: 20px 0;
 	}
 }
 
