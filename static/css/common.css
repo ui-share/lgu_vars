@@ -468,7 +468,7 @@ button {
 .section__cont:first-child {
   padding-top: 56px;
 }
-.section__cont.menu, .section__cont.detail {
+.section__cont.menu, .section__cont.desc {
   padding: 36px 0 48px 0;
   gap: 48px;
 }
@@ -1945,19 +1945,19 @@ button {
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
   gap: 0;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text {
+.counsel .cont__wrap.cont__wrap-counsel .card.desc .text {
   gap: 2px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .tit {
+.counsel .cont__wrap.cont__wrap-counsel .card.desc .text .tit {
   font-size: 14px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .txt {
+.counsel .cont__wrap.cont__wrap-counsel .card.desc .text .txt {
   font-size: 11px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer {
+.counsel .cont__wrap.cont__wrap-counsel .card.desc .card-footer {
   justify-content: flex-end;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer .btn-group {
+.counsel .cont__wrap.cont__wrap-counsel .card.desc .card-footer .btn-group {
   flex: none;
 }
 .counsel .cont__wrap .txt-head {
