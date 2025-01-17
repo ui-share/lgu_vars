@@ -2272,6 +2272,9 @@ button {
   animation: slideInUp 0.6s;
 }
 
+.popup-body {
+  /* 캘린더 선택시 월일자텍스트 노출영역 */
+}
 .popup-body .authorization .auth {
   text-align: center;
 }
@@ -2344,6 +2347,39 @@ button {
 .popup-body .authorization.corporation .auth_corporation {
   display: block;
 }
+.popup-body .txt-perd-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  margin: 20px auto 0;
+  padding: 14px 16px;
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+}
+.popup-body .txt-perd-wrap > span {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.popup-body .txt-perd-wrap .txt-perd {
+  min-width: 86px;
+  max-width: 144px;
+  text-align: center;
+}
+.popup-body .txt-perd-wrap .txt-perd .hyppen {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray10);
+}
+.popup-body .txt-perd-wrap .txt-perd .point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
 .popup-body .calendar-box {
   display: flex;
   align-items: center;
@@ -2352,36 +2388,6 @@ button {
   min-width: 220px;
   max-width: 320px;
   margin: auto;
-  /* 캘린더 선택시 텍스트로 노출되는 영역 */
-}
-.popup-body .calendar-box.mnth-prd {
-  background-color: var(--dt-gray02);
-  border-radius: 8px;
-  padding: 14px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  -moz-column-gap: 33.5px;
-       column-gap: 33.5px;
-  min-width: 220px;
-  max-width: unset;
-  margin: 20px auto 0;
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--dt-gray11);
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box .txt-Mnth {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box .hyphen {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray10);
 }
 .popup-body .calendar-box.year-month {
   padding-top: 12px;
@@ -2543,12 +2549,6 @@ button {
   color: var(--dt-gray11);
 }
 
-@media (max-width: 359px) {
-  .popup-body .calendar-box.mnth-prd {
-    -moz-column-gap: 20px;
-         column-gap: 20px;
-  }
-}
 .switch-group .switch-input {
   /* input은 숨김 */
   display: none;

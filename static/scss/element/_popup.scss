@@ -183,36 +183,41 @@
 		}
 	}
 	
+	/* 캘린더 선택시 월일자텍스트 노출영역 */
+	.txt-perd-wrap {
+		@include flexBox(center, center);
+		flex-wrap:wrap;
+		column-gap:12px;   
+		margin: 20px auto 0;
+		padding: 14px 16px; 
+		background-color: var(--dt-gray02);
+		border-radius: 8px;
+		> span {
+			color: var(--dt-gray11);
+			@include fw-5(14px);
+			line-height:21px;
+		}
+		.txt-perd {
+			min-width:86px;
+			max-width:144px;
+			text-align:center;
+			.hyppen {
+				margin-right:10px;
+				@include fw-6(18px);
+				color: var(--dt-gray10);
+			}
+			.point {
+				@include fw-6(14px);
+				color: var(--dt-gray16);
+			}
+		}
+	}
 	.calendar-box {
 		@include flexBox(center, center);
 		flex-direction:column;
 		min-width:220px;
 		max-width:320px;
 		margin: auto;
-		/* 캘린더 선택시 텍스트로 노출되는 영역 */
-		&.mnth-prd {
-			background-color: var(--dt-gray02);
-			border-radius: 8px;
-			padding: 14px 0;
-			@include flexBox(center, center);
-			flex-direction: row;
-			column-gap: 33.5px;
-			min-width: 220px;
-			max-width: unset;
-			margin: 20px auto 0;
-			.mnthPrd-box {
-				@include fw-5(14px);
-				color: var(--dt-gray11);
-				.txt-Mnth {
-					@include fw-6(14px);
-					color: var(--dt-gray16);
-				}
-				.hyphen {
-					@include fw-6(18px);
-					color: var(--dt-gray10);
-				}
-			}
-		}
 		&.year-month {padding-top:12px;}
 		.nav-schedule {
 			@include flexRow;
@@ -369,12 +374,12 @@
 	}
 }
 
-@media (max-width: 359px) {
-	.popup-body {
-		.calendar-box {
-			&.mnth-prd {
-				column-gap: 20px;
-			}
-		}
-	}
-}
+// @media (max-width: 359px) {
+// 	.popup-body {
+// 		.calendar-box {
+// 			&.mnth-prd {
+// 				column-gap: 20px;
+// 			}
+// 		}
+// 	}
+// }
