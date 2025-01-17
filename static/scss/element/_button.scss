@@ -60,35 +60,6 @@
                 font-size:12px;
             }
         }
-
-        /* popup-solid */
-        &.btn-popSolid {
-            @include flexBox();
-            padding:16px 20px;
-            background-color: var(--dt-gray02);
-            gap: 4px;
-            .txt {
-                @include fw-6(16px);
-                color:var(--dt-gray12);
-            }
-            .txt-wrap {
-                display: none;
-            }
-            &.is-selected {
-                .txt-wrap {
-                    display: flex;
-                    align-items: center;
-                    gap: 2px;
-                    .txt {
-                        @include fw-5(14px);
-                        color: var(--dt-primary);
-                    } 
-                }
-            }
-            &.between {
-                justify-content: space-between;
-            }
-        }
     }
 
     // multi

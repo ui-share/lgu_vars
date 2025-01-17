@@ -29,31 +29,43 @@
 		<div class="popup__wrap">
 			<div class="popup-header">
 				<div class="popup-tit">
-					<span class="txt">요금 결제일 선택해 주세요</span>
+					<span class="txt">조회할 회선을 선택해 주세요</span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
-			<div class="popup-body">				
-				<div class="slctInfo-box ReissueMthd">
+			<div class="popup-body">
+				<div class="slctInfo-box slctChild">
 					<ul class="bullet-list info">
-						<li class="bullet-item">선택하신 재발행 방법은 1회성이며, 고객 정보 상의 청구서 수령 방법 설정이 변경되지 않습니다.</li>
+						<li class="bullet-item">자녀의 생년월일 입력 후<br>자녀 요금을 조회할 수 있습니다</li>
 					</ul>
 
 					<div class="btn-group flex-column">
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">문자(MMS)</span>
+						<button class="btn btn-child" type="button">
+							<span class="txt-wrap">
+								<span class="tit">자녀1</span>
+								<span class="txt">010-12**-56**</span>
+							</span>
 						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">이메일</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">팩스</span>
+						<button class="btn btn-child" type="button">
+							<span class="txt-wrap">
+								<span class="tit">자녀2</span>
+								<span class="txt">010-12**-56**</span>
+							</span>
 						</button>
 					</div>
 				</div>
 			</div>
 			
-			<div class="popup-footer hidden"></div>
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">확인</span>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>

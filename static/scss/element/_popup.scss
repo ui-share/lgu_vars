@@ -315,6 +315,58 @@
 		flex-direction: column;
 		gap: 20px;
 	}
+	.btn {
+		/* popup-solid */
+		&.btn-popSolid {
+			@include flexBox();
+			padding:16px 20px;
+			background-color: var(--dt-gray02);
+			gap: 4px;
+			.txt {
+				@include fw-6(16px);
+				color:var(--dt-gray12);
+			}
+			.txt-wrap {
+				display: none;
+			}
+			&.is-selected {
+				.txt-wrap {
+					display: flex;
+					align-items: center;
+					gap: 2px;
+					.txt {
+						@include fw-5(14px);
+						color: var(--dt-primary);
+					} 
+				}
+			}
+			&.between {
+				justify-content: space-between;
+			}
+		}
+
+		// 자녀선택 버튼
+		&.btn-child {
+			display: flex;
+			justify-content: space-between;
+			padding:16px;
+			background-color: var(--dt-gray02);
+			.txt-wrap {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 2px;
+				.tit {
+					@include fw-7(16px);
+					color:var(--dt-black);
+				}
+				.txt {
+					@include fw-5(14px);
+					color:var(--dt-gray11);
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 359px) {
