@@ -1945,19 +1945,19 @@ button {
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
   gap: 0;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.desc .text {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text {
   gap: 2px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.desc .text .tit {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .tit {
   font-size: 14px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.desc .text .txt {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .txt {
   font-size: 11px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.desc .card-footer {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer {
   justify-content: flex-end;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.desc .card-footer .btn-group {
+.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer .btn-group {
   flex: none;
 }
 .counsel .cont__wrap .txt-head {
@@ -2302,6 +2302,9 @@ button {
   animation: slideInUp 0.6s;
 }
 
+.popup-body {
+  /* 캘린더 선택시 기간 노출 영역 */
+}
 .popup-body .authorization .auth {
   text-align: center;
 }
@@ -2374,6 +2377,40 @@ button {
 .popup-body .authorization.corporation .auth_corporation {
   display: block;
 }
+.popup-body .txt-perd-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 12px;
+  margin: 20px auto 0;
+  padding: 14px 16px;
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+}
+.popup-body .txt-perd-wrap > span {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.popup-body .txt-perd-wrap .txt-perd {
+  min-width: 86;
+  max-width: 144px;
+  text-align: center;
+}
+.popup-body .txt-perd-wrap .txt-perd .hyppen {
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray10);
+}
+.popup-body .txt-perd-wrap .txt-perd .point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
 .popup-body .calendar-box {
   display: flex;
   align-items: center;
@@ -2382,35 +2419,6 @@ button {
   min-width: 220px;
   max-width: 320px;
   margin: auto;
-  /* 캘린더 선택시 텍스트로 노출되는 영역 */
-}
-.popup-body .calendar-box.mnth-prd {
-  background-color: var(--dt-gray02);
-  border-radius: 8px;
-  padding: 14px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  column-gap: 33.5px;
-  min-width: 220px;
-  max-width: unset;
-  margin: 20px auto 0;
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--dt-gray11);
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box .txt-Mnth {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-.popup-body .calendar-box.mnth-prd .mnthPrd-box .hyphen {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray10);
 }
 .popup-body .calendar-box.year-month {
   padding-top: 12px;
@@ -2518,11 +2526,6 @@ button {
   gap: 20px;
 }
 
-@media (max-width: 359px) {
-  .popup-body .calendar-box.mnth-prd {
-    column-gap: 20px;
-  }
-}
 .switch-group .switch-input {
   /* input은 숨김 */
   display: none;
