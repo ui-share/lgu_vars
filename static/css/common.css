@@ -282,15 +282,15 @@ button {
 .ml-auto {
   margin-left: auto !important;
 }
-.mt-40 {
-  margin-top: 40px !important;
-}
+
 .px-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-
+.pt-40 {
+  padding-top: 40 !important;
+}
 
 .center {
   display: flex !important;
@@ -848,7 +848,7 @@ button {
   align-items: center;
   justify-content: space-between;
 }
-.list-wrap .list-box:not(:last-child) {
+.list-wrap .list-box:first-child {
   padding-top: 0;
 }
 .list-wrap .list-box:not(:last-child) {
@@ -859,11 +859,13 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray14);
+  width: 110px;
 }
 .list-wrap .list-box .tail {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-black);
+  text-align: right;
 }
 
 /* btn-group button */
