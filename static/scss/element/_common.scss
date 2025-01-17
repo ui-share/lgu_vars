@@ -211,6 +211,7 @@ button {
 	justify-content: center !important;
 }
 .color-prim {color:var(--dt-primary) !important;}
+.wd-full {padding-right:0 !important;padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
 
@@ -381,12 +382,6 @@ button {
 		padding: 36px 0 48px 0;
 		gap: 48px;
 	}
-	&.wdFull {
-		.cont__wrap {
-			padding-right:0;
-			padding-left:0;
-		}
-	}
 }
 .cont__wrap {
 	padding: 0 20px;
@@ -413,7 +408,7 @@ button {
 		.con__tit-box {margin-bottom:0;}
 		.bullet-caption {margin-top:8px;}
 	}
-	&.tabnav {padding:0;}
+	&.tabnav__wrap {padding-right:0;padding-left:0;}
 }
 .con__tit-box {
 	@include flexRow();

@@ -1,0 +1,31 @@
+@import "../base/mixin";
+
+table {
+    display:table;
+    table-layout: fixed;
+    width: 100%;
+    th, td {
+        padding-left:3px;
+        padding-right:3px;
+        color:var(--dt-gray12);
+        font-size:12px;
+        word-break:keep-all;
+        vertical-align:middle;
+        text-align:center;
+        border:1px solid var(--dt-gray08);
+    }
+    th{
+        padding-top:6px;
+        padding-bottom:6px;
+        background-color:var(--dt-gray02);
+        font-weight:600;
+        line-height:18px;
+    }
+    td {
+        padding-top:8px;
+        padding-bottom:8px;
+        background-color:var(--dt-white);
+        font-weight:500;
+        line-height:16px;
+    }
+}
