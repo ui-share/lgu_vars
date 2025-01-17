@@ -1,0 +1,129 @@
+@import "../scss/base/mixin";
+
+.section__cont {
+    &.summary {
+		padding-bottom:18px;
+		background-color:#DCE6FF;
+		.cont__wrap {
+			@include flexColum;
+			position:relative;
+			height:max-content;
+			padding-top:28px;
+			padding-right:120px;
+			background-repeat: no-repeat;
+			background-size:140px;
+			background-position: right 10px top 14px;
+			&:has(.select-billdate) {
+			background-position: right 10px top 35px;
+				.cont__txt-box {min-height:36px;}
+			}			
+			.cont__txt-box {min-height:110px;}
+		}
+        .info-price-single {
+            margin:0 20px;
+            padding:18px 20px;
+            background-color:var(--dt-white);
+            border-radius:8px;
+            span {text-align:center}
+            .txt-info {
+                @include flexBox(center, center);
+                flex-wrap:wrap;
+                color:var(--dt-gray11);
+                @include fw-6();
+                .txt-price {
+                    display:inline-block;
+                    margin-left:4px;
+                    margin-right:4px;
+                    color:var(--dt-gray16);
+                    @include fw-7(18px);
+                }
+                .img-box {
+                    min-width:18px;
+                    width:18px;height:18px;
+                    margin-left:2px;
+                    img {margin-top:1px;}
+                }
+            }
+        }
+	}
+}
+
+.cont__wrap {
+    .cont__txt-box {
+        .txt {
+            &.price {
+                @include flexRow;
+                align-items: center;
+                flex-wrap: wrap;
+                margin-top:4px;
+                @include fw-6(18px);
+                line-height:36px;
+                .deco {margin-right:2px;font-size:30px;}
+                .color-prim {@include fw-6(18px);line-height:22px;}
+            }
+        }
+    }
+    .select-billdate {
+		@include flexColum;
+		.txt-due {
+			margin-bottom:4px;
+			color: var(--dt-gray13);
+			@include fw-5(14px);
+			line-height:21px;
+		}
+		.txt-notice {
+			&:not(:first-child) {
+				margin-top:5px;
+			}
+			color: var(--dt-gray16);
+			@include fw-6(22px);
+			line-height:33px;
+		}
+		.txt-select-wrap {
+			color:var(--dt-gray16);
+			@include fw-6(18px);
+			.chips-date {margin-right:4px;}
+		}
+	}
+    .btn-srch-childline {
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+		padding:10px 20px;
+		border-radius:0;
+		background-color:var(--dt-gray15);
+		.txt-title {
+            @include fw-7(14px);line-height:21px;
+            color:var(--dt-white);
+            text-align:left;
+            .txt-phone {
+                display:block;
+                color:var(--dt-gray09);
+                font-weight:500;
+            }
+        }
+        .img-box {width:24px;height:24px;}
+	}
+	&.cont__wrap-bill {
+		min-height:174px;
+		background-image: url(../images/img/img-hm-bill.png);
+		&:has(.select-billdate) {
+			.select-billdate .txt-due {margin-bottom:6px}
+		}
+	}
+	&.cont__wrap-realtime {
+		min-height:164px;
+		background-image: url(../images/img/img-hm-realtime.png);
+		.cont__txt-box {row-gap:0}
+	}
+	&.cont__wrap-usestate {
+		min-height:164px;
+		background-image: url(../images/img/img-hm-usestate.png);
+		.cont__txt-box {row-gap:0}
+	}
+	&.cont__wrap-account {
+		min-height:164px;
+		background-image: url(../images/img/img-hm-account.png);
+		.cont__txt-box {row-gap:0}
+	}
+}

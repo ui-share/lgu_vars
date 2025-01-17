@@ -47,10 +47,15 @@
             height: 40px;
 			margin-left: auto;
 			padding: 8px;
+			border: none;
+			background-color: transparent;
 			background-image: url(../../static/images/icon/close_line.png);
             background-repeat: no-repeat;
             background-size: 24px 24px;
             background-position: center center;
+			&:active { 
+				box-shadow: none;
+			}
 		}
 	}
 	.popup-body {
@@ -178,36 +183,41 @@
 		}
 	}
 	
+	/* 캘린더 선택시 월일자텍스트 노출영역 */
+	.txt-perd-wrap {
+		@include flexBox(center, center);
+		flex-wrap:wrap;
+		column-gap:12px;   
+		margin: 20px auto 0;
+		padding: 14px 16px; 
+		background-color: var(--dt-gray02);
+		border-radius: 8px;
+		> span {
+			color: var(--dt-gray11);
+			@include fw-5(14px);
+			line-height:21px;
+		}
+		.txt-perd {
+			min-width:86px;
+			max-width:144px;
+			text-align:center;
+			.hyppen {
+				margin-right:10px;
+				@include fw-6(18px);
+				color: var(--dt-gray10);
+			}
+			.point {
+				@include fw-6(14px);
+				color: var(--dt-gray16);
+			}
+		}
+	}
 	.calendar-box {
 		@include flexBox(center, center);
 		flex-direction:column;
 		min-width:220px;
 		max-width:320px;
 		margin: auto;
-		/* 캘린더 선택시 텍스트로 노출되는 영역 */
-		&.mnth-prd {
-			background-color: var(--dt-gray02);
-			border-radius: 8px;
-			padding: 14px 0;
-			@include flexBox(center, center);
-			flex-direction: row;
-			column-gap: 33.5px;
-			min-width: 220px;
-			max-width: unset;
-			margin: 20px auto 0;
-			.mnthPrd-box {
-				@include fw-5(14px);
-				color: var(--dt-gray11);
-				.txt-Mnth {
-					@include fw-6(14px);
-					color: var(--dt-gray16);
-				}
-				.hyphen {
-					@include fw-6(18px);
-					color: var(--dt-gray10);
-				}
-			}
-		}
 		&.year-month {padding-top:12px;}
 		.nav-schedule {
 			@include flexRow;
@@ -309,18 +319,67 @@
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		.btn {
-			background-color: var(--dt-gray02);
-		}
 	}
-}
+	.btn {
+		/* popup-solid */
+		&.btn-popSolid {
+			@include flexBox();
+			padding:16px 20px;
+			background-color: var(--dt-gray02);
+			gap: 4px;
+			.txt {
+				@include fw-6(16px);
+				color:var(--dt-gray12);
+			}
+			.txt-wrap {
+				display: none;
+			}
+			&.is-selected {
+				.txt-wrap {
+					display: flex;
+					align-items: center;
+					gap: 2px;
+					.txt {
+						@include fw-5(14px);
+						color: var(--dt-primary);
+					} 
+				}
+			}
+			&.between {
+				justify-content: space-between;
+			}
+		}
 
-@media (max-width: 359px) {
-	.popup-body {
-		.calendar-box {
-			&.mnth-prd {
-				column-gap: 20px;
+		// 자녀선택 버튼
+		&.btn-child {
+			display: flex;
+			justify-content: space-between;
+			padding:16px;
+			background-color: var(--dt-gray02);
+			.txt-wrap {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 2px;
+				.tit {
+					@include fw-7(16px);
+					color:var(--dt-black);
+				}
+				.txt {
+					@include fw-5(14px);
+					color:var(--dt-gray11);
+				}
 			}
 		}
 	}
 }
+
+// @media (max-width: 359px) {
+// 	.popup-body {
+// 		.calendar-box {
+// 			&.mnth-prd {
+// 				column-gap: 20px;
+// 			}
+// 		}
+// 	}
+// }

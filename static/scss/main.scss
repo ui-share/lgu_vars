@@ -23,6 +23,12 @@
 		.swiper-container {
 			animation: fadeInDown 1s;
 		}
+		.swiper-slide {
+			height: auto;
+			.banner {
+				height: 100%;
+			}
+		}
 		.swiper-pagination {
 			position: absolute;
 			bottom: 16px;

@@ -377,34 +377,14 @@ button {
 	&:first-child {
 		padding-top: 56px;
 	}
-	&.menu, &.detail {
+	&.menu, &.desc {
 		padding: 36px 0 48px 0;
 		gap: 48px;
 	}
-	&.detail {
-		.info-col-wrap {
-			& + .btn-group {
-				margin-top:16px;
-			}
-		}
-	}
-	&.summary {
-		padding-bottom:18px;
-		background-color:#DCE6FF;
+	&.wdFull {
 		.cont__wrap {
-			@include flexColum;
-			position:relative;
-			height:max-content;
-			padding-top:28px;
-			padding-right:120px;
-			background-repeat: no-repeat;
-			background-size:140px;
-			background-position: right 10px top 14px;
-			&:has(.select-billdate) {
-			background-position: right 10px top 35px;
-				.cont__txt-box {min-height:36px;}
-			}			
-			.cont__txt-box {min-height:110px;}
+			padding-right:0;
+			padding-left:0;
 		}
 	}
 }
@@ -425,67 +405,15 @@ button {
 				font-weight: 600;
 				color: var(--dt-primary);
 			}
-			&.price {
-				@include flexRow;
-				align-items: center;
-				flex-wrap: wrap;
-				margin-top:4px;
-				@include fw-6(18px);
-				line-height:36px;
-				.deco {margin-right:2px;font-size:30px;}
-				.color-prim {@include fw-6(18px);}
-			}
-		}
-	}
-	.select-billdate {
-		@include flexColum;
-		.txt-due {
-			margin-bottom:4px;
-			color: var(--dt-gray13);
-			@include fw-5(14px);
-			line-height:21px;
-		}
-		.txt-notice {
-			&:not(:first-child) {
-				margin-top:5px;
-			}
-			color: var(--dt-gray16);
-			@include fw-6(22px);
-			line-height:33px;
-		}
-		.txt-select-wrap {
-			color:var(--dt-gray16);
-			@include fw-6(18px);
-			.chips-date {margin-right:4px;}
 		}
 	}
 	&.cont__wrap-vertical {
 		@include flexColum;
 		row-gap:16px;
+		.con__tit-box {margin-bottom:0;}
 		.bullet-caption {margin-top:8px;}
 	}
-	&.cont__wrap-bill {
-		min-height:174px;
-		background-image: url(../images/img/img-hm-bill.png);
-		&:has(.select-billdate) {
-			.select-billdate .txt-due {margin-bottom:6px}
-		}
-	}
-	&.cont__wrap-realtime {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-realtime.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-usestate {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-usestate.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-account {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-account.png);
-		.cont__txt-box {row-gap:0}
-	}
+	&.tabnav {padding:0;}
 }
 .con__tit-box {
 	@include flexRow();
@@ -577,14 +505,9 @@ button {
 		}
 	}
 }
-
+/* 요금제 및 아코디언 관련 컴포넌트 */
 .plan-wrap {
 	.col {
-		&:nth-of-type(2) {
-			margin-top: 20px;
-			padding-top: 20px;
-			border-top: 1px solid var(--dt-gray06);
-		}
 		row-gap:8px;
 		.txt-plan {
 			margin-bottom:4px;
@@ -612,6 +535,8 @@ button {
 		}
 		.txt-title {
 			color:var(--dt-gray14);
+			line-height:24px;
+			.tooltip img{margin-top:1px;}
 		}
 		.txt-desc {
 			> span {
@@ -628,7 +553,7 @@ button {
 		}
 	}
 }
-.info-col-wrap { // default 회색, 배경 바뀔 시 &.bg-color 형태로 적용
+.info-col-wrap {/* default 회색, 배경 바뀔 시 &.bg-color 형태로 적용 */
 	@include flexColum;
 	gap: 12px;
 	padding:22px 20px;
@@ -699,31 +624,6 @@ button {
 				color:var(--dt-gray11);
 				@include fw-5(12px);
 			}
-		}
-	}
-}
-.info-price-single {
-	margin:0 20px;
-	padding:18px 20px;
-	background-color:var(--dt-white);
-	border-radius:8px;
-	span {text-align:center}
-	.txt-info {
-		@include flexBox(center, center);
-		flex-wrap:wrap;
-		color:var(--dt-gray11);
-		@include fw-6();
-		.txt-price {
-			display:inline-block;
-			margin-left:4px;
-			margin-right:4px;
-			color:var(--dt-gray16);
-			@include fw-7(18px);
-		}
-		.img-box {
-			width:18px;height:18px;
-			margin-left:4px;
-			img {margin-top:1px;}
 		}
 	}
 }

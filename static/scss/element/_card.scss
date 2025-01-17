@@ -141,301 +141,292 @@
 			opacity: 0.6;
 		}
 	}
-}
 
-.solid {
-	background-color: var(--dt-gray02);
-	box-shadow: none;
-}
-
-// sub:detail card (상담연결-챗봇/AI/전화 등)
-.detail {
-	background-color: var(--dt-white);
-	box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
-	.card-body {
-	}
-	.item {
-		&.text {
-			gap: 0;
-		}
-	}
-	.tit {
-		font-size: 14px;
-	}
-	.txt {
-		@include fw-5(14px);
-	}
-	.card-footer {
-		justify-content: flex-end;
-		.btn-group {
-			flex: none;
-		}
-	}
-}
-
-.horizon { 
-	align-items: center;
-	flex-direction: row;
-	padding: 23px 16px;
-	gap: 12px;
-	.con__tit-box {
-		width:100%;
-	}
-	.img-box {
-		width: 32px;
-		min-width: 32px;
-		height: 32px;
-	}
-	.card-body {
-		align-items: center;
-		flex-direction: row;
-		gap: 12px;
-	}
-	.item {
-		&.text {
-			gap: 0;
-		}
-	}
-	.tit {
-		font-size: 18px;
-	}
-	.card-footer {
-		margin-top: 0;
-		margin-left: auto;
-	}
 	&.solid {
-		padding: 18px 16px;
+		background-color: var(--dt-gray02);
+		box-shadow: none;
+	}
+	// sub:detail card (상담연결-챗봇/AI/전화 등)
+	&.detail {
+		background-color: var(--dt-white);
+		box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
 		.card-body {
-			width: 100%;
-			gap: 8px;
 		}
 		.item {
 			&.text {
-				flex-direction: row;
-				align-items: center;
-				flex: 1;
+				gap: 0;
 			}
 		}
-		.img-box {
-			width: 28px;
-			min-width: 28px;
-			height: 28px;
-		}
-		.tit {
-			@include fw-6();
-			color: var(--dt-gray12);
-		}
-		.txt {
-			margin-left: auto;
-		}
-	}
-}
-
-.chatbot {
-	background-color: #FBDAED;
-	box-shadow: none;
-	.img-box {
-		width: 48px;
-		min-width: 48px;
-		height: 48px;
-	}
-	.card-footer {
-		.btn-group {
-			.btn {
-				width: max-content;
-				height: 34px;
-				padding: 10px 12px;
-			}
-		}
-	}
-}
-
-.home {
-	background-color: #C3E4FE;
-	box-shadow: none;
-	.img-box {
-		width: 48px;
-		min-width: 48px;
-		height: 48px;
-	}
-	.card-footer {
-		.btn-group {
-			.btn {
-				width: max-content;
-				height: 34px;
-				padding: 10px 12px;
-			}
-		}
-	}
-}
-
-.bank {
-	position: relative;
-	.card-header {
-		justify-content: flex-start;
-		align-items: start;
-	}
-	.img-box {
-		width: 20px;
-		min-width: 20px;
-		height: 20px;
-		margin-top: 2px;
-	}
-	.item {
-		&.text {
-			gap: 0;
-		}
-		.txt {
-			color: var(--dt-gray13);
-		}
-	}
-	.end {
-		position: absolute;
-		top: 16px;
-		right: 16px;
-		width: 24px;
-		height: 24px;
-		text-indent: -9999px;
-		background-image: url(../images/icon/ic-card-end.png);
-		background-repeat: no-repeat;
-		background-size: 24px 24px;
-		background-position: center center;
-	}
-	.card-footer {
-		.btn-group {
-			.btn {
-				background-color: var(--dt-gray06);
-				border-color: var(--dt-gray06);
-				.txt {
-					color: var(--dt-gray11);
-				}
-			}
-		}
-	}
-}
-
-.banner {
-	position: relative;
-	padding: 15px 48px 15px 20px;
-	background-color: var(--dt-gray02);
-	box-shadow: none;
-	.img-box {
-		width: 36px;
-		min-width: 36px;
-		height: 36px;
-	}
-	.item {
-		&.text {
-			gap: 2px;
-		}
-	}
-	.tit {
-		@include fw-5(12px);
-		color: var(--dt-gray11);
-	}
-	.txt {
-		@include fw-7(14px);
-		color: var(--dt-gray14);
-	}
-	.end { // 엑스버튼...
-		position: absolute;
-		top: 16px;
-		right: 16px;
-		width: 24px;
-		height: 24px;
-		text-indent: -9999px;
-		font-size:0;
-		background-image: url(../images/icon/ic-card-end.png);
-		background-repeat: no-repeat;
-		background-size: 24px 24px;
-		background-position: center center;
-	}
-}
-
-.bill {
-	.item {
-		&.util {
-			flex-direction: row;
-			gap: 6px;
-		}
-		.flag {
-			padding: 1.5px 8px;
-			margin-left: auto;
-			.txt {
-				font-size: 12px;
-			}
-		}
-		.pay-txt {
-			@include fw-7();
-		}
-		.txt {
-			@include fw-5(12px);
-			color: var(--dt-gray11);
-			text-align: right;
-		}
-	}
-	.card-footer {
-		.btn-group {
-			.btn {
-				border-color: var(--dt-gray06);
-				.img-box {
-					width: 20px;
-					min-width: 20px;
-					height: 20px;
-				}
-			}
-		}
-	}
-}
-
-.explain {
-	.flag {
-		padding: 2px 8px;
-		.txt {
-			@include fw-5(12px);
-		}
-	}
-}
-
-.alert {
-	gap: 10px;
-	.img-box {
-		width: 24px;
-		min-width: 24px;
-		height: 24px;
-	}
-	> .card-header {
-		justify-content: flex-start;
 		.tit {
 			font-size: 14px;
 		}
-	}
-	.message {
-		gap: 0;
-		padding: 12px 16px;
-		box-shadow: none;
-		.tit {
-			font-size: 12px;
+		.txt {
+			@include fw-5(14px);
 		}
-		.time {
-			@include fw-5(11px);
-			color: var(--dt-gray10);
+		.card-footer {
+			justify-content: flex-end;
+			.btn-group {
+				flex: none;
+			}
+		}
+	}
+	&.horizon { 
+		align-items: center;
+		flex-direction: row;
+		padding: 23px 16px;
+		gap: 12px;
+		.con__tit-box {
+			width:100%;
+		}
+		.img-box {
+			width: 32px;
+			min-width: 32px;
+			height: 32px;
+		}
+		.card-body {
+			align-items: center;
+			flex-direction: row;
+			gap: 12px;
+		}
+		.item {
+			&.text {
+				gap: 0;
+			}
+		}
+		.tit {
+			font-size: 18px;
+		}
+		.card-footer {
+			margin-top: 0;
 			margin-left: auto;
+		}
+		&.solid {
+			padding: 18px 16px;
+			.card-body {
+				width: 100%;
+				gap: 8px;
+			}
+			.item {
+				&.text {
+					flex-direction: row;
+					align-items: center;
+					flex: 1;
+				}
+			}
+			.img-box {
+				width: 28px;
+				min-width: 28px;
+				height: 28px;
+			}
+			.tit {
+				@include fw-6();
+				color: var(--dt-gray12);
+			}
+			.txt {
+				margin-left: auto;
+			}
+		}
+	}
+	&.chatbot {
+		background-color: #FBDAED;
+		box-shadow: none;
+		.img-box {
+			width: 48px;
+			min-width: 48px;
+			height: 48px;
+		}
+		.card-footer {
+			.btn-group {
+				.btn {
+					width: max-content;
+					height: 34px;
+					padding: 10px 12px;
+				}
+			}
+		}
+	}
+	&.home {
+		background-color: #C3E4FE;
+		box-shadow: none;
+		.img-box {
+			width: 48px;
+			min-width: 48px;
+			height: 48px;
+		}
+		.card-footer {
+			.btn-group {
+				.btn {
+					width: max-content;
+					height: 34px;
+					padding: 10px 12px;
+				}
+			}
+		}
+	}
+	&.bank {
+		position: relative;
+		.card-header {
+			justify-content: flex-start;
+			align-items: start;
+		}
+		.img-box {
+			width: 20px;
+			min-width: 20px;
+			height: 20px;
+			margin-top: 2px;
+		}
+		.item {
+			&.text {
+				gap: 0;
+			}
+			.txt {
+				color: var(--dt-gray13);
+			}
+		}
+		.end {
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			width: 24px;
+			height: 24px;
+			text-indent: -9999px;
+			background-image: url(../images/icon/ic-card-end.png);
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+			background-position: center center;
+		}
+		.card-footer {
+			.btn-group {
+				.btn {
+					background-color: var(--dt-gray06);
+					border-color: var(--dt-gray06);
+					.txt {
+						color: var(--dt-gray11);
+					}
+				}
+			}
+		}
+	}
+	&.banner {
+		position: relative;
+		padding: 15px 48px 15px 20px;
+		background-color: var(--dt-gray02);
+		box-shadow: none;
+		.img-box {
+			width: 36px;
+			min-width: 36px;
+			height: 36px;
 		}
 		.item {
 			&.text {
 				gap: 2px;
-				.tel {
-					@include fw-6(11px);
-					color: var(--dt-gray11);
+			}
+		}
+		.tit {
+			@include fw-5(12px);
+			color: var(--dt-gray11);
+		}
+		.txt {
+			@include fw-7(14px);
+			color: var(--dt-gray14);
+		}
+		.end { // 엑스버튼
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			width: 24px;
+			height: 24px;
+			text-indent: -9999px;
+			font-size:0;
+			background-image: url(../images/icon/ic-card-end.png);
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+			background-position: center center;
+		}
+	}
+	&.bill {
+		.item {
+			&.util {
+				flex-direction: row;
+				gap: 6px;
+			}
+			.flag {
+				padding: 1.5px 8px;
+				margin-left: auto;
+				.txt {
+					font-size: 12px;
 				}
-				.msg {
-					width: 100%;
-					font-size: 11px;
-					color: var(--dt-gray11);
-					overflow: hidden;
-					white-space: nowrap;
-					text-overflow: ellipsis;
+			}
+			.pay-txt {
+				@include fw-7();
+			}
+			.txt {
+				@include fw-5(12px);
+				color: var(--dt-gray11);
+				text-align: right;
+			}
+		}
+		.card-footer {
+			.btn-group {
+				.btn {
+					border-color: var(--dt-gray06);
+					.img-box {
+						width: 20px;
+						min-width: 20px;
+						height: 20px;
+					}
+				}
+			}
+		}
+	}
+	&.explain {
+		.flag {
+			padding: 2px 8px;
+			.txt {
+				@include fw-5(12px);
+			}
+		}
+	}
+	&.alert {
+		gap: 10px;
+		.img-box {
+			width: 24px;
+			min-width: 24px;
+			height: 24px;
+		}
+		> .card-header {
+			justify-content: flex-start;
+			.tit {
+				font-size: 14px;
+			}
+		}
+		.message {
+			gap: 0;
+			padding: 12px 16px;
+			box-shadow: none;
+			.tit {
+				font-size: 12px;
+			}
+			.time {
+				@include fw-5(11px);
+				color: var(--dt-gray10);
+				margin-left: auto;
+			}
+			.item {
+				&.text {
+					gap: 2px;
+					.tel {
+						@include fw-6(11px);
+						color: var(--dt-gray11);
+					}
+					.msg {
+						width: 100%;
+						font-size: 11px;
+						color: var(--dt-gray11);
+						overflow: hidden;
+						white-space: nowrap;
+						text-overflow: ellipsis;
+					}
 				}
 			}
 		}

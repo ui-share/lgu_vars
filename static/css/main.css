@@ -19,6 +19,12 @@
 .cont__wrap.cont__wrap-banner .swiper-container {
   animation: fadeInDown 1s;
 }
+.cont__wrap.cont__wrap-banner .swiper-slide {
+  height: auto;
+}
+.cont__wrap.cont__wrap-banner .swiper-slide .banner {
+  height: 100%;
+}
 .cont__wrap.cont__wrap-banner .swiper-pagination {
   position: absolute;
   bottom: 16px;

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>조회페이지 케이스</title>
     <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" href="../../static/css/search.css">
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
         function initCheckDevice() {
@@ -31,7 +32,7 @@
             </div>
         </header>
         <!-- //header -->
-	
+	 
 		<!-- container -->
 		<div class="container">
             <!-- 홀맨 배너 영역// -->
@@ -115,7 +116,7 @@
                     <div class="cont__txt-box">
 						<h4 class="txt price">
                             <span class="deco">60,320</span>
-                            <span class="color-prim">원</span>납부 가능해요
+                            <span class="color-prim">원</span>&nbsp;납부 가능해요
 						</h4>
 					</div>
 				</div>
@@ -137,9 +138,45 @@
             <!-- //홀맨 배너 영역 -->
 
             <!-- 아코디언 영역 -->
-            <div class="section__cont detail">
+            <div class="section__cont desc">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">입금전용 계좌</span>
+                        </h6>
+                    </div>
+                    <div class="card solid bank">
+                        <div class="card-header">
+                            <div class="item util">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-bank-ibk.png" alt="ibk은행">
+                                </span>
+                            </div>
+                            <div class="item text">
+                                <span class="tit">은행 계좌번호</span>
+                                <span class="txt">김유플</span>
+                            </div>
+                            <button type="button" class="btn end">종료</button>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group flex-row">
+                                <button class="btn btn-md" type="button">
+                                    <span class="txt">문자로 전송</span>
+                                </button>
+                                <button class="btn btn-md" type="button">
+                                    <span class="txt">복사</span>
+                                </button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">입금전용 계좌 추가</span>
+                        </button>
+                    </div>
+                </div>
                 <!-- 발행된 청구서가 있을 경우 -->
-                <div class="cont__wrap">
+                <div class="cont__wrap cont__wrap-vertical">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
                             <span class="txt-title">요금 상세</span>
@@ -163,10 +200,9 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>60,000원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
-                                    
                                 </span>
                             </button>
                             <div class="accordion-content"><!-- 아코디언 컨텐트 -->
@@ -216,7 +252,7 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>10,000원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
                                 </span>
@@ -255,7 +291,7 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>999,999원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
                                 </span>
@@ -302,6 +338,12 @@
                             <span class="txt-sub">(부가세 포함)</span>
                         </div>
                     </div>
+                    <div class="info-col-wrap">
+                        <div class="row">
+                            <span class="txt-title">이용 중인 요금제</span>
+                            <span class="txt-desc">5G 프리미어 에센셜</span>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 발행된 청구서가 없을 경우 -->
@@ -325,7 +367,7 @@
                     </div>
                 </div>
 
-                <div class="cont__wrap">
+                <div class="cont__wrap cont__wrap-vertical">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
                             <span class="txt-title">납부 상세</span>
@@ -369,7 +411,7 @@
                 </div>
             </div>
 
-            <div class="section__cont detail">
+            <div class="section__cont desc">
                 <div class="cont__wrap">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
@@ -388,10 +430,9 @@
                                 </span>
                                 <span class="row txt-price">
                                     <span>60,000원</span>
-                                    <span class="img-box">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
                                     </span>
-                                    
                                 </span>
                             </button>
                             <div class="accordion-content"><!-- 아코디언 컨텐트 -->
@@ -426,7 +467,7 @@
                 </div>
 
                 <!-- 무제한 요금제 -->
-                <div class="cont__wrap">
+                <div class="cont__wrap cont__wrap-vertical">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
                             <span class="txt-title">[무제한 케이스]_실시간 데이터 상세</span>
@@ -639,7 +680,7 @@
                                 </div>
                                 <button class="btn-toggle accordion-header">
                                     <span class="txt">자세히 보기</span>
-                                    <span class="img-box ico20">
+                                    <span class="img-box ico-toggle">
                                         <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
                                     </span>
                                 </button>

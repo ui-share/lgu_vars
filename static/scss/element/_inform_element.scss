@@ -1,0 +1,57 @@
+@import '../base/mixin';
+.inform-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+	.inform-img {
+		display: inline-block;
+		width: 96px;
+		min-width: 96px;
+		height: 96px;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		&.warning {
+			background-image: url(../images/img/img_warning.svg);
+		}
+		&.success {
+			background-image: url(../images/img/img_success.svg);
+		}
+		&.check {
+			background-image: url(../images/img/img_check.svg);
+		}
+		&.chatbot {
+			background-image: url(../images/img/img_chatbot.svg);
+		}
+		&.csCenter {
+			background-image: url(../images/img/img_customer_center.svg);
+		}
+		&.call {
+			background-image: url(../images/img/img_call.svg);
+		}
+		&.chat {
+			background-image: url(../images/img/img_chat.svg);
+		}
+		&.ai {
+			background-image: url(../images/img/img_ai.svg);
+		}
+	}
+	.text-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		.tit {
+			@include fw-6(24px);
+			color: var(--dt-black);
+			.color-prim {
+				@include fw-6(24px);
+			}
+		}
+		.txt {
+			@include fw-5();
+			color: var(--dt-gray11);
+		}
+	}
+}
