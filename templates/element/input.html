@@ -25,12 +25,46 @@
 				<input class="custom-input" type="id" id="input01" placeholder="플레이스홀더" autocomplete="off">
 				<label for="input01">라벨명을 따릅니다.</label>
 			</div> -->
-			<div class="input-container" style="margin-top: 100px;">
-				<label class="input-label">레이블</label>
-				<input type="text" class="input-field"  />
-				<button type="button" class="clear-button" aria-label="Clear">&times;</button>
-				<div class="helper-text success">성공메시지가 노출됩니다.</div>
-				<div class="helper-text error">에러메시지가 노출됩니다.</div>
+			<div style="height: 100px;"></div>
+			<!-- 
+				@@@@@퍼블 공지@@@@@
+				input-group에 클래스를 추가하여 모든 상태를 제어합니다.
+
+				#####input-group 상태 종류#####
+				-레이블 플로팅 X: input-group normal 로 시작
+				-레이블 플로팅 O: input-group로 시작
+
+				**typing
+
+				**focused
+
+				**validation success
+
+				**validation error
+
+				**read only
+
+				**disabled
+			-->
+			<div class="input-control normal">				
+				<div class="input-group">
+					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
+					<div class="input-row">
+						<input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다." />
+						<div class="util-box">
+							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+							<button type="button" class="clear-btn"></button>
+							<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+							<span class="input-unit">
+								<span class="unit-point">1</span>단위가늘어나비다
+							</span>
+						</div>
+					</div>
+					<!-- 
+						<div class="util-box"> : clear button 과 unit이 들어감 
+					-->
+				</div>
+				<div class="validation-txt">validation 메시지 노출</div>
 			</div>
 		</div>
 		<!-- //container -->
