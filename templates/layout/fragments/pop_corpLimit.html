@@ -8,7 +8,7 @@
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
 	<meta name="theme-color" content="#ffffff">
-	<title>메인_청구서 재발행 방법 선택 팝업</title>
+	<title>법인명의 제한 팝업 공통</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css">
@@ -28,32 +28,31 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit">
-					<span class="txt">청구서 재발행 방법을 선택해 주세요</span>
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
-			<div class="popup-body">				
-				<div class="slctInfo-box ReissueMthd">
-					<ul class="bullet-list info">
-						<li class="bullet-item">선택하신 재발행 방법은 1회성이며, 고객 정보 상의 청구서 수령 방법 설정이 변경되지 않습니다.</li>
-					</ul>
-
-					<div class="btn-group flex-column">
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">문자(MMS)</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">이메일</span>
-						</button>
-						<button class="btn btn-popSolid" type="button">
-							<span class="txt">팩스</span>
-						</button>
+			<div class="popup-body">
+				<div class="inform-wrap">
+					<span class="inform-img warning"></span>
+					<div class="text-box">
+						<span class="tit"><span class="color-prim">법인명의 고객님</span>은<br>서비스명 이용이 제한됩니다</span>
+						<!-- <span class="txt"></span> -->
 					</div>
 				</div>
 			</div>
 			
-			<div class="popup-footer hidden"></div>
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">확인</span>
+					</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </body>
