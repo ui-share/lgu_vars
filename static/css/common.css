@@ -294,6 +294,11 @@ button {
   color: var(--dt-primary) !important;
 }
 
+.wd-full {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
 .row {
   display: flex;
   flex-direction: row;
@@ -472,10 +477,6 @@ button {
   padding: 36px 0 48px 0;
   gap: 48px;
 }
-.section__cont.wdFull .cont__wrap {
-  padding-right: 0;
-  padding-left: 0;
-}
 
 .cont__wrap {
   padding: 0 20px;
@@ -509,8 +510,9 @@ button {
 .cont__wrap.cont__wrap-vertical .bullet-caption {
   margin-top: 8px;
 }
-.cont__wrap.tabnav {
-  padding: 0;
+.cont__wrap.tabnav__wrap {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .con__tit-box {
@@ -2470,7 +2472,8 @@ input {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   margin: 20px auto 0;
   padding: 14px 16px;
   background-color: var(--dt-gray02);
@@ -3125,6 +3128,7 @@ input {
   font-size: 24px;
   font-weight: 600;
   color: var(--dt-black);
+  line-height: 1.4;
 }
 .inform-wrap .text-box .tit .color-prim {
   font-size: 24px;
@@ -3134,4 +3138,35 @@ input {
   font-size: 16px;
   font-weight: 500;
   color: var(--dt-gray11);
+  line-height: 1.5;
+}
+
+table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+table th, table td {
+  padding-left: 3px;
+  padding-right: 3px;
+  color: var(--dt-gray12);
+  font-size: 12px;
+  word-break: keep-all;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid var(--dt-gray08);
+}
+table th {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: var(--dt-gray02);
+  font-weight: 600;
+  line-height: 18px;
+}
+table td {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: var(--dt-white);
+  font-weight: 500;
+  line-height: 16px;
 }

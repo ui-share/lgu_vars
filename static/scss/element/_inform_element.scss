@@ -45,6 +45,7 @@
 		.tit {
 			@include fw-6(24px);
 			color: var(--dt-black);
+			line-height: 1.4;
 			.color-prim {
 				@include fw-6(24px);
 			}
@@ -52,6 +53,7 @@
 		.txt {
 			@include fw-5();
 			color: var(--dt-gray11);
+			line-height: 1.5;
 		}
 	}
 }
