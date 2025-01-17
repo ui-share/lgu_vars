@@ -32,20 +32,22 @@
 
 				#####input-group 상태 종류#####
 				-레이블 플로팅 X: input-group normal 로 시작
-				-레이블 플로팅 O: input-group로 시작
-
-				**typing
+				-레이블 플로팅 O: input-group floating 로 시작
 
 				**focused
-
+				-레이블 플로팅 X: input-group normal focused 
+				-레이블 플로팅 O: input-group floating focused 
 				**validation success
-
+				-레이블 플로팅 X: input-group normal success 
+				-레이블 플로팅 O: input-group floating success 
 				**validation error
-
+				-레이블 플로팅 X: input-group normal error 
+				-레이블 플로팅 O: input-group floating error 
 				**read only
 
 				**disabled
 			-->
+			<!-- input normal -->
 			<div class="input-control normal">				
 				<div class="input-group">
 					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
@@ -53,10 +55,32 @@
 						<input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다." />
 						<div class="util-box">
 							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-							<button type="button" class="clear-btn"></button>
+							<button type="button" class="clear-btn hidden"></button>
 							<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-							<span class="input-unit">
-								<span class="unit-point">1</span>단위가늘어나비다
+							<span class="input-unit hidden">
+								<span class="unit-point">1</span>단위가늘어납니다
+							</span>
+						</div>
+					</div>
+					<!-- 
+						<div class="util-box"> : clear button 과 unit이 들어감 
+					-->
+				</div>
+				<div class="validation-txt">validation 메시지 노출</div>
+			</div>
+			<div style="height: 100px;"></div>
+			<!-- input floating -->
+			<div class="input-control floating">				
+				<div class="input-group">
+					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
+					<div class="input-row">
+						<input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다." />
+						<div class="util-box">
+							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+							<button type="button" class="clear-btn hidden"></button>
+							<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+							<span class="input-unit hidden">
+								<span class="unit-point">1</span>단위가늘어납니다
 							</span>
 						</div>
 					</div>

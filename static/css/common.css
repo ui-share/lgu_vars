@@ -699,8 +699,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .info-col-wrap .txt-title.ico .img-box {
   width: 28px;
@@ -886,8 +885,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   min-width: 184px;
   padding: 13px 4px 12px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -926,8 +924,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
   color: var(--dt-gray11);
@@ -1236,7 +1233,6 @@ button {
   height: 48px;
 }
 .card.chatbot .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1251,7 +1247,6 @@ button {
   height: 48px;
 }
 .card.home .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1707,7 +1702,6 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--dt-gray10);
   padding: 4px 6px;
@@ -1792,7 +1786,6 @@ button {
 }
 .badge.badge-round {
   min-width: 26px;
-  max-width: -moz-max-content;
   max-width: max-content;
   min-height: 26px;
   border-radius: 27.78vw;
@@ -2048,8 +2041,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   margin-left: auto;
 }
 .header .header__btn .btn {
@@ -2057,7 +2049,6 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .header .header__btn .btn .txt {
@@ -2084,16 +2075,219 @@ button {
 
 /* 기본 input 스타일 초기화 */
 input {
-  all: unset; /* 모든 스타일을 초기화 */
-  box-sizing: border-box; /* 박스 모델을 표준 모드로 설정 */
+  margin: 0;
+  padding: 0;
+}
+input:disabled {
+  opacity: 1;
 }
 
-input:focus {
-  outline: none;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-input::-ms-clear {
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+}
+
+.input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
   display: none;
+}
+
+.input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
+  display: block;
+}
+
+.input-control .input-group {
+  position: relative;
+  width: 100%;
+}
+.input-control .input-group .input-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+.input-control .input-group .input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 6px;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control .input-group .input-row .input-field {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  transition: border-color 0.2s ease-in-out;
+}
+.input-control .input-group .input-row .util-box {
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  column-gap: 6px;
+}
+.input-control .input-group .input-row .util-box .clear-btn {
+  border: none;
+  cursor: pointer;
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/icon/ic-input-clear.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.input-control .input-group .input-row .util-box .input-unit {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.input-control .input-group .input-row .util-box .input-unit .unit-point {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.input-control.normal .input-group .input-label {
+  top: -10px;
+  font-size: 12px;
+}
+.input-control.normal .input-group .input-row {
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.normal.focused .input-group .input-field {
+  caret-color: var(--dt-primary);
+}
+.input-control.normal.focused .input-group .input-row {
+  border-bottom: 2px solid var(--dt-primary);
+}
+.input-control.normal.success .input-group .input-row {
+  border-bottom: 2px solid var(--dt-success);
+}
+.input-control.normal.error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.normal.disabled .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.normal.disabled .input-group .input-row .input-field {
+  opacity: 0.6;
+}
+.input-control.normal.disabled .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control.normal.read-only .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.normal.read-only .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control.floating input::placeholder {
+  opacity: 0;
+}
+.input-control.floating .input-group .input-label {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: block;
+}
+.input-control.floating.focused input::placeholder {
+  opacity: 1;
+}
+.input-control.floating.focused .input-group .input-label {
+  top: -10px;
+}
+.input-control.floating.focused .input-group .input-row {
+  border-bottom: 2px solid var(--dt-primary);
+}
+.input-control.floating.focused .input-group .input-row .input-field {
+  caret-color: var(--dt-primary);
+}
+.input-control.floating.success .input-group .input-row {
+  border-bottom: 2px solid var(--dt-success);
+}
+.input-control.floating.error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.floating.disabled .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.floating.disabled .input-group .input-row .input-field {
+  opacity: 0.6;
+}
+.input-control.floating.disabled .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control.floating.read-only .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.floating.read-only .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control.success .input-group .input-row {
+  border-bottom: 2px solid var(--dt-success);
+}
+.input-control.success .validation-txt {
+  display: block;
+  background-image: url(../images/icon/ic-input-valchck-success.svg);
+  color: var(--dt-success);
+}
+.input-control.error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.error .validation-txt {
+  display: block;
+  background-image: url(../images/icon/ic-input-valchck-error.svg);
+  color: var(--dt-error);
+}
+.input-control.disabled .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.disabled .input-group .input-row .input-field {
+  opacity: 0.6;
+}
+.input-control.disabled .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control.read-only .input-group .input-row {
+  pointer-events: none;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.read-only .input-group .util-box .clear-button {
+  pointer-events: none;
+}
+.input-control .validation-txt {
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+  margin-top: 9px;
+  padding-left: 20px;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left 0 center;
 }
 
 .popup-wrapper {
@@ -2123,8 +2317,7 @@ input::-ms-clear {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   margin-bottom: 4px;
   padding: 20px 8px 8px 20px;
 }
@@ -2279,8 +2472,7 @@ input::-ms-clear {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   margin: 20px auto 0;
   padding: 14px 16px;
   background-color: var(--dt-gray02);
@@ -2297,7 +2489,7 @@ input::-ms-clear {
   max-width: 144px;
   text-align: center;
 }
-.popup-body .txt-perd-wrap .txt-perd .hyppen {
+.popup-body .txt-perd-wrap .txt-perd .hyphen {
   margin-right: 10px;
   font-size: 18px;
   font-weight: 600;
@@ -2598,8 +2790,7 @@ input::-ms-clear {
 }
 .accordion-header .txt-title {
   flex: 1;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   text-align: left;
   line-height: 23px;
 }
@@ -2830,8 +3021,7 @@ input::-ms-clear {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   min-height: 48px;
   min-width: 280px;
   margin: 0 auto;
