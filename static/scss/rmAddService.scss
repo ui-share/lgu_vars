@@ -1,0 +1,66 @@
+@import "../scss/base/mixin";
+// 서비스 : 로밍부가서비스 조회
+.section__cont {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	&.counsel {
+		gap: unset;
+	}
+	.cont__wrap {
+		&.cont__wrap-message {
+			padding-top: 20px;
+		}   
+	}
+}
+// divider가 상담영역과 같이 올 경우
+.section__divider:has(+ .counsel) {
+	margin-top: 48px;
+}
+
+
+// 서비스 상세 : 데이터 로밍 차단
+.page-wrapper:has(.cont__wrap-rmDetail) {
+	background-color: var(--dt-gray05);
+	.cont__wrap-btBtn {
+		background-color: var(--dt-white);
+	}
+}
+.cont__wrap-rmDetail {
+	.con__tit-box {
+		flex-direction: column;
+		gap: 12px;
+		.text-box {
+			text-align: left;
+			gap: 6px;
+			.tit {
+				@include fw-7(22px);
+			}
+			.txt {
+				line-height: 1.5;
+			}
+		}
+	}
+	.card {
+		&.rmDetail {
+			box-shadow: none;
+			border-radius: 16px;
+			padding: 28px 20px;
+			.card-body {
+				gap: 20px;
+			}
+			.item {
+				flex-direction: column;
+				gap: 6px;
+			}
+			.tit {
+				@include fw-7(18px);
+				color: var(--dt-gray14);
+			}
+		}
+	}
+}
+.cont__wrap-rmExplain {
+	background-color: var(--dt-white);
+	border-radius: 16px;
+}

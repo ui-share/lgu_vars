@@ -1,0 +1,60 @@
+.section__cont {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.section__cont.counsel {
+  gap: unset;
+}
+.section__cont .cont__wrap.cont__wrap-message {
+  padding-top: 20px;
+}
+
+.section__divider:has(+ .counsel) {
+  margin-top: 48px;
+}
+
+.page-wrapper:has(.cont__wrap-rmDetail) {
+  background-color: var(--dt-gray05);
+}
+.page-wrapper:has(.cont__wrap-rmDetail) .cont__wrap-btBtn {
+  background-color: var(--dt-white);
+}
+
+.cont__wrap-rmDetail .con__tit-box {
+  flex-direction: column;
+  gap: 12px;
+}
+.cont__wrap-rmDetail .con__tit-box .text-box {
+  text-align: left;
+  gap: 6px;
+}
+.cont__wrap-rmDetail .con__tit-box .text-box .tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+.cont__wrap-rmDetail .con__tit-box .text-box .txt {
+  line-height: 1.5;
+}
+.cont__wrap-rmDetail .card.rmDetail {
+  box-shadow: none;
+  border-radius: 16px;
+  padding: 28px 20px;
+}
+.cont__wrap-rmDetail .card.rmDetail .card-body {
+  gap: 20px;
+}
+.cont__wrap-rmDetail .card.rmDetail .item {
+  flex-direction: column;
+  gap: 6px;
+}
+.cont__wrap-rmDetail .card.rmDetail .tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+
+.cont__wrap-rmExplain {
+  background-color: var(--dt-white);
+  border-radius: 16px;
+}
