@@ -282,11 +282,15 @@ button {
 .ml-auto {
   margin-left: auto !important;
 }
-
+.mt-40 {
+  margin-top: 40px !important;
+}
 .px-0 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+
 
 .center {
   display: flex !important;
@@ -829,6 +833,37 @@ button {
   font-size: 14px;
   font-weight: 600;
   color: var(--dt-gray16);
+}
+
+/* 데이터 노출되는 리스트 */
+.list-wrap {
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 24px;
+}
+.list-wrap .list-box {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-wrap .list-box:not(:last-child) {
+  padding-top: 0;
+}
+.list-wrap .list-box:not(:last-child) {
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--dt-gray06);
+}
+.list-wrap .list-box .head {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-gray14);
+}
+.list-wrap .list-box .tail {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-black);
 }
 
 /* btn-group button */

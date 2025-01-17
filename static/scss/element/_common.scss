@@ -208,6 +208,9 @@ button {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
 }
+.pt-40 {
+	padding-top: 40 !important;
+}
 .center {
 	display: flex !important;
 	flex-direction: column !important;
@@ -681,3 +684,31 @@ button {
 
 	}
 }
+/* 데이터 노출되는 리스트 */
+.list-wrap {
+	background-color: var(--dt-gray02);
+	border-radius: 8px;
+	padding: 20px;
+	margin-top: 24px;
+	.list-box {
+		padding-top: 16px;
+		&:not(:last-child) {
+			padding-top: 0;
+		}
+		&:not(:last-child) {
+			padding-bottom: 16px;
+			border-bottom: 1px solid var(--dt-gray06);
+		}
+		@include flexBox(between, center);
+		.head {
+			@include fw-5(14px);
+			color: var( --dt-gray14);
+		}
+		.tail {
+			@include fw-5(14px);
+			color: var(--dt-black);
+		}
+	}
+
+}
+
