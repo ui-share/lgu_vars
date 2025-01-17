@@ -53,7 +53,7 @@
         &.btn-md { // 중간높이
             width:100%;
             padding:10px 12px;
-            @include flexColum();
+            @include flexBox();
             align-items:center;
             .txt {
                 letter-spacing:normal;
