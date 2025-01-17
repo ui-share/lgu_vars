@@ -2303,7 +2303,7 @@ button {
 }
 
 .popup-body {
-  /* 캘린더 선택시 기간 노출 영역 */
+  /* 캘린더 선택시 월일자텍스트 노출영역 */
 }
 .popup-body .authorization .auth {
   text-align: center;
@@ -2395,13 +2395,12 @@ button {
   line-height: 21px;
 }
 .popup-body .txt-perd-wrap .txt-perd {
-  min-width: 86;
+  min-width: 86px;
   max-width: 144px;
   text-align: center;
 }
 .popup-body .txt-perd-wrap .txt-perd .hyppen {
-  display: inline-block;
-  margin-right: 12px;
+  margin-right: 10px;
   font-size: 18px;
   font-weight: 600;
   color: var(--dt-gray10);
