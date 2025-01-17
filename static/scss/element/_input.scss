@@ -7,14 +7,29 @@ $label-color: #aaa;
 $input-border-color: #ccc;
 /* 기본 input 스타일 초기화 */
 input {
-    all: unset; /* 모든 스타일을 초기화 */
-    box-sizing: border-box; /* 박스 모델을 표준 모드로 설정 */
-  }
-  input:focus {
-    outline: none;
+    margin: 0;
+    padding: 0;
+&:disabled {
+        opacity: 1;
+    }
 }
 
-input::-ms-clear { display: none; }
+input::-webkit-outer-spin-button,
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+}
 // 공통 스타일
 %hidden {
     display: none;
@@ -24,4 +39,282 @@ input::-ms-clear { display: none; }
     display: block;
 }
 
-    // Input Container 스타일
+// Input Container 스타일
+.input-control {   
+    .input-group {
+        position: relative;
+        width: 100%;
+    
+        // 라벨 스타일
+        .input-label {
+            position: absolute;
+            top: 50%; // 기본 상태에서 필드 중앙에 배치
+            left: 0;
+            transform: translateY(-50%);
+            @include fw-6(12px);
+            color: var(--dt-gray11);
+            transition: all 0.2s ease-in-out;
+            pointer-events: none;
+            @extend %hidden;
+        }
+        .input-row {
+            @include flexBox(between, center);
+            column-gap: 6px;
+            // 입력 필드 스타일
+            .input-field {
+                width: 100%;
+                padding: 10px 0;
+                @include fw-6(18px);
+                outline: none;
+                border: none;
+                transition: border-color 0.2s ease-in-out;
+            }
+            border-bottom: 2px solid var(--dt-gray08);
+        
+            // Clear 버튼 : 기본상태-hidden
+            .util-box {
+                margin-left: auto;
+                display: flex;
+                flex: none;
+                column-gap: 6px;
+                @extend %hidden;
+                .clear-btn {
+                    border: none;
+                    cursor: pointer;
+                    min-width: 40px;
+                    width: 40px;
+                    height: 40px;
+                    background-image: url(../images/icon/ic-input-clear.svg);
+                    background-size: 24px 24px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    
+                }
+                .input-unit {
+                    @include fw-6(18px);
+                    color: var(--dt-gray11);
+                    .unit-point {
+                        @include fw-6(18px);
+                        color: var(--dt-gray16);
+                    }
+                }
+        
+            }
+
+        }
+    }
+    // 상태별 스타일 - normal
+    &.normal {
+        .input-group {
+            .input-label {
+                top: -10px; // 라벨이 위로 올라가도록 변경
+                font-size: 12px; // 작아지면서 플로팅 효과
+                @extend %visible;
+            }
+            .input-row {
+                border-bottom: 2px solid var(--dt-gray08);
+            }
+
+        }
+        &.focused {
+            .input-group {
+                .input-field {
+                    caret-color: var(--dt-primary);
+                }
+                .input-row {
+                    border-bottom: 2px solid var(--dt-primary);
+                }
+            }
+        }
+        &.success {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-success);               }
+            }
+        }
+        &.error {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-error);
+                }
+            }
+        }
+        &.disabled {
+            .input-group {
+                .input-row {
+                    pointer-events: none;
+                    border-bottom: 2px solid var(--dt-gray08);
+                    .input-field {
+                        opacity: 0.6;
+                    }
+                }
+                .util-box {
+                    .clear-button {
+                    pointer-events: none;
+                    }
+                }
+            }
+        }
+    
+        &.read-only {
+            .input-group {
+                .input-row {
+                    pointer-events: none;
+                    border-bottom: 2px solid var(--dt-gray08);
+                }
+                .util-box {
+                    .clear-button {
+                    pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+    // 상태별 스타일 - floating
+    &.floating {
+        input {
+            &::placeholder {
+                opacity: 0;
+            }
+        }
+        .input-group {
+            .input-label {
+                top: 50%; // 기본 상태에서 필드 중앙에 배치
+                left: 0;
+                transform: translateY(-50%);
+                display: block;
+            }
+        }
+        &.focused {
+            input {
+                &::placeholder {
+                    opacity: 1;
+                }
+            }
+            .input-group {
+                .input-label {
+                    top: -10px; // 라벨이 위로 올라가도록 변경
+                    @extend %visible;
+                }
+                .input-row {
+                    border-bottom: 2px solid var(--dt-primary);
+                    .input-field {
+                        caret-color: var(--dt-primary);
+                    }
+                    
+                }
+
+            }
+        }
+        &.success {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-success);
+                }
+            }
+        }
+        &.error {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-error);
+                }
+            }
+        }
+        &.disabled {
+            .input-group {
+                .input-row {
+                    pointer-events: none;
+                    border-bottom: 2px solid var(--dt-gray08);
+                    .input-field {
+                        opacity: 0.6;
+                    }
+                }
+                .util-box {
+                    .clear-button {
+                    pointer-events: none;
+                    }
+                }
+            }
+        }
+    
+        &.read-only {
+            .input-group {
+                .input-row {
+                    pointer-events: none;
+                    border-bottom: 2px solid var(--dt-gray08);
+                }
+                .util-box {
+                    .clear-button {
+                    pointer-events: none;
+                    }
+                }
+            }
+        }
+    }
+    &.success {
+        .input-group {
+            .input-row {
+                border-bottom: 2px solid var(--dt-success);
+            }
+        }
+        .validation-txt {
+            display: block;
+            background-image: url(../images/icon/ic-input-valchck-success.svg);
+            color: var(--dt-success);
+        }
+    }
+
+    &.error {
+        .input-group {
+            .input-row {
+                border-bottom: 2px solid var(--dt-error);
+            }
+        }
+        .validation-txt {
+            display: block;
+            background-image: url(../images/icon/ic-input-valchck-error.svg);
+            color: var(--dt-error);
+        }
+    }
+    &.disabled {
+        .input-group {
+            .input-row {
+                pointer-events: none;
+                border-bottom: 2px solid var(--dt-gray08);
+                .input-field {
+                    opacity: 0.6;
+                }
+            }
+            .util-box {
+                .clear-button {
+                pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &.read-only {
+        .input-group {
+            .input-row {
+                pointer-events: none;
+                border-bottom: 2px solid var(--dt-gray08);
+            }
+            .util-box {
+                .clear-button {
+                pointer-events: none;
+                }
+            }
+        }
+    }
+    // 헬퍼 텍스트
+    .validation-txt {
+        display: none;
+        @include fw-6(12px);
+        color: var(--dt-gray11);
+        margin-top: 9px;
+        padding-left: 20px;
+        background-repeat: no-repeat;
+        background-size: 16px 16px;
+        background-position: left 0 center;
+    }
+}
