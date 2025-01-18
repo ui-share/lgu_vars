@@ -31,6 +31,18 @@
 .cont__wrap:last-child .btn-group {
   padding: 0 20px 20px;
 }
+.cont__wrap:last-child .card-group {
+  padding: 0 20px 20px;
+}
+.cont__wrap:last-child .card-group .card.horizon.solid {
+  padding: 15px 16px;
+}
+.cont__wrap:last-child .card-group .sub-tit {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dt-gray11);
+  margin-bottom: 12px;
+}
 
 .txt-infoWrap {
   font-size: 12px;

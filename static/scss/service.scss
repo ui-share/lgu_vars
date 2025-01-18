@@ -33,6 +33,22 @@
 		.btn-group {
 			padding: 0 20px 20px;
 		}
+		.card-group {
+			padding: 0 20px 20px;
+			.card {
+				&.horizon {
+					&.solid {
+						padding: 15px 16px;
+					}
+				}
+
+			}
+			.sub-tit {
+				@include fw-5(16px);
+				color: var(--dt-gray11);
+				margin-bottom: 12px;
+			}
+		}
 	}
 }
 
