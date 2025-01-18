@@ -43,6 +43,9 @@
                     margin-left:2px;
                     img {margin-top:1px;}
                 }
+				&.decrease {
+					.img-box {transform: rotate(180deg)}
+				}
             }
         }
 	}
@@ -93,14 +96,11 @@
 		border-radius:0;
 		background-color:var(--dt-gray15);
 		.txt-title {
-            @include fw-7(14px);line-height:21px;
-            color:var(--dt-white);
-            text-align:left;
-            .txt-phone {
-                display:block;
-                color:var(--dt-gray09);
-                font-weight:500;
-            }
+			column-gap:4px;
+			flex-wrap:wrap;
+			>span {font-size:14px;line-height:21px;}
+			.txt-childname {color:var(--dt-white);font-weight:700;}
+            .txt-phone {color:var(--dt-gray09);font-weight:500;}
         }
         .img-box {width:24px;height:24px;}
 	}

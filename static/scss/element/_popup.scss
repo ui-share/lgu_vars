@@ -105,7 +105,7 @@
 // popbody 내 content
 .popup-body {
 	.cont__wrap {padding-right:0;padding-left:0;}
-	&.notice-wrap {
+	.notice-wrap { // 팝업 내 테이블_불릿_문장 등 
 		@include flexColum;
 		row-gap:20px;
 		padding-top:20px;
@@ -118,6 +118,9 @@
 				background-image: url(../images/icon/ic-chatsquare-error.svg);
 			}
 		}
+	}
+	.tab-container { // 팝업 내 탭UI
+		.tab-cont {padding-top:24px;}
 	}
 
 	.authorization {
