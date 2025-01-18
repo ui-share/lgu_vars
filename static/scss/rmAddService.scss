@@ -22,13 +22,15 @@
 // 서비스 상세 : 데이터 로밍 차단
 .page-wrapper:has(.cont__wrap-rmDetail) {
 	background-color: var(--dt-gray05);
-	.cont__wrap-btBtn {
-		background-color: var(--dt-white);
-	}
+}
+.section__cont:has(.cont__wrap-rmDetail) {
+	gap: 0;
 }
 .cont__wrap-rmDetail {
+	padding: 20px 20px 40px;
 	.con__tit-box {
 		flex-direction: column;
+		margin-bottom: 20px;
 		gap: 12px;
 		.text-box {
 			text-align: left;
@@ -59,8 +61,4 @@
 			}
 		}
 	}
-}
-.cont__wrap-rmExplain {
-	background-color: var(--dt-white);
-	border-radius: 16px;
 }
