@@ -36,6 +36,7 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray11);
+  margin-top: 28px;
 }
 .txt-infoWrap .subTxt-info {
   font-size: 12px;
