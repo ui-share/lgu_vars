@@ -39,6 +39,7 @@
 .txt-infoWrap {
 	@include fw-6(12px);
 	color: var(--dt-gray11);
+	margin-top: 28px;
 	.subTxt-info {
 		@include fw-6(12px);
 		color: var(--dt-gray10);
