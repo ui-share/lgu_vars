@@ -4,28 +4,32 @@ table {
     display:table;
     table-layout: fixed;
     width: 100%;
+    &.table-bullet-desc {
+        margin-top:12px;
+        & + .bullet-list {margin-top:8px;}
+    }
     th, td {
-        padding-left:3px;
-        padding-right:3px;
+        width:auto;
+        max-width:max-content;
         color:var(--dt-gray12);
         font-size:12px;
-        word-break:keep-all;
         vertical-align:middle;
         text-align:center;
+        word-wrap: break-word;
+        word-break:keep-all;
         border:1px solid var(--dt-gray08);
     }
     th{
-        padding-top:6px;
-        padding-bottom:6px;
+        padding:6px 3px;
         background-color:var(--dt-gray02);
         font-weight:600;
-        line-height:18px;
+        line-height:17px;
     }
     td {
-        padding-top:8px;
-        padding-bottom:8px;
+        padding:8px 10px;
         background-color:var(--dt-white);
         font-weight:500;
         line-height:16px;
+        letter-spacing: -0.3px;
     }
 }
