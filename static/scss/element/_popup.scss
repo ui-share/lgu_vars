@@ -104,6 +104,19 @@
 
 // popbody 내 content
 .popup-body {
+	.cont__wrap {padding-right:0;padding-left:0;}
+	&.notice-wrap {
+		@include flexColum;
+		row-gap:20px;
+		padding-top:20px;
+		.con__tit-box {
+			margin-bottom:0;
+			padding-bottom:8px;
+			font-size:16px;line-height:24px;
+			border-bottom:1px solid var(--dt-gray17);
+		}
+	}
+
 	.authorization {
 		.auth {
 			text-align: center;
@@ -182,7 +195,6 @@
 			}
 		}
 	}
-	
 	/* 캘린더 선택시 월일자텍스트 노출영역 */
 	.txt-perd-wrap {
 		@include flexBox(center, center);
