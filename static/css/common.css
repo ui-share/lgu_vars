@@ -291,13 +291,6 @@ button {
   padding-right: 0 !important;
 }
 
-.center {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
 .color-prim {
   color: var(--dt-primary) !important;
 }

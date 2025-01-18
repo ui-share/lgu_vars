@@ -45,8 +45,9 @@
 					<div class="card rmDetail">
 						<div class="card-body">
 							<span class="item announceMent">
+								<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
 								<h6 class="tit">안내 방송멘트</h6>
-								<div class="card solid center">
+								<div class="card solid center mentOn">
 									<div class="card-body">
 										<span class="img-box">
 											<img src="../../../../static/images/icon/ic-card-announcement_on.png" alt="안내멘트 on">
@@ -56,7 +57,24 @@
 										</div>
 									</div>
 								</div>
+
+								<!-- 안내 방송멘트 Off 상태 / 필요한 경우 hidden 으로 조정-->
+								<div class="card solid center mentOff hidden">
+									<div class="card-body">
+										<span class="img-box">
+											<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off">
+										</span>
+										<div class="text-box">
+											<span class="txt">해외 체류 중에 로밍 안내 멘트를 사용하지 않고<br>국내 통화연결음을 제공합니다.</span>
+										</div>
+									</div>
+								</div>
+
 								<div class="btn-group flex-row">
+									<!-- 
+										안내멘트 Off 인 경우 미리듣기 버튼 hidden 처리
+										<button class="btn line hidden" type="button">
+									-->
 									<button class="btn line" type="button">
 										<span class="txt">미리듣기</span>
 										<span class="img-box ico16">

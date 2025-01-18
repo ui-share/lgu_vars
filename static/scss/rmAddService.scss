@@ -67,7 +67,13 @@
 					.card-body {
 						gap: 8px;
 						.txt {
-							color: var(--dt-gray16);
+						}
+					}
+					&.mentOn {
+						.card-body {
+							.txt {
+								color: var(--dt-gray16);
+							}
 						}
 					}
 				}
