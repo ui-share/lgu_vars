@@ -39,6 +39,7 @@
   font-weight: 700;
 }
 .cont__wrap-rmDetail .con__tit-box .text-box .txt {
+  height: 42px;
   line-height: 1.5;
 }
 .cont__wrap-rmDetail .card.rmDetail {
@@ -57,4 +58,21 @@
   font-size: 18px;
   font-weight: 700;
   color: var(--dt-gray14);
+}
+.cont__wrap-rmDetail .card.rmDetail .announceMent {
+  margin-bottom: 28px;
+  gap: 12px;
+}
+.cont__wrap-rmDetail .card.rmDetail .announceMent .card .card-body {
+  gap: 8px;
+}
+.cont__wrap-rmDetail .card.rmDetail .announceMent .card .card-body .txt {
+  color: var(--dt-gray16);
+}
+.cont__wrap-rmDetail .card.rmDetail .announceMent .btn-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 4px;
+  gap: 4px;
 }

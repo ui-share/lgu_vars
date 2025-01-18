@@ -556,24 +556,24 @@ button {
   display: inline-block;
 }
 .img-box.ico16 {
-  width: 16px;
-  min-width: 16px;
-  height: 16px;
+  width: 16px !important;
+  min-width: 16px !important;
+  height: 16px !important;
 }
 .img-box.ico20 {
-  width: 20px;
-  min-width: 20px;
-  height: 20px;
+  width: 20px !important;
+  min-width: 20px !important;
+  height: 20px !important;
 }
 .img-box.ico40 {
-  width: 40px;
-  min-width: 40px;
-  height: 40px;
+  width: 40px !important;
+  min-width: 40px !important;
+  height: 40px !important;
 }
 .img-box.ico96 {
-  width: 96px;
-  min-width: 96px;
-  height: 96px;
+  width: 96px !important;
+  min-width: 96px !important;
+  height: 96px !important;
 }
 .img-box img {
   width: 100%;

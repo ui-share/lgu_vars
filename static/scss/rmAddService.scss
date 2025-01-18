@@ -19,7 +19,7 @@
 }
 
 
-// 서비스 상세 : 데이터 로밍 차단
+// 서비스 : 상세
 .page-wrapper:has(.cont__wrap-rmDetail) {
 	background-color: var(--dt-gray05);
 }
@@ -39,6 +39,7 @@
 				@include fw-7(22px);
 			}
 			.txt {
+				height: 42px;
 				line-height: 1.5;
 			}
 		}
@@ -58,6 +59,27 @@
 			.tit {
 				@include fw-7(18px);
 				color: var(--dt-gray14);
+			}
+			.announceMent {
+				margin-bottom: 28px;
+				gap: 12px;
+				.card {
+					.card-body {
+						gap: 8px;
+						.txt {
+							color: var(--dt-gray16);
+						}
+					}
+				}
+				.btn-group {
+					.btn {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 14px 4px;
+						gap: 4px;
+					}
+				}
 			}
 		}
 	}
