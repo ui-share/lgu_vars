@@ -109,6 +109,13 @@
 				@include fw-6();
 			}
 		}
+		&.mentOn {
+			.text-box {
+				.txt {
+					color: var(--dt-gray16);
+				}
+			}
+		}
 	}
 	&[role=button] {
 		cursor: pointer;

@@ -1227,6 +1227,9 @@ button {
   font-size: 16px;
   font-weight: 600;
 }
+.card.center.mentOn .text-box .txt {
+  color: var(--dt-gray16);
+}
 .card[role=button] {
   cursor: pointer;
 }

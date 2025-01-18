@@ -45,8 +45,8 @@
 					<div class="card rmDetail">
 						<div class="card-body">
 							<span class="item announceMent">
-								<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
 								<h6 class="tit">안내 방송멘트</h6>
+								<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
 								<div class="card solid center mentOn">
 									<div class="card-body">
 										<span class="img-box">
@@ -116,8 +116,16 @@
                 </div>
 
                 <div class="cont__wrap cont__wrap-btBtn">
-                    <div class="btn-group">
-                        <button class="btn btn-prim" type="button">
+                    <div class="btn-group flex-row is-confirm">
+						<!--
+							신청만 필요 시 변경버튼 hidden
+							변경/해지 필요 시 신청->변경으로 문구 변경 필요
+							변경버튼이 항상 위에 있어야 함
+						-->
+						<button class="btn line hidden" type="button">
+                            <span class="txt">변경</span>
+                        </button>
+                        <button class="btn" type="button">
                             <span class="txt">신청</span>
                             <!-- <span class="txt">해지</span> -->
                         </button>
@@ -127,5 +135,129 @@
 		</div>
 		<!-- //container -->
 	</div>
+
+	<div class="popup-wrapper rmAnnounce show hidden">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt">로밍 안내방송 멘트를 설정해 주세요</span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">안내방송 멘트</span>
+						</h6>
+						<div class="tit-tail">
+							<div class="switch-group">
+								<input type="checkbox" id="switch01" class="switch-input" checked>
+								<label for="switch01" class="switch-label">
+									<!-- 체크 풀릴 경우 사용안함으로 문구 변경 -->
+									사용
+									<span class="switch-box"></span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
+					<div class="card solid center mentOn">
+						<div class="card-body">
+							<span class="img-box">
+								<img src="../../../../static/images/icon/ic-card-announcement_on.png" alt="안내멘트 on">
+							</span>
+							<div class="text-box">
+								<span class="txt">"해외 로밍 중인 고객에게 국제전화 요금이<br>부과되며 현지 시간은 00시 00분입니다."</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 안내 방송멘트 Off 상태 / 필요한 경우 hidden 으로 조정-->
+					<div class="card solid center mentOff hidden">
+						<div class="card-body">
+							<span class="img-box">
+								<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off">
+							</span>
+							<div class="text-box">
+								<span class="txt">해외 체류 중에 로밍 안내 멘트를 사용하지 않고<br>국내 통화연결음을 제공합니다.</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- 
+						안내멘트 Off 인 경우 미리듣기 버튼그룹 자체 hidden 처리
+						<div class="btn-group flex-row hidden">
+					-->
+					<div class="btn-group flex-row">
+						<button class="btn line" type="button">
+							<span class="txt">멘트 수정</span>
+							<span class="img-box ico16">
+								<img src="../../../../static/images/icon/ic-btn-write.svg">
+							</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">문구 선택</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+
+					<div class="chips-group">
+						<!-- 선택 시 is-selected -->
+						<button type="button" class="chips chips-menu is-selected">
+							<span class="txt">로밍</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<span class="txt">여행</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<span class="txt">출장</span>
+						</button>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">현지 시간</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+
+					<div class="chips-group">
+						<button type="button" class="chips chips-menu is-selected">
+							<span class="txt">표시</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<span class="txt">표시안함</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn is-disabled" type="button">
+						<span class="txt">멘트 수정</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
 </body>
 </html>
