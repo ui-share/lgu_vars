@@ -546,12 +546,14 @@ button {
   align-items: center;
   gap: 4px;
 }
-.con__tit-box .tit-head.ico .img-box {
+.con__tit-box .tit-head .ico {
   align-self: flex-start;
-}
-.con__tit-box .tit-head.ico .img-box img {
-  width: 100%;
-  height: 100%;
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .con__tit-box .tit-head .txt-title {
   font-size: 18px;
@@ -2542,6 +2544,9 @@ input {
   font-size: 16px;
   line-height: 24px;
   border-bottom: 1px solid var(--dt-gray17);
+}
+.popup-body.notice-wrap .con__tit-box .ic-chaterror {
+  background-image: url(../images/icon/ic-chatsquare-error.svg);
 }
 .popup-body .authorization .auth {
   text-align: center;

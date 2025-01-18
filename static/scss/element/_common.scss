@@ -430,11 +430,14 @@ button {
 		display: flex;
 		align-items: center;
 		gap:4px;
-		&.ico {
-			.img-box {
-				align-self:flex-start;
-				img {width:100%;height:100%;}
-			}
+		.ico {
+			align-self: flex-start;
+			width: 20px;
+			min-width: 20px;
+			height: 20px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 		.txt-title {
 			font-size: 18px;

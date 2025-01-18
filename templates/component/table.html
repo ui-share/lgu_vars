@@ -38,7 +38,10 @@
             <!-- 아코디언 영역 -->
             <div class="section__cont desc" style="padding-top:86px;">
                 <div class="cont__wrap cont__wrap-vertical">
-                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:12px;">[테이블 default]</h3>
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:8px;">[테이블 default]</h3>
+                    <!-- Default :: table > thead or tbody 내에서 tr 생성(클래스 지정 x)
+                        Page 별로 필요 시 자유롭게 클래스 생성 
+                    -->
                     <table class="">
                         <thead>
                             <tr>
@@ -76,6 +79,7 @@
                         </tbody>
                     </table>
 
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin:12px 0 8px;">[테이블 colspan & rowspan 존재 및 tbody에 th 포함되는 케이스]</h3>
                     <table>
                         <thead>
                             <tr>
@@ -105,23 +109,7 @@
                         </tbody>
                     </table>
 
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">고객 구분</th>
-                                <th scope="col">신규고객</th>
-                                <th scope="col">기존고객</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>최대 가능한도</td>
-                                <td>11만원 ~ 30만원 / 월</td>
-                                <td>30만원 ~ 100만원 / 월</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin:12px 0 8px;">[테이블 column 2개인 경우_임의]</h3>
                     <table>
                         <thead>
                             <tr>
