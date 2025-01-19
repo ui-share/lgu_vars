@@ -47,6 +47,43 @@
 							<span class="item announcePhone">
 								<h6 class="tit">도착알림휴대폰 (<span>0</span>/5)</h6>
 
+								<div class="card-group phoneList">
+									<!--반복되는 부분 : 5개까지 -->
+									<div class="card horizon solid">
+										<div class="card-body">
+											<div class="item util">
+												<span class="img-box ico30">
+													<img src="../../../../static/images/icon/ic-card-phoneList01.svg" alt="도착알림휴대폰">
+												</span>
+											</div>
+											<div class="item text">
+												<span class="tit">010-12**-56**</span>
+											</div>
+										</div>
+										<div class="card-footer">
+											<button class="btn btn-util close" type="button" alt="닫기"></button>
+										</div> 
+									</div>
+									<div class="card horizon solid">
+										<div class="card-body">
+											<div class="item util">
+												<span class="img-box ico30">
+													<img src="../../../../static/images/icon/ic-card-phoneList02.svg" alt="도착알림휴대폰">
+												</span>
+											</div>
+											<div class="item text">
+												<span class="tit">010-12**-56**</span>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="card-footer">
+												<button class="btn btn-util close" type="button" alt="닫기"></button>
+											</div>
+										</div> 
+									</div>
+								</div>
+
+								<!-- 5개까지 추가 후 hidden -->
 								<div class="btn-group flex-row">
 									<button class="btn line" type="button">
 										<span class="img-box ico16">
@@ -107,7 +144,71 @@
 		<!-- //container -->
 	</div>
 	
+	<!-- 해외 도착 알리미 신청 확인 팝업 -->
+	<div class="popup-wrapper show hidden">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="inform-wrap">
+					<span class="inform-img success"></span>
+					<div class="text-box">
+						<span class="tit"><span class="color-prim">해외 도착 알리미</span>를 신청할까요?</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">신청</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
+	<!-- 해외 도착 알리미 해지 확인 팝업 -->
+	<div class="popup-wrapper show hidden">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="inform-wrap">
+					<span class="inform-img warning"></span>
+					<div class="text-box">
+						<span class="tit"><span class="color-prim">해외 도착 알리미</span>를 해지지할까요?</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">신청</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 해외 도착 알리미 번호 입력 팝업 -->
 	<div class="popup-wrapper rmLandingAnnounce show hidden">
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
@@ -141,6 +242,39 @@
 				<div class="btn-group flex-row is-confirm">
 					<button class="btn is-disabled" type="button">
 						<span class="txt">수신자 추가</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 해외 도착 알리미 변경 중단 확인 팝업 -->
+	<div class="popup-wrapper show hidden">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="inform-wrap">
+					<span class="inform-img warning"></span>
+					<div class="text-box">
+						<span class="tit"><span class="color-prim">해외 도착 알리미 변경</span>을<br>중단하시겠어요?</span>
+						<span class="txt">변경된 도착 알림 휴대폰을 저장하시려면<br>취소 버튼 선택 후 하단 변경 버튼을 눌러주세요</span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">신청</span>
 					</button>
 				</div>
 			</div>

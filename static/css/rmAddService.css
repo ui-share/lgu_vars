@@ -82,6 +82,28 @@
   font-weight: 700;
   color: var(--dt-gray14);
 }
+.cont__wrap-rmDetail .card.rmDetail .announcePhone .phoneList {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+.cont__wrap-rmDetail .card.rmDetail .announcePhone .phoneList > .card {
+  padding: 14px 20px;
+}
+.cont__wrap-rmDetail .card.rmDetail .announcePhone .phoneList > .card .card-body {
+  gap: 8px;
+}
+.cont__wrap-rmDetail .card.rmDetail .announcePhone .phoneList > .card .card-body .tit {
+  font-size: 16px;
+  color: var(--dt-gray16);
+}
+.cont__wrap-rmDetail .card.rmDetail .announcePhone .phoneList > .card .card-footer .close {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-card_close_small_line.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
 
 .rmAnnounce .popup-body {
   display: flex;

@@ -476,6 +476,11 @@ button {
 		min-width: 20px !important;
 		height: 20px !important;
 	}
+	&.ico30 {
+		width: 30px !important;
+		min-width: 30px !important;
+		height: 30px !important;
+	}
 	&.ico40 {
 		width: 40px !important;
 		min-width: 40px !important;
@@ -763,6 +768,7 @@ button {
 		padding: 8px 12px 8px 32px;
 		border-radius: 999px;
 		border: 1px solid var(--dt-gray08);
+		background-color: var(--dt-white);
 		background-image: url(../images/icon/ic-btn-kakao.svg);
 		background-repeat: no-repeat;
 		background-position: left 12px center;
