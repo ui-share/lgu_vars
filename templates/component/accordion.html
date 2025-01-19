@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components | Accordion</title>
     <link rel="stylesheet" href="../../static/css/common.css">
+    <script src="../../static/js/tooltip/popper.js"></script>
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
         function initCheckDevice() {
@@ -92,8 +93,21 @@
                                     <div class="row">
                                         <span class="txt-title">
                                             참 쉬운 가족 데이터
-                                            <span class="img-box tooltip">
-                                                <img src="../../static/images/icon/" alt="">
+                                            <span class="tooltip-wrap">
+                                                <button class="img-box btn-tooltip">
+                                                    <img src="../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                                </button>
+                                                <div class="tooltip" role="tooltip" data-show data-popper-placement^='bottom'>
+                                                    <div class="tooltip-inner">
+                                                        <span class="txt-wrap">
+                                                            연체가산금은 전월 청구요금 중 납기일까지 납부되지 않은 요금의 2%(일부항목제외)를 1회에 한하여 부과합니다. 단 휴대폰/인터넷전화 소액결제 요금에 대해서는 연체 개월수에 따라 3%~5%의 연체가산금이 부과됩니다.
+                                                        </span>
+                                                        <button type="button" class="tooltip-close"><span class="hidden">닫기</span></button>
+                                                    </div>
+                                                    <div id="arrow" data-popper-arrow="">
+                                                        <img src="../../static/images/icon/tooltip_tail.svg" alt="">
+                                                    </div>
+                                                </div>
                                             </span>
                                         </span>
                                         <span class="txt-desc">

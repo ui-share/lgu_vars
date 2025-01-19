@@ -3,53 +3,72 @@
   popper.js 사용
 */
 
-/* tooltip 기본 */
-.tooltip img {
-	width: 18px;
-	height: 18px;
+.tooltip-wrap {
+	display: inline-block;
+	position: relative;
+    &.al-left {
+        .tooltip {left:0;transform:unset;}
+    }
 }
-
-#tooltip {
-    visibility:hidden;
-    pointer-events:none;
-    background-color: #333;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 13px;
+.btn-tooltip {// 툴팁버튼
+	width: 24px;
+	height: 24px;
+    margin-left:-3px;
+    padding:3px;
 }
-#tooltip[data-show] {
-    visibility:visible;
-    pointer-events:auto;
+.tooltip { // 툴팁박스
+	display: none;
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+	width: max-content;
+	max-width: 220px;
+	background-color: rgba(24, 26, 27, 0.9);
+	border-radius: 8px;
+	padding: 10px 16px;
+	z-index: 10;
+    .tooltip-inner {
+        @include flexRow;
+        align-items:center;
+        column-gap:8px;
+    }
+    .txt-wrap {
+        @include fw-5(12px);
+        color:var(--dt-white);
+        line-height: 18px;
+    }
+}
+.tooltip[data-show] { // show hide 조작
+	display: block;
 }
 #arrow,
 #arrow::before {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background: inherit;
-    visibility:hidden;
-    pointer-events:none;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: inherit;
 }
-
+#arrow {
+	visibility: hidden;
+}
 #arrow::before {
-    content: '';
-    transform: rotate(45deg);
+	visibility: visible;
+	content: '';
+	transform: rotate(45deg);
 }
-#tooltip[data-show] #arrow,
-#tooltip[data-show] #arrow::before {pointer-events:auto;visibility:visible;}
-#tooltip[data-popper-placement^='top'] > #arrow {
-    bottom: -4px;
+.tooltip.white #arrow,
+.tooltip.white #arrow::before {
+	box-shadow: 1px 1px 4px #d7d7d7;
 }
-
-#tooltip[data-popper-placement^='bottom'] > #arrow {
-    top: -4px;
+.tooltip[data-popper-placement^='top'] > #arrow {
+	bottom: -4px;
 }
-
-#tooltip[data-popper-placement^='left'] > #arrow {
-    right: -4px;
+.tooltip[data-popper-placement^='bottom'] > #arrow {
+	top: -4px;
 }
-
-#tooltip[data-popper-placement^='right'] > #arrow {
-    left: -4px;
+.tooltip[data-popper-placement^='left'] > #arrow {
+	right: -4px;
+}
+.tooltip[data-popper-placement^='right'] > #arrow {
+	left: -4px;
 }
