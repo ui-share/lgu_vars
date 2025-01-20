@@ -12,9 +12,10 @@
 	}
 }
 .cont__wrap {
-	&:first-child {
+	&.cont__wrap-service {
 		height: 100%;
 		overflow-y: auto;
+		padding: 40px 20px 40px;
 	}
 	&:last-child {
 		padding: 0;
