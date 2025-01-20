@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>요금바로납부_입금전용계좌로 납부</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
     <link rel="stylesheet" href="../../../../static/css/common.css">
     <link rel="stylesheet" href="../../../../static/css/search.css">
-    <script src="../../../../static/js/tooltip/popper.js"></script>
 
+    <!-- Scripts -->
+    <script src="../../../../static/js/tooltip/popper.js"></script>
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
         function initCheckDevice() {
@@ -22,7 +30,7 @@
             /*
                 임시코드입니다. 수정하여 사용 요망
             */
-           
+            
             // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
             const tooltipBtn = document.querySelector('.btn-sec'); 
             const tooltip = document.querySelector('.tooltip-wrap');
