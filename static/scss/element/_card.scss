@@ -290,18 +290,6 @@
 				color: var(--dt-gray13);
 			}
 		}
-		.end {
-			position: absolute;
-			top: 16px;
-			right: 16px;
-			width: 24px;
-			height: 24px;
-			text-indent: -9999px;
-			background-image: url(../images/icon/ic-card-end.png);
-			background-repeat: no-repeat;
-			background-size: 24px 24px;
-			background-position: center center;
-		}
 		.card-footer {
 			.btn-group {
 				.btn {
@@ -337,7 +325,9 @@
 			@include fw-7(14px);
 			color: var(--dt-gray14);
 		}
-		.end { // 엑스버튼
+	}
+	&.bank, &.banner {
+		.btn.end { // 엑스버튼
 			position: absolute;
 			top: 16px;
 			right: 16px;
@@ -345,7 +335,7 @@
 			height: 24px;
 			text-indent: -9999px;
 			font-size:0;
-			background-image: url(../images/icon/ic-card-end.png);
+			background-image: url(../images/icon/ic-close24-gray10.svg);
 			background-repeat: no-repeat;
 			background-size: 24px 24px;
 			background-position: center center;

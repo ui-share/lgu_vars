@@ -3,13 +3,6 @@
   popper.js 사용
 */
 
-.tooltip-wrap {
-	display: inline-block;
-	position: relative;
-    &.al-left {
-        .tooltip {left:0;transform:unset;}
-    }
-}
 .btn-tooltip {// 툴팁버튼
 	width: 24px;
 	height: 24px;
@@ -19,56 +12,89 @@
 .tooltip { // 툴팁박스
 	display: none;
     position:absolute;
-    left:50%;
-    transform:translateX(-50%);
+	left:50%;
 	width: max-content;
 	max-width: 220px;
 	background-color: rgba(24, 26, 27, 0.9);
 	border-radius: 8px;
-	padding: 10px 16px;
+	padding: 10px;
 	z-index: 10;
+	@media screen and (max-width:359px) {
+		max-width: 60vw;
+	}
     .tooltip-inner {
         @include flexRow;
         align-items:center;
         column-gap:8px;
     }
     .txt-wrap {
+		display:inline-block;
+		width:calc(100% - 32px);
         @include fw-5(12px);
         color:var(--dt-white);
         line-height: 18px;
+		letter-spacing: -0.2px;
     }
+	.tooltip-close {
+		align-self:flex-start;
+		font-size:0;
+		text-indent: -9999px;
+		width:24px;height:24px;
+		background-image: url(../images/icon/ic-close24-gray10.svg);
+		background-size: 24px;
+	}
 }
 .tooltip[data-show] { // show hide 조작
 	display: block;
 }
 #arrow,
 #arrow::before {
+	visibility:hidden;
 	position: absolute;
-	width: 8px;
-	height: 8px;
+	width: 17px;
+	height: 9px;
 	background: inherit;
 }
 #arrow {
-	visibility: hidden;
+	visibility: visible;
+	left:50%;
+	transform:translateX(-50%);
+	// border:1px solid red;
 }
 #arrow::before {
-	visibility: visible;
 	content: '';
-	transform: rotate(45deg);
+	visibility: visible;
+	width:100%;height:100%;
+	background-image: url(../images/icon/tooltip_tail.svg);
+	background-color:yellow;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 .tooltip.white #arrow,
 .tooltip.white #arrow::before {
 	box-shadow: 1px 1px 4px #d7d7d7;
 }
-.tooltip[data-popper-placement^='top'] > #arrow {
-	bottom: -4px;
+.tooltip[data-popper-placement^='top'] > #arrow { // default
+	bottom: -8px;
 }
 .tooltip[data-popper-placement^='bottom'] > #arrow {
-	top: -4px;
+	top: -8px;
+	transform: rotate(180deg);
 }
 .tooltip[data-popper-placement^='left'] > #arrow {
-	right: -4px;
+	right: -8px;
 }
 .tooltip[data-popper-placement^='right'] > #arrow {
-	left: -4px;
+	left: -8px;
+}
+.tooltip-wrap {
+	display: inline-block;
+	position: relative;
+    // &.al-right {
+    //     .tooltip {
+	// 		top:50%;
+	// 		left:0;
+	// 		transform: translateX(20px) translateY(-50%);
+	// 	}
+    // }
 }
