@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .page-wrapper {
   height: 100%;
 }
@@ -14,11 +15,15 @@
   overflow-y: auto;
 }
 .cont__wrap:last-child {
+  padding: 0;
+  background-color: transparent;
+}
+.cont__wrap:last-child .btn-group {
   position: relative;
   background-color: var(--dt-white);
-  padding: 0;
+  padding: 0 20px 20px;
 }
-.cont__wrap:last-child::before {
+.cont__wrap:last-child .btn-group::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -27,9 +32,6 @@
   width: 100%;
   height: 20px;
   background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
-}
-.cont__wrap:last-child .btn-group {
-  padding: 0 20px 20px;
 }
 .cont__wrap:last-child .card-group {
   padding: 0 20px 20px;
@@ -54,4 +56,22 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray10);
+}
+
+/* 카카오톡 포지션 다발*/
+.badge-wrap {
+  padding: 20px 0;
+}
+.badge-wrap .btn-kakao {
+  padding: 8px 12px 8px 32px;
+  border-radius: 999px;
+  border: 1px solid var(--dt-gray08);
+  background-color: var(--dt-white);
+  background-image: url(../images/icon/ic-btn-kakao.svg);
+  background-repeat: no-repeat;
+  background-position: left 12px center;
+  background-size: 16px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--dt-gray12);
 }

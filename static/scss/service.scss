@@ -17,21 +17,22 @@
 		overflow-y: auto;
 	}
 	&:last-child {
-		position: relative;
-		background-color: var(--dt-white);
 		padding: 0;
-		&::before {
-			content: "";
-			display: inline-block;
-			position: absolute;
-			top: -20px;
-			left: 0;
-			width: 100%;
-			height: 20px;
-			background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
-		}
+		background-color: transparent;
 		.btn-group {
+			position: relative;
+			background-color: var(--dt-white);
 			padding: 0 20px 20px;
+			&::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: -20px;
+				left: 0;
+				width: 100%;
+				height: 20px;
+				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
+			}
 		}
 		.card-group {
 			padding: 0 20px 20px;
@@ -59,5 +60,22 @@
 	.subTxt-info {
 		@include fw-6(12px);
 		color: var(--dt-gray10);
+	}
+}
+
+/* 카카오톡 포지션 다발*/
+.badge-wrap {
+	padding: 20px 0;
+	.btn-kakao {
+		padding: 8px 12px 8px 32px;
+		border-radius: 999px;
+		border: 1px solid var(--dt-gray08);
+		background-color: var(--dt-white);
+		background-image: url(../images/icon/ic-btn-kakao.svg);
+		background-repeat: no-repeat;
+		background-position: left 12px center;
+		background-size: 16px 16px;
+		@include fw-5(14px);
+		color: var(--dt-gray12);
 	}
 }

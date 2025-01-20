@@ -760,22 +760,3 @@ button {
 		color: var(--dt-black);
 	}
 }
-/* 카카오톡 포지션 다발*/
-.badge-wrap {
-	position: absolute;
-	top: -59px;
-	left: 50%;
-	transform: translateX(-50%);
-	.btn-kakao {
-		padding: 8px 12px 8px 32px;
-		border-radius: 999px;
-		border: 1px solid var(--dt-gray08);
-		background-color: var(--dt-white);
-		background-image: url(../images/icon/ic-btn-kakao.svg);
-		background-repeat: no-repeat;
-		background-position: left 12px center;
-		background-size: 16px 16px;
-		@include fw-5(14px);
-		color: var(--dt-gray12);
-	}
-}
