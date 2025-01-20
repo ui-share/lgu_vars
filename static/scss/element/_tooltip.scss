@@ -9,10 +9,9 @@
     margin-left:-3px;
     padding:3px;
 }
-.tooltip { // 툴팁박스
+.tooltip-wrap { // 툴팁박스
 	display: none;
     position:absolute;
-	left:50%;
 	width: max-content;
 	max-width: 220px;
 	background-color: rgba(24, 26, 27, 0.9);
@@ -34,6 +33,19 @@
         color:var(--dt-white);
         line-height: 18px;
 		letter-spacing: -0.2px;
+		&:has(.ico) {
+			@include flexRow;
+			column-gap:4px;
+			align-items:center;
+		}
+		.ico {
+			align-self: flex-start;
+			display:inline-block;
+			width:16px;height:16px;
+			background-image: url(../images/icon/ic-info-white.svg);
+			background-repeat:no-repeat;
+			background-size:100%;
+		}
     }
 	.tooltip-close {
 		align-self:flex-start;
@@ -44,57 +56,81 @@
 		background-size: 24px;
 	}
 }
-.tooltip[data-show] { // show hide 조작
+.tooltip-wrap[data-show] { // show hide 조작
 	display: block;
+	div[data-popper-arrow],
+	div[data-popper-arrow]::before { 
+		visibility:visible;
+	}
 }
-#arrow,
-#arrow::before {
+div[data-popper-arrow],
+div[data-popper-arrow]::before {
 	visibility:hidden;
 	position: absolute;
-	width: 17px;
-	height: 9px;
-	background: inherit;
 }
-#arrow {
-	visibility: visible;
-	left:50%;
-	transform:translateX(-50%);
-	// border:1px solid red;
-}
-#arrow::before {
+div[data-popper-arrow] {}
+
+div[data-popper-arrow]::before {
 	content: '';
-	visibility: visible;
 	width:100%;height:100%;
-	background-image: url(../images/icon/tooltip_tail.svg);
-	background-color:yellow;
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: 100%;
 }
-.tooltip.white #arrow,
-.tooltip.white #arrow::before {
-	box-shadow: 1px 1px 4px #d7d7d7;
-}
-.tooltip[data-popper-placement^='top'] > #arrow { // default
+.tooltip-wrap[data-popper-placement^='top'] div[data-popper-arrow] { // default
+	width: 16px;
+	height: 8px;
+	margin-left:-8px;
+
 	bottom: -8px;
+	&::before {
+		background-image: url(../images/icon/tooltip_tail_bottom.svg);
+	}
 }
-.tooltip[data-popper-placement^='bottom'] > #arrow {
+.tooltip-wrap[data-popper-placement^='bottom'] div[data-popper-arrow] {
+	width: 16px;
+	height: 8px;
+	margin-left:-8px;
+
 	top: -8px;
-	transform: rotate(180deg);
+	&::before {
+		background-image: url(../images/icon/tooltip_tail_top.svg);
+	}
 }
-.tooltip[data-popper-placement^='left'] > #arrow {
-	right: -8px;
-}
-.tooltip[data-popper-placement^='right'] > #arrow {
+.tooltip-wrap[data-popper-placement^='right'] div[data-popper-arrow] {
+	width: 8px;
+	height: 16px;
+	margin-top:-8px;
+
 	left: -8px;
+	&::before {
+		background-image: url(../images/icon/tooltip_tail_left.svg);
+	}
 }
-.tooltip-wrap {
-	display: inline-block;
-	position: relative;
-    // &.al-right {
-    //     .tooltip {
-	// 		top:50%;
-	// 		left:0;
-	// 		transform: translateX(20px) translateY(-50%);
-	// 	}
-    // }
+.tooltip-wrap[data-popper-placement^='left'] div[data-popper-arrow] {
+	width: 8px;
+	height: 16px;
+	margin-top:-8px;
+
+	left:unset;
+	right:-8px;
+	&::before {
+		background-image: url(../images/icon/tooltip_tail_right.svg);
+	}
+}
+
+// 예외 케이스
+.input-control, .checkbox-area {
+	&:has(.tooltip) {
+		position:relative;
+		.tooltip-wrap {
+			padding:10px 16px;
+		}
+	}
+	.tooltip-wrap {// chck-group, validation-txt 이랑 동레벨
+		left:-14px;
+		top:-22px;
+		.txt-wrap {width:100%;}
+		.tooltip[data-popper-placement^=top] div[data-popper-arrow] {margin-left:6px;}
+	}
 }

@@ -428,6 +428,16 @@ button {
 		row-gap:16px;
 		.con__tit-box {margin-bottom:0;}
 		.bullet-caption {margin-top:8px;}
+		.btn-group {
+			&:has(.tooltip) {
+				position:relative;
+				.tooltip-wrap {
+					.tooltip-inner .txt-wrap{
+						width:100%;
+					}
+				}
+			}
+		}
 	}
 	&.tabnav__wrap {padding-right:0;padding-left:0;}
 	&.cont__wrap-singleCont {
