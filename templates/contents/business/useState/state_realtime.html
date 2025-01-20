@@ -16,6 +16,74 @@
         }
         window.onload = ()=> {
             initCheckDevice();
+
+            /*
+                임시코드입니다. 수정하여 사용 요망
+            */
+
+            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+            const tooltipBtn = document.querySelector('.btn-tooltip'); 
+            const tooltip = document.querySelector('.tooltip-wrap');
+        
+            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                placement: 'top',
+                modifiers: [
+                    {
+                        name: 'offset',
+                        options: {
+                            offset: [0, 8],
+                        },
+                    },
+                    {
+                        name: 'flip',
+                        options: {
+                            fallbackPlacements: ['top', 'bottom'],
+                        },
+                    },
+                ],
+            });
+
+            function show() {
+                // Make the tooltip visible
+                tooltip.setAttribute('data-show', '');
+
+                // Enable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: true },
+                    ],
+                }));
+
+                // Update its position
+                popperInstance.update();
+            }
+
+            function hide() {
+                // Hide the tooltip
+                tooltip.removeAttribute('data-show');
+
+                // Disable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: false },
+                    ],
+                }));
+            }
+
+            const showEvents = ['click', 'focus'];
+            const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+            showEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, show);
+            });
+
+            hideEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, hide);
+            });
         }
     </script>
     <script src="../../../../static/js/tooltip/popper.js"></script>
@@ -88,22 +156,55 @@
                                     <div class="row">
                                         <span class="txt-title">
                                             참 쉬운 가족 데이터
-                                            <span class="img-box tooltip"  aria-describedby="tooltip">
+                                            <button class="img-box btn-tooltip">
                                                 <img src="../../../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                            </button>
+                                            <span class="tooltip-wrap">
+                                                <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
+                                                <!--
+                                                    const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                                        // placement: 'bottom', 으로 툴팁 위치 조작
+                                                        
+                                                        현재 디자인 케이스 : bottom, right, top
+                                                    }
+                                                -->
+                                                <div class="tooltip">
+                                                    <div class="tooltip-inner">
+                                                        <span class="txt-wrap">
+                                                            설명 문구 입니다.
+                                                        </span>
+                                                        <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                                    </div>
+                                                    <div data-popper-arrow=""></div>
+                                                </div>
                                             </span>
-                                        </span>
-                                        <span class="txt-desc">
-                                            <span class="current">0GB</span>
-                                            <span class="total">/ 50GB</span>
                                         </span>
                                     </div>
                                     <div class="row">
                                         <span class="txt-title">
                                             자회선 월 기본제공 데이터
-                                            <span class="img-box tooltip"  aria-describedby="tooltip">
+                                            <button class="img-box btn-tooltip">
                                                 <img src="../../../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                            </button>
+                                            <span class="tooltip-wrap">
+                                                <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
+                                                <!--
+                                                    const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                                        // placement: 'bottom', 으로 툴팁 위치 조작
+                                                        
+                                                        현재 디자인 케이스 : bottom, right, top
+                                                    }
+                                                -->
+                                                <div class="tooltip">
+                                                    <div class="tooltip-inner">
+                                                        <span class="txt-wrap">
+                                                            설명 문구 입니다.
+                                                        </span>
+                                                        <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                                    </div>
+                                                    <div data-popper-arrow=""></div>
+                                                </div>
                                             </span>
-                                            <span class="txt-phone">(010-75**-64**)</span>
                                         </span>
                                         <span class="txt-desc">
                                             <span class="current">250MB</span>
