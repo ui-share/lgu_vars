@@ -1,10 +1,5 @@
 @import '../base/mixin';
-// 변수 선언
-$primary-color: #ff0080;
-$success-color: green;
-$error-color: red;
-$label-color: #aaa;
-$input-border-color: #ccc;
+
 /* 기본 input 스타일 초기화 */
 input {
     margin: 0;
