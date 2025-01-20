@@ -8,10 +8,10 @@
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
 	<meta name="theme-color" content="#ffffff">
-	<title>종료 확인 팝업</title>
+	<title>청구서 받는 방법 변경 팝업</title>
 
 	<!-- Css -->
-	<link rel="stylesheet" type="text/css" href="../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
 </head>
 <body>
 	<div class="page-wrapper">
@@ -28,31 +28,28 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit hidden">
-					<span class="txt"></span>
+				<div class="popup-tit">
+					<span class="txt">청구서 받을 방법을 선택해 주세요</span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<div class="inform-wrap">
-					<span class="inform-img check"></span>
-					<div class="text-box">
-						<span class="tit">확인을 누르면<br>눈으로 보는 ARS가 <span class="color-prim">종료</span>됩니다</span>
-						<!-- <span class="txt"></span> -->
+				<div class="slctInfo-box chngBillMthd">
+					<div class="btn-group flex-column">
+						<button class="btn btn-popSolid" type="button">
+							<span class="txt">휴대폰</span>
+						</button>
+						<button class="btn btn-popSolid" type="button">
+							<span class="txt">이메일</span>
+						</button>
+						<button class="btn btn-popSolid" type="button">
+							<span class="txt">우편</span>
+						</button>
 					</div>
-				</div>
+				</div>				
 			</div>
 			
-			<div class="popup-footer">
-				<div class="btn-group flex-row is-confirm">
-					<button class="btn line" type="button">
-						<span class="txt">취소</span>
-					</button>
-					<button class="btn" type="button">
-						<span class="txt">확인</span>
-					</button>
-				</div>
-			</div>
+			<div class="popup-footer hidden"></div>
 		</div>
 	</div>
 </body>
