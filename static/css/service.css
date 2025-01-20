@@ -9,9 +9,10 @@
   justify-content: space-between;
 }
 
-.cont__wrap:first-child {
+.cont__wrap.cont__wrap-service {
   height: 100%;
   overflow-y: auto;
+  padding: 40px 20px 40px;
 }
 .cont__wrap:last-child {
   position: relative;
