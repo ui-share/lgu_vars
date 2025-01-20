@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components | Tooltip</title>
+    <link rel="stylesheet" href="../../static/css/common.css">
+    <script src="../../static/js/tooltip/popper.js"></script>
+    <script>
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+        function initCheckDevice() {
+            // PC
+            if (!isMobile) {
+                document.body.classList.add("is-pc");
+            }
+        }
+        window.onload = ()=> {
+            initCheckDevice();
+
+            /*
+                임시코드입니다. 수정하여 사용 요망
+            */
+
+            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+            const tooltipBtn = document.querySelector('.btn-tooltip'); 
+            const tooltip = document.querySelector('.tooltip-wrap');
+        
+            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                placement: 'top',
+                modifiers: [
+                    {
+                        name: 'offset',
+                        options: {
+                            offset: [0, 8],
+                        },
+                    },
+                    {
+                        name: 'flip',
+                        options: {
+                            fallbackPlacements: ['top', 'bottom'],
+                        },
+                    },
+                ],
+            });
+
+            function show() {
+                // Make the tooltip visible
+                tooltip.setAttribute('data-show', '');
+
+                // Enable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: true },
+                    ],
+                }));
+
+                // Update its position
+                popperInstance.update();
+            }
+
+            function hide() {
+                // Hide the tooltip
+                tooltip.removeAttribute('data-show');
+
+                // Disable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: false },
+                    ],
+                }));
+            }
+
+            const showEvents = ['click', 'focus'];
+            const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+            showEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, show);
+            });
+
+            hideEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, hide);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+
+            <!-- 아코디언 영역 -->
+            <div class="section__cont desc" style="padding-top:86px;">
+                <!-- 자세히보기-간단히보기 버튼의 경우 -->
+                <div class="cont__wrap">
+                    <h2 style="font-weight:600;opacity:0.8;font-size:20px;margin-bottom:10px;color:red;">Html 내 주석 확인 요망 : tooltip-wrap에 data-show 추가 확인</h2>
+
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:50px;">[Default : 버튼형 + 위치_Top]</h3>
+                    <div class="plan-wrap">
+                        <div class="col accordion-container open">
+                            <div class="list-plan accordion-content">
+                                <div class="row">
+                                    <span class="txt-title">
+                                        참 쉬운 가족 데이터
+                                        <button class="img-box btn-tooltip">
+                                            <img src="../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                        </button>
+                                        <span class="tooltip-wrap">
+                                            <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
+                                            <!--
+                                                const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                                    // placement: 'bottom', 으로 툴팁 위치 조작
+                                                    
+                                                    현재 디자인 케이스 : bottom, right, top
+                                                }
+                                            -->
+                                            <div class="tooltip">
+                                                <div class="tooltip-inner">
+                                                    <span class="txt-wrap">
+                                                        설명 문구 입니다.
+                                                    </span>
+                                                    <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                                </div>
+                                                <div data-popper-arrow=""></div>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap">
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:18px;">[Default : 버튼형 + 위치_Right]</h3>
+                    <div class="plan-wrap">
+                        <div class="col accordion-container open">
+                            <div class="list-plan accordion-content">
+                                <div class="row">
+                                    <span class="txt-title">
+                                        결제
+                                        <!--
+                                            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                                // placement: 'top', 으로 툴팁 위치 조작
+                                                
+                                                현재 디자인 케이스 : top, right, bottom
+                                            }
+                                        -->
+                                        <button class="img-box btn-tooltip">
+                                            <img src="../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                        </button>
+                                        <span class="tooltip-wrap">
+                                            <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="right"> -->
+                                            <div class="tooltip">
+                                                <div class="tooltip-inner">
+                                                    <span class="txt-wrap">
+                                                        설명 문구 입니다.설명 문구 입니다.설명 문구 
+
+                                                    </span>
+                                                    <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                                </div>
+                                                <div data-popper-arrow></div>
+                                            </div>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap">
+                    <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:44px;">
+                        [CASE1 : 인풋박스 or 체크박스에 출력되는 경우]
+                        <br />
+                        <span style="font-size:12px;font-weight:500;">
+                            위치 : 툴팁꼭지 left 고정(예외 케이스)
+                        </span>
+                        <br />
+                        <span style="font-size:12px;font-weight:500;">
+                            인풋 validation에 따라 조작
+                        </span>
+                        <br />
+                        <span style="font-size:12px;font-weight:500;">
+                            체크박스 unchecked 상태에서 하단 confirm-button 클릭 시 출력되는 툴팁 : 버튼 미존재 validation으로 조작
+                        </span>
+                    </h3>
+                    <!-- 인풋박스에 포함된 경우 -->
+                    <div class="input-control normal">				
+                        <div class="input-group">
+                            <label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
+                            <div class="input-row">
+                                <input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다.">
+                                <div class="util-box">
+                                    <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                    <button type="button" class="clear-btn hidden"></button>
+                                    <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                    <span class="input-unit hidden">
+                                        <span class="unit-point">1</span>단위가늘어납니다
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- 
+                                <div class="util-box"> : clear button 과 unit이 들어감 
+                            -->
+                        </div>
+                        <!-- 인풋박스 validation에 따라서 출력되는 툴팁
+                        -->
+                        <span class="tooltip-wrap">
+                        <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="bottom"> -->
+                            <div class="tooltip">
+                                <div class="tooltip-inner">
+                                    <span class="txt-wrap">
+                                        <span class="ico"></span>
+                                        잔여요금 이상 납부할 수 없어요<br />
+                                        잔여요금 이상 납부할 수 없어요<br />
+                                        잔여요금 이상 납부할 수 없어요<br />
+                                    </span>
+                                </div>
+                                <div data-popper-arrow></div>
+                            </div>
+                        </span>
+                        <div class="validation-txt">validation 메시지 노출</div>
+                    </div>
+                    <!-- 체크박스에 포함된 경우 -->
+                    <div class="accordion-container open">
+                        <div class="chckbox-area accordion-header">
+                            <div class="chck-group">
+                                <input type="checkbox" id="chck01" class="chck-input">
+                                <label for="chck01" class="chck-label">
+                                    <span class="chck-box"></span>
+                                    전자서명을 위한 고객정보 활용동의
+                                </label>
+                            </div>
+                            <!-- 체크박스 unchecked 상태에서 하단 confirm-button 클릭 시 출력되는 툴팁
+                             : btn-prim은 is-disabled + 해당 툴팁 출력
+                             : checked 되면 툴팁 hide, btn-prim remove is-disabled
+                            -->
+                            <span class="tooltip-wrap">
+                            <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="bottom"> -->
+                                <div class="tooltip">
+                                    <div class="tooltip-inner">
+                                        <span class="txt-wrap">
+                                            활용동의를 체크해 주세요
+                                        </span>
+                                    </div>
+                                    <div data-popper-arrow></div>
+                                </div>
+                            </span>
+                            <button type="button" class="btn-toggle">
+                                <span class="img-box ico-toggle">
+                                    <img src="../../static/images/icon/ic-chips-arrow-gray.svg">
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="bullet-list">
+                                <li class="bullet-item">
+                                    카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다. 카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 
+                                    결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다. 카드에서 은행계좌로 변경 시, 결제일은 매달 15일이며 납부방법 변경방식(즉시, 다음달)에 따라 
+                                    결제일이 변동될 수 있습니다. 
+                                    출금날짜에 잔고가 부족할 경우 추가로 출금됩니다.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-prim is-disabled">
+                                <span class="txt">납부방법 변경</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+    <!-- popper tooltip js -->
+</body>
+</html>
