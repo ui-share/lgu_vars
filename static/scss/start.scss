@@ -7,17 +7,18 @@
 .container {
 	display: flex;
 	flex-direction: column;
-	padding-top: 56px;
 	gap: 48px;
 }
 
 .section__cont {
 	display: flex;
 	flex-direction: column;
-    &.intro {
+    padding-bottom: 50px;
+    &.start {
+        padding-top: 80px;
         row-gap: 48px;
         .cont__wrap {
-            &.intro-top {
+            &.start-top {
                 @include flexBox();
                 flex-direction: column;
                 .intro-logo {
