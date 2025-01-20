@@ -303,6 +303,10 @@ button {
   padding-top: 20px !important;
 }
 
+.pt-40 {
+  padding-top: 40px !important;
+}
+
 .color-prim {
   color: var(--dt-primary) !important;
 }
@@ -2579,7 +2583,7 @@ input {
 }
 .popup-wrapper .popup-body {
   min-height: 84px;
-  max-height: 513px;
+  max-height: 426px;
   padding: 0 20px 20px;
   overflow-y: auto;
 }
