@@ -2597,6 +2597,9 @@ input {
 .popup-wrapper .popup-body.center .text-box .txt {
   font-size: 16px;
 }
+.popup-wrapper .popup-footer {
+  background-color: var(--dt-white);
+}
 .popup-wrapper .popup-footer > *:first-child {
   margin: 20px 0 20px;
   padding: 0 20px;
