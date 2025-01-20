@@ -1459,18 +1459,6 @@ button {
 .card.bank .item .txt {
   color: var(--dt-gray13);
 }
-.card.bank .end {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
-  text-indent: -9999px;
-  background-image: url(../images/icon/ic-card-end.png);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: center center;
-}
 .card.bank .card-footer .btn-group .btn {
   background-color: var(--dt-gray06);
   border-color: var(--dt-gray06);
@@ -1502,7 +1490,7 @@ button {
   font-weight: 700;
   color: var(--dt-gray14);
 }
-.card.banner .end {
+.card.bank .btn.end, .card.banner .btn.end {
   position: absolute;
   top: 16px;
   right: 16px;
@@ -1510,7 +1498,7 @@ button {
   height: 24px;
   text-indent: -9999px;
   font-size: 0;
-  background-image: url(../images/icon/ic-card-end.png);
+  background-image: url(../images/icon/ic-close24-gray10.svg);
   background-repeat: no-repeat;
   background-size: 24px 24px;
   background-position: center center;
@@ -3419,15 +3407,6 @@ table td {
 /* 
   popper.js 사용
 */
-.tooltip-wrap {
-  display: inline-block;
-  position: relative;
-}
-.tooltip-wrap.al-left .tooltip {
-  left: 0;
-  transform: unset;
-}
-
 .btn-tooltip {
   width: 24px;
   height: 24px;
@@ -3439,13 +3418,17 @@ table td {
   display: none;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
   width: max-content;
   max-width: 220px;
   background-color: rgba(24, 26, 27, 0.9);
   border-radius: 8px;
-  padding: 10px 16px;
+  padding: 10px;
   z-index: 10;
+}
+@media screen and (max-width: 359px) {
+  .tooltip {
+    max-width: 60vw;
+  }
 }
 .tooltip .tooltip-inner {
   display: flex;
@@ -3454,10 +3437,22 @@ table td {
   column-gap: 8px;
 }
 .tooltip .txt-wrap {
+  display: inline-block;
+  width: calc(100% - 32px);
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-white);
   line-height: 18px;
+  letter-spacing: -0.2px;
+}
+.tooltip .tooltip-close {
+  align-self: flex-start;
+  font-size: 0;
+  text-indent: -9999px;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-close24-gray10.svg);
+  background-size: 24px;
 }
 
 .tooltip[data-show] {
@@ -3466,20 +3461,28 @@ table td {
 
 #arrow,
 #arrow::before {
+  visibility: hidden;
   position: absolute;
-  width: 8px;
-  height: 8px;
+  width: 17px;
+  height: 9px;
   background: inherit;
 }
 
 #arrow {
-  visibility: hidden;
+  visibility: visible;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #arrow::before {
-  visibility: visible;
   content: "";
-  transform: rotate(45deg);
+  visibility: visible;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/icon/tooltip_tail.svg);
+  background-color: yellow;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .tooltip.white #arrow,
@@ -3488,17 +3491,23 @@ table td {
 }
 
 .tooltip[data-popper-placement^=top] > #arrow {
-  bottom: -4px;
+  bottom: -8px;
 }
 
 .tooltip[data-popper-placement^=bottom] > #arrow {
-  top: -4px;
+  top: -8px;
+  transform: rotate(180deg);
 }
 
 .tooltip[data-popper-placement^=left] > #arrow {
-  right: -4px;
+  right: -8px;
 }
 
 .tooltip[data-popper-placement^=right] > #arrow {
-  left: -4px;
+  left: -8px;
+}
+
+.tooltip-wrap {
+  display: inline-block;
+  position: relative;
 }
