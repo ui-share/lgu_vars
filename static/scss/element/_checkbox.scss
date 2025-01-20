@@ -1,9 +1,14 @@
 @import '../base/mixin.scss';
 
 .chck-group {
-  .chck-input {
+  input[type="checkbox"] {
     /* input은 숨김 */
-    display: none; 
+    -webkit-appearance: none;
+    appearance: none;
+    position:absolute;top:-9999px;
+    margin: 0px;
+    padding-inline: 0;
+    padding-block: 0;
     
     /* input이 체크되지 않았을 때 */
     &:not(:checked) + .chck-label{

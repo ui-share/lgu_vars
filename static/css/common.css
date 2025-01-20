@@ -539,6 +539,12 @@ button {
 .cont__wrap.cont__wrap-vertical .bullet-caption {
   margin-top: 8px;
 }
+.cont__wrap.cont__wrap-vertical .btn-group:has(.tooltip) {
+  position: relative;
+}
+.cont__wrap.cont__wrap-vertical .btn-group:has(.tooltip) .tooltip-wrap .tooltip-inner .txt-wrap {
+  width: 100%;
+}
 .cont__wrap.tabnav__wrap {
   padding-right: 0;
   padding-left: 0;
@@ -1584,20 +1590,26 @@ button {
   text-overflow: ellipsis;
 }
 
-.chck-group .chck-input {
+.chck-group input[type=checkbox] {
   /* input은 숨김 */
-  display: none;
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: -9999px;
+  margin: 0px;
+  padding-inline: 0;
+  padding-block: 0;
   /* input이 체크되지 않았을 때 */
   /* input이 체크되었을 때 */
 }
-.chck-group .chck-input:not(:checked) + .chck-label .chck-box {
+.chck-group input[type=checkbox]:not(:checked) + .chck-label .chck-box {
   background-color: transparent; /* 체크되지 않은 상태에서 배경색 */
 }
-.chck-group .chck-input:checked + .chck-label .chck-box {
+.chck-group input[type=checkbox]:checked + .chck-label .chck-box {
   border-color: var(--dt-primary);
   background-color: var(--dt-primary); /* 체크된 상태에서 배경색 */
 }
-.chck-group .chck-input:checked + .chck-label .chck-box::before {
+.chck-group input[type=checkbox]:checked + .chck-label .chck-box::before {
   opacity: 1;
 }
 .chck-group .chck-label {
@@ -3035,6 +3047,7 @@ input {
   border-radius: 4px;
 }
 .accordion-header.chckbox-area {
+  position: relative;
   align-items: center;
   padding: 20px 0 0;
 }
@@ -3414,10 +3427,9 @@ table td {
   padding: 3px;
 }
 
-.tooltip {
+.tooltip-wrap {
   display: none;
   position: absolute;
-  left: 50%;
   width: max-content;
   max-width: 220px;
   background-color: rgba(24, 26, 27, 0.9);
@@ -3426,17 +3438,17 @@ table td {
   z-index: 10;
 }
 @media screen and (max-width: 359px) {
-  .tooltip {
+  .tooltip-wrap {
     max-width: 60vw;
   }
 }
-.tooltip .tooltip-inner {
+.tooltip-wrap .tooltip-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 8px;
 }
-.tooltip .txt-wrap {
+.tooltip-wrap .txt-wrap {
   display: inline-block;
   width: calc(100% - 32px);
   font-size: 12px;
@@ -3445,7 +3457,22 @@ table td {
   line-height: 18px;
   letter-spacing: -0.2px;
 }
-.tooltip .tooltip-close {
+.tooltip-wrap .txt-wrap:has(.ico) {
+  display: flex;
+  flex-direction: row;
+  column-gap: 4px;
+  align-items: center;
+}
+.tooltip-wrap .txt-wrap .ico {
+  align-self: flex-start;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/ic-info-white.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.tooltip-wrap .tooltip-close {
   align-self: flex-start;
   font-size: 0;
   text-indent: -9999px;
@@ -3455,59 +3482,83 @@ table td {
   background-size: 24px;
 }
 
-.tooltip[data-show] {
+.tooltip-wrap[data-show] {
   display: block;
 }
+.tooltip-wrap[data-show] div[data-popper-arrow],
+.tooltip-wrap[data-show] div[data-popper-arrow]::before {
+  visibility: visible;
+}
 
-#arrow,
-#arrow::before {
+div[data-popper-arrow],
+div[data-popper-arrow]::before {
   visibility: hidden;
   position: absolute;
-  width: 17px;
-  height: 9px;
-  background: inherit;
 }
 
-#arrow {
-  visibility: visible;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#arrow::before {
+div[data-popper-arrow]::before {
   content: "";
-  visibility: visible;
   width: 100%;
   height: 100%;
-  background-image: url(../images/icon/tooltip_tail.svg);
-  background-color: yellow;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 100%;
 }
 
-.tooltip.white #arrow,
-.tooltip.white #arrow::before {
-  box-shadow: 1px 1px 4px #d7d7d7;
-}
-
-.tooltip[data-popper-placement^=top] > #arrow {
+.tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow] {
+  width: 16px;
+  height: 8px;
+  margin-left: -8px;
   bottom: -8px;
 }
+.tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow]::before {
+  background-image: url(../images/icon/tooltip_tail_bottom.svg);
+}
 
-.tooltip[data-popper-placement^=bottom] > #arrow {
+.tooltip-wrap[data-popper-placement^=bottom] div[data-popper-arrow] {
+  width: 16px;
+  height: 8px;
+  margin-left: -8px;
   top: -8px;
-  transform: rotate(180deg);
+}
+.tooltip-wrap[data-popper-placement^=bottom] div[data-popper-arrow]::before {
+  background-image: url(../images/icon/tooltip_tail_top.svg);
 }
 
-.tooltip[data-popper-placement^=left] > #arrow {
-  right: -8px;
-}
-
-.tooltip[data-popper-placement^=right] > #arrow {
+.tooltip-wrap[data-popper-placement^=right] div[data-popper-arrow] {
+  width: 8px;
+  height: 16px;
+  margin-top: -8px;
   left: -8px;
 }
+.tooltip-wrap[data-popper-placement^=right] div[data-popper-arrow]::before {
+  background-image: url(../images/icon/tooltip_tail_left.svg);
+}
 
-.tooltip-wrap {
-  display: inline-block;
+.tooltip-wrap[data-popper-placement^=left] div[data-popper-arrow] {
+  width: 8px;
+  height: 16px;
+  margin-top: -8px;
+  left: unset;
+  right: -8px;
+}
+.tooltip-wrap[data-popper-placement^=left] div[data-popper-arrow]::before {
+  background-image: url(../images/icon/tooltip_tail_right.svg);
+}
+
+.input-control:has(.tooltip), .checkbox-area:has(.tooltip) {
   position: relative;
+}
+.input-control:has(.tooltip) .tooltip-wrap, .checkbox-area:has(.tooltip) .tooltip-wrap {
+  padding: 10px 16px;
+}
+.input-control .tooltip-wrap, .checkbox-area .tooltip-wrap {
+  left: -14px;
+  top: -22px;
+}
+.input-control .tooltip-wrap .txt-wrap, .checkbox-area .tooltip-wrap .txt-wrap {
+  width: 100%;
+}
+.input-control .tooltip-wrap .tooltip[data-popper-placement^=top] div[data-popper-arrow], .checkbox-area .tooltip-wrap .tooltip[data-popper-placement^=top] div[data-popper-arrow] {
+  margin-left: 6px;
 }
