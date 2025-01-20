@@ -6,8 +6,6 @@
     <title>요금바로납부_입금전용계좌로 납부</title>
     <link rel="stylesheet" href="../../../../static/css/common.css">
     <link rel="stylesheet" href="../../../../static/css/search.css">
-    <script src="../../../../static/js/tooltip/popper.js"></script>
-
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
         function initCheckDevice() {
@@ -18,74 +16,6 @@
         }
         window.onload = ()=> {
             initCheckDevice();
-
-            /*
-                임시코드입니다. 수정하여 사용 요망
-            */
-           
-            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
-            const tooltipBtn = document.querySelector('.btn-sec'); 
-            const tooltip = document.querySelector('.tooltip-wrap');
-        
-            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
-                placement: 'bottom',
-                modifiers: [
-                    {
-                        name: 'offset',
-                        options: {
-                            offset: [0, 8],
-                        },
-                    },
-                    {
-                        name: 'flip',
-                        options: {
-                            fallbackPlacements: ['top', 'bottom'],
-                        },
-                    },
-                ],
-            });
-
-            function show() {
-                // Make the tooltip visible
-                tooltip.setAttribute('data-show', '');
-
-                // Enable the event listeners
-                popperInstance.setOptions((options) => ({
-                    ...options,
-                    modifiers: [
-                        ...options.modifiers,
-                        { name: 'eventListeners', enabled: true },
-                    ],
-                }));
-
-                // Update its position
-                popperInstance.update();
-            }
-
-            function hide() {
-                // Hide the tooltip
-                tooltip.removeAttribute('data-show');
-
-                // Disable the event listeners
-                popperInstance.setOptions((options) => ({
-                    ...options,
-                    modifiers: [
-                        ...options.modifiers,
-                        { name: 'eventListeners', enabled: false },
-                    ],
-                }));
-            }
-
-            const showEvents = ['click', 'focus'];
-            const hideEvents = ['click(.tooltip-close);', 'blur'];
-
-            showEvents.forEach((event) => {
-                tooltipBtn.addEventListener(event, show);
-            });
-
-            hideEvents.forEach((event) => {
-                tooltipBtn.addEventListener(event, hide);
-            });
         }
     </script>
 </head>
@@ -133,23 +63,10 @@
                         <button type="button" class="btn btn-sec">
                             <span class="txt">입금전용 계좌 추가</span>
                         </button>
-                        <span class="tooltip-wrap" role="tooltip" data-popper-placement^='bottom' data-show>
-                            <!--
-                               최초 진입 시 툴팁 떠 있음 > 계좌 추가 시 툴팁 사라짐
-                            -->
-                            <div class="tooltip">
-                                <div class="tooltip-inner">
-                                    <span class="txt-wrap">
-                                        입금전용 계좌를 추가하여 납부해 보세요
-                                    </span>
-                                </div>
-                                <div data-popper-arrow=""></div>
-                            </div>
-                        </span>
                     </div>
 
                     <!-- 계좌 추가 후 계좌정보+버튼 형태로 출력 -->
-                    <!-- <div class="card solid bank">
+                    <div class="card solid bank">
                         <div class="card-header">
                             <div class="item util">
                                 <span class="img-box">
@@ -177,7 +94,7 @@
                         <button type="button" class="btn btn-sec">
                             <span class="txt">입금전용 계좌 추가</span>
                         </button>
-                    </div> -->
+                    </div>
                 </div>
             </div>
 		</div>
