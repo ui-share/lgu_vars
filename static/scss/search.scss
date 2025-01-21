@@ -20,6 +20,13 @@
 				.cont__txt-box {min-height:36px;}
 			}			
 			.cont__txt-box {min-height:110px;}
+			.info-price-wrap{
+				.info-price, .info-price-detail {
+					&.total-last {
+						.row {margin-top:4px;}
+					}
+				}
+			}
 		}
         .info-price-single {
             margin:0 20px;

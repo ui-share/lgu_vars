@@ -22,6 +22,9 @@
 .section__cont.summary .cont__wrap .cont__txt-box {
   min-height: 110px;
 }
+.section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
+  margin-top: 4px;
+}
 .section__cont.summary .info-price-single {
   margin: 0 20px;
   padding: 18px 20px;
