@@ -692,12 +692,12 @@ button {
 .slct-perd-wrap {
 	@include flexBox(start, center);
 	flex-wrap: wrap;
-	margin: 8px auto 24px;
+	margin: 8px 0 24px;
 	border-radius: 10px;
 	padding: 12px 48px 12px 12px;
 	background-color: transparent;
 	border: 2px solid var(--dt-gray08);
-	width: 100%;
+	// width: 100%;
 	background-image: url(../images/icon/chevron_down_line_24.svg);
 	background-repeat: no-repeat;
 	background-size: 24px 24px;
