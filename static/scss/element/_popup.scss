@@ -31,7 +31,6 @@
 	// popup-common 
 	.popup-header {
 		@include flexBox(between, start);
-		min-height: 48px;
 		column-gap: 20px;
 		padding: 20px 8px 8px 20px;
 		background-color: var(--dt-white);
@@ -39,6 +38,9 @@
 		border-top-right-radius: 20px;
 		&:has(.popup-tit.hidden) {
 			padding-top: 8px;
+			&:has(.btn-util.hidden) {
+				min-height: 48px;
+			}
 		}
 		.popup-tit {
 			@include flexBox(start, center);
@@ -119,6 +121,10 @@
         }
     }
 }
+// popup-footer hidden일 경우 popup-body 패딩 수정
+.popup-wrapper:has(.popup-footer.hidden) .popup-body {
+	padding-bottom: 20px;
+}
 
 // popbody 내 content
 .popup-body {
@@ -139,85 +145,6 @@
 	}
 	.tab-container { // 팝업 내 탭UI
 		.tab-cont {padding-top:24px;}
-	}
-
-	.authorization {
-		.auth {
-			text-align: center;
-			.txt {
-				@include fw-5();
-				color: var(--dt-gray11);
-				margin-bottom: 10px;
-			}
-			.tit {
-				@include fw-6(24px);
-				color: var(--dt-black);
-			}
-			.color-prim {
-				@include fw-6(24px);
-			}
-		}
-		.input_code {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			padding: 42px 0 26px;
-			gap: 6px;
-			.code-group {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 6px;
-				.code-box {
-					display: inline-block;
-					width: 48px;
-					min-height: 52px;
-					padding: 12px 8px;
-					border-radius: 4px;
-					background: var(--dt-gray02);
-					.num {
-						@include fw-7(24px);
-						color: var(--dt-gray16);
-						&.placeholder {
-							color: var(--dt-gray11);
-						}
-					}
-				}
-			}
-		}
-		.segment__wrap {
-			display: none;
-			margin-bottom: 48px;
-		}
-		.auth_birth {
-			display: none;
-		}
-		.auth_business {
-			display: none;
-		}
-		.auth_corporation {
-			display: none;
-		}
-		&.tab {
-			.segment__wrap {
-				display: block;
-			}
-		}
-		&.birth {
-			.auth_birth {
-				display: block;
-			}
-		}
-		&.business {
-			.auth_business {
-				display: block;
-			}
-		}
-		&.corporation {
-			.auth_corporation {
-				display: block;
-			}
-		}
 	}
 	
 	.calendar-box {
@@ -366,9 +293,8 @@
 			background-color: var(--dt-gray02);
 			.txt-wrap {
 				display: flex;
-				flex-direction: column;
-				align-items: flex-start;
-				gap: 2px;
+				align-items: center;
+				gap: 6px;
 				.tit {
 					@include fw-7(16px);
 					color:var(--dt-black);
@@ -380,6 +306,11 @@
 			}
 		}
 	}
+}
+
+//popup-body 패딩 수정
+.popup-body + .popup-footer.hidden {
+	padding-bottom: 20px;
 }
 
 // @media (max-width: 359px) {

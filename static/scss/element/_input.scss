@@ -316,4 +316,60 @@ input {
         background-size: 16px 16px;
         background-position: left 0 center;
     }
+    //상태별 스타일 - code
+    &.code {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 42px 0 0 0;
+        gap: 6px;
+        .code-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px;
+            .code-box {
+                display: inline-block;
+                width: 48px;
+                min-height: 52px;
+                padding: 12px 8px;
+                border-radius: 4px;
+                background: var(--dt-gray02);
+                @include fw-7(24px);
+                text-align: center;
+                color: var(--dt-gray16);
+            }
+        }
+        .validation-txt {
+            text-align: left;
+        }
+    }
+}
+
+// 2차인증 input-layout
+.auth-wrap {
+	text-align: center;
+	padding-bottom: 26px;
+	.txt {
+		@include fw-5();
+		color: var(--dt-gray11);
+		margin-bottom: 10px;
+	}
+	.tit {
+		@include fw-6(24px);
+		color: var(--dt-black);
+		line-height: 1.4;
+	}
+    .costomer-name {
+        @include fw-6(24px);
+    }
+	.color-prim {
+		@include fw-6(24px);
+	}
+	.input-control {
+		padding-top: 42px;
+	}
+	.validation-txt {
+		text-align: left;
+	}
 }

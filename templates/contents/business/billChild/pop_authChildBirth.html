@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<!-- Set the viewport. -->
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<meta name="viewport" content="user-scalable=no, width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>LGU+ 눈으로 보는 ARS</title>
+	<meta name="theme-color" content="#ffffff">
+	<title>팝업 공통 레이아웃</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-
-	<!-- Scripts -->
 </head>
 <body>
 	<div class="page-wrapper">
@@ -33,19 +31,30 @@
 				<div class="popup-tit hidden">
 					<span class="txt"></span>
 				</div>
-				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<div class="inform-wrap">
-					<span class="inform-img warning"></span>
-					<div class="text-box">
-						<span class="tit"><span class="color-prim">만 19세 미만 고객님</span>은<br>휴대폰 결제 이용이 제한됩니다</span>
+				<div class="auth-wrap auth_birth">
+					<p class="txt">자녀 요금 확인을 위해</p>
+					<h3 class="tit"><span class="costomer-name">(자녀회선이름)</span>의<br><span class="color-prim">생년월일</span>을 입력해 주세요</h3>
+					<div class="input-control code">
+						<div class="code-group">
+							<input type="number" class="code-box" placeholder="Y">
+							<input type="number" class="code-box" placeholder="Y">
+							<input type="number" class="code-box" placeholder="M">
+							<input type="number" class="code-box" placeholder="M">
+							<input type="number" class="code-box" placeholder="D">
+							<input tDpe="number" class="code-box" placeholder="D">
+						</div>
 					</div>
 				</div>
 			</div>
 			
 			<div class="popup-footer">
 				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
 					<button class="btn" type="button">
 						<span class="txt">확인</span>
 					</button>

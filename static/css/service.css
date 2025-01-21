@@ -15,16 +15,16 @@
   overflow-y: auto;
   padding: 40px 20px 40px;
 }
-.cont__wrap:last-child {
+.cont__wrap.cont__wrap-btBtn {
   padding: 0;
   background-color: transparent;
 }
-.cont__wrap:last-child .btn-group {
+.cont__wrap.cont__wrap-btBtn .btn-group {
   position: relative;
   background-color: var(--dt-white);
   padding: 0 20px 20px;
 }
-.cont__wrap:last-child .btn-group::before {
+.cont__wrap.cont__wrap-btBtn .btn-group::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -34,13 +34,13 @@
   height: 20px;
   background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
 }
-.cont__wrap:last-child .card-group {
+.cont__wrap.cont__wrap-btBtn .card-group {
   padding: 0 20px 20px;
 }
-.cont__wrap:last-child .card-group .card.horizon.solid {
+.cont__wrap.cont__wrap-btBtn .card-group .card.horizon.solid {
   padding: 15px 16px;
 }
-.cont__wrap:last-child .card-group .sub-tit {
+.cont__wrap.cont__wrap-btBtn .card-group .sub-tit {
   font-size: 16px;
   font-weight: 500;
   color: var(--dt-gray11);
