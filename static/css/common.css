@@ -739,21 +739,6 @@ button {
   border-radius: 8px;
   background-color: var(--dt-gray02);
 }
-.info-col-wrap.list-payment .row .txt-title {
-  color: var(--dt-gray14);
-}
-.info-col-wrap.list-payment .row .txt-price {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-.info-col-wrap.list-payment .row.total .txt-title {
-  color: var(--dt-gray11);
-}
-.info-col-wrap.list-payment .row.total .txt-price {
-  font-size: 18px;
-  line-height: 21px;
-}
 .info-col-wrap .row {
   justify-content: space-between;
   align-items: center;

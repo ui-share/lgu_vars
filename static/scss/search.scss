@@ -28,6 +28,7 @@
 				}
 			}
 		}
+
         .info-price-single {
             margin:0 20px;
             padding:18px 20px;
@@ -115,6 +116,27 @@
         }
         .img-box {width:24px;height:24px;}
 	}
+	.list-payment {// 결제이용내역
+		@include flexColum;
+		row-gap:12px;
+		.info-col-wrap {
+			.row {
+				.txt-title {color:var(--dt-gray14);}
+				.txt-price {
+					@include fw-7(16px);
+					line-height:24px;
+				}
+				&.total {
+					.txt-title {color:var(--dt-gray11);}
+					.txt-price {
+						font-size:18px;
+						line-height:21px;
+					}
+				}
+			}
+		}
+	}
+
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);

@@ -615,22 +615,6 @@ button {
 	padding:20px;
 	border-radius:8px;
 	background-color:var(--dt-gray02);
-	&.list-payment {
-		.row {
-			.txt-title {color:var(--dt-gray14);}
-			.txt-price {
-				@include fw-7(16px);
-				line-height:24px;
-			}
-			&.total {
-				.txt-title {color:var(--dt-gray11);}
-				.txt-price {
-					font-size:18px;
-					line-height:21px;
-				}
-			}
-		}
-	}
 	.row {
 		justify-content: space-between;
 		align-items:center;

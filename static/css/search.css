@@ -139,6 +139,26 @@
   width: 24px;
   height: 24px;
 }
+.cont__wrap .list-payment {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.cont__wrap .list-payment .info-col-wrap .row .txt-title {
+  color: var(--dt-gray14);
+}
+.cont__wrap .list-payment .info-col-wrap .row .txt-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.cont__wrap .list-payment .info-col-wrap .row.total .txt-title {
+  color: var(--dt-gray11);
+}
+.cont__wrap .list-payment .info-col-wrap .row.total .txt-price {
+  font-size: 18px;
+  line-height: 21px;
+}
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;
   background-image: url(../images/img/img-hm-bill.png);
