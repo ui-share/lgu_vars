@@ -64,6 +64,8 @@ input {
                 outline: none;
                 border: none;
                 transition: border-color 0.2s ease-in-out;
+                cursor: text;
+                visibility: visible;
             }
             border-bottom: 2px solid var(--dt-gray08);
         
@@ -116,6 +118,7 @@ input {
             .input-group {
                 .input-field {
                     caret-color: var(--dt-primary);
+                    cursor: text;
                 }
                 .input-row {
                     border-bottom: 2px solid var(--dt-primary);

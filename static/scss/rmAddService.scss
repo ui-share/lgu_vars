@@ -20,13 +20,13 @@
 
 
 // 서비스 : 상세
-.page-wrapper:has(.cont__wrap-rmDetail) {
+.page-wrapper:has(.cont__wrap-service.rmDetail) {
 	background-color: var(--dt-gray05);
 }
-.section__cont:has(.cont__wrap-rmDetail) {
+.section__cont:has(.cont__wrap-service.rmDetail) {
 	gap: 0;
 }
-.cont__wrap-rmDetail {
+.cont__wrap-service.rmDetail {
 	padding: 20px 20px 40px;
 	background-color: var(--dt-gray05);
 	.con__tit-box {
@@ -46,7 +46,7 @@
 		}
 	}
 	.card {
-		&.rmDetail {
+		&.rmInform {
 			box-shadow: none;
 			border-radius: 16px;
 			padding: 28px 20px;
