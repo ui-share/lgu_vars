@@ -2147,24 +2147,27 @@ button {
 .counsel .cont__wrap.cont__wrap-counsel .con__tit-box .tit-head {
   justify-content: center;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card {
+.counsel .cont__wrap.cont__wrap-counsel .card-group {
+  margin-bottom: 48px;
+}
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card {
   background-color: var(--dt-white);
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
   gap: 0;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text {
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card.detail .text {
   gap: 2px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .tit {
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card.detail .text .tit {
   font-size: 14px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .text .txt {
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card.detail .text .txt {
   font-size: 11px;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer {
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card.detail .card-footer {
   justify-content: flex-end;
 }
-.counsel .cont__wrap.cont__wrap-counsel .card.detail .card-footer .btn-group {
+.counsel .cont__wrap.cont__wrap-counsel .card-group .card.detail .card-footer .btn-group {
   flex: none;
 }
 .counsel .cont__wrap .txt-head {
@@ -2177,7 +2180,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 48px;
   border: 1px solid rgba(24, 26, 27, 0.02);
   border-radius: 8px;
   background-color: var(--dt-gray17);
