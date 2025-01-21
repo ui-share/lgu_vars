@@ -266,7 +266,7 @@ button {
 	content: "";
 	display: inline;
 	padding-left: 20px;
-	background-image: url(../images/icon/ic-bullet-info.png);
+	background-image: url(../images/icon/ic-bullet-info.svg);
 	background-size: 16px 16px;
 	background-repeat: no-repeat;
 	background-position: left 0 center;
@@ -565,6 +565,15 @@ button {
 	}
 	.list-plan {
 		&.accordion-content {margin-bottom:12px;}
+		&.line {
+			.row {
+				&:not(:first-of-type) {
+					padding-top:16px;
+					border-top:1px solid var(--dt-gray06);
+				}
+				& + .row {margin-top:16px;}
+			}
+		}
 		.row + .row {margin-top:12px;}
 		.txt-phone {
 			display:block;width:100%;margin-top:2px;
@@ -580,6 +589,12 @@ button {
 				display:inline-block;
 				@include fw-5(14px);line-height:21px;
 			}
+			&.ico {
+				.img-box {
+					height:100% !important;
+					img {margin-top:2px;}
+				}
+			}
 			.current {
 				color:var(--dt-black);
 			}
@@ -587,6 +602,10 @@ button {
 				margin-left:2px;
 				color:var(--dt-gray11);
 			}
+			
+		}
+		button.txt-desc {
+			.img-box {transform:rotate(-90deg)}
 		}
 	}
 }
@@ -620,11 +639,16 @@ button {
 				width:28px;height:28px;
 				img {width:100%}
 			}
+			&:has(.btn-tooltip) {
+				column-gap:1px;
+				.img-box {width:22px;height:22px;}
+			}
 		}
 	}
 	.txt-desc {
 		color:var(--dt-black);
 		@include fw-5(14px);
+		line-height:21px;
 		text-align:right;
 		.flag:first-child {margin-right:8px;}
 	}

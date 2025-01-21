@@ -54,10 +54,11 @@
         /* sizing */
         &.btn-md { // 중간높이
             width:100%;
-            padding:10px 12px;
+            padding:9px 12px;
             @include flexBox();
             align-items:center;
             .txt {
+                line-height: normal;
                 letter-spacing:normal;
                 font-size:12px;
             }
