@@ -617,7 +617,8 @@ button {
 	background-color:var(--dt-gray02);
 	.row {
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items:center;
+		flex-wrap:wrap;
 		&.title-wrap {
 			align-items: center;
 			.txt-title {
@@ -646,6 +647,7 @@ button {
 		}
 	}
 	.txt-desc {
+		margin-left:auto;
 		color:var(--dt-black);
 		@include fw-5(14px);
 		line-height:21px;
