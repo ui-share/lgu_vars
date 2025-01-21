@@ -848,7 +848,7 @@ button {
   color: var(--dt-gray16);
 }
 .slct-perd-wrap .slct-perd .hyphen {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--dt-gray16);
   margin-right: 8px;

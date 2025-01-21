@@ -51,15 +51,17 @@
                         </span>
                     </div>
                     <!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
-                    <div class="txt-perd-wrap slct">
-                        <span class="txt-perd">
-                            <button class="cal-slct point" type="button">월 선택</button>
+                    <button class="slct-perd-wrap">
+                        <span class="slct-perd">
+                            <span class="slct-txt" type="button">24년 11월</span>
+                            <span class="slct-txt point hidden" type="button">시작 월 선택</span>
                         </span>
-                        <span class="txt-perd">
+                        <span class="slct-perd">
                             <span class="hyphen">~</span>
-                            <button class="cal-slct point" type="button">월 선택</button>
+                            <span class="slct-txt" type="button">24년 11월</span>
+                            <span class="slct-txt point hidden" type="button">종료 월 선택</span>
                         </span>
-                    </div>
+                    </button>
                     <!-- 
                         input에 대한 이벤트 정보는
                         ./templates/element/input.html
@@ -107,7 +109,7 @@
 				toast-in: <div class="toast-wrap show">
 				toast-out: <div class="toast-wrap hide">
 			-->
-			<div class="toast-wrap show">
+			<div class="toast-wrap hide">
 				<div class="toast">
 					<div class="toast-txt">
 						토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다.
