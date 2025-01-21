@@ -14,7 +14,9 @@
 			background-size:140px;
 			background-position: right 10px top 14px;
 			&:has(.select-billdate) {
-			background-position: right 10px top 35px;
+				&:not(.cont__wrap-payment) {
+					background-position: right 10px top 35px;
+				}
 				.cont__txt-box {min-height:36px;}
 			}			
 			.cont__txt-box {min-height:110px;}
@@ -61,9 +63,11 @@
                 margin-top:4px;
                 @include fw-6(18px);
                 line-height:36px;
-                .deco {margin-right:2px;font-size:30px;}
                 .color-prim {@include fw-6(18px);line-height:22px;}
-            }
+				&:has(.deco + .color-prim) {
+					.deco {margin-right:2px;font-size:30px;}
+				}
+			}
         }
     }
     .select-billdate {
@@ -124,6 +128,11 @@
 	&.cont__wrap-account {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-account.png);
+		.cont__txt-box {row-gap:0}
+	}
+	&.cont__wrap-payment {
+		min-height:154px;
+		background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 		.cont__txt-box {row-gap:0}
 	}
 }

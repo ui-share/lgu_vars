@@ -13,7 +13,7 @@
   background-size: 140px;
   background-position: right 10px top 14px;
 }
-.section__cont.summary .cont__wrap:has(.select-billdate) {
+.section__cont.summary .cont__wrap:has(.select-billdate):not(.cont__wrap-payment) {
   background-position: right 10px top 35px;
 }
 .section__cont.summary .cont__wrap:has(.select-billdate) .cont__txt-box {
@@ -71,14 +71,14 @@
   font-weight: 600;
   line-height: 36px;
 }
-.cont__wrap .cont__txt-box .txt.price .deco {
-  margin-right: 2px;
-  font-size: 30px;
-}
 .cont__wrap .cont__txt-box .txt.price .color-prim {
   font-size: 18px;
   font-weight: 600;
   line-height: 22px;
+}
+.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .deco {
+  margin-right: 2px;
+  font-size: 30px;
 }
 .cont__wrap .select-billdate {
   display: flex;
@@ -162,5 +162,12 @@
   background-image: url(../images/img/img-hm-account.png);
 }
 .cont__wrap.cont__wrap-account .cont__txt-box {
+  row-gap: 0;
+}
+.cont__wrap.cont__wrap-payment {
+  min-height: 154px;
+  background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+}
+.cont__wrap.cont__wrap-payment .cont__txt-box {
   row-gap: 0;
 }
