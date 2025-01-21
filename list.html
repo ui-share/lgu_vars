@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,513 +7,409 @@
 	<link rel="stylesheet" href="./static/css/common.css">
 </head>
 <style>
-	.lg-prototype {display: flex;flex-direction:column;row-gap:20px;padding:40px 16px;}
-	.lg-prototype .lg-prototype-linkwrap p{margin:14px 0;font-size:20px;font-weight:bold;}
-	.lg-prototype .lg-prototype-linkwrap:first-child p {margin-top:0;}
-	.lg-prototype .lg-prototype-linkwrap .link-container{display: flex;flex-direction:column;row-gap:12px;}
-	.lg-prototype .lg-prototype-linkwrap .link-container a:has(.success){display:flex;align-items:center;column-gap:5px;}
-	.lg-prototype {}
+.transition,.menu-wrap > li i:before, .menu-wrap > li i:after, .accordion-con {transition: all 0.25s ease-in-out;}
+.flipIn, .menu-wrap > li, h1 {animation: flipdown 0.5s ease both;}
+.no-select, h2 {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+html {width: 100%;height: 100%;perspective: 900;}
+body {width: 100%;height: 100%;color: rgba(48, 69, 92, 1);}
+.accordion-wrapper {width: 100%;height: 100%;min-height: 0;display: inline-block;position: relative;background-color: #fafcff;padding: 10px 20px;}
+h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 600;margin: 10px 0;}
+h2 {font-size: 18px;line-height: 3;font-weight: 300;display: block;cursor: pointer;}
+.accordion-con {max-height: 440px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;gap: 10px;padding: 0 15px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;}
+ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
+.menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;}
+.menu-wrap > li:last-of-type {padding-bottom: 0;}
+.menu-wrap > li i {position: absolute;transform: translate(-12px, 6px);margin-top: 15px;right: 0;}
+.menu-wrap > li i:before,.menu-wrap > li i:after {content: "";position: absolute;background-color: #ff6873;width: 3px;height: 9px;}
+.menu-wrap > li i:before {transform: translate(-2px, 0) rotate(45deg);}
+.menu-wrap > li i:after {transform: translate(2px, 0) rotate(-45deg);}
+.menu-wrap > li input[type=checkbox] {position: absolute;cursor: pointer;width: 100%;height: 100%;opacity: 0;z-index: 1;}
+.menu-wrap > li input[type=checkbox]:checked ~ .accordion-con {margin-top: 0;max-height: 0;opacity: 0;transform: translate(0, 20%);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:before {transform: translate(2px, 0) rotate(45deg);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
+.menu,.menu > .txt {display: flex;flex-direction: column;}
+.menu {gap: 5px;padding: 10px 0 0 0;}
+.menu:last-child {padding: 10px 0;}
+.menu .tit {font-size: 16px;line-height: 1.5;font-weight: 600;color: #ff6873;}
+.menu .txt > a {display: flex;flex-direction: row;align-items: center;gap: 5px;}
+.menu .txt > a > span:not(.flag) {font-size: 16px;line-height: 1.5;}
+.menu .txt > h3 {font-size: 12px;line-height: 1.5;font-weight: 600;color: #689fff;padding-top: 5px;}
+.menu > .txt {gap: 5px;padding: 0 10px;}
+.flag .txt {line-height: 1;}
+@keyframes flipdown {
+	0% {
+		opacity: 0;
+		transform-origin: top center;
+		transform: rotateX(-90deg);
+	}
+	5% {
+		opacity: 1;
+	}
+	80% {
+		transform: rotateX(8deg);
+	}
+	83% {
+		transform: rotateX(6deg);
+	}
+	92% {
+		transform: rotateX(-3deg);
+	}
+	100% {
+		transform-origin: top center;
+		transform: rotateX(0deg);
+	}
+}
 </style>
 <body>
-	<div class="lg-prototype">
-		<div class="lg-prototype-linkwrap">
-			<p>공통 모음</p>
-			<div class="link-container">
-				<a href="./templates/element/common_element.html" target="_blank">공통 Element</a>
-				<a href="./templates/component/common_component.html" target="_blank">공통 Component</a>
-				<span>-------------</span>
-				<a href="./templates/element/button.html" target="_blank">
-					<span>버튼</span>
-				</a>
-				<a href="./templates/element/card.html" target="_blank"><span>카드</span></a>
-				<a href="./templates/element/checkbox.html" target="_blank"><span>체크박스</span></a>
-				<a href="./templates/element/chips.html" target="_blank"><span>칩스_라운드버튼_배지</span></a>
-				<a href="./templates/element/switch.html" target="_blank"><span>스위치토글버튼</span></a>
-				<a href="./templates/element/swiper.html" target="_blank"><span>스와이퍼 슬라이드</span></a>
-				<a href="./templates/element/toast.html" target="_blank"><span>토스트 팝업</span></a>
-				<a href="./templates/element/input.html" target="_blank"><span>인풋</span></a>
-				<a href="./templates/component/counsel.html" target="_blank"><span>하단 counsel 영역</span></a>
-				<a href="./templates/component/popup_common.html" target="_blank"><span>팝업공통</span></a>
-				<a href="./templates/component/accordion.html" target="_blank"><span>아코디언</span></a>
-				<a href="./templates/element/tab.html" target="_blank"><span>탭 TAB UI</span></a>
-				<a href="./templates/element/inform_element.html" target="_blank"><span>Inform 레이아웃 공통</span></a>
-				<a href="./templates/component/table.html" target="_blank"><span>테이블 레이아웃</span></a>
-				<a href="./templates/component/tooltip.html" target="_blank"><span class="color-prim">툴팁_html 내 주석 확인 요망</span></a>
-			</div>
-
-			<p style="margin-top:20px;color: #89a6f1;font-size: 17px;font-weight: 600;">조회 페이지 공통</p>
-			<div class="link-container" style="margin-left:10px;">
-				<a href="./templates/component/search_common.html" target="_blank"><span>조회 페이지 공통 레이아웃</span></a>
-			</div>
-
-            <p style="margin-top:20px;color: #89a6f1;font-size: 17px;font-weight: 600;">공통 팝업</p>
-            <div class="link-container" style="margin-left:10px;">
-                <a href="./templates/layout/fragments/pop_calendar.html" target="_blank">
-                    <span>연월 달력팝업_default</span>
-                    <div class="flag success">
-                        <span class="txt">완료</span>
-                    </div>
-                </a>
-                <a href="./templates/layout/fragments/pop_auth.html" target="_blank"><span>인증팝업_생년월일/사업자/법인</span></a>
-				<a href="./templates/layout/fragments/pop_svcCancel.html" target="_blank">
-					<span>서비스중단팝업_공통 레이아웃</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_callEnd.html" target="_blank">
-					<span>종료 확인 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_callEnd_AI.html" target="_blank">
-					<span>종료팝업_AI상담사연결</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_callEnd_app.html" target="_blank">
-					<span>종료팝업_고객센터앱연결</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_callEnd_chatbot.html" target="_blank">
-					<span>종료팝업_챗봇연결</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctCounsel.html" target="_blank">
-					<span>상담 방법 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/layout/fragments/pop_noticeCunselMthd.html" target="_blank">
-					<span>상담시간안내 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_counselCnfrm.html" target="_blank">
-					<span>전화상담 상담사 연결 확인 팝업_일반</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_counselCnfrm_Q.html" target="_blank">
-					<span>전화상담 상담사 연결 확인 팝업_전담Q</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctLimitedCounsel.html" target="_blank">
-					<span>제한상담 상담 항목 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_delayCounsel.html" target="_blank">
-					<span>상담폭주 연결 지연 안내 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_processError.html" target="_blank">
-					<span>처리중 오류 안내 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_corpLimit.html" target="_blank">
-					<span>법인명의 제한 팝업_공통</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctAccntBank.html" target="_blank">
-					<span>은행 선택 팝업_공통</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
-        </div>
-		<!-- 진입/결과_landing -->
-        <div class="lg-prototype-linkwrap">
-            <p>진입/결과_landing</p>
-            <div class="link-container">
-                <a href="./templates/contents/common/start.html" target="_blank">
-					<span>진입</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/contents/common/splash.html" target="_blank"><span>스플래시</span></a>
-				<a href="./templates/contents/common/end_service.html" target="_blank">
-					<span>종료화면</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
-        </div>
-		<!-- 메인 -->
-        <div class="lg-prototype-linkwrap">
-            <p></p>
-            <div class="link-container">
-                <a href="./templates/contents/common/main.html" target="_blank">
-					<span>main</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctReissueMthd.html" target="_blank">
-					<span>청구서 재발행 방법 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctPayConfirm.html" target="_blank">
-					<span>납부확인서 신청 방법 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctInvoiceCnfrm.html" target="_blank">
-					<span>세금계산서 신청 방법 선택 팝업</span>
-				</a>
-            </div>
-        </div>
-        <div class="lg-prototype-linkwrap">
-            <p>요금 및 납부</p>
-            <div class="link-container">
-                <a href="./templates/component/search_common.html" target="_blank" style="margin-bottom:10px;"><span>[공통]조회페이지 케이스</span></a>
-            </div>
-
-			<div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">청구요금조회</span>
-				<a href="./templates/contents/business/payInfo/search_billing.html" target="_blank">
-					<span>청구요금_조회</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_calendar.html" target="_blank">
-					<span>청구요금_날짜선택팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">실시간요금조회</span>
-				<a href="./templates/contents/business/payInfo/search_realtimeBill.html" target="_blank">
-					<span>실시간요금_조회</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-			</div>
-
-			<div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">요금 바로 납부</span>
-				<a href="./templates/contents/business/payInfo/search_directPay.html" target="_blank">
-					<span>요금바로납부_조회</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/contents/business/payInfo/pay_bankAccnt.html" target="_blank">
-					<span>요금바로납부_입금전용계좌로 납부</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_paymentCorpLimit.html" target="_blank">
-					<span>요금납부 법인명의 제한 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_paymentSlctMthd.html" target="_blank">
-					<span>요금납부 납부 방법 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-			</div>
+	<div class="accordion-wrapper">
+		<h1>모바일 서비스</h1>
+		<ul class="menu-wrap">
 			
-            <div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">요금 납부방법 변경</span>
-				<a href="./templates/layout/fragments/pop_chngPaymentMthd.html" target="_blank">
-					<span>변경 납부 방법 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctPayday.html" target="_blank">
-					<span>요금 결제일 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>공통_common</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">진입/종료/채널이동</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/common/start.html" target="_blank"><span>진입분기</span> <span class="flag success"><span class="txt">완료</span></span> </a>
+							<a href="./templates/contents/common/splash.html" target="_blank"><span>스플래시 화면</span> <span class="flag success"><span class="txt">완료</span></span> </a>
+							<a href="./templates/contents/common/end_service.html" target="_blank"><span>서비스 종료 화면</span> <span class="flag success"><span class="txt">완료</span></span> </a>
+							<a href="./templates/contents/common/end_identityMismatch.html" target="_blank"><span>인증 3회 실패 종료</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/common/intro.html" target="_blank"><span>AI 상담사 연결</span></a>
+							<a href="./templates/contents/common/splash.html" target="_blank"><span>챗봇 연결</span></a>
+							<a href="./templates/contents/common/splash.html" target="_blank"><span>고객센터앱 연결</span></a>
+						</li>
+					</ul>
 
-            <div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">청구서 받는 방법 변경</span>
-				<a href="./templates/layout/fragments/pop_chngBillMthd.html" target="_blank">
-					<span>청구서 받는 방법 변경 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/layout/fragments/pop_slctPayday.html" target="_blank">
-					<span>요금 결제일 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
-			
-            <div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">납부확인서 신청</span>
-                <a href="./templates/contents/business/paymentProof/submit_paymntProofEmail.html" target="_blank">
-					<span>납부확인서신청_이메일</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/contents/business/paymentProof/submit_paymntProofFax.html" target="_blank">
-					<span>납부확인서신청_팩스</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/layout/fragments/pop_slctPredBill.html" target="_blank"><span>기간 년/월 선택 바텀시트</span></a>
-                <a href="./templates/contents/business/payInfo/finish_billEmail.html" target="_blank"><span>납부확인서 신청 완료_이메일</span></a>
-                <a href="./templates/contents/business/payInfo/finish_billFax.html" target="_blank"><span>납부확인서 신청 완료_팩스</span></a>
-            </div>
+					<ul class="menu">
+						<li class="tit">인증</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/end_csLimit.html" target="_blank"><span>생년월일 인증</span> <span class="flag success"><span class="txt">완료</span></span> </a>
+							<a href="./templates/contents/business/common/end_csLimit.html" target="_blank"><span>생년월일/사업자번호 인증</span></a>
+							<a href="./templates/contents/business/common/end_csLimit.html" target="_blank"><span>홈코드 선택</span></a>
+							<a href="./templates/contents/business/common/end_csLimit.html" target="_blank"><span>SMS 인증번호 입력</span></a>
+						</li>
+					</ul>
 
-			<div class="link-container" style="margin-top:10px;margin-left:10px;">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">자녀요금 조회</span>
-                <a href="./templates/contents/business/payInfo/search_childBill_tab1.html" target="_blank">
-					<span>[TabUI]자녀요금조회_청구요금</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/contents/business/payInfo/search_childBill_tab2.html" target="_blank">
-					<span>[TabUI]자녀요금조회_실시간요금</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+				</div>
+			</li>
 
-				<a href="./templates/layout/fragments/pop_slctChild.html" target="_blank">
-					<span>자녀 회선 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-			</div>
-        </div>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>메인_main</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">메인</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/main/main.html" target="_blank"><span>모바일 메인</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+				</div>
+			</li>
 
-		<div class="lg-prototype-linkwrap">
-            <p>가입정보</p>
-            <div class="link-container">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">나의 요금제</span>
-				<a href="./templates/layout/fragments/pop_callEnd_app.html" target="_blank">
-					<span>종료팝업_고객센터앱연결(수정해서 사용)</span>
-				</a>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>상담사 연결</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">메인</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+				</div>
+			</li>			
+					
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>요금 및 납부_business</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">청구 요금_billDlst</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>진입분기</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>AI 상담사 연결</span></a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">실시간 요금_realTimeAmt</li>
+						<li class="txt">
 
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">결합 할인 정보</span>
-				<a href="./templates/layout/fragments/pop_callEnd_app.html" target="_blank">
-					<span>종료팝업_고객센터앱연결(수정해서 사용)</span>
-				</a>
-            </div>
-		</div>
+						</li>						
+					</ul>
+					<ul class="menu">
+						<li class="tit">요금 바로 납부_InstantPayment</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>진입분기</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>AI 상담사 연결</span></a>
+						</li>	
+					</ul>
+					<ul class="menu">
+						<li class="tit">요금 납부방법 변경_paymentMethodChange</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>진입분기</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>AI 상담사 연결</span></a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">청구서 재발행_billReissue</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>진입분기</span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billChild/start.html" target="_blank"><span>AI 상담사 연결</span></a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">청구서 받는방법 변경_billMethodChange</li>
+						<li class="txt">
+							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">납부확인서 신청_paymentProof</li>
+						<li class="txt">
+							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">세금계산서 신청_taxBill</li>
+						<li class="txt">
+							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">자녀요금 조회_billChild</li>
+						<li class="txt">
+							
+						</li>
+					</ul>
+				</div>
+			</li>
 
-		<div class="lg-prototype-linkwrap">
-			<p>사용 현황</p>
-			<div class="link-container">
-				<a href="./templates/contents/business/useState/state_realtime.html" target="_blank">
-					<span>실시간 사용량</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-				<a href="./templates/contents/business/useState/#.html" target="_blank"><span></span> </a>
-			</div>
-		</div>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>가입정보_signUpInfo</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">나의 요금제_myPlan</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-		<div class="lg-prototype-linkwrap">
-            <p>휴대폰 결제</p>
-            <div class="link-container">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">휴대폰결제 설정</span>
+					<ul class="menu">
+						<li class="tit">휴대폰할부/선택약정_optionalDiscount</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-                <a href="./templates/layout/fragments/pop_noticeRegPay.html" target="_blank">
-					<span>일반/정기결제 최대한도 안내 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-                <a href="./templates/layout/fragments/pop_noticeStorePay.html" target="_blank">
-					<span>스토어/콘텐츠 결제 최대한도 안내 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+					<ul class="menu">
+						<li class="tit">부가서비스 신청/해지_additionalProduct</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/layout/fragments/pop_useCnfrm.html" target="_blank">
-					<span>이용 확인 팝업 공통(수정해서 사용)</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+					<ul class="menu">
+						<li class="tit">결합할인 정보_combinedDiscount</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/layout/fragments/pop_blockCnfrm.html" target="_blank">
-					<span>차단 확인 팝업 공통(수정해서 사용)</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+				</div>
+			</li>
 
-				<a href="./templates/layout/fragments/pop_underageLimit.html" target="_blank">
-					<span>미성년자 이용 제한 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
-		</div>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>사용현황_mobilePayment</h2>
+				<div class="accordion-con">
 
-		<div class="lg-prototype-linkwrap">
-            <p>해외로밍</p>
-            <div class="link-container">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">해외로밍 부가서비스</span>
-				<a href="./templates/contents/business/roamingAdditional/search_rmAddService.html" target="_blank">
-					<span>해외로밍 부가서비스_조회</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+					<ul class="menu">
+						<li class="tit">실시간 사용량_realTimeUsed</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/service_blockDataRoming.html" target="_blank">
-					<span>데이터로밍차단 상세</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+					<ul class="menu">
+						<li class="tit">데이터 선물/충전_dataGift</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/finish_acceptDataRoaming.html" target="_blank">
-					<span>데이터로밍차단 신청 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
-				
-				<a href="./templates/contents/business/roamingAdditional/finish_cancelDataRoaming.html" target="_blank">
-					<span>데이터로밍차단 해지 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
+				</div>
+			</li>
 
-				<a href="./templates/contents/business/roamingAdditional/service_blockVoiceRoming.html" target="_blank">
-					<span>음성로밍차단 상세</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>휴대폰결제_mobilePayment</h2>
+				<div class="accordion-con">
 
-				<a href="./templates/contents/business/roamingAdditional/finish_acceptVoiceRoaming.html" target="_blank">
-					<span>음성로밍차단 신청 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
-				
-				<a href="./templates/contents/business/roamingAdditional/finish_cancelVoiceRoaming.html" target="_blank">
-					<span>음성로밍차단 해지 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
+					<ul class="menu">
+						<li class="tit">휴대폰결제 설정_mobilePaymentSetting</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/service_announceRoming.html" target="_blank">
-					<span>로밍안내방송 상세</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+					<ul class="menu">
+						<li class="tit">휴대폰결제 이용내역_mobilePaymentUsed</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/finish_acceptAnnounceRoming.html" target="_blank">
-					<span>로밍안내방송 신청 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
-				
-				<a href="./templates/contents/business/roamingAdditional/finish_cancelAnnounceRoming.html" target="_blank">
-					<span>로밍안내방송 해지 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
+					<ul class="menu">
+						<li class="tit">휴대폰결제 선결제_mobilePrepayment</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/finish_changeAnnounceRoming.html" target="_blank">
-					<span>로밍안내방송 변경 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
+				</div>
+			</li>
 
-				<a href="./templates/contents/business/roamingAdditional/service_announceLanding.html" target="_blank">
-					<span>해외도착알리미 상세</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>해외로밍_roamingInfo</h2>
+				<div class="accordion-con">
 
-				<a href="./templates/contents/business/roamingAdditional/finish_acceptAnnounceLanding.html" target="_blank">
-					<span>해외도착알리미 신청 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
-				
-				<a href="./templates/contents/business/roamingAdditional/finish_cancelAnnounceLanding.html" target="_blank">
-					<span>해외도착알리미 해지 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
+					<ul class="menu">
+						<li class="tit">해외로밍 신청_roamingAdditional</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-				<a href="./templates/contents/business/roamingAdditional/finish_changeAnnounceLanding.html" target="_blank">
-					<span>해외도착알리미 변경 완료</span>
-					<!-- <div class="flag success">
-						<span class="txt">완료</span>
-					</div> -->
-				</a>
-            </div>
-		</div>
+					<ul class="menu">
+						<li class="tit">해외로밍 부가서비스_roamingAdditional</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
 
-		<div class="lg-prototype-linkwrap">
-            <p>정지/분실/통화품질</p>
-            <div class="link-container">
-				<span style="color:#89a6f1;font-size:17px;font-weight:600;">일시정지 신청/해제</span>
-				<a href="./templates/layout/fragments/pop_slctPauseReason.html" target="_blank">
-					<span>일시정지 사유 선택 팝업</span>
-					<div class="flag success">
-						<span class="txt">완료</span>
-					</div>
-				</a>
-            </div>
-		</div>
+					<ul class="menu">
+						<li class="tit">해외로밍 실시간조회_roamingRealtime</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">해외로밍 이용내역_roamingHistory</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+
+				</div>
+			</li>
+
+			<li>
+				<input type="checkbox" checked>
+				<i></i>
+				<h2>정지/분실/통화품질_pause</h2>
+				<div class="accordion-con">
+
+					<ul class="menu">
+						<li class="tit">일시정지 신청/해제_pauseTemporay</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">분실정지 신청/해제_pauseLost</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+
+					<ul class="menu">
+						<li class="tit">통화품질 문의제_callQuality</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/main/main.html" target="_blank"><span></span></a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/common/.html" target="_blank"><span></span></a>
+						</li>
+					</ul>
+
+				</div>
+			</li>
+		</ul>
 	</div>
 </body>
 </html>
