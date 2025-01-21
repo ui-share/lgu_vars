@@ -94,6 +94,7 @@
 		.img-box {width:unset;min-width:unset;height:unset;}
 	}
 	&.center {
+		justify-content:center;
 		min-height: 130px;
 		padding: 20px;
 		.card-body {
