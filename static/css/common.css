@@ -1315,6 +1315,7 @@ button {
   height: unset;
 }
 .card.center {
+  justify-content: center;
   min-height: 130px;
   padding: 20px;
 }
