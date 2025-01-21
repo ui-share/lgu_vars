@@ -72,7 +72,7 @@
                         <div class="input-group">
                             <label class="input-label">이메일</label>
                             <div class="input-row">
-                                <input type="text" class="input-field" placeholder="이메일 주소 입력" autofocus>
+                                <input type="text" class="input-field" name="email" placeholder="이메일 주소 입력">
                                 <div class="util-box">
                                     <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                     <button type="button" class="clear-btn hidden"></button>
@@ -88,7 +88,19 @@
                         </div>
                         <div class="validation-txt">validation 메시지 노출</div>
                     </div>
+                    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const emailInput = document.querySelector('input[name="email"]');
 
+    if (emailInput) {
+        emailInput.focus();
+        emailInput.select(); // 입력 필드 텍스트를 선택해 커서를 활성화
+        setTimeout(() => {
+            console.log('Is input still focused?', document.activeElement === emailInput);
+        }, 100); // 포커스 유지 여부를 확인
+    }
+});
+                    </script>
                 </div>
                 <!-- 
                     키보드 노출시 버튼 스타일 변경 -> 클래스 추가
@@ -124,6 +136,7 @@
 					<button class="btn btn-util close" type="button" alt="닫기"></button>
 				</div>
 			</div>
+ 
 		</div>
 		<!-- //container -->
 	</div>
