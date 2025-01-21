@@ -51,26 +51,28 @@
                         </span>
                     </div>
                     <!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
-                    <div class="txt-perd-wrap slct">
-                        <span class="txt-perd">
-                            <button class="cal-slct point" type="button">월 선택</button>
+                    <button class="slct-perd-wrap">
+                        <span class="slct-perd">
+                            <span class="slct-txt" type="button">24년 11월</span>
+                            <span class="slct-txt point hidden" type="button">시작 월 선택</span>
                         </span>
-                        <span class="txt-perd">
+                        <span class="slct-perd">
                             <span class="hyphen">~</span>
-                            <button class="cal-slct point" type="button">월 선택</button>
+                            <span class="slct-txt" type="button">24년 11월</span>
+                            <span class="slct-txt point hidden" type="button">종료 월 선택</span>
                         </span>
-                    </div>
+                    </button>
                     <!-- 
                         input에 대한 이벤트 정보는
                         ./templates/element/input.html
                         페이지 주석 참고
                     -->
                     <!-- 이메일 입력 -->
-                    <div class="input-control normal">				
+                    <div class="input-control normal focused">				
                         <div class="input-group">
                             <label class="input-label">이메일</label>
                             <div class="input-row">
-                                <input type="text" class="input-field" placeholder="이메일 주소 입력" >
+                                <input type="text" class="input-field" placeholder="이메일 주소 입력" autofocus>
                                 <div class="util-box">
                                     <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                     <button type="button" class="clear-btn hidden"></button>
@@ -86,6 +88,7 @@
                         </div>
                         <div class="validation-txt">validation 메시지 노출</div>
                     </div>
+
                 </div>
                 <!-- 
                     키보드 노출시 버튼 스타일 변경 -> 클래스 추가

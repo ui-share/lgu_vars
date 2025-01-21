@@ -812,6 +812,48 @@ button {
   font-weight: 500;
 }
 
+/* 캘린더 선택 버튼 영역 */
+.slct-perd-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 8px auto 24px;
+  border-radius: 10px;
+  padding: 12px 48px 12px 12px;
+  background-color: transparent;
+  border: 2px solid var(--dt-gray08);
+  width: 100%;
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 12px center;
+}
+.slct-perd-wrap .slct-perd {
+  min-width: 85px;
+  max-width: 142px;
+  text-align: left;
+}
+.slct-perd-wrap .slct-perd:last-child {
+  margin-left: 8px;
+}
+.slct-perd-wrap .slct-perd .slct-txt {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.slct-perd-wrap .slct-perd .slct-txt.point {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.slct-perd-wrap .slct-perd .hyphen {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+  margin-right: 8px;
+}
+
 /* 캘린더 선택시 월일자텍스트 노출영역 */
 .txt-perd-wrap {
   display: flex;
@@ -823,31 +865,6 @@ button {
   padding: 14px 16px;
   background-color: var(--dt-gray02);
   border-radius: 8px;
-}
-.txt-perd-wrap.slct {
-  margin: 8px auto 24px;
-  border-radius: 10px;
-  padding: 13px 12px;
-  background-color: transparent;
-  border: 2px solid var(--dt-gray08);
-}
-.txt-perd-wrap.slct .txt-perd {
-  color: var(--dt-gray11);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 22px;
-  min-width: 115px;
-  max-width: 144px;
-}
-.txt-perd-wrap.slct .txt-perd .cal-slct {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray11);
-}
-.txt-perd-wrap.slct .txt-perd .hyphen {
-  font-size: 20px;
-  font-weight: 600;
-  color: var(--dt-gray16);
 }
 .txt-perd-wrap > span {
   color: var(--dt-gray11);
