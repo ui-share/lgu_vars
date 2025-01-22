@@ -387,6 +387,13 @@ button {
 	display: flex;
 	flex-direction: column;
 }
+.container {
+	> .section__cont {
+		&:first-child {
+			padding-top: 56px;
+		}
+	}
+}
 .section__divider {
 	width: 100%;
 	min-height: 10px;
@@ -395,10 +402,7 @@ button {
 }
 .section__cont {
 	display: flex;
-	flex-direction: column;
-	&:first-child {
-		padding-top: 56px;
-	}
+	flex-direction: column;	
 	&.menu, &.desc {
 		padding: 36px 0 48px 0;
 		gap: 48px;
@@ -438,7 +442,6 @@ button {
 				}
 			}
 		}
-		.txt-caution{padding-top:8px;}
 	}
 	&.tabnav__wrap {padding-right:0;padding-left:0;}
 	&.cont__wrap-singleCont {
@@ -807,11 +810,6 @@ button {
 	color: var(--dt-gray16);
 	margin-top: 24px;
 	margin-bottom: 16px;
-}
-.txt-caution {
-	color:var(--dt-gray11);
-	@include fw-5(12px);
-	text-align:center;
 }
 /* 은행 박스 다발*/
 .bank-wrap {
