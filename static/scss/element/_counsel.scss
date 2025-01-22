@@ -64,7 +64,6 @@
 				.tit-head {justify-content: center;}
 			}
 			.card-group {
-				margin-bottom: 48px;
 				.card {
 					background-color: var(--dt-white);
 					box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
@@ -87,6 +86,9 @@
 						}
 					}
 				}
+			}
+			&:has(.conversion) .card-group {
+				margin-bottom: 48px;
 			}
 		}
 		.txt-head {
