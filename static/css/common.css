@@ -2379,7 +2379,7 @@ input {
   background: transparent;
 }
 
-.input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
+.input-control.floating .input-group .input-label, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
   display: none;
 }
 
@@ -2488,16 +2488,15 @@ input {
   pointer-events: none;
 }
 .input-control.floating input::placeholder {
-  opacity: 0;
+  opacity: 1;
 }
 .input-control.floating .input-group .input-label {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  display: block;
 }
 .input-control.floating.focused input::placeholder {
-  opacity: 1;
+  opacity: 0;
 }
 .input-control.floating.focused .input-group .input-label {
   top: -6px;
@@ -3596,8 +3595,7 @@ table td {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 
 .tooltip-close {

@@ -173,7 +173,7 @@ input {
     &.floating {
         input {
             &::placeholder {
-                opacity: 0;
+                opacity: 1;
             }
         }
         .input-group {
@@ -181,13 +181,13 @@ input {
                 top: 50%; // 기본 상태에서 필드 중앙에 배치
                 left: 0;
                 transform: translateY(-50%);
-                display: block;
+                @extend %hidden;
             }
         }
         &.focused {
             input {
                 &::placeholder {
-                    opacity: 1;
+                    opacity: 0;
                 }
             }
             .input-group {
