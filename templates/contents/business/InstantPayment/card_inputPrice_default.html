@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>납부요금입력_기본 | LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" href="../../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/service.css">
+    
+    <!-- Scripts -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util end"><span>닫기</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="section__cont">
+                <div class="cont__wrap cont__wrap-service">
+                    <div class="cont__txt-box">
+						<h4 class="txt">
+							납부할 금액을 입력해 주세요
+						</h4> 
+					</div>
+                    <div class="input-col-wrap">
+                        <div class="input-control floating">
+                            <div class="input-group">
+                                <label class="input-label">납부 금액</label>
+                                <div class="input-row">
+                                    <input type="text" class="input-field" placeholder="납부 금액">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="notice-txt">
+                                <span>잔여요금 <span>60,000원</span></span></div>
+                            <div class="chips-group">
+                                <button type="button" class="chips chips-tag tag-lg primary">
+                                    <span class="txt">전액</span>
+                                </button>
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-btBtn">
+                    <button class="btn btn-between bg-bank">
+                        <span class="txt-wrap">
+                            <span class="img-box">
+                                <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                            </span>
+                            <span class="txt">1234-5678-****-****</span>
+                        </span>
+                        <span class="img-box">
+                            <img src="../../../../static/images/icon/ic-btn-arrow-right-sm.png">
+                        </span>
+                    </button>
+                    <div class="btn-group flex-row is-confirm">
+                        <button class="btn is-disabled" type="button">
+                            <span class="txt">요금 납부</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div> 
+</body>
+</html>

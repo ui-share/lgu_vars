@@ -80,6 +80,13 @@
 				margin-bottom: 12px;
 			}
 		}
+
+		.btn.bg-bank {
+			width:calc(100% - 40px);
+			margin:0 auto 20px;
+			background-color:var(--dt-gray01);
+			border:1px solid var(--dt-gray08);
+		}
 	}
 	// 풀버튼일 경우 패딩 0
 	&:not(:has(.px-0)) {

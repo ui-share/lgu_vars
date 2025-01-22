@@ -75,6 +75,12 @@
   color: var(--dt-gray11);
   margin-bottom: 12px;
 }
+.cont__wrap.cont__wrap-btBtn .btn.bg-bank {
+  width: calc(100% - 40px);
+  margin: 0 auto 20px;
+  background-color: var(--dt-gray01);
+  border: 1px solid var(--dt-gray08);
+}
 .cont__wrap:not(:has(.px-0)) .btn-group {
   padding: 0;
 }
