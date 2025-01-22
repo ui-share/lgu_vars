@@ -8,9 +8,10 @@
 			height: 100%;
 			justify-content: space-between;
 			&.scan {
+				position:relative;
 				.cont__wrap-service {padding:0;}
 				.cont__wrap.cont__wrap-btBtn .btn-group {
-					position:fixed;
+					position:absolute;
 					bottom:0;
 					left:0;
 					width:calc(100% - 40px);

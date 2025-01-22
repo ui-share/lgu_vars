@@ -2394,6 +2394,9 @@ input {
   position: relative;
   width: 100%;
 }
+.input-control .input-group + .chips-group {
+  margin-top: 8px;
+}
 .input-control .input-group .input-label {
   position: absolute;
   top: 50%;
@@ -2632,6 +2635,15 @@ input {
 }
 .auth-wrap .validation-txt {
   text-align: left;
+}
+
+.input-col-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.input-col-wrap .input-control:first-of-type {
+  margin-top: 18px;
 }
 
 .popup-wrapper {
