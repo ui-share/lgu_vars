@@ -40,6 +40,7 @@ input {
     .input-group {
         position: relative;
         width: 100%;
+        & + .chips-group {margin-top:8px;}
     
         // 라벨 스타일
         .input-label {
@@ -372,4 +373,10 @@ input {
 	.validation-txt {
 		text-align: left;
 	}
+}
+
+.input-col-wrap {
+    @include flexColum;
+    row-gap:10px;
+    .input-control:first-of-type {margin-top:18px;}
 }

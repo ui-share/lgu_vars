@@ -15,16 +15,17 @@
 	
 </head>
 <body>
-	<div class="page-wrapper" margin-top: 20px;">
+	<div class="page-wrapper">
 		<!-- header -->
 		<header class="header"></header>
 		<!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
-			<div style="height: 300px;"></div>
-			<button class="toast-btn01">토스트 인</button>
-			<button class="toast-btn02">토스트 아웃</button>
+			<div class="btn-group" style="padding-top:40vh;">
+				<button class="btn toast-btn01">토스트 인</button>
+				<!-- <button class="toast-btn02">토스트 아웃</button> -->
+			</div>
 			<!-- 
 				####### 퍼블공지 #######
 				default: <div class="toast-wrap">
@@ -53,13 +54,15 @@
 		<!-- //footer -->
 	</div>
 	<script>
-		document.addEventListener('DOMContentLoaded', () => {
-			const toastGroup = document.querySelector('.toast-group');
+		window.onload = function(){
+			const toastGroup = document.querySelector('.toast-wrap');
 			const toastInBtn = document.querySelector('.toast-btn01');
-			const toastOutBtn = document.querySelector('.toast-btn02');
+			const toastOutBtn = document.querySelector('.toast-wrap .btn-util.close');
+			// const toastOutBtn02 = document.querySelector('.toast-btn02');
 
 			// 토스트 인 버튼 클릭 시
-			toastInBtn.addEventListener('click', () => {
+			toastInBtn.addEventListener('click', (e) => {
+				e.preventDefault();
 				toastGroup.classList.add('show'); // .show 클래스 추가
 				toastGroup.classList.remove('hide'); // .hide 클래스 제거
 			});
@@ -69,7 +72,7 @@
 				toastGroup.classList.add('hide'); // .hide 클래스 추가
 				toastGroup.classList.remove('show'); // .show 클래스 제거
 			});
-		});
+		}
 	</script>
 </body>
 </html>
