@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" href="../../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/search.css">
+
+    <!-- Scripts -->
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <!-- 홀맨 배너 영역// -->
+            <div class="section__cont summary">
+                <!-- 미가입 -->
+                <div class="cont__wrap cont__wrap-realtimeRoaming hidden">
+                    <div class="cont__txt-box">
+						<h4 class="txt">
+                            가입한 해외 로밍<br>요금제가 없어요
+						</h4>
+					</div>
+				</div>
+
+                <!-- 이용전 -->
+                <div class="cont__wrap cont__wrap-realtimeRoaming">
+                    <div class="select-billdate">
+                        <span class="txt-due">D-23</span>
+                    </div>
+                    <div class="cont__txt-box">
+						<h4 class="txt">
+                            해외로밍<br>이용 전이에요
+						</h4>
+					</div>
+				</div>
+            </div>
+
+            <!-- 해외로밍 상세 영역 : 미가입-->
+            <div class="section__cont desc hidden">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">로밍 가입 상세</span>
+                        </h6>
+                    </div>
+
+                    <div class="card solid center roamingNone">
+                        <div class="card-body">
+                            <span class="img-box">
+                                <img src="../../../../static/images/icon/ic-card-roaming.png" alt="가입 정보 없음">
+                            </span>
+                            <div class="text-box">
+                                <span class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">입금전용 계좌 추가</span>
+                        </button>
+                        <!--
+                            최초 진입 시 버블박스 떠 있다가 조건 충족 시 사라짐
+                            : 조건에 따라 show 클래스 추가 및 삭제
+                        -->
+                        <span class="bubble-box topcenter show">
+                        <!-- <span class="bubble-box"> -->
+                            <span class="txt-wrap">
+                                프로모션 문구 프로모션 문구
+                            </span>
+                            <div class="bubble-box-arrow"></div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 해외로밍 상세 영역 : 이용전-->
+            <div class="section__cont desc">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">로밍 기간</span>
+                        </h6>
+                    </div>
+
+                    <div class="card solid">
+                        <div class="card-body">
+                            <span class="img-box">
+                                <img src="../../../../static/images/icon/ic-card-roaming.png" alt="가입 정보 없음">
+                            </span>
+                            <div class="text-box">
+                                <span class="tit">해외로 떠나시나요?<br>다양한 로밍 요금제를 살펴보세요</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">로밍 요금</span>
+                        </h6>
+                    </div>
+
+                    <div class="info-col-wrap">
+                        <div class="plan-wrap">
+                            <div class="list-plan roamingCharge">
+                                <div class="row">
+                                    <span class="txt-title">요금</span>
+                                    <span class="txt-desc">0원</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">로밍 사용량</span>
+                        </h6>
+                    </div>
+
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../../../static/images/icon/ic-circle-chart.svg" alt="">
+                                </span>
+                                데이터
+                            </span>
+                        </div>
+                        <div class="plan-wrap">
+                            <div class="col">
+                                <div class="txt-plan">
+                                    <span class="current">14GB 제공</span>
+                                    <!-- <span class="total">/ 무제한</span> -->
+                                </div>
+                                <div class="progress-area realtime">
+                                    <span class="progress-bg">
+                                        <!-- style.width %로 조절 -->
+                                        <span class="progress-bar" style="width:100%;"></span>
+                                    </span>
+                                </div>
+                                <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../../../static/images/icon/ic-circle-call.svg" alt="">
+                                </span>
+                                음성통화
+                            </span>
+                        </div>
+                        <div class="plan-wrap line">
+                            <div class="list-plan">
+                                <div class="row">
+                                    <span class="txt-title">현지발신</span>
+                                    <span class="txt-desc">
+                                        <span class="current">-초</span>
+                                        <span class="total">/ 무제한</span>
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-title">국제발신</span>
+                                    <span class="txt-desc">
+                                        -초/1.98원
+                                        <span class="current">-초</span>
+                                        <span class="total">/ 1.98원</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-col-wrap">
+                        <div class="row title-wrap">
+                            <span class="txt-title ico">
+                                <span class="img-box">
+                                    <img src="../../../../static/images/icon/ic-circle-message.svg" alt="">
+                                </span>
+                                문자
+                            </span>
+                            <span class="txt-desc">
+                                <span class="current">-건</span>
+                                <span class="total">/ 300건</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디바이더 영역 -->
+            <div class="section__divider"></div>
+            <!-- 상담 영역 -->
+            <div class="section__cont counsel">
+                <div class="cont__wrap">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">아래 메뉴도 추천해요</span>
+                        </h6>
+                        <div class="tit-tail hidden"></div>
+                    </div>
+                    <div class="card-group">
+                        <div class="card" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-home-roaming_application.png" alt="해외로밍 신청">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">해외로밍 신청</span>
+                                    <!-- <span class="txt"></span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-home-phone_payment_roaming.png" alt="해외로밍 이용내역">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">해외로밍 이용내역</span>
+                                    <!-- <span class="txt"></span> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-home-roaming_added_service.png" alt="해외로밍 부가서비스스">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">해외로밍<br>부가서비스</span>
+                                    <span class="txt">조회ㆍ신청ㆍ해지</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-counsel">
+                    <div class="con__tit-box">
+                        <span class="txt-sub">로밍 사용에 도움이 필요하신가요?</span>
+                        <h6 class="tit-head">
+                            <span class="txt-title">바로 도움을 드릴게요</span>
+                        </h6>
+                        <div class="tit-tail hidden"></div>
+                    </div>
+                    <div class="card-group threeby">
+                        <div class="card detail" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-card-chatbot.png" alt="챗봇상담">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">챗봇 상담</span>
+                                    <span class="txt">대기없이 바로</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card detail" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-card-ars-ai.png" alt="AI상담">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">AI 상담사</span>
+                                    <span class="txt">언제든지 빠른</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card detail" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-card-calls.png" alt="챗봇상담">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">전화 상담</span>
+                                    <span class="txt">상세하고 친절한</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="chips chips-tag hidden">
+                                    <span class="txt">점심시간</span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

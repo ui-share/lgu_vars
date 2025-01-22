@@ -117,6 +117,12 @@
 				}
 			}
 		}
+		&.roamingNone {
+			padding: 30px 20px;
+			.card-body {
+				gap: 4px;
+			}
+		}
 	}
 	&[role=button] {
 		cursor: pointer;

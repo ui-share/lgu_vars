@@ -12,11 +12,7 @@
 			padding-right:120px;
 			background-repeat: no-repeat;
 			background-size:140px;
-			background-position: right 10px top 14px;
 			&:has(.select-billdate) {
-				&:not(.cont__wrap-payment) {
-					background-position: right 10px top 35px;
-				}
 				.cont__txt-box {min-height:36px;}
 			}			
 			.cont__txt-box {min-height:110px;}
@@ -140,6 +136,7 @@
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
+		background-position: right 10px top 35px;
 		&:has(.select-billdate) {
 			.select-billdate .txt-due {margin-bottom:6px}
 		}
@@ -147,21 +144,30 @@
 	&.cont__wrap-realtime {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-realtime.png);
+		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-usestate {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-usestate.png);
+		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-account {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-account.png);
+		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-payment {
 		min-height:154px;
 		background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+		background-position: right 10px top 14px;
 		.cont__txt-box {row-gap:0}
+	}
+	&.cont__wrap-realtimeRoaming {
+		min-height:184px;
+		background-image: url(../images/img/img-hm-roaming.png);
+		background-position: right 10px top 44px;
 	}
 }

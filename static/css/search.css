@@ -6,15 +6,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   padding-top: 28px;
   padding-right: 120px;
   background-repeat: no-repeat;
   background-size: 140px;
-  background-position: right 10px top 14px;
-}
-.section__cont.summary .cont__wrap:has(.select-billdate):not(.cont__wrap-payment) {
-  background-position: right 10px top 35px;
 }
 .section__cont.summary .cont__wrap:has(.select-billdate) .cont__txt-box {
   min-height: 36px;
@@ -120,7 +117,8 @@
   background-color: var(--dt-gray15);
 }
 .cont__wrap .btn-srch-childline .txt-title {
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   flex-wrap: wrap;
 }
 .cont__wrap .btn-srch-childline .txt-title > span {
@@ -162,6 +160,7 @@
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;
   background-image: url(../images/img/img-hm-bill.png);
+  background-position: right 10px top 35px;
 }
 .cont__wrap.cont__wrap-bill:has(.select-billdate) .select-billdate .txt-due {
   margin-bottom: 6px;
@@ -169,6 +168,7 @@
 .cont__wrap.cont__wrap-realtime {
   min-height: 164px;
   background-image: url(../images/img/img-hm-realtime.png);
+  background-position: right 10px top 35px;
 }
 .cont__wrap.cont__wrap-realtime .cont__txt-box {
   row-gap: 0;
@@ -176,6 +176,7 @@
 .cont__wrap.cont__wrap-usestate {
   min-height: 164px;
   background-image: url(../images/img/img-hm-usestate.png);
+  background-position: right 10px top 35px;
 }
 .cont__wrap.cont__wrap-usestate .cont__txt-box {
   row-gap: 0;
@@ -183,6 +184,7 @@
 .cont__wrap.cont__wrap-account {
   min-height: 164px;
   background-image: url(../images/img/img-hm-account.png);
+  background-position: right 10px top 35px;
 }
 .cont__wrap.cont__wrap-account .cont__txt-box {
   row-gap: 0;
@@ -190,7 +192,13 @@
 .cont__wrap.cont__wrap-payment {
   min-height: 154px;
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+  background-position: right 10px top 14px;
 }
 .cont__wrap.cont__wrap-payment .cont__txt-box {
   row-gap: 0;
+}
+.cont__wrap.cont__wrap-realtimeRoaming {
+  min-height: 184px;
+  background-image: url(../images/img/img-hm-roaming.png);
+  background-position: right 10px top 44px;
 }
