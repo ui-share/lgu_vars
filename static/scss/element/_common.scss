@@ -438,6 +438,7 @@ button {
 				}
 			}
 		}
+		.txt-caution{padding-top:8px;}
 	}
 	&.tabnav__wrap {padding-right:0;padding-left:0;}
 	&.cont__wrap-singleCont {
@@ -806,6 +807,11 @@ button {
 	color: var(--dt-gray16);
 	margin-top: 24px;
 	margin-bottom: 16px;
+}
+.txt-caution {
+	color:var(--dt-gray11);
+	@include fw-5(12px);
+	text-align:center;
 }
 /* 은행 박스 다발*/
 .bank-wrap {
