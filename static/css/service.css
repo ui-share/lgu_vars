@@ -72,6 +72,9 @@
   color: var(--dt-gray11);
   margin-bottom: 12px;
 }
+.cont__wrap:not(:has(.px-0)) .btn-group {
+  padding: 0;
+}
 
 .txt-infoWrap {
   font-size: 12px;

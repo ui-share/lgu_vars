@@ -37,6 +37,7 @@
 	}
 }
 .cont__wrap {
+
 	&.cont__wrap-service {
 		height: 100%;
 		overflow-y: auto;
@@ -45,6 +46,7 @@
 	&.cont__wrap-btBtn {
 		padding: 0;
 		background-color: transparent;
+
 		.btn-group {
 			position: relative;
 			background-color: var(--dt-white);
@@ -59,6 +61,7 @@
 				height: 20px;
 				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
 			}
+
 		}
 		.card-group {
 			padding: 0 20px 20px;
@@ -75,6 +78,12 @@
 				color: var(--dt-gray11);
 				margin-bottom: 12px;
 			}
+		}
+	}
+	// 풀버튼일 경우 패딩 0
+	&:not(:has(.px-0)) {
+		.btn-group {
+			padding: 0;
 		}
 	}
 }
