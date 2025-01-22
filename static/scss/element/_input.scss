@@ -206,6 +206,12 @@ input {
             }
         }
         &.success {
+            input {
+                &::placeholder {
+                    opacity: 0;
+                    @extend %hidden;
+                }
+            }
             .input-group {
                 .input-row {
                     border-bottom: 2px solid var(--dt-success);
@@ -213,6 +219,12 @@ input {
             }
         }
         &.error {
+            input {
+                &::placeholder {
+                    opacity: 0;
+                    @extend %hidden;
+                }
+            }
             .input-group {
                 .input-row {
                     border-bottom: 2px solid var(--dt-error);
@@ -360,7 +372,7 @@ input {
 		color: var(--dt-black);
 		line-height: 1.4;
 	}
-    .costomer-name {
+    .customer-name {
         @include fw-6(24px);
     }
 	.color-prim {

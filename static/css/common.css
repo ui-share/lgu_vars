@@ -2379,7 +2379,7 @@ input {
   background: transparent;
 }
 
-.input-control.floating .input-group .input-label, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
+.input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
   display: none;
 }
 
@@ -2507,8 +2507,14 @@ input {
 .input-control.floating.focused .input-group .input-row .input-field {
   caret-color: var(--dt-primary);
 }
+.input-control.floating.success input::placeholder {
+  opacity: 0;
+}
 .input-control.floating.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
+}
+.input-control.floating.error input::placeholder {
+  opacity: 0;
 }
 .input-control.floating.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
@@ -2619,7 +2625,7 @@ input {
   color: var(--dt-black);
   line-height: 1.4;
 }
-.auth-wrap .costomer-name {
+.auth-wrap .customer-name {
   font-size: 24px;
   font-weight: 600;
 }
