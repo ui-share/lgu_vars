@@ -9,7 +9,7 @@
     margin-left:-3px;
     padding:3px;
 }
-.tooltip-wrap { // 툴팁박스
+.tooltip-wrap, .bubble-box { // 툴팁박스
 	display: none;
     position:absolute;
 	width: max-content;
@@ -21,22 +21,17 @@
 	@media screen and (max-width:359px) {
 		max-width: 60vw;
 	}
-    .tooltip-inner {
-        @include flexRow;
-        align-items:center;
-        column-gap:8px;
-    }
-    .txt-wrap {
+	.txt-wrap {
 		display:inline-block;
-		width:calc(100% - 32px);
-        @include fw-5(12px);
-        color:var(--dt-white);
-        line-height: 18px;
-		letter-spacing: -0.2px;
+		@include fw-5(12px);
+		color:var(--dt-white);
+		line-height: 18px;
+		letter-spacing: -0.3px;
 		&:has(.ico) {
 			@include flexRow;
 			column-gap:4px;
 			align-items:center;
+			width:calc(100% - 32px);
 		}
 		.ico {
 			align-self: flex-start;
@@ -46,15 +41,78 @@
 			background-repeat:no-repeat;
 			background-size:100%;
 		}
-    }
-	.tooltip-close {
-		align-self:flex-start;
-		font-size:0;
-		text-indent: -9999px;
-		width:24px;height:24px;
-		background-image: url(../images/icon/ic-close24-gray10.svg);
-		background-size: 24px;
 	}
+} 
+.bubble-box {
+	&.show {display:block}
+	
+	&.topleft {
+		left:0;
+		.bubble-box-arrow {
+			top:100%;
+			left:14px;
+		}
+	}
+	&.topright {
+		right:0;
+		.bubble-box-arrow {
+			top:100%;
+			right:14px;
+		}
+	}
+	&.topcenter {
+		bottom:calc(100% + 10px);
+		left:50%;transform:translateX(-50%);
+		.bubble-box-arrow {
+			top: 100%;
+			left:50%;transform:translateX(-50%);
+			&::after {
+				background-image: url(../images/icon/tooltip_tail_bottom.svg);
+			}
+		}
+		.txt-wrap {text-align:center;}
+	}
+	&.bttmcenter {
+		top:calc(100% + 10px);
+		left:50%;transform:translateX(-50%);
+		.bubble-box-arrow {
+			top: -8px;
+			left:50%;transform:translateX(-50%);
+			&::after {
+				background-image: url(../images/icon/tooltip_tail_top.svg);
+			}
+		}
+		.txt-wrap {text-align:center;}
+	}
+	.bubble-box-arrow, .bubble-box-arrow:after {
+		position: absolute;
+	}
+	.bubble-box-arrow {
+		display:block;
+		width: 16px;
+		height: 8px;
+	}
+	.bubble-box-arrow::after {
+		content: '';
+		width:100%;height:100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+		background-image: url(../images/icon/tooltip_tail_bottom.svg);
+	}
+}
+.tooltip-inner {
+	@include flexRow;
+	align-items:center;
+	column-gap:8px;
+}
+.tooltip-close {
+	align-self:flex-start;
+	font-size:0;
+	text-indent: -9999px;
+	width:24px;height:24px;
+	background-image: url(../images/icon/ic-close24-gray10.svg);
+	background-size: 24px;
 }
 .tooltip-wrap[data-show] { // show hide 조작
 	display: block;
@@ -111,7 +169,6 @@ div[data-popper-arrow]::before {
 	width: 8px;
 	height: 16px;
 	margin-top:-8px;
-
 	left:unset;
 	right:-8px;
 	&::before {
@@ -120,17 +177,20 @@ div[data-popper-arrow]::before {
 }
 
 // 예외 케이스
-.input-control, .checkbox-area {
-	&:has(.tooltip) {
+.input-control, .chckbox-area, .btn-group {
+	&:has(.bubble-box) {
 		position:relative;
-		.tooltip-wrap {
-			padding:10px 16px;
-		}
 	}
-	.tooltip-wrap {// chck-group, validation-txt 이랑 동레벨
-		left:-14px;
-		top:-22px;
+	.bubble-box {// chck-group, validation-txt 이랑 동레벨
+		padding:10px 16px;
 		.txt-wrap {width:100%;}
-		.tooltip[data-popper-placement^=top] div[data-popper-arrow] {margin-left:6px;}
 	}
+}
+.input-control .bubble-box.topleft,
+.input-control .bubble-box.topright{
+	bottom:42px;
+}
+.chckbox-area .bubble-box.topleft { 
+	bottom:33px;
+	left:-12px;
 }

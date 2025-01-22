@@ -15,87 +15,6 @@
     <link rel="stylesheet" href="../../../../static/css/search.css">
 
     <!-- Scripts -->
-    <script src="../../../../static/js/tooltip/popper.js"></script>
-    <script>
-        const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
-        function initCheckDevice() {
-            // PC
-            if (!isMobile) {
-                document.body.classList.add("is-pc");
-            }
-        }
-        window.onload = ()=> {
-            initCheckDevice();
-
-            /*
-                임시코드입니다. 수정하여 사용 요망
-            */
-            
-            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
-            const tooltipBtn = document.querySelector('.btn-sec'); 
-            const tooltip = document.querySelector('.tooltip-wrap');
-        
-            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
-                placement: 'bottom',
-                modifiers: [
-                    {
-                        name: 'offset',
-                        options: {
-                            offset: [0, 8],
-                        },
-                    },
-                    {
-                        name: 'flip',
-                        options: {
-                            fallbackPlacements: ['top', 'bottom'],
-                        },
-                    },
-                ],
-            });
-
-            function show() {
-                // Make the tooltip visible
-                tooltip.setAttribute('data-show', '');
-
-                // Enable the event listeners
-                popperInstance.setOptions((options) => ({
-                    ...options,
-                    modifiers: [
-                        ...options.modifiers,
-                        { name: 'eventListeners', enabled: true },
-                    ],
-                }));
-
-                // Update its position
-                popperInstance.update();
-            }
-
-            function hide() {
-                // Hide the tooltip
-                tooltip.removeAttribute('data-show');
-
-                // Disable the event listeners
-                popperInstance.setOptions((options) => ({
-                    ...options,
-                    modifiers: [
-                        ...options.modifiers,
-                        { name: 'eventListeners', enabled: false },
-                    ],
-                }));
-            }
-
-            const showEvents = ['click', 'focus'];
-            const hideEvents = ['click(.tooltip-close);', 'blur'];
-
-            showEvents.forEach((event) => {
-                tooltipBtn.addEventListener(event, show);
-            });
-
-            hideEvents.forEach((event) => {
-                tooltipBtn.addEventListener(event, hide);
-            });
-        }
-    </script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -141,18 +60,16 @@
                         <button type="button" class="btn btn-sec">
                             <span class="txt">입금전용 계좌 추가</span>
                         </button>
-                        <span class="tooltip-wrap" role="tooltip" data-popper-placement^='bottom' data-show>
-                            <!--
-                               최초 진입 시 툴팁 떠 있음 > 계좌 추가 시 툴팁 사라짐
-                            -->
-                            <div class="tooltip">
-                                <div class="tooltip-inner">
-                                    <span class="txt-wrap">
-                                        입금전용 계좌를 추가하여 납부해 보세요
-                                    </span>
-                                </div>
-                                <div data-popper-arrow=""></div>
-                            </div>
+                        <!--
+                            최초 진입 시 버블박스 떠 있다가 조건 충족 시 사라짐
+                            : 조건에 따라 show 클래스 추가 및 삭제
+                        -->
+                        <span class="bubble-box topcenter show">
+                        <!-- <span class="bubble-box"> -->
+                            <span class="txt-wrap">
+                                입금전용 계좌를 추가하여 납부해 보세요
+                            </span>
+                            <div class="bubble-box-arrow"></div>
                         </span>
                     </div>
 

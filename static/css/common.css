@@ -3473,7 +3473,7 @@ table td {
   padding: 3px;
 }
 
-.tooltip-wrap {
+.tooltip-wrap, .bubble-box {
   display: none;
   position: absolute;
   width: max-content;
@@ -3484,32 +3484,26 @@ table td {
   z-index: 10;
 }
 @media screen and (max-width: 359px) {
-  .tooltip-wrap {
+  .tooltip-wrap, .bubble-box {
     max-width: 60vw;
   }
 }
-.tooltip-wrap .tooltip-inner {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 8px;
-}
-.tooltip-wrap .txt-wrap {
+.tooltip-wrap .txt-wrap, .bubble-box .txt-wrap {
   display: inline-block;
-  width: calc(100% - 32px);
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-white);
   line-height: 18px;
-  letter-spacing: -0.2px;
+  letter-spacing: -0.3px;
 }
-.tooltip-wrap .txt-wrap:has(.ico) {
+.tooltip-wrap .txt-wrap:has(.ico), .bubble-box .txt-wrap:has(.ico) {
   display: flex;
   flex-direction: row;
   column-gap: 4px;
   align-items: center;
+  width: calc(100% - 32px);
 }
-.tooltip-wrap .txt-wrap .ico {
+.tooltip-wrap .txt-wrap .ico, .bubble-box .txt-wrap .ico {
   align-self: flex-start;
   display: inline-block;
   width: 16px;
@@ -3518,7 +3512,82 @@ table td {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.tooltip-wrap .tooltip-close {
+
+.bubble-box.show {
+  display: block;
+}
+.bubble-box.topleft {
+  left: 0;
+}
+.bubble-box.topleft .bubble-box-arrow {
+  top: 100%;
+  left: 14px;
+}
+.bubble-box.topright {
+  right: 0;
+}
+.bubble-box.topright .bubble-box-arrow {
+  top: 100%;
+  right: 14px;
+}
+.bubble-box.topcenter {
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bubble-box.topcenter .bubble-box-arrow {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bubble-box.topcenter .bubble-box-arrow::after {
+  background-image: url(../images/icon/tooltip_tail_bottom.svg);
+}
+.bubble-box.topcenter .txt-wrap {
+  text-align: center;
+}
+.bubble-box.bttmcenter {
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bubble-box.bttmcenter .bubble-box-arrow {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bubble-box.bttmcenter .bubble-box-arrow::after {
+  background-image: url(../images/icon/tooltip_tail_top.svg);
+}
+.bubble-box.bttmcenter .txt-wrap {
+  text-align: center;
+}
+.bubble-box .bubble-box-arrow, .bubble-box .bubble-box-arrow:after {
+  position: absolute;
+}
+.bubble-box .bubble-box-arrow {
+  display: block;
+  width: 16px;
+  height: 8px;
+}
+.bubble-box .bubble-box-arrow::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url(../images/icon/tooltip_tail_bottom.svg);
+}
+
+.tooltip-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.tooltip-close {
   align-self: flex-start;
   font-size: 0;
   text-indent: -9999px;
@@ -3592,19 +3661,22 @@ div[data-popper-arrow]::before {
   background-image: url(../images/icon/tooltip_tail_right.svg);
 }
 
-.input-control:has(.tooltip), .checkbox-area:has(.tooltip) {
+.input-control:has(.bubble-box), .chckbox-area:has(.bubble-box), .btn-group:has(.bubble-box) {
   position: relative;
 }
-.input-control:has(.tooltip) .tooltip-wrap, .checkbox-area:has(.tooltip) .tooltip-wrap {
+.input-control .bubble-box, .chckbox-area .bubble-box, .btn-group .bubble-box {
   padding: 10px 16px;
 }
-.input-control .tooltip-wrap, .checkbox-area .tooltip-wrap {
-  left: -14px;
-  top: -22px;
-}
-.input-control .tooltip-wrap .txt-wrap, .checkbox-area .tooltip-wrap .txt-wrap {
+.input-control .bubble-box .txt-wrap, .chckbox-area .bubble-box .txt-wrap, .btn-group .bubble-box .txt-wrap {
   width: 100%;
 }
-.input-control .tooltip-wrap .tooltip[data-popper-placement^=top] div[data-popper-arrow], .checkbox-area .tooltip-wrap .tooltip[data-popper-placement^=top] div[data-popper-arrow] {
-  margin-left: 6px;
+
+.input-control .bubble-box.topleft,
+.input-control .bubble-box.topright {
+  bottom: 42px;
+}
+
+.chckbox-area .bubble-box.topleft {
+  bottom: 33px;
+  left: -12px;
 }
