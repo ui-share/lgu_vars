@@ -40,7 +40,6 @@ input {
     .input-group {
         position: relative;
         width: 100%;
-        & + .chips-group {margin-top:8px;}
     
         // 라벨 스타일
         .input-label {
@@ -306,6 +305,7 @@ input {
             }
         }
     }
+    .chips-group {margin-top:8px;}
     // 헬퍼 텍스트
     .validation-txt {
         display: none;
@@ -317,6 +317,16 @@ input {
         background-size: 16px 16px;
         background-position: left 0 center;
     }
+    // 공지 텍스트 fw-7 gray11
+    .notice-txt {
+        margin-top: 8px;
+        span {
+            color: var(--dt-gray11);
+            @include fw-7(14px);
+            line-height:21px;
+        }
+    }
+
     //상태별 스타일 - code
     &.code {
         display: flex;
