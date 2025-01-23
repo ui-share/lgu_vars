@@ -3099,15 +3099,13 @@ input {
   transition: transform 0.3s ease;
 }
 .accordion-container .accordion-content {
-  visibility: hidden;
-  height: 0;
+  display: none;
 }
 .accordion-container.open .accordion-header .ico-toggle {
   transform: rotate(180deg);
 }
 .accordion-container.open > .accordion-content {
-  visibility: visible;
-  height: auto;
+  display: block;
 }
 .accordion-container.open > .accordion-content:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
   border-top: 1px solid var(--dt-gray06);
