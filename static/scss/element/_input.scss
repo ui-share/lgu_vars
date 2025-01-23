@@ -406,6 +406,89 @@ input {
             text-align: left;
         }
     }
+    &.email-form {
+        .input-group {
+            @include flexBox(between, center);
+            .input-label {
+                top: -6px; // 라벨이 위로 올라가도록 변경
+                font-size: 12px; // 작아지면서 플로팅 효과
+                @extend %visible;
+            }
+            .input-row {
+                width: 100%;
+                border-bottom: 2px solid var(--dt-gray08);
+                            // Clear 버튼 : 기본상태-hidden
+                .util-box {
+                    margin-left: auto;
+                    display: flex;
+                    flex: none;
+                    column-gap: 6px;
+                    @extend %hidden;
+                    .clear-btn {
+                        border: none;
+                        cursor: pointer;
+                        min-width: 33px;
+                        width: 33px;
+                        height: 40px;
+                        background-image: url(../images/icon/ic-input-clear.svg);
+                        background-size: 24px 24px;
+                        background-repeat: no-repeat;
+                        background-position: right 5px center;
+                        
+                    }
+                }
+            }
+            .slct-email-wrap {
+                @include flexBox(start, center);
+                flex-wrap: wrap;
+                border-radius: 10px;
+                padding: 12px 38px 12px 10px;
+                background-color: transparent;
+                border: 2px solid var(--dt-gray08);
+                // width: 100%;
+                background-image: url(../images/icon/chevron_down_line_24.svg);
+                background-repeat: no-repeat;
+                background-size: 24px 24px;
+                background-position: right 6px center;
+                .slct-txt {
+                    min-width: 85px;
+                    max-width: 142px;
+                    text-align: left;
+                    @include fw-6(14px);
+                    color: var(--dt-gray11);
+                    &.point {
+                        @include fw-6(14px);
+                        color: var(--dt-gray16);
+                    }
+                }
+            }
+
+        }
+        &.focused {
+            .input-group {
+                .input-field {
+                    caret-color: var(--dt-primary);
+                    cursor: text;
+                }
+                .input-row {
+                    border-bottom: 2px solid var(--dt-primary);
+                }
+            }
+        }
+        &.success {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-success);               }
+            }
+        }
+        &.error {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-error);
+                }
+            }
+        }
+    }
 }
 
 // 2차인증 input-layout
