@@ -60,6 +60,17 @@
   transform: rotate(180deg);
 }
 
+.cont__wrap .con__tit-box .tit-head .txt-title {
+  line-height: 22px;
+}
+.cont__wrap .con__tit-box .tit-head .txt-title .color-prim {
+  font-size: 18px;
+  font-weight: 700;
+}
+.cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
+  flex-direction: column;
+  row-gap: 6px;
+}
 .cont__wrap .cont__txt-box .txt.price {
   display: flex;
   flex-direction: row;
@@ -153,6 +164,43 @@
 }
 .cont__wrap .list-payment .info-col-wrap .row.total .txt-price {
   font-size: 18px;
+  line-height: 21px;
+}
+.cont__wrap .card-group.benefit {
+  padding: 22px 4px;
+  gap: 0;
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+}
+.cont__wrap .card-group.benefit .card {
+  padding: 0 16px;
+  border-radius: unset;
+  box-shadow: unset;
+  background-color: unset;
+}
+.cont__wrap .card-group.benefit .card:nth-of-type(2) {
+  border-left: 1px solid var(--dt-gray08);
+}
+.cont__wrap .card-group.benefit .card .card-body {
+  row-gap: 6px;
+}
+.cont__wrap .card-group.benefit .card .item.text .txt {
+  font-size: 12px;
+  line-height: 18px;
+}
+.cont__wrap .card-group.benefit .card .item.util {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cont__wrap .card-group.benefit .card .item.util .img-box {
+  width: 48px;
+  height: 48px;
+}
+.cont__wrap .card-group.benefit .card .item-tit {
+  max-width: 51px;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 21px;
 }
 .cont__wrap.cont__wrap-bill {

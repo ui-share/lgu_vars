@@ -58,6 +58,20 @@
 }
 
 .cont__wrap {
+	.con__tit-box {
+		.tit-head {
+			.txt-title {
+				line-height:22px;
+				.color-prim {font-size: 18px;font-weight: 700;}
+			}
+		}
+		&:not(:has(.tit-tail)) {
+			&:has(.bullet-list) {
+				flex-direction:column;
+				row-gap:6px;
+			}
+		}
+	}
     .cont__txt-box {
         .txt {
             &.price {
@@ -129,6 +143,37 @@
 						line-height:21px;
 					}
 				}
+			}
+		}
+	}
+	.card-group {
+		&.benefit {
+			padding:22px 4px;
+			gap:0;
+			background-color: var(--dt-gray02);
+			border-radius:8px;
+			.card {
+				padding:0 16px;
+				border-radius:unset;
+				box-shadow:unset;
+				background-color:unset;
+				&:nth-of-type(2) {border-left:1px solid var(--dt-gray08);}
+				.card-body {row-gap:6px;}
+				.item.text {
+					.txt {
+						font-size:12px;
+						line-height:18px;
+					}
+				}
+				.item.util {
+					justify-content:flex-start;
+					flex-wrap: wrap;
+					gap:8px;
+					.img-box {
+						width:48px;height:48px;
+					}
+				}
+				.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
 			}
 		}
 	}

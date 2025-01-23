@@ -3309,10 +3309,16 @@ input {
 }
 
 .accordion-content .info-price-detail {
-  padding: 16px 20px;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
+}
+.accordion-content .info-price-detail .info-wrap:first-of-type {
+  padding-top: 16px;
+}
+.accordion-content .info-price-detail .info-wrap:last-of-type {
+  padding-bottom: 16px;
 }
 .accordion-content .info-price-detail .info-wrap .row {
   display: flex;

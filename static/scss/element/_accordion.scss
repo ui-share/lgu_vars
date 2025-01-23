@@ -102,10 +102,12 @@
 }
 .accordion-content {
     .info-price-detail {
-        padding:16px 20px;
+        padding:0 20px;
         @include flexColum;
         row-gap:8px;
         .info-wrap {
+            &:first-of-type {padding-top:16px;}
+            &:last-of-type {padding-bottom:16px;}
             .row {
                 display:flex;
                 justify-content:space-between;
