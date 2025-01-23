@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조회페이지 케이스</title>
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/search.css">
+    <script>
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+        function initCheckDevice() {
+            // PC
+            if (!isMobile) {
+                document.body.classList.add("is-pc");
+            }
+        }
+        window.onload = ()=> {
+            initCheckDevice();
+        }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+            <!-- 홀맨 배너 영역// -->
+            <div class="section__cont summary"><!-- 청구요금조회 -->
+                <div class="cont__wrap cont__wrap-bill">
+                    <div class="select-billdate">
+                        <span class="txt-due">2월 1일 ~ 2월 28일</span>
+                        <span class="txt-select-wrap">
+                            <button type="button" class="chips chips-date">
+                                <span class="txt">24년 03월</span>
+                                <span class="arrow"></span>
+                            </button>
+                            청구요금은
+                        </span>
+                    </div>
+                    <div class="cont__txt-box">
+						<h4 class="txt price">
+                            <span class="deco">89,000</span>
+                            <span class="color-prim">원</span>이에요
+						</h4>
+					</div>
+				</div>
+            </div>
+            <!-- //홀맨 배너 영역 -->
+
+            <!-- 아코디언 영역 -->
+            <div class="section__cont desc">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="list-payment">
+                        <div class="info-col-wrap">
+                            <span class="row total">
+                                <span class="txt-title">총 청구요금</span>
+                                <span class="txt-price">
+                                    60,000원
+                                </span>
+                            </span>
+                        </div>
+                        <div class="info-col-wrap">
+                            <span class="row">
+                                <span class="txt-title">총 청구요금</span>
+                                <span class="txt-price">
+                                    60,000원
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">입금전용 계좌</span>
+                        </h6>
+                    </div>
+                    <div class="card solid bank">
+                        <div class="card-header">
+                            <div class="item util">
+                                <span class="img-box">
+                                    <img src="../static/images/icon/ic-bank/ic-20-ibk.svg" alt="ibk은행">
+                                </span>
+                            </div>
+                            <div class="item text">
+                                <span class="tit">은행 계좌번호</span>
+                                <span class="txt">김유플</span>
+                            </div>
+                            <button type="button" class="btn end">종료</button>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group flex-row">
+                                <button class="btn btn-md" type="button">
+                                    <span class="txt">문자로 전송</span>
+                                </button>
+                                <button class="btn btn-md" type="button">
+                                    <span class="txt">복사</span>
+                                </button>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">입금전용 계좌 추가</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디바이더 영역 -->
+		<div class="section__divider"></div>
+		<!-- 상담 영역 -->
+		<div class="section__cont counsel">
+			<div class="cont__wrap">
+				<div class="con__tit-box">
+					<h6 class="tit-head">
+						<span class="txt-title">아래 메뉴도 추천해요</span>
+					</h6>
+					<div class="tit-tail hidden"></div>
+				</div>
+				<div class="card-group">
+					<div class="card" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">청구 요금</span>
+								<span class="txt">이번달과 지난달<br>요금 조회</span>
+							</div>
+						</div>
+					</div>
+					<div class="card" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">요금 바로납부</span>
+								<span class="txt">청구요금 미리납부</span>
+							</div>
+						</div>
+					</div>
+					<div class="card" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-home-billing.png" alt="청구요금">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">요금 바로납부</span>
+								<span class="txt">청구요금 미리납부</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cont__wrap cont__wrap-counsel accordion-container">
+				<div class="con__tit-box accordion-header" role="button" tabindex="0">
+					<span class="txt-sub">문의사항을 찾기 어려우신가요</span>
+					<h6 class="tit-head">
+						<span class="txt-title">상담사와 이야기 해보세요</span>
+					</h6>
+					<div class="tit-tail">
+						<span class="img-box ico-toggle">
+							<img src="../static/images/icon/ic-councel-down.svg" alt="">
+						</span>
+					</div>
+				</div>
+				<div class="card-group threeby accordion-content">
+					<div class="card detail" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-card-chatbot.png" alt="챗봇상담">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">챗봇 상담</span>
+								<span class="txt">대기없이 바로</span>
+							</div>
+						</div>
+					</div>
+					<div class="card detail" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-card-ars-ai.png" alt="AI상담">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">AI 상담사</span>
+								<span class="txt">언제든지 빠른</span>
+							</div>
+						</div>
+					</div>
+					<div class="card detail" role="button" tabindex="0">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../static/images/icon/ic-card-calls.png" alt="챗봇상담">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">전화 상담</span>
+								<span class="txt">상세하고 친절한</span>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="chips chips-tag hidden">
+								<span class="txt">점심시간</span>
+							</div>
+						</div> 
+					</div>
+				</div>
+
+				<div class="btn-group conversion">
+					<button class="btn" type="button">
+						<span class="txt">음성 ARS로 전환</span>
+					</button>
+					<span class="divider"></span>
+					<button class="btn" type="button">
+						<span class="txt">홈 고객센터 문의</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
