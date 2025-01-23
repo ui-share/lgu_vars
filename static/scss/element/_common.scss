@@ -717,6 +717,15 @@ button {
 				color:var(--dt-gray11);
 				@include fw-5(12px);
 			}
+			&.roaming {
+				padding-top: 22px;
+				.row {
+					align-items: center;
+				}
+				.txt-price {
+					color: var(--dt-black)
+				}
+			}
 		}
 	}
 }

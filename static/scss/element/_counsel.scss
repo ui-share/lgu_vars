@@ -95,6 +95,16 @@
 			@include fw-5(14px);
 			color: var(--dt-gray11);
 		}
+		&.accordion-container {
+			.accordion-header .txt-title {
+				text-align: center;
+			}
+			&.open {
+				.accordion-content {
+					display: grid;
+				}
+			}
+		}
 	}
 }
 
