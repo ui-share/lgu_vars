@@ -561,6 +561,17 @@ button {
 .cont__wrap.cont__wrap-vertical .btn-group:has(.tooltip) .tooltip-wrap .tooltip-inner .txt-wrap {
   width: 100%;
 }
+.cont__wrap.cont__wrap-vertical:has(.card-group.bank) {
+  row-gap: 0;
+}
+.cont__wrap.cont__wrap-vertical:has(.card-group.bank) .con__tit-box {
+  padding-bottom: 16px;
+}
+.cont__wrap.cont__wrap-vertical:has(.card-group.bank) .con__tit-box::before {
+  content: "";
+  display: block;
+  width: 100%;
+}
 .cont__wrap.tabnav__wrap {
   padding-right: 0;
   padding-left: 0;
@@ -639,6 +650,13 @@ button {
   width: 100%;
   height: 100%;
   vertical-align: top;
+}
+
+.txt-caution {
+  color: var(--dt-gray11);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
 }
 
 /* text-box */
@@ -3119,29 +3137,12 @@ input {
   text-align: center;
   border-radius: 50%;
   border: 2px solid transparent;
+  transition: border 0.2s ease, color 0.18s ease-in;
 }
 .popup-body .calendar-box .schedule-cont-wrap.list-month li.current .btn-month {
   color: var(--dt-primary);
 }
-.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  height: 42px;
-  background-color: rgba(227, 0, 132, 0.2);
-}
-.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed)::before {
-  width: 42px;
-}
-.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected:has(.pointed):nth-child(4n)::before {
-  left: unset;
-  right: 0;
-}
-.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected .btn-month.pointed {
+.popup-body .calendar-box .schedule-cont-wrap.list-month li.is-selected .btn-month {
   color: var(--dt-primary);
   background-color: var(--dt-white);
   border-color: var(--dt-primary);

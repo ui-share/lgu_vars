@@ -208,35 +208,35 @@
 						text-align:center;
 						border-radius:50%;
 						border:2px solid transparent;
+						transition: border 0.2s ease, color 0.18s ease-in;
 					}
 					&.current {
 						.btn-month{color:var(--dt-primary);}
 					}
 					&.is-selected {
-						&::before {
-							content:'';display:block;
-							position:absolute;
-							top:50%;transform:translateY(-50%);left:0;
-							// z-index:-1;
-							width:100%;height:42px;
-							background-color:rgba(227, 0, 132, 0.2);
-						}
-						&:has(.pointed) {
-							&::before {
-								width:42px;
-							}
-							&:nth-child(4n) {
-								&::before {
-									left:unset;right:0;
-								}
-							}
-						}
+						// &::before {
+						// 	content:'';display:block;
+						// 	position:absolute;
+						// 	top:50%;transform:translateY(-50%);
+						//  left:0;
+						// 	// z-index:-1;
+						// 	width:100%;height:42px;
+						// 	background-color:rgba(227, 0, 132, 0.2);
+						// }
+						// &:has(.pointed) {
+						// 	&::before {
+						// 		width:42px;
+						// 	}
+						// 	&:nth-child(4n) {
+						// 		&::before {
+						// 			left:unset;right:0;
+						// 		}
+						// 	}
+						// }
 						.btn-month{
-							&.pointed {
-								color:var(--dt-primary);
-								background-color:var(--dt-white);
-								border-color:var(--dt-primary);
-							}
+							color:var(--dt-primary);
+							background-color:var(--dt-white);
+							border-color:var(--dt-primary);
 						}
 					}
 					&.is-disabled {
