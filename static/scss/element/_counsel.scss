@@ -96,8 +96,11 @@
 			color: var(--dt-gray11);
 		}
 		&.accordion-container {
-			.accordion-header .txt-title {
-				text-align: center;
+			.accordion-header {
+				padding: 0;
+				.txt-title {
+					text-align: center;
+				}	
 			}
 			&.open {
 				.accordion-content {

@@ -2249,6 +2249,9 @@ button {
   font-weight: 500;
   color: var(--dt-gray11);
 }
+.counsel .cont__wrap.accordion-container .accordion-header {
+  padding: 0;
+}
 .counsel .cont__wrap.accordion-container .accordion-header .txt-title {
   text-align: center;
 }
