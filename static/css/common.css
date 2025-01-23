@@ -3222,15 +3222,13 @@ input {
   transition: transform 0.3s ease;
 }
 .accordion-container .accordion-content {
-  visibility: hidden;
-  height: 0;
+  display: none;
 }
 .accordion-container.open .accordion-header .ico-toggle {
   transform: rotate(180deg);
 }
 .accordion-container.open > .accordion-content {
-  visibility: visible;
-  height: auto;
+  display: block;
 }
 .accordion-container.open > .accordion-content:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
   border-top: 1px solid var(--dt-gray06);
@@ -3290,7 +3288,7 @@ input {
 .accordion-header.chckbox-area {
   position: relative;
   align-items: center;
-  padding: 20px 0 0;
+  padding: 20px 0 10px;
 }
 .accordion-header.chckbox-area .chck-group {
   width: calc(100% - 30px);
@@ -3304,7 +3302,7 @@ input {
   overflow-y: auto;
 }
 .accordion-header.chckbox-area + .accordion-content .bullet-list {
-  margin-top: 12px;
+  padding-bottom: 16px;
 }
 
 .accordion-content .info-price-detail {
