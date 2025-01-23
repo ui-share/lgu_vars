@@ -422,6 +422,7 @@ input {
     &.code {
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         padding: 42px 0 0 0;
         gap: 6px;
@@ -535,7 +536,7 @@ input {
 .auth-wrap {
 	text-align: center;
 	padding-bottom: 26px;
-	.txt {
+	> .txt {
 		@include fw-5();
 		color: var(--dt-gray11);
 		margin-bottom: 10px;
@@ -557,6 +558,22 @@ input {
 	.validation-txt {
 		text-align: left;
 	}
+    .btn-group {
+        padding-top: 38px;
+        .btn {
+            width: unset;
+            margin: 0 auto;
+        }
+    }
+    &:has(.badge-time) {
+        .input-control {
+            padding-top: 28px;
+            gap: 24px;
+        }
+    }
+    &.auth_number {
+        padding-bottom: 4px;
+    }
 }
 
 .input-col-wrap {

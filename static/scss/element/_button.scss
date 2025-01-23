@@ -69,6 +69,7 @@
     &.flex-row {
         @include flexRow();
         justify-content: space-between;align-items:center;
+        width: 100%;
         &:not(.accordion-header) {
             gap: 8px;
         }

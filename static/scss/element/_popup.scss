@@ -283,6 +283,10 @@
 			&.between {
 				justify-content: space-between;
 			}
+			.delay-txt {
+				@include fw-5(14px);
+				color: var(--dt-gray11);
+			}
 		}
 
 		// 자녀선택 버튼
