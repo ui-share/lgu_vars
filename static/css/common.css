@@ -952,6 +952,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .list-wrap .list-box:first-child {
   padding-top: 0;
@@ -963,14 +964,15 @@ button {
 .list-wrap .list-box .head {
   font-size: 14px;
   font-weight: 500;
+  line-height: 24px;
   color: var(--dt-gray14);
-  width: 110px;
 }
 .list-wrap .list-box .tail {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-black);
   text-align: right;
+  max-width: 162px;
 }
 
 /* h7 txt 스타일*/

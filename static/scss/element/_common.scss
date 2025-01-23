@@ -802,15 +802,18 @@ button {
 			border-bottom: 1px solid var(--dt-gray06);
 		}
 		@include flexBox(between, center);
+		flex-wrap: wrap;
 		.head {
 			@include fw-5(14px);
+			line-height:24px;
 			color: var( --dt-gray14);
-			width: 110px;
 		}
 		.tail {
 			@include fw-5(14px);
 			color: var(--dt-black);
 			text-align: right;
+			max-width:162px;
+			// padding-top: 8px;
 		}
 	}
 
