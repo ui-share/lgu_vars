@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>조회_휴대폰결제이용내역_일반/정기결제</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" href="../../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/search.css">
+
+    <!-- Scripts -->
+
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util prev"><span>이전</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <!-- 홀맨 배너 영역// -->
+            <div class="section__cont summary"><!-- 청구요금조회 -->
+                <div class="cont__wrap cont__wrap-MOPaymentUsed">
+                    <div class="select-billdate">
+                        <span class="txt-select-wrap">
+                            <button type="button" class="chips chips-date">
+                                <span class="txt">24년 03월</span>
+                                <span class="arrow"></span>
+                            </button>
+                            결제금액은
+                        </span>
+                    </div>
+                    <div class="cont__txt-box">
+						<h4 class="txt price">
+                            일반/정기&nbsp;
+                            <span class="deco">30,000</span>
+                            <span class="color-prim">원</span>
+						</h4>
+					</div>
+                    <div class="cont__txt-box">
+						<h4 class="txt price">
+                            스토어/콘텐츠&nbsp;                         
+                            <span class="deco">10,000</span><span class="color-prim">원</span>
+						</h4>
+					</div>
+				</div>
+            </div>
+
+            <div class="section__cont desc">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+                        <h6 class="tit-head">
+                            <span class="txt-title">휴대폰 결제 이용내역</span>
+                        </h6> 
+                    </div>
+                    <div class="segment__wrap">
+                        <div class="segnav">
+                            <input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
+                            <label for="seg1" class="segment">일반/정기 결제</label>
+                            
+                            <input type="radio" class="seg-trigger seg2" id="seg2" name="tab">
+                            <label for="seg2" class="segment">스토어/콘텐츠 결제</label>
+                            
+                            <div class="marker-box">
+                                <div class="marker"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="segment__cont-wrap">
+                        <!-- 이용 내역 없을 때 -->
+                        <div class="card solid">
+                            이용내역 넣기
+                        </div>
+                        <div class="card solid center">
+                            <div class="card-body">
+                                <span class="img-box">
+                                    <img src="../../static/images/icon/ic-card-bill_x.png" alt="결제 이용 내역 없음">
+                                </span>
+                                <div class="text-box">
+                                    <span class="txt">결제 이용 내역이 없어요</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 추가된 납부방법이 있는 경우 -->
+                    <div class="info-col-wrap">
+                        <div class="plan-wrap">
+                            <div class="list-plan line">
+                                <div class="row">
+                                    <span class="txt-title">
+                                        은행/증권사
+                                    </span>
+                                    <span class="txt-desc ico">
+                                        <span class="img-box">
+                                            <img src="../../../../static/images/icon/ic-bank/ic-16-woori.svg" alt="">
+                                        </span>
+                                        우리은행
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-title ico">
+                                        계좌번호
+                                    </span>
+                                    <span class="txt-desc">1234-****-****-5678</span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-title ico">
+                                        결제일
+                                        <button class="img-box btn-tooltip">
+                                            <img src="../../../../static/images/icon/ic-bullet-info.svg" alt="">
+                                        </button>
+                                        <span class="tooltip-wrap">
+                                            <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="right"> -->
+                                            <div class="tooltip">
+                                                <div class="tooltip-inner">
+                                                    <span class="txt-wrap">
+                                                        설명 문구 입니다.설명 문구 입니다.설명 문구설명 문구 입니다.설명 문구 입니다.설명 문구
+                                                    </span>
+                                                    <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                                </div>
+                                                <div data-popper-arrow></div>
+                                            </div>
+                                        </span>
+                                    </span>
+                                    <button class="txt-desc ico">
+                                        01월 01일<span class="img-box ico20"><img src="../../../../static/images/icon/ic-chips-arrow-gray.svg"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 추가된 납부방법이 없는 경우 -->
+                    <div class="card solid center">
+                        <div class="card-body">
+                            <span class="img-box">
+                                <img src="../../../../static/images/icon/ic-card-card.png" alt="신용카드 자동이체 신청 가능">
+                            </span>
+                            <div class="text-box">
+                                <span class="txt">은행/신용카드 자동이체를<br>신청할 수 있어요</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-group flex-column">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">납부방법 변경</span>
+                        </button>
+                        <button type="button" class="btn line btn-sec">
+                            <span class="txt">이전 납부 내역</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="popup-wrapper">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt">청구 월을 선택해 주세요</span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+                <div class="calendar-box year-month">
+                    <div class="nav-schedule">
+                        <!-- 
+                            btn-prev, btn-next에 is-disabled 추가 시 비활성화, 클릭 동작 비활성화
+                        -->
+                        <button type="button" class="btn-prev img-box">
+                            <span>이전버튼</span>
+                        </button>
+                        <span class="txt-wrap">
+                            <span>2024</span>
+                            <!-- <span>24년</span>
+                            <span>11월</span> -->
+                        </span>
+                        <button type="button" class="btn-next img-box is-disabled">
+                            <span>다음버튼</span>
+                        </button>
+                    </div>
+                    <ul class="schedule-cont-wrap list-month">
+                        <!--
+                            li is-selected(선택함) / current(당월) / is-disabled(선택할수없음) 클래스로 스타일 조작
+                            기간 선택 시 : 선택된 기간개수만큼 li에 is-selected 추가 및 시작월, 종료월 btn-month에는 각 pointed 클래스 추가
+                        -->
+                        <li><button class="btn-month">1월</button></li>
+                        <li><button class="btn-month">2월</button></li>
+                        <li><button class="btn-month">3월</button></li>
+                        <li class="is-selected"><button class="btn-month pointed">4월</button></li>
+
+                        <li class="is-selected"><button class="btn-month">5월</button></li>
+                        <li class="is-selected"><button class="btn-month">6월</button></li>
+                        <li class="is-selected"><button class="btn-month pointed">7월</button></li>
+                        <li><button class="btn-month">8월</button></li>
+
+                        <li class="current"><button class="btn-month">9월</button></li>
+                        <li><button class="btn-month">10월</button></li>
+                        <li class="is-disabled"><button class="btn-month">11월</button></li>
+                        <li class="is-disabled"><button class="btn-month ">12월</button></li>
+                    </ul>
+                </div>
+            </div>
+			<div class="popup-footer hidden"></div>
+		</div>
+	</div>
+</body>
+</html>
