@@ -639,6 +639,14 @@ button {
   font-weight: 500;
   color: var(--dt-gray11);
 }
+.text-box .txt .btn-tooltip {
+  transform: translateY(-1px);
+}
+.text-box .txt-prim-md {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dt-primary);
+}
 
 /* 진행률 바 default */
 .progress-area .progress-bg {
@@ -2379,11 +2387,11 @@ input {
   background: transparent;
 }
 
-.input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
+.input-control.tltip-error .validation-txt, .input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control.normal.tltip-error .validation-txt, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
   display: none;
 }
 
-.input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
+.input-control.tltip-error .input-group .input-label, .input-control.error .input-group .input-label, .input-control.success .input-group .input-label, .input-control.floating.error .input-group .input-label, .input-control.floating.success .input-group .input-label, .input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
   display: block;
 }
 
@@ -2470,6 +2478,16 @@ input {
 .input-control.normal.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
 }
+.input-control.normal.tltip-error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.normal.tltip-error .input-group .input-row .input-field {
+  color: var(--dt-error);
+}
+.input-control.normal.tltip-error .validation-txt {
+  background-image: url(../images/icon/ic-input-valchck-error.svg);
+  color: var(--dt-error);
+}
 .input-control.normal.disabled .input-group .input-row {
   pointer-events: none;
   border-bottom: 2px solid var(--dt-gray08);
@@ -2510,11 +2528,17 @@ input {
 .input-control.floating.success input::placeholder {
   opacity: 0;
 }
+.input-control.floating.success .input-group .input-label {
+  top: -6px;
+}
 .input-control.floating.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
 }
 .input-control.floating.error input::placeholder {
   opacity: 0;
+}
+.input-control.floating.error .input-group .input-label {
+  top: -6px;
 }
 .input-control.floating.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
@@ -2536,6 +2560,9 @@ input {
 .input-control.floating.read-only .input-group .util-box .clear-button {
   pointer-events: none;
 }
+.input-control.success .input-group .input-label {
+  top: -6px;
+}
 .input-control.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
 }
@@ -2544,11 +2571,27 @@ input {
   background-image: url(../images/icon/ic-input-valchck-success.svg);
   color: var(--dt-success);
 }
+.input-control.error .input-group .input-label {
+  top: -6px;
+}
 .input-control.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
 }
 .input-control.error .validation-txt {
   display: block;
+  background-image: url(../images/icon/ic-input-valchck-error.svg);
+  color: var(--dt-error);
+}
+.input-control.tltip-error .input-group .input-label {
+  top: -6px;
+}
+.input-control.tltip-error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.tltip-error .input-group .input-row .input-field {
+  color: var(--dt-error);
+}
+.input-control.tltip-error .validation-txt {
   background-image: url(../images/icon/ic-input-valchck-error.svg);
   color: var(--dt-error);
 }
@@ -3608,6 +3651,7 @@ table td {
   align-self: flex-start;
   font-size: 0;
   text-indent: -9999px;
+  min-width: 24px;
   width: 24px;
   height: 24px;
   background-image: url(../images/icon/ic-close24-gray10.svg);
@@ -3696,4 +3740,11 @@ div[data-popper-arrow]::before {
 .chckbox-area .bubble-box.topleft {
   bottom: 33px;
   left: -12px;
+}
+
+.lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] {
+  transform: translate3d(123px, -408px, 0px) !important;
+}
+.lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow] {
+  transform: translate3d(172px, 0px, 0px) !important;
 }

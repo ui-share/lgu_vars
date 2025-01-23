@@ -523,6 +523,13 @@ button {
 	.txt{
 		@include fw-5(14px);
 		color: var(--dt-gray11);
+		.btn-tooltip {
+			transform: translateY(-1px);
+		}
+	}
+	.txt-prim-md {
+		@include fw-7(16px);
+		color: var(--dt-primary);
 	}
 }
 

@@ -138,6 +138,21 @@ input {
                 }
             }
         }
+        &.tltip-error {
+            .input-group {
+                .input-row {
+                    border-bottom: 2px solid var(--dt-error);
+                    .input-field {
+                        color: var(--dt-error);
+                    }
+                }
+            }
+            .validation-txt {
+                @extend %hidden;
+                background-image: url(../images/icon/ic-input-valchck-error.svg);
+                color: var(--dt-error);
+            }
+        }
         &.disabled {
             .input-group {
                 .input-row {
@@ -213,6 +228,10 @@ input {
                 }
             }
             .input-group {
+                .input-label {
+                    top: -6px; // 라벨이 위로 올라가도록 변경
+                    @extend %visible;
+                }
                 .input-row {
                     border-bottom: 2px solid var(--dt-success);
                 }
@@ -226,6 +245,10 @@ input {
                 }
             }
             .input-group {
+                .input-label {
+                    top: -6px; // 라벨이 위로 올라가도록 변경
+                    @extend %visible;
+                }
                 .input-row {
                     border-bottom: 2px solid var(--dt-error);
                 }
@@ -264,6 +287,10 @@ input {
     }
     &.success {
         .input-group {
+            .input-label {
+                top: -6px; // 라벨이 위로 올라가도록 변경
+                @extend %visible;
+            }
             .input-row {
                 border-bottom: 2px solid var(--dt-success);
             }
@@ -277,12 +304,35 @@ input {
 
     &.error {
         .input-group {
+            .input-label {
+                top: -6px; // 라벨이 위로 올라가도록 변경
+                @extend %visible;
+            }
             .input-row {
                 border-bottom: 2px solid var(--dt-error);
             }
         }
         .validation-txt {
             display: block;
+            background-image: url(../images/icon/ic-input-valchck-error.svg);
+            color: var(--dt-error);
+        }
+    }
+    &.tltip-error {
+        .input-group {
+            .input-label {
+                top: -6px; // 라벨이 위로 올라가도록 변경
+                @extend %visible;
+            }
+            .input-row {
+                border-bottom: 2px solid var(--dt-error);
+                .input-field {
+                    color: var(--dt-error);
+                }
+            }
+        }
+        .validation-txt {
+            @extend %hidden;
             background-image: url(../images/icon/ic-input-valchck-error.svg);
             color: var(--dt-error);
         }

@@ -110,6 +110,7 @@
 	align-self:flex-start;
 	font-size:0;
 	text-indent: -9999px;
+	min-width: 24px;
 	width:24px;height:24px;
 	background-image: url(../images/icon/ic-close24-gray10.svg);
 	background-size: 24px;
@@ -193,4 +194,13 @@ div[data-popper-arrow]::before {
 .chckbox-area .bubble-box.topleft { 
 	bottom:33px;
 	left:-12px;
+}
+.lunch-toolWrap {
+	.tooltip-wrap[data-popper-placement^='top'] {
+		transform: translate3d(123px, -408px, 0px) !important;
+		div[data-popper-arrow] { // default
+			transform: translate3d(172px, 0px, 0px) !important;
+
+		}
+	}
 }
