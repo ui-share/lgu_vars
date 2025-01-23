@@ -705,6 +705,9 @@ button {
 .plan-wrap .list-plan.line .row + .row {
   margin-top: 16px;
 }
+.plan-wrap .list-plan.line .row .txt-desc {
+  max-width: 162px;
+}
 .plan-wrap .list-plan .row + .row {
   margin-top: 12px;
 }

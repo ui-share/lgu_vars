@@ -586,6 +586,7 @@ button {
 					border-top:1px solid var(--dt-gray06);
 				}
 				& + .row {margin-top:16px;}
+				.txt-desc {max-width:162px;}
 			}
 		}
 		.row + .row {margin-top:12px;}
