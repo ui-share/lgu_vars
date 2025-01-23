@@ -197,6 +197,9 @@ button {
 	cursor: pointer;
 }
 /* Util class */
+.noneScroll {
+	overflow: hidden !important;
+}
 .hidden {
 	display: none !important;
 }
