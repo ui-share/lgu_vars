@@ -290,6 +290,10 @@ button {
   margin-top: 24px !important;
 }
 
+.mt-28 {
+  margin-top: 28px !important;
+}
+
 .mt-40 {
   margin-top: 40px !important;
 }
@@ -639,6 +643,14 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
+}
+.text-box .txt .btn-tooltip {
+  transform: translateY(-1px);
+}
+.text-box .txt-prim-md {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dt-primary);
 }
 
 /* 진행률 바 default */
@@ -2380,11 +2392,11 @@ input {
   background: transparent;
 }
 
-.input-control.floating .input-group .input-label, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
+.input-control.email-form .input-group .input-row .util-box, .input-control.tltip-error .validation-txt, .input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control.normal.tltip-error .validation-txt, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
   display: none;
 }
 
-.input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
+.input-control.email-form .input-group .input-label, .input-control.tltip-error .input-group .input-label, .input-control.error .input-group .input-label, .input-control.success .input-group .input-label, .input-control.floating.error .input-group .input-label, .input-control.floating.success .input-group .input-label, .input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
   display: block;
 }
 
@@ -2509,6 +2521,16 @@ input {
 .input-control.normal.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
 }
+.input-control.normal.tltip-error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.normal.tltip-error .input-group .input-row .input-field {
+  color: var(--dt-error);
+}
+.input-control.normal.tltip-error .validation-txt {
+  background-image: url(../images/icon/ic-input-valchck-error.svg);
+  color: var(--dt-error);
+}
 .input-control.normal.disabled .input-group .input-row {
   pointer-events: none;
   border-bottom: 2px solid var(--dt-gray08);
@@ -2546,8 +2568,20 @@ input {
 .input-control.floating.focused .input-group .input-row .input-field {
   caret-color: var(--dt-primary);
 }
+.input-control.floating.success input::placeholder {
+  opacity: 0;
+}
+.input-control.floating.success .input-group .input-label {
+  top: -6px;
+}
 .input-control.floating.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
+}
+.input-control.floating.error input::placeholder {
+  opacity: 0;
+}
+.input-control.floating.error .input-group .input-label {
+  top: -6px;
 }
 .input-control.floating.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
@@ -2569,6 +2603,9 @@ input {
 .input-control.floating.read-only .input-group .util-box .clear-button {
   pointer-events: none;
 }
+.input-control.success .input-group .input-label {
+  top: -6px;
+}
 .input-control.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
 }
@@ -2577,11 +2614,27 @@ input {
   background-image: url(../images/icon/ic-input-valchck-success.svg);
   color: var(--dt-success);
 }
+.input-control.error .input-group .input-label {
+  top: -6px;
+}
 .input-control.error .input-group .input-row {
   border-bottom: 2px solid var(--dt-error);
 }
 .input-control.error .validation-txt {
   display: block;
+  background-image: url(../images/icon/ic-input-valchck-error.svg);
+  color: var(--dt-error);
+}
+.input-control.tltip-error .input-group .input-label {
+  top: -6px;
+}
+.input-control.tltip-error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
+.input-control.tltip-error .input-group .input-row .input-field {
+  color: var(--dt-error);
+}
+.input-control.tltip-error .validation-txt {
   background-image: url(../images/icon/ic-input-valchck-error.svg);
   color: var(--dt-error);
 }
@@ -2653,6 +2706,76 @@ input {
 .input-control.code .validation-txt {
   text-align: left;
 }
+.input-control.email-form .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-control.email-form .input-group .input-label {
+  top: -6px;
+  font-size: 12px;
+}
+.input-control.email-form .input-group .input-row {
+  width: 100%;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.email-form .input-group .input-row .util-box {
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  column-gap: 6px;
+}
+.input-control.email-form .input-group .input-row .util-box .clear-btn {
+  border: none;
+  cursor: pointer;
+  min-width: 33px;
+  width: 33px;
+  height: 40px;
+  background-image: url(../images/icon/ic-input-clear.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+.input-control.email-form .input-group .slct-email-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 12px 38px 12px 10px;
+  background-color: transparent;
+  border: 2px solid var(--dt-gray08);
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 6px center;
+}
+.input-control.email-form .input-group .slct-email-wrap .slct-txt {
+  min-width: 85px;
+  max-width: 142px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.input-control.email-form .input-group .slct-email-wrap .slct-txt.point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+}
+.input-control.email-form.focused .input-group .input-field {
+  caret-color: var(--dt-primary);
+  cursor: text;
+}
+.input-control.email-form.focused .input-group .input-row {
+  border-bottom: 2px solid var(--dt-primary);
+}
+.input-control.email-form.success .input-group .input-row {
+  border-bottom: 2px solid var(--dt-success);
+}
+.input-control.email-form.error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
+}
 
 .auth-wrap {
   text-align: center;
@@ -2670,7 +2793,7 @@ input {
   color: var(--dt-black);
   line-height: 1.4;
 }
-.auth-wrap .costomer-name {
+.auth-wrap .customer-name {
   font-size: 24px;
   font-weight: 600;
 }
@@ -3654,6 +3777,7 @@ table td {
   align-self: flex-start;
   font-size: 0;
   text-indent: -9999px;
+  min-width: 24px;
   width: 24px;
   height: 24px;
   background-image: url(../images/icon/ic-close24-gray10.svg);
@@ -3742,4 +3866,11 @@ div[data-popper-arrow]::before {
 .chckbox-area .bubble-box.topleft {
   bottom: 33px;
   left: -12px;
+}
+
+.lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] {
+  transform: translate3d(123px, -408px, 0px) !important;
+}
+.lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow] {
+  transform: translate3d(172px, 0px, 0px) !important;
 }

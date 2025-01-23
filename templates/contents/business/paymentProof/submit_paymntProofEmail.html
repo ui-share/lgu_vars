@@ -46,9 +46,12 @@
 					</div>
                     <div class="txt-infoWrap">
                         발급 기간
+                        <!-- 
+                            삭제됨
                         <span class="subTxt-info">
                             최대 12개월
-                        </span>
+                        </span> 
+                        -->
                     </div>
                     <!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
                     <button class="slct-perd-wrap">
@@ -66,9 +69,15 @@
                         input에 대한 이벤트 정보는
                         ./templates/element/input.html
                         페이지 주석 참고
+                        
+                        이메일폼 관련 클래스 요약
+                        기본 : <div class="input-control email-form">
+                        이메일 입력 : <div class="input-control email-form focused">
+                        유효성 검사 성공 : <div class="input-control email-form success">
+                        유효성 검사 에러 : <div class="input-control email-form error">
                     -->
                     <!-- 이메일 입력 -->
-                    <div class="input-control normal focused">				
+                    <div class="input-control email-form focused mt-28">				
                         <div class="input-group">
                             <label class="input-label">이메일</label>
                             <div class="input-row">
@@ -76,15 +85,18 @@
                                 <div class="util-box">
                                     <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                     <button type="button" class="clear-btn hidden"></button>
-                                    <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-                                    <span class="input-unit hidden">
-                                        <span class="unit-point">숫자포인트</span>단위들어감
-                                    </span>
                                 </div>
                             </div>
-                            <!-- 
-                                <div class="util-box"> : clear button 과 unit이 들어감 
-                            -->
+                            <button class="slct-email-wrap">
+                                <span class="slct-txt" type="button">이메일선택</span>
+                                <!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
+                                <!-- 
+                                <span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+                                -->
+                                <span class="slct-txt point hidden" type="button">이메일 선택</span>
+
+                            </button>
+
                         </div>
                         <div class="validation-txt">validation 메시지 노출</div>
                     </div>

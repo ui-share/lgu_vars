@@ -200,3 +200,11 @@
   background-image: url(../images/img/img-hm-roaming.png);
   background-position: right 10px top 44px;
 }
+.cont__wrap.cont__wrap-billMthdChng {
+  min-height: 154px;
+  background-image: url(../images/img/img-hm-bill.png);
+  background-position: right 10px top 35px;
+}
+.cont__wrap.cont__wrap-billMthdChng .cont__txt-box {
+  row-gap: 0;
+}

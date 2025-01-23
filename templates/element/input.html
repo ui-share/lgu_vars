@@ -8,7 +8,7 @@
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
 	<meta name="theme-color" content="#ffffff">
-	<title>LGU+ 눈으로 보는 ARS</title>
+	<title>인풋</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
@@ -43,12 +43,15 @@
 				**validation error
 				-레이블 플로팅 X: input-group normal error 
 				-레이블 플로팅 O: input-group floating error 
+				**validation 메시지 대신 툴팁이 나올 경우
+				-레이블 플로팅 X: input-group normal tltip-error 
+				-레이블 플로팅 O: input-group floating tltip-error 
 				**read only
 
 				**disabled
 			-->
 			<!-- input normal -->
-			<div class="input-control normal">				
+			<div class="input-control normal tltip-error">				
 				<div class="input-group">
 					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
 					<div class="input-row">
@@ -70,7 +73,7 @@
 			</div>
 			<div style="height: 100px;"></div>
 			<!-- input floating -->
-			<div class="input-control floating">				
+			<div class="input-control floating tltip-error">				
 				<div class="input-group">
 					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
 					<div class="input-row">
@@ -87,6 +90,41 @@
 					<!-- 
 						<div class="util-box"> : clear button 과 unit이 들어감 
 					-->
+				</div>
+				<div class="validation-txt">validation 메시지 노출</div>
+			</div>
+			<!-- 
+				input에 대한 이벤트 정보는
+				./templates/element/input.html
+				페이지 주석 참고
+				
+				이메일폼 관련 클래스 요약
+				기본 : <div class="input-control email-form">
+				이메일 입력 : <div class="input-control email-form focused">
+				유효성 검사 성공 : <div class="input-control email-form success">
+				유효성 검사 에러 : <div class="input-control email-form error">
+			-->
+			<!-- input email -->
+			<div class="input-control email-form focused mt-28">				
+				<div class="input-group">
+					<label class="input-label">이메일</label>
+					<div class="input-row">
+						<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+						<div class="util-box">
+							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+							<button type="button" class="clear-btn hidden"></button>
+						</div>
+					</div>
+					<button class="slct-email-wrap">
+						<span class="slct-txt" type="button">이메일선택</span>
+						<!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
+						<!-- 
+						<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+						-->
+						<span class="slct-txt point hidden" type="button">이메일 선택</span>
+
+					</button>
+
 				</div>
 				<div class="validation-txt">validation 메시지 노출</div>
 			</div>

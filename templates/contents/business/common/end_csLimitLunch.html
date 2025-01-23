@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" href="../../../../static/css/common.css">
+    <link rel="stylesheet" href="../../../../static/css/service.css">
+    
+    <!-- Scripts -->
+    <script src="../../../../static/js/tooltip/popper.js"></script>
+    <script>
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+        function initCheckDevice() {
+            // PC
+            if (!isMobile) {
+                document.body.classList.add("is-pc");
+            }
+        }
+        window.onload = ()=> {
+            initCheckDevice();
+
+            /*
+                임시코드입니다. 수정하여 사용 요망
+            */
+            
+            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+            const tooltipBtn = document.querySelector('.btn-tooltip'); 
+            const tooltip = document.querySelector('.tooltip-wrap');
+        
+            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                placement: 'right',
+                modifiers: [
+                    {
+                        name: 'offset',
+                        options: {
+                            offset: [0, 8],
+                        },
+                    },
+                    {
+                        name: 'flip',
+                        options: {
+                            fallbackPlacements: ['top', 'right'],
+                        },
+                    },
+                ],
+            });
+
+            function show() {
+                // Make the tooltip visible
+                tooltip.setAttribute('data-show', '');
+
+                // Enable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: true },
+                    ],
+                }));
+
+                // Update its position
+                popperInstance.update();
+            }
+
+            function hide() {
+                // Hide the tooltip
+                tooltip.removeAttribute('data-show');
+
+                // Disable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: false },
+                    ],
+                }));
+            }
+
+            const showEvents = ['click', 'focus'];
+            const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+            showEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, show);
+            });
+
+            hideEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, hide);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+            <div class="header__util">
+                <button type="button" class="btn btn-util end"><span>이전</span></button>
+            </div>
+            <div class="header__btn btn-group">
+                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+            </div>
+        </header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="section__cont">
+                <!-- 화면 요소를 위해 반드시 section__cont 하나만 가지고 간다 -->
+                <!-- 
+                    1.상세 내용이 들어가는 상단 cont__wrap 1개 / 버튼그룹이 들어가는 cont__wrap 1개 
+                    2.로 짠 뒤에 상단 cont__wrap에만 내용을 추가한다.
+                -->
+                <div class="cont__wrap cont__wrap-service">
+                    <div class="inform-wrap">
+                        <span class="inform-img warning"></span>
+                        <div class="text-box">
+                            <span class="tit">지금은 점심시간으로<br>제한된 상담만 가능합니다</span>
+                            <!-- 바텀시트 올라오는 버튼 -->
+                            <button type="button" class="chips chips-all">
+                                <span class="txt">상담가능 항목</span>
+                                <span class="arrow"></span>
+                            </button>
+                            <span class="txt lunch-toolWrap">
+                                고객센터 점심시간: 낮 12시 ~ 오후 1시
+                                <button class="img-box btn-tooltip">
+                                    <img src="../../../../static/images/icon/ic-circle-quesition.svg" alt="">
+                                </button>
+                                <span class="tooltip-wrap">
+                                    <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
+                                    <!--
+                                        const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                            // placement: 'bottom', 으로 툴팁 위치 조작
+                                            
+                                            현재 디자인 케이스 : bottom, right, top
+                                        }
+                                    -->
+                                    <div class="tooltip">
+                                        <div class="tooltip-inner">
+                                            <span class="txt-wrap">
+                                                오후 1시부터 전화상담이 가능하고 3시 이후에 더 빠르게 연결할 수 있어요
+                                            </span>
+                                            <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                        </div>
+                                        <div data-popper-arrow=""></div>
+                                    </div>
+                                </span>
+                            </span>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="cont__wrap cont__wrap-btBtn">
+                    <div class="card-group flex-column">
+                        <div class="sub-tit">챗봇이나 AI 상담사를 통해서도<br>간단한 문의 및 변경/신청을 문의할 수 있어요</div>
+                        <div class="card horizon solid" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-home-chatbot.svg" alt="챗봇 연결">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">챗봇 연결</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card horizon solid" role="button" tabindex="0">
+                            <div class="card-body">
+                                <div class="item util">
+                                    <span class="img-box">
+                                        <img src="../../../../static/images/icon/ic-home-arsAi.svg" alt="AI 상담사 연결">
+                                    </span>
+                                </div>
+                                <div class="item text">
+                                    <span class="tit">AI 상담사 연결</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

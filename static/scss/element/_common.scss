@@ -209,6 +209,9 @@ button {
 .mt-24 {
 	margin-top: 24px !important;
 }
+.mt-28 {
+	margin-top: 28px !important;
+}
 .mt-40 {
 	margin-top: 40px !important;
 }
@@ -527,6 +530,13 @@ button {
 	.txt{
 		@include fw-5(14px);
 		color: var(--dt-gray11);
+		.btn-tooltip {
+			transform: translateY(-1px);
+		}
+	}
+	.txt-prim-md {
+		@include fw-7(16px);
+		color: var(--dt-primary);
 	}
 }
 
