@@ -90,6 +90,12 @@
 	.popup-footer {
 		background-color: var(--dt-white);
 		padding: 0 20px 20px 20px;
+				// 풀버튼일 경우 패딩 0
+		&:not(:has(.px-0)) {
+			.btn-group {
+				padding: 0;
+			}
+		}
 		.btn-group {
 			position: relative;
 			&::before {

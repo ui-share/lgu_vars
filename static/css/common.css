@@ -2848,6 +2848,9 @@ input {
   background-color: var(--dt-white);
   padding: 0 20px 20px 20px;
 }
+.popup-wrapper .popup-footer:not(:has(.px-0)) .btn-group {
+  padding: 0;
+}
 .popup-wrapper .popup-footer .btn-group {
   position: relative;
 }
