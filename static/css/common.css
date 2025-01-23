@@ -973,6 +973,7 @@ button {
   color: var(--dt-black);
   text-align: right;
   max-width: 162px;
+  margin-left: auto;
 }
 
 /* h7 txt 스타일*/
