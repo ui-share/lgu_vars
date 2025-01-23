@@ -86,7 +86,7 @@
     &.chckbox-area { // 체크박스 영역의 경우
         position:relative;
         align-items:center;
-        padding:20px 0 0;
+        padding:20px 0 10px;
         .chck-group {
             width:calc(100% - 30px);
         }
@@ -97,7 +97,7 @@
             max-height:112px;
             overflow-y:auto;
             .bullet-list {
-                margin-top:12px;
+                padding-bottom:16px;
             }
         }
     }

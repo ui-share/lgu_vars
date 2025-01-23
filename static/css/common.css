@@ -3167,7 +3167,7 @@ input {
 .accordion-header.chckbox-area {
   position: relative;
   align-items: center;
-  padding: 20px 0 0;
+  padding: 20px 0 10px;
 }
 .accordion-header.chckbox-area .chck-group {
   width: calc(100% - 30px);
@@ -3181,7 +3181,7 @@ input {
   overflow-y: auto;
 }
 .accordion-header.chckbox-area + .accordion-content .bullet-list {
-  margin-top: 12px;
+  padding-bottom: 16px;
 }
 
 .accordion-content .info-price-detail {

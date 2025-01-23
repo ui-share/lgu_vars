@@ -88,13 +88,10 @@
 			border:1px solid var(--dt-gray08);
 		}
 		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
-			.btn-group {
-				&::before {display:none;}
-			}
 			.accordion-container {
 				padding-left:20px;
 				padding-right:20px;
-				padding-bottom:20px;
+				padding-bottom:8px;
 			}
 			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
 		}
