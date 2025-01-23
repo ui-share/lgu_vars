@@ -8,17 +8,13 @@ input {
         opacity: 1;
     }
 }
-
 input::-webkit-outer-spin-button,
 
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-input[type=number] {
-    -moz-appearance: textfield;
-}
+input[type=number] { -moz-appearance: textfield;}
 input {
     -webkit-appearance: none;
     appearance: none;
@@ -56,6 +52,7 @@ input {
         .input-row {
             @include flexBox(between, center);
             column-gap: 6px;
+            border-bottom: 2px solid var(--dt-gray08);
             // 입력 필드 스타일
             .input-field {
                 width: 100%;
@@ -67,7 +64,28 @@ input {
                 cursor: text;
                 visibility: visible;
             }
-            border-bottom: 2px solid var(--dt-gray08);
+            .btn-field-dropdown {
+                padding:9px 0;
+                background-image: url(../images/icon/chevron_down_line_24.svg);
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position: right 2px center;
+                width: 100%;
+                text-align: left;
+                &:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
+                .ico {
+                    display:none;
+                    width:24px;
+                    height:24px;
+                    padding-top:1px;
+                    padding-bottom:1px;
+                    img {width:100%;transform:translateY(-2px);}
+                }
+                .txt {
+                    color: var(--dt-gray11);
+                    @include fw-6(18px);
+                }
+            }
         
             // Clear 버튼 : 기본상태-hidden
             .util-box {
@@ -111,6 +129,17 @@ input {
             }
             .input-row {
                 border-bottom: 2px solid var(--dt-gray08);
+
+                .btn-field-dropdown {// 은행/증권사 선택시
+                    padding-top:12px;
+                    .ico {
+                        display:inline-block;
+                        margin-right:2px;
+                    }
+                    .txt {
+                        color: var(--dt-gray16);
+                    }
+                }
             }
 
         }
@@ -387,6 +416,6 @@ input {
 
 .input-col-wrap {
     @include flexColum;
-    row-gap:10px;
+    row-gap:24px;
     .input-control:first-of-type {margin-top:18px;}
 }

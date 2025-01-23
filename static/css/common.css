@@ -2424,6 +2424,34 @@ input {
   cursor: text;
   visibility: visible;
 }
+.input-control .input-group .input-row .btn-field-dropdown {
+  padding: 9px 0;
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: right 2px center;
+  width: 100%;
+  text-align: left;
+}
+.input-control .input-group .input-row .btn-field-dropdown:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
+.input-control .input-group .input-row .btn-field-dropdown .ico {
+  display: none;
+  width: 24px;
+  height: 24px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.input-control .input-group .input-row .btn-field-dropdown .ico img {
+  width: 100%;
+  transform: translateY(-2px);
+}
+.input-control .input-group .input-row .btn-field-dropdown .txt {
+  color: var(--dt-gray11);
+  font-size: 18px;
+  font-weight: 600;
+}
 .input-control .input-group .input-row .util-box {
   margin-left: auto;
   display: flex;
@@ -2457,6 +2485,16 @@ input {
 }
 .input-control.normal .input-group .input-row {
   border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.normal .input-group .input-row .btn-field-dropdown {
+  padding-top: 12px;
+}
+.input-control.normal .input-group .input-row .btn-field-dropdown .ico {
+  display: inline-block;
+  margin-right: 2px;
+}
+.input-control.normal .input-group .input-row .btn-field-dropdown .txt {
+  color: var(--dt-gray16);
 }
 .input-control.normal.focused .input-group .input-field {
   caret-color: var(--dt-primary);
@@ -2650,7 +2688,7 @@ input {
 .input-col-wrap {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 24px;
 }
 .input-col-wrap .input-control:first-of-type {
   margin-top: 18px;
