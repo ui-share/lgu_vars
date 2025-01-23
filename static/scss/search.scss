@@ -177,7 +177,11 @@
 				.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
 			}
 		}
+		&.bank {
+			row-gap:16px;
+		}
 	}
+
 
 	&.cont__wrap-bill {
 		min-height:174px;

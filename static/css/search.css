@@ -204,6 +204,9 @@
   font-weight: 500;
   line-height: 21px;
 }
+.cont__wrap .card-group.bank {
+  row-gap: 16px;
+}
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;
   background-image: url(../images/img/img-hm-bill.png);

@@ -55,20 +55,22 @@
                     </div>
                     <ul class="schedule-cont-wrap list-month">
                         <!--
-                            li is-selected(선택함) / current(당월) / is-disabled(선택할수없음) 클래스로 스타일 조작
-                            기간 선택 시 : 선택된 기간개수만큼 li에 is-selected 추가 및 시작월, 종료월 btn-month에는 각 pointed 클래스 추가
+                            li 클래스 종류 
+                            : is-selected(선택함)
+                            / current(당월) 
+                            / is-disabled(선택할수없음) 클래스로 스타일 조작
                         -->
-                        <li><button class="btn-month">1월</button></li>
-                        <li><button class="btn-month">2월</button></li>
+                        <li class="current"><button class="btn-month">1월</button></li>
+                        <li class="is-selected"><button class="btn-month">2월</button></li>
                         <li><button class="btn-month">3월</button></li>
-                        <li class="is-selected"><button class="btn-month pointed">4월</button></li>
+                        <li><button class="btn-month">4월</button></li>
 
-                        <li class="is-selected"><button class="btn-month">5월</button></li>
-                        <li class="is-selected"><button class="btn-month">6월</button></li>
-                        <li class="is-selected"><button class="btn-month pointed">7월</button></li>
+                        <li><button class="btn-month">5월</button></li>
+                        <li><button class="btn-month">6월</button></li>
+                        <li><button class="btn-month">7월</button></li>
                         <li><button class="btn-month">8월</button></li>
 
-                        <li class="current"><button class="btn-month">9월</button></li>
+                        <li><button class="btn-month">9월</button></li>
                         <li><button class="btn-month">10월</button></li>
                         <li class="is-disabled"><button class="btn-month">11월</button></li>
                         <li class="is-disabled"><button class="btn-month ">12월</button></li>

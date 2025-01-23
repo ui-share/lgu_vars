@@ -451,6 +451,17 @@ button {
 				}
 			}
 		}
+		&:has(.card-group.bank) {
+			row-gap:0;
+			.con__tit-box {
+				padding-bottom:16px;
+				&::before {
+					content:'';
+					display:block;
+					width:100%;
+				}
+			}
+		}
 	}
 	&.tabnav__wrap {padding-right:0;padding-left:0;}
 	&.cont__wrap-singleCont {
@@ -528,6 +539,11 @@ button {
 		height: 100%;
 		vertical-align: top;
 	}
+}
+.txt-caution {
+    color:var(--dt-gray11);
+    @include fw-5(12px);
+    text-align:center;
 }
 /* text-box */
 .text-box {
