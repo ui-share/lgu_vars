@@ -135,6 +135,7 @@
 				.txt-price {
 					@include fw-7(16px);
 					line-height:24px;
+					text-align:right;
 				}
 				&.total {
 					.txt-title {color:var(--dt-gray11);}
