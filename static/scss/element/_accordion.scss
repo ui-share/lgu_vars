@@ -127,9 +127,9 @@
             @include fw-5(14px); 
             color:var(--dt-gray14);
         }
-        .txt-title {
-            @include ellipsis(3);
-        }
+        // .txt-title {
+        //     @include ellipsis(3);
+        // }
         .txt-price {
             min-width:82px;text-align:right;
         }
