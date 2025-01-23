@@ -226,4 +226,10 @@
 		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
+	&.cont__wrap-MOPaymentUsed {
+		min-height:154px;
+		background-image: url(../images/img/img-hm-MOpayment.png);
+		background-position: right -5px top 35px;
+		.cont__txt-box {row-gap:0}
+	}
 }
