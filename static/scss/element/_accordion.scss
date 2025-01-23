@@ -17,8 +17,8 @@
     }
 
     /* default */
+    > button.accordion-header {cursor: pointer;}
     .accordion-header {
-        cursor: pointer;
         .ico-toggle{
             transition: transform 0.3s ease;
         }
