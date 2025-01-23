@@ -318,6 +318,9 @@ button {
 .color-prim {
   color: var(--dt-primary) !important;
 }
+.color-prim.bold {
+  font-weight: 700 !important;
+}
 
 .wd-full {
   padding-right: 0 !important;
@@ -565,6 +568,13 @@ button {
 .cont__wrap.cont__wrap-singleCont {
   height: 100%;
 }
+.cont__wrap .txt-sub {
+  display: block;
+  margin-top: 2px;
+  color: var(--dt-gray11);
+  font-size: 12px;
+  font-weight: 500;
+}
 
 .con__tit-box {
   display: flex;
@@ -676,6 +686,20 @@ button {
 }
 
 /* 요금제 및 아코디언 관련 컴포넌트 */
+.plan-wrap + .info-price .row {
+  padding: 16px 0;
+  border-top: 1px solid var(--dt-gray06);
+}
+.plan-wrap + .info-price .row:last-of-type {
+  padding-bottom: 0;
+}
+.plan-wrap + .info-price .row .txt-title {
+  color: var(--dt-gray16);
+  font-size: 14px;
+}
+.plan-wrap + .info-price .row .txt-price {
+  font-size: 16px;
+}
 .plan-wrap .col {
   row-gap: 8px;
 }
@@ -689,6 +713,16 @@ button {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
+}
+.plan-wrap .col .txt-plan .current.sm {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-right: 0;
+}
+.plan-wrap .col .txt-plan .total span {
+  font-size: 14px;
+  font-weight: 500;
 }
 .plan-wrap .col .txt-plan .total, .plan-wrap .col .txt-caution {
   color: var(--dt-gray11);
@@ -712,6 +746,13 @@ button {
 .plan-wrap .list-plan.line .row .txt-desc {
   max-width: 162px;
 }
+.plan-wrap .list-plan.desc {
+  padding-top: 16px;
+}
+.plan-wrap .list-plan.desc .row {
+  padding-top: 16px;
+  border-top: 1px solid var(--dt-gray06);
+}
 .plan-wrap .list-plan .row + .row {
   margin-top: 12px;
 }
@@ -728,7 +769,7 @@ button {
   color: var(--dt-gray14);
   line-height: 24px;
 }
-.plan-wrap .list-plan .txt-desc > span {
+.plan-wrap .list-plan .txt-desc > span:not(.txt-sub) {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -796,8 +837,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .info-col-wrap .txt-title.ico .img-box {
   width: 28px;
@@ -807,8 +847,7 @@ button {
   width: 100%;
 }
 .info-col-wrap .txt-title.ico:has(.btn-tooltip) {
-  -moz-column-gap: 1px;
-       column-gap: 1px;
+  column-gap: 1px;
 }
 .info-col-wrap .txt-title.ico:has(.btn-tooltip) .img-box {
   width: 22px;
@@ -824,6 +863,9 @@ button {
 }
 .info-col-wrap .txt-desc .flag:first-child {
   margin-right: 8px;
+}
+.info-col-wrap .info-price.total-last {
+  padding: 0;
 }
 
 .info-price-wrap {
@@ -846,36 +888,40 @@ button {
   height: 1px;
   background-color: var(--dt-gray08);
 }
-.info-price-wrap .info-price.total-last, .info-price-wrap .info-price-detail.total-last {
+.info-price-wrap .list-info-price:only-child .info-price-detail .info-wrap:last-of-type {
+  padding-bottom: 0px;
+}
+
+.info-price.total-last {
   row-gap: 4px;
   padding: 16px 20px 0;
 }
-.info-price-wrap .info-price.total-last .row, .info-price-wrap .info-price-detail.total-last .row {
+.info-price.total-last .row {
   justify-content: space-between;
 }
-.info-price-wrap .info-price.total-last .txt-title, .info-price-wrap .info-price-detail.total-last .txt-title {
+.info-price.total-last .txt-title {
   font-size: 16px;
   font-weight: 700;
 }
-.info-price-wrap .info-price.total-last .txt-price, .info-price-wrap .info-price-detail.total-last .txt-price {
+.info-price.total-last .txt-price {
   color: var(--dt-primary);
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
-.info-price-wrap .info-price.total-last .txt-sub, .info-price-wrap .info-price-detail.total-last .txt-sub {
+.info-price.total-last .txt-sub {
   margin-left: auto;
   color: var(--dt-gray11);
   font-size: 12px;
   font-weight: 500;
 }
-.info-price-wrap .info-price.total-last.roaming, .info-price-wrap .info-price-detail.total-last.roaming {
+.info-price.total-last.roaming {
   padding-top: 22px;
 }
-.info-price-wrap .info-price.total-last.roaming .row, .info-price-wrap .info-price-detail.total-last.roaming .row {
+.info-price.total-last.roaming .row {
   align-items: center;
 }
-.info-price-wrap .info-price.total-last.roaming .txt-price, .info-price-wrap .info-price-detail.total-last.roaming .txt-price {
+.info-price.total-last.roaming .txt-price {
   color: var(--dt-black);
 }
 
@@ -926,8 +972,7 @@ button {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   margin: 20px auto 0;
   padding: 14px 16px;
   background-color: var(--dt-gray02);
@@ -1005,8 +1050,7 @@ button {
 .bank-wrap {
   display: flex;
   align-items: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .bank-wrap .img-box {
   min-width: 16px;
@@ -1148,8 +1192,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   min-width: 184px;
   padding: 13px 4px 12px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -1188,8 +1231,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
   color: var(--dt-gray11);
@@ -1508,7 +1550,6 @@ button {
   height: 48px;
 }
 .card.chatbot .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1523,7 +1564,6 @@ button {
   height: 48px;
 }
 .card.home .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1675,8 +1715,7 @@ button {
 .chck-group input[type=checkbox] {
   /* input은 숨김 */
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   position: absolute;
   top: -9999px;
   margin: 0px;
@@ -2021,7 +2060,6 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   background-color: var(--dt-gray10);
   padding: 4px 6px;
@@ -2106,7 +2144,6 @@ button {
 }
 .badge.badge-round {
   min-width: 26px;
-  max-width: -moz-max-content;
   max-width: max-content;
   min-height: 26px;
   border-radius: 27.78vw;
@@ -2129,9 +2166,8 @@ button {
   color: var(--dt-white);
 }
 .badge.badge-time {
-  align-items: center;
-  width: 104px;
-  height: 36px;
+  min-width: 104px;
+  min-height: 36px;
   border-color: transparent;
   border-radius: 40px;
   background: rgba(236, 0, 140, 0.05);
@@ -2146,14 +2182,13 @@ button {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
-.error .badge-time {
+.badge.badge-time.error {
   background-color: rgba(226, 42, 33, 0.05);
 }
-.error .badge-time .txt {
+.badge.badge-time.error .txt {
   color: var(--dt-error);
 }
-.error .badge-time .icon {
+.badge.badge-time.error .icon {
   background-image: url(../images/icon/ic-badge-clock-error.png);
 }
 
@@ -2375,8 +2410,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   margin-left: auto;
 }
 .header .header__btn .btn {
@@ -2384,7 +2418,6 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .header .header__btn .btn .txt {
@@ -2430,14 +2463,9 @@ input[type=number] {
 
 input {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   border: none;
   background: transparent;
-}
-
-.input-control.floating.error input::-moz-placeholder, .input-control.floating.success input::-moz-placeholder {
-  display: none;
 }
 
 .input-control.email-form .input-group .input-row .util-box, .input-control.tltip-error .validation-txt, .input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control.normal.tltip-error .validation-txt, .input-control .input-group .input-row .util-box, .input-control .input-group .input-label {
@@ -2470,8 +2498,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   border-bottom: 2px solid var(--dt-gray08);
 }
 .input-control .input-group .input-row .input-field {
@@ -2517,8 +2544,7 @@ input {
   margin-left: auto;
   display: flex;
   flex: none;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .input-control .input-group .input-row .util-box .clear-btn {
   border: none;
@@ -2598,9 +2624,6 @@ input {
 .input-control.normal.read-only .input-group .util-box .clear-button {
   pointer-events: none;
 }
-.input-control.floating input::-moz-placeholder {
-  opacity: 1;
-}
 .input-control.floating input::placeholder {
   opacity: 1;
 }
@@ -2608,9 +2631,6 @@ input {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-}
-.input-control.floating.focused input::-moz-placeholder {
-  opacity: 0;
 }
 .input-control.floating.focused input::placeholder {
   opacity: 0;
@@ -2624,9 +2644,6 @@ input {
 .input-control.floating.focused .input-group .input-row .input-field {
   caret-color: var(--dt-primary);
 }
-.input-control.floating.success input::-moz-placeholder {
-  opacity: 0;
-}
 .input-control.floating.success input::placeholder {
   opacity: 0;
 }
@@ -2635,9 +2652,6 @@ input {
 }
 .input-control.floating.success .input-group .input-row {
   border-bottom: 2px solid var(--dt-success);
-}
-.input-control.floating.error input::-moz-placeholder {
-  opacity: 0;
 }
 .input-control.floating.error input::placeholder {
   opacity: 0;
@@ -2743,7 +2757,6 @@ input {
 .input-control.code {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 42px 0 0 0;
   gap: 6px;
@@ -2786,8 +2799,7 @@ input {
   margin-left: auto;
   display: flex;
   flex: none;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .input-control.email-form .input-group .input-row .util-box .clear-btn {
   border: none;
@@ -2845,7 +2857,7 @@ input {
   text-align: center;
   padding-bottom: 26px;
 }
-.auth-wrap > .txt {
+.auth-wrap .txt {
   font-size: 16px;
   font-weight: 500;
   color: var(--dt-gray11);
@@ -2870,20 +2882,6 @@ input {
 }
 .auth-wrap .validation-txt {
   text-align: left;
-}
-.auth-wrap .btn-group {
-  padding-top: 38px;
-}
-.auth-wrap .btn-group .btn {
-  width: unset;
-  margin: 0 auto;
-}
-.auth-wrap:has(.badge-time) .input-control {
-  padding-top: 28px;
-  gap: 24px;
-}
-.auth-wrap.auth_number {
-  padding-bottom: 4px;
 }
 
 .input-col-wrap {
@@ -3337,8 +3335,7 @@ input {
 }
 .accordion-header .txt-title {
   flex: 1;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   text-align: left;
   line-height: 23px;
 }
@@ -3571,8 +3568,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin: 0 auto;
   min-width: 220px;
   max-width: 320px;
@@ -3714,7 +3710,6 @@ table.table-bullet-desc + .bullet-list {
 }
 table th, table td {
   width: auto;
-  max-width: -moz-max-content;
   max-width: max-content;
   color: var(--dt-gray12);
   font-size: 12px;
@@ -3751,7 +3746,6 @@ table td {
 .tooltip-wrap, .bubble-box {
   display: none;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
   max-width: 220px;
   background-color: rgba(24, 26, 27, 0.9);
@@ -3775,8 +3769,7 @@ table td {
 .tooltip-wrap .txt-wrap:has(.ico), .bubble-box .txt-wrap:has(.ico) {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   align-items: center;
   width: calc(100% - 32px);
 }
@@ -3861,8 +3854,7 @@ table td {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 
 .tooltip-close {

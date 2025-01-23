@@ -227,7 +227,10 @@ button {
 .pt-40 {
 	padding-top: 40px !important;
 }
-.color-prim {color:var(--dt-primary) !important;}
+.color-prim {
+	color:var(--dt-primary) !important;
+	&.bold {font-weight:700 !important;}
+}
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
@@ -453,6 +456,12 @@ button {
 	&.cont__wrap-singleCont {
 		height: 100%;
 	}
+	.txt-sub {
+		display:block;
+		margin-top:2px;
+		color:var(--dt-gray11);
+		@include fw-5(12px);
+	}
 }
 .con__tit-box {
 	@include flexRow();
@@ -562,6 +571,18 @@ button {
 }
 /* 요금제 및 아코디언 관련 컴포넌트 */
 .plan-wrap {
+	& + .info-price {
+		.row {
+			padding:16px 0;
+			border-top:1px solid var(--dt-gray06);
+			&:last-of-type {padding-bottom:0;}
+			.txt-title {
+				color:var(--dt-gray16);
+				font-size:14px;
+			}
+			.txt-price {font-size:16px;}
+		}
+	}
 	.col {
 		row-gap:8px;
 		.txt-plan {
@@ -571,7 +592,15 @@ button {
 				color:var(--dt-gray16);
 				@include fw-6(20px); 
 				line-height:24px;
+				&.sm {
+					@include fw-7(14px);
+					line-height:21px;
+					margin-right:0;
+				}
 			}
+		}
+		.txt-plan .total {
+			span {@include fw-5(14px);}
 		}
 		.txt-plan .total, .txt-caution {
 			color:var(--dt-gray11);
@@ -592,6 +621,13 @@ button {
 				.txt-desc {max-width:162px;}
 			}
 		}
+		&.desc {
+			padding-top:16px;
+			.row {
+				padding-top:16px;
+				border-top:1px solid var(--dt-gray06);
+			}
+		}
 		.row + .row {margin-top:12px;}
 		.txt-phone {
 			display:block;width:100%;margin-top:2px;
@@ -604,8 +640,10 @@ button {
 		}
 		.txt-desc {
 			> span {
-				display:inline-block;
-				@include fw-5(14px);line-height:21px;
+				&:not(.txt-sub) {
+					display:inline-block;
+					@include fw-5(14px);line-height:21px;
+				}
 			}
 			&.ico {
 				.img-box {
@@ -687,6 +725,7 @@ button {
 		text-align:right;
 		.flag:first-child {margin-right:8px;}
 	}
+	.info-price.total-last {padding:0;}
 }
 .info-price-wrap{
 	padding-bottom:22px;
@@ -705,29 +744,38 @@ button {
 				height:1px;background-color:var(--dt-gray08);
 			}
 		}
-		&.total-last {
-			row-gap:4px;
-			padding:16px 20px 0;
-			.row {justify-content: space-between;}
-			.txt-title {@include fw-7(16px);}
+	}
+	.list-info-price:only-child {
+		.info-price-detail {
+			.info-wrap {
+				&:last-of-type {padding-bottom:0px;}
+			}
+		}
+	}
+}
+.info-price  {
+	&.total-last {
+		row-gap:4px;
+		padding:16px 20px 0;
+		.row {justify-content: space-between;}
+		.txt-title {@include fw-7(16px);}
+		.txt-price {
+			color:var(--dt-primary);
+			@include fw-7(20px);
+			line-height:24px;
+		}
+		.txt-sub {
+			margin-left:auto;
+			color:var(--dt-gray11);
+			@include fw-5(12px);
+		}
+		&.roaming {
+			padding-top: 22px;
+			.row {
+				align-items: center;
+			}
 			.txt-price {
-				color:var(--dt-primary);
-				@include fw-7(20px);
-				line-height:24px;
-			}
-			.txt-sub {
-				margin-left:auto;
-				color:var(--dt-gray11);
-				@include fw-5(12px);
-			}
-			&.roaming {
-				padding-top: 22px;
-				.row {
-					align-items: center;
-				}
-				.txt-price {
-					color: var(--dt-black)
-				}
+				color: var(--dt-black)
 			}
 		}
 	}
