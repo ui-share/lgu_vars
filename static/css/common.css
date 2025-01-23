@@ -3197,6 +3197,7 @@ input {
 }
 .popup-body .btn.btn-child .txt-wrap {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 6px;
 }
@@ -3204,11 +3205,13 @@ input {
   font-size: 16px;
   font-weight: 700;
   color: var(--dt-black);
+  text-align: left;
 }
 .popup-body .btn.btn-child .txt-wrap .txt {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
+  text-align: left;
 }
 
 .popup-body + .popup-footer.hidden {

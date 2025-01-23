@@ -293,15 +293,18 @@
 			background-color: var(--dt-gray02);
 			.txt-wrap {
 				display: flex;
+				flex-wrap: wrap;
 				align-items: center;
 				gap: 6px;
 				.tit {
 					@include fw-7(16px);
 					color:var(--dt-black);
+					text-align: left;
 				}
 				.txt {
 					@include fw-5(14px);
 					color:var(--dt-gray11);
+					text-align: left;
 				}
 			}
 		}
