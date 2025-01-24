@@ -36,7 +36,7 @@
             display: block;
             &:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
                 border-top:1px solid var(--dt-gray06);
-                margin-top:20px;padding-top:20px;
+                padding-top:20px;
             }
         }
     }

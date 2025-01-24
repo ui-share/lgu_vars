@@ -601,6 +601,7 @@ button {
 	}
 	.col {
 		row-gap:8px;
+		&.accordion-container {margin-top:20px;}
 		.txt-plan {
 			margin-bottom:4px;
 			.current {

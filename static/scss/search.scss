@@ -80,10 +80,14 @@
                 flex-wrap: wrap;
                 margin-top:4px;
                 @include fw-6(18px);
-                line-height:36px;
+                line-height:20px;
                 .color-prim {@include fw-6(18px);line-height:22px;}
 				&:has(.deco + .color-prim) {
 					.deco {margin-right:2px;font-size:30px;}
+				}
+				.txt-sub {
+					display: block;width:100%;
+					font-size:16px;color:var(--dt-black);
 				}
 			}
         }
@@ -181,8 +185,6 @@
 			row-gap:16px;
 		}
 	}
-
-
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
