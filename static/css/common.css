@@ -2507,6 +2507,7 @@ input {
 .input-control .input-group {
   position: relative;
   width: 100%;
+  flex-wrap: wrap;
 }
 .input-control .input-group .input-label {
   position: absolute;
@@ -3448,6 +3449,8 @@ input {
 .accordion-content .info-price-detail .txt-price {
   min-width: 82px;
   text-align: right;
+  padding-right: 2px;
+  word-break: break-all;
 }
 .accordion-content .info-price-detail .list-detail {
   padding-top: 4px;
