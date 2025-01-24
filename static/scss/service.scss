@@ -1,12 +1,13 @@
 @import "../scss/base/mixin";
 
 .page-wrapper {
-	height: 100%;
+	// height: 100%;
 	.container {
-		height: 100%;
+		// height: 100%;
 		.section__cont {
-			height: 100%;
-			justify-content: space-between;
+			// height: 100%;
+			// justify-content: space-between;
+			padding: 40px 0 155px;
 			&.scan {
 				position:relative;
 				.cont__wrap-service {padding:0;}
@@ -38,11 +39,10 @@
 	}
 }
 .cont__wrap {
-	&.cont__wrap-service {
-		height: 100%;
-		overflow-y: auto;
-		padding: 40px 20px 40px;
-	}
+	// &.cont__wrap-service {
+		// height: 100%;
+		// overflow-y: auto;
+	// }
 	&.cont__wrap-cslimited {
 		display: flex;
 		flex-direction: column;
@@ -59,7 +59,10 @@
 	&.cont__wrap-btBtn {
 		padding: 0;
 		background-color: transparent;
-
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
 		.btn-group {
 			position: relative;
 			background-color: var(--dt-white);
@@ -91,9 +94,9 @@
 		}
 	}
 	// 풀버튼일 경우 패딩 0
-	&:not(:has(.px-0)) {
-		.btn-group {
-			padding: 0;
+	&:has(.p-0) {
+		.btn {
+			border-radius: 0;
 		}
 	}
 }

@@ -450,13 +450,17 @@ input {
     &.email-form {
         .input-group {
             @include flexBox(between, center);
+            flex-wrap: wrap;
+            column-gap: 8px;
             .input-label {
                 top: -6px; // 라벨이 위로 올라가도록 변경
                 font-size: 12px; // 작아지면서 플로팅 효과
-                @extend %visible;
+                display: flex;
             }
             .input-row {
-                width: 100%;
+                flex: 1;
+                min-width: 132px;
+                // width: 100%;
                 border-bottom: 2px solid var(--dt-gray08);
                             // Clear 버튼 : 기본상태-hidden
                 .util-box {
@@ -483,19 +487,17 @@ input {
                 @include flexBox(start, center);
                 flex-wrap: wrap;
                 border-radius: 10px;
+                min-width: 85px;
                 padding: 12px 38px 12px 10px;
                 background-color: transparent;
                 border: 2px solid var(--dt-gray08);
-                // width: 100%;
                 background-image: url(../images/icon/chevron_down_line_24.svg);
                 background-repeat: no-repeat;
                 background-size: 24px 24px;
                 background-position: right 6px center;
                 .slct-txt {
-                    min-width: 85px;
-                    max-width: 142px;
                     text-align: left;
-                    @include fw-6(14px);
+                    @include fw-6(18px);
                     color: var(--dt-gray11);
                     &.point {
                         @include fw-6(14px);
