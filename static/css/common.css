@@ -2501,7 +2501,7 @@ input {
   display: none;
 }
 
-.input-control.email-form .input-group .input-label, .input-control.tltip-error .input-group .input-label, .input-control.error .input-group .input-label, .input-control.success .input-group .input-label, .input-control.floating.error .input-group .input-label, .input-control.floating.success .input-group .input-label, .input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
+.input-control.tltip-error .input-group .input-label, .input-control.error .input-group .input-label, .input-control.success .input-group .input-label, .input-control.floating.error .input-group .input-label, .input-control.floating.success .input-group .input-label, .input-control.floating.focused .input-group .input-label, .input-control.normal .input-group .input-label {
   display: block;
 }
 
@@ -2817,13 +2817,17 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 8px;
 }
 .input-control.email-form .input-group .input-label {
   top: -6px;
   font-size: 12px;
+  display: flex;
 }
 .input-control.email-form .input-group .input-row {
-  width: 100%;
+  flex: 1;
+  min-width: 132px;
   border-bottom: 2px solid var(--dt-gray08);
 }
 .input-control.email-form .input-group .input-row .util-box {
@@ -2849,6 +2853,7 @@ input {
   justify-content: flex-start;
   flex-wrap: wrap;
   border-radius: 10px;
+  min-width: 85px;
   padding: 12px 38px 12px 10px;
   background-color: transparent;
   border: 2px solid var(--dt-gray08);
@@ -2858,10 +2863,8 @@ input {
   background-position: right 6px center;
 }
 .input-control.email-form .input-group .slct-email-wrap .slct-txt {
-  min-width: 85px;
-  max-width: 142px;
   text-align: left;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--dt-gray11);
 }
