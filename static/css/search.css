@@ -1,3 +1,6 @@
+.section__cont.desc {
+  height: calc(var(--vh) - 250px);
+}
 .section__cont.summary {
   padding-bottom: 18px;
   background-color: #DCE6FF;
@@ -212,6 +215,32 @@
 }
 .cont__wrap .card-group.bank {
   row-gap: 16px;
+}
+.cont__wrap .card-group.bank .item.util {
+  min-width: 20px;
+}
+.cont__wrap .card-group.bank .item.text {
+  width: calc(100% - 52px);
+}
+.cont__wrap.cont__wrap-vertical.wd-full {
+  row-gap: 0;
+}
+.cont__wrap.cont__wrap-vertical.wd-full:has(.card-group.bank) {
+  height: 100%;
+}
+.cont__wrap.cont__wrap-vertical.wd-full > div {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.cont__wrap.cont__wrap-vertical.wd-full .con__tit-box {
+  padding-bottom: 16px;
+}
+.cont__wrap.cont__wrap-vertical.wd-full .card-group.bank {
+  margin-bottom: 16px;
+}
+.cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap {
+  min-height: 120px;
+  overflow-y: auto;
 }
 .cont__wrap.cont__wrap-bill {
   min-height: 174px;

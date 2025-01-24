@@ -565,17 +565,6 @@ button {
 .cont__wrap.cont__wrap-vertical .btn-group:has(.tooltip) .tooltip-wrap .tooltip-inner .txt-wrap {
   width: 100%;
 }
-.cont__wrap.cont__wrap-vertical:has(.card-group.bank) {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-vertical:has(.card-group.bank) .con__tit-box {
-  padding-bottom: 16px;
-}
-.cont__wrap.cont__wrap-vertical:has(.card-group.bank) .con__tit-box::before {
-  content: "";
-  display: block;
-  width: 100%;
-}
 .cont__wrap.tabnav__wrap {
   padding-right: 0;
   padding-left: 0;
@@ -2511,7 +2500,6 @@ input {
 .input-control .input-group {
   position: relative;
   width: 100%;
-  flex-wrap: wrap;
 }
 .input-control .input-group .input-label {
   position: absolute;
