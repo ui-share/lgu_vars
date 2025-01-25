@@ -31,6 +31,9 @@
   border: 1px solid red;
   padding-top: 40vh;
 }
+.page-wrapper .container .section__cont:has(.cont__wrap-cms) {
+  gap: 28px;
+}
 
 .cont__wrap.cont__wrap-cslimited {
   display: flex;
