@@ -62,6 +62,10 @@
 .section__cont.summary .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
 }
+.section__cont.segment {
+  padding: 36px 0 48px;
+  gap: 0;
+}
 
 .cont__wrap .con__tit-box .tit-head .txt-title {
   line-height: 22px;

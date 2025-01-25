@@ -1264,6 +1264,11 @@ button {
   background-color: var(--dt-white);
   border: 1px solid var(--dt-gray07);
 }
+.btn-between.appStore {
+  padding: 8px 10px;
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray08);
+}
 .btn-between.bg-bank {
   padding: 8px;
   background-color: var(--dt-gray07);
