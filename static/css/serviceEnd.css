@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* 인증번호 불일치시 서비스 종료 화면 */
+body {
+  background-color: var(--dt-gray05);
+}
 .page-wrapper {
   height: 100%;
 }
@@ -9,15 +12,12 @@
 .page-wrapper .container .section__cont {
   height: 100%;
   justify-content: space-between;
-  background-color: var(--dt-gray05);
 }
 .page-wrapper .container .section__cont:first-child {
   padding-top: 0;
 }
 
 .cont__wrap:first-child {
-  height: 100%;
-  overflow-y: auto;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,7 +31,8 @@
   padding: 0 0 20px;
 }
 .cont__wrap.serviceEnd {
-  padding-top: 158px;
+  padding-top: 25vh;
+  padding-bottom: 20vh;
 }
 .cont__wrap.serviceEnd .img-box {
   min-width: 68px;
