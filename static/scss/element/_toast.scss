@@ -11,14 +11,14 @@
   padding: 0 20px;
   &.show {
     display: block;
-    animation: toast-in 0.4s ease-out;
+    animation: toast-in 0.2s ease-out;
   }
-  &.hide {
-    display: block;
-    bottom: -99px;
-    transform: translate3d(-50%, 0, 0);
-    animation: toast-out 0.2s ease-out;
-  }
+  // &.hide {
+  //   display: block;
+  //   bottom: -99px;
+  //   transform: translate3d(-50%, 0, 0);
+  //   animation: toast-out 0.2s ease-out;
+  // }
   .toast {
     @include flexBox(between, center);
     background-color: var(--dt-gray16);

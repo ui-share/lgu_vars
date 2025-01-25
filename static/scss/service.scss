@@ -3,7 +3,7 @@
 .page-wrapper {
 	.container {
 		.section__cont {
-			padding: 80px 0 155px;
+			padding: 92px 0 155px;
 			&.scan {
 				position:relative;
 				.cont__wrap-service {padding:0;}
@@ -72,6 +72,13 @@
 				height: 20px;
 				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
 			}
+			// 풀버튼일 경우 패딩 0
+			&.full { 
+				padding: 0;
+				.btn {
+					border-radius: 0;
+				}
+			}
 		}
 		.btn.bg-bank {
 			width:calc(100% - 40px);
@@ -87,13 +94,7 @@
 			}
 			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
 		}
-	}
-	// 풀버튼일 경우 패딩 0
-	&:has(.p-0) {
-		.btn {
-			border-radius: 0;
-		}
-	}
+	}	
 }
 
 .txt-infoWrap {
