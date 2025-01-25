@@ -1,0 +1,100 @@
+.cont__wrap.cont__wrap-segment {
+  padding: 0;
+}
+.cont__wrap.cont__wrap-segment .list-payment {
+  padding: 0 20px;
+  margin-top: 24px;
+}
+.cont__wrap.cont__wrap-segment .btn-box {
+  margin-top: 16px;
+  padding: 0 20px;
+}
+.cont__wrap.cont__wrap-segment .chips-group {
+  flex-wrap: nowrap;
+  margin-top: 16px;
+  padding: 0 20px;
+  overflow-x: auto;
+  gap: 4px;
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .used-date {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dt-gray11);
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-gray14);
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-won {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--dt-black);
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .paid-status {
+  width: fit-content;
+  background-color: rgba(0, 170, 2, 0.1);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  color: var(--dt-success);
+  padding: 4px 6px;
+}
+
+.popup-wrapper .popup__wrap .popup-body {
+  padding: 4px 20px 20px 20px;
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap {
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+  padding: 24px 20px;
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore {
+  padding: 18px 20px;
+  background-color: var(--dt-white);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore .txt-wrap {
+  gap: 4;
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore .txt-wrap .txt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-black);
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 24px;
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box .txt {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--dt-black);
+}
+.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box .img-box img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
