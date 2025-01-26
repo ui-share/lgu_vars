@@ -19,6 +19,7 @@
 }
 
 .section__cont:has(.cont__wrap-service.rmDetail) {
+  padding: 72px 0 95px;
   gap: 0;
 }
 
