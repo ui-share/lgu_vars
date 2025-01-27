@@ -85,10 +85,12 @@
 	}
 	.popup-footer {
 		padding: 0 20px 20px 20px;
-				// 풀버튼일 경우 패딩 0
-		&:not(:has(.px-0)) {
+		&.full {// 풀버튼일 경우 패딩 0
+			padding: 0;
 			.btn-group {
-				padding: 0;
+				.btn {
+					border-radius: 0 !important;
+				}
 			}
 		}
 		.btn-group {

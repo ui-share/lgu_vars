@@ -52,15 +52,19 @@
 					<div class="input-group">
 						<label class="input-label">이메일</label>
 						<div class="input-row">
-							<input type="email" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+							<input type="email" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus autocomplete='off' />
 							<div class="util-box">
-								<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-								<button type="button" class="clear-btn hidden"></button>
+								<!-- 
+									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+								-->
+									<button type="button" class="clear-btn hidden"></button>
 							</div>
 						</div>
 						<button class="slct-email-wrap">
 							<span class="slct-txt" type="button">이메일선택</span>
-							<!-- <span class="slct-txt point"> 이메일 선택후 point 클래스 추가 -->
+						<!-- 
+							<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+						-->
 							<span class="slct-txt point hidden" type="button">이메일 선택</span>
 						</button>
 					</div>
@@ -72,16 +76,15 @@
 				개발 후 주석 지워주세요.
 				
 				## 키보드 노출시 : 풀 버튼##
-				풀 버튼 일 경우 :<div class="popup-footer px-0">
-				<button class="btn btn-prim full" type="button"> : 풀 버튼
-
+				<div class="popup-footer full">
+				<button class="btn btn-prim is-disabled" type="button">
 				## 키보드 미노출시: 일반 버튼##
 				<div class="popup-footer">
 					<button class="btn btn-prim" type="button">
 			-->
-			<div class="popup-footer">
+			<div class="popup-footer full">
 				<div class="btn-group">
-					<button class="btn btn-prim" type="button">
+					<button class="btn btn-prim is-disabled" type="button">
 						<span class="txt">발급</span>
 					</button>
 				</div>

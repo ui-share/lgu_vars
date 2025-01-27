@@ -3023,8 +3023,11 @@ input {
 .popup-wrapper .popup-footer {
   padding: 0 20px 20px 20px;
 }
-.popup-wrapper .popup-footer:not(:has(.px-0)) .btn-group {
+.popup-wrapper .popup-footer.full {
   padding: 0;
+}
+.popup-wrapper .popup-footer.full .btn-group .btn {
+  border-radius: 0 !important;
 }
 .popup-wrapper .popup-footer .btn-group {
   position: relative;
