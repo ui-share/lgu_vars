@@ -32,11 +32,6 @@
 		<!-- container -->
 		<div class="container">
             <div class="section__cont">
-                <!-- 화면 요소를 위해 반드시 section__cont 하나만 가지고 간다 -->
-                <!-- 
-                    1.상세 내용이 들어가는 상단 cont__wrap 1개 / 버튼그룹이 들어가는 cont__wrap 1개 
-                    2.로 짠 뒤에 상단 cont__wrap에만 내용을 추가한다.
-                -->
                 <div class="cont__wrap cont__wrap-service">
                     <div class="cont__txt-box">
 						<h4 class="txt">
@@ -56,13 +51,19 @@
                     <!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
                     <button class="slct-perd-wrap">
                         <span class="slct-perd">
-                            <span class="slct-txt" type="button">24년 11월</span>
-                            <span class="slct-txt point hidden" type="button">시작 월 선택</span>
+                            <span class="slct-txt" type="button">월 선택</span>
+                            <!-- 
+								## 캘린더 선택 월일자 변경 노출 시 point 추가
+								<span class="slct-txt point" type="button">25년 1월</span> 
+							-->
                         </span>
                         <span class="slct-perd">
                             <span class="hyphen">~</span>
-                            <span class="slct-txt" type="button">24년 11월</span>
-                            <span class="slct-txt point hidden" type="button">종료 월 선택</span>
+                            <span class="slct-txt" type="button">월 선택</span>
+                            <!-- 
+								## 캘린더 선택 월일자 변경 노출 시 point 추가
+								<span class="slct-txt point" type="button">25년 1월</span> 
+							-->
                         </span>
                     </button>
                     <!-- 
@@ -77,47 +78,51 @@
                         유효성 검사 에러 : <div class="input-control email-form error">
                     -->
                     <!-- 이메일 입력 -->
-                    <div class="input-control email-form focused mt-28">				
+                    <div class="input-control email-form mt-28">				
                         <div class="input-group">
                             <label class="input-label">이메일</label>
                             <div class="input-row">
-                                <input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+                                <input type="email" class="input-field" name="email" placeholder="이메일 주소 입력" autocomplete='off' />
                                 <div class="util-box">
-                                    <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                <!-- 
+									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+                                -->
                                     <button type="button" class="clear-btn hidden"></button>
                                 </div>
                             </div>
                             <button class="slct-email-wrap">
                                 <span class="slct-txt" type="button">이메일선택</span>
-                                <!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
-                                <!-- 
+                            <!-- 
                                 <span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-                                -->
+                            -->
                                 <span class="slct-txt point hidden" type="button">이메일 선택</span>
                             </button>
                         </div>
                         <div class="validation-txt">validation 메시지 노출</div>
                     </div>
                 </div>
-                <!-- 
-                    키보드 노출시 버튼 스타일 변경 -> 클래스 추가
-                    <div class="cont__wrap px-0"> : px-0 추가
-                        <button class="btn btn-prim full"> : full 추가
-                -->
                 <div class="cont__wrap cont__wrap-btBtn">
-                    <div class="btn-group p-0">
+                    <div class="btn-group flex-row is-confirm">
+                        <!-- 
+							## 버튼 형태 class (input 입력 키패드 노출 상태 버튼 형태 변경 필요) 
+							input focus 시 full 추가: <div class="btn-group flex-row is-confirm full">
+						-->
                         <button class="btn btn-prim is-disabled" type="button">
                             <span class="txt">납부확인서 신청</span>
                         </button>
+                        <!-- 
+							## 버튼 상태 class 
+							버튼 활성 : <button class="btn btn-prim" type="button"> 
+							버튼 비활성 is-disabled : <button class="btn btn-prim is-disabled" type="button">  
+						-->
                     </div>
                 </div>
                 
             </div>
-            <!-- 
-				####### 퍼블공지 #######
-				default: <div class="toast-wrap">
-				toast-in: <div class="toast-wrap show">
-				toast-out: <div class="toast-wrap hide">
+			<!-- 
+				toast 상태 class : 기본 display:none 상태				
+				toast in(show 모션) show : <div class="toast-wrap show">
+				toast out(out 모션 X)    : <div class="toast-wrap">
 			-->
 			<div class="toast-wrap" tabindex="-1">
 				<div class="toast">
@@ -131,7 +136,7 @@
 						<button class="btn btn-util close hidden">
 					-->
 					<button class="btn btn-util close" type="button" alt="닫기"></button>
-				</div>*-*-+
+				</div>
 			</div>
 		</div>
 		<!-- //container -->

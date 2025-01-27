@@ -32,11 +32,6 @@
 		<!-- container -->
 		<div class="container">
             <div class="section__cont">
-                <!-- 화면 요소를 위해 반드시 section__cont 하나만 가지고 간다 -->
-                <!-- 
-                    1.상세 내용이 들어가는 상단 cont__wrap 1개 / 버튼그룹이 들어가는 cont__wrap 1개 
-                    2.로 짠 뒤에 상단 cont__wrap에만 내용을 추가한다.
-                -->
                 <div class="cont__wrap cont__wrap-service">
                     <div class="cont__txt-box">
 						<h4 class="txt">
@@ -67,28 +62,21 @@
                             </div>
                             <button class="slct-email-wrap">
                                 <span class="slct-txt" type="button">이메일선택</span>
-                                <!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
                                 <!-- 
-                                <span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+                                    <span class="slct-txt point"> 이메일 선택후 point 클래스 추가
                                 -->
                                 <span class="slct-txt point hidden" type="button">이메일 선택</span>
-
                             </button>
 
                         </div>
                         <div class="validation-txt">validation 메시지 노출</div>
                     </div>
                 </div>
-                <!-- 
-                    @@개발 후 주석 지워주세요@@
-                    키보드 비노출시 버튼 
-                    <div class="cont__wrap cont__wrap-btBtn">
-                        <button class="btn btn-prim full" type="button"> : 버튼 활성
-                        <button class="btn btn-prim full is-disabled" type="button"> : 버튼 비활성   
-                -->
                 <div class="cont__wrap cont__wrap-btBtn">
-                    <div class="btn-group flex-row is-confirm">
-                        <button class="btn btn-prim full" type="button">
+                    <!-- <div class="btn-group flex-row is-confirm"> -->
+                    <div class="btn-group flex-row is-confirm full">
+                        <!-- <button class="btn btn-prim" type="button"> -->
+                        <button class="btn btn-prim is-disabled" type="button">
                             <span class="txt">청구서 재발행</span>
                         </button>
                     </div>
