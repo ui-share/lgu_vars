@@ -4,6 +4,8 @@
 }
 .page-wrapper .container .section__cont.scan {
   position: relative;
+  padding-top: 56px;
+  padding-bottom: 0;
 }
 .page-wrapper .container .section__cont.scan .cont__wrap-service {
   padding: 0;
@@ -31,9 +33,15 @@
   border: 1px solid red;
   padding-top: 40vh;
 }
+.page-wrapper .container .section__cont.scan .cont__wrap-btBtn {
+  position: absolute;
+}
 .page-wrapper .container .section__cont:has(.cont__wrap-cms) {
   padding: 92px 0 95px;
   gap: 28px;
+}
+.page-wrapper .container .section__cont:has(.cont__wrap-btBtn button:nth-of-type(2)) {
+  padding-bottom: 240px;
 }
 
 .cont__wrap.cont__wrap-cslimited {

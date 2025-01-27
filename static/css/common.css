@@ -176,7 +176,6 @@ html {
 }
 
 body {
-  height: 100%;
   font-family: "Pretendard", system-ui, sans-serif;
   font-size: var(--dt-fz16);
   font-weight: var(--dt-fw400);
@@ -2933,6 +2932,9 @@ input {
 .input-col-wrap .input-control:first-of-type {
   margin-top: 18px;
 }
+.input-col-wrap .segment__wrap {
+  padding-top: 14px;
+}
 
 .popup-wrapper {
   display: none;
@@ -3534,7 +3536,7 @@ input {
   padding: 16px 13px;
   cursor: pointer;
   z-index: 100;
-  transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 .segment__wrap .seg-trigger {
   display: none;
@@ -3549,7 +3551,7 @@ input {
   height: 100%;
   top: 0;
   left: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
   padding: 2px;
 }
 .segment__wrap .marker-box .marker {

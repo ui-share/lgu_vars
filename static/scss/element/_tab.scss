@@ -67,7 +67,7 @@
 		padding: 16px 13px;
 		cursor: pointer; 
 		z-index: 100; 
-		transition: opacity .4s ease-in-out;
+		transition: opacity .25s ease-in-out;
 	}
 	.seg-trigger {
 		display: none;
@@ -82,7 +82,7 @@
 		height: 100%;
 		top: 0;
 		left: 0;
-		transition: transform .3s ease-in-out;
+		transition: transform .2s ease-in-out;
 		padding: 2px;
 		.marker {
 			width: 100%;

@@ -582,4 +582,5 @@ input {
     @include flexColum;
     row-gap:24px;
     .input-control:first-of-type {margin-top:18px;}
+    .segment__wrap {padding-top:14px;}
 }
