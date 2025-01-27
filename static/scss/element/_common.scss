@@ -584,11 +584,6 @@ button {
 			padding:16px 0;
 			border-top:1px solid var(--dt-gray06);
 			&:last-of-type {padding-bottom:0;}
-			.txt-title {
-				color:var(--dt-gray16);
-				font-size:14px;
-			}
-			.txt-price {font-size:16px;}
 		}
 	}
 	.col {
@@ -734,7 +729,16 @@ button {
 		text-align:right;
 		.flag:first-child {margin-right:8px;}
 	}
-	.info-price.total-last {padding:0;}
+	.info-price.total-last {
+		padding:0;
+		.row .txt-title {
+			color: var(--dt-gray16);
+			font-size: 14px;
+		}
+		.row .txt-price {
+			font-size: 16px;
+		}
+	}
 }
 .info-price-wrap{
 	padding-bottom:22px;

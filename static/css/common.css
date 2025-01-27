@@ -703,13 +703,6 @@ button {
 .plan-wrap + .info-price .row:last-of-type {
   padding-bottom: 0;
 }
-.plan-wrap + .info-price .row .txt-title {
-  color: var(--dt-gray16);
-  font-size: 14px;
-}
-.plan-wrap + .info-price .row .txt-price {
-  font-size: 16px;
-}
 .plan-wrap .col {
   row-gap: 8px;
 }
@@ -879,6 +872,13 @@ button {
 }
 .info-col-wrap .info-price.total-last {
   padding: 0;
+}
+.info-col-wrap .info-price.total-last .row .txt-title {
+  color: var(--dt-gray16);
+  font-size: 14px;
+}
+.info-col-wrap .info-price.total-last .row .txt-price {
+  font-size: 16px;
 }
 
 .info-price-wrap {
