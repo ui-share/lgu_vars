@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>조회_휴대폰 할부/선택약정_재약정 예약중</title>
+    <title>조회_휴대폰 할부/선택약정_이용중</title>
     <link rel="stylesheet" href="../../../../static/css/common.css">
     <link rel="stylesheet" href="../../../../static/css/search.css">
     <script>
@@ -47,6 +47,12 @@
 						</h4>
 					</div>
 				</div>
+                <div class="info-price-single">
+                    <span class="txt-info">선택약정 기간이 곧 종료되어요.</span>
+                    <span class="txt-info">
+                        <span class="color-prim">선택약정 할인 예약</span>을 통해 혜택을 유지해 보세요!
+                    </span>
+                </div>
             </div>
             <!-- //홀맨 배너 영역 -->
 
@@ -167,7 +173,7 @@
                                 <div class="progress-area realtime">
                                     <span class="progress-bg">
                                         <!-- style.width %로 조절 -->
-                                        <span class="progress-bar" style="width:90%;"></span>
+                                        <span class="progress-bar" style="width:10%;"></span>
                                     </span>
                                 </div>
                             </div>
@@ -184,10 +190,7 @@
                                 </div>
                                 <div class="row">
                                     <span class="txt-title">종료일</span>
-                                    <span class="txt-desc">
-                                        NN년 N월 NN일
-                                        <span class="txt-sub color-prim">선택약정(24개월) 예약 완료</span>
-                                    </span>
+                                    <span class="txt-desc">NN년 N월 NN일</span>
                                 </div>
                             </div>
                         </div>
@@ -201,10 +204,9 @@
                             </span>
                         </div>
                     </div>
-
                     <div class="btn-group">
                         <button type="button" class="btn btn-sec">
-                            <span class="txt">선택약정 할인 예약 취소</span>
+                            <span class="txt">선택약정 할인 예약</span>
                         </button>
                     </div>
                     <div class="bullet-wrap">
@@ -223,6 +225,19 @@
                             </li>
                         </ul>
                     </div>
+                </div>
+
+                <!--
+                    버튼 클릭 시 '휴대폰약정할인정보' 부분으로 스크롤 되며, 하단으로 스크롤 시 미노출(스크롤 원점으로 돌아갈 경우 다시 노출)
+                -->
+                <div class="cont__wrap cont__wrap-btBtn"><!-- 'is-scrolled' 클래스 추가 시 미노출 -->
+                <!-- <div class="cont__wrap cont__wrap-btBtn is-scrolled"> -->
+                    <button class="btn-scroll">
+                        <span class="txt">선택약정 할인 예약</span>
+                        <span class="img-box">
+                            <img src="../../../../static/images/icon/ic-arrowdouble-white.svg">
+                        </span>
+                    </button>
                 </div>
             </div>
 		</div>

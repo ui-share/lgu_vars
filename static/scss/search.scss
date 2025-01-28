@@ -56,6 +56,13 @@
 					.img-box {transform: rotate(180deg)}
 				}
             }
+			&:has(.txt-info:nth-of-type(2)){
+				.txt-info {
+					font-weight:500;
+					font-size:14px;
+					.color-prim {font-size:14px;}
+				}
+			}
         }
 	}
 	&.segment {
@@ -210,6 +217,22 @@
 			}
 		}
 	}
+	// 스크롤버튼
+	&.cont__wrap-btBtn {
+		position:fixed;
+		bottom:20px;
+		left:0;
+		width:100%;
+		pointer-events:auto;
+		opacity:1;
+		transition:opacity 0.2s ease-in-out;
+		&.is-scrolled {
+			opacity:0;
+			pointer-events:none;
+		}
+		.btn-scroll {margin:0 auto;}
+	}
+
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
@@ -256,7 +279,10 @@
 	&.cont__wrap-MOPaymentUsed {
 		min-height:154px;
 		background-image: url(../images/img/img-hm-MOpayment.png);
-		background-position: right -5px top 35px;
+		background-position: right -5px top 16px;
 		.cont__txt-box {row-gap:0}
+		& + .info-price-single {
+			p.txt-info {font-size:14px;font-weight:500;}
+		}
 	}
 }
