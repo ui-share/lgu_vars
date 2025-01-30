@@ -2,536 +2,536 @@
 
 /* 기본 input 스타일 초기화 */
 input {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 &:disabled {
-        opacity: 1;
-    }
+		opacity: 1;
+	}
 }
 input::-webkit-outer-spin-button,
 
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 input[type=number] { -moz-appearance: textfield;}
 input {
-    -webkit-appearance: none;
-    appearance: none;
-    border: none;
-    background: transparent;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	background: transparent;
 }
 // 공통 스타일
 %hidden {
-    display: none;
+	display: none;
 }
 
 %visible {
-    display: block;
+	display: block;
 }
 
 // Input Container 스타일
 .input-control {   
-    padding-top: 14px;
-    .input-group {
-        position: relative;
-        width: 100%;
-    
-        // 라벨 스타일
-        .input-label {
-            position: absolute;
-            top: 50%; // 기본 상태에서 필드 중앙에 배치
-            left: 0;
-            transform: translateY(-50%);
-            @include fw-6(12px);
-            color: var(--dt-gray11);
-            transition: all 0.2s ease-in-out;
-            pointer-events: none;
-            @extend %hidden;
-        }
-        .input-row {
-            @include flexBox(between, center);
-            column-gap: 6px;
-            border-bottom: 2px solid var(--dt-gray08);
-            // 입력 필드 스타일
-            .input-field {
-                width: 100%;
-                padding: 10px 0;
-                @include fw-6(18px);
-                outline: none;
-                border: none;
-                transition: border-color 0.2s ease-in-out;
-                cursor: text;
-                visibility: visible;
-            }
-            .btn-field-dropdown {
-                padding:9px 0;
-                background-image: url(../images/icon/chevron_down_line_24.svg);
-                background-size: 24px;
-                background-repeat: no-repeat;
-                background-position: right 2px center;
-                width: 100%;
-                text-align: left;
-                &:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
-                .ico {
-                    display:none;
-                    width:24px;
-                    height:24px;
-                    padding-top:1px;
-                    padding-bottom:1px;
-                    img {width:100%;transform:translateY(-2px);}
-                }
-                .txt {
-                    color: var(--dt-gray11);
-                    @include fw-6(18px);
-                }
-            }
-        
-            // Clear 버튼 : 기본상태-hidden
-            .util-box {
-                margin-left: auto;
-                display: flex;
-                flex: none;
-                column-gap: 6px;
-                @extend %hidden;
-                .clear-btn {
-                    border: none;
-                    cursor: pointer;
-                    min-width: 40px;
-                    width: 40px;
-                    height: 40px;
-                    background-image: url(../images/icon/ic-input-clear.svg);
-                    background-size: 24px 24px;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    
-                }
-                .input-unit {
-                    @include fw-6(18px);
-                    color: var(--dt-gray11);
-                    .unit-point {
-                        @include fw-6(18px);
-                        color: var(--dt-gray16);
-                    }
-                }
-        
-            }
+	padding-top: 14px;
+	.input-group {
+		position: relative;
+		width: 100%;
+	
+		// 라벨 스타일
+		.input-label {
+			position: absolute;
+			top: 50%; // 기본 상태에서 필드 중앙에 배치
+			left: 0;
+			transform: translateY(-50%);
+			@include fw-6(12px);
+			color: var(--dt-gray11);
+			transition: all 0.2s ease-in-out;
+			pointer-events: none;
+			@extend %hidden;
+		}
+		.input-row {
+			@include flexBox(between, center);
+			column-gap: 6px;
+			border-bottom: 2px solid var(--dt-gray08);
+			// 입력 필드 스타일
+			.input-field {
+				width: 100%;
+				padding: 10px 0;
+				@include fw-6(18px);
+				outline: none;
+				border: none;
+				transition: border-color 0.2s ease-in-out;
+				cursor: text;
+				visibility: visible;
+			}
+			.btn-field-dropdown {
+				padding:9px 0;
+				background-image: url(../images/icon/chevron_down_line_24.svg);
+				background-size: 24px;
+				background-repeat: no-repeat;
+				background-position: right 2px center;
+				width: 100%;
+				text-align: left;
+				&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
+				.ico {
+					display:none;
+					width:24px;
+					height:24px;
+					padding-top:1px;
+					padding-bottom:1px;
+					img {width:100%;transform:translateY(-2px);}
+				}
+				.txt {
+					color: var(--dt-gray11);
+					@include fw-6(18px);
+				}
+			}
+		
+			// Clear 버튼 : 기본상태-hidden
+			.util-box {
+				margin-left: auto;
+				display: flex;
+				flex: none;
+				column-gap: 6px;
+				@extend %hidden;
+				.clear-btn {
+					border: none;
+					cursor: pointer;
+					min-width: 40px;
+					width: 40px;
+					height: 40px;
+					background-image: url(../images/icon/ic-input-clear.svg);
+					background-size: 24px 24px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					
+				}
+				.input-unit {
+					@include fw-6(18px);
+					color: var(--dt-gray11);
+					.unit-point {
+						@include fw-6(18px);
+						color: var(--dt-gray16);
+					}
+				}
+		
+			}
 
-        }
-    }
-    // 상태별 스타일 - normal
-    &.normal {
-        .input-group {
-            .input-label {
-                top: -6px; // 라벨이 위로 올라가도록 변경
-                font-size: 12px; // 작아지면서 플로팅 효과
-                @extend %visible;
-            }
-            .input-row {
-                border-bottom: 2px solid var(--dt-gray08);
+		}
+	}
+	// 상태별 스타일 - normal
+	&.normal {
+		.input-group {
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				font-size: 12px; // 작아지면서 플로팅 효과
+				@extend %visible;
+			}
+			.input-row {
+				border-bottom: 2px solid var(--dt-gray08);
 
-                .btn-field-dropdown {// 은행/증권사 선택시
-                    padding-top:12px;
-                    .ico {
-                        display:inline-block;
-                        margin-right:2px;
-                    }
-                    .txt {
-                        color: var(--dt-gray16);
-                    }
-                }
-            }
+				.btn-field-dropdown {// 은행/증권사 선택시
+					padding-top:12px;
+					.ico {
+						display:inline-block;
+						margin-right:2px;
+					}
+					.txt {
+						color: var(--dt-gray16);
+					}
+				}
+			}
 
-        }
-        &.focused {
-            .input-group {
-                .input-field {
-                    caret-color: var(--dt-primary);
-                    cursor: text;
-                }
-                .input-row {
-                    border-bottom: 2px solid var(--dt-primary);
-                }
-            }
-        }
-        &.success {
-            .input-group {
-                .input-row {
-                    border-bottom: 2px solid var(--dt-success);               }
-            }
-        }
-        &.error {
-            .input-group {
-                .input-row {
-                    border-bottom: 2px solid var(--dt-error);
-                }
-            }
-        }
-        &.tltip-error {
-            .input-group {
-                .input-row {
-                    border-bottom: 2px solid var(--dt-error);
-                    .input-field {
-                        color: var(--dt-error);
-                    }
-                }
-            }
-            .validation-txt {
-                @extend %hidden;
-                background-image: url(../images/icon/ic-input-valchck-error.svg);
-                color: var(--dt-error);
-            }
-        }
-        &.disabled {
-            .input-group {
-                .input-row {
-                    pointer-events: none;
-                    border-bottom: 2px solid var(--dt-gray08);
-                    .input-field {
-                        opacity: 0.6;
-                    }
-                }
-                .util-box {
-                    .clear-button {
-                    pointer-events: none;
-                    }
-                }
-            }
-        }
-    
-        &.read-only {
-            .input-group {
-                .input-row {
-                    pointer-events: none;
-                    border-bottom: 2px solid var(--dt-gray08);
-                }
-                .util-box {
-                    .clear-button {
-                    pointer-events: none;
-                    }
-                }
-            }
-        }
-    }
-    // 상태별 스타일 - floating
-    &.floating {
-        input {
-            &::placeholder {
-                opacity: 1;
-            }
-        }
-        .input-group {
-            .input-label {
-                top: 50%; // 기본 상태에서 필드 중앙에 배치
-                left: 0;
-                transform: translateY(-50%);
-                @extend %hidden;
-            }
-        }
-        &.focused {
-            input {
-                &::placeholder {
-                    opacity: 0;
-                }
-            }
-            .input-group {
-                .input-label {
-                    top: -6px; // 라벨이 위로 올라가도록 변경
-                    @extend %visible;
-                }
-                .input-row {
-                    border-bottom: 2px solid var(--dt-primary);
-                    .input-field {
-                        caret-color: var(--dt-primary);
-                    }
-                    
-                }
+		}
+		&.focused {
+			.input-group {
+				.input-field {
+					caret-color: var(--dt-primary);
+					cursor: text;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-primary);
+				}
+			}
+		}
+		&.success {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-success);               }
+			}
+		}
+		&.error {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-error);
+				}
+			}
+		}
+		&.tltip-error {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-error);
+					.input-field {
+						color: var(--dt-error);
+					}
+				}
+			}
+			.validation-txt {
+				@extend %hidden;
+				background-image: url(../images/icon/ic-input-valchck-error.svg);
+				color: var(--dt-error);
+			}
+		}
+		&.disabled {
+			.input-group {
+				.input-row {
+					pointer-events: none;
+					border-bottom: 2px solid var(--dt-gray08);
+					.input-field {
+						opacity: 0.6;
+					}
+				}
+				.util-box {
+					.clear-button {
+					pointer-events: none;
+					}
+				}
+			}
+		}
+	
+		&.read-only {
+			.input-group {
+				.input-row {
+					pointer-events: none;
+					border-bottom: 2px solid var(--dt-gray08);
+				}
+				.util-box {
+					.clear-button {
+					pointer-events: none;
+					}
+				}
+			}
+		}
+	}
+	// 상태별 스타일 - floating
+	&.floating {
+		input {
+			&::placeholder {
+				opacity: 1;
+			}
+		}
+		.input-group {
+			.input-label {
+				top: 50%; // 기본 상태에서 필드 중앙에 배치
+				left: 0;
+				transform: translateY(-50%);
+				@extend %hidden;
+			}
+		}
+		&.focused {
+			input {
+				&::placeholder {
+					opacity: 0;
+				}
+			}
+			.input-group {
+				.input-label {
+					top: -6px; // 라벨이 위로 올라가도록 변경
+					@extend %visible;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-primary);
+					.input-field {
+						caret-color: var(--dt-primary);
+					}
+					
+				}
 
-            }
-        }
-        &.success {
-            input {
-                &::placeholder {
-                    opacity: 0;
-                    @extend %hidden;
-                }
-            }
-            .input-group {
-                .input-label {
-                    top: -6px; // 라벨이 위로 올라가도록 변경
-                    @extend %visible;
-                }
-                .input-row {
-                    border-bottom: 2px solid var(--dt-success);
-                }
-            }
-        }
-        &.error {
-            input {
-                &::placeholder {
-                    opacity: 0;
-                    @extend %hidden;
-                }
-            }
-            .input-group {
-                .input-label {
-                    top: -6px; // 라벨이 위로 올라가도록 변경
-                    @extend %visible;
-                }
-                .input-row {
-                    border-bottom: 2px solid var(--dt-error);
-                }
-            }
-        }
-        &.disabled {
-            .input-group {
-                .input-row {
-                    pointer-events: none;
-                    border-bottom: 2px solid var(--dt-gray08);
-                    .input-field {
-                        opacity: 0.6;
-                    }
-                }
-                .util-box {
-                    .clear-button {
-                    pointer-events: none;
-                    }
-                }
-            }
-        }
-    
-        &.read-only {
-            .input-group {
-                .input-row {
-                    pointer-events: none;
-                    border-bottom: 2px solid var(--dt-gray08);
-                }
-                .util-box {
-                    .clear-button {
-                    pointer-events: none;
-                    }
-                }
-            }
-        }
-    }
-    &.success {
-        .input-group {
-            .input-label {
-                top: -6px; // 라벨이 위로 올라가도록 변경
-                @extend %visible;
-            }
-            .input-row {
-                border-bottom: 2px solid var(--dt-success);
-            }
-        }
-        .validation-txt {
-            display: block;
-            background-image: url(../images/icon/ic-input-valchck-success.svg);
-            color: var(--dt-success);
-        }
-    }
+			}
+		}
+		&.success {
+			input {
+				&::placeholder {
+					opacity: 0;
+					@extend %hidden;
+				}
+			}
+			.input-group {
+				.input-label {
+					top: -6px; // 라벨이 위로 올라가도록 변경
+					@extend %visible;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-success);
+				}
+			}
+		}
+		&.error {
+			input {
+				&::placeholder {
+					opacity: 0;
+					@extend %hidden;
+				}
+			}
+			.input-group {
+				.input-label {
+					top: -6px; // 라벨이 위로 올라가도록 변경
+					@extend %visible;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-error);
+				}
+			}
+		}
+		&.disabled {
+			.input-group {
+				.input-row {
+					pointer-events: none;
+					border-bottom: 2px solid var(--dt-gray08);
+					.input-field {
+						opacity: 0.6;
+					}
+				}
+				.util-box {
+					.clear-button {
+					pointer-events: none;
+					}
+				}
+			}
+		}
+	
+		&.read-only {
+			.input-group {
+				.input-row {
+					pointer-events: none;
+					border-bottom: 2px solid var(--dt-gray08);
+				}
+				.util-box {
+					.clear-button {
+					pointer-events: none;
+					}
+				}
+			}
+		}
+	}
+	&.success {
+		.input-group {
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				@extend %visible;
+			}
+			.input-row {
+				border-bottom: 2px solid var(--dt-success);
+			}
+		}
+		.validation-txt {
+			display: block;
+			background-image: url(../images/icon/ic-input-valchck-success.svg);
+			color: var(--dt-success);
+		}
+	}
 
-    &.error {
-        .input-group {
-            .input-label {
-                top: -6px; // 라벨이 위로 올라가도록 변경
-                @extend %visible;
-            }
-            .input-row {
-                border-bottom: 2px solid var(--dt-error);
-            }
-        }
-        .validation-txt {
-            display: block;
-            background-image: url(../images/icon/ic-input-valchck-error.svg);
-            color: var(--dt-error);
-        }
-    }
-    &.tltip-error {
-        .input-group {
-            .input-label {
-                top: -6px; // 라벨이 위로 올라가도록 변경
-                @extend %visible;
-            }
-            .input-row {
-                border-bottom: 2px solid var(--dt-error);
-                .input-field {
-                    color: var(--dt-error);
-                }
-            }
-        }
-        .validation-txt {
-            @extend %hidden;
-            background-image: url(../images/icon/ic-input-valchck-error.svg);
-            color: var(--dt-error);
-        }
-    }
-    &.disabled {
-        .input-group {
-            .input-row {
-                pointer-events: none;
-                border-bottom: 2px solid var(--dt-gray08);
-                .input-field {
-                    opacity: 0.6;
-                }
-            }
-            .util-box {
-                .clear-button {
-                pointer-events: none;
-                }
-            }
-        }
-    }
+	&.error {
+		.input-group {
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				@extend %visible;
+			}
+			.input-row {
+				border-bottom: 2px solid var(--dt-error);
+			}
+		}
+		.validation-txt {
+			display: block;
+			background-image: url(../images/icon/ic-input-valchck-error.svg);
+			color: var(--dt-error);
+		}
+	}
+	&.tltip-error {
+		.input-group {
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				@extend %visible;
+			}
+			.input-row {
+				border-bottom: 2px solid var(--dt-error);
+				.input-field {
+					color: var(--dt-error);
+				}
+			}
+		}
+		.validation-txt {
+			@extend %hidden;
+			background-image: url(../images/icon/ic-input-valchck-error.svg);
+			color: var(--dt-error);
+		}
+	}
+	&.disabled {
+		.input-group {
+			.input-row {
+				pointer-events: none;
+				border-bottom: 2px solid var(--dt-gray08);
+				.input-field {
+					opacity: 0.6;
+				}
+			}
+			.util-box {
+				.clear-button {
+				pointer-events: none;
+				}
+			}
+		}
+	}
 
-    &.read-only {
-        .input-group {
-            .input-row {
-                pointer-events: none;
-                border-bottom: 2px solid var(--dt-gray08);
-            }
-            .util-box {
-                .clear-button {
-                pointer-events: none;
-                }
-            }
-        }
-    }
-    .chips-group {margin-top:8px;}
-    // 헬퍼 텍스트
-    .validation-txt {
-        display: none;
-        @include fw-6(12px);
-        color: var(--dt-gray11);
-        margin-top: 9px;
-        padding-left: 20px;
-        background-repeat: no-repeat;
-        background-size: 16px 16px;
-        background-position: left 0 center;
-    }
-    // 공지 텍스트 fw-7 gray11
-    .notice-txt {
-        margin-top: 8px;
-        span {
-            color: var(--dt-gray11);
-            @include fw-7(14px);
-            line-height:21px;
-        }
-    }
+	&.read-only {
+		.input-group {
+			.input-row {
+				pointer-events: none;
+				border-bottom: 2px solid var(--dt-gray08);
+			}
+			.util-box {
+				.clear-button {
+				pointer-events: none;
+				}
+			}
+		}
+	}
+	.chips-group {margin-top:8px;}
+	// 헬퍼 텍스트
+	.validation-txt {
+		display: none;
+		@include fw-6(12px);
+		color: var(--dt-gray11);
+		margin-top: 9px;
+		padding-left: 20px;
+		background-repeat: no-repeat;
+		background-size: 16px 16px;
+		background-position: left 0 center;
+	}
+	// 공지 텍스트 fw-7 gray11
+	.notice-txt {
+		margin-top: 8px;
+		span {
+			color: var(--dt-gray11);
+			@include fw-7(14px);
+			line-height:21px;
+		}
+	}
 
-    //상태별 스타일 - code
-    &.code {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 42px 0 0 0;
-        gap: 6px;
-        .code-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 6px;
-            .code-box {
-                display: inline-block;
-                width: 48px;
-                min-height: 52px;
-                padding: 12px 8px;
-                border-radius: 4px;
-                background: var(--dt-gray02);
-                @include fw-7(24px);
-                text-align: center;
-                color: var(--dt-gray16);
-            }
-        }
-        .validation-txt {
-            text-align: left;
-        }
-    }
-    &.email-form {
-        .input-group {
-            @include flexBox(between, center);
-            flex-wrap: wrap;
-            column-gap: 8px;
-            .input-label {
-                top: -6px; // 라벨이 위로 올라가도록 변경
-                font-size: 12px; // 작아지면서 플로팅 효과
-                display: flex;
-            }
-            .input-row {
-                flex: 1;
-                min-width: 132px;
-                // width: 100%;
-                border-bottom: 2px solid var(--dt-gray08);
-                            // Clear 버튼 : 기본상태-hidden
-                .util-box {
-                    margin-left: auto;
-                    display: flex;
-                    flex: none;
-                    column-gap: 6px;
-                    @extend %hidden;
-                    .clear-btn {
-                        border: none;
-                        cursor: pointer;
-                        min-width: 33px;
-                        width: 33px;
-                        height: 40px;
-                        background-image: url(../images/icon/ic-input-clear.svg);
-                        background-size: 24px 24px;
-                        background-repeat: no-repeat;
-                        background-position: right 5px center;
-                        
-                    }
-                }
-            }
-            .slct-email-wrap {
-                @include flexBox(start, center);
-                flex-wrap: wrap;
-                border-radius: 10px;
-                min-width: 85px;
-                padding: 12px 38px 12px 10px;
-                background-color: transparent;
-                border: 2px solid var(--dt-gray08);
-                background-image: url(../images/icon/chevron_down_line_24.svg);
-                background-repeat: no-repeat;
-                background-size: 24px 24px;
-                background-position: right 6px center;
-                .slct-txt {
-                    text-align: left;
-                    @include fw-6(18px);
-                    color: var(--dt-gray11);
-                    &.point {
-                        @include fw-6(14px);
-                        color: var(--dt-gray16);
-                    }
-                }
-            }
+	//상태별 스타일 - code
+	&.code {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 42px 0 0 0;
+		gap: 6px;
+		.code-group {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 6px;
+			.code-box {
+				display: inline-block;
+				width: 48px;
+				min-height: 52px;
+				padding: 12px 8px;
+				border-radius: 4px;
+				background: var(--dt-gray02);
+				@include fw-7(24px);
+				text-align: center;
+				color: var(--dt-gray16);
+			}
+		}
+		.validation-txt {
+			text-align: left;
+		}
+	}
+	&.email-form {
+		.input-group {
+			@include flexBox(between, center);
+			flex-wrap: wrap;
+			gap: 8px;
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				font-size: 12px; // 작아지면서 플로팅 효과
+				display: flex;
+			}
+			.input-row {
+				flex: 1;
+				min-width: 40%;
+				// width: 100%;
+				border-bottom: 2px solid var(--dt-gray08);
+							// Clear 버튼 : 기본상태-hidden
+				.util-box {
+					margin-left: auto;
+					display: flex;
+					flex: none;
+					column-gap: 6px;
+					@extend %hidden;
+					.clear-btn {
+						border: none;
+						cursor: pointer;
+						min-width: 33px;
+						width: 33px;
+						height: 40px;
+						background-image: url(../images/icon/ic-input-clear.svg);
+						background-size: 24px 24px;
+						background-repeat: no-repeat;
+						background-position: right 5px center;
+						
+					}
+				}
+			}
+			.slct-email-wrap {
+				@include flexBox(start, center);
+				flex-wrap: wrap;
+				border-radius: 10px;
+				min-width: 85px;
+				padding: 12px 38px 12px 10px;
+				background-color: transparent;
+				border: 2px solid var(--dt-gray08);
+				background-image: url(../images/icon/chevron_down_line_24.svg);
+				background-repeat: no-repeat;
+				background-size: 24px 24px;
+				background-position: right 6px center;
+				.slct-txt {
+					text-align: left;
+					@include fw-6(18px);
+					color: var(--dt-gray11);
+					&.point {
+						@include fw-6(14px);
+						color: var(--dt-gray16);
+					}
+				}
+			}
 
-        }
-        &.focused {
-            .input-group {
-                .input-field {
-                    caret-color: var(--dt-primary);
-                    cursor: text;
-                }
-                .input-row {
-                    border-bottom: 2px solid var(--dt-primary);
-                }
-            }
-        }
-        &.success {
-            .input-group {
-                .input-row {
-                    border-bottom: 2px solid var(--dt-success);               }
-            }
-        }
-        &.error {
-            .input-group {
-                .input-row {
-                    border-bottom: 2px solid var(--dt-error);
-                }
-            }
-        }
-    }
+		}
+		&.focused {
+			.input-group {
+				.input-field {
+					caret-color: var(--dt-primary);
+					cursor: text;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-primary);
+				}
+			}
+		}
+		&.success {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-success);               }
+			}
+		}
+		&.error {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-error);
+				}
+			}
+		}
+	}
 }
 
 // 2차인증 input-layout
@@ -548,9 +548,9 @@ input {
 		color: var(--dt-black);
 		line-height: 1.4;
 	}
-    .customer-name {
-        @include fw-6(24px);
-    }
+	.customer-name {
+		@include fw-6(24px);
+	}
 	.color-prim {
 		@include fw-6(24px);
 	}
@@ -560,27 +560,27 @@ input {
 	.validation-txt {
 		text-align: left;
 	}
-    .btn-group {
-        padding-top: 38px;
-        .btn {
-            width: unset;
-            margin: 0 auto;
-        }
-    }
-    &:has(.badge-time) {
-        .input-control {
-            padding-top: 28px;
-            gap: 24px;
-        }
-    }
-    &.auth_number {
-        padding-bottom: 4px;
-    }
+	.btn-group {
+		padding-top: 38px;
+		.btn {
+			width: unset;
+			margin: 0 auto;
+		}
+	}
+	&:has(.badge-time) {
+		.input-control {
+			padding-top: 28px;
+			gap: 24px;
+		}
+	}
+	&.auth_number {
+		padding-bottom: 4px;
+	}
 }
 
 .input-col-wrap {
-    @include flexColum;
-    row-gap:24px;
-    .input-control:first-of-type {margin-top:18px;}
-    .segment__wrap {padding-top:14px;}
+	@include flexColum;
+	row-gap:24px;
+	.input-control:first-of-type {margin-top:18px;}
+	.segment__wrap {padding-top:14px;}
 }

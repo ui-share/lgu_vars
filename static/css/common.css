@@ -2803,7 +2803,7 @@ input {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  column-gap: 8px;
+  gap: 8px;
 }
 .input-control.email-form .input-group .input-label {
   top: -6px;
@@ -2812,7 +2812,7 @@ input {
 }
 .input-control.email-form .input-group .input-row {
   flex: 1;
-  min-width: 132px;
+  min-width: 40%;
   border-bottom: 2px solid var(--dt-gray08);
 }
 .input-control.email-form .input-group .input-row .util-box {
