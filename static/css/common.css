@@ -176,6 +176,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: "Pretendard", system-ui, sans-serif;
   font-size: var(--dt-fz16);
   font-weight: var(--dt-fw400);
@@ -183,14 +184,6 @@ body {
   color: var(--dt-black);
   text-overflow: ellipsis;
   background-color: var(--dt-white);
-}
-
-body * {
-  font-family: "Pretendard", system-ui, sans-serif;
-  font-size: var(--dt-fz16);
-  font-weight: var(--dt-fw400);
-  line-height: 1.2;
-  color: var(--dt-black);
 }
 
 .is-pc {

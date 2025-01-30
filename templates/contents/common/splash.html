@@ -29,8 +29,7 @@
 						<img src="../../../static/images/img/logo-w.svg">
 					</span>
 					<div class="con__txt-box">
-						<span class="tit">눈으로 보는 ARS로</span>
-						<span class="tit">연결 중이에요</span>
+						<span class="tit">눈으로 보는 ARS로<br/>연결 중이에요</span>
 					</div>
 				</div>
 				<div class="cont__wrap splash-swiper">
@@ -84,8 +83,7 @@
 						<span class="txt">TIPS</span>
 					</div>
 					<div class="con__txt-box">
-						<span class="txt">스피커 모드로 전환하거나 이어폰을 착용하면</span>
-						<span class="txt">음성안내를 들으며 더 편리하게 이용할 수 있어요</span>
+						<span class="txt">스피커 모드로 전환하거나 이어폰을<br/>착용하면 음성안내를 들으며 더 편리하게<br/>이용할 수 있어요</span>
 					</div>
 				</div>
 			</div>
@@ -103,14 +101,13 @@
 			loop: true,
 			centeredSlides: true,
 			slidesPerView: 'auto',
-			spaceBetween: 20,
-			// autoplay: {
-			//     delay: 1000,
-			//     disableOnInteraction: false,
-			// },
+			//spaceBetween: 20,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
 			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
+				el: '.swiper-pagination'
 			},
 		});
 
