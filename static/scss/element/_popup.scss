@@ -166,13 +166,15 @@
 			padding-bottom:12px;
 			button > span {font-size:0;}
 			.img-box {
-				width:24px;height:24px;
+				width:32px;height:32px;
+				padding: 8px;
 				background-position:center;
 				background-repeat:no-repeat;
-				background-size:100%;
-				&.is-disabled {
+				background-size:24px 24px;
+				&.hidden {
+					display: inline-block !important;
 					pointer-events:none;
-					opacity: 30%;
+					opacity: 0;
 				}
 				&.btn-prev {
 					background-image:url(../images/icon/ic-btn-arrow-right-lg.svg);

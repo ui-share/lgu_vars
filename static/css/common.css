@@ -3115,15 +3115,17 @@ input {
   font-size: 0;
 }
 .popup-body .calendar-box .nav-schedule .img-box {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
+  padding: 8px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 24px 24px;
 }
-.popup-body .calendar-box .nav-schedule .img-box.is-disabled {
+.popup-body .calendar-box .nav-schedule .img-box.hidden {
+  display: inline-block !important;
   pointer-events: none;
-  opacity: 30%;
+  opacity: 0;
 }
 .popup-body .calendar-box .nav-schedule .img-box.btn-prev {
   background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
