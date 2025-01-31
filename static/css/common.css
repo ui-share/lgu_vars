@@ -266,6 +266,10 @@ button {
 }
 
 /* Util class */
+[role=button] {
+  cursor: pointer;
+}
+
 .noneScroll {
   overflow: hidden !important;
 }

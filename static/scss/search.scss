@@ -1,9 +1,9 @@
 @import "../scss/base/mixin";
 
 .section__cont {
-	&.desc {
-		height:calc(var(--vh) - 250px);
-	}
+	// &.desc {
+	// 	height:calc(var(--vh) - 250px);
+	// }
     &.summary {
 		padding-bottom:18px;
 		background-color:#DCE6FF;
@@ -15,6 +15,7 @@
 			padding-right:120px;
 			background-repeat: no-repeat;
 			background-size:140px;
+			background-position: right 10px bottom 0;
 			&:has(.select-billdate) {
 				.cont__txt-box {min-height:36px;}
 			}			
@@ -236,7 +237,6 @@
 	&.cont__wrap-bill {
 		min-height:174px;
 		background-image: url(../images/img/img-hm-bill.png);
-		background-position: right 10px top 35px;
 		&:has(.select-billdate) {
 			.select-billdate .txt-due {margin-bottom:6px}
 		}
@@ -244,19 +244,16 @@
 	&.cont__wrap-realtime {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-realtime.png);
-		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-usestate {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-usestate.png);
-		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-account {
 		min-height:164px;
 		background-image: url(../images/img/img-hm-account.png);
-		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-payment {
@@ -273,7 +270,6 @@
 	&.cont__wrap-billMthdChng {
 		min-height:154px;
 		background-image: url(../images/img/img-hm-bill.png);
-		background-position: right 10px top 35px;
 		.cont__txt-box {row-gap:0}
 	}
 	&.cont__wrap-MOPaymentUsed {
