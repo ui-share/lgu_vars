@@ -4,59 +4,113 @@
 	// &.desc {
 	// 	height:calc(var(--vh) - 250px);
 	// }
-    &.summary {
+	&.summary {
 		padding-bottom:18px;
 		background-color:#DCE6FF;
 		.cont__wrap {
 			@include flexColum;
+			gap:6px;
 			position:relative;
 			height:max-content;
+			min-height:184px;
 			padding-top:28px;
-			padding-right:120px;
+			// padding-right:120px;
 			background-repeat: no-repeat;
 			background-size:140px;
 			background-position: right 10px bottom 0;
-			&:has(.select-billdate) {
-				.cont__txt-box {min-height:36px;}
-			}			
-			.cont__txt-box {min-height:110px;}
+			// &:has(.select-billdate) {
+			// 	.cont__txt-box {min-height:36px;}
+			// }			
+			// .cont__txt-box {min-height:110px;}
 			.info-price-wrap{
 				.info-price, .info-price-detail {
 					&.total-last {
 						.row {margin-top:4px;}
 					}
 				}
+			}			
+		}
+		.cont__wrap-bill {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-realtime {
+			background-image: url(../images/img/img-hm-realtime.png);
+		}
+		.cont__wrap-usestate {
+			background-image: url(../images/img/img-hm-usestate.png);
+		}
+		.cont__wrap-account {
+			background-image: url(../images/img/img-hm-account.png);
+		}
+		.cont__wrap-payment {
+			background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+		}
+		.cont__wrap-realtimeRoaming {
+			background-image: url(../images/img/img-hm-roaming.png);
+		}
+		.cont__wrap-billMthdChng {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-MOPaymentUsed {
+			background-image: url(../images/img/img-hm-MOpayment.png);
+			background-position: right -5px top 16px;
+			& + .info-price-single {
+				p.txt-info {font-size:14px;font-weight:500;}
 			}
 		}
+		.cont__txt-box {
+			.txt-select-wrap {
+				@include flexRow;
+				flex-wrap: wrap;
+				align-items: center;
+				gap: 4px;
+				color:var(--dt-gray16);
+				padding-right: 90px;
+				.txt {
+					@include fw-6(18px);
+					line-height: 1.2;
+				}			
+			}
+					
+		}
 
-        .info-price-single {
-            margin:0 20px;
-            padding:18px 20px;
-            background-color:var(--dt-white);
-            border-radius:8px;
-            span {text-align:center}
-            .txt-info {
-                @include flexBox(center, center);
-                flex-wrap:wrap;
-                color:var(--dt-gray11);
-                @include fw-6();
-                .txt-price {
-                    display:inline-block;
-                    margin-left:4px;
-                    margin-right:4px;
-                    color:var(--dt-gray16);
-                    @include fw-7(18px);
-                }
-                .img-box {
-                    min-width:18px;
-                    width:18px;height:18px;
-                    margin-left:2px;
-                    img {margin-top:1px;}
-                }
+		.info-price-single {
+			margin:0 20px;
+			padding:18px 20px;
+			background-color:var(--dt-white);
+			border-radius:8px;
+			span {text-align:center}
+			.txt-info {
+				@include flexBox(center, center);
+				flex-wrap:wrap;
+				color:var(--dt-gray11);
+				gap:4px; 
+				@include fw-6();
+				.txt-price {
+					margin-right:4px;
+				}
+				.img-box {
+					min-width:18px;
+					width:18px;height:18px;
+					margin-left:2px;
+					img {margin-top:1px;}
+				}
+				&.increase {
+					.txt-price {
+						display:inline-block;
+						color:var(--dt-gray16);
+						@include fw-7(18px);
+					}
+				}
 				&.decrease {
 					.img-box {transform: rotate(180deg)}
+					.txt-price {
+						display:inline-block;
+						color:var(--dt-gray16);
+						@include fw-7(18px);
+					}
 				}
-            }
+			}
 			&:has(.txt-info:nth-of-type(2)){
 				.txt-info {
 					font-weight:500;
@@ -64,7 +118,7 @@
 					.color-prim {font-size:14px;}
 				}
 			}
-        }
+		}
 	}
 	&.segment {
 		padding: 36px 0 48px;
@@ -87,52 +141,46 @@
 			}
 		}
 	}
-    .cont__txt-box {
-        .txt {
-            &.price {
-                @include flexRow;
-                align-items: center;
-                flex-wrap: wrap;
-                margin-top:4px;
-                @include fw-6(18px);
-                line-height:20px;
-                .color-prim {@include fw-6(18px);line-height:22px;}
+	.cont__txt-box {
+		.txt {
+			&.price {
+				@include flexRow;
+				align-items: center;
+				flex-wrap: wrap;
+				@include fw-6(18px);
+				.color-prim {@include fw-6(18px);line-height:1.2;}
+				padding-right: 110px;
 				&:has(.deco + .color-prim) {
-					.deco {margin-right:2px;font-size:30px;}
+					.deco {margin-right:2px;font-size:30px;line-height:1.2;}
 				}
 				.txt-sub {
 					display: block;width:100%;
 					font-size:16px;color:var(--dt-black);
 				}
 			}
-        }
-    }
-    .select-billdate {
-		@include flexColum;
-		.txt-due {
-			margin-bottom:4px;
-			color: var(--dt-gray13);
-			@include fw-5(14px);
-			line-height:21px;
-		}
-		.txt-notice {
-			&:not(:first-child) {
-				margin-top:5px;
-			}
-			color: var(--dt-gray16);
-			@include fw-6(22px);
-			line-height:33px;
-		}
-		.txt-select-wrap {
-			color:var(--dt-gray16);
-			@include fw-6(18px);
-			.chips-date {margin-right:4px;}
 		}
 	}
-    .btn-srch-childline {
-        justify-content:space-between;
-        align-items:center;
-        width:100%;
+	.select-billdate {
+		@include flexColum;
+		min-height: 21px;	
+		.txt-due {
+			color: var(--dt-gray13);
+			@include fw-5(14px);
+			line-height:1.5;
+		}
+		// .txt-notice {
+		// 	&:not(:first-child) {
+		// 		margin-top:5px;
+		// 	}
+		// 	color: var(--dt-gray16);
+		// 	@include fw-6(22px);
+		// 	line-height:33px;
+		// }
+	}
+	.btn-srch-childline {
+		justify-content:space-between;
+		align-items:center;
+		width:100%;
 		padding:10px 20px;
 		border-radius:0;
 		background-color:var(--dt-gray15);
@@ -141,9 +189,9 @@
 			flex-wrap:wrap;
 			>span {font-size:14px;line-height:21px;}
 			.txt-childname {color:var(--dt-white);font-weight:700;}
-            .txt-phone {color:var(--dt-gray09);font-weight:500;}
-        }
-        .img-box {width:24px;height:24px;}
+			.txt-phone {color:var(--dt-gray09);font-weight:500;}
+		}
+		.img-box {width:24px;height:24px;}
 	}
 	.list-payment {// 결제이용내역
 		@include flexColum;
@@ -234,51 +282,5 @@
 		.btn-scroll {margin:0 auto;}
 	}
 
-	&.cont__wrap-bill {
-		min-height:174px;
-		background-image: url(../images/img/img-hm-bill.png);
-		&:has(.select-billdate) {
-			.select-billdate .txt-due {margin-bottom:6px}
-		}
-	}
-	&.cont__wrap-realtime {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-realtime.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-usestate {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-usestate.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-account {
-		min-height:164px;
-		background-image: url(../images/img/img-hm-account.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-payment {
-		min-height:154px;
-		background-image: url(../images/img/img-hm-automatic-withdrawal.png);
-		background-position: right 10px top 14px;
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-realtimeRoaming {
-		min-height:184px;
-		background-image: url(../images/img/img-hm-roaming.png);
-		background-position: right 10px top 44px;
-	}
-	&.cont__wrap-billMthdChng {
-		min-height:154px;
-		background-image: url(../images/img/img-hm-bill.png);
-		.cont__txt-box {row-gap:0}
-	}
-	&.cont__wrap-MOPaymentUsed {
-		min-height:154px;
-		background-image: url(../images/img/img-hm-MOpayment.png);
-		background-position: right -5px top 16px;
-		.cont__txt-box {row-gap:0}
-		& + .info-price-single {
-			p.txt-info {font-size:14px;font-weight:500;}
-		}
-	}
+
 }
