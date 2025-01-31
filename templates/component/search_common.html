@@ -36,10 +36,11 @@
 		<!-- container -->
 		<div class="container">
 			<!-- 홀맨 배너 영역// -->
-			<div class="section__cont summary"><!-- 청구요금조회 -->
+			<!-- Case 청구서 기본 -->
+			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-bill">
 					<div class="select-billdate">
-						<span class="txt-due">2월 1일 ~ 2월 28일</span>
+						<span class="txt-due"><span>2월 1일</span> ~ <span>2월 28일</span></span>
 					</div>
 					<div class="cont__txt-box">
 						<span class="txt-select-wrap">
@@ -55,9 +56,15 @@
 						</sapn>
 					</div>
 				</div>
-				<!-- 증가 케이스 : txt-info -->
+				<!-- 동일 케이스 : <span class="txt-info"> -->
 				<div class="info-price-single">
-					<span class="txt-info">
+					<span class="txt-info ">
+						지난 달과 납부요금이<span class="color-prim">동일해요</span>
+					</span>
+				</div>
+				<!-- 증가 케이스 : <span class="txt-info increase"> -->
+				<div class="info-price-single">
+					<span class="txt-info increase">
 						지난 달보다
 						<span>
 							<span class="txt-price">38,000원</span>늘었어요
@@ -67,7 +74,7 @@
 						</span>
 					</span>
 				</div>
-				<!-- 감소 케이스 : txt-info.decrease -->
+				<!-- 감소 케이스 : <span class="txt-info decrease"> -->
 				<div class="info-price-single">
 					<span class="txt-info decrease">
 						지난 달보다
@@ -80,7 +87,8 @@
 					</span>
 				</div>
 			</div>
-			<div class="section__cont summary"><!-- 청구 예정 상태 -->
+			<!-- Case 청구서 발행 전 -->
+			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-bill">
 					<div class="select-billdate">
 						<span class="txt-due">2월 1일 ~ 2월 28일</span>
@@ -99,25 +107,30 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__cont summary"><!-- 청구요금서 발행 전 -->
+			<!-- Case 청구서 없음 -->
+			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-bill">
 					<div class="select-billdate">
 						<span class="txt-due"></span>
 					</div>
 					<div class="cont__txt-box">
-						<span class="txt">아직 청구서가</span>
+						<span class="txt-select-wrap">
+							<span class="txt">아직 청구서가</span>
+						</span>
 						<span class="txt">발행되지 않았어요</span>
 					</div>
 				</div>
 			</div>
-
-			<div class="section__cont summary"><!-- 실시간요금조회 -->
+			<!-- 실시간요금조회 -->
+			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-realtime">
 					<div class="select-billdate">
-						<span class="txt-due">7월 1일부터 ~ 오늘까지</span>
+						<span class="txt-due"><span>7월 1일</span>부터 ~ 오늘까지</span>
 					</div>
 					<div class="cont__txt-box">
-						<sapn class="txt">이번 달 실시간 요금은</sapn>
+						<span class="txt-select-wrap">
+							<span class="txt">이번 달 실시간 요금은</span>
+						</span>
 						<sapn class="txt price">
 							<span class="deco">32,000</span>
 							<span class="color-prim">원</span>이에요
@@ -125,7 +138,8 @@
 					</div>
 				</div>
 			</div>
-			<div class="section__cont summary"><!-- 입금전용계좌로납부 -->
+			<!-- 입금전용계좌로납부 -->
+			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-account">
 					<div class="cont__txt-box">
 						<span class="txt notice">입금전용 계좌로</span>
@@ -136,13 +150,16 @@
 					</div>
 				</div>
 			</div>
+			<!-- 사용현황 - 실시간 사용량 -->
 			<div class="section__cont summary"><!-- 사용현황 - 실시간 사용량 -->
 				<div class="cont__wrap cont__wrap-usestate">
 					<div class="select-billdate">
 						<span class="txt-due">남은 기간 7일</span>
 					</div>
 					<div class="cont__txt-box">
-						<span class="txt">이번 달 남은 데이터는</span>
+						<span class="txt-select-wrap">
+							<span class="txt">이번 달 남은 데이터는</span>
+						</span>
 						<sapn class="txt price">
 							<span class="deco">5.51</span>
 							<span class="color-prim">GB</span>이에요

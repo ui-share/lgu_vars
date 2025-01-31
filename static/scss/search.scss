@@ -9,7 +9,7 @@
 		background-color:#DCE6FF;
 		.cont__wrap {
 			@include flexColum;
-			gap:6px;
+			gap:9px;
 			position:relative;
 			height:max-content;
 			min-height:184px;
@@ -65,11 +65,18 @@
 				align-items: center;
 				gap: 4px;
 				color:var(--dt-gray16);
-				padding-right: 90px;
+				padding-right: 30%;
 				.txt {
-					@include fw-6(18px);
-					line-height: 1.2;
-				}			
+					@include fw-6(22px);
+					line-height: 1.5;
+				}
+				&:has(.chips-date + .txt) {
+					.txt {
+						@include fw-6(18px);
+						line-height: 1.2;
+					}
+				}
+							
 			}
 					
 		}
@@ -148,8 +155,9 @@
 				align-items: center;
 				flex-wrap: wrap;
 				@include fw-6(18px);
+				line-height: 1.2;
 				.color-prim {@include fw-6(18px);line-height:1.2;}
-				padding-right: 110px;
+				padding-right: 45%;
 				&:has(.deco + .color-prim) {
 					.deco {margin-right:2px;font-size:30px;line-height:1.2;}
 				}
