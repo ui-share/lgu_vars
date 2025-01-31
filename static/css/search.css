@@ -1,6 +1,3 @@
-.section__cont.desc {
-  height: calc(var(--vh) - 250px);
-}
 .section__cont.summary {
   padding-bottom: 18px;
   background-color: #DCE6FF;
@@ -8,21 +5,65 @@
 .section__cont.summary .cont__wrap {
   display: flex;
   flex-direction: column;
+  gap: 9px;
   position: relative;
   height: max-content;
+  min-height: 184px;
   padding-top: 28px;
-  padding-right: 120px;
   background-repeat: no-repeat;
   background-size: 140px;
-}
-.section__cont.summary .cont__wrap:has(.select-billdate) .cont__txt-box {
-  min-height: 36px;
-}
-.section__cont.summary .cont__wrap .cont__txt-box {
-  min-height: 110px;
+  background-position: right 10px bottom 0;
 }
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
+}
+.section__cont.summary .cont__wrap-bill {
+  background-image: url(../images/img/img-hm-bill.png);
+}
+.section__cont.summary .cont__wrap-realtime {
+  background-image: url(../images/img/img-hm-realtime.png);
+}
+.section__cont.summary .cont__wrap-usestate {
+  background-image: url(../images/img/img-hm-usestate.png);
+}
+.section__cont.summary .cont__wrap-account {
+  background-image: url(../images/img/img-hm-account.png);
+}
+.section__cont.summary .cont__wrap-payment {
+  background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+}
+.section__cont.summary .cont__wrap-realtimeRoaming {
+  background-image: url(../images/img/img-hm-roaming.png);
+}
+.section__cont.summary .cont__wrap-billMthdChng {
+  background-image: url(../images/img/img-hm-bill.png);
+}
+.section__cont.summary .cont__wrap-MOPaymentUsed {
+  background-image: url(../images/img/img-hm-MOpayment.png);
+  background-position: right -5px top 16px;
+}
+.section__cont.summary .cont__wrap-MOPaymentUsed + .info-price-single p.txt-info {
+  font-size: 14px;
+  font-weight: 500;
+}
+.section__cont.summary .cont__txt-box .txt-select-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+  color: var(--dt-gray16);
+  padding-right: 30%;
+}
+.section__cont.summary .cont__txt-box .txt-select-wrap .txt {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.section__cont.summary .cont__txt-box .txt-select-wrap:has(.chips-date + .txt) .txt {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 .section__cont.summary .info-price-single {
   margin: 0 20px;
@@ -39,16 +80,12 @@
   justify-content: center;
   flex-wrap: wrap;
   color: var(--dt-gray11);
+  gap: 4px;
   font-size: 16px;
   font-weight: 600;
 }
 .section__cont.summary .info-price-single .txt-info .txt-price {
-  display: inline-block;
-  margin-left: 4px;
   margin-right: 4px;
-  color: var(--dt-gray16);
-  font-size: 18px;
-  font-weight: 700;
 }
 .section__cont.summary .info-price-single .txt-info .img-box {
   min-width: 18px;
@@ -59,8 +96,20 @@
 .section__cont.summary .info-price-single .txt-info .img-box img {
   margin-top: 1px;
 }
+.section__cont.summary .info-price-single .txt-info.increase .txt-price {
+  display: inline-block;
+  color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 700;
+}
 .section__cont.summary .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
+}
+.section__cont.summary .info-price-single .txt-info.decrease .txt-price {
+  display: inline-block;
+  color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 700;
 }
 .section__cont.summary .info-price-single:has(.txt-info:nth-of-type(2)) .txt-info {
   font-weight: 500;
@@ -90,19 +139,20 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 4px;
   font-size: 18px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 1.2;
+  padding-right: 45%;
 }
 .cont__wrap .cont__txt-box .txt.price .color-prim {
   font-size: 18px;
   font-weight: 600;
-  line-height: 22px;
+  line-height: 1.2;
 }
 .cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .deco {
   margin-right: 2px;
   font-size: 30px;
+  line-height: 1.2;
 }
 .cont__wrap .cont__txt-box .txt.price .txt-sub {
   display: block;
@@ -113,30 +163,13 @@
 .cont__wrap .select-billdate {
   display: flex;
   flex-direction: column;
+  min-height: 21px;
 }
 .cont__wrap .select-billdate .txt-due {
-  margin-bottom: 4px;
   color: var(--dt-gray13);
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
-}
-.cont__wrap .select-billdate .txt-notice {
-  color: var(--dt-gray16);
-  font-size: 22px;
-  font-weight: 600;
-  line-height: 33px;
-}
-.cont__wrap .select-billdate .txt-notice:not(:first-child) {
-  margin-top: 5px;
-}
-.cont__wrap .select-billdate .txt-select-wrap {
-  color: var(--dt-gray16);
-  font-size: 18px;
-  font-weight: 600;
-}
-.cont__wrap .select-billdate .txt-select-wrap .chips-date {
-  margin-right: 4px;
+  line-height: 1.5;
 }
 .cont__wrap .btn-srch-childline {
   justify-content: space-between;
@@ -268,69 +301,4 @@
 }
 .cont__wrap.cont__wrap-btBtn .btn-scroll {
   margin: 0 auto;
-}
-.cont__wrap.cont__wrap-bill {
-  min-height: 174px;
-  background-image: url(../images/img/img-hm-bill.png);
-  background-position: right 10px top 35px;
-}
-.cont__wrap.cont__wrap-bill:has(.select-billdate) .select-billdate .txt-due {
-  margin-bottom: 6px;
-}
-.cont__wrap.cont__wrap-realtime {
-  min-height: 164px;
-  background-image: url(../images/img/img-hm-realtime.png);
-  background-position: right 10px top 35px;
-}
-.cont__wrap.cont__wrap-realtime .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-usestate {
-  min-height: 164px;
-  background-image: url(../images/img/img-hm-usestate.png);
-  background-position: right 10px top 35px;
-}
-.cont__wrap.cont__wrap-usestate .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-account {
-  min-height: 164px;
-  background-image: url(../images/img/img-hm-account.png);
-  background-position: right 10px top 35px;
-}
-.cont__wrap.cont__wrap-account .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-payment {
-  min-height: 154px;
-  background-image: url(../images/img/img-hm-automatic-withdrawal.png);
-  background-position: right 10px top 14px;
-}
-.cont__wrap.cont__wrap-payment .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-realtimeRoaming {
-  min-height: 184px;
-  background-image: url(../images/img/img-hm-roaming.png);
-  background-position: right 10px top 44px;
-}
-.cont__wrap.cont__wrap-billMthdChng {
-  min-height: 154px;
-  background-image: url(../images/img/img-hm-bill.png);
-  background-position: right 10px top 35px;
-}
-.cont__wrap.cont__wrap-billMthdChng .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-MOPaymentUsed {
-  min-height: 154px;
-  background-image: url(../images/img/img-hm-MOpayment.png);
-  background-position: right -5px top 16px;
-}
-.cont__wrap.cont__wrap-MOPaymentUsed .cont__txt-box {
-  row-gap: 0;
-}
-.cont__wrap.cont__wrap-MOPaymentUsed + .info-price-single p.txt-info {
-  font-size: 14px;
-  font-weight: 500;
 }
