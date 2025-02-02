@@ -142,16 +142,21 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
-  padding-right: 45%;
+  padding-right: 35%;
+  row-gap: 4px;
 }
-.cont__wrap .cont__txt-box .txt.price .color-prim {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .deco {
+.cont__wrap .cont__txt-box .txt.price .deco {
   margin-right: 2px;
   font-size: 30px;
+  line-height: 1.2;
+}
+.cont__wrap .cont__txt-box .txt.price .color-prim {
+  font-size: 30px;
+  line-height: 1.2;
+}
+.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .color-prim {
+  font-size: 18px;
+  font-weight: 600;
   line-height: 1.2;
 }
 .cont__wrap .cont__txt-box .txt.price .txt-sub {

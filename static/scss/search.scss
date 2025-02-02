@@ -155,11 +155,13 @@
 				align-items: center;
 				flex-wrap: wrap;
 				@include fw-6(18px);
-				line-height: 1.2;
-				.color-prim {@include fw-6(18px);line-height:1.2;}
-				padding-right: 45%;
+				line-height: 1.2;				
+				padding-right: 35%;
+				row-gap: 4px;
+				.deco {margin-right:2px;font-size:30px;line-height:1.2;}
+				.color-prim {font-size:30px;line-height:1.2;}
 				&:has(.deco + .color-prim) {
-					.deco {margin-right:2px;font-size:30px;line-height:1.2;}
+					.color-prim {@include fw-6(18px);line-height:1.2;}
 				}
 				.txt-sub {
 					display: block;width:100%;
