@@ -729,6 +729,10 @@ button {
   font-size: 14px;
   font-weight: 500;
 }
+.plan-wrap .col .txt-plan .total i {
+  display: inline-block;
+  margin-right: 2px;
+}
 .plan-wrap .col .txt-plan .total, .plan-wrap .col .txt-caution {
   color: var(--dt-gray11);
   font-size: 14px;

@@ -1,9 +1,6 @@
 @import "../scss/base/mixin";
 
 .section__cont {
-	// &.desc {
-	// 	height:calc(var(--vh) - 250px);
-	// }
 	&.summary {
 		padding-bottom:18px;
 		background-color:#DCE6FF;
@@ -121,18 +118,16 @@
 					}
 				}
 			}
-			&:has(.txt-info:nth-of-type(2)){
-				.txt-info {
-					font-weight:500;
-					font-size:14px;
-					.color-prim {font-size:14px;}
-				}
-			}
 		}
 	}
 	&.segment {
 		padding: 36px 0 48px;
 		gap: 0;
+	}
+	&.desc {//입금전용계좌추가
+		&:has(.accnt-cont-wrap){
+			height:calc(var(--vh) - 250px);
+		}
 	}
 }
 

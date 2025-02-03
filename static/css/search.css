@@ -114,16 +114,12 @@
   font-size: 18px;
   font-weight: 700;
 }
-.section__cont.summary .info-price-single:has(.txt-info:nth-of-type(2)) .txt-info {
-  font-weight: 500;
-  font-size: 14px;
-}
-.section__cont.summary .info-price-single:has(.txt-info:nth-of-type(2)) .txt-info .color-prim {
-  font-size: 14px;
-}
 .section__cont.segment {
   padding: 36px 0 48px;
   gap: 0;
+}
+.section__cont.desc:has(.accnt-cont-wrap) {
+  height: calc(var(--vh) - 250px);
 }
 
 .cont__wrap .con__tit-box .tit-head .txt-title {
