@@ -39,12 +39,11 @@
 					<p class="txt">선택약정 할인 신청을 위해, 문자로 받은</p>
 					<h3 class="tit"><span class="color-prim">인증번호 6자리</span>를 입력해 주세요</h3>
 
-					<!-- 기본 상태 -->
+					<!-- [Case 기본 상태]-->
 					<div class="badge badge-time">
 						<span class="icon"></span>
 						<span class="txt">02:59</span>
 					</div>
-
 					<div class="input-control code">
 						<div class="code-group">
 							<input type="tel" class="code-box" placeholder="" autofocus>
@@ -54,20 +53,19 @@
 							<input type="tel" class="code-box" placeholder="">
 							<input tDpe="tel" class="code-box" placeholder="">
 						</div>
-						<div class="validation-txt">확인해주세요</div>
+						<div class="validation-txt">에러 메시지</div>
 					</div>
 
-					<!-- 인증 시간 초과
-						인증 시간 초과가 될 경우에는 badge에 error 추가
-						<div class="badge badge-time error">
-						에러메시지 표출 시 input-control에 error 추가
-						<div class="input-control code error">
+					<!--[Case 인증 시간 초과]
+						- 시간 벳지 에러 : badge-time에 error 추가
+							<div class="badge badge-time error">
+						- 에러메시지 표출: input-control에 error 추가
+							<div class="input-control code error">
 					-->
 					<div class="badge badge-time error">
 						<span class="icon"></span>
 						<span class="txt">02:59</span>
 					</div>
-
 					<div class="input-control code error">
 						<div class="code-group">
 							<input type="tel" class="code-box" placeholder="" autofocus>
@@ -78,17 +76,16 @@
 							<input tDpe="tel" class="code-box" placeholder="">
 						</div>
 						<div class="validation-txt">입력 시간이 지났어요. 인증번호를 다시 받아 주세요.</div>
-					</div>
+					</div>					
 
-					<!-- 인증 번호 오류
-						에러메시지 표출 시 input-control에 error 추가
-						<div class="input-control code error">
+					<!-- [Case 인증 번호 오류]
+						- 에러메시지 표출: input-control에 error 추가
+							<div class="input-control code error">
 					-->
 					<div class="badge badge-time">
 						<span class="icon"></span>
 						<span class="txt">02:59</span>
 					</div>
-
 					<div class="input-control code error">
 						<div class="code-group">
 							<input type="tel" class="code-box" placeholder="" autofocus>
@@ -100,7 +97,7 @@
 						</div>
 						<div class="validation-txt">인증번호를 다시 확인해 주세요</div>
 					</div>
-
+					
 					<div class="btn-group">
 						<button class="btn btn-md" type="button">
 							<span class="txt">다시 받기</span>
