@@ -43,21 +43,35 @@
 .page-wrapper .container .section__cont:has(.cont__wrap-btBtn button:nth-of-type(2)) {
   padding-bottom: 240px;
 }
-
-.cont__wrap.cont__wrap-cslimited {
+.page-wrapper:has(.cont__wrap-cslimited) {
+  height: 100%;
+}
+.page-wrapper:has(.cont__wrap-cslimited) .container {
+  height: 100%;
+}
+.page-wrapper:has(.cont__wrap-cslimited) .section__cont {
+  height: 100%;
+  padding-bottom: 0;
+}
+.page-wrapper:has(.cont__wrap-cslimited) .cont__wrap.cont__wrap-cslimited {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding: 40px 20px 20px;
+  padding: 20px;
   gap: 16px;
 }
-.cont__wrap.cont__wrap-cslimited .sub-tit {
+.page-wrapper:has(.cont__wrap-cslimited) .cont__wrap.cont__wrap-cslimited .sub-tit {
   font-size: 16px;
   font-weight: 500;
   color: var(--dt-gray11);
   margin-bottom: 12px;
 }
+.page-wrapper:has(.cont__wrap-cslimited) .cont__wrap.cont__wrap-cslimited .chips-all:active .arrow,
+.page-wrapper:has(.cont__wrap-cslimited) .cont__wrap.cont__wrap-cslimited .chips-all.is-selected .arrow {
+  transform: none;
+}
+
 .cont__wrap.cont__wrap-btBtn {
   padding: 0;
   background-color: transparent;
