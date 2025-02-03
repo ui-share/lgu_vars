@@ -58,6 +58,9 @@
 				p.txt-info {font-size:14px;font-weight:500;}
 			}
 		}
+		.cont__wrap-plan {
+			background-image: url(../images/img/img-hm-myplan.png);
+		}
 		.cont__txt-box {
 			.txt-select-wrap {
 				@include flexRow;
@@ -203,19 +206,28 @@
 		}
 		.img-box {width:24px;height:24px;}
 	}
-	.list-payment {// 결제이용내역
+	.list-payment {
 		@include flexColum;
 		row-gap:12px;
 		.info-col-wrap {
 			.row {
-				.txt-title {color:var(--dt-gray14);}
+				.txt-title {
+					align-self:flex-start;
+					color:var(--dt-gray14);
+				}
 				.txt-price {
 					@include fw-7(16px);
 					line-height:24px;
 					text-align:right;
 				}
 				&.total {
-					.txt-title {color:var(--dt-gray11);}
+					.txt-title {
+						color:var(--dt-gray11);
+						&.bold {
+							font-size:16px;
+							color:var(--dt-gray16);
+						}
+					}
 					.txt-price {
 						font-size:18px;
 						line-height:21px;
