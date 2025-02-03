@@ -532,6 +532,7 @@ input {
 			}
 		}
 	}
+
 }
 
 // 2차인증 input-layout
@@ -586,4 +587,14 @@ input {
 	row-gap:24px;
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
+}
+.input-row-wrap {
+	@include flexRow;
+	align-items:center;
+	column-gap:8px;
+	.hyphen {width:18px;margin-top:10px;color:var(--dt-gray11);text-align:center;font-size:18px;font-weight:600;}
+	.input-control {
+		width:calc((100% - 30px) / 2);
+	}
+
 }

@@ -48,24 +48,52 @@
                         </span> 
                         -->
                     </div>
-                    <!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
-                    <button class="slct-perd-wrap">
-                        <span class="slct-perd">
-                            <span class="slct-txt" type="button">월 선택</span>
-                            <!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-                        </span>
-                        <span class="slct-perd">
-                            <span class="hyphen">~</span>
-                            <span class="slct-txt" type="button">월 선택</span>
-                            <!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-                        </span>
-                    </button>
+                    <div class="input-row-wrap">
+                        <div class="input-control normal"><!-- 입력 시 focused 클래스 추가 -->
+                        <!-- <div class="input-control normal focused"> -->
+                            <div class="input-group">
+                                <div class="input-row">
+                                    <input type="text" class="input-field" placeholder="시작월">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+                        <span class="hyphen">~</span>
+                        <div class="input-control normal"><!-- 입력 시 focused 클래스 추가 -->
+                            <!-- <div class="input-control normal focused"> -->
+                                <div class="input-group">
+                                    <div class="input-row">
+                                        <input type="text" class="input-field" placeholder="종료월">
+                                        <div class="util-box">
+                                            <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                            <button type="button" class="clear-btn hidden"></button>
+                                            <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                            <span class="input-unit hidden">
+                                                <span class="unit-point">1</span>단위가늘어납니다
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- 
+                                        <div class="util-box"> : clear button 과 unit이 들어감 
+                                    -->
+                                </div>
+                                <div class="validation-txt">validation 메시지 노출</div>
+                            </div>
+                    </div>
+
+
+
                     <!-- 
                         input에 대한 이벤트 정보는
                         ./templates/element/input.html
