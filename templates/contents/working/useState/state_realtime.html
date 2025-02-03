@@ -160,8 +160,9 @@
                                 <p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
                             </div>
 
-                            <!-- open 클래스 삭제 시 .accordion-header > .txt innerText '간단히 보기' to '자세히 보기' -->
+                            <!-- 자세히보기 아코디언 영역 -->
                             <div class="col accordion-container">
+                            <!-- <div class="col accordion-container open"> -->
                                 <div class="list-plan accordion-content">
                                     <div class="row">
                                         <span class="txt-title">
@@ -228,7 +229,10 @@
                                     </div>
                                 </div>
                                 <button class="btn-toggle accordion-header">
-                                    <span class="txt">자세히 보기</span>
+                                    <span class="txt"><!-- accordion-container .open 추가 시 [자세히 보기 >> 간단히 보기] 로 바뀜 -->
+                                        자세히 보기
+                                        <!-- 간단히 보기 -->
+                                    </span>
                                     <span class="img-box ico-toggle">
                                         <img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
                                     </span>
