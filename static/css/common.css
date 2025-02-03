@@ -2934,6 +2934,9 @@ input {
 .auth-wrap.auth_number {
   padding-bottom: 4px;
 }
+.auth-wrap.auth_number .badge-time {
+  margin-top: 28px;
+}
 
 .input-col-wrap {
   display: flex;
@@ -2945,6 +2948,24 @@ input {
 }
 .input-col-wrap .segment__wrap {
   padding-top: 14px;
+}
+
+.input-row-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+.input-row-wrap .hyphen {
+  width: 18px;
+  margin-top: 10px;
+  color: var(--dt-gray11);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.input-row-wrap .input-control {
+  width: calc((100% - 30px) / 2);
 }
 
 .popup-wrapper {
