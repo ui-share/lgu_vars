@@ -236,7 +236,9 @@ button {
 }
 .color-prim {
 	color:var(--dt-primary) !important;
-	&.bold {font-weight:700 !important;}
+}
+.bold {
+	font-weight:700 !important;
 }
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}

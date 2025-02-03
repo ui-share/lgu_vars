@@ -46,6 +46,9 @@
   font-size: 14px;
   font-weight: 500;
 }
+.section__cont.summary .cont__wrap-plan {
+  background-image: url(../images/img/img-hm-myplan.png);
+}
 .section__cont.summary .cont__txt-box .txt-select-wrap {
   display: flex;
   flex-direction: row;
@@ -210,6 +213,7 @@
   row-gap: 12px;
 }
 .cont__wrap .list-payment .info-col-wrap .row .txt-title {
+  align-self: flex-start;
   color: var(--dt-gray14);
 }
 .cont__wrap .list-payment .info-col-wrap .row .txt-price {
@@ -220,6 +224,10 @@
 }
 .cont__wrap .list-payment .info-col-wrap .row.total .txt-title {
   color: var(--dt-gray11);
+}
+.cont__wrap .list-payment .info-col-wrap .row.total .txt-title.bold {
+  font-size: 16px;
+  color: var(--dt-gray16);
 }
 .cont__wrap .list-payment .info-col-wrap .row.total .txt-price {
   font-size: 18px;
