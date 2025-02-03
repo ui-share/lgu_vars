@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조회_휴대폰 할부/선택약정_이용중</title>
+	<link rel="stylesheet" href="../../../../static/css/common.css">
+	<link rel="stylesheet" href="../../../../static/css/search.css">
+	<script>
+		const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+		function initCheckDevice() {
+			// PC
+			if (!isMobile) {
+				document.body.classList.add("is-pc");
+			}
+		}
+		window.onload = ()=> {
+			initCheckDevice();
+		}
+	</script>
+</head>
+<body>
+	<div class="page-wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- container -->
+		<div class="container">
+			<!-- 홀맨 배너 영역// -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-MOPaymentUsed">
+					<div class="select-billdate">
+						<span class="txt-due"></span>
+					</div>
+					<div class="cont__txt-box">
+						<span class="txt notice">이용 중인 휴대폰의</span>
+						<sapn class="txt price">
+							<span class="deco">할부 및 약정 정보</span>예요
+						</sapn>
+					</div>
+				</div>
+				<div class="info-price-single">
+					<span class="txt-info">선택약정 기간이 곧 종료돼요.</span>
+					<span class="txt-info">
+						<span class="color-prim">선택약정 할인 예약</span>을 통해 혜택을 유지해 보세요!
+					</span>
+				</div>
+			</div>
+			<!-- //홀맨 배너 영역 -->
+
+			<div class="section__cont desc">
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">
+								휴대폰 할부 상세
+							</span>
+						</h6>
+					</div>
+					<div class="info-col-wrap">
+						<div class="plan-wrap">
+							<div class="col">
+								<div class="txt-plan">
+									<span class="current sm">8회 남음</span>
+									<span class="total">총 24회</span>
+								</div>
+								<div class="progress-area realtime">
+									<span class="progress-bg">
+										<!-- style.width %로 조절 -->
+										<span class="progress-bar" style="width:30%;"></span>
+									</span>
+								</div>
+							</div>
+							<div class="list-plan desc">
+								<div class="row">
+									<span class="txt-title">휴대폰 정보</span>
+									<span class="txt-desc">iPhone14 Pro Max_1TB</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">휴대폰 가격</span>
+									<span class="txt-desc">NN원</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">공시지원금</span>
+									<span class="txt-desc">NN원</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">대리점지원금</span>
+									<span class="txt-desc">NN원</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">할부원금</span>
+									<span class="txt-desc">NN원</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">할부수수료</span>
+									<span class="txt-desc">NN원</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">
+										할부원금
+									</span>
+									<span class="txt-desc">
+										NN원
+										<span class="txt-sub">수수료 미포함</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">월 할부금액</span>
+								<span class="txt-price">
+									NN원
+								</span>
+							</span>
+							<span class="row">
+								<span class="txt-title">남은 할부금액</span>
+								<span class="txt-price">
+									NN원
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">
+								휴대폰 지원 할인 반환금
+							</span>
+						</h6>
+					</div>
+					<div class="info-col-wrap">
+						<div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">공시반환금</span>
+								<span class="txt-price">
+									NN원
+								</span>
+							</span>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">
+								휴대폰 약정할인 상세
+							</span>
+						</h6>
+					</div>
+					<div class="info-col-wrap">
+						<div class="plan-wrap">
+							<div class="col">
+								<div class="txt-plan">
+									<span class="current sm">1개월<span class="color-prim">(D-23일)</span>남음</span>
+									<span class="total">/<span>24개월</span></span>
+								</div>
+								<div class="progress-area realtime">
+									<span class="progress-bg">
+										<!-- style.width %로 조절 -->
+										<span class="progress-bar" style="width:10%;"></span>
+									</span>
+								</div>
+							</div>
+							<div class="list-plan desc">
+								<div class="row">
+									<span class="txt-title">할인유형</span>
+									<span class="txt-desc">
+										<em class="color-prim bold">선택약정</em>
+									</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">신청일</span>
+									<span class="txt-desc">NN년 N월 NN일</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">종료일</span>
+									<span class="txt-desc">NN년 N월 NN일</span>
+								</div>
+							</div>
+						</div>
+						<div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">예상 할인반환금</span>
+								<span class="txt-price">
+									NNN,000원
+									<span class="txt-sub">부가가치세포함</span>
+								</span>
+							</span>
+						</div>
+					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-sec">
+							<span class="txt">선택약정 할인 예약</span>
+						</button>
+					</div>
+					<div class="bullet-wrap">
+						<h5 class="bullet-caption">
+							유의사항
+						</h5>
+						<ul class="bullet-list">
+							<li class="bullet-item">
+								식스플랜 또는 베이직플랜 기간 중 요금제 변경시 위약금이 발생할 수 있습니다.
+							</li>
+							<li class="bullet-item">
+								2대 이상 휴대폰이 할부중인 경우 휴대폰 지원 할인반환금은 합계 금액으로 표시됩니다.
+							</li>
+							<li class="bullet-item">
+								해지 시 약정위약금 외에도 공시지원금과 대리점 지원금을 받은 경우 위약금이 추가될 수 있습니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<!--
+					버튼 클릭 시 '휴대폰약정할인정보' 부분으로 스크롤 되며, 하단으로 스크롤 시 미노출(스크롤 원점으로 돌아갈 경우 다시 노출)
+				-->
+				<div class="cont__wrap cont__wrap-btBtn"><!-- 'is-scrolled' 클래스 추가 시 미노출 -->
+				<!-- <div class="cont__wrap cont__wrap-btBtn is-scrolled"> -->
+					<button class="btn-scroll">
+						<span class="txt">선택약정 할인 예약</span>
+						<span class="img-box">
+							<img src="../../../../static/images/icon/ic-arrowdouble-white.svg">
+						</span>
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

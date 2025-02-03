@@ -301,18 +301,18 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 						<li class="tit">나의 요금제_myPlan</li>
 						<li class="txt">
 							<h3>화면</h3>
-							<a href="./templates/contents/business/myPlan/search_childBill_tab1.html" target="_blank"><span>나의 요금제</span> <span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
+							<!-- <a href="./templates/contents/business/myPlan/search_childBill_tab1.html" target="_blank"><span>나의 요금제</span> <span class="flag error"><span class="txt">up 25.02.03</span></span> </a> -->
 							<h3>바텀시트</h3>
 							<a href="./templates/contents/business/myPlan/pop_callEnd_app.html" target="_blank"><span>‘요금제 조회/변경’ 앱 연결</span> <span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
 						</li>
 					</ul>
-					<ul class="menu hidden">
+					<ul class="menu ">
 						<li class="tit">휴대폰할부/선택약정_optionalDiscount</li>
 						<li class="txt">
 							<h3>화면</h3>
-							<a href="./templates/contents/business/optionalDiscount/search_childBill_tab1.html" target="_blank"><span>휴대폰할부/선택약정 조회</span> <span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
+							<a href="./templates/contents/business/optionalDiscount/search_childBill_tab1.html" target="_blank"><span>이용중인 할부ㆍ선택약정 확인</span> <span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
 							<h3>바텀시트</h3>
-							<a href="./templates/contents/business/optionalDiscount/pop_slctChild.html" target="_blank"><span>‘요금제 조회/변경’ 앱 연결결</span><span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
+							<a href="./templates/contents/business/optionalDiscount/pop_slctChild.html" target="_blank"><span>‘요금제 조회/변경’ 앱 연결</span><span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
 						</li>
 					</ul>
 					<ul class="menu hidden">
@@ -358,7 +358,7 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 				<h2>휴대폰 결제_mobilePayment</h2>
 				<div class="accordion-con">
 					<ul class="menu">
-						<li class="tit">휴대폰 결제 설정</li>
+						<li class="tit">휴대폰 결제 설정_mobilePaymentSetting</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
@@ -367,7 +367,7 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 						</li>
 					</ul>
 					<ul class="menu">
-						<li class="tit">휴대폰 결제 이용내역</li>
+						<li class="tit">휴대폰 결제 이용내역_mobilePaymentUsed</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
@@ -376,7 +376,7 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 						</li>
 					</ul>
 					<ul class="menu">
-						<li class="tit">휴대폰 결제 선결제</li>
+						<li class="tit">휴대폰 결제 선결제_mobilePrepayment</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
@@ -389,11 +389,20 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 
 			<!-- 해외로밍_roamingInfo -->
 			<li>
-				<input type="checkbox" checked><i></i>
+				<input type="checkbox" ><i></i>
 				<h2>해외로밍_roamingInfo</h2>
 				<div class="accordion-con">
-					<ul class="menu">
-						<li class="tit">해외로밍 신청</li>
+					<ul class="menu hidden">
+						<li class="tit">해외로밍 신청_roamingPlan</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+					<ul class="menu hidden">
+						<li class="tit">해외로밍 부가서비스_roamingAdditional</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
@@ -402,25 +411,16 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 						</li>
 					</ul>
 					<ul class="menu">
-						<li class="tit">해외로밍 부가서비스</li>
+						<li class="tit">해외로밍 실시간 조회_roamingRealtime</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
 							<h3>바텀시트</h3>
-							
+							<a href="./templates/contents/business/roamingRealtime/pop_callEnd_app.html" target="_blank"><span>‘해외로밍’ 앱 연결</span><span class="flag error"><span class="txt">up 25.02.03</span></span> </a>
 						</li>
 					</ul>
-					<ul class="menu">
-						<li class="tit">해외로밍 실시간 조회</li>
-						<li class="txt">
-							<h3>화면</h3>
-							
-							<h3>바텀시트</h3>
-							
-						</li>
-					</ul>
-					<ul class="menu">
-						<li class="tit">해외로밍 이용내역</li>
+					<ul class="menu hidden">
+						<li class="tit">해외로밍 이용내역_roamingHistory</li>
 						<li class="txt">
 							<h3>화면</h3>
 							
