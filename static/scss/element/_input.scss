@@ -575,6 +575,9 @@ input {
 	}
 	&.auth_number {
 		padding-bottom: 4px;
+		.badge-time {
+			margin-top: 28px;
+		}
 	}
 }
 
