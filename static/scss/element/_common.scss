@@ -611,6 +611,7 @@ button {
 		}
 		.txt-plan .total {
 			span {@include fw-5(14px);}
+			i {display:inline-block;margin-right:2px;}
 		}
 		.txt-plan .total, .txt-caution {
 			color:var(--dt-gray11);
