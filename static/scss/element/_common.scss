@@ -892,6 +892,7 @@ button {
 		}
 		.tail {
 			@include fw-5(14px);
+			line-height: 21px;
 			color: var(--dt-black);
 			text-align: right;
 			max-width:166px;

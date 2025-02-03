@@ -1050,6 +1050,7 @@ button {
 .list-wrap .list-box .tail {
   font-size: 14px;
   font-weight: 500;
+  line-height: 21px;
   color: var(--dt-black);
   text-align: right;
   max-width: 166px;
