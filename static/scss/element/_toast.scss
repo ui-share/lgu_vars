@@ -4,14 +4,13 @@
 	display: none;
 	position: fixed;
 	bottom: 92px;
-	left: 50%;
-	transform: translate3d(-50%, 0, 0);
 	z-index: 9999;
 	width: 100%;
 	padding: 0 20px;
 	&.show {
 		display: block;
-		animation: toast-in 0.2s ease-out;
+		animation: slideInUp 0.2s ease-out;
+		// animation: toast-in 0.2s ease-out;
 	}
 	// &.hide {
 	//   display: block;
@@ -66,33 +65,33 @@
 // 	}
 // }
 /* toast animation */
-@keyframes toast-in {
-	0% {
-			transform: translate3d(-50%, 0, 0);
-			opacity: 0;
-			bottom: 0;
-			visibility: visible
-	}
-	to {
-		opacity: 1;
-		bottom: 92px;
-		transform: translate3d(-50%, 0, 0);
-	}
-}
+// @keyframes toast-in {
+// 	0% {
+// 			transform: translate3d(-50%, 0, 0);
+// 			opacity: 0;
+// 			bottom: 0;
+// 			visibility: visible
+// 	}
+// 	to {
+// 		opacity: 1;
+// 		bottom: 92px;
+// 		transform: translate3d(-50%, 0, 0);
+// 	}
+// }
 
-@keyframes toast-out {
-	0% {
-		opacity: 1;
-		bottom: 92px;
-		transform: translate3d(-50%, 0, 0);
-		visibility: visible
-	}
-	to {
-		opacity: 0;
-		bottom: 0;
-		transform: translate3d(-50%, 0, 0);
-		display: none;
-}
-}
+// @keyframes toast-out {
+// 	0% {
+// 		opacity: 1;
+// 		bottom: 92px;
+// 		transform: translate3d(-50%, 0, 0);
+// 		visibility: visible
+// 	}
+// 	to {
+// 		opacity: 0;
+// 		bottom: 0;
+// 		transform: translate3d(-50%, 0, 0);
+// 		display: none;
+// }
+// }
 
 
