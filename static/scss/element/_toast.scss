@@ -48,13 +48,13 @@
 			padding: 0 5px;
 		}
 		.btn-util {
-			min-width: 40px;
-			width: 40px;
-			height: 40px;
+			display: inline-block;
+			width: 24px;
+			height: 24px;
 			// margin-left: auto;
 			background-image: url(../images/icon/ic-toast-close.svg);
 			background-repeat: no-repeat;
-			background-size: 24px 24px;
+			background-size: 100%;
 			background-position: center center;
 		}
 	}
