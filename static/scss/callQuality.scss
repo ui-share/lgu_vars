@@ -1,0 +1,32 @@
+@import "../scss/base/mixin";
+// 서비스 : 통화품질 문의
+// 통화품질 풀 팝업
+.callQuality {
+	.inform-wrap {
+		.text-box {
+			.tit {
+				font-size: 22px;
+				.color-prim {
+					font-size: 22px;
+				}
+			}
+			.txt {
+				font-size: 14px;
+			}
+		}
+	}
+	.card {
+		padding: 24px;
+		.card-body {
+			gap: 20px;
+		}
+		.img-box {
+			width: unset;
+			min-width: none;
+			height: unset;
+		}
+		.tit {
+			@include fw-5(14px);
+		}
+	}
+}

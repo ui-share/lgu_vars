@@ -3,20 +3,19 @@
 .btn-group {
     //default
     .btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         padding:17px 4px 16px;
         background-color:var(--dt-gray03);
         border: 1px solid var(--dt-gray03);
-        text-align: center;
-        vertical-align:middle;
         border-radius: 4px;
+        gap: 4px;
         .txt {
             color: var(--dt-gray11);
             @include fw-6($fs: 16px);
             letter-spacing: -0.5px;
-        }
-        .img-box.ht16{
-            img {margin-top: 2px;}
         }
         &:active { // pressed 인터렉션
             box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
