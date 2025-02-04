@@ -114,6 +114,56 @@
 					}
 				}
 			}
+
+			.use-target {}
+			.discnt-price {
+				flex-direction:row;
+				align-items:center;
+				justify-content:space-between;
+				flex-wrap:wrap;
+				.card-body {
+					@include flexColum;
+					row-gap:4px;
+					position:relative;
+					width:98px;
+					&:after {
+						content:'할인';
+						display:block;
+						position:absolute;
+						top:0;right:-74px;
+						width:74px;
+						height:100%;
+						padding-top:46px;
+						padding-left:12px;
+						background-image: url(../images/img/bg_discount_arrow.svg);
+						background-size: 100%;
+						background-repeat:no-repeat;
+						color:var(--dt-primary);
+						@include fw-6(10px);
+					}
+					p {
+						padding:9px 0;
+						background-color:var(--dt-gray06);
+						color:var(--dt-gray16);
+						@include fw-6(11px);
+						text-align:center;
+						border-radius: 4px;
+					}
+
+				}
+				.card-footer {
+					justify-self:center;
+					align-items:center;
+					justify-content:center;
+					margin-top:0;
+					width:60px;
+					height:60px;
+					background-color:var(--dt-primary);
+					color: var(--dt-white);
+					@include fw-7(10px);
+					border-radius: 50%;
+				}
+			}
 		}
 	}
 }
