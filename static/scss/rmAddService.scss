@@ -41,7 +41,7 @@
 				@include fw-7(22px);
 			}
 			.txt {
-				height: 42px;
+				min-height: 42px;
 				line-height: 1.5;
 			}
 		}
@@ -115,33 +115,67 @@
 				}
 			}
 
-			.use-target {}
-			.discnt-price {
-				flex-direction:row;
-				align-items:center;
-				justify-content:space-between;
-				flex-wrap:wrap;
-				.card-body {
-					@include flexColum;
-					row-gap:4px;
-					position:relative;
-					width:98px;
-					&:after {
-						content:'할인';
-						display:block;
-						position:absolute;
-						top:0;right:-74px;
-						width:74px;
-						height:100%;
-						padding-top:46px;
-						padding-left:12px;
-						background-image: url(../images/img/bg_discount_arrow.svg);
-						background-size: 100%;
-						background-repeat:no-repeat;
-						color:var(--dt-primary);
-						@include fw-6(10px);
+			.use-target {
+				margin:4px 0;
+				padding:28px 20px;
+				.txt {
+					font-weight:600;
+					padding-left: 34px;
+					padding-right: 34px;
+				}
+				.list-target-item {
+					@include flexBox(center, center);
+					gap:32px;
+					margin-top:16px;
+					li {
+						@include flexColum;
+						align-items:center;
+						justify-content:center;
+						&.img-wrap {
+							width:46px;
+							.img-box {
+								width:100%;
+								height:32px;
+								margin-bottom:4px;
+							}
+						}
+						&:not(.img-wrap) {
+							position:relative;
+							width:60px;height:60px;
+							background-color:var(--dt-gray06);
+							border-radius:50%;
+							&::before {
+								content:'';
+								display:block;
+								position:absolute;
+								top:50%;
+								left: -24px;
+								transform:translateY(-50%);
+								width:16px;height:16px;
+								background-image: url(../images/icon/ic-plus-gray10.svg);
+								background-size:100%;
+								background-repeat:no-repeat;
+							}
+						}
+						.desc {
+							display:block;
+							@include fw-6(10px);
+							color:var(--dt-gray16);
+							line-height:normal;
+							text-align:center;
+						}
 					}
+				}
+			}
+			.discnt-price {
+				@include flexBox(center, center);
+				flex-direction:row;
+				flex-wrap:wrap;
+				gap:0;
+				.item-block {
+					width:98px;
 					p {
+						&:not(:first-child) {margin-top: 4px;}
 						padding:9px 0;
 						background-color:var(--dt-gray06);
 						color:var(--dt-gray16);
@@ -149,19 +183,73 @@
 						text-align:center;
 						border-radius: 4px;
 					}
-
 				}
-				.card-footer {
-					justify-self:center;
-					align-items:center;
-					justify-content:center;
-					margin-top:0;
+				.item-arrowbg {
+					position:relative;
+					width:74px;
+					aspect-ratio: 1 / 1.36;
+					background-image: url(../images/img/bg_discount_arrow.svg);
+					background-size: 100%;
+					background-repeat:no-repeat;
+					background-position: center;
+					> span {
+						display:block;
+						position:absolute;
+						top:46px;
+						left:12px;
+						color:var(--dt-primary);
+						@include fw-6(10px);
+					}
+				}
+				.item-point {
+					display:block;
 					width:60px;
 					height:60px;
+					margin-left:8px;
+					padding-top:24px;
 					background-color:var(--dt-primary);
 					color: var(--dt-white);
 					@include fw-7(10px);
 					border-radius: 50%;
+					text-align:center;
+				}
+			}
+			@media screen and (max-width:359px) {
+				.use-target {
+					padding:24px 20px;
+					.list-target-item {
+						flex-direction:column;
+						li {
+							&:not(.img-wrap) {
+								&::before {
+									content:'';
+									top:0;
+									left: 50%;
+									transform:translateY(-24px) translateX(-50%);
+								}
+							}
+						}
+					}
+				}
+				.discnt-price {
+					flex-direction:column;
+					.item-block {
+						width:100%;
+					}
+					.item-arrowbg {
+						width:100%;
+						aspect-ratio: 1 / 0.39;
+						background-image: url(../images/img/bg_discount_arrow_down.svg);
+						> span {
+							top:10%;
+							left:50%;
+							transform:translateX(-50%);
+						}
+					}
+					.item-point {
+						margin-left:0;
+						margin-top:8px;
+					}
 				}
 			}
 		}
