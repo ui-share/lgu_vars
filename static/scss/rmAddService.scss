@@ -20,11 +20,12 @@
 
 
 // 서비스 : 상세
-.page-wrapper:has(.cont__wrap-service.rmDetail) {
+body:has(.cont__wrap-service.rmDetail) {
 	background-color: var(--dt-gray05);
 }
 .section__cont:has(.cont__wrap-service.rmDetail) {
-	padding: 72px 0 95px;
+	padding-top: 72px;
+	padding-bottom: 95px;
 	gap: 0;
 }
 .cont__wrap-service.rmDetail {

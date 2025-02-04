@@ -1,0 +1,76 @@
+@import "../scss/base/mixin";
+// 서비스 : 해외로밍 실시간 조회
+.cont__wrap-realtimeRoaming {
+    background-image: url(../images/img/img-hm-roaming.png);
+}
+// 로밍기간 카드
+.card.rmPeriod {
+    padding: 22px 16px;
+    .card-body {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .item {
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        &.text {
+            gap: 0;
+            .tit {
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+        &.period {
+            position: relative;
+            justify-content: center;
+            min-width: 72px;
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                width: 100%;
+                height: 1px;
+                border: 1px dashed var(--dt-gray09);
+            }
+            .chips-tag {
+                height: 28px;
+                z-index: 1;
+            }
+        }
+    }
+}
+// 로밍요금 라운드박스
+.roamingPrice {
+    .roaming {
+        padding-top: 22px;
+        .row {
+            align-items: center;
+        }
+        .txt-title {
+            font-size: 16px;
+            align-self: unset;
+        }
+        .txt-price {
+            font-size: 18px;
+            color: var(--dt-black);
+            span:first-of-type {
+                font-size: 18px;
+            }
+        }
+    }
+    .txt-caution { 
+        text-align: right;
+        margin-top: 12px;
+    }
+}
+// 이용중:새로고침 버튼 있는 경우
+.section__cont.used {
+    padding-top: 20px;
+    .chips-refresh {
+        margin-left: auto;
+    }
+}

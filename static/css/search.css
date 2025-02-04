@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 184px;
   padding-top: 28px;
@@ -31,9 +32,6 @@
 }
 .section__cont.summary .cont__wrap-payment {
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
-}
-.section__cont.summary .cont__wrap-realtimeRoaming {
-  background-image: url(../images/img/img-hm-roaming.png);
 }
 .section__cont.summary .cont__wrap-billMthdChng {
   background-image: url(../images/img/img-hm-bill.png);
@@ -184,7 +182,8 @@
   background-color: var(--dt-gray15);
 }
 .cont__wrap .btn-srch-childline .txt-title {
-  column-gap: 4px;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
   flex-wrap: wrap;
 }
 .cont__wrap .btn-srch-childline .txt-title > span {

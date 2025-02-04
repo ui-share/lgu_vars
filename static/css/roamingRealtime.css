@@ -1,0 +1,72 @@
+.cont__wrap-realtimeRoaming {
+  background-image: url(../images/img/img-hm-roaming.png);
+}
+
+.card.rmPeriod {
+  padding: 22px 16px;
+}
+.card.rmPeriod .card-body {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.card.rmPeriod .item {
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.card.rmPeriod .item.text {
+  gap: 0;
+}
+.card.rmPeriod .item.text .tit {
+  font-weight: 600;
+  text-align: center;
+}
+.card.rmPeriod .item.period {
+  position: relative;
+  justify-content: center;
+  min-width: 72px;
+}
+.card.rmPeriod .item.period::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border: 1px dashed var(--dt-gray09);
+}
+.card.rmPeriod .item.period .chips-tag {
+  height: 28px;
+  z-index: 1;
+}
+
+.roamingPrice .roaming {
+  padding-top: 22px;
+}
+.roamingPrice .roaming .row {
+  align-items: center;
+}
+.roamingPrice .roaming .txt-title {
+  font-size: 16px;
+  align-self: unset;
+}
+.roamingPrice .roaming .txt-price {
+  font-size: 18px;
+  color: var(--dt-black);
+}
+.roamingPrice .roaming .txt-price span:first-of-type {
+  font-size: 18px;
+}
+.roamingPrice .txt-caution {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.section__cont.used {
+  padding-top: 20px;
+}
+.section__cont.used .chips-refresh {
+  margin-left: auto;
+}

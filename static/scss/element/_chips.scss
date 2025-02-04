@@ -214,6 +214,7 @@
 
 	// chips: 상세 - refresh (새로고침 박스)
 	&.chips-refresh {
+		width: 142px;
 		min-height: 36px;
 		border: 1px solid var(--dt-gray08);
 		background-color: var(--dt-white);

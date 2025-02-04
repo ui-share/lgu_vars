@@ -1,49 +1,44 @@
 @import "../scss/base/mixin";
 
-.page-wrapper {
-	.container {
-		.section__cont {
-			padding: 92px 0 155px;
-			&.scan {
-				position:relative;
-				padding-top:56px;
-				padding-bottom:0;
-				.cont__wrap-service {padding:0;}
-				.cont__wrap.cont__wrap-btBtn .btn-group {
-					position:absolute;
-					bottom:0;
-					left:0;
-					width:calc(100% - 40px);
-					padding:0;
-					margin:0 20px 20px;
-					border-radius: 4px;
-					overflow:hidden;
-					&::before {display:none;}
-				}
-				.scan-area:empty {
-					&:after {
-						content: "카드스캔API영역입니다";
-						display: block;
-						width: 100%;
-						height: calc(var(--vh) - 56px);
-						text-align: center;
-						font-size: 14px;
-						border: 1px solid red;
-						padding-top: 40vh;
-					}
-				}
-				.cont__wrap-btBtn {position:absolute;}
-			}
-			&:has(.cont__wrap-cms) {
-				padding: 92px 0 95px;
-				gap: 28px;
-			}
-			&:has(.cont__wrap-btBtn button:nth-of-type(2)){
-				padding-bottom:240px;
+.section__cont {
+	padding: 92px 0 155px;
+	&.scan {
+		position:relative;
+		padding-top:56px;
+		padding-bottom:0;
+		.cont__wrap-service {padding:0;}
+		.cont__wrap.cont__wrap-btBtn .btn-group {
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:calc(100% - 40px);
+			padding:0;
+			margin:0 20px 20px;
+			border-radius: 4px;
+			overflow:hidden;
+			&::before {display:none;}
+		}
+		.scan-area:empty {
+			&:after {
+				content: "카드스캔API영역입니다";
+				display: block;
+				width: 100%;
+				height: calc(var(--vh) - 56px);
+				text-align: center;
+				font-size: 14px;
+				border: 1px solid red;
+				padding-top: 40vh;
 			}
 		}
+		.cont__wrap-btBtn {position:absolute;}
 	}
-	
+	&:has(.cont__wrap-cms) {
+		padding: 92px 0 95px;
+		gap: 28px;
+	}
+	&:has(.cont__wrap-btBtn:not(:has(.flex-row)) button:nth-of-type(2)){
+		padding-bottom:240px;
+	}
 }
 .cont__wrap {
 	&.cont__wrap-btBtn {

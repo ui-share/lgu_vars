@@ -1,16 +1,16 @@
 @charset "UTF-8";
-.page-wrapper .container .section__cont {
+.section__cont {
   padding: 92px 0 155px;
 }
-.page-wrapper .container .section__cont.scan {
+.section__cont.scan {
   position: relative;
   padding-top: 56px;
   padding-bottom: 0;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap-service {
+.section__cont.scan .cont__wrap-service {
   padding: 0;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group {
+.section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -20,10 +20,10 @@
   border-radius: 4px;
   overflow: hidden;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group::before {
+.section__cont.scan .cont__wrap.cont__wrap-btBtn .btn-group::before {
   display: none;
 }
-.page-wrapper .container .section__cont.scan .scan-area:empty:after {
+.section__cont.scan .scan-area:empty:after {
   content: "카드스캔API영역입니다";
   display: block;
   width: 100%;
@@ -33,14 +33,14 @@
   border: 1px solid red;
   padding-top: 40vh;
 }
-.page-wrapper .container .section__cont.scan .cont__wrap-btBtn {
+.section__cont.scan .cont__wrap-btBtn {
   position: absolute;
 }
-.page-wrapper .container .section__cont:has(.cont__wrap-cms) {
+.section__cont:has(.cont__wrap-cms) {
   padding: 92px 0 95px;
   gap: 28px;
 }
-.page-wrapper .container .section__cont:has(.cont__wrap-btBtn button:nth-of-type(2)) {
+.section__cont:has(.cont__wrap-btBtn:not(:has(.flex-row)) button:nth-of-type(2)) {
   padding-bottom: 240px;
 }
 
