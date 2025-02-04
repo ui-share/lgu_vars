@@ -733,14 +733,11 @@ button {
   display: inline-block;
   margin-right: 2px;
 }
-.plan-wrap .col .txt-plan .total, .plan-wrap .col .txt-caution {
+.plan-wrap .col .txt-plan .total {
   color: var(--dt-gray11);
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
-}
-.plan-wrap .col .txt-caution {
-  text-align: right;
 }
 .plan-wrap .list-plan.accordion-content {
   margin-bottom: 12px;
@@ -848,6 +845,7 @@ button {
   flex-direction: row;
   align-items: center;
   column-gap: 6px;
+  align-self: flex-start;
 }
 .info-col-wrap .txt-title.ico .img-box {
   width: 28px;
@@ -883,6 +881,14 @@ button {
 }
 .info-col-wrap .info-price.total-last .row .txt-price {
   font-size: 16px;
+}
+.info-col-wrap .txt-caution {
+  display: block;
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: right;
 }
 
 .info-price-wrap {
