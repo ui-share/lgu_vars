@@ -123,13 +123,13 @@ body {
 	text-overflow: ellipsis;
     background-color: var(--dt-white);
 }
-body  * {
-	// font-family: 'Pretendard', system-ui, sans-serif;
-    // font-size: var(--dt-fz16);
-	// font-weight: var(--dt-fw400);
-    // line-height: 1.2;
-	// color: var(--dt-black);
-}
+// body * {
+// 	font-family: 'Pretendard', system-ui, sans-serif;
+//     font-size: var(--dt-fz16);
+// 	font-weight: var(--dt-fw400);
+//     line-height: 1.2;
+// 	color: var(--dt-black);
+// }
 .is-pc {
 	--max-devicewidth: 568px !important;
 }
