@@ -420,36 +420,4 @@
 		height: 100%;
 		padding-top: 20px;
 	}
-	// 통화품질 풀 팝업
-	&.callQuality {
-		.popup-body {
-			.inform-wrap {
-				.text-box {
-					.tit {
-						font-size: 22px;
-						.color-prim {
-							font-size: 22px;
-						}
-					}
-					.txt {
-						font-size: 14px;
-					}
-				}
-			}
-			.card {
-				padding: 24px;
-				.card-body {
-					gap: 20px;
-				}
-				.img-box {
-					width: unset;
-					min-width: none;
-					height: unset;
-				}
-				.tit {
-					@include fw-5(14px);
-				}
-			}
-		}
-	}
 }
