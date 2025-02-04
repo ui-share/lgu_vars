@@ -40,70 +40,63 @@
 						</h4>
 					</div>
 					<div class="txt-infoWrap">
-						발급 기간
-						<!-- 
-							삭제됨
-						<span class="subTxt-info">
-							최대 12개월
-						</span> 
-						-->
+						<!-- 발급 기간<span class="subTxt-info">최대 12개월</span> -->
 					</div>
+					<!-- 발급 기간 입력 -->
 					<div class="input-row-wrap">
-						<div class="input-control normal"><!-- 입력 시 focused 클래스 추가 -->
-						<!-- <div class="input-control normal focused"> -->
+						<!--						
+							## 입력 폼 관련 클래스 요약
+							기본 : <div class="input-control floating ">
+							포커스 : <div class="input-control floating focused">
+							유효성 검사 성공 : <div class="input-control floating success">
+							유효성 검사 에러 : <div class="input-control floating error">
+						-->
+						<div class="input-control floating focused">							
 							<div class="input-group">
+								<label class="input-label">시작 월 입력</label>
 								<div class="input-row">
-									<input type="text" class="input-field" placeholder="시작월">
-									<div class="util-box">
-										<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+									<input type="text" class="input-field" placeholder="YYYYMM" focus>
+									<div class="util-box">										
 										<button type="button" class="clear-btn hidden"></button>
-										<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-										<span class="input-unit hidden">
-											<span class="unit-point">1</span>단위가늘어납니다
-										</span>
+										<!-- 
+											<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+										-->
 									</div>
 								</div>
-								<!-- 
-									<div class="util-box"> : clear button 과 unit이 들어감 
-								-->
 							</div>
 							<div class="validation-txt">validation 메시지 노출</div>
 						</div>
 						<span class="hyphen">~</span>
-						<div class="input-control normal"><!-- 입력 시 focused 클래스 추가 -->
-							<!-- <div class="input-control normal focused"> -->
+						<!--						
+							## 입력 폼 관련 클래스 요약
+							기본 : <div class="input-control floating">
+							포커스 : <div class="input-control floating focused">
+							유효성 검사 성공 : <div class="input-control floating success">
+							유효성 검사 에러 : <div class="input-control floating error">
+						-->
+						<div class="input-control floating focused">
 								<div class="input-group">
+									<label class="input-label">종료 월 입력</label>
 									<div class="input-row">
-										<input type="text" class="input-field" placeholder="종료월">
+										<input type="text" class="input-field" placeholder="YYYYMM">
 										<div class="util-box">
-											<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
 											<button type="button" class="clear-btn hidden"></button>
-											<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-											<span class="input-unit hidden">
-												<span class="unit-point">1</span>단위가늘어납니다
-											</span>
+											<!-- 
+												<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+											-->
 										</div>
 									</div>
-									<!-- 
-										<div class="util-box"> : clear button 과 unit이 들어감 
-									-->
 								</div>
 								<div class="validation-txt">validation 메시지 노출</div>
 							</div>
 					</div>
 
-
-
-					<!-- 
-						input에 대한 이벤트 정보는
-						./templates/element/input.html
-						페이지 주석 참고
-						
-						이메일폼 관련 클래스 요약
-						기본 : <div class="input-control email-form">
-						이메일 입력 : <div class="input-control email-form focused">
-						유효성 검사 성공 : <div class="input-control email-form success">
-						유효성 검사 에러 : <div class="input-control email-form error">
+					<!--						
+						## 입력 폼 관련 클래스 요약
+						기본 : <div class="input-control ">
+						포커스 : <div class="input-control focused">
+						유효성 검사 성공 : <div class="input-control success">
+						유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 이메일 입력 -->
 					<div class="input-control email-form mt-28">				
@@ -119,11 +112,10 @@
 								</div>
 							</div>
 							<button class="slct-email-wrap">
-								<span class="slct-txt" type="button">이메일선택</span>
-							<!-- 
-								<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-							-->
-								<span class="slct-txt point hidden" type="button">이메일 선택</span>
+								<span class="slct-txt" type="button">직접 입력</span>
+								<!-- 
+									<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+								-->
 							</button>
 						</div>
 						<div class="validation-txt">validation 메시지 노출</div>
