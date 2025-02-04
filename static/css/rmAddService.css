@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .section__cont {
   display: flex;
   flex-direction: column;
@@ -42,7 +41,7 @@
   font-weight: 700;
 }
 .cont__wrap-service.rmDetail .con__tit-box .text-box .txt {
-  height: 42px;
+  min-height: 42px;
   line-height: 1.5;
 }
 .cont__wrap-service.rmDetail .card.rmInform {
@@ -107,37 +106,76 @@
   background-size: cover;
   background-position: center center;
 }
-.cont__wrap-service.rmDetail .card.rmInform .discnt-price {
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.cont__wrap-service.rmDetail .card.rmInform .use-target {
+  margin: 4px 0;
+  padding: 28px 20px;
 }
-.cont__wrap-service.rmDetail .card.rmInform .discnt-price .card-body {
+.cont__wrap-service.rmDetail .card.rmInform .use-target .txt {
+  font-weight: 600;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li {
   display: flex;
   flex-direction: column;
-  row-gap: 4px;
-  position: relative;
-  width: 98px;
+  align-items: center;
+  justify-content: center;
 }
-.cont__wrap-service.rmDetail .card.rmInform .discnt-price .card-body:after {
-  content: "할인";
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li.img-wrap {
+  width: 46px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li.img-wrap .img-box {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 4px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap) {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--dt-gray06);
+  border-radius: 50%;
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
+  content: "";
   display: block;
   position: absolute;
-  top: 0;
-  right: -74px;
-  width: 74px;
-  height: 100%;
-  padding-top: 46px;
-  padding-left: 12px;
-  background-image: url(../images/img/bg_discount_arrow.svg);
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/ic-plus-gray10.svg);
   background-size: 100%;
   background-repeat: no-repeat;
-  color: var(--dt-primary);
+}
+.cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li .desc {
+  display: block;
   font-size: 10px;
   font-weight: 600;
+  color: var(--dt-gray16);
+  line-height: normal;
+  text-align: center;
 }
-.cont__wrap-service.rmDetail .card.rmInform .discnt-price .card-body p {
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block {
+  width: 98px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block p {
   padding: 9px 0;
   background-color: var(--dt-gray06);
   color: var(--dt-gray16);
@@ -146,18 +184,73 @@
   text-align: center;
   border-radius: 4px;
 }
-.cont__wrap-service.rmDetail .card.rmInform .discnt-price .card-footer {
-  justify-self: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: 0;
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block p:not(:first-child) {
+  margin-top: 4px;
+}
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg {
+  position: relative;
+  width: 74px;
+  aspect-ratio: 1/1.36;
+  background-image: url(../images/img/bg_discount_arrow.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg > span {
+  display: block;
+  position: absolute;
+  top: 46px;
+  left: 12px;
+  color: var(--dt-primary);
+  font-size: 10px;
+  font-weight: 600;
+}
+.cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-point {
+  display: block;
   width: 60px;
   height: 60px;
+  margin-left: 8px;
+  padding-top: 24px;
   background-color: var(--dt-primary);
   color: var(--dt-white);
   font-size: 10px;
   font-weight: 700;
   border-radius: 50%;
+  text-align: center;
+}
+@media screen and (max-width: 359px) {
+  .cont__wrap-service.rmDetail .card.rmInform .use-target {
+    padding: 24px 20px;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item {
+    flex-direction: column;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateY(-24px) translateX(-50%);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price {
+    flex-direction: column;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block {
+    width: 100%;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg {
+    width: 100%;
+    aspect-ratio: 1/0.39;
+    background-image: url(../images/img/bg_discount_arrow_down.svg);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg > span {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-point {
+    margin-left: 0;
+    margin-top: 8px;
+  }
 }
 
 .rmAnnounce .popup-body {
