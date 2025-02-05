@@ -1,7 +1,13 @@
 @import "../scss/base/mixin";
+.page-wrapper {
+	.container {
+		.section__cont {
+			padding: 92px 0 155px;
+		}
+	}
+}
 
 .section__cont {
-	padding: 92px 0 155px;
 	&.scan {
 		position:relative;
 		padding-top:56px;
