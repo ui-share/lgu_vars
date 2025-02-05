@@ -9,13 +9,6 @@
 	max-width:var(--max-devicewidth);
 	height: 100%;
 	z-index: 9999;
-
-	// popup-title
-	&.popup__tit {
-		.popup-header {
-			margin-bottom: 4px;
-		}
-	}
 	.popup__wrap {
 		position: absolute;
 		bottom: 0;
@@ -53,6 +46,7 @@
 			.txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
+				line-height: var(--dt-lh150);
 			}
 		}
 		.btn-util {
@@ -74,22 +68,6 @@
 	.popup-body {
 		padding: 4px 20px 40px 20px;
 		overflow-y: auto;
-		&.center {
-			gap: 20px;
-			.text-box {
-				gap: 12px;
-				.tit {
-					font-size: 24px;
-					.color-prim {
-						font-size: 24px;
-						font-weight: 600;
-					}
-				}
-				.txt {
-					font-size: 16px;
-				}
-			}
-		}
 	}
 	.popup-footer {
 		padding: 0 20px 20px 20px;
@@ -274,8 +252,8 @@
 			background-color: var(--dt-gray02);
 			gap: 4px;
 			.txt {
-				@include fw-6(16px);
 				color:var(--dt-gray12);
+				line-height: var(--dt-lh150);
 			}
 			.txt-wrap {
 				display: none;
@@ -285,11 +263,11 @@
 					display: flex;
 					align-items: center;
 					gap: 2px;
-					.txt {
-						@include fw-5(14px);
-						color: var(--dt-primary);
-					} 
 				}
+				.txt {
+					@include fw-5(14px);
+					color: var(--dt-primary);
+				} 
 			}
 			&.between {
 				justify-content: space-between;
@@ -311,16 +289,17 @@
 				flex-wrap: wrap;
 				align-items: center;
 				gap: 6px;
-				.tit {
-					@include fw-7(16px);
-					color:var(--dt-black);
-					text-align: left;
-				}
-				.txt {
-					@include fw-5(14px);
-					color:var(--dt-gray11);
-					text-align: left;
-				}
+			}
+			.tit {
+				@include fw-7(16px);
+				color:var(--dt-black);
+				text-align: left;
+				line-height: var(--dt-lh150);
+			}
+			.txt {
+				@include fw-5(14px);
+				text-align: left;
+				line-height: var(--dt-lh150);
 			}
 		}
 	}

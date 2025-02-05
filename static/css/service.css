@@ -1,7 +1,8 @@
 @charset "UTF-8";
-.section__cont {
+.page-wrapper .container .section__cont {
   padding: 92px 0 155px;
 }
+
 .section__cont.scan {
   position: relative;
   padding-top: 56px;
