@@ -570,26 +570,26 @@ button {
 	.col {
 		row-gap:8px;
 		&.accordion-container {margin-top:20px;}
-		.txt-plan {
-			margin-bottom:4px;
-			.current {
-				display:inline-block;margin-right:6px;
-				color:var(--dt-gray16);
-				@include fw-6(20px); 
-				line-height:24px;
-				&.sm {
-					@include fw-7(14px);
-					line-height:21px;
-					margin-right:0;
-				}
-			}
-			.total {
-				color:var(--dt-gray11);
-				@include fw-5(14px); 
+	}
+	.txt-plan {
+		margin-bottom:4px;
+		.current {
+			display:inline-block;margin-right:6px;
+			color:var(--dt-gray16);
+			@include fw-6(20px); 
+			line-height:24px;
+			&.sm {
+				@include fw-7(14px);
 				line-height:21px;
-				span {@include fw-5(14px);}
-				i {display:inline-block;margin-right:2px;}
+				margin-right:0;
 			}
+		}
+		.total {
+			color:var(--dt-gray11);
+			@include fw-5(14px); 
+			line-height:21px;
+			span {@include fw-5(14px);}
+			i {display:inline-block;margin-right:2px;}
 		}
 	}
 	.list-plan {
@@ -753,8 +753,17 @@ button {
 	&.total-last {
 		row-gap:4px;
 		padding:16px 20px 0;
-		.row {justify-content: space-between;}
-		.txt-title {@include fw-7(16px);line-height:24px;}
+		.row {
+			justify-content:space-between;
+			flex-wrap:wrap;
+		}
+		.txt-title {
+			&:has(.badge.badge-round){
+				width:100%;
+				& + .txt-price {width:100%;}
+			}
+			@include fw-7(16px);line-height:24px;
+		}
 		.txt-price {
 			color:var(--dt-primary);
 			@include fw-7(20px);
