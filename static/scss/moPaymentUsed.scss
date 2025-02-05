@@ -83,6 +83,7 @@
                     flex-wrap: wrap;
                     gap: 6px;
                     margin-top: 24px;
+                    margin-bottom: 45px;
                     .txt {
                         @include fw-5(16px); line-height: 17px;
                         color: var(--dt-black);

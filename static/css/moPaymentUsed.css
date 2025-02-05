@@ -86,6 +86,7 @@
   flex-wrap: wrap;
   gap: 6px;
   margin-top: 24px;
+  margin-bottom: 45px;
 }
 .popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box .txt {
   font-size: 16px;
