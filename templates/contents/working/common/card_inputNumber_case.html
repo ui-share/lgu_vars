@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>[공통]카드번호 입력_기본화면 | LGU+ 눈으로 보는 ARS</title>
+	<title>[공통]카드번호 입력 | LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
     <link rel="stylesheet" href="../../../../static/css/common.css">
@@ -101,72 +101,127 @@
                             </div>
                             <div class="validation-txt">validation 메시지 노출</div>
                         </div>
+                    </div>
 
-                        <div class="input-control floating">
+                    <!-- focused + 은행/카드사 Chip -->
+                    <div class="input-col-wrap">
+                        <div class="input-control floating focused">
                             <div class="input-group">
-                                <label class="input-label">납부 금액</label>
+                                <label class="input-label">카드번호</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="납부 금액">
+                                    <input type="text" class="input-field" placeholder="카드번호 입력">
                                     <div class="util-box">
-                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-                                        <button type="button" class="clear-btn hidden"></button>
-                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn"></button>
                                         <span class="input-unit hidden">
                                             <span class="unit-point">1</span>단위가늘어납니다
                                         </span>
                                     </div>
                                 </div>
-                                <!-- 
-                                    <div class="util-box"> : clear button 과 unit이 들어감 
-                                -->
                             </div>
-                            <div class="notice-txt">
-                                <span>* 1천원이상 ~ 50만원 미만일 때만 납부할 수 있습니다.</span>
+                            <div class="chips-group">
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="신한은행"></span>
+                                    <span class="txt">신한카드</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-kb.svg" alt="신한은행"></span>
+                                    <span class="txt">국민카드</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-hana.svg" alt="신한은행"></span>
+                                    <span class="txt">하나카드</span>
+                                </button>
                             </div>
                             <div class="validation-txt">validation 메시지 노출</div>
                         </div>
 
-                        <!-- 드롭다운 버튼 케이스 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다-->
-                        <!-- 바텀시트 내 옵션 선택 시 floating > normal 로 바뀐다 -->
-                        <div class="input-control floating">
+                        <div class="input-control floating">	
                             <div class="input-group">
-                                <label class="input-label">할부기간</label>
+                                <label class="input-label">유효기간 입력</label>
                                 <div class="input-row">
-                                    <button type="button" class="btn-field-dropdown">
-                                        <span class="txt">
-                                            일시불
-                                            <!-- 1개월 -->
-                                            <!-- 2개월 -->
-                                             <!-- ... -->
+                                    <input type="text" class="input-field" placeholder="유효기간 입력">
+                                    <div class="util-box">
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
                                         </span>
-                                    </button>
+                                    </div>
                                 </div>
-                                <!-- 
-                                    <div class="util-box"> : clear button 과 unit이 들어감 
-                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+                    </div>
+
+                    <!-- focused + 은행/카드사 Chip + error -->
+                    <div class="input-col-wrap">
+                        <div class="input-control floating focused error">
+                            <div class="input-group">
+                                <label class="input-label">카드번호</label>
+                                <div class="input-row">
+                                    <input type="text" class="input-field" placeholder="카드번호 입력">
+                                    <div class="util-box">
+                                        <button type="button" class="clear-btn"></button>
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chips-group">
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="신한은행"></span>
+                                    <span class="txt">신한카드</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-kb.svg" alt="신한은행"></span>
+                                    <span class="txt">국민카드</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="img-box icon"><img src="../../../../static/images/icon/ic-bank/ic-20-hana.svg" alt="신한은행"></span>
+                                    <span class="txt">하나카드</span>
+                                </button>
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+
+                        <div class="input-control floating">	
+                            <div class="input-group">
+                                <label class="input-label">유효기간 입력</label>
+                                <div class="input-row">
+                                    <input type="text" class="input-field" placeholder="유효기간 입력">
+                                    <div class="util-box">
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="validation-txt">validation 메시지 노출</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="cont__wrap cont__wrap-btBtn hidden">
+                <div class="cont__wrap cont__wrap-btBtn">
                     <div class="btn-group flex-row is-confirm">
-                        <button class="btn" type="button">
+                        <button class="btn is-disabled" type="button">
                             <span class="txt">다음</span>
                         </button>
                     </div>
                 </div>
+                
             </div>
-            
+
             <!-- 토스트 팝업// -->
-            <div class="toast-wrap show">
+            <div class="toast-wrap">
 				<div class="toast">
-                    <!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
 					<div class="toast-txt">
-						카드번호를 입력해 주세요
-                        <!-- 유효기간을 입력해 주세요 -->
-                         <!-- ... -->
+						계좌번호를 입력해 주세요
+						<!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
 					</div>
 					<!-- 
 						####### 퍼블공지 #######
@@ -178,6 +233,6 @@
 			</div>
 		</div>
 		<!-- //container -->
-	</div> 
+	</div>
 </body>
 </html>
