@@ -11,14 +11,9 @@
 			height:max-content;
 			min-height:184px;
 			padding-top:28px;
-			// padding-right:120px;
 			background-repeat: no-repeat;
 			background-size:140px;
 			background-position: right 10px bottom 0;
-			// &:has(.select-billdate) {
-			// 	.cont__txt-box {min-height:36px;}
-			// }			
-			// .cont__txt-box {min-height:110px;}
 			.info-price-wrap{
 				.info-price, .info-price-detail {
 					&.total-last {
@@ -55,62 +50,21 @@
 		.cont__wrap-plan {
 			background-image: url(../images/img/img-hm-myplan.png);
 		}
-		.cont__txt-box {
-			.txt-select-wrap {
-				@include flexRow;
-				flex-wrap: wrap;
-				align-items: center;
-				gap: 4px;
-				color:var(--dt-gray16);
-				padding-right: 30%;
-				.txt {
-					@include fw-6(22px);
-					line-height: 1.5;
-				}
-				&:has(.chips-date + .txt) {
-					.txt {
-						@include fw-6(18px);
-						line-height: 1.2;
-					}
-				}
+		.txt-select-wrap {
+			@include flexRow;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px;
+			color:var(--dt-gray16);
+			padding-right: 30%;
+			.txt {
+				@include fw-6(22px);
+				line-height: 1.5;
 			}
-		}
-
-		.info-price-single {
-			margin:0 20px;
-			padding:18px 20px;
-			background-color:var(--dt-white);
-			border-radius:8px;
-			span {text-align:center}
-			.txt-info {
-				@include flexBox(center, center);
-				flex-wrap:wrap;
-				color:var(--dt-gray11);
-				gap:4px; 
-				@include fw-6();
-				.txt-price {
-					margin-right:4px;
-				}
-				.img-box {
-					min-width:18px;
-					width:18px;height:18px;
-					margin-left:2px;
-					img {margin-top:1px;}
-				}
-				&.increase {
-					.txt-price {
-						display:inline-block;
-						color:var(--dt-gray16);
-						@include fw-7(18px);
-					}
-				}
-				&.decrease {
-					.img-box {transform: rotate(180deg)}
-					.txt-price {
-						display:inline-block;
-						color:var(--dt-gray16);
-						@include fw-7(18px);
-					}
+			&:has(.chips-date + .txt) {
+				.txt {
+					@include fw-6(18px);
+					line-height: 1.2;
 				}
 			}
 		}
@@ -124,15 +78,41 @@
 			height:calc(var(--vh) - 250px);
 		}
 	}
+	.info-price-single {
+		margin:0 20px;
+		padding:18px 20px;
+		background-color:var(--dt-white);
+		border-radius:8px;
+		span {text-align:center}
+		.txt-info {
+			@include flexBox(center, center);
+			flex-wrap:wrap;
+			color:var(--dt-gray11);
+			gap:4px; 
+			@include fw-6();
+			&.decrease {
+				.img-box {transform: rotate(180deg)}
+			}
+		}
+		.txt-price {
+			display:inline-block;
+			margin-right:4px;
+			color:var(--dt-gray16);
+			@include fw-7(18px);
+		}
+		.img-box {
+			min-width:18px;
+			width:18px;height:18px;
+			margin-left:2px;
+		}
+	}
 }
 
 .cont__wrap {
 	.con__tit-box {
 		.tit-head {
-			.txt-title {
-				line-height:22px;
-				.color-prim {font-size: 18px;font-weight: 700;}
-			}
+			.txt-title {line-height:22px;}
+			.color-prim {font-size: 18px;font-weight: 700;}
 		}
 		&:not(:has(.tit-tail)) {
 			&:has(.bullet-list) {
@@ -157,109 +137,10 @@
 					.color-prim {@include fw-6(18px);line-height:1.2;}
 				}
 				.txt-sub {
-					display: block;width:100%;
+					width:100%;
 					font-size:16px;color:var(--dt-black);
 				}
 			}
-		}
-	}
-	.select-billdate {
-		@include flexColum;
-		min-height: 21px;	
-		.txt-due {
-			color: var(--dt-gray13);
-			@include fw-5(14px);
-			line-height:1.5;
-		}
-		// .txt-notice {
-		// 	&:not(:first-child) {
-		// 		margin-top:5px;
-		// 	}
-		// 	color: var(--dt-gray16);
-		// 	@include fw-6(22px);
-		// 	line-height:33px;
-		// }
-	}
-	.btn-srch-childline {
-		justify-content:space-between;
-		align-items:center;
-		width:100%;
-		padding:10px 20px;
-		border-radius:0;
-		background-color:var(--dt-gray15);
-		.txt-title {
-			column-gap:4px;
-			flex-wrap:wrap;
-			>span {font-size:14px;line-height:21px;}
-			.txt-childname {color:var(--dt-white);font-weight:700;}
-			.txt-phone {color:var(--dt-gray09);font-weight:500;}
-		}
-		.img-box {width:24px;height:24px;}
-	}
-	.list-payment {
-		@include flexColum;
-		row-gap:12px;
-		.info-col-wrap {
-			.row {
-				.txt-title {
-					align-self:flex-start;
-					color:var(--dt-gray14);
-				}
-				.txt-price {
-					@include fw-7(16px);
-					line-height:24px;
-					text-align:right;
-				}
-				&.total {
-					.txt-title {
-						color:var(--dt-gray11);
-						&.bold {
-							font-size:16px;
-							color:var(--dt-gray16);
-						}
-					}
-					.txt-price {
-						font-size:18px;
-						line-height:21px;
-					}
-				}
-			}
-		}
-	}
-	.card-group {
-		&.benefit {
-			padding:22px 4px;
-			gap:0;
-			background-color: var(--dt-gray02);
-			border-radius:8px;
-			.card {
-				padding:0 16px;
-				border-radius:unset;
-				box-shadow:unset;
-				background-color:unset;
-				&:nth-of-type(2) {border-left:1px solid var(--dt-gray08);}
-				.card-body {row-gap:6px;}
-				.item.text {
-					.txt {
-						font-size:12px;
-						line-height:18px;
-					}
-				}
-				.item.util {
-					justify-content:flex-start;
-					flex-wrap: wrap;
-					gap:8px;
-					.img-box {
-						width:48px;height:48px;
-					}
-				}
-				.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
-			}
-		}
-		&.bank {
-			row-gap:16px;
-			.item.util {min-width:20px;}
-			.item.text{width:calc(100% - 52px);}
 		}
 	}
 	&.cont__wrap-vertical {
@@ -273,7 +154,6 @@
 			.card-group.bank {margin-bottom:16px;}
 			.accnt-cont-wrap {
 				min-height:120px;
-				// max-height:86vw; // 310px
 				overflow-y: auto;
 			}
 		}
@@ -293,6 +173,91 @@
 		}
 		.btn-scroll {margin:0 auto;}
 	}
-
-
+}
+.btn-srch-childline {
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	padding:10px 20px;
+	border-radius:0;
+	background-color:var(--dt-gray15);
+	.txt-title {
+		column-gap:4px;
+		flex-wrap:wrap;
+		>span {font-size:14px;line-height:21px;}
+	}
+	.txt-childname {color:var(--dt-white);font-weight:700;}
+	.txt-phone {color:var(--dt-gray09);font-weight:500;}
+	.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
+}
+.select-billdate {
+	@include flexColum;
+	min-height: 21px;	
+	.txt-due {
+		color: var(--dt-gray13);
+		@include fw-5(14px);
+		line-height:1.5;
+	}
+}
+.list-payment {
+	@include flexColum;
+	row-gap:12px;
+	.info-col-wrap {
+		.row {
+			.txt-title {
+				align-self:flex-start;
+				color:var(--dt-gray14);
+			}
+			.txt-price {
+				@include fw-7(16px);
+				line-height:24px;
+				text-align:right;
+			}
+			&.total {
+				.txt-title {
+					color:var(--dt-gray11);
+					&.bold {
+						font-size:16px;
+						color:var(--dt-gray16);
+					}
+				}
+				.txt-price {
+					font-size:18px;
+					line-height:21px;
+				}
+			}
+		}
+	}
+}
+.card-group {
+	&.benefit {
+		padding:22px 4px;
+		gap:0;
+		background-color: var(--dt-gray02);
+		border-radius:8px;
+		.card {
+			padding:0 16px;
+			border-radius:unset;
+			box-shadow:unset;
+			background-color:unset;
+			&:nth-of-type(2) {border-left:1px solid var(--dt-gray08);}
+			.txt {/* 타이틀 */
+				font-size:12px;
+				line-height:18px;
+			}
+			.item.util {
+				justify-content:flex-start;
+				flex-wrap: wrap;
+				gap:8px;
+			}
+		}
+		.img-box {width:48px;height:48px; /* 유투브, 미디어 아이콘 */}
+		.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
+		.card-body {row-gap:6px;}
+	}
+	&.bank {
+		row-gap:16px;
+		.item.util {min-width:20px;}
+		.item.text{width:calc(100% - 52px);}
+	}
 }

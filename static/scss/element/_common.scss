@@ -440,12 +440,6 @@ button {
 	&.cont__wrap-singleCont {
 		height: 100%;
 	}
-	.txt-sub {
-		display:block;
-		margin-top:3px;
-		color:var(--dt-gray11);
-		@include fw-5(12px);
-	}
 }
 .con__tit-box {
 	@include flexRow();
@@ -513,11 +507,7 @@ button {
 		vertical-align: top;
 	}
 }
-.txt-caution {
-    color:var(--dt-gray11);
-    @include fw-5(12px);
-    text-align:center;
-}
+
 /* text-box */
 .text-box {
 	display: flex;
@@ -540,24 +530,34 @@ button {
 		color: var(--dt-primary);
 	}
 }
+.txt-sub {
+	display:block;
+	margin-top:3px;
+	color:var(--dt-gray11);
+	@include fw-5(12px);
+}
+.txt-caution {
+    color:var(--dt-gray11);
+    @include fw-5(12px);
+    text-align:center;
+}
 
 /* 진행률 바 default */
-.progress-area {
-	.progress-bg {
-		@include flexRow;
-		width:100%;height:10px;
-		border-radius: 100px;
-		background-color:var(--dt-gray08);
-		.progress-bar {
-			display:block;
-			width:0;
-			height:100%;
-			background-color:var(--dt-primary);
-			border-radius: 100px;
-			transition:width 0.3s ease-in;
-		}
-	}
+.progress-bg {
+	@include flexRow;
+	width:100%;height:10px;
+	border-radius: 100px;
+	background-color:var(--dt-gray08);
 }
+.progress-bar {
+	display:block;
+	width:0;
+	height:100%;
+	background-color:var(--dt-primary);
+	border-radius: 100px;
+	transition:width 0.3s ease-in;
+}
+
 /* 요금제 및 아코디언 관련 컴포넌트 */
 .plan-wrap {
 	& + .info-price {
@@ -583,15 +583,13 @@ button {
 					margin-right:0;
 				}
 			}
-		}
-		.txt-plan .total {
-			span {@include fw-5(14px);}
-			i {display:inline-block;margin-right:2px;}
-		}
-		.txt-plan .total {
-			color:var(--dt-gray11);
-			@include fw-5(14px); 
-			line-height:21px;
+			.total {
+				color:var(--dt-gray11);
+				@include fw-5(14px); 
+				line-height:21px;
+				span {@include fw-5(14px);}
+				i {display:inline-block;margin-right:2px;}
+			}
 		}
 	}
 	.list-plan {
@@ -614,15 +612,11 @@ button {
 			}
 		}
 		.row + .row {margin-top:12px;}
-		.txt-phone {
-			display:block;width:100%;margin-top:2px;
-			color:var(--dt-gray11);
-			@include fw-5(12px);line-height:18px;
-		}
 		.txt-title {
 			color:var(--dt-gray14);
 			line-height:24px;
 			align-self:flex-start;
+			.tooltip img {vertical-align:middle;}
 		}
 		.txt-desc {
 			> span {
@@ -637,17 +631,21 @@ button {
 					img {margin-top:2px;}
 				}
 			}
-			.current {
-				color:var(--dt-black);
-			}
-			.total {
-				margin-left:2px;
-				color:var(--dt-gray11);
-			}
-			
 		}
 		button.txt-desc {
 			.img-box {transform:rotate(-90deg)}
+		}
+		.current {
+			color:var(--dt-black);
+		}
+		.total {
+			margin-left:2px;
+			color:var(--dt-gray11);
+		}
+		.txt-phone {
+			display:block;width:100%;margin-top:2px;
+			color:var(--dt-gray11);
+			@include fw-5(12px);line-height:18px;
 		}
 	}
 	&.line {
@@ -675,14 +673,10 @@ button {
 				line-height:24px;
 			}
 			.chips.neutral {background-color:transparent;}
-			.txt-desc {
-				.current {
-					color:var(--dt-black);
-				}
-				.total {
-					margin-left:2px;
-					color:var(--dt-gray11);
-				}
+			.current {color:var(--dt-black);}
+			.total {
+				margin-left:2px;
+				color:var(--dt-gray11);
 			}
 		}
 	}
@@ -735,24 +729,23 @@ button {
 	background-color:var(--dt-gray02);
 	border-radius:8px;
 	overflow:hidden;
-	.info-price, .info-price-detail {
-		&:not(.total-last) {
-			position:relative;
-			&::after {
-				content:'';
-				display:block;
-				position:absolute;bottom:0;left:50%;
-				transform:translateX(-50%);
-				width:calc(100% - 40px);
-				height:1px;background-color:var(--dt-gray08);
-			}
-		}
+}
+.list-info-price:only-child {
+	.info-wrap {
+		&:last-of-type {padding-bottom:0px;}
 	}
-	.list-info-price:only-child {
-		.info-price-detail {
-			.info-wrap {
-				&:last-of-type {padding-bottom:0px;}
-			}
+}
+.info-price, .info-price-detail {
+	&:not(.total-last) {
+		position:relative;
+		&::after {
+			content:'';
+			display:block;
+			position:absolute;bottom:0;left:50%;
+			transform:translateX(-50%);
+			width:calc(100% - 40px);
+			height:1px;
+			background-color:var(--dt-gray08);
 		}
 	}
 }
@@ -761,7 +754,7 @@ button {
 		row-gap:4px;
 		padding:16px 20px 0;
 		.row {justify-content: space-between;}
-		.txt-title {@include fw-7(16px);}
+		.txt-title {@include fw-7(16px);line-height:24px;}
 		.txt-price {
 			color:var(--dt-primary);
 			@include fw-7(20px);
@@ -784,7 +777,6 @@ button {
 	padding: 12px 48px 12px 12px;
 	background-color: transparent;
 	border: 2px solid var(--dt-gray08);
-	// width: 100%;
 	background-image: url(../images/icon/chevron_down_line_24.svg);
 	background-repeat: no-repeat;
 	background-size: 24px 24px;
@@ -838,7 +830,6 @@ button {
 			@include fw-6(14px);
 			color: var(--dt-gray16);
 		}
-
 	}
 }
 /* 데이터 노출되는 리스트 */
@@ -872,7 +863,6 @@ button {
 			margin-left: auto;
 		}
 	}
-
 }
 /* h7 txt 스타일*/
 .tit-h7 {
@@ -881,7 +871,7 @@ button {
 	margin-top: 24px;
 	margin-bottom: 16px;
 }
-/* 은행 박스 다발*/
+/* 은행 박스 다발 */
 .bank-wrap {
 	display: flex;
 	align-items: center;

@@ -3,57 +3,46 @@
 .cont__wrap.wd-full{
 	.con__tit-box {padding-top:20px;padding-left:20px;}
 }
-.list-payment {
-	.mypay-list {
+
+.mypay-list {
+	width:100%;
+	padding:20px;
+	border-top:1px solid var(--dt-gray17);
+	&:last-of-type {
+		border-bottom:1px solid var(--dt-gray17);
+	}
+	.detail {
+		display:flex;
 		width:100%;
-		padding:20px;
-		border-top:1px solid var(--dt-gray17);
-		&:last-of-type {
-			border-bottom:1px solid var(--dt-gray17);
-		}
-		.detail {
-			display:flex;
-			width:100%;
-			background-image:url(../images/icon/ic-24-arrow-right-gray10.svg);
-			background-size:24px;
-			background-repeat:no-repeat;
-			background-position: right top;
-			.row {
-				width:calc(100% - 24px);
-				justify-content:space-between;
-				.txt-date, .txt-price {
-					> .txt {display:block;}
-					.flag {margin-top:4px;}
-					.txt-sub {margin-top:4px;text-align:right;font-size:14px;line-height:21px;}
-				}
-				.txt-date {
-					> .txt {
-						font-weight:500;
-						line-height:24px;
-					}
-				}
-				.txt-price {
-					text-align:right;
-					> .txt {
-						font-weight:700;
-						line-height:24px;
-					}
+		background-image:url(../images/icon/ic-24-arrow-right-gray10.svg);
+		background-size:24px;
+		background-repeat:no-repeat;
+		background-position: right top;
+		.row {
+			width:calc(100% - 24px);
+			justify-content:space-between;
+			.txt-date, .txt-price {
+				> .txt {display:block;}
+				.flag {margin-top:4px;}
+				.txt-sub {margin-top:4px;text-align:right;font-size:14px;line-height:21px;}
+			}
+			.txt-date {
+				> .txt {
+					font-weight:500;
+					line-height:24px;
 				}
 			}
-			// .btn-more {
-			// 	width:24px;
-			// 	height:24px;
-			// 	font-size:0;
-			// 	text-indent:-9999px;
-			// 	background-image:url(../images/icon/ic-chips-arrow-gray.svg);
-			// 	background-size:24px;
-			// 	background-repeat:no-repeat;
-			// 	transform: rotate(-90deg);
-			// }
+			.txt-price {
+				text-align:right;
+				> .txt {
+					font-weight:700;
+					line-height:24px;
+				}
+			}
 		}
-		.btn-group {
-			width:100%;
-			margin-top:10px;
-		}
+	}
+	.btn-group {
+		width:100%;
+		margin-top:10px;
 	}
 }

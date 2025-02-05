@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .section__cont.summary {
   padding-bottom: 18px;
   background-color: #DCE6FF;
@@ -7,7 +8,6 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
   min-height: 184px;
   padding-top: 28px;
@@ -47,7 +47,7 @@
 .section__cont.summary .cont__wrap-plan {
   background-image: url(../images/img/img-hm-myplan.png);
 }
-.section__cont.summary .cont__txt-box .txt-select-wrap {
+.section__cont.summary .txt-select-wrap {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -56,26 +56,33 @@
   color: var(--dt-gray16);
   padding-right: 30%;
 }
-.section__cont.summary .cont__txt-box .txt-select-wrap .txt {
+.section__cont.summary .txt-select-wrap .txt {
   font-size: 22px;
   font-weight: 600;
   line-height: 1.5;
 }
-.section__cont.summary .cont__txt-box .txt-select-wrap:has(.chips-date + .txt) .txt {
+.section__cont.summary .txt-select-wrap:has(.chips-date + .txt) .txt {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-.section__cont.summary .info-price-single {
+.section__cont.segment {
+  padding: 36px 0 48px;
+  gap: 0;
+}
+.section__cont.desc:has(.accnt-cont-wrap) {
+  height: calc(var(--vh) - 250px);
+}
+.section__cont .info-price-single {
   margin: 0 20px;
   padding: 18px 20px;
   background-color: var(--dt-white);
   border-radius: 8px;
 }
-.section__cont.summary .info-price-single span {
+.section__cont .info-price-single span {
   text-align: center;
 }
-.section__cont.summary .info-price-single .txt-info {
+.section__cont .info-price-single .txt-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,45 +92,27 @@
   font-size: 16px;
   font-weight: 600;
 }
-.section__cont.summary .info-price-single .txt-info .txt-price {
-  margin-right: 4px;
+.section__cont .info-price-single .txt-info.decrease .img-box {
+  transform: rotate(180deg);
 }
-.section__cont.summary .info-price-single .txt-info .img-box {
+.section__cont .info-price-single .txt-price {
+  display: inline-block;
+  margin-right: 4px;
+  color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 700;
+}
+.section__cont .info-price-single .img-box {
   min-width: 18px;
   width: 18px;
   height: 18px;
   margin-left: 2px;
 }
-.section__cont.summary .info-price-single .txt-info .img-box img {
-  margin-top: 1px;
-}
-.section__cont.summary .info-price-single .txt-info.increase .txt-price {
-  display: inline-block;
-  color: var(--dt-gray16);
-  font-size: 18px;
-  font-weight: 700;
-}
-.section__cont.summary .info-price-single .txt-info.decrease .img-box {
-  transform: rotate(180deg);
-}
-.section__cont.summary .info-price-single .txt-info.decrease .txt-price {
-  display: inline-block;
-  color: var(--dt-gray16);
-  font-size: 18px;
-  font-weight: 700;
-}
-.section__cont.segment {
-  padding: 36px 0 48px;
-  gap: 0;
-}
-.section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(var(--vh) - 250px);
-}
 
 .cont__wrap .con__tit-box .tit-head .txt-title {
   line-height: 22px;
 }
-.cont__wrap .con__tit-box .tit-head .txt-title .color-prim {
+.cont__wrap .con__tit-box .tit-head .color-prim {
   font-size: 18px;
   font-weight: 700;
 }
@@ -157,122 +146,9 @@
   line-height: 1.2;
 }
 .cont__wrap .cont__txt-box .txt.price .txt-sub {
-  display: block;
   width: 100%;
   font-size: 16px;
   color: var(--dt-black);
-}
-.cont__wrap .select-billdate {
-  display: flex;
-  flex-direction: column;
-  min-height: 21px;
-}
-.cont__wrap .select-billdate .txt-due {
-  color: var(--dt-gray13);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-}
-.cont__wrap .btn-srch-childline {
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 0;
-  background-color: var(--dt-gray15);
-}
-.cont__wrap .btn-srch-childline .txt-title {
-  -moz-column-gap: 4px;
-       column-gap: 4px;
-  flex-wrap: wrap;
-}
-.cont__wrap .btn-srch-childline .txt-title > span {
-  font-size: 14px;
-  line-height: 21px;
-}
-.cont__wrap .btn-srch-childline .txt-title .txt-childname {
-  color: var(--dt-white);
-  font-weight: 700;
-}
-.cont__wrap .btn-srch-childline .txt-title .txt-phone {
-  color: var(--dt-gray09);
-  font-weight: 500;
-}
-.cont__wrap .btn-srch-childline .img-box {
-  width: 24px;
-  height: 24px;
-}
-.cont__wrap .list-payment {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
-}
-.cont__wrap .list-payment .info-col-wrap .row .txt-title {
-  align-self: flex-start;
-  color: var(--dt-gray14);
-}
-.cont__wrap .list-payment .info-col-wrap .row .txt-price {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: right;
-}
-.cont__wrap .list-payment .info-col-wrap .row.total .txt-title {
-  color: var(--dt-gray11);
-}
-.cont__wrap .list-payment .info-col-wrap .row.total .txt-title.bold {
-  font-size: 16px;
-  color: var(--dt-gray16);
-}
-.cont__wrap .list-payment .info-col-wrap .row.total .txt-price {
-  font-size: 18px;
-  line-height: 21px;
-}
-.cont__wrap .card-group.benefit {
-  padding: 22px 4px;
-  gap: 0;
-  background-color: var(--dt-gray02);
-  border-radius: 8px;
-}
-.cont__wrap .card-group.benefit .card {
-  padding: 0 16px;
-  border-radius: unset;
-  box-shadow: unset;
-  background-color: unset;
-}
-.cont__wrap .card-group.benefit .card:nth-of-type(2) {
-  border-left: 1px solid var(--dt-gray08);
-}
-.cont__wrap .card-group.benefit .card .card-body {
-  row-gap: 6px;
-}
-.cont__wrap .card-group.benefit .card .item.text .txt {
-  font-size: 12px;
-  line-height: 18px;
-}
-.cont__wrap .card-group.benefit .card .item.util {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.cont__wrap .card-group.benefit .card .item.util .img-box {
-  width: 48px;
-  height: 48px;
-}
-.cont__wrap .card-group.benefit .card .item-tit {
-  max-width: 51px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-}
-.cont__wrap .card-group.bank {
-  row-gap: 16px;
-}
-.cont__wrap .card-group.bank .item.util {
-  min-width: 20px;
-}
-.cont__wrap .card-group.bank .item.text {
-  width: calc(100% - 52px);
 }
 .cont__wrap.cont__wrap-vertical.wd-full {
   row-gap: 0;
@@ -309,4 +185,120 @@
 }
 .cont__wrap.cont__wrap-btBtn .btn-scroll {
   margin: 0 auto;
+}
+
+.btn-srch-childline {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: var(--dt-gray15);
+  /* 화살표 아이콘 */
+}
+.btn-srch-childline .txt-title {
+  column-gap: 4px;
+  flex-wrap: wrap;
+}
+.btn-srch-childline .txt-title > span {
+  font-size: 14px;
+  line-height: 21px;
+}
+.btn-srch-childline .txt-childname {
+  color: var(--dt-white);
+  font-weight: 700;
+}
+.btn-srch-childline .txt-phone {
+  color: var(--dt-gray09);
+  font-weight: 500;
+}
+.btn-srch-childline .img-box {
+  width: 24px;
+  height: 24px;
+}
+
+.select-billdate {
+  display: flex;
+  flex-direction: column;
+  min-height: 21px;
+}
+.select-billdate .txt-due {
+  color: var(--dt-gray13);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.list-payment {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.list-payment .info-col-wrap .row .txt-title {
+  align-self: flex-start;
+  color: var(--dt-gray14);
+}
+.list-payment .info-col-wrap .row .txt-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: right;
+}
+.list-payment .info-col-wrap .row.total .txt-title {
+  color: var(--dt-gray11);
+}
+.list-payment .info-col-wrap .row.total .txt-title.bold {
+  font-size: 16px;
+  color: var(--dt-gray16);
+}
+.list-payment .info-col-wrap .row.total .txt-price {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.card-group.benefit {
+  padding: 22px 4px;
+  gap: 0;
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+}
+.card-group.benefit .card {
+  padding: 0 16px;
+  border-radius: unset;
+  box-shadow: unset;
+  background-color: unset;
+}
+.card-group.benefit .card:nth-of-type(2) {
+  border-left: 1px solid var(--dt-gray08);
+}
+.card-group.benefit .card .txt { /* 타이틀 */
+  font-size: 12px;
+  line-height: 18px;
+}
+.card-group.benefit .card .item.util {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.card-group.benefit .img-box {
+  width: 48px;
+  height: 48px; /* 유투브, 미디어 아이콘 */
+}
+.card-group.benefit .item-tit {
+  max-width: 51px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
+.card-group.benefit .card-body {
+  row-gap: 6px;
+}
+.card-group.bank {
+  row-gap: 16px;
+}
+.card-group.bank .item.util {
+  min-width: 20px;
+}
+.card-group.bank .item.text {
+  width: calc(100% - 52px);
 }

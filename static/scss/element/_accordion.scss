@@ -52,7 +52,7 @@
         @include flexRow;
         align-items:center;
         &.txt-title {
-            >span {@include fw-7(16px);}
+            > span {@include fw-7(16px);line-height:150%;}
         }
     }
     .txt-title {
@@ -63,9 +63,6 @@
         .badge-round {
             align-self:baseline;
             margin-right:4px;
-            & + span {
-                @include fw-7(16px);
-            }
         }
     }
     .txt-price {
@@ -100,50 +97,46 @@
         }
     }
 }
-.accordion-content {
-    .info-price-detail {
-        padding:0 20px;
-        @include flexColum;
-        row-gap:8px;
-        .info-wrap {
-            &:first-of-type {padding-top:16px;}
-            &:last-of-type {padding-bottom:16px;}
-            .row {
-                display:flex;
-                justify-content:space-between;
-            }
+
+.info-price-detail {
+    padding:0 20px;
+    @include flexColum;
+    row-gap:8px;
+    .info-wrap {
+        &:first-of-type {padding-top:16px;}
+        &:last-of-type {padding-bottom:16px;}
+        .row {
+            display:flex;
+            justify-content:space-between;
         }
-        .txt-title {
-            padding-left:10px;
-            &.ico {
-                padding-left:22px;
-                background-image:url(../images/icon/ic-list-brace.svg);
-                background-position:10px 3px;
-                background-size:8px;
-                background-repeat:no-repeat;
-            }
+    }
+    .txt-title {
+        padding-left:10px;
+        &.ico {
+            padding-left:22px;
+            background-image:url(../images/icon/ic-list-brace.svg);
+            background-position:10px 3px;
+            background-size:8px;
+            background-repeat:no-repeat;
         }
+    }
+    .txt-title, .txt-price {
+        @include fw-5(14px); 
+        color:var(--dt-gray14);
+    }
+    .txt-price {
+        min-width:82px;text-align:right;
+        padding-right: 2px;
+        word-break: break-all;
+    }
+    .list-detail {
+        padding-top:4px;
+        padding-left:14px;
+        row-gap:4px;
         .txt-title, .txt-price {
-            @include fw-5(14px); 
-            color:var(--dt-gray14);
-        }
-        // .txt-title {
-        //     @include ellipsis(3);
-        // }
-        .txt-price {
-            min-width:82px;text-align:right;
-            padding-right: 2px;
-            word-break: break-all;
-        }
-        .list-detail {
-            padding-top:4px;
-            padding-left:14px;
-            row-gap:4px;
-            .txt-title, .txt-price {
-                @include fw-5(12px);
-                color:var(--dt-gray11);
-                line-height:18px; 
-            }
+            @include fw-5(12px);
+            color:var(--dt-gray11);
+            line-height:18px; 
         }
     }
 }

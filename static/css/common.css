@@ -574,13 +574,6 @@ button {
 .cont__wrap.cont__wrap-singleCont {
   height: 100%;
 }
-.cont__wrap .txt-sub {
-  display: block;
-  margin-top: 3px;
-  color: var(--dt-gray11);
-  font-size: 12px;
-  font-weight: 500;
-}
 
 .con__tit-box {
   display: flex;
@@ -647,13 +640,6 @@ button {
   vertical-align: top;
 }
 
-.txt-caution {
-  color: var(--dt-gray11);
-  font-size: 12px;
-  font-weight: 500;
-  text-align: center;
-}
-
 /* text-box */
 .text-box {
   display: flex;
@@ -680,8 +666,23 @@ button {
   color: var(--dt-primary);
 }
 
+.txt-sub {
+  display: block;
+  margin-top: 3px;
+  color: var(--dt-gray11);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.txt-caution {
+  color: var(--dt-gray11);
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
 /* 진행률 바 default */
-.progress-area .progress-bg {
+.progress-bg {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -689,7 +690,8 @@ button {
   border-radius: 100px;
   background-color: var(--dt-gray08);
 }
-.progress-area .progress-bg .progress-bar {
+
+.progress-bar {
   display: block;
   width: 0;
   height: 100%;
@@ -729,6 +731,12 @@ button {
   line-height: 21px;
   margin-right: 0;
 }
+.plan-wrap .col .txt-plan .total {
+  color: var(--dt-gray11);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+}
 .plan-wrap .col .txt-plan .total span {
   font-size: 14px;
   font-weight: 500;
@@ -736,12 +744,6 @@ button {
 .plan-wrap .col .txt-plan .total i {
   display: inline-block;
   margin-right: 2px;
-}
-.plan-wrap .col .txt-plan .total {
-  color: var(--dt-gray11);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
 }
 .plan-wrap .list-plan.accordion-content {
   margin-bottom: 12px;
@@ -766,19 +768,13 @@ button {
 .plan-wrap .list-plan .row + .row {
   margin-top: 12px;
 }
-.plan-wrap .list-plan .txt-phone {
-  display: block;
-  width: 100%;
-  margin-top: 2px;
-  color: var(--dt-gray11);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-}
 .plan-wrap .list-plan .txt-title {
   color: var(--dt-gray14);
   line-height: 24px;
   align-self: flex-start;
+}
+.plan-wrap .list-plan .txt-title .tooltip img {
+  vertical-align: middle;
 }
 .plan-wrap .list-plan .txt-desc > span:not(.txt-sub) {
   display: inline-block;
@@ -792,15 +788,24 @@ button {
 .plan-wrap .list-plan .txt-desc.ico .img-box img {
   margin-top: 2px;
 }
-.plan-wrap .list-plan .txt-desc .current {
+.plan-wrap .list-plan button.txt-desc .img-box {
+  transform: rotate(-90deg);
+}
+.plan-wrap .list-plan .current {
   color: var(--dt-black);
 }
-.plan-wrap .list-plan .txt-desc .total {
+.plan-wrap .list-plan .total {
   margin-left: 2px;
   color: var(--dt-gray11);
 }
-.plan-wrap .list-plan button.txt-desc .img-box {
-  transform: rotate(-90deg);
+.plan-wrap .list-plan .txt-phone {
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  color: var(--dt-gray11);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
 }
 .plan-wrap.line .list-plan {
   padding-top: 16px;
@@ -832,10 +837,10 @@ button {
 .info-col-wrap .row.title-wrap .chips.neutral {
   background-color: transparent;
 }
-.info-col-wrap .row.title-wrap .txt-desc .current {
+.info-col-wrap .row.title-wrap .current {
   color: var(--dt-black);
 }
-.info-col-wrap .row.title-wrap .txt-desc .total {
+.info-col-wrap .row.title-wrap .total {
   margin-left: 2px;
   color: var(--dt-gray11);
 }
@@ -848,8 +853,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   align-self: flex-start;
 }
 .info-col-wrap .txt-title.ico .img-box {
@@ -902,10 +906,15 @@ button {
   border-radius: 8px;
   overflow: hidden;
 }
-.info-price-wrap .info-price:not(.total-last), .info-price-wrap .info-price-detail:not(.total-last) {
+
+.list-info-price:only-child .info-wrap:last-of-type {
+  padding-bottom: 0px;
+}
+
+.info-price:not(.total-last), .info-price-detail:not(.total-last) {
   position: relative;
 }
-.info-price-wrap .info-price:not(.total-last)::after, .info-price-wrap .info-price-detail:not(.total-last)::after {
+.info-price:not(.total-last)::after, .info-price-detail:not(.total-last)::after {
   content: "";
   display: block;
   position: absolute;
@@ -915,9 +924,6 @@ button {
   width: calc(100% - 40px);
   height: 1px;
   background-color: var(--dt-gray08);
-}
-.info-price-wrap .list-info-price:only-child .info-price-detail .info-wrap:last-of-type {
-  padding-bottom: 0px;
 }
 
 .info-price.total-last {
@@ -930,6 +936,7 @@ button {
 .info-price.total-last .txt-title {
   font-size: 16px;
   font-weight: 700;
+  line-height: 24px;
 }
 .info-price.total-last .txt-price {
   color: var(--dt-primary);
@@ -1067,7 +1074,7 @@ button {
   margin-bottom: 16px;
 }
 
-/* 은행 박스 다발*/
+/* 은행 박스 다발 */
 .bank-wrap {
   display: flex;
   align-items: center;
@@ -2502,7 +2509,7 @@ input {
   background: transparent;
 }
 
-.input-control.email-form .input-group .input-row .util-box, .input-control.tltip-error .validation-txt, .input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.normal.tltip-error .validation-txt, .input-control .input-group .input-row .util-box {
+.input-control.email-form .input-group .input-row .util-box, .input-control.tltip-error .validation-txt, .input-control.floating.error input::placeholder, .input-control.floating.success input::placeholder, .input-control.floating .input-group .input-label, .input-control.normal.tltip-error .validation-txt, .input-control .input-group .input-row .util-box {
   display: none;
 }
 
@@ -3506,6 +3513,7 @@ input {
 .accordion-header .row.txt-title > span {
   font-size: 16px;
   font-weight: 700;
+  line-height: 150%;
 }
 .accordion-header .txt-title {
   flex: 1;
@@ -3516,10 +3524,6 @@ input {
 .accordion-header .txt-title .badge-round {
   align-self: baseline;
   margin-right: 4px;
-}
-.accordion-header .txt-title .badge-round + span {
-  font-size: 16px;
-  font-weight: 700;
 }
 .accordion-header .txt-price {
   justify-content: flex-end;
@@ -3559,49 +3563,49 @@ input {
   padding-bottom: 16px;
 }
 
-.accordion-content .info-price-detail {
+.info-price-detail {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
   row-gap: 8px;
 }
-.accordion-content .info-price-detail .info-wrap:first-of-type {
+.info-price-detail .info-wrap:first-of-type {
   padding-top: 16px;
 }
-.accordion-content .info-price-detail .info-wrap:last-of-type {
+.info-price-detail .info-wrap:last-of-type {
   padding-bottom: 16px;
 }
-.accordion-content .info-price-detail .info-wrap .row {
+.info-price-detail .info-wrap .row {
   display: flex;
   justify-content: space-between;
 }
-.accordion-content .info-price-detail .txt-title {
+.info-price-detail .txt-title {
   padding-left: 10px;
 }
-.accordion-content .info-price-detail .txt-title.ico {
+.info-price-detail .txt-title.ico {
   padding-left: 22px;
   background-image: url(../images/icon/ic-list-brace.svg);
   background-position: 10px 3px;
   background-size: 8px;
   background-repeat: no-repeat;
 }
-.accordion-content .info-price-detail .txt-title, .accordion-content .info-price-detail .txt-price {
+.info-price-detail .txt-title, .info-price-detail .txt-price {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray14);
 }
-.accordion-content .info-price-detail .txt-price {
+.info-price-detail .txt-price {
   min-width: 82px;
   text-align: right;
   padding-right: 2px;
   word-break: break-all;
 }
-.accordion-content .info-price-detail .list-detail {
+.info-price-detail .list-detail {
   padding-top: 4px;
   padding-left: 14px;
   row-gap: 4px;
 }
-.accordion-content .info-price-detail .list-detail .txt-title, .accordion-content .info-price-detail .list-detail .txt-price {
+.info-price-detail .list-detail .txt-title, .info-price-detail .list-detail .txt-price {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray11);
