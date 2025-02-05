@@ -79,33 +79,6 @@
 			height:calc(var(--vh) - 258px);
 		}
 	}
-	.info-price-single {
-		margin:0 20px;
-		padding:18px 20px;
-		background-color:var(--dt-white);
-		border-radius:8px;
-		span {color: var(--dt-primary); text-align:center;}
-		.txt-info {
-			@include flexBox(center, center);
-			flex-wrap:wrap;
-			color:var(--dt-gray11);
-			gap:4px; 
-			@include fw-6();
-			&.decrease {
-				.img-box {transform: rotate(180deg)}
-			}
-		}
-		.txt-price {
-			display:inline-block;
-			margin-right:4px;
-			@include fw-7(18px);
-		}
-		.img-box {
-			min-width:18px;
-			width:18px;height:18px;
-			margin-left:2px;
-		}
-	}
 }
 
 .cont__wrap {
@@ -174,6 +147,33 @@
 			pointer-events:none;
 		}
 		.btn-scroll {margin:0 auto;}
+	}
+}
+.info-price-single { // 써머리bg영역 내 증감, 주의사항 공지 영역
+	margin:0 20px;
+	padding:18px 20px;
+	background-color:var(--dt-white);
+	border-radius:8px;
+	span {color: var(--dt-primary); text-align:center;}
+	.txt-info {
+		@include flexBox(center, center);
+		flex-wrap:wrap;
+		color:var(--dt-gray11);
+		gap:4px; 
+		@include fw-6();
+		&.decrease {
+			.img-box {transform: rotate(180deg)}
+		}
+	}
+	.txt-price {
+		display:inline-block;
+		margin-right:4px;
+		@include fw-7(18px);
+	}
+	.img-box {
+		min-width:18px;
+		width:18px;height:18px;
+		margin-left:2px;
 	}
 }
 .btn-srch-childline {
