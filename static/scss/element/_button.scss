@@ -93,6 +93,46 @@
             width: 100%;
         }
     }
+    // 로밍요금 선택 버튼
+    .btn-remain-data {
+        justify-content: flex-start;
+        padding:16px 20px;
+        background-color: var(--dt-white);
+        @include border(var(--dt-gray17));
+        .txt-wrap {
+            gap: 0;
+            .txt {
+                &:nth-of-type(1) {
+                    @include fw-6();
+                    color: var(--dt-gray16);
+                    &::after {
+                        display: inline-block;
+                        content: '';
+                        margin: 0 12px;
+                        width: 1px;
+                        height: 10px;
+                        background-color: var(--dt-gray09);
+                    }
+                }
+                &:nth-of-type(2) {
+                    @include fw-5(14px);
+                }
+            }
+        }
+        &.is-selected {
+            border: 2px solid var(--dt-primary);
+            .txt-wrap {
+                .txt {
+                    color: var(--dt-primary);
+                    &:nth-of-type(1) {
+                        &::after {
+                            background-color: var(--dt-primary);
+                        }
+                    }
+                } 
+            }
+        }
+    }
 }
 
 /* single button util */
@@ -194,43 +234,6 @@
                 .txt {
                     @include fw-5(14px);
                     color: var(--dt-primary);
-                } 
-            }
-        }
-    }
-    &.btn-remain-data {
-        padding:16px 20px;
-        background-color: var(--dt-white);
-        @include border(var(--dt-gray17));
-        .txt-wrap {
-            .txt {
-                &:nth-of-type(1) {
-                    @include fw-6();
-                    color: var(--dt-gray16);
-                    &::after {
-                        display: inline-block;
-                        content: '';
-                        margin: 0 12px;
-                        width: 1px;
-                        height: 10px;
-                        background-color: var(--dt-gray09);
-                    }
-                }
-                &:nth-of-type(2) {
-                    color: var(--dt-gray11);
-                }
-            }
-        }
-        &.is-selected {
-            border: 2px solid var(--dt-primary);
-            .txt-wrap {
-                .txt {
-                    color: var(--dt-primary);
-                    &:nth-of-type(1) {
-                        &::after {
-                            background-color: var(--dt-primary);
-                        }
-                    }
                 } 
             }
         }
