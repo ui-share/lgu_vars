@@ -2,6 +2,24 @@
 // 서비스 : 해외로밍 실시간 조회
 .cont__wrap-realtimeRoaming {
     background-image: url(../images/img/img-hm-roaming.png);
+    .cont__txt-box {
+        .roamingData, .roamingPrice {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 18px;
+            .deco {
+                font-size: 30px;
+            }
+        }
+    }
+}
+// 이용중:새로고침 버튼 있는 경우
+.section__cont.used {
+    padding-top: 20px;
+    .chips-refresh {
+        margin-left: auto;
+    }
 }
 // 로밍기간 카드
 .card.rmPeriod {
@@ -65,12 +83,5 @@
     .txt-caution { 
         text-align: right;
         margin-top: 12px;
-    }
-}
-// 이용중:새로고침 버튼 있는 경우
-.section__cont.used {
-    padding-top: 20px;
-    .chips-refresh {
-        margin-left: auto;
     }
 }

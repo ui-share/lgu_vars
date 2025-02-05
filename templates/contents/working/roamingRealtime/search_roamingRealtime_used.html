@@ -36,17 +36,26 @@
 			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-realtimeRoaming">
 					<div class="select-billdate">
-						<span class="txt-due">D-23</span>
+						<!-- <span class="txt-due">남은 기간 3일</span> -->
+						<span class="txt-due">남은 시간 <span>03:45</span></span>
 					</div>
 					<div class="cont__txt-box">
-						<span class="txt">해외로밍</span>
-                        <span class="txt">이용 전이에요</span>
+						<span class="txt">남은 로밍 데이터는</span>
+                        <span class="txt roamingData"><span class="deco">14</span><span class="color-prim">GB</span>이에요</span>
 					</div>
 				</div>
 			</div>
 
-			<div class="section__cont desc beforeUsed">
+			<div class="section__cont desc used">
 				<div class="cont__wrap cont__wrap-vertical">
+					<button type="button" class="chips chips-refresh">
+						<span class="time">11:00</span>
+						<span class="line"></span>
+						<span class="text-box">
+							<span class="txt">새로고침</span>
+							<span class="icon"></span>
+						</span>
+					</button>
 					<div class="con__tit-box">
 						<h6 class="tit-head">
 							<span class="txt-title">로밍 기간</span>
@@ -81,14 +90,52 @@
 
 					<div class="roamingPrice">
 						<div class="info-price-wrap">
-							<div class="info-price total-last roaming">
-								<span class="row">
-									<span class="txt-title">로밍요금</span>
-									<span class="txt-price"><span>0</span>원</span>
-								</span>
+							<!-- 
+								open 클래스로 show/hide 조정
+								<div class="list-info-price accordion-container open">
+							-->
+							<div class="list-info-price accordion-container">
+								<button class="info-price roaming accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<span>로밍요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>총 <span>24,530</span>원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													서브 타이틀
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													서브 타이틀
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">설명문구를 입력해주세요</span>
+													<span class="txt-price">NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<p class="txt-caution">로밍 요금은 이용 다음 달에 청구됩니다</p>
+						<p class="txt-caution">현재 이용중인 로밍요금은 11월 요금에 청구될 예정입니다</p>
 					</div>
 				</div>
 
@@ -107,17 +154,20 @@
 								</span>
 								데이터
 							</span>
+							<button class="chips neutral">
+								<span class="txt">충전/선물</span>
+							</button>
 						</div>
 						<div class="plan-wrap">
 							<div class="col">
 								<div class="txt-plan">
-									<span class="current">14GB 제공</span>
-									<!-- <span class="total">/ 무제한</span> -->
+									<span class="current">8.49GB 제공</span>
+									<span class="total">/ 14GB</span>
 								</div>
 								<div class="progress-area realtime">
 									<span class="progress-bg">
 										<!-- style.width %로 조절 -->
-										<span class="progress-bar" style="width:100%;"></span>
+										<span class="progress-bar" style="width:40%;"></span>
 									</span>
 								</div>
 								<p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
@@ -139,14 +189,14 @@
 								<div class="row">
 									<span class="txt-title">현지발신</span>
 									<span class="txt-desc">
-										<span class="current">-초</span>
-										<span class="total">/ 무제한</span>
+										<span class="current">4건 3분 2초</span>
+										<span class="total">/ 무료</span>
 									</span>
 								</div>
 								<div class="row">
 									<span class="txt-title">국제발신</span>
 									<span class="txt-desc">
-										<span class="current">-초</span>
+										<span class="current">2건 39초</span>
 										<span class="total">/ 1.98원</span>
 									</span>
 								</div>
@@ -163,7 +213,7 @@
 								문자
 							</span>
 							<span class="txt-desc">
-								<span class="current">-건</span>
+								<span class="current">18건</span>
 								<span class="total">/ 300건</span>
 							</span>
 						</div>

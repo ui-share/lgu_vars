@@ -1,6 +1,22 @@
 .cont__wrap-realtimeRoaming {
   background-image: url(../images/img/img-hm-roaming.png);
 }
+.cont__wrap-realtimeRoaming .cont__txt-box .roamingData, .cont__wrap-realtimeRoaming .cont__txt-box .roamingPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 18px;
+}
+.cont__wrap-realtimeRoaming .cont__txt-box .roamingData .deco, .cont__wrap-realtimeRoaming .cont__txt-box .roamingPrice .deco {
+  font-size: 30px;
+}
+
+.section__cont.used {
+  padding-top: 20px;
+}
+.section__cont.used .chips-refresh {
+  margin-left: auto;
+}
 
 .card.rmPeriod {
   padding: 22px 16px;
@@ -62,11 +78,4 @@
 .roamingPrice .txt-caution {
   text-align: right;
   margin-top: 12px;
-}
-
-.section__cont.used {
-  padding-top: 20px;
-}
-.section__cont.used .chips-refresh {
-  margin-left: auto;
 }
