@@ -101,6 +101,52 @@
                             </div>
                             <div class="validation-txt">validation 메시지 노출</div>
                         </div>
+
+                        <div class="input-control floating">
+                            <div class="input-group">
+                                <label class="input-label">납부 금액</label>
+                                <div class="input-row">
+                                    <input type="text" class="input-field" placeholder="납부 금액">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="notice-txt">
+                                <span>* 1천원이상 ~ 50만원 미만일 때만 납부할 수 있습니다.</span>
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+
+                        <!-- 드롭다운 버튼 케이스 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다-->
+                        <!-- 바텀시트 내 옵션 선택 시 floating > normal 로 바뀐다 -->
+                        <div class="input-control floating">
+                            <div class="input-group">
+                                <label class="input-label">할부기간</label>
+                                <div class="input-row">
+                                    <button type="button" class="btn-field-dropdown">
+                                        <span class="txt">
+                                            일시불
+                                            <!-- 1개월 -->
+                                            <!-- 2개월 -->
+                                             <!-- ... -->
+                                        </span>
+                                    </button>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
                     </div>
                 </div>
 
@@ -112,12 +158,15 @@
                     </div>
                 </div>
             </div>
+            
             <!-- 토스트 팝업// -->
             <div class="toast-wrap show">
 				<div class="toast">
+                    <!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
 					<div class="toast-txt">
 						카드번호를 입력해 주세요
-						<!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+                        <!-- 유효기간을 입력해 주세요 -->
+                         <!-- ... -->
 					</div>
 					<!-- 
 						####### 퍼블공지 #######

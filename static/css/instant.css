@@ -1,3 +1,12 @@
+.section__cont {
+  padding-bottom: 280px;
+}
+
+.cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
+  background-color: var(--dt-white);
+  z-index: 999;
+}
+
 .cont__wrap.wd-full .con__tit-box {
   padding-top: 20px;
   padding-left: 20px;
