@@ -34,7 +34,7 @@
 				<div class="popup-tit">
 					<span class="txt">로밍 안내방송 멘트를 설정해 주세요</span>
 				</div>
-				<button class="btn btn-util close" type="button" alt="닫기"></button>
+				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
 				<div class="cont__wrap">
@@ -44,6 +44,7 @@
 						</h6>
 						<div class="tit-tail">
 							<div class="switch-group">
+								<!-- on 상태 : checked / off 상태 checked 없음 기본 -->
 								<input type="checkbox" id="switch01" class="switch-input" checked>
 								<label for="switch01" class="switch-label">
 									<!-- 체크 풀릴 경우 사용안함으로 문구 변경 -->
@@ -84,7 +85,7 @@
 					-->
 					<div class="btn-group flex-row">
 						<button class="btn line" type="button">
-							<span class="txt">멘트 수정</span>
+							<span class="txt">멘트 변경</span>
 							<span class="img-box ico16">
 								<img src="../../../../static/images/icon/ic-btn-write.svg">
 							</span>
@@ -125,6 +126,7 @@
 					</div>
 
 					<div class="chips-group">
+						<!-- 선택 시 is-selected -->
 						<button type="button" class="chips chips-menu is-selected">
 							<span class="txt">표시</span>
 						</button>
@@ -142,7 +144,7 @@
 						<span class="txt">취소</span>
 					</button>
 					<button class="btn is-disabled" type="button">
-						<span class="txt">멘트 수정</span>
+						<span class="txt">멘트 변경</span>
 					</button>
 				</div>
 			</div>
