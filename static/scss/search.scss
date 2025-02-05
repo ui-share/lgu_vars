@@ -33,6 +33,7 @@
 		}
 		.cont__wrap-account {
 			background-image: url(../images/img/img-hm-account.png);
+			// min-height:158px;
 		}
 		.cont__wrap-payment {
 			background-image: url(../images/img/img-hm-automatic-withdrawal.png);
@@ -75,7 +76,7 @@
 	}
 	&.desc {//입금전용계좌추가
 		&:has(.accnt-cont-wrap){
-			height:calc(var(--vh) - 250px);
+			height:calc(var(--vh) - 258px);
 		}
 	}
 	.info-price-single {

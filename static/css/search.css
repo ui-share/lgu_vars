@@ -71,7 +71,7 @@
   gap: 0;
 }
 .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(var(--vh) - 250px);
+  height: calc(var(--vh) - 258px);
 }
 .section__cont .info-price-single {
   margin: 0 20px;
