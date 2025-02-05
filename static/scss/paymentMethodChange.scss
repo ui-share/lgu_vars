@@ -1,0 +1,38 @@
+@import "../scss/base/mixin";
+// 주소 노출 영역
+.page-wrapper {
+    .container {
+        .section__cont {
+            padding: 92px 0 74px;
+        }
+    }
+}
+.addr-wrap {
+    margin-top: 8px;
+    .addr-box {
+        padding: 16px 0;
+        border-bottom: 1px solid var(--dt-gray17);
+        .zip-code {
+            @include fw-6(14px);
+            line-height: 17px;
+            color: var(--dt-primary);
+            margin-bottom: 4px;
+        }
+        .addr-main {
+            @include fw-5(14px);
+            line-height: 21px;
+            color: var(--dt-gray16);
+            margin-bottom: 2px;
+        }
+        .addr-detail {
+            @include fw-5(12px);
+            line-height: 18px;
+            color: var(--dt-gray11);
+        }
+        &.card.solid {
+            background-color: transparent;
+            border-bottom: unset;
+            padding-top: 72px;
+        }
+    }    
+}

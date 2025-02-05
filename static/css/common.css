@@ -2579,6 +2579,7 @@ input {
   display: flex;
   flex: none;
   column-gap: 6px;
+  margin-bottom: 4px;
 }
 .input-control .input-group .input-row .util-box .clear-btn {
   border: none;
@@ -2600,6 +2601,15 @@ input {
   font-size: 18px;
   font-weight: 600;
   color: var(--dt-gray16);
+}
+.input-control .input-group .input-row .util-box .srch-btn {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--dt-gray11);
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: var(--dt-gray03);
 }
 .input-control.normal .input-group .input-label {
   top: -6px;

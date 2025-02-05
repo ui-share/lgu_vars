@@ -94,6 +94,7 @@ input {
 				flex: none;
 				column-gap: 6px;
 				@extend %hidden;
+				margin-bottom: 4px;
 				.clear-btn {
 					border: none;
 					cursor: pointer;
@@ -114,7 +115,14 @@ input {
 						color: var(--dt-gray16);
 					}
 				}
-		
+				.srch-btn {
+					@include fw-6(14px);
+					line-height: 17px;
+					color: var(--dt-gray11);
+					padding: 8px 16px;
+					border-radius: 4px;
+					background-color: var(--dt-gray03);
+				}
 			}
 
 		}
