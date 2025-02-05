@@ -9,7 +9,7 @@
   gap: 9px;
   position: relative;
   height: max-content;
-  min-height: 184px;
+  min-height: 188px;
   padding-top: 28px;
   background-repeat: no-repeat;
   background-size: 140px;
@@ -80,6 +80,7 @@
   border-radius: 8px;
 }
 .section__cont .info-price-single span {
+  color: var(--dt-primary);
   text-align: center;
 }
 .section__cont .info-price-single .txt-info {
@@ -98,7 +99,6 @@
 .section__cont .info-price-single .txt-price {
   display: inline-block;
   margin-right: 4px;
-  color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 700;
 }
@@ -109,12 +109,18 @@
   margin-left: 2px;
 }
 
+.cont__wrap .con__tit-box .tit-head {
+  flex-wrap: wrap;
+}
 .cont__wrap .con__tit-box .tit-head .txt-title {
   line-height: 22px;
 }
 .cont__wrap .con__tit-box .tit-head .color-prim {
   font-size: 18px;
   font-weight: 700;
+}
+.cont__wrap .con__tit-box .tit-tail {
+  min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
   flex-direction: column;
@@ -191,25 +197,26 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  min-height: 48px;
   padding: 10px 20px;
   border-radius: 0;
   background-color: var(--dt-gray15);
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  column-gap: 4px;
+  column-gap: 8px;
   flex-wrap: wrap;
+  line-height: 150%;
 }
 .btn-srch-childline .txt-title > span {
   font-size: 14px;
-  line-height: 21px;
 }
 .btn-srch-childline .txt-childname {
   color: var(--dt-white);
   font-weight: 700;
 }
 .btn-srch-childline .txt-phone {
-  color: var(--dt-gray09);
+  color: var(--dt-gray07);
   font-weight: 500;
 }
 .btn-srch-childline .img-box {

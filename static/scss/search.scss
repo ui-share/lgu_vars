@@ -9,7 +9,7 @@
 			gap:9px;
 			position:relative;
 			height:max-content;
-			min-height:184px;
+			min-height:188px;
 			padding-top:28px;
 			background-repeat: no-repeat;
 			background-size:140px;
@@ -84,7 +84,7 @@
 		padding:18px 20px;
 		background-color:var(--dt-white);
 		border-radius:8px;
-		span {text-align:center}
+		span {color: var(--dt-primary); text-align:center;}
 		.txt-info {
 			@include flexBox(center, center);
 			flex-wrap:wrap;
@@ -98,7 +98,6 @@
 		.txt-price {
 			display:inline-block;
 			margin-right:4px;
-			color:var(--dt-gray16);
 			@include fw-7(18px);
 		}
 		.img-box {
@@ -112,9 +111,11 @@
 .cont__wrap {
 	.con__tit-box {
 		.tit-head {
+			flex-wrap:wrap;
 			.txt-title {line-height:22px;}
 			.color-prim {font-size: 18px;font-weight: 700;}
 		}
+		.tit-tail {min-width:max-content;}
 		&:not(:has(.tit-tail)) {
 			&:has(.bullet-list) {
 				flex-direction:column;
@@ -179,16 +180,18 @@
 	justify-content:space-between;
 	align-items:center;
 	width:100%;
+	min-height:48px;
 	padding:10px 20px;
 	border-radius:0;
 	background-color:var(--dt-gray15);
 	.txt-title {
-		column-gap:4px;
+		column-gap:8px;
 		flex-wrap:wrap;
-		>span {font-size:14px;line-height:21px;}
+		line-height:150%;
+		>span {font-size:14px;}
 	}
 	.txt-childname {color:var(--dt-white);font-weight:700;}
-	.txt-phone {color:var(--dt-gray09);font-weight:500;}
+	.txt-phone {color:var(--dt-gray07);font-weight:500;}
 	.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
 }
 .select-billdate {
