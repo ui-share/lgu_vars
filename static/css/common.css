@@ -494,6 +494,59 @@ button {
   left: var(--bulletList-bullet-translateX);
 }
 
+/* ico-bank */
+.ico-bank { /* 은행아이콘 : bg 버전 */
+  display: inline-block;
+  width: 16px;
+  min-width: 16px;
+  height: 16px;
+  font-size: 0;
+  text-indent: -9999px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--dt-gray06);
+}
+.ico-bank.ibk {
+  background-image: url(../images/icon/ic-bank/ic-20-ibk.svg);
+}
+.ico-bank.kb {
+  background-image: url(../images/icon/ic-bank/ic-20-kb.svg);
+}
+.ico-bank.hana {
+  background-image: url(../images/icon/ic-bank/ic-20-hana.svg);
+}
+.ico-bank.nh {
+  background-image: url(../images/icon/ic-bank/ic-20-nh.svg);
+}
+.ico-bank.woori {
+  background-image: url(../images/icon/ic-bank/ic-20-woori.svg);
+}
+.ico-bank.sc {
+  background-image: url(../images/icon/ic-bank/ic-20-sc.svg);
+}
+.ico-bank.citi {
+  background-image: url(../images/icon/ic-bank/ic-20-citi.svg);
+}
+.ico-bank.daegu {
+  background-image: url(../images/icon/ic-bank/ic-20-daegu.svg);
+}
+.ico-bank.bnk {
+  background-image: url(../images/icon/ic-bank/ic-20-bnk.svg);
+}
+.ico-bank.kj {
+  background-image: url(../images/icon/ic-bank/ic-20-kj.svg);
+}
+.ico-bank.post {
+  background-image: url(../images/icon/ic-bank/ic-20-post.svg);
+}
+.ico-bank.shinhan {
+  background-image: url(../images/icon/ic-bank/ic-20-shinhan.svg);
+}
+.ico-bank.kbank {
+  background-image: url(../images/icon/ic-bank/ic-20-kbank.svg);
+}
+
 /* Layout Common */
 .page-wrapper {
   max-width: var(--max-devicewidth);
@@ -1620,7 +1673,7 @@ button {
   justify-content: flex-start;
   align-items: start;
 }
-.card.bank .img-box {
+.card.bank .ico-bank {
   width: 20px;
   min-width: 20px;
   height: 20px;
@@ -1873,11 +1926,50 @@ button {
   box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
   width: 100%;
 }
-.chips-bank-col .img-box {
+.chips-bank-col .ico-bank { /* 은행아이콘 : bg 버전 */
   display: block;
   margin: 0 auto 5px;
   width: 48px;
   height: 48px;
+}
+.chips-bank-col .ico-bank.ibk {
+  background-image: url(../images/icon/ic-bank/ic-48-kyup.svg);
+}
+.chips-bank-col .ico-bank.kb {
+  background-image: url(../images/icon/ic-bank/ic-48-kb.svg);
+}
+.chips-bank-col .ico-bank.hana {
+  background-image: url(../images/icon/ic-bank/ic-48-hana.svg);
+}
+.chips-bank-col .ico-bank.nh {
+  background-image: url(../images/icon/ic-bank/ic-48-nh.svg);
+}
+.chips-bank-col .ico-bank.woori {
+  background-image: url(../images/icon/ic-bank/ic-48-woori.svg);
+}
+.chips-bank-col .ico-bank.sc {
+  background-image: url(../images/icon/ic-bank/ic-48-sc.svg);
+}
+.chips-bank-col .ico-bank.citi {
+  background-image: url(../images/icon/ic-bank/ic-48-citi.svg);
+}
+.chips-bank-col .ico-bank.daegu {
+  background-image: url(../images/icon/ic-bank/ic-48-daegu.svg);
+}
+.chips-bank-col .ico-bank.bnk {
+  background-image: url(../images/icon/ic-bank/ic-48-bnk.svg);
+}
+.chips-bank-col .ico-bank.kj {
+  background-image: url(../images/icon/ic-bank/ic-48-kj.svg);
+}
+.chips-bank-col .ico-bank.post {
+  background-image: url(../images/icon/ic-bank/ic-48-post.svg);
+}
+.chips-bank-col .ico-bank.shinhan {
+  background-image: url(../images/icon/ic-bank/ic-48-shinhan.svg);
+}
+.chips-bank-col .ico-bank.kbank {
+  background-image: url(../images/icon/ic-bank/ic-48-kbank.svg);
 }
 .chips-bank-col .txt {
   display: flex;
@@ -1887,8 +1979,10 @@ button {
   font-weight: 500;
   line-height: 16px;
   text-align: center;
+  max-width: 62px;
   min-height: 34px;
   max-height: 34px;
+  word-break: keep-all;
   overflow: hidden;
 }
 
@@ -2015,13 +2109,14 @@ button {
   background-color: var(--dt-gray05);
   gap: 4px;
 }
-.chips.chips-bank .icon {
+.chips.chips-bank .icon { /* 은행아이콘 : img태그 버전 */
   width: 16px;
   height: 16px;
 }
 .chips.chips-bank .txt {
   font-size: 14px;
   color: var(--dt-gray16);
+  line-height: 110%;
 }
 .chips.chips-bank:active {
   box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
