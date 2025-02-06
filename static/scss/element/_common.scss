@@ -365,6 +365,60 @@ button {
 	transform: translateY(var(--bulletList-bullet-translateY));
 	left: var(--bulletList-bullet-translateX);
 }
+/* ico-bank */
+.ico-bank { /* 은행아이콘 : bg 버전 */
+	display: inline-block;
+	width: 16px;
+	min-width:16px;
+	height: 16px;
+	font-size:0;
+	text-indent: -9999px;
+	border-radius:50%;
+	background-repeat:no-repeat;
+	background-size:100%;
+	background-color:var(--dt-gray06);
+
+	&.ibk {
+		background-image: url(../images/icon/ic-bank/ic-20-ibk.svg);
+	}
+	&.kb {
+		background-image: url(../images/icon/ic-bank/ic-20-kb.svg);
+	}
+	&.hana {
+		background-image: url(../images/icon/ic-bank/ic-20-hana.svg);
+	}
+	&.nh {
+		background-image: url(../images/icon/ic-bank/ic-20-nh.svg);
+	}
+	&.woori {
+		background-image: url(../images/icon/ic-bank/ic-20-woori.svg);
+	}
+	&.sc {
+		background-image: url(../images/icon/ic-bank/ic-20-sc.svg);
+	}
+	&.citi {
+		background-image: url(../images/icon/ic-bank/ic-20-citi.svg);
+	}
+	&.daegu {
+		background-image: url(../images/icon/ic-bank/ic-20-daegu.svg);
+	}
+	&.bnk {
+		background-image: url(../images/icon/ic-bank/ic-20-bnk.svg);
+	}
+	&.kj {
+		background-image: url(../images/icon/ic-bank/ic-20-kj.svg);
+	}
+	&.post {
+		background-image: url(../images/icon/ic-bank/ic-20-post.svg);
+	}
+	&.shinhan {
+		background-image: url(../images/icon/ic-bank/ic-20-shinhan.svg);
+	}
+	&.kbank {
+		background-image: url(../images/icon/ic-bank/ic-20-kbank.svg);
+	}
+}
+
 
 /* Layout Common */
 .page-wrapper {
@@ -781,7 +835,7 @@ button {
 .slct-perd-wrap {
 	@include flexBox(start, center);
 	flex-wrap: wrap;
-	margin: 8px 0 24px;
+	// margin: 8px 0 24px;
 	border-radius: 10px;
 	padding: 12px 48px 12px 12px;
 	background-color: transparent;
