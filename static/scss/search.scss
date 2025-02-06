@@ -106,6 +106,7 @@
 				line-height: 1.2;				
 				padding-right: 35%;
 				row-gap: 4px;
+				color: var(--dt-gray14);
 				.deco {margin-right:2px;font-size:30px;line-height:1.2;}
 				.color-prim {font-size:30px;line-height:1.2;}
 				&:has(.deco + .color-prim) {

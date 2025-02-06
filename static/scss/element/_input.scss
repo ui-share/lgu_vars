@@ -492,28 +492,7 @@ input {
 					}
 				}
 			}
-			.slct-email-wrap {
-				@include flexBox(start, center);
-				flex-wrap: wrap;
-				border-radius: 10px;
-				min-width: 85px;
-				padding: 12px 38px 12px 10px;
-				background-color: transparent;
-				border: 2px solid var(--dt-gray08);
-				background-image: url(../images/icon/chevron_down_line_24.svg);
-				background-repeat: no-repeat;
-				background-size: 24px 24px;
-				background-position: right 6px center;
-				.slct-txt {
-					text-align: left;
-					@include fw-6(18px);
-					color: var(--dt-gray11);
-					&.point {
-						@include fw-6(14px);
-						color: var(--dt-gray16);
-					}
-				}
-			}
+
 
 		}
 		&.focused {
@@ -606,4 +585,28 @@ input {
 		width:calc((100% - 30px) / 2);
 	}
 
+}
+
+// 드롭다운
+.slct-email-wrap {
+	@include flexBox(start, center);
+	flex-wrap: wrap;
+	border-radius: 10px;
+	min-width: 85px;
+	padding: 12px 38px 12px 10px;
+	background-color: transparent;
+	border: 2px solid var(--dt-gray08);
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: right 6px center;
+	.slct-txt {
+		text-align: left;
+		@include fw-6(18px);
+		color: var(--dt-gray11);
+		&.point {
+			@include fw-6(14px);
+			color: var(--dt-gray16);
+		}
+	}
 }

@@ -2881,32 +2881,6 @@ input {
   background-repeat: no-repeat;
   background-position: right 5px center;
 }
-.input-control.email-form .input-group .slct-email-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  min-width: 85px;
-  padding: 12px 38px 12px 10px;
-  background-color: transparent;
-  border: 2px solid var(--dt-gray08);
-  background-image: url(../images/icon/chevron_down_line_24.svg);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: right 6px center;
-}
-.input-control.email-form .input-group .slct-email-wrap .slct-txt {
-  text-align: left;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray11);
-}
-.input-control.email-form .input-group .slct-email-wrap .slct-txt.point {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
 .input-control.email-form.focused .input-group .input-field {
   caret-color: var(--dt-primary);
   cursor: text;
@@ -2997,6 +2971,33 @@ input {
 }
 .input-row-wrap .input-control {
   width: calc((100% - 30px) / 2);
+}
+
+.slct-email-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  min-width: 85px;
+  padding: 12px 38px 12px 10px;
+  background-color: transparent;
+  border: 2px solid var(--dt-gray08);
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 6px center;
+}
+.slct-email-wrap .slct-txt {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.slct-email-wrap .slct-txt.point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
 }
 
 .popup-wrapper {
