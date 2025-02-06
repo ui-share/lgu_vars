@@ -2494,7 +2494,7 @@ button {
   color: var(--dt-white);
 }
 
-.code.email-form .input-group .input-row .util-box, .input-control .validation-txt, .util-box {
+.input-control .validation-txt, .util-box {
   display: none;
 }
 
@@ -2586,7 +2586,6 @@ input::placeholder {
   font-weight: 600;
   line-height: 1.2;
   color: var(--dt-gray11);
-  padding-bottom: 2px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2663,9 +2662,13 @@ input::placeholder {
 .input-group {
   width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 }
 
 .input-row {
+  width: 100%;
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -2736,6 +2739,13 @@ input::placeholder {
   transform: translateY(-50%);
 }
 
+.email-form .input-group {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
 .email-form .input-row {
   flex: 1;
 }
@@ -2792,52 +2802,8 @@ input::placeholder {
   text-align: center;
   color: var(--dt-gray16);
 }
-.code.email-form .input-group {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.code.email-form .input-group .input-label {
-  top: -6px;
-  font-size: 12px;
-  display: flex;
-}
-.code.email-form .input-group .input-row {
-  flex: 1;
-  min-width: 40%;
-  border-bottom: 2px solid var(--dt-gray08);
-}
-.code.email-form .input-group .input-row .util-box {
-  margin-left: auto;
-  display: flex;
-  flex: none;
-  column-gap: 6px;
-}
-.code.email-form .input-group .input-row .util-box .clear-btn {
-  border: none;
-  cursor: pointer;
-  min-width: 33px;
-  width: 33px;
-  height: 40px;
-  background-image: url(../images/icon/ic-input-clear.svg);
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: right 5px center;
-}
-.code.email-form.focused .input-group .input-field {
-  caret-color: var(--dt-primary);
-  cursor: text;
-}
-.code.email-form.focused .input-group .input-row {
-  border-bottom: 2px solid var(--dt-primary);
-}
-.code.email-form.success .input-group .input-row {
-  border-bottom: 2px solid var(--dt-success);
-}
-.code.email-form.error .input-group .input-row {
-  border-bottom: 2px solid var(--dt-error);
+.code .validation-txt {
+  text-align: left;
 }
 
 .btn-field-dropdown {
@@ -2927,36 +2893,6 @@ input::placeholder {
 }
 .auth-wrap.auth_number .badge-time {
   margin-top: 28px;
-}
-
-.input-col-wrap {
-  display: flex;
-  flex-direction: column;
-  row-gap: 24px;
-}
-.input-col-wrap .input-control:first-of-type {
-  margin-top: 18px;
-}
-.input-col-wrap .segment__wrap {
-  padding-top: 14px;
-}
-
-.input-row-wrap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  column-gap: 8px;
-}
-.input-row-wrap .hyphen {
-  width: 18px;
-  margin-top: 10px;
-  color: var(--dt-gray11);
-  text-align: center;
-  font-size: 18px;
-  font-weight: 600;
-}
-.input-row-wrap .input-control {
-  width: calc((100% - 30px) / 2);
 }
 
 .popup-wrapper {

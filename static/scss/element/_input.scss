@@ -143,10 +143,11 @@ input::placeholder {
 	width: 100%;
 	position: relative;
 	display: flex;
-	flex-direction: column;
-	gap: 2px;
+	flex-direction: row;
+	gap: 6px;
 }
 .input-row {
+	width: 100%;
 	min-height: 44px;
 	@include flexBox(between, center);
 	column-gap: 6px;
@@ -234,10 +235,13 @@ input::placeholder {
 
 // 컴포넌트별 스타일 - email
 .email-form {
-	display: flex;
-    align-items: flex-end;
-	flex-direction: row;
-    gap: 8px;
+	.input-group {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		gap: 6px;
+	}
 	.input-row {
 		flex: 1;
 	}
