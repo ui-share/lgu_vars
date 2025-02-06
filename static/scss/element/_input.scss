@@ -291,8 +291,69 @@ input::placeholder {
 			color: var(--dt-gray16);
 		}
 	}
-	.validation-txt {
-		text-align: left;
+	&.email-form {
+		.input-group {
+			@include flexBox(between, center);
+			flex-wrap: wrap;
+			gap: 8px;
+			.input-label {
+				top: -6px; // 라벨이 위로 올라가도록 변경
+				font-size: 12px; // 작아지면서 플로팅 효과
+				display: flex;
+			}
+			.input-row {
+				flex: 1;
+				min-width: 40%;
+				// width: 100%;
+				border-bottom: 2px solid var(--dt-gray08);
+							// Clear 버튼 : 기본상태-hidden
+				.util-box {
+					margin-left: auto;
+					display: flex;
+					flex: none;
+					column-gap: 6px;
+					@extend %hidden;
+					.clear-btn {
+						border: none;
+						cursor: pointer;
+						min-width: 33px;
+						width: 33px;
+						height: 40px;
+						background-image: url(../images/icon/ic-input-clear.svg);
+						background-size: 24px 24px;
+						background-repeat: no-repeat;
+						background-position: right 5px center;
+						
+					}
+				}
+			}
+
+
+		}
+		&.focused {
+			.input-group {
+				.input-field {
+					caret-color: var(--dt-primary);
+					cursor: text;
+				}
+				.input-row {
+					border-bottom: 2px solid var(--dt-primary);
+				}
+			}
+		}
+		&.success {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-success);               }
+			}
+		}
+		&.error {
+			.input-group {
+				.input-row {
+					border-bottom: 2px solid var(--dt-error);
+				}
+			}
+		}
 	}
 }
 
@@ -379,3 +440,43 @@ input::placeholder {
 	}
 }
 
+.input-col-wrap {
+	@include flexColum;
+	row-gap:24px;
+	.input-control:first-of-type {margin-top:18px;}
+	.segment__wrap {padding-top:14px;}
+}
+.input-row-wrap {
+	@include flexRow;
+	align-items:center;
+	column-gap:8px;
+	.hyphen {width:18px;margin-top:10px;color:var(--dt-gray11);text-align:center;font-size:18px;font-weight:600;}
+	.input-control {
+		width:calc((100% - 30px) / 2);
+	}
+
+}
+
+// 드롭다운
+.slct-perd-wrap {
+	@include flexBox(start, center);
+	flex-wrap: wrap;
+	border-radius: 10px;
+	min-width: 85px;
+	padding: 12px 38px 12px 10px;
+	background-color: transparent;
+	border: 2px solid var(--dt-gray08);
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: right 6px center;
+	.slct-txt {
+		text-align: left;
+		@include fw-6(18px);
+		color: var(--dt-gray11);
+		&.point {
+			@include fw-6(14px);
+			color: var(--dt-gray16);
+		}
+	}
+}

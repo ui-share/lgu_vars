@@ -2495,7 +2495,7 @@ button {
   color: var(--dt-white);
 }
 
-.input-control .validation-txt, .util-box {
+.code.email-form .input-group .input-row .util-box, .input-control .validation-txt, .util-box {
   display: none;
 }
 
@@ -2801,8 +2801,52 @@ input::placeholder {
   text-align: center;
   color: var(--dt-gray16);
 }
-.code .validation-txt {
-  text-align: left;
+.code.email-form .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.code.email-form .input-group .input-label {
+  top: -6px;
+  font-size: 12px;
+  display: flex;
+}
+.code.email-form .input-group .input-row {
+  flex: 1;
+  min-width: 40%;
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.code.email-form .input-group .input-row .util-box {
+  margin-left: auto;
+  display: flex;
+  flex: none;
+  column-gap: 6px;
+}
+.code.email-form .input-group .input-row .util-box .clear-btn {
+  border: none;
+  cursor: pointer;
+  min-width: 33px;
+  width: 33px;
+  height: 40px;
+  background-image: url(../images/icon/ic-input-clear.svg);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+}
+.code.email-form.focused .input-group .input-field {
+  caret-color: var(--dt-primary);
+  cursor: text;
+}
+.code.email-form.focused .input-group .input-row {
+  border-bottom: 2px solid var(--dt-primary);
+}
+.code.email-form.success .input-group .input-row {
+  border-bottom: 2px solid var(--dt-success);
+}
+.code.email-form.error .input-group .input-row {
+  border-bottom: 2px solid var(--dt-error);
 }
 
 .btn-field-dropdown {
@@ -2892,6 +2936,63 @@ input::placeholder {
 }
 .auth-wrap.auth_number .badge-time {
   margin-top: 28px;
+}
+
+.input-col-wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.input-col-wrap .input-control:first-of-type {
+  margin-top: 18px;
+}
+.input-col-wrap .segment__wrap {
+  padding-top: 14px;
+}
+
+.input-row-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+.input-row-wrap .hyphen {
+  width: 18px;
+  margin-top: 10px;
+  color: var(--dt-gray11);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.input-row-wrap .input-control {
+  width: calc((100% - 30px) / 2);
+}
+
+.slct-perd-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  min-width: 85px;
+  padding: 12px 38px 12px 10px;
+  background-color: transparent;
+  border: 2px solid var(--dt-gray08);
+  background-image: url(../images/icon/chevron_down_line_24.svg);
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 6px center;
+}
+.slct-perd-wrap .slct-txt {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dt-gray11);
+}
+.slct-perd-wrap .slct-txt.point {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dt-gray16);
 }
 
 .popup-wrapper {

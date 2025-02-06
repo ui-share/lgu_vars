@@ -13,7 +13,7 @@
 	<!-- Css -->
 	<link rel="stylesheet" href="../../../../static/css/common.css">
 	<link rel="stylesheet" href="../../../../static/css/search.css">
-	
+
 	<!-- Scripts -->
 </head>
 <body>
@@ -31,133 +31,125 @@
 	
 		<!-- container -->
 		<div class="container">
-			<!-- 홀맨 배너 영역// -->
-			<div class="section__cont summary">
-				<div class="cont__wrap cont__wrap-realtime">
-					<div class="select-billdate">
-						<span class="txt-due"></span>
-					</div>
-					<div class="cont__txt-box">
-						<span class="txt-select-wrap">
-							<span class="txt">현재 납부 가능한 요금은</span>
+			<div class="section__cont">
+				<div class="cont__wrap wd-full">
+					<button type="button" class="btn-srch-childline row">
+						<span class="txt-title row">
+							<span class="txt-childname">자녀 1</span>
+							<span class="txt-phone">010-12**-56**</span>
 						</span>
-						<sapn class="txt price">
-							<span class="deco">60,320</span>
-							<span class="color-prim">원</span>이에요
-						</sapn>
-					</div>
+						<span class="img-box">
+							<img src="../../../../static/images/icon/ic-arrow-toggle-white.svg" alt="">
+						</span>
+					</button>
+				</div>
+				<div class="cont__wrap tabnav__wrap">
+					<ul class="tabnav">
+						<li class="tab"><a href="javascript:void(0)" role="button">청구요금</a></li>
+						<li class="tab"><a href="javascript:void(0)" role="button" class="active">실시간 요금</a></li>
+					</ul>
 				</div>
 			</div>
-			
-			<!-- 아코디언 영역 -->
-			<div class="section__cont desc"> 
-				<div class="cont__wrap cont__wrap-vertical">
-					<div class="con__tit-box">
-						<h6 class="tit-head">
-							<span class="txt-title">요금 상세</span>
-						</h6>
+			<div class="section__cont">
+				<!-- 홀맨 배너 영역// -->
+				<div class="section__cont summary">
+					<div class="cont__wrap cont__wrap-realtime">
+						<div class="select-billdate">
+							<span class="txt-due">7월 1일부터 ~ 오늘까지</span>
+						</div>
+						<div class="cont__txt-box">
+							<span class="txt-select-wrap">
+								<span class="txt">이번 달 실시간 요금은</span>
+							</span>
+							<span class="txt price">
+								<span class="deco">32,000</span>
+								<span class="color-prim">원</span>이에요
+							</span>
+						</div>
 					</div>
-					<div class="info-price-wrap">
-						<!-- 
-							아코디언 show/hide 클래스 : open
+				</div>
+
+				<!-- 아코디언 영역 -->
+				<div class="section__cont desc">
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="info-col-wrap">
+							<div class="row">
+								<span class="txt-title">이용 중인 요금제</span>
+								<span class="txt-desc">5G 프리미어 에센셜</span>
+							</div>
+						</div>
+					</div>
+					<!-- 발행된 청구서가 있을 경우 -->					
+					<div class="cont__wrap cont__wrap-vertical">						
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">실시간 요금 상세</span>
+							<span class="txt-sub">(부가가치세 포함)</span>
+							</h6>
+						</div>
+						<div class="info-price-wrap">
+							<!-- open 클래스로 show/hide 조정 -->
 							<div class="list-info-price accordion-container open">
-						-->
-						<div class="list-info-price accordion-container ">
-							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-								<span class="row txt-title">
-									<span>이번 달 요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<span>휴대폰 이용요금</span>
 									</span>
-								</span>
-							</button>
-							<div class="accordion-content"><!-- 아코디언 컨텐트 -->
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												월정액
-											</span>
-											<span class="txt-price">
-												<span>NN원</span>
-											</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
 										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												할인요금
-											</span>
-											<span class="txt-price">
-												<span>-NN원</span>
-											</span>
-										</span>
-										<ul class="col list-detail">
-											<li class="row">
-												<span class="txt-title">선택약정 25% 할인</span>
-												<span class="txt-price">
-													<span>-NN원</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													월정액
 												</span>
-											</li>
-										</ul>
-									</li>
-								</ul>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													할인요금
+												</span>
+												<span class="txt-price">-NN원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">선택약정 25% 할인</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<!-- 
-							아코디언 show/hide 클래스 : open
-							<div class="list-info-price accordion-container open">
-						-->
-						<div class="list-info-price accordion-container">
-							<button class="info-price accordion-header">
-								<span class="row txt-title">
-									<span>미납 요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-									</span>
-								</span>
-							</button>
-							<div class="accordion-content">
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												2024년 3월 요금
-											</span>
-											<span class="txt-price">
-												<span>NN원</span>
-											</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<div class="row">
-											<span class="txt-title ico">
-												2024년 2월 요금
-											</span>
-											<span class="txt-price">
-												<span>NN원</span>
-											</span>
-										</div>
-									</li>
-								</ul>
-							</div>
+						
+						<div class="bullet-wrap caution">
+							<h5 class="bullet-caption">
+								유의사항
+							</h5>
+							<ul class="bullet-list">
+								<li class="bullet-item">
+									개인정보보호를 위해 사용 내역 등은 조회할 수 없습니다.
+								</li>
+								<li class="bullet-item">
+									이번 달 1일부터 현재까지의 사용 요금을 확인할 수 있습니다.
+								</li>
+								<li class="bullet-item">
+									휴대폰 할부, 소액 결제, 해외 로밍 요금등은 실시간 확인이 되지 않아 실제 청구 금액과 다를 수 있습니다.
+								</li>
+								<li class="bullet-item">
+									정확한 이번 달 청구 금액은 다음 달 8일 ~ 17일 경 발행되는 청구서로 확인해 주세요.
+								</li>
+							</ul>
 						</div>
-					</div>
-					<div class="btn-group flex-column">
-						<button type="button" class="btn btn-sec">
-							<span class="txt">바로 납부</span>
-						</button>
-						<button type="button" class="btn line">
-							<span class="txt">이전 납부 내역</span>
-						</button>
 					</div>
 				</div>
 			</div>
@@ -187,23 +179,21 @@
 							</div>
 						</div>
 						<div class="card" role="button" tabindex="0">
-							<div class="item util">
-								<span class="img-box">
-									<img src="../../../../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
-								</span>
-							</div>
-							<div class="item text">
-								<span class="tit">요금 바로납부</span>
-								<span class="txt">청구요금<br>미리납부</span>
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">실시간 요금</span>
+									<span class="txt">오늘까지 사용한<br>요금 조회</span>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				
-				<!-- 
-					아코디언 닫힘 상태(기본) > 오픈시 : open 클래스 추가 
-					<div class="cont__wrap cont__wrap-counsel accordion-container open">
-				-->
+
 				<div class="cont__wrap cont__wrap-counsel accordion-container">
 					<div class="con__tit-box accordion-header" role="button" tabindex="0">
 						<span class="txt-sub">문의사항을 찾기 어려우신가요</span>

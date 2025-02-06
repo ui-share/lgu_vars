@@ -106,6 +106,7 @@
 				line-height: 1.2;				
 				padding-right: 35%;
 				row-gap: 4px;
+				color: var(--dt-gray14);
 				.deco {margin-right:2px;font-size:30px;line-height:1.2;}
 				.color-prim {font-size:30px;line-height:1.2;}
 				&:has(.deco + .color-prim) {
@@ -154,7 +155,10 @@
 	padding:18px 20px;
 	background-color:var(--dt-white);
 	border-radius:8px;
-	span {color: var(--dt-primary); text-align:center;}
+	span {
+		// color: var(--dt-primary); 삭제 금지
+		text-align:center;
+	}
 	.txt-info {
 		@include flexBox(center, center);
 		flex-wrap:wrap;
@@ -169,6 +173,7 @@
 		display:inline-block;
 		margin-right:4px;
 		@include fw-7(18px);
+		color:var(--dt-gray16);/* 추후 변경 예정 */
 	}
 	.img-box {
 		min-width:18px;
@@ -263,5 +268,27 @@
 		row-gap:16px;
 		.item.util {min-width:20px;}
 		.item.text{width:calc(100% - 52px);}
+	}
+}
+
+.caption-wrap {
+	width: 100%;
+	padding: 10px 8px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: var(--dt-gray03);
+	.caption {
+		@include fw-6(12px);
+		line-height: 100%;
+		color: var(--dt-gray11);
+	}
+	.caption::before {
+		content: "";
+		display: inline;
+		padding-left: 20px;
+		background-image: url(../images/icon/ic-bullet-info.svg);
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left 0 center;
 	}
 }

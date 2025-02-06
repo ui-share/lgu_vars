@@ -101,6 +101,7 @@
   line-height: 1.2;
   padding-right: 35%;
   row-gap: 4px;
+  color: var(--dt-gray14);
 }
 .cont__wrap .cont__txt-box .txt.price .deco {
   margin-right: 2px;
@@ -165,7 +166,6 @@
   border-radius: 8px;
 }
 .info-price-single span {
-  color: var(--dt-primary);
   text-align: center;
 }
 .info-price-single .txt-info {
@@ -186,6 +186,7 @@
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
+  color: var(--dt-gray16); /* 추후 변경 예정 */
 }
 .info-price-single .img-box {
   min-width: 18px;
@@ -309,4 +310,27 @@
 }
 .card-group.bank .item.text {
   width: calc(100% - 52px);
+}
+
+.caption-wrap {
+  width: 100%;
+  padding: 10px 8px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--dt-gray03);
+}
+.caption-wrap .caption {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--dt-gray11);
+}
+.caption-wrap .caption::before {
+  content: "";
+  display: inline;
+  padding-left: 20px;
+  background-image: url(../images/icon/ic-bullet-info.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: left 0 center;
 }
