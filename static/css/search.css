@@ -165,7 +165,6 @@
   border-radius: 8px;
 }
 .info-price-single span {
-  color: var(--dt-primary);
   text-align: center;
 }
 .info-price-single .txt-info {
@@ -186,6 +185,7 @@
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
+  color: var(--dt-gray16); /* 추후 변경 예정 */
 }
 .info-price-single .img-box {
   min-width: 18px;
