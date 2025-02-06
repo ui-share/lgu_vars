@@ -1,7 +1,7 @@
 @import "../scss/base/mixin";
 
 // 공통
-.section__cont {padding-bottom:280px;}
+.page-wrapper .container .section__cont {padding-bottom:280px;}
 .cont__wrap.cont__wrap-btBtn {
 	&:has(.accordion-container) {
 		background-color:var(--dt-white);

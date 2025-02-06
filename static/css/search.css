@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 188px;
   padding-top: 28px;
@@ -85,6 +86,7 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -165,7 +167,6 @@
   border-radius: 8px;
 }
 .info-price-single span {
-  color: var(--dt-primary);
   text-align: center;
 }
 .info-price-single .txt-info {
@@ -186,6 +187,7 @@
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
+  color: var(--dt-gray16); /* 추후 변경 예정 */
 }
 .info-price-single .img-box {
   min-width: 18px;
@@ -205,7 +207,8 @@
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
@@ -309,4 +312,27 @@
 }
 .card-group.bank .item.text {
   width: calc(100% - 52px);
+}
+
+.caption-wrap {
+  width: 100%;
+  padding: 10px 8px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: var(--dt-gray03);
+}
+.caption-wrap .caption {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--dt-gray11);
+}
+.caption-wrap .caption::before {
+  content: "";
+  display: inline;
+  padding-left: 20px;
+  background-image: url(../images/icon/ic-bullet-info.svg);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: left 0 center;
 }
