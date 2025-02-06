@@ -812,35 +812,7 @@ button {
 		}
 	}
 }
-/* 캘린더 선택시 월일자텍스트 노출영역 */
-.txt-perd-wrap {
-	@include flexBox(center, center);
-	flex-wrap:wrap;
-	column-gap:12px;   
-	margin: 20px auto 0;
-	padding: 14px 16px; 
-	background-color: var(--dt-gray02);
-	border-radius: 8px;
-	> span {
-		color: var(--dt-gray11);
-		@include fw-5(14px);
-		line-height:21px;
-	}
-	.txt-perd {
-		min-width:86px;
-		max-width:144px;
-		text-align:center;
-		.hyphen {
-			margin-right:10px;
-			@include fw-6(18px);
-			color: var(--dt-gray10);
-		}
-		.point {
-			@include fw-6(14px);
-			color: var(--dt-gray16);
-		}
-	}
-}
+
 /* 데이터 노출되는 리스트 */
 .list-wrap {
 	background-color: var(--dt-gray02);

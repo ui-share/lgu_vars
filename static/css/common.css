@@ -1000,41 +1000,6 @@ button {
   margin-right: 8px;
 }
 
-/* 캘린더 선택시 월일자텍스트 노출영역 */
-.txt-perd-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  column-gap: 12px;
-  margin: 20px auto 0;
-  padding: 14px 16px;
-  background-color: var(--dt-gray02);
-  border-radius: 8px;
-}
-.txt-perd-wrap > span {
-  color: var(--dt-gray11);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-}
-.txt-perd-wrap .txt-perd {
-  min-width: 86px;
-  max-width: 144px;
-  text-align: center;
-}
-.txt-perd-wrap .txt-perd .hyphen {
-  margin-right: 10px;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray10);
-}
-.txt-perd-wrap .txt-perd .point {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-
 /* 데이터 노출되는 리스트 */
 .list-wrap {
   background-color: var(--dt-gray02);
