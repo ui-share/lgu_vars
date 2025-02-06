@@ -965,7 +965,6 @@ button {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 8px 0 24px;
   border-radius: 10px;
   padding: 12px 48px 12px 12px;
   background-color: transparent;
@@ -2587,6 +2586,7 @@ input::placeholder {
   font-weight: 600;
   line-height: 1.2;
   color: var(--dt-gray11);
+  padding-bottom: 2px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2663,9 +2663,6 @@ input::placeholder {
 .input-group {
   width: 100%;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
 }
 
 .input-row {
@@ -2739,12 +2736,6 @@ input::placeholder {
   transform: translateY(-50%);
 }
 
-.email-form {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: row;
-  gap: 8px;
-}
 .email-form .input-row {
   flex: 1;
 }
@@ -2966,33 +2957,6 @@ input::placeholder {
 }
 .input-row-wrap .input-control {
   width: calc((100% - 30px) / 2);
-}
-
-.slct-perd-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  min-width: 85px;
-  padding: 12px 38px 12px 10px;
-  background-color: transparent;
-  border: 2px solid var(--dt-gray08);
-  background-image: url(../images/icon/chevron_down_line_24.svg);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: right 6px center;
-}
-.slct-perd-wrap .slct-txt {
-  text-align: left;
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray11);
-}
-.slct-perd-wrap .slct-txt.point {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--dt-gray16);
 }
 
 .popup-wrapper {

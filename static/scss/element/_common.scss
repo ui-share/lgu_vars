@@ -781,7 +781,7 @@ button {
 .slct-perd-wrap {
 	@include flexBox(start, center);
 	flex-wrap: wrap;
-	margin: 8px 0 24px;
+	// margin: 8px 0 24px;
 	border-radius: 10px;
 	padding: 12px 48px 12px 12px;
 	background-color: transparent;
