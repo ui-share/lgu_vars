@@ -2973,7 +2973,7 @@ input {
   width: calc((100% - 30px) / 2);
 }
 
-.slct-email-wrap {
+.slct-perd-wrap {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -2988,13 +2988,13 @@ input {
   background-size: 24px 24px;
   background-position: right 6px center;
 }
-.slct-email-wrap .slct-txt {
+.slct-perd-wrap .slct-txt {
   text-align: left;
   font-size: 18px;
   font-weight: 600;
   color: var(--dt-gray11);
 }
-.slct-email-wrap .slct-txt.point {
+.slct-perd-wrap .slct-txt.point {
   font-size: 14px;
   font-weight: 600;
   color: var(--dt-gray16);
