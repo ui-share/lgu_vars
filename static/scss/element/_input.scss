@@ -1,547 +1,335 @@
 @import '../base/mixin';
 
-/* 기본 input 스타일 초기화 */
-input {
-	margin: 0;
-	padding: 0;
-&:disabled {
-		opacity: 1;
+// 공통 스타일
+%hidden {display: none;}
+%block {display: block;}
+%flex {display: flex;}
+.chips-group {margin-top:8px;}
+// 공지 텍스트 fw-7 gray11
+.notice-txt {
+	margin-top: 8px;
+	span {
+		color: var(--dt-gray11);
+		@include fw-7(14px);
+		line-height:21px;
 	}
 }
-input::-webkit-outer-spin-button,
+.input-col-wrap {
+	@include flexColum;
+	row-gap:24px;
+	.input-control:first-of-type {margin-top:18px;}
+	.segment__wrap {padding-top:14px;}
+}
+.input-row-wrap {
+	@include flexRow;
+	align-items:center;
+	column-gap:8px;
+	.hyphen {width:18px;margin-top:10px;color:var(--dt-gray11);text-align:center;font-size:18px;font-weight:600;}
+	.input-control {
+		width:calc((100% - 30px) / 2);
+	}
 
+}
+// input
+/* 초기화 */
+input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-input[type=number] { -moz-appearance: textfield;}
 input {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
 	-webkit-appearance: none;
 	appearance: none;
-	border: none;
 	background: transparent;
+	@include fw-6(18px);
+	color: var(--dt-gray16);
 }
-// 공통 스타일
-%hidden {
-	display: none;
+input::placeholder {
+	font-family: "Pretendard", system-ui, sans-serif;
+	color: var(--dt-gray11);
+	@include fw-6(18px);
+	line-height: 1.2;
 }
 
-%visible {
-	display: block;
+// 입력 필드 스타일
+.input-field {
+	transition: border-color 0.2s ease-in-out;
+	cursor: text;
+	visibility: visible;
+}
+// 라벨 스타일
+.input-label {
+	@include fw-6(12px);
+	line-height: 1.2;
+	color: var(--dt-gray11);
+
+	transition: all 0.2s ease-in-out;
+}
+.util-box {
+	display: flex;
+	align-items: center;
+	flex: none;
+	column-gap: 6px;
+	@extend %hidden;
+	margin-left: auto;
+}
+// unit
+.input-unit {
+	color: var(--dt-gray11);
+	@include fw-6(18px);
+	line-height: 1.2;
+	.unit-point {
+		color: var(--dt-gray16);
+	}
+}
+// Clear 버튼 : 기본상태-hidden
+.clear-btn {
+	border: none;
+	width: 24px; 
+	height: 24px;
+	background-image: url(../images/icon/ic-close_circle_filled.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center center;
+	cursor: pointer;
+}
+// 검색 버튼 
+.srch-btn {
+	@include fw-6(14px);
+	line-height: 1;
+	color: var(--dt-gray11);
+	padding: 8px 16px;
+	border-radius: 4px;
+	background-color: var(--dt-gray03);
+}
+// 헬퍼 텍스트
+.validation-txt {
+	color: var(--dt-gray11);
+	width: 100%;
+	word-break: break-word;
+	align-items: flex-start;
+	gap: 4px;
+	&::before {
+		flex: none;
+		content: "";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: 0 0;
+	}
+}
+.validation-txt {
+	> * {		
+		@include fw-6(12px);
+		line-height: normal;
+		display: inline-block;
+		margin-top: 1px;
+	}	
 }
 
 // Input Container 스타일
-.input-control {   
-	padding-top: 14px;
-	.input-group {
-		position: relative;
-		width: 100%;
-	
-		// 라벨 스타일
+.input-control {
+	width: 100%;
+	padding-top: 16px;
+}
+.input-group {
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+.input-row {
+	min-height: 44px;
+	@include flexBox(between, center);
+	column-gap: 6px;
+	border-bottom: 2px solid var(--dt-gray08);
+	padding: 4px 0;
+} 
+
+// 상태별 스타일
+.input-control {
+	.validation-txt {
+		@extend %hidden;
+		margin-top: 9px;
+	}
+}
+.focused {
+	.input-row {
+		border-bottom: 2px solid var(--dt-primary);
+	}
+	.input-field {
+		caret-color: var(--dt-primary);
+	}
+}
+.success {
+	.input-row {
+		border-bottom: 2px solid var(--dt-success);               
+	}
+	.validation-txt {
+		@extend %flex;
+		color: var(--dt-success);
+		&:before {
+			background-image: url(../images/icon/ic-check_circle_15.svg);
+		}
+	}
+}
+.error {
+	.input-row {
+		border-bottom: 2px solid var(--dt-error);
+	}
+	.validation-txt {
+		@extend %flex;
+		color: var(--dt-error);
+		&:before {
+			background-image: url(../images/icon/ic-error_circle_15.svg);
+		}
+	}
+}
+.tltip-error {
+	.input-row {
+		border-bottom: 2px solid var(--dt-error);
+	}
+	.input-field {
+		color: var(--dt-error);
+	}
+	.validation-txt {
+		background-image: url(../images/icon/ic-error_circle_15.svg);
+		color: var(--dt-error);
+	}
+}
+.disabled, .read-only {
+	.input-row {
+		pointer-events: none;
+		border-bottom: 2px solid var(--dt-gray08);
+	}
+	.input-field {
+		opacity: 0.4;
+	}
+}
+.read-only {
+	.input-field {
+		opacity: 1;
+	}
+}
+
+// floating UI
+.input-control {
+	&.floating {
 		.input-label {
 			position: absolute;
 			top: 50%; // 기본 상태에서 필드 중앙에 배치
 			left: 0;
 			transform: translateY(-50%);
-			@include fw-6(12px);
-			color: var(--dt-gray11);
-			transition: all 0.2s ease-in-out;
-			pointer-events: none;
-			// @extend %hidden;
-		}
-		.input-row {
-			@include flexBox(between, center);
-			column-gap: 6px;
-			border-bottom: 2px solid var(--dt-gray08);
-			// 입력 필드 스타일
-			.input-field {
-				width: 100%;
-				padding: 10px 0;
-				@include fw-6(18px);
-				outline: none;
-				border: none;
-				transition: border-color 0.2s ease-in-out;
-				cursor: text;
-				visibility: visible;
-			}
-			.btn-field-dropdown {
-				padding:9px 0;
-				background-image: url(../images/icon/chevron_down_line_24.svg);
-				background-size: 24px;
-				background-repeat: no-repeat;
-				background-position: right 2px center;
-				width: 100%;
-				text-align: left;
-				&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
-				.ico {
-					display:none;
-					width:24px;
-					height:24px;
-					padding-top:1px;
-					padding-bottom:1px;
-					img {width:100%;transform:translateY(-2px);}
-				}
-				.txt {
-					color: var(--dt-gray11);
-					@include fw-6(18px);
-				}
-			}
-		
-			// Clear 버튼 : 기본상태-hidden
-			.util-box {
-				margin-left: auto;
-				display: flex;
-				flex: none;
-				column-gap: 6px;
-				@extend %hidden;
-				margin-bottom: 4px;
-				.clear-btn {
-					border: none;
-					cursor: pointer;
-					min-width: 40px;
-					width: 40px;
-					height: 40px;
-					background-image: url(../images/icon/ic-input-clear.svg);
-					background-size: 24px 24px;
-					background-repeat: no-repeat;
-					background-position: center center;
-					
-				}
-				.input-unit {
-					@include fw-6(18px);
-					color: var(--dt-gray11);
-					.unit-point {
-						@include fw-6(18px);
-						color: var(--dt-gray16);
-					}
-				}
-				.srch-btn {
-					@include fw-6(14px);
-					line-height: 17px;
-					color: var(--dt-gray11);
-					padding: 8px 16px;
-					border-radius: 4px;
-					background-color: var(--dt-gray03);
-				}
-			}
-
 		}
 	}
-	// 상태별 스타일 - normal
-	&.normal {
-		.input-group {
-			.input-label {
-				top: -6px; // 라벨이 위로 올라가도록 변경
-				font-size: 12px; // 작아지면서 플로팅 효과
-				@extend %visible;
-			}
-			.input-row {
-				border-bottom: 2px solid var(--dt-gray08);
+}
 
-				.btn-field-dropdown {// 은행/증권사 선택시
-					padding-top:12px;
-					.ico {
-						display:inline-block;
-						margin-right:2px;
-					}
-					.txt {
-						color: var(--dt-gray16);
-					}
-				}
-			}
-
-		}
-		&.focused {
-			.input-group {
-				.input-field {
-					caret-color: var(--dt-primary);
-					cursor: text;
-				}
-				.input-row {
-					border-bottom: 2px solid var(--dt-primary);
-				}
-			}
-		}
-		&.success {
-			.input-group {
-				.input-row {
-					border-bottom: 2px solid var(--dt-success);               }
-			}
-		}
-		&.error {
-			.input-group {
-				.input-row {
-					border-bottom: 2px solid var(--dt-error);
-				}
-			}
-		}
-		&.tltip-error {
-			.input-group {
-				.input-row {
-					border-bottom: 2px solid var(--dt-error);
-					.input-field {
-						color: var(--dt-error);
-					}
-				}
-			}
-			.validation-txt {
-				@extend %hidden;
-				background-image: url(../images/icon/ic-input-valchck-error.svg);
-				color: var(--dt-error);
-			}
-		}
-		&.disabled {
-			.input-group {
-				.input-row {
-					pointer-events: none;
-					border-bottom: 2px solid var(--dt-gray08);
-					.input-field {
-						opacity: 0.6;
-					}
-				}
-				.util-box {
-					.clear-button {
-					pointer-events: none;
-					}
-				}
-			}
-		}
+// 컴포넌트별 스타일 - email
+.email-form {
+	display: flex;
+    align-items: flex-end;
+	flex-direction: row;
+    gap: 8px;
+	.input-row {
+		flex: 1;
+	}
+}
 	
-		&.read-only {
-			.input-group {
-				.input-row {
-					pointer-events: none;
-					border-bottom: 2px solid var(--dt-gray08);
-				}
-				.util-box {
-					.clear-button {
-					pointer-events: none;
-					}
-				}
-			}
-		}
-	}
-	// 상태별 스타일 - floating
-	&.floating {
-		input {
-			&::placeholder {
-				opacity: 0;
-			}
-		}
-		.input-group {
-			.input-label {
-				top: 50%; // 기본 상태에서 필드 중앙에 배치
-				left: 0;
-				transform: translateY(-50%);
-				@extend %hidden;
-			}
-		}
-		&.focused,&:has(:focus) {
-			input {
-				&::placeholder {
-					opacity: 1;
-				}
-			}
-			.input-group {
-				.input-label {
-					top: -6px; // 라벨이 위로 올라가도록 변경
-					@extend %visible;
-				}
-				.input-row {
-					border-bottom: 2px solid var(--dt-primary);
-					.input-field {
-						caret-color: var(--dt-primary);
-					}
-					
-				}
-
-			}
-		}
-		&.success {
-			input {
-				&::placeholder {
-					opacity: 0;
-					@extend %hidden;
-				}
-			}
-			.input-group {
-				.input-label {
-					top: -6px; // 라벨이 위로 올라가도록 변경
-					@extend %visible;
-				}
-				.input-row {
-					border-bottom: 2px solid var(--dt-success);
-				}
-			}
-		}
-		&.error {
-			input {
-				&::placeholder {
-					opacity: 0;
-					@extend %hidden;
-				}
-			}
-			.input-group {
-				.input-label {
-					top: -6px; // 라벨이 위로 올라가도록 변경
-					@extend %visible;
-				}
-				.input-row {
-					border-bottom: 2px solid var(--dt-error);
-				}
-			}
-		}
-		&.disabled {
-			.input-group {
-				.input-row {
-					pointer-events: none;
-					border-bottom: 2px solid var(--dt-gray08);
-					.input-field {
-						opacity: 0.6;
-					}
-				}
-				.util-box {
-					.clear-button {
-					pointer-events: none;
-					}
-				}
-			}
-		}
-	
-		&.read-only {
-			.input-group {
-				.input-row {
-					pointer-events: none;
-					border-bottom: 2px solid var(--dt-gray08);
-				}
-				.util-box {
-					.clear-button {
-					pointer-events: none;
-					}
-				}
-			}
-		}
-	}
-	&.success {
-		.input-group {
-			.input-label {
-				top: -6px; // 라벨이 위로 올라가도록 변경
-				@extend %visible;
-			}
-			.input-row {
-				border-bottom: 2px solid var(--dt-success);
-			}
-		}
-		.validation-txt {
-			display: block;
-			background-image: url(../images/icon/ic-input-valchck-success.svg);
-			color: var(--dt-success);
-		}
-	}
-
-	&.error {
-		.input-group {
-			.input-label {
-				top: -6px; // 라벨이 위로 올라가도록 변경
-				@extend %visible;
-			}
-			.input-row {
-				border-bottom: 2px solid var(--dt-error);
-			}
-		}
-		.validation-txt {
-			display: block;
-			background-image: url(../images/icon/ic-input-valchck-error.svg);
-			color: var(--dt-error);
-		}
-	}
-	&.tltip-error {
-		.input-group {
-			.input-label {
-				top: -6px; // 라벨이 위로 올라가도록 변경
-				@extend %visible;
-			}
-			.input-row {
-				border-bottom: 2px solid var(--dt-error);
-				.input-field {
-					color: var(--dt-error);
-				}
-			}
-		}
-		.validation-txt {
-			@extend %hidden;
-			background-image: url(../images/icon/ic-input-valchck-error.svg);
-			color: var(--dt-error);
-		}
-	}
-	&.disabled {
-		.input-group {
-			.input-row {
-				pointer-events: none;
-				border-bottom: 2px solid var(--dt-gray08);
-				.input-field {
-					opacity: 0.6;
-				}
-			}
-			.util-box {
-				.clear-button {
-				pointer-events: none;
-				}
-			}
-		}
-	}
-
-	&.read-only {
-		.input-group {
-			.input-row {
-				pointer-events: none;
-				border-bottom: 2px solid var(--dt-gray08);
-			}
-			.util-box {
-				.clear-button {
-				pointer-events: none;
-				}
-			}
-		}
-	}
-	.chips-group {margin-top:8px;}
-	// 헬퍼 텍스트
-	.validation-txt {
-		display: none;
-		@include fw-6(12px);
+.slct-email-wrap {
+	@include flexBox(start, center);
+	flex-wrap: wrap;
+	border-radius: 10px;
+	min-width: 85px;
+	padding: 12px 38px 12px 10px;
+	background-color: transparent;
+	border: 2px solid var(--dt-gray08);
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: right 6px center;
+	.slct-txt {
+		text-align: left;
+		@include fw-6(18px);
 		color: var(--dt-gray11);
-		margin-top: 9px;
-		padding-left: 20px;
-		background-repeat: no-repeat;
-		background-size: 16px 16px;
-		background-position: left 0 center;
-	}
-	// 공지 텍스트 fw-7 gray11
-	.notice-txt {
-		margin-top: 8px;
-		span {
-			color: var(--dt-gray11);
-			@include fw-7(14px);
-			line-height:21px;
+		&.point {
+			color: var(--dt-gray16);
 		}
 	}
+}
 
-	//상태별 스타일 - code
-	&.code {
+// UI별 스타일 - code
+.code {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: fit-content;
+	margin: 0 auto;
+	padding: 42px 0 0 0;
+	gap: 6px;
+	.code-group {
 		display: flex;
-		flex-direction: column;
+		flex-wrap: wrap;
 		justify-content: center;
-		max-width: fit-content;
-		margin: 0 auto;
-		padding: 42px 0 0 0;
 		gap: 6px;
-		.code-group {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			gap: 6px;
-			.code-box {
-				display: inline-block;
-				width: 48px;
-				min-height: 52px;
-				padding: 12px 8px;
-				border-radius: 4px;
-				background: var(--dt-gray02);
-				@include fw-7(24px);
-				text-align: center;
-				color: var(--dt-gray16);
-			}
-		}
-		.validation-txt {
-			text-align: left;
+		.code-box {
+			display: inline-block;
+			width: 48px;
+			min-height: 52px;
+			padding: 12px 8px;
+			border-radius: 4px;
+			background: var(--dt-gray02);
+			@include fw-7(24px);
+			text-align: center;
+			color: var(--dt-gray16);
 		}
 	}
-	&.email-form {
-		.input-group {
-			@include flexBox(between, center);
-			flex-wrap: wrap;
-			gap: 8px;
-			.input-label {
-				top: -6px; // 라벨이 위로 올라가도록 변경
-				font-size: 12px; // 작아지면서 플로팅 효과
-				display: flex;
-			}
-			.input-row {
-				flex: 1;
-				min-width: 40%;
-				// width: 100%;
-				border-bottom: 2px solid var(--dt-gray08);
-							// Clear 버튼 : 기본상태-hidden
-				.util-box {
-					margin-left: auto;
-					display: flex;
-					flex: none;
-					column-gap: 6px;
-					@extend %hidden;
-					.clear-btn {
-						border: none;
-						cursor: pointer;
-						min-width: 33px;
-						width: 33px;
-						height: 40px;
-						background-image: url(../images/icon/ic-input-clear.svg);
-						background-size: 24px 24px;
-						background-repeat: no-repeat;
-						background-position: right 5px center;
-						
-					}
-				}
-			}
-			.slct-email-wrap {
-				@include flexBox(start, center);
-				flex-wrap: wrap;
-				border-radius: 10px;
-				min-width: 85px;
-				padding: 12px 38px 12px 10px;
-				background-color: transparent;
-				border: 2px solid var(--dt-gray08);
-				background-image: url(../images/icon/chevron_down_line_24.svg);
-				background-repeat: no-repeat;
-				background-size: 24px 24px;
-				background-position: right 6px center;
-				.slct-txt {
-					text-align: left;
-					@include fw-6(18px);
-					color: var(--dt-gray11);
-					&.point {
-						@include fw-6(14px);
-						color: var(--dt-gray16);
-					}
-				}
-			}
-
-		}
-		&.focused {
-			.input-group {
-				.input-field {
-					caret-color: var(--dt-primary);
-					cursor: text;
-				}
-				.input-row {
-					border-bottom: 2px solid var(--dt-primary);
-				}
-			}
-		}
-		&.success {
-			.input-group {
-				.input-row {
-					border-bottom: 2px solid var(--dt-success);               }
-			}
-		}
-		&.error {
-			.input-group {
-				.input-row {
-					border-bottom: 2px solid var(--dt-error);
-				}
-			}
-		}
+	.validation-txt {
+		text-align: left;
 	}
+}
 
+
+
+.btn-field-dropdown {// 은행/증권사 선택시
+	padding-top:12px;
+	.ico {
+		display:inline-block;
+		margin-right:2px;
+	}
+	.txt {
+		color: var(--dt-gray16);
+	}
+}
+.btn-field-dropdown {
+	padding:9px 0;
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: right 2px center;
+	width: 100%;
+	text-align: left;
+	&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
+	.ico {
+		display:none;
+		width:24px;
+		height:24px;
+		padding-top:1px;
+		padding-bottom:1px;
+		img {width:100%;transform:translateY(-2px);}
+	}
+	.txt {
+		color: var(--dt-gray11);
+		@include fw-6(18px);
+		line-height: 1.2;
+	}
 }
 
 // 2차인증 input-layout
@@ -591,19 +379,3 @@ input {
 	}
 }
 
-.input-col-wrap {
-	@include flexColum;
-	row-gap:24px;
-	.input-control:first-of-type {margin-top:18px;}
-	.segment__wrap {padding-top:14px;}
-}
-.input-row-wrap {
-	@include flexRow;
-	align-items:center;
-	column-gap:8px;
-	.hyphen {width:18px;margin-top:10px;color:var(--dt-gray11);text-align:center;font-size:18px;font-weight:600;}
-	.input-control {
-		width:calc((100% - 30px) / 2);
-	}
-
-}
