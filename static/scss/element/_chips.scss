@@ -12,12 +12,16 @@
 	}
 	@include flexRow;
 	flex-wrap:wrap;
-	justify-items: flex-start;
-	align-items:flex-start;
+	justify-content:flex-start;
+	align-items:center;
 	gap:8px;
 	li {
-		width:calc((100% - 16px) / 3);
+		min-width: 100px;
+		width:31.3333%; 
 		text-align:center;
+		@media screen and (max-width:359px) {
+			width:48%;
+		}
 	}
 }
 
@@ -86,7 +90,36 @@
 		&.kbank {
 			background-image: url(../images/icon/ic-bank/ic-48-kbank.svg);
 		}
-
+		&.dbfi{} /* DB금융투자 */
+		&.hsbc{}
+		&.jpm{} /* jp모건 */
+		&.sk{}
+		&.kyobo{}
+		&.daishin{}
+		&.doich{}
+		&.meritz{}
+		&.mirae{}
+		&.america{} /* 뱅크오브아메리카 */
+		&.bookook{}
+		&.sanlim{}
+		&.kdb{} /* 한국산업은행 */
+		&.samsung{}
+		&.saemaeul{}
+		&.suhyup{}
+		&.shinyoung{}
+		&.shinhyup{}
+		&.yuanta{}
+		&.eugenefn{}
+		&.ebest{}
+		&.fsb{} /* 저축은행 */
+		&.kko{} /* 카카오 */
+		&.capefn{} /* 케이프투자증권 */
+		&.kiwoom {}
+		&.toss{}
+		&.imfnsec {} /* 하이투자증권 */
+		&.koreaIs{} /* 한국투자증권 */
+		&.hanhwa {}
+		&.hyundai {}
 
 	}
 	.txt {
@@ -95,7 +128,9 @@
 		@include fw-5(14px);
 		line-height:16px;
 		text-align:center;
-		max-width:62px;
+		width: 90px;
+		max-width:90px;
+		margin:auto;
 		min-height:34px;
 		max-height:34px;
 		word-break:break-all;
