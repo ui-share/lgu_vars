@@ -285,7 +285,7 @@
 	background-color: var(--dt-gray03);
 	.caption {
 		@include fw-6(12px);
-		line-height: 100%;
+		line-height: 120%;
 		color: var(--dt-gray11);
 	}
 	.caption::before {
