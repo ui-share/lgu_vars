@@ -17,11 +17,13 @@
 	gap:8px;
 	li {
 		min-width: 100px;
-		width:31.3333%; 
+		width:calc((100% - 16px) / 3);
+
+		// width:31.3333%; 
 		text-align:center;
-		@media screen and (max-width:359px) {
-			width:48%;
-		}
+		// @media screen and (max-width:359px) {
+		// 	width:48%;
+		// }
 	}
 }
 
