@@ -142,9 +142,7 @@ input::placeholder {
 .input-group {
 	width: 100%;
 	position: relative;
-	display: flex;
-	flex-direction: row;
-	gap: 6px;
+	
 }
 .input-row {
 	width: 100%;
@@ -238,12 +236,45 @@ input::placeholder {
 	.input-group {
 		width: 100%;
 		position: relative;
-		display: flex;
-		flex-direction: row;
-		gap: 6px;
+		
 	}
 	.input-row {
 		flex: 1;
+	}
+}
+	
+/* dropdown 선택 버튼 영역 */
+.slct-perd-wrap {
+	@include flexBox(between, center);
+	border: 2px solid var(--dt-gray08);
+	border-radius: 10px;
+	padding: 12px 10px 12px 12px;
+	background-color: transparent;
+	&::after {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		content: "";		
+		background-image: url(../images/icon/chevron_down_line_24.svg);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center;
+	}
+	.slct-perd {
+		text-align: left;
+	}
+	.slct-txt {
+		@include fw-6(18px);
+		color: var(--dt-gray11);		
+		&.point {
+			@include fw-6(16px);
+			color: var(--dt-gray16);
+		}
+	}
+	.hyphen {
+		@include fw-6(18px);
+		color: var(--dt-gray16);
+		margin-right: 8px;
 	}
 }
 	

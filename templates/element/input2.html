@@ -44,8 +44,9 @@
 					<br/><br/><br/><br/><h2>[기본 상태]</h2>
 					<!--  -->
 					<div class="input-control">
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off">
 								<div class="util-box">									
@@ -64,8 +65,9 @@
 					<br/><br/><br/><br/><h2>[포커스 상태]</h2>
 					<!--  -->
 					<div class="input-control focused">
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" autofocus >
 								<div class="util-box">									
@@ -84,8 +86,9 @@
 					<br/><br/><br/><br/><h2>[입력중 상태]</h2>
 					<!--  -->
 					<div class="input-control focused">	
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="내용입력중" autofocus>
 								<div class="util-box">
@@ -124,8 +127,9 @@
 					<br/><br/><br/><br/><h2>[비활성 상태]</h2>
 					<!--  -->
 					<div class="input-control disabled">
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" aufocus value="입력값">
 								<div class="util-box">
@@ -146,8 +150,9 @@
 					<br/><br/><br/><br/><h2>[읽기전용 상태]</h2>
 					<!--  -->
 					<div class="input-control read-only">
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" aufocus value="입력값">
 								<div class="util-box">
@@ -168,8 +173,9 @@
 					<br/><br/><br/><br/><h2>[성공 상태]</h2>
 					<!--  -->
 					<div class="input-control success">
-						<label class="input-label">레이블</label>
+						
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="입력값">
 								<div class="util-box">
@@ -187,8 +193,8 @@
 					
 					<br/><br/><br/><br/><h2>[에러 상태]</h2>
 					<div class="input-control error">
-						<label class="input-label">레이블</label>
 						<div class="input-group">
+							<label class="input-label">레이블</label>
 							<div class="input-row">
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" aufocus value="내용입력중">
 								<div class="util-box">
@@ -208,8 +214,9 @@
 					<br/><br/><br/><br/><h2>[input email]</h2>
 					<!-- input email -->
 					<div class="input-control email-form error">
-						<label class="input-label">이메일</label>
+						
 						<div class="input-group">
+							<label class="input-label">이메일</label>
 							<div class="input-row">
 								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
 								<div class="util-box">
@@ -217,12 +224,35 @@
 								</div>
 							</div>
 							<button class="slct-perd-wrap">
-								<span class="slct-txt" type="button">직접 입력</span>
-								<span class="slct-txt point hidden" type="button">@hotmail.com</span>
+								<div class="slct-perd">
+									<span class="slct-txt" type="button">직접 입력</span>
+									<!-- <span class="slct-txt point hidden" type="button">@hotmail.com</span> -->
+								</div>
 							</button>						
 						</div>
-						<div class="validation-txt">validation 메시지 노출</div>
+						<div class="validation-txt"><span>validation 메시지 노출</span></div>
 					</div>
+
+					<div class="input-control">
+						
+						<div class="input-group">
+							<label class="input-label">월선택</label>							
+							<button class="slct-perd-wrap">
+								<div class="slct-perd">
+									<span class="slct-txt" type="button">월 선택</span>
+								</div>
+								<div class="slct-perd hidden">
+									<span class="slct-txt point" type="button">NN년</span>
+									<span class="slct-txt point" type="button">N월</span>
+									
+								</div>
+							</button>
+						</div>
+					</div>
+
+
+
+				
 					
 				</div>
 
