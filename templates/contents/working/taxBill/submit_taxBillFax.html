@@ -60,19 +60,15 @@
 							-->
 						</span>
 					</button>
-					<!-- 
-						input에 대한 이벤트 정보는
-						./templates/element/input.html
-						페이지 주석 참고
-						
-						이메일폼 관련 클래스 요약
-						기본 : <div class="input-control email-form">
-						이메일 입력 : <div class="input-control email-form focused">
-						유효성 검사 성공 : <div class="input-control email-form success">
-						유효성 검사 에러 : <div class="input-control email-form error">
+					<!--						
+						## 입력 폼 관련 클래스 요약
+						기본 : <div class="input-control">
+						포커스 : <div class="input-control focused">
+						유효성 검사 성공 : <div class="input-control success">
+						유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 팩스번호 입력 -->
-					<div class="input-control normal">				
+					<div class="input-control">				
 						<div class="input-group">
 							<label class="input-label">팩스</label>
 							<div class="input-row">
@@ -88,7 +84,7 @@
 								<div class="util-box"> : clear button 과 unit이 들어감 
 							-->
 						</div>
-						<div class="validation-txt">validation 메시지 노출</div>
+						<div class="validation-txt"><span>validation 메시지 노출</span></div>
 					</div>
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
