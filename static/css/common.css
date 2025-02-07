@@ -1830,16 +1830,22 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-items: flex-start;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: center;
   gap: 8px;
 }
 .chips-bank-wrap:has(.list-chipsbank:only-child, .list-chipsbank:nth-child(1):nth-last-child(2)) {
   justify-content: center;
 }
 .chips-bank-wrap li {
-  width: calc((100% - 16px) / 3);
+  min-width: 100px;
+  width: 31.3333%;
   text-align: center;
+}
+@media screen and (max-width: 359px) {
+  .chips-bank-wrap li {
+    width: 48%;
+  }
 }
 
 .chips-bank-col {
@@ -1859,6 +1865,15 @@ button {
   margin: 0 auto 5px;
   width: 48px;
   height: 48px;
+  /* DB금융투자 */
+  /* jp모건 */
+  /* 뱅크오브아메리카 */
+  /* 한국산업은행 */
+  /* 저축은행 */
+  /* 카카오 */
+  /* 케이프투자증권 */
+  /* 하이투자증권 */
+  /* 한국투자증권 */
 }
 .chips-bank-col .ico-bank.ibk {
   background-image: url(../images/icon/ic-bank/ic-48-kyup.svg);
@@ -1907,10 +1922,12 @@ button {
   font-weight: 500;
   line-height: 16px;
   text-align: center;
-  max-width: 62px;
+  width: 90px;
+  max-width: 90px;
+  margin: auto;
   min-height: 34px;
   max-height: 34px;
-  word-break: keep-all;
+  word-break: break-all;
   overflow: hidden;
 }
 

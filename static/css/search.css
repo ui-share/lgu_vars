@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 188px;
   padding-top: 28px;
@@ -90,6 +91,7 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -211,7 +213,8 @@
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  column-gap: 8px;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
@@ -327,7 +330,7 @@
 .caption-wrap .caption {
   font-size: 12px;
   font-weight: 600;
-  line-height: 100%;
+  line-height: 120%;
   color: var(--dt-gray11);
 }
 .caption-wrap .caption::before {

@@ -12,12 +12,16 @@
 	}
 	@include flexRow;
 	flex-wrap:wrap;
-	justify-items: flex-start;
-	align-items:flex-start;
+	justify-content:flex-start;
+	align-items:center;
 	gap:8px;
 	li {
-		width:calc((100% - 16px) / 3);
+		min-width: 100px;
+		width:31.3333%; 
 		text-align:center;
+		@media screen and (max-width:359px) {
+			width:48%;
+		}
 	}
 }
 
@@ -86,7 +90,36 @@
 		&.kbank {
 			background-image: url(../images/icon/ic-bank/ic-48-kbank.svg);
 		}
-
+		&.dbfi{} /* DB금융투자 */
+		&.hsbc{}
+		&.jpm{} /* jp모건 */
+		&.sk{}
+		&.kyobo{}
+		&.daishin{}
+		&.doich{}
+		&.meritz{}
+		&.mirae{}
+		&.america{} /* 뱅크오브아메리카 */
+		&.bookook{}
+		&.sanlim{}
+		&.kdb{} /* 한국산업은행 */
+		&.samsung{}
+		&.saemaeul{}
+		&.suhyup{}
+		&.shinyoung{}
+		&.shinhyup{}
+		&.yuanta{}
+		&.eugenefn{}
+		&.ebest{}
+		&.fsb{} /* 저축은행 */
+		&.kko{} /* 카카오 */
+		&.capefn{} /* 케이프투자증권 */
+		&.kiwoom {}
+		&.toss{}
+		&.imfnsec {} /* 하이투자증권 */
+		&.koreaIs{} /* 한국투자증권 */
+		&.hanhwa {}
+		&.hyundai {}
 
 	}
 	.txt {
@@ -95,10 +128,12 @@
 		@include fw-5(14px);
 		line-height:16px;
 		text-align:center;
-		max-width:62px;
+		width: 90px;
+		max-width:90px;
+		margin:auto;
 		min-height:34px;
 		max-height:34px;
-		word-break:keep-all;
+		word-break:break-all;
 		overflow:hidden;
 	}
 }
@@ -111,10 +146,12 @@
 	background-color: var(--dt-white);
 	border-radius: 18px;
 	padding: 7px 12px;
+
 	.txt {
 		font-size: 12px;
 		font-weight: 600;
 		text-align: left;
+		line-height: 120%;
 		color: var(--dt-gray12);
 	}
 	.icon {
@@ -133,7 +170,6 @@
 	}
 	// chips: select - date (날짜)
 	&.chips-date {
-		height: 36px;
 		border: none;
 		background-color: var(--dt-gray18);
 		padding: 6px 6px 6px 16px; 
@@ -314,7 +350,7 @@
 		min-height: 28px;
 		border-color: var(--dt-gray08);
 		background-color: var(--dt-white);
-		padding: 7px 12px;
+		padding: 3px 12px;
 		.txt {
 			@include fw-5(12px);
 			color: var(--dt-gray13);
@@ -328,6 +364,7 @@
 		
 		// chips-tag-sm
 		&.tag-sm {
+			min-height: 22px;
 			border: none;
 			background-color: var(--dt-gray08);
 		}
@@ -354,8 +391,9 @@
 	flex-wrap: wrap;
 	align-items: center;
 	width: fit-content;
+	min-height: 22px;
 	background-color: var(--dt-gray10);
-	padding: 4px 6px;
+	padding: 3px 6px;
 	border-radius: 4px;
 	border: 1px solid var(--dt-gray10);
 	.txt {
@@ -363,6 +401,7 @@
 		text-align: center;
 		font-size: 11px;
 		font-weight: 500;
+		line-height: 120%;
 	}
 	&.primary {
 		border-color: var(--dt-primary);
@@ -427,6 +466,7 @@
 	.txt {
 		font-size: 12px;
 		font-weight: 600;
+		line-height: 120%;
 		color: var(--dt-white);
 	}
 	.icon {
