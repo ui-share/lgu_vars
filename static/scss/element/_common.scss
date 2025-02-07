@@ -333,7 +333,7 @@ button {
 		&.success {
 			.bullet-item {
 				color: var(--dt-success);
-				&::before {
+				&::before { 
 					background-image: url(../images/icon/ic-bullet-info-success.svg);
 				}
 			}
