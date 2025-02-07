@@ -1012,46 +1012,6 @@ button {
   font-weight: 500;
 }
 
-/* 캘린더 선택 버튼 영역 */
-.slct-perd-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  padding: 12px 48px 12px 12px;
-  background-color: transparent;
-  border: 2px solid var(--dt-gray08);
-  background-image: url(../images/icon/chevron_down_line_24.svg);
-  background-repeat: no-repeat;
-  background-size: 24px 24px;
-  background-position: right 12px center;
-}
-.slct-perd-wrap .slct-perd {
-  min-width: 85px;
-  max-width: 142px;
-  text-align: left;
-}
-.slct-perd-wrap .slct-perd:last-child {
-  margin-left: 8px;
-}
-.slct-perd-wrap .slct-perd .slct-txt {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray11);
-}
-.slct-perd-wrap .slct-perd .slct-txt.point {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-}
-.slct-perd-wrap .slct-perd .hyphen {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--dt-gray16);
-  margin-right: 8px;
-}
-
 /* 데이터 노출되는 리스트 */
 .list-wrap {
   background-color: var(--dt-gray02);

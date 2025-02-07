@@ -333,7 +333,7 @@ button {
 		&.success {
 			.bullet-item {
 				color: var(--dt-success);
-				&::before { 
+				&::before {
 					background-image: url(../images/icon/ic-bullet-info-success.svg);
 				}
 			}
@@ -828,41 +828,6 @@ button {
 			margin-left:auto;
 			color:var(--dt-gray11);
 			@include fw-5(12px);
-		}
-	}
-}
-/* 캘린더 선택 버튼 영역 */
-.slct-perd-wrap {
-	@include flexBox(start, center);
-	flex-wrap: wrap;
-	// margin: 8px 0 24px;
-	border-radius: 10px;
-	padding: 12px 48px 12px 12px;
-	background-color: transparent;
-	border: 2px solid var(--dt-gray08);
-	background-image: url(../images/icon/chevron_down_line_24.svg);
-	background-repeat: no-repeat;
-	background-size: 24px 24px;
-	background-position: right 12px center;
-	.slct-perd {
-		min-width: 85px;
-		max-width: 142px;
-		text-align: left;
-		&:last-child {
-			margin-left: 8px;
-		}
-		.slct-txt {
-			@include fw-6(18px);
-			color: var(--dt-gray11);
-			&.point {
-				@include fw-6(18px);
-				color: var(--dt-gray16);
-			}
-		}
-		.hyphen {
-			@include fw-6(18px);
-			color: var(--dt-gray16);
-			margin-right: 8px;
 		}
 	}
 }
