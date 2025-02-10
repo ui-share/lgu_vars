@@ -148,3 +148,7 @@
   text-align: right;
   margin-top: 12px;
 }
+
+.list-wrap.chrgData {
+  margin-top: 0;
+}
