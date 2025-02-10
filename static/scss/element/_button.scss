@@ -77,6 +77,12 @@
         }
         &.is-confirm {// 버튼2개 + 확인,취소 영역의 경우 우측버튼(마지막버튼) 언제나 primary full bg
             .btn {
+                background-color:transparent;
+                border: 1px solid var(--dt-gray17);
+                &.btn-sec { 
+                    background-color: var(--dt-gray13);
+                    border: 1px solid var(--dt-gray13);
+                }
                 &:last-of-type {
                     background-color: var(--dt-primary);
                     border: 1px solid var(--dt-primary);

@@ -1166,6 +1166,14 @@ button {
 .btn-group.flex-row .btn {
   flex: 1;
 }
+.btn-group.flex-row.is-confirm .btn {
+  background-color: transparent;
+  border: 1px solid var(--dt-gray17);
+}
+.btn-group.flex-row.is-confirm .btn.btn-sec {
+  background-color: var(--dt-gray13);
+  border: 1px solid var(--dt-gray13);
+}
 .btn-group.flex-row.is-confirm .btn:last-of-type {
   background-color: var(--dt-primary);
   border: 1px solid var(--dt-primary);
