@@ -46,12 +46,13 @@
 
 					<div class="card rmInform">
 						<div class="card-body">
-							<span class="item announcePhone">
-								<h6 class="tit">도착알림휴대폰 (<span>5</span>/5)</h6>
+							<!-- 수신자 리스트 그룹 : 등록 수신자 존재  -->
+							<div class="item announcePhone">
+								<h6 class="tit">도착알림휴대폰 (<span>4</span>/5)</h6>
 
 								<!-- 수신자 리스트 그룹 : 연락처 최대 5개  -->
 								<div class="card-group phoneList">
-									<!--수신자 연락처 반복-->
+									<!--수신자 연락처 반복 1-->
 									<div class="card horizon solid">
 										<div class="card-body">
 											<div class="item util">
@@ -68,11 +69,12 @@
 											<button class="btn btn-util close" type="button" alt="닫기"></button>
 										</div> 
 									</div>
-									<!--수신자 연락처 반복-->
+									<!--수신자 연락처 반복 2-->
 									<div class="card horizon solid">
 										<div class="card-body">
 											<div class="item util">
 												<span class="img-box ico30">
+													<!-- ic-card-phoneList01 ~ 05까지 순서대로 이미지 들어가야 함-->
 													<img src="../../../../static/images/icon/ic-card-phoneList02.svg" alt="도착알림휴대폰" />
 												</span>
 											</div>
@@ -86,11 +88,12 @@
 											</div>
 										</div> 
 									</div>
-									<!--수신자 연락처 반복-->
+									<!--수신자 연락처 반복 3-->
 									<div class="card horizon solid">
 										<div class="card-body">
-											<div class="item util">
+											<div class="item util">												
 												<span class="img-box ico30">
+													<!-- ic-card-phoneList01 ~ 05까지 순서대로 이미지 들어가야 함-->
 													<img src="../../../../static/images/icon/ic-card-phoneList03.svg" alt="도착알림휴대폰" />
 												</span>
 											</div>
@@ -104,30 +107,13 @@
 											</div>
 										</div> 
 									</div>
-									<!--수신자 연락처 반복-->
+									<!--수신자 연락처 반복 4-->
 									<div class="card horizon solid">
 										<div class="card-body">
 											<div class="item util">
 												<span class="img-box ico30">
+													<!-- ic-card-phoneList01 ~ 05까지 순서대로 이미지 들어가야 함-->
 													<img src="../../../../static/images/icon/ic-card-phoneList04.svg" alt="도착알림휴대폰" />
-												</span>
-											</div>
-											<div class="item text">
-												<span class="tit">010-12**-56**</span>
-											</div>
-										</div>
-										<div class="card-footer">
-											<div class="card-footer">
-												<button class="btn btn-util close" type="button" alt="닫기"></button>
-											</div>
-										</div> 
-									</div>
-									<!--수신자 연락처 반복-->
-									<div class="card horizon solid">
-										<div class="card-body">
-											<div class="item util">
-												<span class="img-box ico30">
-													<img src="../../../../static/images/icon/ic-card-phoneList05.svg" alt="도착알림휴대폰" />
 												</span>
 											</div>
 											<div class="item text">
@@ -142,7 +128,7 @@
 									</div>
 								</div>
 								
-								<div class="btn-group flex-row hidden"> <!-- 연락처 최대 추가가 시 hidden :  <div class="btn-group flex-row hidden"> -->
+								<div class="btn-group flex-row"> <!-- 최대 추가가 시 hidden :  <div class="btn-group flex-row hidden"> -->
 									<button class="btn line" type="button ">
 										<span class="img-box ico16">
 											<img src="../../../../static/images/icon/ic-btn-addline.svg" alt="+">
@@ -150,9 +136,9 @@
 										<span class="txt">수신자 추가</span>
 									</button>
 								</div>
-						</span>
+							</div>
 
-							<span class="item">
+							<div class="item">
 								<h6 class="tit">서비스 내용</h6>
 								<ul class="bullet-list">
 									<li class="bullet-item">해외에 도착했다는 문자메시지를 최대 5명에게 자동으로 전송해 줍니다.</li>
@@ -160,9 +146,9 @@
 									<li class="bullet-item">문자메시지는 ‘[LG U+](휴대폰번호) 고객님이 (한국기준날짜,시간,도착국가)에 도착하였습니다.’로 전송됩니다.</li>
 									<li class="bullet-item">메시지 발신 번호는 ‘82-2-3416-7010’입니다. </li>
 								</ul>
-							</span>
+							</div>
 
-							<span class="item">
+							<div class="item">
 								<h6 class="tit">이용안내</h6>
 								<ul class="bullet-list">
 									<li class="bullet-item">출국 전에 미리 신청해야 이용할 수 있습니다.</li>
@@ -175,27 +161,20 @@
 									<li class="bullet-item">선불 휴대폰 이용 고객은 가입할 수 없습니다 .</li>
 									<li class="bullet-item">청소년 요금제 이용 고객은 ‘해외로밍 일시허용'에 가입하면, 해당 서비스를 이용할 수 있습니다.</li>
 								</ul>
-							</span>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="cont__wrap cont__wrap-btBtn">
 					<div class="btn-group flex-row is-confirm">
-						<!--
-							신청만 필요 시 변경버튼 hidden
-							수신자 없을 경우 신청버튼 is-disabled
-							수신자 있을 경우 신청버튼 is-disabled 삭제
-							해지 필요 시 신청->해지로 문구 변경 필요
-							변경버튼이 항상 위에 있어야 함
+						<!-- 미신청 경우
+							[신청] : 등록 수신자 존재 시 신청 버튼 활성 : is-disabled  <button class="btn" type="button">
 						-->
-						<button class="btn line hidden" type="button">
-							<span class="txt">변경</span>
-						</button>
 						<button class="btn" type="button">
 							<span class="txt">신청</span>
-							<!-- <span class="txt">해지</span> -->
 						</button>
+						
 					</div>
 				</div>
 			</div>

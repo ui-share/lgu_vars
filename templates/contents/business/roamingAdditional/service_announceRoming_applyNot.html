@@ -46,10 +46,10 @@
 
 					<div class="card rmInform">
 						<div class="card-body">
-							<span class="item announceMent">
-								<h6 class="tit">안내 방송멘트</h6>
-								<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
-								<div class="card solid center mentOn hidden">
+							<!-- 안내 방송멘트 On 상태 -->
+							<div class="item announceMent">
+								<h6 class="tit">안내 방송멘트</h6>								
+								<div class="card solid center mentOn">
 									<div class="card-body">
 										<span class="img-box">
 											<img src="../../../../static/images/icon/ic-card-announcement_on.png" alt="안내멘트 on" />
@@ -59,25 +59,8 @@
 										</div>
 									</div>
 								</div>
-
-								<!-- 안내 방송멘트 Off 상태 / 필요한 경우 hidden 으로 조정-->
-								<div class="card solid center mentOff">
-									<div class="card-body">
-										<span class="img-box">
-											<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off" />
-										</span>
-										<div class="text-box">
-											<span class="txt">해외 체류 중에 로밍 안내 멘트를 사용하지 않고<br>국내 통화연결음을 제공합니다.</span>
-										</div>
-									</div>
-								</div>
-
 								<div class="btn-group flex-row">
-									<!-- 
-										안내멘트 Off 인 경우 미리듣기 버튼 hidden 처리
-										<button class="btn line hidden" type="button">
-									-->
-									<button class="btn line hidden" type="button">
+									<button class="btn line" type="button">
 										<span class="txt">미리듣기</span>
 										<span class="img-box ico16">
 											<img src="../../../../static/images/icon/ic-btn-play.svg" />
@@ -90,17 +73,38 @@
 										</span>
 									</button>
 								</div>
-							</span>
+							</div>
+							<!-- 안내 방송멘트 Off 상태 -->
+							<div class="item announceMent">
+								<div class="card solid center mentOff">
+									<div class="card-body">
+										<span class="img-box">
+											<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off" />
+										</span>
+										<div class="text-box">
+											<span class="txt">해외 체류 중에 로밍 안내 멘트를 사용하지 않고<br>국내 통화연결음을 제공합니다.</span>
+										</div>
+									</div>
+								</div>
+								<div class="btn-group flex-row">
+									<button class="btn line" type="button">
+										<span class="txt">멘트 변경</span>
+										<span class="img-box ico16">
+											<img src="../../../../static/images/icon/ic-btn-write.svg" />
+										</span>
+									</button>
+								</div>
+							</div>
 
-							<span class="item">
+							<div class="item">
 								<h6 class="tit">서비스 내용</h6>
 								<ul class="bullet-list">
 									<li class="bullet-item">전화를 건 사람에게 해외로밍 중인 고객에게 국제전화 요금이 부과된다는 사실을 음성을 알려줍니다.</li>
 									<li class="bullet-item">U+해외로밍 서비스 지원 국가에서 이용할 수 있습니다.</li>
 								</ul>
-							</span>
+							</div>
 
-							<span class="item">
+							<div class="item">
 								<h6 class="tit">이용안내</h6>
 								<ul class="bullet-list">
 									<li class="bullet-item">출국 전에 미리 신청해야 이용할 수 있습니다.</li>
@@ -112,23 +116,19 @@
 									</li>
 									<li class="bullet-item">청소년 요금제 이용 고객은 ‘해외로밍 일시허용'에 가입하면, 해당 서비스를 이용할 수 있습니다.</li>
 								</ul>
-							</span>
+							</div>
 						</div>
 					</div>
 				</div>
 
 				<div class="cont__wrap cont__wrap-btBtn">
 					<div class="btn-group flex-row is-confirm">
-                        <!-- 미신청 경우 : 신청 -->
-						<button class="btn line hidden" type="button">
-							<span class="txt">변경</span>
-						</button>
-						<button class="btn" type="button">
+						<!-- 
+						미신청 경우 
+							[신청] 
+						-->
+						<button class="btn " type="button">
 							<span class="txt">신청</span>
-							<!-- <span class="txt">해지</span> -->
-						</button>
-						<button class="btn hidden" type="button">
-							<span class="txt">해지</span>
 						</button>
 					</div>
 				</div>
