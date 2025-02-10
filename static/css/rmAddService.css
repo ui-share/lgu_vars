@@ -94,6 +94,9 @@ body:has(.cont__wrap-service.rmDetail) {
 .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body {
   gap: 8px;
 }
+.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .text {
+  align-items: flex-start;
+}
 .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
   font-size: 16px;
   color: var(--dt-gray16);

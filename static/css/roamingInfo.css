@@ -12,29 +12,56 @@
 
 .card.rmPeriod {
   padding: 22px 16px;
+  gap: 20px;
+}
+.card.rmPeriod .card-header {
+  display: flex;
+}
+.card.rmPeriod .card-header .item {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+.card.rmPeriod .card-header .tit {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dt-primary);
+}
+.card.rmPeriod .card-header .img-box {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
 }
 .card.rmPeriod .card-body {
-  flex-direction: row;
+  gap: 20px;
+}
+.card.rmPeriod .card-body .period-wrap {
+  display: flex;
   justify-content: space-evenly;
 }
-.card.rmPeriod .item {
+.card.rmPeriod .card-body .period-wrap .item {
   flex-direction: column;
   align-items: center;
   flex: 1;
 }
-.card.rmPeriod .item.text {
-  gap: 0;
-}
-.card.rmPeriod .item.text .tit {
+.card.rmPeriod .card-body .period-wrap .item .tit {
   font-weight: 600;
+  line-height: 120%;
   text-align: center;
 }
-.card.rmPeriod .item.period {
+.card.rmPeriod .card-body .period-wrap .item .txt {
+  text-align: center;
+}
+.card.rmPeriod .card-body .period-wrap .item.date {
+  gap: 0;
+}
+.card.rmPeriod .card-body .period-wrap .item.period {
   position: relative;
   justify-content: center;
   min-width: 72px;
 }
-.card.rmPeriod .item.period::before {
+.card.rmPeriod .card-body .period-wrap .item.period::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -45,9 +72,59 @@
   height: 1px;
   border: 1px dashed var(--dt-gray09);
 }
-.card.rmPeriod .item.period .chips-tag {
-  height: 28px;
+.card.rmPeriod .card-body .period-wrap .item.period .chips-tag {
   z-index: 1;
+}
+.card.rmPeriod .card-body .list-wrap {
+  flex-wrap: no-wrap;
+  margin-top: 0;
+  padding: 20px 0 0 0;
+  border-top: 1px solid var(--dt-gray06);
+  background-color: transparent;
+  border-radius: unset;
+}
+.card.rmPeriod .card-body .list-wrap .list-box {
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 3px 0;
+  border-bottom: none;
+  gap: 12px;
+}
+.card.rmPeriod .card-body .list-wrap .list-box:first-child {
+  padding-top: 0;
+}
+.card.rmPeriod .card-body .list-wrap .list-box:last-child {
+  padding-bottom: 0;
+}
+.card.rmPeriod .card-body .list-wrap .list-box .head {
+  width: 64px;
+  text-align: left;
+  line-height: 150%;
+}
+.card.rmPeriod .card-body .list-wrap .list-box .tail {
+  text-align: left;
+  line-height: 150%;
+  color: var(--dt-gray11);
+  margin-left: 0;
+  max-width: unset;
+}
+.card.rmPeriod .card-body .list-wrap .list-box .tail .price {
+  font-weight: 700;
+  color: var(--dt-black);
+}
+.card.rmPeriod .card-body .list-wrap .list-box .tail .info {
+  font-size: 12px;
+}
+.card.rmPeriod .card-body .list-wrap .list-box .tail.total {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.card.rmPeriod .card-footer .btn {
+  background-color: var(--dt-gray06);
+}
+.card.rmPeriod .card-footer .btn .txt {
+  font-size: 14px;
 }
 
 .roamingPrice .roaming {
