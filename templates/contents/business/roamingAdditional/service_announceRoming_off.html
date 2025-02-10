@@ -12,28 +12,28 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" href="../../../../static/css/common.css">
-    <link rel="stylesheet" href="../../../../static/css/service.css">
+	<link rel="stylesheet" href="../../../../static/css/service.css">
 	<link rel="stylesheet" href="../../../../static/css/rmAddService.css">
 
 	<!-- Scripts -->
 </head>
 <body>
-    <div class="page-wrapper">
+	<div class="page-wrapper">
 		<!-- header -->
-        <header class="header">
-            <div class="header__util">
-                <button type="button" class="btn btn-util prev"><span>이전</span></button>
-            </div>
-            <div class="header__btn btn-group">
-                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
-            </div>
-        </header>
-        <!-- //header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음으로</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
-            <div class="section__cont ">
-                <div class="cont__wrap cont__wrap-service rmDetail">
+			<div class="section__cont ">
+				<div class="cont__wrap cont__wrap-service rmDetail">
 					<div class="con__tit-box">
 						<div class="flag flag-line primary">
 							<span class="txt">무료</span>
@@ -49,22 +49,22 @@
 							<span class="item announceMent">
 								<h6 class="tit">안내 방송멘트</h6>
 								<!-- 안내 방송멘트 On 상태 / 필요한 경우 hidden 으로 조정 -->
-								<div class="card solid center mentOn">
+								<div class="card solid center mentOn hidden">
 									<div class="card-body">
 										<span class="img-box">
-											<img src="../../../../static/images/icon/ic-card-announcement_on.png" alt="안내멘트 on">
+											<img src="../../../../static/images/icon/ic-card-announcement_on.png" alt="안내멘트 on" />
 										</span>
 										<div class="text-box">
-											<span class="txt">"해외 로밍 중인 고객에게 국제전화 요금이<br>부과되며 현지 시간은 00시 00분입니다."</span>
+											<span class="txt">"해외 로밍 중인 고객에게 국제전화 요금이<br>부과되며 현지 시간은 <span>00시 00분</span>입니다."</span>
 										</div>
 									</div>
 								</div>
 
 								<!-- 안내 방송멘트 Off 상태 / 필요한 경우 hidden 으로 조정-->
-								<div class="card solid center mentOff hidden">
+								<div class="card solid center mentOff">
 									<div class="card-body">
 										<span class="img-box">
-											<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off">
+											<img src="../../../../static/images/icon/ic-card-announcement_off.png" alt="안내멘트 off" />
 										</span>
 										<div class="text-box">
 											<span class="txt">해외 체류 중에 로밍 안내 멘트를 사용하지 않고<br>국내 통화연결음을 제공합니다.</span>
@@ -77,16 +77,16 @@
 										안내멘트 Off 인 경우 미리듣기 버튼 hidden 처리
 										<button class="btn line hidden" type="button">
 									-->
-									<button class="btn line" type="button">
+									<button class="btn line hidden" type="button">
 										<span class="txt">미리듣기</span>
 										<span class="img-box ico16">
-											<img src="../../../../static/images/icon/ic-btn-play.svg">
+											<img src="../../../../static/images/icon/ic-btn-play.svg" />
 										</span>
 									</button>
 									<button class="btn line" type="button">
 										<span class="txt">멘트 변경</span>
 										<span class="img-box ico16">
-											<img src="../../../../static/images/icon/ic-btn-write.svg">
+											<img src="../../../../static/images/icon/ic-btn-write.svg" />
 										</span>
 									</button>
 								</div>
@@ -115,25 +115,24 @@
 							</span>
 						</div>
 					</div>
-                </div>
+				</div>
 
-                <div class="cont__wrap cont__wrap-btBtn">
-                    <div class="btn-group flex-row is-confirm">
-						<!--
-							신청만 필요 시 변경버튼 hidden
-							해지 필요 시 신청->해지로 문구 변경 필요
-							변경버튼이 항상 위에 있어야 함
-						-->
-						<button class="btn line hidden" type="button">
-                            <span class="txt">변경</span>
-                        </button>
-                        <button class="btn" type="button">
-                            <span class="txt">신청</span>
-                            <!-- <span class="txt">해지</span> -->
-                        </button>
-                    </div>
-                </div>
-            </div>
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<!-- 신청중 경우 : 변경, 해지 -->
+						<button class="btn line" type="button">
+							<span class="txt">변경</span>
+						</button>
+						<button class="btn hidden" type="button">
+							<span class="txt">신청</span>
+							<!-- <span class="txt">해지</span> -->
+						</button>
+						<button class="btn" type="button">
+							<span class="txt">해지</span>
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- //container -->
 	</div>
