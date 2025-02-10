@@ -75,6 +75,11 @@
 			color: var(--dt-gray11);
 		}
 	}
+	.card-group {
+		.card {
+			min-height: 136px;
+		}
+	}
 }
 .is-scrolled .section__cont:has(.cont__wrap-category) {
 	position: sticky;

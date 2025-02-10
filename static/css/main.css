@@ -70,6 +70,9 @@
   font-weight: 500;
   color: var(--dt-gray11);
 }
+.menu .card-group .card {
+  min-height: 136px;
+}
 
 .is-scrolled .section__cont:has(.cont__wrap-category) {
   position: sticky;
