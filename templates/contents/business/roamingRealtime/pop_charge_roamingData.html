@@ -12,7 +12,8 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../../static/css/roamingRealtime.css">
+	<link rel="stylesheet" href="../../../../static/css/roamingInfo.css">
+
 
 	<!-- Scripts -->
 </head>
@@ -32,15 +33,13 @@
 		<div class="popup__wrap">
 			<div class="popup-header">
 				<div class="popup-tit">
-					<span class="txt">필요한 만큼<br>로밍 데이터를 충전해 보세요</span>
+					<span class="txt">필요한 만큼<br><span class="color-prim">로밍 데이터</span>를 충전해 보세요</span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
 				<div class="btn-group flex-column">
-					<!-- 선택 시 is-selected 클래스 붙음
-						<button class="btn btn-remain-data is-selected" type="button">
-					-->
+					<!-- 선택 시 is-selected : <button class="btn btn-remain-data is-selected" type="button"> -->
 					<button class="btn btn-remain-data" type="button">
 						<span class="txt-wrap">
 							<span class="txt">1GB</span>
@@ -78,6 +77,7 @@
 			
 			<div class="popup-footer">
 				<div class="btn-group flex-row is-confirm">
+					<!-- 데이터 선택 이후 활성화 : is-disabled 삭제 -->
 					<button class="btn is-disabled" type="button">
 						<span class="txt">충전하기</span>
 					</button>
