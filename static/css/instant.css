@@ -1,3 +1,7 @@
+.page-wrapper .container .section__cont {
+  padding-top: 56px;
+}
+
 .cont__wrap.cont__wrap-service {
   padding-bottom: 280px;
 }
@@ -42,16 +46,7 @@
   width: calc(100% - 24px);
   justify-content: space-between;
 }
-.mypay-list .detail .row .txt-date .flag, .mypay-list .detail .row .txt-price .flag {
-  margin-top: 4px;
-}
-.mypay-list .detail .row .txt-sub {
-  margin-top: 0;
-  text-align: right;
-  font-size: 14px;
-  line-height: 150%;
-}
-.mypay-list .detail .row .txt-date {
+.mypay-list .detail .row .txt-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -64,6 +59,19 @@
 }
 .mypay-list .detail .row + .row {
   margin-top: 4px;
+}
+.mypay-list .detail .txt-sub {
+  margin-top: 0;
+  margin-left: auto;
+  text-align: right;
+  font-size: 14px;
+  line-height: 150%;
+}
+.mypay-list .detail .txt-sub-date {
+  color: var(--dt-gray10);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 180%;
 }
 .mypay-list .btn-group {
   width: 100%;

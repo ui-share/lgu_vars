@@ -3570,6 +3570,9 @@ input::placeholder {
   flex-direction: column;
   row-gap: 8px;
 }
+.info-price-detail .info-wrap {
+  padding-right: 10px;
+}
 .info-price-detail .info-wrap:first-of-type {
   padding-top: 16px;
 }

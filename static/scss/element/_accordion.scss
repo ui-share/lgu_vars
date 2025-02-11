@@ -107,6 +107,7 @@
     .info-wrap {
         &:first-of-type {padding-top:16px;}
         &:last-of-type {padding-bottom:16px;}
+        padding-right:10px;
         .row {
             display:flex;
             justify-content:space-between;
