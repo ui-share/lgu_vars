@@ -38,29 +38,27 @@
 							납부확인서 발급 정보를<br>
 							입력해 주세요
 						</h4>
+						<!-- <span class="sub-txt">발급 기간 최대 12개월</span> -->
 					</div>
-					<div class="txt-infoWrap">
-						<span>발급 기간</span><span class="sub-txt">최대 12개월</span>
-					</div>
+					
 					<!-- 발급 기간 입력 -->
 					<div class="input-row-wrap">
 						<!--						
 							## 입력 폼 관련 클래스 요약
-							기본 : <div class="input-control floating ">
-							포커스 : <div class="input-control floating focused">
-							유효성 검사 성공 : <div class="input-control floating success">
-							유효성 검사 에러 : <div class="input-control floating error">
+							기본 : <div class="input-control ">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
 						-->
-						<div class="input-control floating ">							
+						<div class="input-control ">							
 							<div class="input-group">
 								<label class="input-label">시작 월 입력</label>
 								<div class="input-row">
 									<input type="text" class="input-field" placeholder="YYYYMM" focus>
 									<div class="util-box">										
 										<button type="button" class="clear-btn hidden"></button>
-										<!-- 
-											<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
-										-->
+										<!--<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제-->
 									</div>
 								</div>
 							</div>
@@ -69,12 +67,13 @@
 						<span class="hyphen">~</span>
 						<!--						
 							## 입력 폼 관련 클래스 요약
-							기본 : <div class="input-control floating">
-							포커스 : <div class="input-control floating focused">
-							유효성 검사 성공 : <div class="input-control floating success">
-							유효성 검사 에러 : <div class="input-control floating error">
+							기본 : <div class="input-control ">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
 						-->
-						<div class="input-control floating ">
+						<div class="input-control">
 								<div class="input-group">
 									<label class="input-label">종료 월 입력</label>
 									<div class="input-row">
@@ -92,14 +91,15 @@
 					</div>
 
 					<!--						
-						## 입력 폼 관련 클래스 요약
-						기본 : <div class="input-control email-form">
-						포커스 : <div class="input-control email-form focused">
-						유효성 검사 성공 : <div class="input-control email-form success">
-						유효성 검사 에러 : <div class="input-control email-form error">
+						## 입력 상태 클래스
+						기본 : <div class="input-control ">
+						포커스 : <div class="input-control focused">
+						비활성, 읽기전용 : <div class="input-control disabled">
+						유효성 검사 성공 : <div class="input-control success">
+						유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 이메일 입력 -->
-					<div class="input-control email-form mt-28 floating ">				
+					<div class="input-control email-form mt-28 ">				
 						<div class="input-group">
 							<label class="input-label">이메일</label>
 							<div class="input-row">
@@ -111,15 +111,16 @@
 									<button type="button" class="clear-btn hidden"></button>
 								</div>
 							</div>
-							<button class="slct-email-wrap">
-								<span class="slct-txt" type="button">직접 입력</span>
-								<!-- 
-									<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-								-->
-							</button>
+							<div class="validation-txt">validation 메시지 노출</div>
 						</div>
-						<div class="validation-txt">validation 메시지 노출</div>
+						<button class="slct-email-wrap">
+							<span class="slct-txt" type="button">직접 입력</span>
+							<!-- 
+								<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+							-->
+						</button>
 					</div>
+					
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
 					<div class="btn-group flex-row is-confirm">
