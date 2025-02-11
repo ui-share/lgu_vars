@@ -10,10 +10,6 @@
   padding-top: 20px;
 }
 
-.section__divider:has(+ .counsel) {
-  margin-top: 48px;
-}
-
 body:has(.cont__wrap-service.rmDetail) {
   background-color: var(--dt-gray05);
 }

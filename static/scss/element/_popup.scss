@@ -397,6 +397,12 @@
 	}
 	.popup-body {
 		height: 100%;
-		padding-top: 20px;
+		padding: 0;
+		.section__cont {
+			gap: 48px;
+			.cont__wrap {
+				padding: 0 20px;
+			}
+		}
 	}
 }

@@ -576,6 +576,12 @@ button {
   background-color: var(--dt-gray03);
   box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
 }
+.section__divider:has(+ .section__cont) {
+  margin-top: 48px;
+}
+.section__divider + .section__cont {
+  padding-top: 36px;
+}
 
 .section__cont {
   display: flex;
@@ -2306,7 +2312,6 @@ button {
 }
 
 .counsel .cont__wrap {
-  padding-top: 36px;
   padding-bottom: 36px;
 }
 .counsel .cont__wrap .card {
@@ -3371,7 +3376,13 @@ input::placeholder {
 }
 .full-popup .popup-body {
   height: 100%;
-  padding-top: 20px;
+  padding: 0;
+}
+.full-popup .popup-body .section__cont {
+  gap: 48px;
+}
+.full-popup .popup-body .section__cont .cont__wrap {
+  padding: 0 20px;
 }
 
 .switch-group .switch-input {

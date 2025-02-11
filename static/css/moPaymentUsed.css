@@ -45,6 +45,7 @@
   color: var(--dt-black);
 }
 .cont__wrap.cont__wrap-segment .card.payUsed .card-body .paid-status {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(0, 170, 2, 0.1);
   border-radius: 4px;
