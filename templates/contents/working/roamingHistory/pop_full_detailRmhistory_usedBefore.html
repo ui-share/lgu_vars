@@ -32,7 +32,6 @@
 			<div class="popup-header">
 				<div class="header__util">
 					<button type="button" class="btn btn-util end"><span>처음</span></button>
-					<span class="header-tit hidden"></span>
 				</div>
 				<div class="header__btn">
 					<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
@@ -50,7 +49,7 @@
 						</div>
 					</div>
 
-					<div class="cont__wrap">
+					<div class="cont__wrap cont__wrap-vertical">
 						<div class="con__tit-box">
 							<h6 class="tit-head">
 								<span class="txt-title">이용 중</span>
@@ -87,7 +86,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="card-footer hidden">
+							<div class="card-footer">
 								<div class="btn-group">
 									<button class="btn btn-md" type="button">
 										<span class="txt">요금제 자세히 보기</span>
@@ -97,10 +96,12 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- 디바이더 영역 -->
 				<div class="section__divider"></div>
+				<!-- 납부 요금 영역 -->
 				<div class="section__cont">
-					<div class="cont__wrap">
+					<div class="cont__wrap cont__wrap-vertical">
 						<div class="con__tit-box">
 							<h6 class="tit-head">
 								<span class="txt-title">납부 요금</span>
@@ -121,6 +122,94 @@
 									</span>
 								</div>
 							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 디바이더 영역 -->
+				<div class="section__divider"></div>
+				<!-- 사용량 영역 -->
+				<div class="section__cont">
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">사용량</span>
+							</h6>
+						</div>
+
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-chart.svg" alt="">
+									</span>
+									데이터
+								</span>
+							</div>
+							<div class="plan-wrap">
+								<div class="col">
+									<div class="txt-plan">
+										<span class="current"><span>14GB</span> 제공</span>
+									</div>
+									<div class="progress-area realtime">
+										<span class="progress-bg">
+											<!-- style.width %로 조절 -->
+											<span class="progress-bar" style="width:0%;"></span>
+										</span>
+									</div>
+									<p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
+								</div>
+							</div>
+						</div>
+	
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-call.svg" alt="">
+									</span>
+									음성통화
+								</span>
+							</div>
+							<div class="plan-wrap line">
+								<div class="list-plan">
+									<div class="row">
+										<span class="txt-title">현지발신</span>
+										<span class="txt-desc">
+											<span class="current">-초</span>
+											<span class="total">/ 무료</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">국제발신</span>
+										<span class="txt-desc">
+											<span class="current">-초</span>
+											<span class="total">/ 1.98원</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-message.svg" alt="">
+									</span>
+									문자
+								</span>
+								<span class="txt-desc">
+									<span class="current">-건</span>
+									<span class="total">/ 300건</span>
+								</span>
+							</div>
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">해지</span>
+							</button>
 						</div>
 					</div>
 				</div>

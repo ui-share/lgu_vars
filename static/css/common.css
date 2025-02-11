@@ -1316,7 +1316,7 @@ button {
 .btn-between.bg-withdraw {
   padding: 8px 10px;
   background-color: var(--dt-white);
-  border: 1px solid var(--dt-gray07);
+  border: 1px solid var(--dt-gray08);
 }
 .btn-between.appStore {
   padding: 8px 10px;
@@ -1355,6 +1355,11 @@ button {
   color: var(--dt-primary);
 }
 
+@media screen and (max-width: 359px) {
+  .btn-group.flex-row {
+    flex-direction: column;
+  }
+}
 .card-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -3401,7 +3406,7 @@ input::placeholder {
 }
 .full-popup .popup-body {
   height: 100%;
-  padding: 0;
+  padding: 0 0 42px 0;
 }
 .full-popup .popup-body .section__cont {
   gap: 48px;
@@ -3915,11 +3920,6 @@ table td {
   padding: 10px;
   z-index: 10;
 }
-@media screen and (max-width: 359px) {
-  .tooltip-wrap, .bubble-box {
-    max-width: 60vw;
-  }
-}
 .tooltip-wrap .txt-wrap, .bubble-box .txt-wrap {
   display: inline-block;
   font-size: 12px;
@@ -4121,4 +4121,10 @@ div[data-popper-arrow]::before {
 }
 .lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow] {
   transform: translate3d(172px, 0px, 0px) !important;
+}
+
+@media screen and (max-width: 359px) {
+  .tooltip-wrap, .bubble-box {
+    max-width: 60vw;
+  }
 }

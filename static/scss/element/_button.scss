@@ -209,7 +209,7 @@
     &.bg-withdraw {
         padding: 8px 10px;
         background-color: var(--dt-white);
-        border:1px solid var(--dt-gray07);
+        border:1px solid var(--dt-gray08);
     }
     &.appStore {
         padding: 8px 10px;
@@ -243,5 +243,13 @@
                 } 
             }
         }
+    }
+}
+
+
+
+@media screen and (max-width: 359px) {
+    .btn-group.flex-row {
+        flex-direction: column;
     }
 }

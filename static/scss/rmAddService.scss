@@ -28,7 +28,7 @@ body:has(.cont__wrap-service.rmDetail) {
 	gap: 0;
 }
 .cont__wrap-service.rmDetail {
-	padding: 20px 20px 40px;
+	padding: 20px 20px 80px;
 	background-color: var(--dt-gray05);
 	.con__tit-box {
 		flex-direction: column;
@@ -217,44 +217,6 @@ body:has(.cont__wrap-service.rmDetail) {
 					text-align:center;
 				}
 			}
-			@media screen and (max-width:359px) {
-				.use-target {
-					padding:24px 20px;
-					.list-target-item {
-						flex-direction:column;
-						li {
-							&:not(.img-wrap) {
-								&::before {
-									content:'';
-									top:0;
-									left: 50%;
-									transform:translateY(-24px) translateX(-50%);
-								}
-							}
-						}
-					}
-				}
-				.discnt-price {
-					flex-direction:column;
-					.item-block {
-						width:100%;
-					}
-					.item-arrowbg {
-						width:100%;
-						aspect-ratio: 1 / 0.39;
-						background-image: url(../images/img/bg_discount_arrow_down.svg);
-						> span {
-							top:10%;
-							left:50%;
-							transform:translateX(-50%);
-						}
-					}
-					.item-point {
-						margin-left:0;
-						margin-top:8px;
-					}
-				}
-			}
 		}
 	}
 }
@@ -289,5 +251,51 @@ body:has(.cont__wrap-service.rmDetail) {
 	}
 	.popup-body {
 		padding-top: 16px;
+	}
+}
+
+
+@media screen and (max-width:359px) {
+	.cont__wrap-service.rmDetail {
+		.card {
+			&.rmInform {
+				.use-target {
+					padding:24px 20px;
+					.list-target-item {
+						flex-direction: column;
+						li {
+							&:not(.img-wrap) {
+								&::before {
+									content:'';
+									top:0;
+									left: 50%;
+									transform:translateY(-24px) translateX(-50%);
+								}
+							}
+						}
+					}
+				}
+				.discnt-price {
+					flex-direction:column;
+					.item-block {
+						width:100%;
+					}
+					.item-arrowbg {
+						width:100%;
+						aspect-ratio: 1 / 0.39;
+						background-image: url(../images/img/bg_discount_arrow_down.svg);
+						> span {
+							top:10%;
+							left:50%;
+							transform:translateX(-50%);
+						}
+					}
+					.item-point {
+						margin-left:0;
+						margin-top:8px;
+					}
+				}
+			}
+		}
 	}
 }

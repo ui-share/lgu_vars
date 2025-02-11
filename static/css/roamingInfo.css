@@ -34,16 +34,17 @@
   height: 24px;
 }
 .card.rmPeriod .card-body {
+  align-items: center;
   gap: 20px;
 }
 .card.rmPeriod .card-body .period-wrap {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
 }
 .card.rmPeriod .card-body .period-wrap .item {
   flex-direction: column;
   align-items: center;
-  flex: 1;
 }
 .card.rmPeriod .card-body .period-wrap .item .tit {
   font-weight: 600;
@@ -59,7 +60,8 @@
 .card.rmPeriod .card-body .period-wrap .item.period {
   position: relative;
   justify-content: center;
-  min-width: 72px;
+  width: 72px;
+  max-width: 72px;
 }
 .card.rmPeriod .card-body .period-wrap .item.period::before {
   content: "";
@@ -76,7 +78,7 @@
   z-index: 1;
 }
 .card.rmPeriod .card-body .list-wrap {
-  flex-wrap: no-wrap;
+  width: 100%;
   margin-top: 0;
   padding: 20px 0 0 0;
   border-top: 1px solid var(--dt-gray06);
@@ -84,6 +86,7 @@
   border-radius: unset;
 }
 .card.rmPeriod .card-body .list-wrap .list-box {
+  flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 3px 0;
@@ -97,7 +100,7 @@
   padding-bottom: 0;
 }
 .card.rmPeriod .card-body .list-wrap .list-box .head {
-  width: 64px;
+  min-width: 64px;
   text-align: left;
   line-height: 150%;
 }
@@ -144,8 +147,12 @@
 .roamingPrice .roaming .txt-price span:first-of-type {
   font-size: 18px;
 }
+.roamingPrice .roaming .btn.bg-withdraw {
+  margin-top: 20px;
+}
 .roamingPrice .txt-caution {
   text-align: right;
+  line-height: 150%;
   margin-top: 12px;
 }
 
@@ -166,6 +173,16 @@
   display: flex;
   align-items: center;
 }
+.full-popup.rmHistory .txt-price .flag {
+  margin-right: 8px;
+}
 .full-popup.rmHistory .txt-price .flag .txt {
   font-size: 11px;
+}
+
+@media screen and (max-width: 359px) {
+  .card.rmPeriod .period-wrap {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
