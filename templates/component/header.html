@@ -30,21 +30,16 @@
     }
 </style>
 <body>
-	<!-- 개발관련 주석 확인 후 필요 없으시면  삭제 -->
-	<!-- 
-		스크롤 감지시 is-scrolled 
-		<div class="page-wrapper">
-	-->
 	<div class="page-wrapper">
 		<!-- header -->
 		<header class="header">
-			<div class="header__util">
-                <!-- 
-                    이전 prev / 닫기 end / 없을 경우 hidden 처리
-                    <button type="button" class="btn btn-util end hidden"><span>닫기</span></button>
+			<!-- 
+				※※※※ 사용 안하는 태그 삭제 ※※※※
+                이전 prev / 처음 end
+				header__util 안에 아무것도 없을 경우 주석처리 <div class="header__util"></div>
+
                 -->
-				<button type="button" class="btn btn-util prev hidden"><span>이전</span></button>
-                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+			<div class="header__util">
 				<span class="header-tit"><span class="header-txt">눈으로 보는 ARS</span></span>
 			</div>
 			<div class="header__btn">
@@ -57,7 +52,6 @@
 		<header class="header">
 			<div class="header__util">
 				<button type="button" class="btn btn-util prev"><span>이전</span></button>
-                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
 				<span class="header-tit">페이지 타이틀<span class="header-txt"></span></span>
 			</div>
 			<div class="header__btn">
@@ -70,7 +64,6 @@
 		<header class="header">
 			<div class="header__util">
 				<button type="button" class="btn btn-util prev"><span>이전</span></button>
-                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
 				<span class="header-tit">눈으로 보는 ARS<span class="header-txt">로 돌아가기</span></span>
 			</div>
 			<div class="header__btn hidden">
@@ -83,9 +76,62 @@
 		<header class="header">
 			<div class="header__util">
 				<button type="button" class="btn btn-util prev"><span>이전</span></button>
-                <!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
-				<span class="header-tit"><span class="header-txt"></span></span>
 			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+				<span class="header-tit">페이지 타이틀<span class="header-txt"></span></span>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+        <!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+				<span class="header-tit">눈으로 보는 ARS<span class="header-txt">로 돌아가기</span></span>
+			</div>
+			<div class="header__btn hidden">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+        <!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<span class="header-tit">페이지 타이틀<span class="header-txt"></span></span>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+
+		<!-- header -->
+		<header class="header">
+			<!-- <div class="header__util"></div> -->
 			<div class="header__btn">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
