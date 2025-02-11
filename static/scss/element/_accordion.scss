@@ -4,15 +4,16 @@
 .accordion-container {
     /* 마지막요소일 경우 */
     &:last-of-type {
-        .info-price, .info-price-detail {
+        .info-price{
+            // padding-bottom:0;
+            &::after {display:none}
+        }
+        .info-price-detail  {
             padding-bottom:0;
             &::after {display:none}
         }
         &.open {
-            .info-price{
-                padding-bottom:16px;
-                &::after {display:block}
-            }
+            .info-price {&::after {display:block}}
         }
     }
 
@@ -28,6 +29,7 @@
     }
     &.open {
         .accordion-header {
+            padding-bottom:16px;
             .ico-toggle{
                 transform:rotate(180deg);
             }
@@ -46,7 +48,7 @@
     @include flexRow;
     justify-content: space-between;
     width: 100%;
-    padding: 22px 20px 16px;
+    padding: 22px 20px;
     gap: 6px;
     .row {
         @include flexRow;

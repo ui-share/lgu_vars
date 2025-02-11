@@ -5,9 +5,12 @@
 
 .btn-tooltip {// 툴팁버튼
 	width: 24px;
-	height: 24px;
-    margin-left:-3px;
-    padding:3px;
+	height:24px;
+	cursor: pointer;
+	img {
+		width: 18px;
+		transform: translateY(-1px);
+	}
 }
 .tooltip-wrap, .bubble-box { // 툴팁박스
 	display: none;
