@@ -152,3 +152,20 @@
 .list-wrap.chrgData {
   margin-top: 0;
 }
+
+.full-popup.rmHistory .cont__wrap-message {
+  margin-top: 20px;
+}
+.full-popup.rmHistory .txt-day {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  color: var(--dt-primary);
+}
+.full-popup.rmHistory .txt-price {
+  display: flex;
+  align-items: center;
+}
+.full-popup.rmHistory .txt-price .flag .txt {
+  font-size: 11px;
+}

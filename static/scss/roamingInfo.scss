@@ -157,3 +157,21 @@
 .list-wrap.chrgData {
     margin-top: 0;
 }
+//로밍히스토리 풀팝업
+.full-popup.rmHistory {
+    .cont__wrap-message {
+        margin-top: 20px;
+    }
+    .txt-day {
+        @include fw-6();
+        line-height: 120%;
+        color: var(--dt-primary);
+    }
+    .txt-price {
+        display: flex;
+        align-items: center;
+        .flag .txt {
+            font-size: 11px;
+        }
+    }
+}
