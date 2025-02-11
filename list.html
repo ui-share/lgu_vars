@@ -12,11 +12,11 @@
 .no-select, h2 {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 html {width: 100%;height: 100%;perspective: 900;position: relative;}
 body {width: 100%;height: 100%;color: rgba(48, 69, 92, 1);}
-.accordion-wrapper {width: 100%;height: 100%;min-height: 0;display: inline-block;position: relative;background-color: #fafcff;}
+.accordion-wrapper {width: 100%;height: calc(100% - 30px);min-height: 0;display: inline-block;position: relative;background-color: #fafcff;}
 h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 700;background-color: #fafcff;padding: 10px 20px;z-index: 99;}
 h2 {font-size: 18px;line-height: 3;font-weight: 600;display: block;cursor: pointer; padding: 0 20px}
 .accordion-con {max-height: 500px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;padding: 0 20px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04);} /* box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04); */
-ul {list-style: none;perspective: 900;margin: 0;} 
+ul {list-style: none;perspective: 900;margin: 0;}
 .menu-wrap {border-bottom : 1px solid #dce7eb;}
 .menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;} /* box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.04);*/
 .menu-wrap > li:last-of-type {padding-bottom: 0;}
@@ -30,7 +30,7 @@ ul {list-style: none;perspective: 900;margin: 0;}
 .menu-wrap > li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
 .menu,.menu > .txt {display: flex;flex-direction: column;}
 .menu {padding: 20px 0 0 0;}
-.menu:last-child {padding: 10px 0;}
+.menu:last-child {padding: 20px 0 30px}
 .menu .tit {font-size: 16px;line-height: 1.5;font-weight: 600;color: #ff6873;}
 .menu .txt > a {display: flex;flex-direction: row;align-items: center;gap: 5px;}
 .menu .txt > a > span:not(.flag) {font-size: 16px;line-height: 1.5;color:#333;}
@@ -232,7 +232,13 @@ ul {list-style: none;perspective: 900;margin: 0;}
 							<a href="./templates/contents/business/main/pop_callEnd_appRmPlan.html" target="_blank"><span>해외로밍 신청 앱 연결</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
 								<span class="flag success"><span class="txt">up 02.07</span></span>
-							</a>							
+							</a>
+							<a href="./templates/contents/business/main/pop_slctCounsel_pauseLost.html" target="_blank"><span>분실정지 상담 방법 선택</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_callEnd_app_pauseLost.html" target="_blank"><span>분실정지 당신의 U+앱 연결</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>						
 							<a href="./templates/contents/business/main/pop_counselCnfrm_pauseLost.html" target="_blank"><span>분실정지 상담사 연결</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
 							</a>
@@ -833,13 +839,21 @@ ul {list-style: none;perspective: 900;margin: 0;}
 						<li class="txt">
 							<h3>화면</h3>
 							<a href="./templates/contents/business/callQuality/service_callQuality.html" target="_blank"><span>통화품질 문의 안내</span>
-								<span class="flag success"><span class="txt">02.03</span></span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">02.07</span></span>
 							</a>
 							
 							<h3>바텀시트</h3>
-							<a href="./templates/contents/business/callQuality/pop_counselCnfrm_callQuality.html" target="_blank"><span>통화품질 상담사 연결</span>
-								<span class="flag success"><span class="txt">02.03</span></span>
+							<a href="./templates/contents/business/callQuality/pop_slctCounsel_callQuality.html" target="_blank"><span>상담방법 선택</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
 							</a>
+							<a href="./templates/contents/business/callQuality/pop_counselCnfrm_callQuality.html" target="_blank"><span>통화품질 상담사 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/callQuality/pop_callEnd_app_callQuality.html" target="_blank"><span>당신의 U+앱_통화품질 점검 신청하기</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
 							
 						</li>
 					</ul>
