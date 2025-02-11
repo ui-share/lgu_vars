@@ -10,16 +10,17 @@
 .transition,.menu-wrap > li i:before, .menu-wrap > li i:after, .accordion-con {transition: all 0.25s ease-in-out;}
 .flipIn, .menu-wrap > li, h1 {animation: flipdown 0.5s ease both;}
 .no-select, h2 {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-html {width: 100%;height: 100%;perspective: 900;}
+html {width: 100%;height: 100%;perspective: 900;position: relative;}
 body {width: 100%;height: 100%;color: rgba(48, 69, 92, 1);}
-.accordion-wrapper {width: 100%;height: 100%;min-height: 0;display: inline-block;position: relative;background-color: #fafcff;padding: 10px 20px;}
-h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 700;margin: 10px 0;}
-h2 {font-size: 18px;line-height: 3;font-weight: 600;display: block;cursor: pointer;}
-.accordion-con {max-height: 500px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;padding: 0 20px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04);}
-ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
-.menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.04);}
+.accordion-wrapper {width: 100%;height: 100%;min-height: 0;display: inline-block;position: relative;background-color: #fafcff;}
+h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 700;background-color: #fafcff;padding: 10px 20px;z-index: 99;}
+h2 {font-size: 18px;line-height: 3;font-weight: 600;display: block;cursor: pointer; padding: 0 20px}
+.accordion-con {max-height: 500px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;padding: 0 20px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04);} /* box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04); */
+ul {list-style: none;perspective: 900;margin: 0;} 
+.menu-wrap {border-bottom : 1px solid #dce7eb;}
+.menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;} /* box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.04);*/
 .menu-wrap > li:last-of-type {padding-bottom: 0;}
-.menu-wrap > li i {position: absolute;transform: translate(-20px, 6px);margin-top: 15px;right: 0;}
+.menu-wrap > li i {position: absolute;transform: translate(-28px, 6px);margin-top: 15px;right: 0;}
 .menu-wrap > li i:before,.menu-wrap > li i:after {content: "";position: absolute;background-color: #ff6873;width: 3px;height: 9px;}
 .menu-wrap > li i:before {transform: translate(-2px, 0) rotate(45deg);}
 .menu-wrap > li i:after {transform: translate(2px, 0) rotate(-45deg);}
@@ -67,7 +68,7 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 
 			<!-- 공통_common -->
 			<li>
-				<input type="checkbox" checked><i></i>
+				<input type="checkbox" ><i></i>
 				<h2>⭐ 공통_common</h2>
 				<div class="accordion-con">
 					<ul class="menu">
@@ -120,7 +121,7 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 			</li>
 			<!-- 공통_business_common -->
 			<li>
-				<input type="checkbox" checked><i></i>
+				<input type="checkbox" ><i></i>
 				<h2>⭐ 공통_business_common</h2>
 				<div class="accordion-con">
 					<ul class="menu">
@@ -475,12 +476,15 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 							<h3>화면</h3>
 							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_used.html" target="_blank"><span>할부ㆍ선택약정 확인_이용중</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
 							</a>
 							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_notUsed.html" target="_blank"><span>할부ㆍ선택약정 확인_미이용</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
 							</a>
 							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_reservation.html" target="_blank"><span>할부ㆍ선택약정 확인_예약중</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
 							</a>
 							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_beforeExpiration.html" target="_blank"><span>할부ㆍ선택약정 확인_예약가능</span>
 								<span class="flag flag-recent"><span class="txt">02.03</span></span>
@@ -758,6 +762,9 @@ ul {list-style: none;perspective: 900;padding: 0;margin: 0;}
 								<span class="flag success"><span class="txt">up 02.07</span></span>
 							</a>
 							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_completeUsed.html" target="_blank"><span>해외로밍 실시간 조회_가입_이용완료</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_used_toast.html" target="_blank"><span>데이터 선물/충전_toast 예시시</span>
 								<span class="flag success"><span class="txt">up 02.07</span></span>
 							</a>
 							<h3>바텀시트</h3>
