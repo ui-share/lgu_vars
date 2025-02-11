@@ -3063,7 +3063,7 @@ input::placeholder {
   justify-content: flex-start;
   padding: 8px 0;
 }
-.popup-wrapper .popup-header .popup-tit .txt {
+.popup-wrapper .popup-header .popup-tit > .txt {
   color: var(--dt-gray16);
   font-size: 20px;
   font-weight: 700;
@@ -3130,9 +3130,15 @@ input::placeholder {
   padding-bottom: 20px;
 }
 
+.popup-body .section__cont {
+  gap: 24px;
+}
 .popup-body .cont__wrap {
   padding-right: 0;
   padding-left: 0;
+}
+.popup-body .cont__wrap.cont__wrap-vertical {
+  gap: 12px;
 }
 .popup-body .notice-wrap {
   display: flex;

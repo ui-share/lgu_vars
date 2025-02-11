@@ -43,7 +43,7 @@
 		.popup-tit {
 			@include flexBox(start, center);
 			padding: 8px 0;
-			.txt {
+			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
 				line-height: var(--dt-lh150);
@@ -117,7 +117,16 @@
 
 // popbody 내 content
 .popup-body {
-	.cont__wrap {padding-right:0;padding-left:0;}
+	.section__cont {
+		gap: 24px;
+	}
+	.cont__wrap {
+		padding-right:0;
+		padding-left:0;
+		&.cont__wrap-vertical {
+			gap: 12px;
+		}
+	}
 	.notice-wrap { // 팝업 내 테이블_불릿_문장 등 
 		@include flexColum;
 		row-gap:20px;
