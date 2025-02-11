@@ -21,9 +21,6 @@
 	border-radius: 8px;
 	padding: 10px;
 	z-index: 10;
-	@media screen and (max-width:359px) {
-		max-width: 60vw;
-	}
 	.txt-wrap {
 		display:inline-block;
 		@include fw-5(12px);
@@ -130,8 +127,6 @@ div[data-popper-arrow]::before {
 	visibility:hidden;
 	position: absolute;
 }
-div[data-popper-arrow] {}
-
 div[data-popper-arrow]::before {
 	content: '';
 	width:100%;height:100%;
@@ -205,5 +200,11 @@ div[data-popper-arrow]::before {
 			transform: translate3d(172px, 0px, 0px) !important;
 
 		}
+	}
+}
+
+@media screen and (max-width:359px) {
+	.tooltip-wrap, .bubble-box { // 툴팁박스
+		max-width: 60vw !important;
 	}
 }

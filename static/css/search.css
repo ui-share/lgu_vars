@@ -251,6 +251,7 @@
 .list-payment .info-col-wrap .row .txt-title {
   align-self: flex-start;
   color: var(--dt-gray14);
+  line-height: 21px;
 }
 .list-payment .info-col-wrap .row .txt-price {
   font-size: 16px;

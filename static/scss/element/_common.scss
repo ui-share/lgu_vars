@@ -166,6 +166,9 @@ em {
 img {
     border: 0;
     vertical-align: middle;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 iframe {
     border: 0;
@@ -677,14 +680,13 @@ button {
 			color:var(--dt-gray14);
 			line-height:24px;
 			align-self:flex-start;
-			.tooltip{
-				width: 24px;
-				cursor: pointer;
-				img {
-					width: 18px;
-					transform: translateY(3px) translateX(3px);
-				}
-			}
+			// .img-box.tooltip{
+			// 	cursor: pointer;
+			// 	img {
+			// 		width: 18px;
+			// 		transform: translateY(3px) translateX(3px);
+			// 	}
+			// }
 		}
 		.txt-desc {
 			> span {
@@ -762,7 +764,12 @@ button {
 			}
 			&:has(.btn-tooltip) {
 				column-gap:1px;
-				.img-box {width:22px;height:22px;}
+				.img-box {width:22px;height:22px;
+					img {
+						width:18px;
+						transform:translateY(1px);
+					}
+				}
 			}
 		}
 	}

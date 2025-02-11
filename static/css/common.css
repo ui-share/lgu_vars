@@ -229,6 +229,9 @@ em {
 img {
   border: 0;
   vertical-align: middle;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 iframe {
@@ -836,14 +839,6 @@ button {
   line-height: 24px;
   align-self: flex-start;
 }
-.plan-wrap .list-plan .txt-title .tooltip {
-  width: 24px;
-  cursor: pointer;
-}
-.plan-wrap .list-plan .txt-title .tooltip img {
-  width: 18px;
-  transform: translateY(3px) translateX(3px);
-}
 .plan-wrap .list-plan .txt-desc > span:not(.txt-sub) {
   display: inline-block;
   font-size: 14px;
@@ -937,6 +932,10 @@ button {
 .info-col-wrap .txt-title.ico:has(.btn-tooltip) .img-box {
   width: 22px;
   height: 22px;
+}
+.info-col-wrap .txt-title.ico:has(.btn-tooltip) .img-box img {
+  width: 18px;
+  transform: translateY(1px);
 }
 .info-col-wrap .txt-desc {
   margin-left: auto;
@@ -3904,11 +3903,6 @@ table td {
   padding: 10px;
   z-index: 10;
 }
-@media screen and (max-width: 359px) {
-  .tooltip-wrap, .bubble-box {
-    max-width: 60vw;
-  }
-}
 .tooltip-wrap .txt-wrap, .bubble-box .txt-wrap {
   display: inline-block;
   font-size: 12px;
@@ -4108,4 +4102,10 @@ div[data-popper-arrow]::before {
 }
 .lunch-toolWrap .tooltip-wrap[data-popper-placement^=top] div[data-popper-arrow] {
   transform: translate3d(172px, 0px, 0px) !important;
+}
+
+@media screen and (max-width: 359px) {
+  .tooltip-wrap, .bubble-box {
+    max-width: 60vw !important;
+  }
 }
