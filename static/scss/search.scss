@@ -222,6 +222,7 @@
 			.txt-title {
 				align-self:flex-start;
 				color:var(--dt-gray14);
+				line-height:21px;
 			}
 			.txt-price {
 				@include fw-7(16px);

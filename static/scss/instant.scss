@@ -1,6 +1,9 @@
 @import "../scss/base/mixin";
 
 // 공통
+.page-wrapper .container .section__cont {
+	padding-top:56px;
+}
 .cont__wrap.cont__wrap-service {
 	padding-bottom:280px;
 }
@@ -40,16 +43,7 @@
 		.row {
 			width:calc(100% - 24px);
 			justify-content:space-between;
-			.txt-date, .txt-price {
-				.flag {margin-top:4px;}
-			}
-			.txt-sub {
-				margin-top:0;
-				text-align:right;
-				font-size:14px;
-				line-height:150%;
-			}
-			.txt-date {
+			.txt-title {
 				@include fw-5();
 				line-height:24px;
 			}
@@ -59,6 +53,18 @@
 				line-height:24px;
 			}
 			& + .row {margin-top:4px;}
+		}
+		.txt-sub {
+			margin-top:0;
+			margin-left:auto;
+			text-align:right;
+			font-size:14px;
+			line-height:150%;
+		}
+		.txt-sub-date {
+			color:var(--dt-gray10);
+			@include fw-5(12px);
+			line-height:180%;
 		}
 	}
 	.btn-group {

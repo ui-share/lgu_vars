@@ -166,6 +166,9 @@ em {
 img {
     border: 0;
     vertical-align: middle;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	user-drag: none;
 }
 iframe {
     border: 0;
@@ -677,7 +680,13 @@ button {
 			color:var(--dt-gray14);
 			line-height:24px;
 			align-self:flex-start;
-			.tooltip img {vertical-align:middle;}
+			// .img-box.tooltip{
+			// 	cursor: pointer;
+			// 	img {
+			// 		width: 18px;
+			// 		transform: translateY(3px) translateX(3px);
+			// 	}
+			// }
 		}
 		.txt-desc {
 			> span {
@@ -755,7 +764,12 @@ button {
 			}
 			&:has(.btn-tooltip) {
 				column-gap:1px;
-				.img-box {width:22px;height:22px;}
+				.img-box {width:22px;height:22px;
+					img {
+						width:18px;
+						transform:translateY(1px);
+					}
+				}
 			}
 		}
 	}
@@ -786,13 +800,23 @@ button {
 	}
 }
 .info-price-wrap{
-	padding-bottom:22px;
+	// padding-bottom:22px;
 	background-color:var(--dt-gray02);
 	border-radius:8px;
 	overflow:hidden;
+	.list-info-price {
+		&:last-of-type {
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+	}
+	// & + .info-price-wrap {
+	// 	border-top-left-radius: 0;
+	// 	border-top-right-radius: 0;
+	// }
 }
 .list-info-price:only-child {
-	.info-wrap {
+	.info-price-detail {
 		&:last-of-type {padding-bottom:0px;}
 	}
 }
@@ -811,6 +835,10 @@ button {
 	}
 }
 .info-price  {
+	padding-bottom:20px;
+	&.accordion-header {
+		.ico-toggle {width:24px;height:24px;}
+	}
 	&.total-last {
 		row-gap:4px;
 		padding:16px 20px 0;
