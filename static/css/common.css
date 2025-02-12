@@ -969,22 +969,42 @@ button {
 
 .info-price-wrap {
   background-color: var(--dt-gray02);
-  border-radius: 8px;
   overflow: hidden;
 }
-.info-price-wrap .list-info-price:last-of-type {
+.info-price-wrap:first-of-type {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.info-price-wrap:last-of-type {
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
-
-.list-info-price:only-child .info-price-detail:last-of-type {
-  padding-bottom: 0px;
+.info-price-wrap:last-of-type .total-last {
+  padding-bottom: 22px;
+}
+.info-price-wrap:last-of-type .total-last .row {
+  row-gap: 8px;
+}
+.info-price-wrap:only-child {
+  border-radius: 8px;
 }
 
-.info-price:not(.total-last), .info-price-detail:not(.total-last) {
+.list-info-price:first-of-type {
+  padding-top: 6px;
+}
+.list-info-price:last-child {
+  padding-bottom: 6px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.list-info-price:only-child {
+  padding-bottom: 6px;
+}
+
+.info-price:not(.total-last:last-of-type), .info-price-detail:not(.total-last:last-of-type) {
   position: relative;
 }
-.info-price:not(.total-last)::after, .info-price-detail:not(.total-last)::after {
+.info-price:not(.total-last:last-of-type)::after, .info-price-detail:not(.total-last:last-of-type)::after {
   content: "";
   display: block;
   position: absolute;
@@ -1014,10 +1034,13 @@ button {
 .info-price.total-last .txt-title {
   font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 150%;
 }
 .info-price.total-last .txt-title:has(.badge.badge-round) {
   width: 100%;
+}
+.info-price.total-last .txt-title:has(.badge.badge-round) .badge-round {
+  margin-right: 7px;
 }
 .info-price.total-last .txt-title:has(.badge.badge-round) + .txt-price {
   width: 100%;
@@ -3514,8 +3537,8 @@ input::placeholder {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 22px 20px;
-  gap: 6px;
+  padding: 16px 20px;
+  gap: 8px;
 }
 .accordion-header .row {
   display: flex;
@@ -3528,14 +3551,12 @@ input::placeholder {
   line-height: 150%;
 }
 .accordion-header .txt-title {
-  flex: 1;
   column-gap: 4px;
   text-align: left;
   line-height: 23px;
 }
 .accordion-header .txt-title .badge-round {
   align-self: baseline;
-  margin-right: 4px;
 }
 .accordion-header .txt-price {
   justify-content: flex-end;
@@ -3543,9 +3564,7 @@ input::placeholder {
 .accordion-header .txt-price span:first-of-type {
   font-size: 16px;
   font-weight: 700;
-}
-.accordion-header .txt-price .img-box {
-  margin-left: 4px;
+  line-height: 150%;
 }
 .accordion-header.btn-toggle {
   justify-content: center;
@@ -3574,6 +3593,19 @@ input::placeholder {
 .accordion-header.chckbox-area + .accordion-content .bullet-list {
   padding-bottom: 16px;
 }
+.accordion-header.info-price > .txt-title {
+  gap: 7px;
+  width: calc(100% - 138px);
+}
+.accordion-header.info-price > .txt-title > span:not(.badge) {
+  min-width: 80px;
+  border: 1px solid red;
+}
+.accordion-header.info-price > .txt-price {
+  flex-wrap: wrap-reverse;
+  gap: 7px;
+  min-width: 96px;
+}
 
 .info-price-detail {
   padding: 0 20px;
@@ -3593,6 +3625,7 @@ input::placeholder {
 .info-price-detail .info-wrap .row {
   display: flex;
   justify-content: space-between;
+  column-gap: 8px;
 }
 .info-price-detail .txt-title {
   padding-left: 10px;
@@ -3627,6 +3660,12 @@ input::placeholder {
   line-height: 18px;
 }
 
+@media screen and (max-width: 359px) {
+  .accordion-header.info-price > .txt-title {
+    flex-wrap: wrap;
+    width: max-content;
+  }
+}
 .tabnav {
   width: 100%;
   display: flex;
