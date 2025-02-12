@@ -830,6 +830,16 @@ button {
 	&:only-child {
 		padding-bottom:6px;
 	}
+	&:not(:has(.accordion-content)) {
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		padding-bottom:0;
+		.info-price {
+			pointer-events:none;
+			.ico-toggle img{display:none;}
+		}
+
+	}
 }
 
 .info-price, .info-price-detail {
