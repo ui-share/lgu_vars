@@ -489,15 +489,11 @@ input::placeholder {
 		}
 	}
 }
-
-@media screen and (max-width:359px) {
-	.slct-box-wrap {
-		.slct-box {
-			min-width: fit-content;
-			width: calc(100% - 10px);
-		}
-		.multi-box{ 
-			width: calc(100% + 10px);
-		}
+.auth_birth {
+	> .txt {
+		@include fw-6(24px);
+		color: var(--dt-black);
+		line-height: 1.4;
+		margin-bottom: 0;
 	}
 }

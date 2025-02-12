@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Components | Tooltip</title>
-    <link rel="stylesheet" href="../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/common.css">
     <script src="../../static/js/tooltip/popper.js"></script>
     <script>
         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
@@ -115,10 +115,7 @@
                             <div class="list-plan accordion-content">
                                 <div class="row">
                                     <span class="txt-title">
-                                        참 쉬운 가족 데이터
-                                        <button class="img-box btn-tooltip">
-                                            <img src="../../static/images/icon/ic-circle-quesition.svg" alt="">
-                                        </button>
+                                        참 쉬운 가족 데이터<button class="img-box btn-tooltip"><img src="../../static/images/icon/ic-circle-quesition.svg" alt=""></button>
                                         <span class="tooltip-wrap">
                                             <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
                                             <!--
@@ -152,7 +149,7 @@
                             <div class="list-plan accordion-content">
                                 <div class="row">
                                     <span class="txt-title">
-                                        결제일
+                                        결제일<button class="img-box btn-tooltip"><img src="../../static/images/icon/ic-bullet-info.svg" alt=""></button>
                                         <!--
                                             const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
                                                 // placement: 'top', 으로 툴팁 위치 조작
@@ -160,9 +157,6 @@
                                                 현재 디자인 케이스 : top, right, bottom
                                             }
                                         -->
-                                        <button class="img-box btn-tooltip">
-                                            <img src="../../static/images/icon/ic-bullet-info.svg" alt="">
-                                        </button>
                                         <span class="tooltip-wrap">
                                             <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="right"> -->
                                             <div class="tooltip">
@@ -185,7 +179,7 @@
 
                 <div class="cont__wrap">
                     <h3 style="font-weight:600;opacity:0.8;font-size:18px;margin-bottom:12px;">
-                        [CASE 버튼 없이 조건에 따라 출력되는 케이스_div.bubble-box]
+                        [CASE 버튼 없이 조건에 따라 출력되는 케이스_div.bubble-box]<br />
                         <span style="font-size:14px;font-weight:500;">
                             인풋, 체크박스 validation에 따라 조작 : <span style="color:red;font-size:14px;font-weight:500;">div.bubble-box.show 클래스 추가하는 방식</span>
                         </span>

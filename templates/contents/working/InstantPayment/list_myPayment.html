@@ -8,11 +8,12 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>나의 납부내역</title>
+	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-    <link rel="stylesheet" href="../../../../static/css/common.css">
-    <link rel="stylesheet" href="../../../../static/css/instant.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/instant.css">
     <!-- Scripts -->
 
 </head>
@@ -20,19 +21,19 @@
     <div class="page-wrapper">
 		<!-- header -->
         <header class="header">
-            <div class="header__util">
-                <button type="button" class="btn btn-util prev"><span>상세보기</span></button>
-            </div>
-            <div class="header__btn btn-group">
-                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
-            </div>
-        </header>
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
         <!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
             <!-- 홀맨 배너 영역// -->
-            <div class="section__cont desc">
+            <div class="section__cont">
                 <div class="cont__wrap wd-full">
                     <div class="con__tit-box">
                         <h6 class="tit-head">
@@ -40,107 +41,89 @@
                         </h6> 
                     </div>
                     <div class="list-payment">
+                        <!-- 납부 성공 케이스만 존재 -->
                         <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
+                            <button type="button" class="detail">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
+                                    <span class="txt-title">
+                                        <span>자동이체</span>(<span>카드</span>)
                                     </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">카드</span>
-                                    </span>
+                                    <span class="txt-price">NN원</span>
                                 </div>
-                            </button>
-                            <div class="btn-group flex-column">
-                                <button class="btn btn-md btn-sec" type="button">
-                                    <span class="txt">바로 납부</span>
-                                </button>
-                                <button class="btn btn-md line" type="button">
-                                    <span class="txt">납부확인서 신청</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
-                                        <span class="flag success">
-                                            <span class="txt">납부완료</span>
-                                        </span>
-                                    </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">직접 납부</span>
+                                    <span class="txt-sub-date">
+                                        납부일: <span>NNNN-NN-NN</span>
                                     </span>
                                 </div>
                             </button>
                         </div>
                         <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
+                            <button type="button" class="detail">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
-                                        <span class="flag success">
-                                            <span class="txt">납부완료</span>
-                                        </span>
+                                    <span class="txt-title">
+                                        <span>자동이체</span>(<span>은행</span>)
                                     </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">카드</span>
+                                    <span class="txt-price">NN원</span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-sub-date">
+                                        납부일: <span>NNNN-NN-NN</span>
                                     </span>
                                 </div>
                             </button>
                         </div>
                         <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
+                            <button type="button" class="detail">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
-                                        <span class="flag success">
-                                            <span class="txt">납부완료</span>
-                                        </span>
+                                    <span class="txt-title">
+                                        <span>자동이체</span>(<span>카드</span>)
                                     </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">카드</span>
+                                    <span class="txt-price">NN원</span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-sub-date">
+                                        납부일: <span>NNNN-NN-NN</span>
                                     </span>
                                 </div>
                             </button>
                         </div>
                         <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
+                            <button type="button" class="detail">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
-                                        <span class="flag success">
-                                            <span class="txt">납부완료</span>
-                                        </span>
+                                    <span class="txt-title">
+                                        <span>자동이체</span>(<span>카드</span>)
                                     </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">카드</span>
+                                    <span class="txt-price">NN원</span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-sub-date">
+                                        납부일: <span>NNNN-NN-NN</span>
                                     </span>
                                 </div>
                             </button>
                         </div>
                         <div class="mypay-list">
-                            <button type="button" class="detail btn-more">
+                            <button type="button" class="detail">
                                 <div class="row">
-                                    <span class="txt-date">
-                                        <span class="txt">NN월 NN일</span>
-                                        <span class="flag success">
-                                            <span class="txt">납부완료</span>
-                                        </span>
+                                    <span class="txt-title">
+                                        <span>자동이체</span>(<span>카드</span>)
                                     </span>
-                                    <span class="txt-price">
-                                        <span class="txt">NN원</span>
-                                        <span class="txt-sub">카드</span>
+                                    <span class="txt-price">NN원</span>
+                                </div>
+                                <div class="row">
+                                    <span class="txt-sub-date">
+                                        납부일: <span>NNNN-NN-NN</span>
                                     </span>
                                 </div>
                             </button>
                         </div>
+                    </div>
+                </div>
+                <div class="cont__wrap cont__wrap-btBtn">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sec">
+                            <span class="txt">납부 확인서 신청</span>
+                        </button>
                     </div>
                 </div>
             </div>

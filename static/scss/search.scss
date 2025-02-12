@@ -162,7 +162,6 @@
 	background-color:var(--dt-white);
 	border-radius:8px;
 	span {
-		// color: var(--dt-primary); 삭제 금지
 		text-align:center;
 	}
 	.txt-info {
@@ -174,12 +173,17 @@
 		&.decrease {
 			.img-box {transform: rotate(180deg)}
 		}
+		> span:first-child {
+			&:not(:has(.color-prim)) {
+				color:var(--dt-primary);
+			}
+		}
 	}
 	.txt-price {
 		display:inline-block;
 		margin-right:4px;
 		@include fw-7(18px);
-		color:var(--dt-gray16);/* 추후 변경 예정 */
+		color:var(--dt-primary); /* 추후 변경 예정 */
 	}
 	.img-box {
 		min-width:18px;
@@ -191,7 +195,7 @@
 	justify-content:space-between;
 	align-items:center;
 	width:100%;
-	min-height:48px;
+	min-height:62px;
 	padding:10px 20px;
 	border-radius:0;
 	background-color:var(--dt-gray15);
@@ -202,7 +206,7 @@
 		>span {font-size:14px;}
 	}
 	.txt-childname {color:var(--dt-white);font-weight:700;}
-	.txt-phone {color:var(--dt-gray07);font-weight:500;}
+	.txt-phone {color:#A8B3BD;font-weight:500;}
 	.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
 }
 .select-billdate {
@@ -222,6 +226,7 @@
 			.txt-title {
 				align-self:flex-start;
 				color:var(--dt-gray14);
+				line-height:21px;
 			}
 			.txt-price {
 				@include fw-7(16px);
@@ -297,4 +302,9 @@
 		background-repeat: no-repeat;
 		background-position: left 0 center;
 	}
+}
+
+// 자녀요금 billChild section__cont 내 section__cont 로 인한 divider 조정
+.section__cont:has(.section__cont):has(+.section__divider) {
+	padding-bottom: 0;
 }

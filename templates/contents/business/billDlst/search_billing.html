@@ -11,8 +11,8 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-	<link rel="stylesheet" href="../../../../static/css/common.css">
-	<link rel="stylesheet" href="../../../../static/css/search.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
 
 	<!-- Scripts -->
 </head>
@@ -23,7 +23,7 @@
 			<div class="header__util">
 				<button type="button" class="btn btn-util prev"><span>이전</span></button>
 			</div>
-			<div class="header__btn btn-group">
+			<div class="header__btn">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
 		</header>
@@ -123,6 +123,7 @@
 					<div class="con__tit-box">
 						<h6 class="tit-head">
 							<span class="txt-title">요금 상세</span>
+							<span class="txt-sub">(부가가치세 포함)</span>
 						</h6>
 						<div class="tit-tail">
 							<button type="button" class="chips chips-all"><!-- 전체접힘 시 : is-selected 추가 -->
@@ -131,153 +132,168 @@
 							</button>
 						</div>
 					</div>
-					<div class="info-price-wrap">						
-						<div class="list-info-price accordion-container"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
-							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-								<span class="row txt-title">
-									<div class="badge badge-round">
-										<span class="txt">A</span>
-									</div>
-									<span>휴대폰 이용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+					<div class="list-payment">
+						<div class="info-price-wrap">						
+							<div class="list-info-price accordion-container"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">A</span>
+										</div>
+										<span>휴대폰 이용요금</span>
 									</span>
-								</span>
-							</button>
-							<div class="accordion-content"><!-- 아코디언 컨텐트 -->
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												월정액
-											</span>
-											<span class="txt-price">NN원</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
 										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												할인요금
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													월정액
+												</span>
+												<span class="txt-price">NN원</span>
 											</span>
-											<span class="txt-price">-NN원</span>
-										</span>
-										<ul class="col list-detail">
-											<li class="row">
-												<span class="txt-title">
-													태블릿/스마트기기 요금무료(슈퍼스페셜 C/D)
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													할인요금
 												</span>
 												<span class="txt-price">-NN원</span>
-											</li>
-											<li class="row">
-												<span class="txt-title">선택약정 25% 할인</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">
+														태블릿/스마트기기 요금무료(슈퍼스페셜 C/D)
+													</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+												<li class="row">
+													<span class="txt-title">선택약정 25% 할인</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">B</span>
+										</div>
+										<span>부가서비스 및 구독 혜택 사용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content">
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)<br />
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													맘대로 폰교체 / 맘대로 폰교체 플러스
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">C</span>
+										</div>
+										<span>기기 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content">
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													항목1111
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													항목1-1111
+												</span>
 												<span class="txt-price">-NN원</span>
-											</li>
-										</ul>
-									</li>
-								</ul>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">항목1-1.상세내용상세내용상세내용상세내용상세내용상세내용</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">D</span>
+										</div>
+										<span>미납요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle"></span>
+									</span>
+								</button>
 							</div>
 						</div>
-
-						<div class="list-info-price accordion-container">
-							<button class="info-price accordion-header">
-								<span class="row txt-title">
-									<div class="badge badge-round">
-										<span class="txt">B</span>
-									</div>
-									<span>부가서비스 및 구독 혜택 사용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<div class="badge badge-round"><span class="txt">A+B+C+D</span></div>총 청구요금
+									</span>
+									<span class="txt-price">
+										NNN,NNN원
 									</span>
 								</span>
-							</button>
-							<div class="accordion-content">
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)<br />
-												바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)
-											</span>
-											<span class="txt-price">NN원</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												맘대로 폰교체 / 맘대로 폰교체 플러스
-											</span>
-											<span class="txt-price">NN원</span>
-										</span>
-									</li>
-								</ul>
+								<!-- <span class="txt-sub">(부가가치세 포함)</span> -->
 							</div>
-						</div>
-
-						<div class="list-info-price accordion-container">
-							<button class="info-price accordion-header">
-								<span class="row txt-title">
-									<div class="badge badge-round">
-										<span class="txt">C</span>
-									</div>
-									<span>기기 이용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-									</span>
-								</span>
-							</button>
-							<div class="accordion-content">
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												항목1111
-											</span>
-											<span class="txt-price">NN원</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												항목1-1111
-											</span>
-											<span class="txt-price">-NN원</span>
-										</span>
-										<ul class="col list-detail">
-											<li class="row">
-												<span class="txt-title">항목1-1.상세내용상세내용상세내용상세내용상세내용상세내용</span>
-												<span class="txt-price">-NN원</span>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="col info-price total-last">
-							<div class="badge badge-round">
-								<span class="txt">A+B+C</span>
-							</div>
-							<span class="row">
-								<span class="txt-title">
-									총 청구요금
-								</span>
-								<span class="txt-price">
-									NNN,NNN원
-								</span>
-							</span>
-							<span class="txt-sub">(부가가치세 포함)</span>
 						</div>
 					</div>
 				</div>

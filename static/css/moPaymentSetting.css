@@ -1,0 +1,44 @@
+.info-col-wrap .col {
+  row-gap: 16px;
+}
+.info-col-wrap .txt-title {
+  color: var(--dt-gray16);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+.info-col-wrap .btn-group {
+  margin-top: 20px;
+}
+.info-col-wrap .btn-group .btn {
+  background-color: var(--dt-gray06);
+  border: 1px solid var(--dt-gray06);
+}
+.info-col-wrap .btn-group .btn .txt {
+  color: var(--dt-gray11);
+  font-size: 14px;
+}
+
+.plan-wrap.line {
+  margin-top: 4px;
+}
+.plan-wrap.line .list-plan {
+  padding-top: 20px;
+}
+.plan-wrap.line .list-plan .txt-title {
+  color: var(--dt-gray16);
+}
+.plan-wrap.line .list-plan .txt-price {
+  text-align: right;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+}
+.plan-wrap.line .txt-sub .img-box {
+  width: 24px;
+  height: 24px;
+}
+.plan-wrap.line .txt-sub .img-box img {
+  width: 18px;
+  transform: translateY(-1px);
+}
