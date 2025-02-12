@@ -244,40 +244,116 @@ input::placeholder {
 }
 	
 /* dropdown 선택 버튼 영역 */
-.slct-perd-wrap {
+.slct-control {
+	display: inline-flex;
+	flex-direction: column;
+	row-gap: 8px;
+	width: 100%;
+	&.focused {
+		.slct-box {
+			border-color: var(--dt-primary);
+		}
+	}
+	&.error {
+		.slct-box {
+			border-color: var(--dt-error);
+		}
+	}
+	&.disabled {
+		border-color: var(--dt-gray08);
+		.slct-box {
+			// .txt {
+
+			// }
+		}
+	}
+}
+.slct-label {
+	@include fw-6(12px);
+	line-height: 1.2;
+	color: var(--dt-gray11);
+}
+.slct-box-wrap {
 	@include flexBox(between, center);
+	flex-wrap: wrap;
+	row-gap: 6px;
+	width: 100%;
+}
+.multi-box{ 
+	display: flex;
+    align-items: center;
+	margin-left: auto;
+	width: calc(50% + 10px);
+	.hyphen { 
+		width: 20px;
+		text-align: center;
+		@include fw-6(20px);
+		line-height: 1.2;
+		letter-spacing: -0.1px;
+		color: var(--dt-gray16);
+	}
+	.slct-box {
+		flex: 1;
+		width: unset;
+	}
+}
+.slct-box {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	align-items: center;
 	border: 2px solid var(--dt-gray08);
 	border-radius: 10px;
-	padding: 12px 10px 12px 12px;
-	background-color: transparent;
-	&::after {
+	padding: 9px 10px 9px 12px;
+	min-height: 48px;
+	width: calc(50% - 10px);
+
+	.txt {
+		display: flex;
+		flex-wrap: nowrap;
+		// flex: 1; // 추가: 텍스트 영역이 남은 공간을 차지하도록 설정
+		@include fw-6(15px);
+		line-height: 1.2;
+		color: var(--dt-gray16);
+		> * {
+			flex-grow: 1;
+			flex-shrink: 1;
+			min-width: 37px;
+			text-align: right;
+			@include fw-6(16px);
+			line-height: 1.2;
+		
+		}
+		&:has(span:nth-child(1):last-child) * {
+			flex: 1;
+			@include fw-6(18px);
+			line-height: 1.2;
+			color: var(--dt-gray11);
+			min-width: auto;
+		}
+		// span이 2개일 때
+		&:has(span:nth-child(2):last-child) * {
+			flex: 1 50%;
+		}
+		// span이 3개일 때
+		&:has(span:nth-child(3):last-child) * {
+			// flex: 1 33.333333%;
+			&:last-child {
+				min-width: auto;
+			}
+		}
+	}
+	.arrow {
 		display: inline-block;
 		width: 24px;
 		height: 24px;
-		content: "";		
 		background-image: url(../images/icon/chevron_down_line_24.svg);
+		background-size: 24px 24px;
 		background-repeat: no-repeat;
-		background-size: 100%;
-		background-position: center;
+		background-position: center center;
+		margin-left: auto
 	}
-	.slct-perd {
-		text-align: left;
-	}
-	.slct-txt {
-		@include fw-6(18px);
-		color: var(--dt-gray11);		
-		&.point {
-			@include fw-6(16px);
-			color: var(--dt-gray16);
-		}
-	}
-	.hyphen {
-		@include fw-6(18px);
-		color: var(--dt-gray16);
-		margin-right: 8px;
-	}
-}
-	
+
+}	
 .slct-email-wrap {
 	@include flexBox(start, center);
 	flex-wrap: wrap;
@@ -414,3 +490,14 @@ input::placeholder {
 	}
 }
 
+@media screen and (max-width:359px) {
+	.slct-box-wrap {
+		.slct-box {
+			min-width: fit-content;
+			width: calc(100% - 10px);
+		}
+		.multi-box{ 
+			width: calc(100% + 10px);
+		}
+	}
+}

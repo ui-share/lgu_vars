@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>완료_요금납부방법변경_은행자동이체_변경</title>
+	<title>완료_요금바로납부_카드로납부_납부</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" href="../../../../static/css/common.css">
@@ -21,7 +21,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
-                <button type="button" class="btn btn-util end"><span>닫기</span></button>
+                <button type="button" class="btn btn-util end"><span>처음</span></button>
 			</div>
 			<div class="header__btn btn-group">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
@@ -32,48 +32,44 @@
 		<!-- container -->
 		<div class="container">
             <div class="section__cont">
-                <!-- 화면 요소를 위해 반드시 section__cont 하나만 가지고 간다 -->
-                <!-- 
-                    1.상세 내용이 들어가는 상단 cont__wrap 1개 / 버튼그룹이 들어가는 cont__wrap 1개 
-                    2.로 짠 뒤에 상단 cont__wrap에만 내용을 추가한다.
-                -->
                 <div class="cont__wrap cont__wrap-service">
                     <div class="inform-wrap">
                         <span class="inform-img success"></span>
                         <div class="text-box">
-                            <span class="tit"><span class="color-prim">은행 자동이체</span>로<br>요금납부 방법이 변경되었어요</span>
+                            <span class="tit"><span class="color-prim">요금 20,000원</span>이<br>
+                            납부되었어요
+                            </span>
                         </div>
                     </div> 
                     <!-- 데이터 노출되는 리스트 -->
                     <ul class="list-wrap">
                         <li class="list-box">
-                            <span class="head">은행/증권사</span>
+                            <span class="head">카드사</span>
                             <span class="tail">
                                 <span class="bank-wrap">
                                     <span class="img-box">
                                         <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg">
                                     </span>
                                     <span class="txt">
-                                        신한은행
+                                        신한카드
                                     </span>
                                 </span>
                             </span>
                         </li> 
                         <li class="list-box">
-                            <span class="head">계좌번호</span>
+                            <span class="head">카드번호</span>
                             <span class="tail">
-                                <span>123*****9123</span>
+                                <span>****-****-****-1234</span>
                             </span>
                         </li> 
                         <li class="list-box">
-                            <span class="head">결제일</span>
+                            <span class="head">잔여요금</span>
                             <span class="tail">
-                                <span>매달 15일</span>
+                                <span>40,000원</span>
                             </span>
                         </li> 
                     </ul>
-                </div>
-                
+                </div>                
                 <div class="cont__wrap cont__wrap-btBtn">
                     <div class="btn-group flex-row is-confirm">
                         <button class="btn" type="button">

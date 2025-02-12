@@ -11,8 +11,8 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-	<link rel="stylesheet" href="../../../../static/css/common.css">
-	<link rel="stylesheet" href="../../../../static/css/service.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
 	
 	<!-- Scripts -->
 </head>
@@ -38,18 +38,26 @@
 							청구서 재발행 정보를 입력해 주세요
 						</h4>
 					</div>
-					<div class="txt-infoWrap">
-						신청 월
+					<div class="slct-control">
+						<div class="slct-label">
+							신청 월
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+								<span class="arrow"></span>								
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<span class="arrow"></span>								
+								</button>
+							</span>
+						</div>
 					</div>
-					<button class="slct-perd-wrap">
-						<span class="slct-perd">
-							<span class="slct-txt" type="button">월 선택</span>
-							<!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-						</span>
-					</button>
 					<!--						
 						## 입력 폼 관련 클래스 요약
 						기본 : <div class="input-control ">
