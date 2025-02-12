@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>LGU+ 눈으로 보는 ARS</title>
-	<link rel="stylesheet" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
 	<script src="../../static/js/tooltip/popper.js"></script>
 	<script>
 		const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
@@ -159,7 +159,7 @@
 								<p class="txt-caution">+ 다 쓰면 최대 1Mbps</p>
 							</div>
 							<div class="col accordion-container open"> <!-- 열림 -->
-								<!-- 닫힘 <div class="col accordion-container"> -->
+								<!-- 닫힘 <div class="col accordion-container open"> -->
 								<div class="list-plan accordion-content"><!-- 아코디언 컨텐트 -->
 									<div class="row">
 										<span class="txt-title">
@@ -242,7 +242,7 @@
 				<div class="cont__wrap">
 					<div class="info-price-wrap">
 						<!-- open 클래스로 show/hide 조정 -->
-						<div class="list-info-price accordion-container"><!-- 닫힘 -->
+						<div class="list-info-price accordion-container open"><!-- 닫힘 -->
 							<!-- 열림 <div class="list-info-price accordion-container open"> -->
 							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
 								<span class="row txt-title">
@@ -299,7 +299,7 @@
 				<div class="cont__wrap">
 					<div class="info-price-wrap">
 						<!-- open 클래스로 show/hide 조정 -->
-						<div class="list-info-price accordion-container"><!-- 닫힘 -->
+						<div class="list-info-price accordion-container open"><!-- 닫힘 -->
 							<!-- 열림 <div class="list-info-price accordion-container open"> -->
 							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
 								<span class="row txt-title">
@@ -350,7 +350,7 @@
 							</div>
 						</div>
 
-						<div class="list-info-price accordion-container"><!-- 닫힘 -->
+						<div class="list-info-price accordion-container open"><!-- 닫힘 -->
 							<!-- 열림 <div class="list-info-price accordion-container open"> -->
 							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
 								<span class="row txt-title">
@@ -403,168 +403,166 @@
 					</div>
 				</div>
 
-				<!-- 아코디언2개이상 + 총청구요금 -->
+				<!-- 아코디언2개이상 + 총청구요금  : list-payment  > info-price-wrap 형태 -->
 				<div class="cont__wrap">
-					<div class="info-price-wrap">
-						<!-- open 클래스로 show/hide 조정 -->
-						<div class="list-info-price accordion-container open"><!-- 열림 -->
-							<!-- 닫힘 <div class="list-info-price accordion-container"> -->
-							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-								<span class="row txt-title">
-									<div class="badge badge-round">
-										<span class="txt">A</span>
-									</div>
-									<span>휴대폰 이용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>60,000원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-									</span>
-								</span>
-							</button>
-							<div class="accordion-content"><!-- 아코디언 컨텐트 -->
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												월정액
-											</span>
-											<span class="txt-price">105,000원</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												할인요금
-											</span>
-											<span class="txt-price">-45,000원</span>
-										</span>
-										<ul class="col list-detail">
-											<li class="row">
-												<span class="txt-title">
-													태블릿/스마트기기 요금무료(슈퍼스페셜 C/D)
-												</span>
-												<span class="txt-price">-22,000원</span>
-											</li>
-											<li class="row">
-												<span class="txt-title">선택약정 25% 할인</span>
-												<span class="txt-price">-18,000원</span>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="list-info-price accordion-container open"><!-- 열림 -->
-						<!-- 닫힘 <div class="list-info-price accordion-container"> -->
-							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-								<span class="row txt-title">
-									<span class="badge badge-round">
-										<span class="txt">B</span>
-									</span>
-									<span>부가서비스 및 구독 혜택 사용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>10,000원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-									</span>
-								</span>
-							</button>
-							<div class="accordion-content"><!-- 아코디언 컨텐트 -->
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)<br />
-												바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)
-											</span>
-											<span class="txt-price">5,000원</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												맘대로 폰교체 / 맘대로 폰교체 플러스
-											</span>
-											<span class="txt-price">5,000원</span>
-										</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="list-info-price accordion-container"><!-- 닫힘 -->
-						<!-- 열림 <div class="list-info-price accordion-container open"> -->
-							<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
-								<span class="row txt-title">
-									<span class="badge badge-round">
-										<span class="txt">C</span>
-									</span>
-									<span>기기 이용요금</span>
-								</span>
-								<span class="row txt-price">
-									<span>999,999원</span>
-									<span class="img-box ico-toggle">
-										<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
-									</span>
-								</span>
-							</button>
-							<div class="accordion-content"><!-- 아코디언 컨텐트 -->
-								<ul class="info-price-detail">
-									<li class="info-wrap">
-										<!-- default -->
-										<span class="row">
-											<span class="txt-title ico">
-												항목1111
-											</span>
-											<span class="txt-price">2,450,000원</span>
-										</span>
-									</li>
-									<li class="info-wrap">
-										<span class="row">
-											<span class="txt-title ico">
-												항목1-1111
-											</span>
-											<span class="txt-price">-999,000원</span>
-										</span>
-										<ul class="col list-detail">
-											<li class="row">
-												<span class="txt-title">항목1-1.상세내용상세내용상세내용상세내용상세내용상세내용</span>
-												<span class="txt-price">-9,990원</span>
-											</li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="list-info-price accordion-container">
-							<div class="info-price accordion-header">
-								<span class="row txt-title">
-									<span class="badge badge-round">
-										<span class="txt">D</span>
-									</span>
-									<span>케이스4</span>
-								</span>
-								<span class="row txt-price">
-									<span>NN원</span>
-									<span class="img-box ico-toggle"></span>
-								</span>
-							</div>
-						</div>
-
+					<div class="list-payment">
 						<div class="info-price-wrap">
-							<div class="col info-price total-last">
+							<!-- open 클래스로 show/hide 조정 -->
+							<div class="list-info-price accordion-container open"><!-- 열림 -->
+								<!-- 닫힘 <div class="list-info-price accordion-container open"> -->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">A</span>
+										</div>
+										<span>휴대폰 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>60,000원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													월정액
+												</span>
+												<span class="txt-price">105,000원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													할인요금
+												</span>
+												<span class="txt-price">-45,000원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">
+														태블릿/스마트기기 요금무료(슈퍼스페셜 C/D)
+													</span>
+													<span class="txt-price">-22,000원</span>
+												</li>
+												<li class="row">
+													<span class="txt-title">선택약정 25% 할인</span>
+													<span class="txt-price">-18,000원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container open"><!-- 열림 -->
+							<!-- 닫힘 <div class="list-info-price accordion-container open"> -->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<span class="badge badge-round">
+											<span class="txt">B</span>
+										</span>
+										<span>부가서비스 및 구독 혜택 사용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>10,000원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)<br />
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)
+												</span>
+												<span class="txt-price">5,000원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													맘대로 폰교체 / 맘대로 폰교체 플러스
+												</span>
+												<span class="txt-price">5,000원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container open"><!-- 닫힘 -->
+							<!-- 열림 <div class="list-info-price accordion-container open"> -->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<span class="badge badge-round">
+											<span class="txt">C</span>
+										</span>
+										<span>기기 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>999,999원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													항목1111
+												</span>
+												<span class="txt-price">2,450,000원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													항목1-1111
+												</span>
+												<span class="txt-price">-999,000원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">항목1-1.상세내용상세내용상세내용상세내용상세내용상세내용</span>
+													<span class="txt-price">-9,990원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="list-info-price accordion-container"> <!-- 상세내역 없는 경우 : open 추가x -->
+								<div class="info-price accordion-header">
+									<span class="row txt-title">
+										<span class="badge badge-round">
+											<span class="txt">D</span>
+										</span>
+										<span>케이스4</span>
+									</span>
+									<span class="row txt-price">
+										<span>500원</span>
+										<span class="img-box ico-toggle"></span><!-- 상세내역 없는 경우 : img 추가 x, img-box ico-toggle 남기기 -->
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
 								<span class="row">
 									<span class="txt-title">
-										<div class="badge badge-round">
-											<span class="txt">A+B+C</span>
-										</div>
-										총 청구요금
+										<div class="badge badge-round"><span class="txt">A+B+C+D</span></div>총 청구요금
 									</span>
 									<span class="txt-price">
 										NNN,NNN원
