@@ -248,20 +248,6 @@
   flex-direction: column;
   row-gap: 12px;
 }
-.list-payment .info-price.total-last {
-  position: relative;
-}
-.list-payment .info-price.total-last::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: calc(100% - 40px);
-  height: 1px;
-  background-color: var(--dt-gray08);
-}
 .list-payment .info-col-wrap .row .txt-title {
   align-self: flex-start;
   color: var(--dt-gray14);
@@ -283,9 +269,6 @@
 .list-payment .info-col-wrap .row.total .txt-price {
   font-size: 18px;
   line-height: 21px;
-}
-.list-payment:has(> .info-price-wrap) {
-  row-gap: 0;
 }
 
 .card-group.benefit {

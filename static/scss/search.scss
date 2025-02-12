@@ -217,22 +217,6 @@
 .list-payment {
 	@include flexColum;
 	row-gap:12px;
-	.info-price{
-		&.total-last {
-			position:relative;
-			&::after {
-				content:'';
-				display:block;
-				position:absolute;
-				top:0;
-				left:50%;
-				transform:translateX(-50%);
-				width:calc(100% - 40px);
-				height:1px;
-				background-color:var(--dt-gray08);
-			}
-		}
-	}
 	.info-col-wrap {
 		.row {
 			.txt-title {
@@ -260,7 +244,6 @@
 			}
 		}
 	}
-	&:has(> .info-price-wrap) {row-gap:0;}
 }
 .card-group {
 	&.benefit {

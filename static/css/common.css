@@ -1000,6 +1000,17 @@ button {
 .list-info-price:only-child {
   padding-bottom: 6px;
 }
+.list-info-price:not(:has(.accordion-content)) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding-bottom: 0;
+}
+.list-info-price:not(:has(.accordion-content)) .info-price {
+  pointer-events: none;
+}
+.list-info-price:not(:has(.accordion-content)) .info-price .ico-toggle img {
+  display: none;
+}
 
 .info-price:not(.total-last:last-of-type), .info-price-detail:not(.total-last:last-of-type) {
   position: relative;
@@ -3657,6 +3668,24 @@ input::placeholder {
   font-weight: 500;
   color: var(--dt-gray11);
   line-height: 18px;
+}
+
+.list-payment:has(> .info-price-wrap) {
+  row-gap: 0;
+}
+.list-payment .info-price.total-last {
+  position: relative;
+}
+.list-payment .info-price.total-last::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  height: 1px;
+  background-color: var(--dt-gray08);
 }
 
 @media screen and (max-width: 359px) {
