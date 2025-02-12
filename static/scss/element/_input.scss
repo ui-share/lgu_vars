@@ -413,4 +413,11 @@ input::placeholder {
 		}
 	}
 }
-
+.auth_birth {
+	> .txt {
+		@include fw-6(24px);
+		color: var(--dt-black);
+		line-height: 1.4;
+		margin-bottom: 0;
+	}
+}

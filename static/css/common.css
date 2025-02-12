@@ -3039,6 +3039,14 @@ input::placeholder {
   margin-top: 28px;
 }
 
+.auth_birth > .txt {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dt-black);
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
 .popup-wrapper {
   display: none;
   position: fixed;
