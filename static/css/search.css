@@ -343,3 +343,7 @@
   background-repeat: no-repeat;
   background-position: left 0 center;
 }
+
+.section__cont:has(.section__cont):has(+ .section__divider) {
+  padding-bottom: 0;
+}

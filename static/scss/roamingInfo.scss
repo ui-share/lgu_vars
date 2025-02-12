@@ -255,6 +255,11 @@
         }
     }
 }
+//청구서 팝업
+.popup-body:has(.invoice) {
+    padding-top: 20px;
+}
+
 
 
 @media screen and (max-width: 359px) {

@@ -579,9 +579,6 @@ button {
   background-color: var(--dt-gray03);
   box-shadow: inset 0px 4px 2px 0px rgba(0, 0, 0, 0.02);
 }
-.section__divider:has(+ .section__cont) {
-  margin-top: 48px;
-}
 .section__divider + .section__cont {
   padding-top: 36px;
 }
@@ -593,6 +590,9 @@ button {
 .section__cont.menu, .section__cont.desc {
   padding: 36px 0 48px 0;
   gap: 48px;
+}
+.section__cont:has(+ .section__divider) {
+  padding-bottom: 48px;
 }
 
 .cont__wrap {

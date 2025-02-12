@@ -244,6 +244,10 @@
   background-size: 8px;
 }
 
+.popup-body:has(.invoice) {
+  padding-top: 20px;
+}
+
 @media screen and (max-width: 359px) {
   .card.rmPeriod .period-wrap {
     flex-direction: column;
