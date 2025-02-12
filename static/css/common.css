@@ -3599,7 +3599,6 @@ input::placeholder {
 }
 .accordion-header.info-price > .txt-title > span:not(.badge) {
   min-width: 80px;
-  border: 1px solid red;
 }
 .accordion-header.info-price > .txt-price {
   flex-wrap: wrap-reverse;
