@@ -666,6 +666,9 @@ button {
   font-weight: 700;
   color: var(--dt-gray16);
 }
+.con__tit-box .tit-tail {
+  min-width: max-content;
+}
 .con__tit-box .tit-tail.btn-group .btn-md {
   min-width: 64px;
   max-height: 34px;
@@ -3670,8 +3673,11 @@ input::placeholder {
   line-height: 18px;
 }
 
-.list-payment:has(> .info-price-wrap) {
+.list-payment:has(> .info-price-wrap .total-last) {
   row-gap: 0;
+}
+.list-payment:has(> .info-price-wrap .total-last) .list-info-price:last-child {
+  padding-bottom: 0px;
 }
 .list-payment .info-price.total-last {
   position: relative;

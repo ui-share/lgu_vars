@@ -247,6 +247,9 @@
 .popup-body:has(.invoice) {
   padding-top: 20px;
 }
+.popup-body:has(.invoice) .cont__wrap .con__tit-box .tit-head {
+  flex-wrap: wrap;
+}
 
 @media screen and (max-width: 359px) {
   .card.rmPeriod .period-wrap {

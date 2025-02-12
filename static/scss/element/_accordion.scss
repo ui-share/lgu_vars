@@ -161,7 +161,14 @@
     }
 }
 .list-payment {
-	&:has(> .info-price-wrap) {row-gap:0;}
+	&:has(> .info-price-wrap .total-last) {
+        row-gap:0;
+        .list-info-price {
+            &:last-child {
+                padding-bottom:0px;
+            }
+        }
+    }
 	.info-price{
 		&.total-last {
 			position:relative;

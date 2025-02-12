@@ -258,6 +258,7 @@
 //청구서 팝업
 .popup-body:has(.invoice) {
     padding-top: 20px;
+    .cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
 }
 
 

@@ -529,6 +529,7 @@ button {
 		}
 	}
 	.tit-tail {
+		min-width:max-content;
 		&.btn-group {
 			.btn-md {
 				min-width:64px;
