@@ -186,12 +186,15 @@
 .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
 }
+.info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
+  color: var(--dt-primary);
+}
 .info-price-single .txt-price {
   display: inline-block;
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
-  color: var(--dt-gray16); /* 추후 변경 예정 */
+  color: var(--dt-primary); /* 추후 변경 예정 */
 }
 .info-price-single .img-box {
   min-width: 18px;
@@ -204,7 +207,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 48px;
+  min-height: 62px;
   padding: 10px 20px;
   border-radius: 0;
   background-color: var(--dt-gray15);
@@ -223,7 +226,7 @@
   font-weight: 700;
 }
 .btn-srch-childline .txt-phone {
-  color: var(--dt-gray07);
+  color: #A8B3BD;
   font-weight: 500;
 }
 .btn-srch-childline .img-box {
