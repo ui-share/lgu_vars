@@ -75,6 +75,14 @@
 				}
 			}
 		}
+		// 툴팁 있는 경우
+		.btn-tooltip {
+			margin-left:2px;
+			img {width:20px;height:20px;}
+		}
+		.tooltip-wrap {
+			max-width:280px;
+		}
 	}
 	&.segment {
 		padding: 36px 0 48px;
