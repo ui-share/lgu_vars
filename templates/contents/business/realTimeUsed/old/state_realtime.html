@@ -195,8 +195,15 @@
 									<span class="total">/ 1MB당 286.72원</span>
 								</div>
 							</div>
+							
+							<!-- 
+								접힘 상태 class :	<div class="col accordion-container">
+										 텍스트 :		<span class="txt">자세히 보기</span> 
+								펼침 상태 class :	<div class="col accordion-container open"> 
+										 텍스트 :		<span class="txt">간단히 보기</span>  
+							-->
 							<div class="col accordion-container">
-								<div class="list-plan">
+								<div class="list-plan accordion-content">
 									<div class="row">
 										<span class="txt-title">
 											참 쉬운 가족 데이터<button class="img-box btn-tooltip"><img src="../../../../static/images/icon/ic-circle-quesition.svg" alt=""></button>
@@ -255,17 +262,17 @@
 										</span>
 									</div>
 								</div>
-								<!-- 25.02.11 삭제 <button class="btn-toggle">
+								<button class="btn-toggle accordion-header">
 									<span class="txt">자세히 보기</span>
 									<span class="img-box ico-toggle">
 										<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
 									</span>
-								</button> -->
+								</button>
 							</div>
 						</div>
 					</div>
 					
-					<!-- 25.02.11 삭제 <div class="info-col-wrap">
+					<div class="info-col-wrap">
 						<div class="row title-wrap">
 							<span class="txt-title ico">
 								<span class="img-box">
@@ -282,6 +289,7 @@
 								</div>
 								<div class="progress-area realtime">
 									<span class="progress-bg">
+										<!-- style.width %로 조절 -->
 										<span class="progress-bar" style="width:40%;"></span>
 									</span>
 								</div>
@@ -305,13 +313,13 @@
 								</div>
 								<div class="progress-area realtime">
 									<span class="progress-bg">
+										<!-- style.width %로 조절 -->
 										<span class="progress-bar" style="width:40%;"></span>
 									</span>
 								</div>
 							</div>
 						</div>
-					</div> -->
-					
+					</div>
 					<div class="info-col-wrap">
 						<div class="row title-wrap">
 							<span class="txt-title ico">
@@ -383,7 +391,7 @@
 							<span class="txt">실시간 요금 보기</span>
 						</button>
 					</div>
-					<!-- 25.02.11 삭제 <div class="bullet-wrap caution">
+					<div class="bullet-wrap caution">
 						<h5 class="bullet-caption">
 							유의사항
 						</h5>
@@ -392,7 +400,7 @@
 								사용량 표시는 시스템 전산 반영으로 지연될 수 있습니다.
 							</li>
 						</ul>
-					</div> -->
+					</div>
 				</div>
 			</div>
 			<!-- 디바이더 영역 -->

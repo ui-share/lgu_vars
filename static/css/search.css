@@ -246,34 +246,6 @@
   line-height: 1.5;
 }
 
-.list-payment {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
-}
-.list-payment .info-col-wrap .row .txt-title {
-  align-self: flex-start;
-  color: var(--dt-gray14);
-  line-height: 21px;
-}
-.list-payment .info-col-wrap .row .txt-price {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: right;
-}
-.list-payment .info-col-wrap .row.total .txt-title {
-  color: var(--dt-gray11);
-}
-.list-payment .info-col-wrap .row.total .txt-title.bold {
-  font-size: 16px;
-  color: var(--dt-gray16);
-}
-.list-payment .info-col-wrap .row.total .txt-price {
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .card-group.benefit {
   padding: 22px 4px;
   gap: 0;
