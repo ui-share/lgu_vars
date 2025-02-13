@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+	
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-service">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							일시정지 신청 정보를 선택해 주세요
+						</h4>
+					</div>
+				</div>
+				<div class="cont__wrap pauseTemp">
+					<div class="slct-control">
+						<div class="slct-label-box">
+							<span class="label-tit">일시정지 기간</span><span class="label-desc">남은 가능 일수 180일</span>
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<span class="txt"><span>시작일 선택</span></span>
+								<span class="arrow"></span>								
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<span class="txt"><span>종료일 선택</span></span>
+									<span class="arrow"></span>								
+								</button>
+							</span>
+						</div>
+					</div>
+					<!-- 드롭다운 버튼 케이스 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다-->
+					<!--  -->
+					<div class="input-control floating">
+						<div class="input-group">
+							<label class="input-label">은행/증권사</label>
+							<div class="input-row">
+								<button type="button" class="btn-field-dropdown">
+									<span class="ico">
+										<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+									</span>
+									<span class="txt">
+										은행/증권사 선택
+										<!-- 신한은행 -->
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="validation-txt">validation 메시지 노출</div>
+					</div>
+					<div class="info-wrap">
+						<span class="txt-tit">
+							모바일 수신 금지 설정
+						</span>
+						<div class="switch-group">
+							<input type="checkbox" id="모바일 수신 금지 설정" class="switch-input" checked>
+							<label for="모바일 수신 금지 설정" class="switch-label">
+								사용
+								<span class="switch-box"></span>
+							</label>
+						</div>
+                    </div>
+				</div>
+				<div class="cont__wrap mt-16">
+					<ul class="bullet-list info">
+						<li class="bullet-item">
+							일시정지 신청 후 최초 30일은 받는 통화와 음성사서함 서비스 이용이 가능합니다. 수신자 부담 전화를 이용하면 요금이 부과될 수 있습니다.
+						</li>
+					</ul>
+				</div>
+				<div class="cont__wrap cont__wrap-btBtn">
+					<!-- full 
+						## 키보드 노출시 : 풀 버튼 ##
+							<div class="btn-group flex-row is-confirm full">
+						## 키보드 미노출시: 일반 버튼 ##
+							<div class="btn-group flex-row is-confirm">
+					-->
+					<div class="btn-group flex-row is-confirm">
+						<button class="btn btn-prim is-disabled" type="button">
+							<span class="txt">일시정지 신청</span>
+						</button>
+						<!-- 
+							## 버튼 상태 class 
+							버튼 활성 : <button class="btn btn-prim" type="button"> 
+							버튼 비활성 is-disabled : <button class="btn btn-prim is-disabled" type="button">  
+						-->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
