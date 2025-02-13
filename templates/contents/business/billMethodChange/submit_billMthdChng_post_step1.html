@@ -13,7 +13,7 @@
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
-	<link rel="stylesheet" type="text/css" href="../../../../static/css/paymentMethodChange.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/billMethodChange.css">
 	
 	<!-- Scripts -->
 </head>
@@ -22,7 +22,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
-				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
 			</div>
 			<div class="header__btn btn-group">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
@@ -41,7 +41,7 @@
 					</div>
 					<!--						
 						## 입력 폼 관련 클래스 요약
-						기본 : <div class="input-control">
+						기본 : <div class="input-control ">
 						포커스 : <div class="input-control focused">
 						유효성 검사 성공 : <div class="input-control success">
 						유효성 검사 에러 : <div class="input-control error">
@@ -58,24 +58,17 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지 노출</span></div>
+						<div class="validation-txt"><span>메시지 노출</span></div>
 					</div>
-					<div class="input-control mt-8">				
-						<div class="input-group">
-							<label class="input-label hidden">주소 입력</label>
-							<div class="input-row">
-								<input type="text" class="input-field" placeholder="상세 주소 입력" autocomplete='off' />
-								<div class="util-box hidden">									
-									<button type="button" class="clear-btn"></button>
-								</div>
-							</div>
-						</div>
-						<div class="validation-txt"><span>validation 메시지 노출</span></div>
-					</div>
-	
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
-					<div class="btn-group flex-row is-confirm full">		
+					<!-- full 
+						## 키보드 노출시 : 풀 버튼 ##
+							<div class="btn-group flex-row is-confirm full">
+						## 키보드 미노출시: 일반 버튼 ##
+							<div class="btn-group flex-row is-confirm">
+					-->
+					<div class="btn-group flex-row is-confirm full">
 						<button class="btn btn-prim is-disabled" type="button">
 							<span class="txt">다음</span>
 						</button>
@@ -86,7 +79,6 @@
 						-->
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		<!-- //container -->

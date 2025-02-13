@@ -13,7 +13,7 @@
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
-	<link rel="stylesheet" type="text/css" href="../../../../static/css/paymentMethodChange.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/billMethodChange.css">
 	
 	<!-- Scripts -->
 </head>
@@ -22,7 +22,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
-				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
 			</div>
 			<div class="header__btn btn-group">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
@@ -116,6 +116,12 @@
 					</ul>	
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
+					<!-- full 
+						## 키보드 노출시 : 풀 버튼 ##
+							<div class="btn-group flex-row is-confirm full">
+						## 키보드 미노출시: 일반 버튼 ##
+							<div class="btn-group flex-row is-confirm">
+					-->
 					<div class="btn-group flex-row is-confirm full">		
 						<button class="btn btn-prim is-disabled" type="button">
 							<span class="txt">다음</span>

@@ -1,0 +1,36 @@
+.page-wrapper .container .section__cont {
+  padding: 72px 0 74px;
+}
+
+.addr-wrap {
+  margin-top: 8px;
+}
+.addr-wrap .addr-box {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--dt-gray17);
+}
+.addr-wrap .addr-box .zip-code {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--dt-primary);
+  margin-bottom: 4px;
+}
+.addr-wrap .addr-box .addr-main {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-gray16);
+  margin-bottom: 2px;
+}
+.addr-wrap .addr-box .addr-detail {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dt-gray11);
+}
+.addr-wrap .addr-box.card.solid {
+  background-color: transparent;
+  border-bottom: unset;
+  padding-top: 72px;
+}
