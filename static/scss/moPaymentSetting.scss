@@ -39,3 +39,25 @@
 		}
 	}
 }
+
+// 변경결제한도입력
+.input-row-wrap {
+	justify-content:center;
+	column-gap:12px;
+	padding: 48px 4px 0;
+	.ico32 {
+		min-width:32px;height:32px;
+	}
+	.input-control {
+		width:100%;
+		padding-top:0;
+		.input-label {
+			display:inline-block;
+			width:100%;
+			text-align:center;
+		}
+		.input-row {
+			justify-content:center;
+		}
+	}
+}
