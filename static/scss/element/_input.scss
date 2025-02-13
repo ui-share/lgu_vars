@@ -235,6 +235,31 @@ input::placeholder {
 		border-bottom: 2px solid var(--dt-gray08);
 	}
 }
+
+// 드롭다운
+.btn-field-dropdown {
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-size: 24px;
+	background-repeat: no-repeat;
+	background-position: right 2px center;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
+	.ico {
+		display:none;
+		width:24px;
+		height:24px;
+		padding-top:1px;
+		padding-bottom:1px;
+		img {width:100%;transform:translateY(-2px);}
+	}
+	.txt {
+		color: var(--dt-gray11);
+		@include fw-6(18px);
+		line-height: 1.2;
+	}
+}
 	
 /* dropdown 선택 버튼 영역 */
 .slct-control {
@@ -365,6 +390,11 @@ input::placeholder {
 		.txt {
 			color: var(--dt-gray11);
 		}
+		&.done {
+			.txt {
+				color: var(--dt-gray16);
+			}
+		}
 	}
 }
 
@@ -401,32 +431,7 @@ input::placeholder {
 
 
 
-// 드롭다운
-.btn-field-dropdown {
-	padding:9px 0;
-	background-image: url(../images/icon/chevron_down_line_24.svg);
-	background-size: 24px;
-	background-repeat: no-repeat;
-	background-position: right 2px center;
-	width: 100%;
-	text-align: left;
-	&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
-	.ico {
-		display:none;
-		width:24px;
-		height:24px;
-		padding-top:1px;
-		padding-bottom:1px;
-		img {width:100%;transform:translateY(-2px);}
-	}
-	.txt {
-		color: var(--dt-gray11);
-		@include fw-6(18px);
-		line-height: 1.2;
-	}
-}
-
-// 2차인증 input-layout
+// 인증 input-layout
 .auth-wrap {
 	text-align: center;
 	padding-bottom: 26px;

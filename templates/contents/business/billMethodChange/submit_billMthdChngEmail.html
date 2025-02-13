@@ -50,26 +50,23 @@
 						유효성 검사 에러 : <div class="input-control email-form error">
 					-->
 					<!-- 이메일 입력 -->
-					<div class="input-control email-form mt-28">				
+					<div class="input-control email-form mt-28">
 						<div class="input-group">
 							<label class="input-label">이메일</label>
 							<div class="input-row">
 								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
 								<div class="util-box">
-									<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
 									<button type="button" class="clear-btn hidden"></button>
 								</div>
 							</div>
-							<button class="slct-email-wrap">
-								<span class="slct-txt" type="button">이메일선택</span>
-								<!-- 
-									<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-								-->
-								<span class="slct-txt point hidden" type="button">이메일 선택</span>
-							</button>
-
+							<div class="slct-box-wrap">
+								<button type="button" class="slct-box">
+									<span class="txt">이메일선택</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
 						</div>
-						<div class="validation-txt">validation 메시지 노출</div>
+						<div class="validation-txt">이메일 주소를 확인해주세요</div>
 					</div>
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
