@@ -1130,7 +1130,7 @@ button {
   height: 16px;
 }
 .bank-wrap .img-box img {
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 .bank-wrap .txt {
   font-size: 14px;
@@ -2835,9 +2835,6 @@ input::placeholder {
 .input-control.disabled .input-field {
   opacity: 0.4;
 }
-.input-control.disabled .btn-field-dropdown {
-  opacity: 0.4;
-}
 .input-control .input-row:has(input:disabled) {
   border-bottom: 2px solid var(--dt-gray08);
 }
@@ -2854,7 +2851,8 @@ input::placeholder {
 .input-row:has(.btn-field-dropdown) {
   padding: 0;
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown {
+
+.btn-field-dropdown {
   width: 100%;
   min-height: 44px;
   padding: 4px 0;
@@ -2864,31 +2862,25 @@ input::placeholder {
   background-position: right 2px center;
   text-align: left;
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown:active {
+.btn-field-dropdown:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown .ico {
+.btn-field-dropdown .ico {
   display: none;
   width: 24px;
   height: 24px;
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown .ico img {
+.btn-field-dropdown .ico img {
   width: 100%;
   transform: translateY(-2px);
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown .txt {
+.btn-field-dropdown .txt {
   color: var(--dt-gray11);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
-}
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .ico {
-  display: inline-block;
-}
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .txt {
-  color: var(--dt-gray16);
 }
 
 /* dropdown 선택 버튼 영역 */
