@@ -1,5 +1,7 @@
 @import "../scss/base/mixin";
 
+.page-wrapper .container .section__cont {padding-top:56px;}
+
 .info-col-wrap {
 	.col {
 		row-gap:16px;
@@ -59,5 +61,49 @@
 		.input-row {
 			justify-content:center;
 		}
+	}
+}
+
+// 휴대폰결제변경내역_TAB UI
+.list-payment {
+	margin-top:20px;
+	.card.solid {
+		row-gap:8px;
+		padding:18px 24px 22px;
+		.row {
+			justify-content:space-between;
+			flex-wrap:wrap;
+			gap:8px;
+			&.detail {
+				.txt-title {color: var(--dt-gray11);}
+			}
+		}
+		.txt-title {
+			@include fw-5(14px);
+			color:var(--dt-gray16);
+		}
+		.txt-date {
+			color: var(--dt-gray11);
+			@include fw-5(12px);
+			line-height:150%;
+			padding-bottom:4px;
+		}
+		.txt-desc {
+			@include flexRow;
+			justify-content:flex-end;
+			align-items:center;
+			column-gap:2px;
+			margin-left:auto;
+			color:var(--dt-gray16);
+			@include fw-5(14px);
+			.img-box {width:16px;min-width:16px;height:16px;}
+		}
+		.color-prim {font-weight:600;}
+	}
+}
+.segment__wrap {margin-top:10px;}
+.segment-content {
+	.list-payment {
+		margin-top:2px;
 	}
 }

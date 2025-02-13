@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/moPaymentSetting.css">
+    
+    <!-- Scripts -->
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="section__cont">
+                <div class="cont__wrap cont__wrap-service">
+                    <div class="tabnav__wrap">
+						<ul class="tabnav">
+							<li class="tab"><a href="javascript:void(0)" role="button" class="">차단/해제 내역</a></li>
+							<li class="tab"><a href="javascript:void(0)" role="button" class="active">결제 한도 내역</a></li>
+						</ul>
+					</div>
+                </div>
+                <div class="cont__wrap">
+                    <div class="segment__wrap">
+                        <div class="segnav">
+                            <input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
+                            <label for="seg1" class="segment">일반/정기 결제</label>
+                            
+                            <input type="radio" class="seg-trigger seg2" id="seg2" name="tab" checked>
+                            <label for="seg2" class="segment">스토어/콘텐츠 결제</label>
+                            
+                            <div class="marker-box">
+                                <div class="marker"></div>
+                            </div>
+                        </div>
+						<div class="segment-content">
+							<div class="list-payment">
+								<div class="card solid">
+									<div class="txt-date">
+										<span>24년 N월 N일</span>
+										<span>NN:NN</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 한도</span>
+										<span class="txt-desc">
+											<span>20만원</span>
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-handarrow-right16.svg" alt="">
+											</span>
+											<span class="color-prim">30만원</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 사유</span>
+										<span class="txt-desc">
+											<span>고객요청</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 경로</span>
+										<span class="txt-desc">
+											<span>당신의 U+앱</span>
+										</span>
+									</div>
+								</div>
+								
+								<div class="card solid">
+									<div class="txt-date">
+										<span>24년 N월 N일</span>
+										<span>NN:NN</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 한도</span>
+										<span class="txt-desc">
+											<span>10만원</span>
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-handarrow-right16.svg" alt="">
+											</span>
+											<span class="color-prim">20만원</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 사유</span>
+										<span class="txt-desc">
+											<span>고객요청</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 경로</span>
+										<span class="txt-desc">
+											<span>ARS</span>
+										</span>
+									</div>
+								</div>
+
+								<div class="card solid">
+									<div class="txt-date">
+										<span>24년 N월 N일</span>
+										<span>NN:NN</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 한도</span>
+										<span class="txt-desc">
+											<span>20만원</span>
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-handarrow-right16.svg" alt="">
+											</span>
+											<span class="color-prim">10만원</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 사유</span>
+										<span class="txt-desc">
+											<span>고객요청</span>
+										</span>
+									</div>
+									<div class="row detail">
+										<span class="txt-title">변경 경로</span>
+										<span class="txt-desc">
+											<span>당신의 U+앱</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </div>
+					
+                </div>
+            </div>
+
+            <!-- 토스트 팝업// -->
+            <div class="toast-wrap">
+				<div class="toast">
+					<div class="toast-txt">
+						계좌번호를 입력해 주세요
+						<!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
+					<button class="btn btn-util close" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>

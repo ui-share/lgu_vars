@@ -634,7 +634,7 @@ button {
 	}
 	.col {
 		row-gap:8px;
-		&.accordion-container {margin-top:20px;}
+		&:has(> .list-plan) {margin-top:20px;padding-top:20px;border-top:1px solid var(--dt-gray06);}
 	}
 	.txt-plan {
 		margin-bottom:4px;
@@ -658,7 +658,6 @@ button {
 		}
 	}
 	.list-plan {
-		&.accordion-content {margin-bottom:12px;}
 		&.line {
 			.row {
 				&:not(:first-of-type) {
@@ -948,5 +947,36 @@ button {
 	.txt {
 		@include fw-5(14px);
 		color: var(--dt-black);
+	}
+}
+.list-payment {
+	@include flexColum;
+	row-gap:12px;
+	.info-col-wrap {
+		.row {
+			.txt-title {
+				align-self:flex-start;
+				color:var(--dt-gray14);
+				line-height:21px;
+			}
+			.txt-price {
+				@include fw-7(16px);
+				line-height:24px;
+				text-align:right;
+			}
+			&.total {
+				.txt-title {
+					color:var(--dt-gray11);
+					&.bold {
+						font-size:16px;
+						color:var(--dt-gray16);
+					}
+				}
+				.txt-price {
+					font-size:18px;
+					line-height:21px;
+				}
+			}
+		}
 	}
 }
