@@ -237,13 +237,17 @@ input::placeholder {
 }
 
 // 드롭다운
+.input-row:has(.btn-field-dropdown) {
+	padding: 0;
+}
 .btn-field-dropdown {
+	width: 100%;
+	min-height: 44px;s
+	padding: 4px 0;
 	background-image: url(../images/icon/chevron_down_line_24.svg);
 	background-size: 24px;
 	background-repeat: no-repeat;
 	background-position: right 2px center;
-	width: 100%;
-	height: 100%;
 	text-align: left;
 	&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
 	.ico {
