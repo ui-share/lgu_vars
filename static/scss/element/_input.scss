@@ -262,9 +262,7 @@ input::placeholder {
 	&.disabled {
 		border-color: var(--dt-gray08);
 		.slct-box {
-			// .txt {
-
-			// }
+			opacity: 0.4;
 		}
 	}
 }
@@ -336,9 +334,9 @@ input::placeholder {
 		}
 		// span이 3개일 때
 		&:has(span:nth-child(3):last-child) * {
-			// flex: 1 33.333333%;
+			flex: 1 33.333333%;
 			&:last-child {
-				min-width: auto;
+				min-width: 34px;
 			}
 		}
 	}
@@ -499,10 +497,10 @@ input::placeholder {
 }
 
 @media screen and (max-width:359px) {
-	.slct-box-wrap {
-		.slct-box {
-			min-width: fit-content;
-			width: 12.5rem;
-		}
+	.slct-box {
+		width: calc(100% - 10px);
 	}
+	.multi-box{ 
+		width: calc(100% + 10px);
+	}	
 }

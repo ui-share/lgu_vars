@@ -2870,6 +2870,10 @@ input::placeholder {
 .slct-control.disabled {
   border-color: var(--dt-gray08);
 }
+.slct-control.disabled .slct-box {
+  opacity: 0.4;
+}
+
 .slct-label {
   font-size: 12px;
   font-weight: 600;
@@ -2944,8 +2948,11 @@ input::placeholder {
 .slct-box .txt:has(span:nth-child(2):last-child) * {
   flex: 1 50%;
 }
+.slct-box .txt:has(span:nth-child(3):last-child) * {
+  flex: 1 33.333333%;
+}
 .slct-box .txt:has(span:nth-child(3):last-child) *:last-child {
-  min-width: auto;
+  min-width: 34px;
 }
 .slct-box .arrow {
   display: inline-block;
@@ -3112,9 +3119,11 @@ input::placeholder {
 }
 
 @media screen and (max-width: 359px) {
-  .slct-box-wrap .slct-box {
-    min-width: fit-content;
-    width: 12.5rem;
+  .slct-box {
+    width: calc(100% - 10px);
+  }
+  .multi-box {
+    width: calc(100% + 10px);
   }
 }
 .popup-wrapper {
