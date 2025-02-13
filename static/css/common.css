@@ -2791,7 +2791,6 @@ input::placeholder {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 0 0;
-  margin-right: 4px;
 }
 .input-control.success .input-row {
   border-bottom: 2px solid var(--dt-success);
@@ -2799,6 +2798,7 @@ input::placeholder {
 .input-control.success .validation-txt {
   display: inline-flex;
   color: var(--dt-success);
+  gap: 4px;
 }
 .input-control.success .validation-txt:before {
   background-image: url(../images/icon/ic-check_circle_16.svg);
@@ -2809,6 +2809,7 @@ input::placeholder {
 .input-control.error .validation-txt {
   display: inline-flex;
   color: var(--dt-error);
+  gap: 4px;
 }
 .input-control.error .validation-txt:before {
   background-image: url(../images/icon/ic-error_circle_16.svg);
@@ -2960,6 +2961,7 @@ input::placeholder {
 
 .email-form .input-group {
   display: flex;
+  gap: 4px;
 }
 .email-form .input-row {
   width: 100%;
@@ -3006,17 +3008,6 @@ input::placeholder {
 }
 .code .validation-txt {
   text-align: left;
-}
-
-.btn-field-dropdown {
-  padding-top: 12px;
-}
-.btn-field-dropdown .ico {
-  display: inline-block;
-  margin-right: 2px;
-}
-.btn-field-dropdown .txt {
-  color: var(--dt-gray16);
 }
 
 .btn-field-dropdown {

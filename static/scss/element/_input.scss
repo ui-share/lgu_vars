@@ -169,7 +169,6 @@ input::placeholder {
 			background-repeat: no-repeat;
 			background-size: 100%;
 			background-position: 0 0;
-			margin-right: 4px;
 		}	
 	}
 	// 상태별 스타일
@@ -180,6 +179,7 @@ input::placeholder {
 		.validation-txt {
 			display: inline-flex;
 			color: var(--dt-success);
+			gap: 4px;
 			&:before {
 				background-image: url(../images/icon/ic-check_circle_16.svg);
 			}
@@ -192,6 +192,7 @@ input::placeholder {
 		.validation-txt {
 			display: inline-flex;
 			color: var(--dt-error);
+			gap: 4px;
 			&:before {
 				background-image: url(../images/icon/ic-error_circle_16.svg);
 			}
@@ -349,6 +350,7 @@ input::placeholder {
 .email-form {
 	.input-group {
 		display: flex;
+		gap: 4px;
 	}
 	.input-row {
 		width: 100%;
@@ -399,16 +401,7 @@ input::placeholder {
 
 
 
-.btn-field-dropdown {// 은행/증권사 선택시
-	padding-top:12px;
-	.ico {
-		display:inline-block;
-		margin-right:2px;
-	}
-	.txt {
-		color: var(--dt-gray16);
-	}
-}
+// 드롭다운
 .btn-field-dropdown {
 	padding:9px 0;
 	background-image: url(../images/icon/chevron_down_line_24.svg);
