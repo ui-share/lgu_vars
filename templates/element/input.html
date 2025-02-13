@@ -39,10 +39,10 @@
 							** 유효성 검사 에러 : error<br/>							
 							** 읽기 전용 : disabled<br/>
 							** 비활성 : disabled<br/>
-					
 
-					<br/><br/><br/><br/><h2>[기본 상태]</h2>
-					<!--  -->
+					<br/><br/><br/><br/>
+					
+					<h2>[기본 상태]</h2>
 					<div class="input-control">
 						<div class="input-group">
 							<label class="input-label">레이블</label>
@@ -50,15 +50,15 @@
 								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off">
 								<div class="util-box">									
 									<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">값</span> 
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[포커스 상태]</h2>
@@ -67,18 +67,18 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" autofocus >
+								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off">
 								<div class="util-box">									
 									<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">값</span> 
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[입력중 상태]</h2>
@@ -87,38 +87,38 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="내용입력중" autofocus>
+								<input type="text" class="input-field" placeholder="플레이스 홀더" value="내용입력중" autocomplete="off">
 								<div class="util-box">									
-									<button type="button" class="clear-btn "></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">값</span> 
+									<button type="button" class="clear-btn"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[포커스 아웃 상태]</h2>
 					<!--  -->
-					<div class="input-control ">
+					<div class="input-control">
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="입력값">
+								<input type="text" class="input-field" placeholder="플레이스 홀더" value="내용입력중" autocomplete="off">
 								<div class="util-box">									
 									<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">값</span> 
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 					
 					<br/><br/><br/><br/><h2>[비활성 상태]</h2>
@@ -127,20 +127,18 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" autofocus value="입력값">
-								<div class="util-box">										
-									<div class="util-box">									
-										<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-										<span class="input-unit">원</span> 
-										<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-										<div class="btn-group">
-											<button class="btn btn-md is-disabled" type="button"><span class="txt">검색</span></button>
-										</div>
+								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" disabled>
+								<div class="util-box">									
+									<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+									<span class="input-unit hidden">값</span> 
+									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[읽기전용 상태]</h2>
@@ -149,18 +147,18 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" autofocus value="입력값">
-								<div class="util-box">
+								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="입력값" readonly>
+								<div class="util-box">									
 									<button type="button" class="clear-btn hidden"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">원</span> 
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md is-disabled" type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
 
@@ -171,18 +169,18 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="입력값">
-								<div class="util-box">
-									<button type="button" class="clear-btn "></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">원</span> 
+								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off">
+								<div class="util-box">									
+									<button type="button" class="clear-btn"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>성공메세지가 노출됩니다.</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 					
 					<br/><br/><br/><br/><h2>[에러 상태]</h2>
@@ -190,179 +188,121 @@
 						<div class="input-group">
 							<label class="input-label">레이블</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" autofocus value="내용입력중">
-								<div class="util-box">
+								<input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off">
+								<div class="util-box">									
 									<button type="button" class="clear-btn"></button><!-- 1글자 이상 입력 시, [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-									<span class="input-unit">원</span> 
+									<span class="input-unit hidden">값</span> 
 									<span class="input-unit hidden"><span class="unit-point">1</span>/<span>1</span></span>
-									<div class="btn-group">
-										<button class="btn btn-md " type="button"><span class="txt">검색</span></button>
+									<div class="btn-group hidden">
+										<button class="btn btn-md" type="button"><span class="txt">검색</span></button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>에러메세지가 노출됩니다.</span></div>
+						<div class="validation-txt">validation 메시지</div>
 					</div>
 
-					<div style="height: 100px;"></div>
-				</div>
-			</div>
-
-
-
-
-			
-
-
-			
-			<div class="input-control normal tltip-error">				
-				<div class="input-group">
-					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
-					<div class="input-row">
-						<input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다." />
-						<div class="util-box">
-							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-							<button type="button" class="clear-btn hidden"></button>
-							<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-							<span class="input-unit hidden">
-								<span class="unit-point">1</span>단위가늘어납니다
-							</span>
+					<br/><br/><br/><br/><h2>[이메일 폼]</h2>
+					<!-- input email -->
+					<div class="input-control email-form">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<button type="button" class="slct-box">
+									<span class="txt">이메일선택</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
 						</div>
+						<div class="validation-txt">이메일 주소를 확인해주세요</div>
 					</div>
-					<!-- 
-						<div class="util-box"> : clear button 과 unit이 들어감 
-					-->
-				</div>
-				<div class="validation-txt">validation 메시지 노출</div>
-			</div>
-			<div style="height: 100px;"></div>
-			<!-- input floating -->
-			<div class="input-control floating tltip-error">				
-				<div class="input-group">
-					<label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
-					<div class="input-row">
-						<input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다." />
-						<div class="util-box">
-							<!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-							<button type="button" class="clear-btn hidden"></button>
-							<!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-							<span class="input-unit hidden">
-								<span class="unit-point">1</span>단위가늘어납니다
-							</span>
+
+					<br/><br/><br/><br/>
+					<!-- 드롭다운 버튼 케이스 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다-->
+					<div class="input-control">
+						<div class="input-group">
+							<label class="input-label">은행/증권사</label>
+							<div class="input-row">
+								<!-- <input type="button" class="input-field" placeholder="은행명" /> -->
+								<button type="button" class="btn-field-dropdown">
+									<span class="ico">
+										<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+									</span>
+									<span class="txt">
+										은행/증권사 선택
+										<!-- 신한은행 -->
+									</span>
+								</button>
+							</div>
 						</div>
+						<div class="validation-txt">validation 메시지 노출</div>
 					</div>
-					<!-- 
-						<div class="util-box"> : clear button 과 unit이 들어감 
-					-->
-				</div>
-				<div class="validation-txt">validation 메시지 노출</div>
-			</div>
-			
-			<!-- input email -->
-			<div class="input-control email-form">
-				<div class="input-group">
-					<label class="input-label">이메일</label>
-					<div class="input-row">
-						<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
-						<div class="util-box">
-							<button type="button" class="clear-btn hidden"></button>
-						</div>
-					</div>
-				</div>
-				<button class="slct-email-wrap">
-					<span class="slct-txt" type="button">직접 입력</span>
-					<span class="slct-txt point hidden" type="button">@hotmail.com</span>
-				</button>
-				<div class="validation-txt">validation 메시지 노출</div>
-			</div>
-			<div style="height: 100px;"></div>
 
-			<!-- 드롭다운 버튼 케이스 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다-->
-			<!-- 바텀시트 내 옵션 선택 시 floating > normal 로 바뀐다 -->
-			<div class="input-control floating">
-				<div class="input-group">
-					<label class="input-label">은행/증권사</label>
-					<div class="input-row">
-						<!-- <input type="button" class="input-field" placeholder="은행명" /> -->
-						<button type="button" class="btn-field-dropdown">
-							<span class="ico">
-								<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
-							</span>
-							<span class="txt">
-								은행/증권사 선택
-								 <!-- 신한은행 -->
-							</span>
-						</button>
-						<!-- <div class="util-box hidden">
-							<button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가
-							<button type="button" class="clear-btn hidden"></button>
-							<span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가
-							<span class="input-unit hidden">
-								<span class="unit-point">1</span>단위가늘어납니다
-							</span>
-						</div> -->
-					</div>
-					<!-- 
-						<div class="util-box"> : clear button 과 unit이 들어감 
-					-->
-				</div>
-				<div class="validation-txt">validation 메시지 노출</div>
-			</div>
-
-			<div style="height: 100px;"></div>
-
-			<!-- 드롭다운 박스 -->
-			@@@@@ 퍼블 공지 @@@@<br/><br/>
-			[[ 상태 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어합니다.<br/><br/>
-				** 포커스 : focused <br/>							
-				** 에러 : error<br/>							
-				** 비활성 : disabled<br/>
-			<button class="slct-perd-wrap">
-				<span class="slct-txt" type="button">이메일선택</span>
-				<!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
-				<!-- 
-				<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-				-->
-				<span class="slct-txt point hidden" type="button">이메일 선택</span>
-
-			</button>
-
-			<div style="height: 100px;"></div>
-			<h2>[싱글 드롭다운]</h2>			
-			<div class="slct-control">
-				<div class="slct-label">
-					신청 월
-				</div>
-				<div class="slct-box-wrap">
-					<button type="button" class="slct-box">
-						<!-- <span class="txt"><span>시작 월</span></span> -->
-						<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-						<span class="arrow"></span>								
+					<br/><br/><br/><br/>
+					<!-- 드롭다운 박스 -->
+					@@@@@ 퍼블 공지 @@@@<br/><br/>
+					[[ 상태 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어합니다.<br/><br/>
+						** 포커스 : focused <br/>							
+						** 에러 : error<br/>							
+						** 비활성 : disabled<br/>
+					<button class="slct-perd-wrap">
+						<span class="slct-txt" type="button">이메일선택</span>
+						<!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
+						<!-- 
+						<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
+						-->
+						<span class="slct-txt point hidden" type="button">이메일 선택</span>
 					</button>
+		
+					<br/><br/><br/><br/>
+					<h2>[싱글 드롭다운]</h2>			
+					<div class="slct-control">
+						<div class="slct-label">
+							신청 월
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+								<span class="arrow"></span>								
+							</button>
+						</div>
+					</div>
+					
+					
+					<br/><br/><br/><br/>
+					<h2>[멀티 드롭다운]</h2>			
+					<div class="slct-control">
+						<div class="slct-label">
+							신청 월
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+								<span class="arrow"></span>								
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<span class="arrow"></span>								
+								</button>
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div style="height: 100px;"></div>
-			<h2>[멀티 드롭다운]</h2>			
-			<div class="slct-control">
-				<div class="slct-label">
-					신청 월
-				</div>
-				<div class="slct-box-wrap">
-					<button type="button" class="slct-box">
-						<!-- <span class="txt"><span>시작 월</span></span> -->
-						<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-						<span class="arrow"></span>								
-					</button>
-					<span class="multi-box">
-						<span class="hyphen">~</span>
-						<button type="button" class="slct-box">
-							<!-- <span class="txt"><span>종료 월</span></span> -->
-							<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-							<span class="arrow"></span>								
-						</button>
-					</span>
-				</div>
-			</div>
+			
+
+
 		</div>
 		<!-- //container -->
 	

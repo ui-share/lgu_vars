@@ -43,6 +43,7 @@
 		.popup-tit {
 			@include flexBox(start, center);
 			padding: 8px 0;
+			gap: 8px;
 			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);

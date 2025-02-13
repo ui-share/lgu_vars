@@ -11,176 +11,176 @@
 	<title>조회_휴대폰 결제이용내역_일반/정기 결제</title>
 
 	<!-- Css -->
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/moPaymentUsed.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/moPaymentUsed.css">
 
-    <!-- Scripts -->
+	<!-- Scripts -->
 
 </head>
 <body>
-    <div class="page-wrapper">
+	<div class="page-wrapper">
 		<!-- header -->
-        <header class="header">
-            <div class="header__util">
-                <button type="button" class="btn btn-util prev"><span>이전</span></button>
-            </div>
-            <div class="header__btn btn-group">
-                <button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
-            </div>
-        </header>
-        <!-- //header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
-            <!-- 홀맨 배너 영역// -->
-            <div class="section__cont summary"><!-- 청구요금조회 -->
-                <div class="cont__wrap cont__wrap-bill">
-                    <div class="select-billdate"><span class="txt-due"></span></div>
-                    <div class="cont__txt-box">
-                        <span class="txt-select-wrap">
-                            <button type="button" class="chips chips-date">
-                                <span class="txt">24년 03월</span>
-                                <span class="arrow"></span>
-                            </button>
-                        </span>
+			<!-- 홀맨 배너 영역// -->
+			<div class="section__cont summary"><!-- 청구요금조회 -->
+				<div class="cont__wrap cont__wrap-bill">
+					<div class="select-billdate"><span class="txt-due"></span></div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<button type="button" class="chips chips-date">
+								<span class="txt">24년 03월</span>
+								<span class="arrow"></span>
+							</button>
+						</span>
 						<h4 class="txt price">
                             <span class="txt-sub">일반/정기</span>
-                            <span class="deco-sub">30,000</span>
-                            <span class="color-prim">원</span>
-						</h4>
-					</div>
-                    <div class="cont__txt-box">
-						<h4 class="txt price">
-                            <span class="txt-sub">스토어/콘텐츠</span> 
                             <span class="deco">30,000</span>
                             <span class="color-prim">원</span>
 						</h4>
 					</div>
+					<div class="cont__txt-box">
+						<h4 class="txt price">
+							<span class="txt-sub">스토어/콘텐츠</span> 
+							<span class="deco">30,000</span>
+							<span class="color-prim">원</span>
+						</h4>
+					</div>
 				</div>
-            </div>
+			</div>
 
-            <div class="section__cont segment">
-                <div class="cont__wrap">
-                    <div class="con__tit-box">
-                        <h6 class="tit-head">
-                            <span class="txt-title">휴대폰 결제 이용내역</span>
-                        </h6> 
-                    </div>
-                    <div class="segment__wrap">
-                        <div class="segnav">
-                            <input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
-                            <label for="seg1" class="segment">일반/정기 결제</label>
-                            
-                            <input type="radio" class="seg-trigger seg2" id="seg2" name="tab">
-                            <label for="seg2" class="segment">스토어/콘텐츠 결제</label>
-                            
-                            <div class="marker-box">
-                                <div class="marker"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="cont__wrap cont__wrap-segment">
-                    <!-- 일반/정기 결제 tab content -->
-                    <!-- 이용 내역 있을 때 -->
-                    <div class="list-payment">
-                        <div class="info-col-wrap">
-                            <span class="row total">
-                                <span class="txt-title">총 청구요금</span>
-                                <span class="txt-price">
-                                    총 30,000원
-                                </span>
-                            </span>
-                        </div>
-                        <div class="card solid payUsed">
-                            <div class="used-date">
-                                24년 N월 N일 NN:NN
-                            </div>
-                            <div class="card-body">
-                                <div class="used-info">
-                                    <span class="used-name">결제 항목명</span>
-                                    <span class="used-won">NN,000원</span>
-                                </div>
-                                <span class="paid-status">
-                                    정상승인
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card solid payUsed">
-                            <div class="used-date">
-                                24년 N월 N일 NN:NN
-                            </div>
-                            <div class="card-body">
-                                <div class="used-info">
-                                    <span class="used-name">결제 항목명</span>
-                                    <span class="used-won">NN,000원</span>
-                                </div>
-                                <span class="paid-status">
-                                    정상승인
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card solid payUsed">
-                            <div class="used-date">
-                                24년 N월 N일 NN:NN
-                            </div>
-                            <div class="card-body">
-                                <div class="used-info">
-                                    <span class="used-name">결제 항목명</span>
-                                    <span class="used-won">NN,000원</span>
-                                </div>
-                                <span class="paid-status">
-                                    정상승인
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card solid payUsed">
-                            <div class="used-date">
-                                24년 N월 N일 NN:NN
-                            </div>
-                            <div class="card-body">
-                                <div class="used-info">
-                                    <span class="used-name">결제 항목명</span>
-                                    <span class="used-won">NN,000원</span>
-                                </div>
-                                <span class="paid-status">
-                                    정상승인
-                                </span>
-                            </div>
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn line" type="button">
-                                <span class="txt">더보기</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- 이용 내역 없을 때 -->
-                    <!-- <div class="list-payment">
-                        <div class="info-col-wrap">
-                            <span class="row total">
-                                <span class="txt-title">총 청구요금</span>
-                                <span class="txt-price">
-                                    총 0원
-                                </span>
-                            </span>
-                        </div>
-                        <div class="card solid center">
-                            <div class="card-body">
-                                <span class="img-box">
-                                    <img src="../../../../static/images/icon/ic-card-bill_x.png" alt="결제 이용 내역 없음">
-                                </span>
-                                <div class="text-box">
-                                    <span class="txt">결제 이용 내역이 없어요</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+			<div class="section__cont segment">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">휴대폰 결제 이용내역</span>
+						</h6> 
+					</div>
+					<div class="segment__wrap">
+						<div class="segnav">
+							<input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
+							<label for="seg1" class="segment">일반/정기 결제</label>
+							
+							<input type="radio" class="seg-trigger seg2" id="seg2" name="tab">
+							<label for="seg2" class="segment">스토어/콘텐츠 결제</label>
+							
+							<div class="marker-box">
+								<div class="marker"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap cont__wrap-segment">
+					<!-- 일반/정기 결제 tab content -->
+					<!-- 이용 내역 있을 때 -->
+					<div class="list-payment">
+						<div class="info-col-wrap">
+							<span class="row total">
+								<span class="txt-title">총 청구요금</span>
+								<span class="txt-price">
+									총 30,000원
+								</span>
+							</span>
+						</div>
+						<div class="card solid payUsed">
+							<div class="used-date">
+								24년 N월 N일 NN:NN
+							</div>
+							<div class="card-body">
+								<div class="used-info">
+									<span class="used-name">결제 항목명</span>
+									<span class="used-won">NN,000원</span>
+								</div>
+								<span class="paid-status">
+									정상승인
+								</span>
+							</div>
+						</div>
+						<div class="card solid payUsed">
+							<div class="used-date">
+								24년 N월 N일 NN:NN
+							</div>
+							<div class="card-body">
+								<div class="used-info">
+									<span class="used-name">결제 항목명</span>
+									<span class="used-won">NN,000원</span>
+								</div>
+								<span class="paid-status">
+									정상승인
+								</span>
+							</div>
+						</div>
+						<div class="card solid payUsed">
+							<div class="used-date">
+								24년 N월 N일 NN:NN
+							</div>
+							<div class="card-body">
+								<div class="used-info">
+									<span class="used-name">결제 항목명</span>
+									<span class="used-won">NN,000원</span>
+								</div>
+								<span class="paid-status">
+									정상승인
+								</span>
+							</div>
+						</div>
+						<div class="card solid payUsed">
+							<div class="used-date">
+								24년 N월 N일 NN:NN
+							</div>
+							<div class="card-body">
+								<div class="used-info">
+									<span class="used-name">결제 항목명</span>
+									<span class="used-won">NN,000원</span>
+								</div>
+								<span class="paid-status">
+									정상승인
+								</span>
+							</div>
+						</div>
+						<div class="btn-group">
+							<button class="btn line" type="button">
+								<span class="txt">더보기</span>
+							</button>
+						</div>
+					</div>
+					<!-- 이용 내역 없을 때 -->
+					<!-- <div class="list-payment">
+						<div class="info-col-wrap">
+							<span class="row total">
+								<span class="txt-title">총 청구요금</span>
+								<span class="txt-price">
+									총 0원
+								</span>
+							</span>
+						</div>
+						<div class="card solid center">
+							<div class="card-body">
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-card-bill_x.png" alt="결제 이용 내역 없음">
+								</span>
+								<div class="text-box">
+									<span class="txt">결제 이용 내역이 없어요</span>
+								</div>
+							</div>
+						</div>
+					</div> -->
 
-                </div>
-            </div>
-            <!-- <div class="section__cont">
-            </div> -->
+				</div>
+			</div>
+			<!-- <div class="section__cont">
+			</div> -->
 		</div>
 		<!-- //container -->
 	</div>
