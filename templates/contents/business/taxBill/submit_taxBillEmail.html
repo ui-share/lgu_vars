@@ -21,7 +21,7 @@
 		<!-- header -->
 		<header class="header">
 			<div class="header__util">
-				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
 			</div>
 			<div class="header__btn btn-group">
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
@@ -39,68 +39,82 @@
 							입력해 주세요
 						</h4>
 					</div>
-					<div class="txt-infoWrap">
-						발급 기간
+
+					<!-- 발급 기간 입력 -->
+					<div class="input-row-wrap mt-28">
+						<!-- 
+							[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+								** 포커스 : focused 
+								** 유효성 검사 성공 : success
+								** 유효성 검사 에러 : error
+								** 읽기 전용 : disabled
+								** 비활성 : disabled
+								기본 : <div class="input-control">
+								포커스 : <div class="input-control focused">
+								비활성, 읽기 전용 : <div class="input-control focused">
+								유효성 검사 성공 : <div class="input-control success">
+								유효성 검사 에러 : <div class="input-control error">
+						-->
+						<div class="input-control ">							
+							<div class="input-group">
+								<label class="input-label">시작 월 입력</label>
+								<div class="input-row">
+									<input type="text" class="input-field" placeholder="YYYYMM" focus>
+									<div class="util-box">										
+										<button type="button" class="clear-btn hidden"></button>
+										<!--<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제-->
+									</div>
+								</div>
+							</div>
+							<div class="validation-txt">validation 메시지 노출</div>
+						</div>
+						<span class="hyphen">~</span>
+						<div class="input-control">
+							<div class="input-group">
+								<label class="input-label">종료 월 입력</label>
+								<div class="input-row">
+									<input type="text" class="input-field" placeholder="YYYYMM">
+									<div class="util-box">
+										<button type="button" class="clear-btn hidden"></button>
+										<!-- 
+											<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+										-->
+									</div>
+								</div>
+							</div>
+							<div class="validation-txt">validation 메시지 노출</div>
+						</div>
 					</div>
-					<!-- 캘린더에서 월일자 선택시 텍스트 노출되는 영역 -->
-					<button class="slct-perd-wrap">
-						<span class="slct-perd">
-							<span class="slct-txt" type="button">월 선택</span>
-							<!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-						</span>
-						<span class="slct-perd">
-							<span class="hyphen">~</span>
-							<span class="slct-txt" type="button">월 선택</span>
-							<!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-						</span>
-					</button>
-					<!-- 
-						input에 대한 이벤트 정보는
-						./templates/element/input.html
-						페이지 주석 참고
-						
-						이메일폼 관련 클래스 요약
-						기본 : <div class="input-control email-form">
-						이메일 입력 : <div class="input-control email-form focused">
-						유효성 검사 성공 : <div class="input-control email-form success">
-						유효성 검사 에러 : <div class="input-control email-form error">
-					-->
+
 					<!-- 이메일 입력 -->
 					<div class="input-control email-form mt-28">				
 						<div class="input-group">
 							<label class="input-label">이메일</label>
 							<div class="input-row">
-								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autocomplete='off' />
-								<div class="util-box">
-									<!-- 
-										<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
-									-->
-										<button type="button" class="clear-btn hidden"></button>
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+								<div class="util-box">									
+									<button type="button" class="clear-btn hidden"></button>
+									<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
 								</div>
 							</div>
-							<button class="slct-email-wrap">
-								<span class="slct-txt" type="button">이메일선택</span>
-							<!-- 
-								<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-							-->
-								<span class="slct-txt point hidden" type="button">이메일 선택</span>
+							<!-- 이메일 선택 후 done 클래스 추가 : <button type="button" class="slct-box done"><span class="txt">@naver.com</span> -->							
+							<button type="button" class="slct-box">
+								<span class="txt">이메일 선택</span>
+								<span class="arrow"></span>								
 							</button>
 						</div>
 						<div class="validation-txt">validation 메시지 노출</div>
 					</div>
 				</div>
+
 				<div class="cont__wrap cont__wrap-btBtn">
+					<!-- full 
+						## 키보드 노출시 : 풀 버튼 ##
+							<div class="btn-group flex-row is-confirm full">
+						## 키보드 미노출시: 일반 버튼 ##
+							<div class="btn-group flex-row is-confirm">
+					-->
 					<div class="btn-group flex-row is-confirm">
-						<!-- 
-							## 버튼 형태 class (input 입력 키패드 노출 상태 버튼 형태 변경 필요) 
-							input focus 시 full 추가: <div class="btn-group flex-row is-confirm full">
-						-->
 						<button class="btn btn-prim is-disabled" type="button">
 							<span class="txt">납부확인서 신청</span>
 						</button>
@@ -112,27 +126,28 @@
 					</div>
 				</div>
 			</div>
-			<!-- 
-				toast 상태 class : 기본 display:none 상태				
-				toast in(show 모션) show : <div class="toast-wrap show">
-				toast out(out 모션 X)    : <div class="toast-wrap">
-			-->
-			<div class="toast-wrap" tabindex="-1">
-				<div class="toast">
-					<div class="toast-txt">
-						토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다.
-						<!-- 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
-					</div>
-					<!-- 
-						####### 퍼블공지 #######
-						버튼 사용하지 않을 경우 hidden 클래스 추가 
-						<button class="btn btn-util close hidden">
-					-->
-					<button class="btn btn-util close" type="button" alt="닫기"></button>
-				</div>
-			</div>
 		</div>
 		<!-- //container -->
+	</div>
+
+	<!-- 
+		toast 상태 class : 기본 display:none 상태				
+		toast in(show 모션) show : <div class="toast-wrap show">
+		toast out(out 모션 X)    : <div class="toast-wrap">
+	-->
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">
+				토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다.
+				<!-- 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+			</div>
+			<!-- 
+				####### 퍼블공지 #######
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
 	</div>
 </body>
 </html>
