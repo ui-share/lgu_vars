@@ -780,8 +780,10 @@ button {
 .plan-wrap .col {
   row-gap: 8px;
 }
-.plan-wrap .col.accordion-container {
+.plan-wrap .col:has(> .list-plan) {
   margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--dt-gray06);
 }
 .plan-wrap .txt-plan {
   margin-bottom: 4px;
@@ -813,9 +815,6 @@ button {
 .plan-wrap .txt-plan .total i {
   display: inline-block;
   margin-right: 2px;
-}
-.plan-wrap .list-plan.accordion-content {
-  margin-bottom: 12px;
 }
 .plan-wrap .list-plan.line .row:not(:first-of-type) {
   padding-top: 16px;
@@ -1137,6 +1136,34 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-black);
+}
+
+.list-payment {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+.list-payment .info-col-wrap .row .txt-title {
+  align-self: flex-start;
+  color: var(--dt-gray14);
+  line-height: 21px;
+}
+.list-payment .info-col-wrap .row .txt-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: right;
+}
+.list-payment .info-col-wrap .row.total .txt-title {
+  color: var(--dt-gray11);
+}
+.list-payment .info-col-wrap .row.total .txt-title.bold {
+  font-size: 16px;
+  color: var(--dt-gray16);
+}
+.list-payment .info-col-wrap .row.total .txt-price {
+  font-size: 18px;
+  line-height: 21px;
 }
 
 /* btn-group button */
