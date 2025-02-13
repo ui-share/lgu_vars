@@ -104,6 +104,23 @@
 .cont__wrap.cont__wrap-cms .con__tit-box.flex-column .text-box .txt {
   font-size: 16px;
 }
+.cont__wrap.pauseTemp {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+.cont__wrap.pauseTemp .info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 12px;
+}
+.cont__wrap.pauseTemp .info-wrap .txt-tit {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+}
 
 .txt-infoWrap {
   font-size: 12px;

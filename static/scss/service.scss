@@ -111,6 +111,29 @@
 				}
 			}
 		}
+	}
+	&.pauseTemp {
+		margin-top: 28px;
+		@include flexColum();
+		row-gap: 24px;
+		// .input-control {
+		// 	.input-group {
+		// 		padding-top: 16px;
+		// 	}
+		// 	&.floating {
+		// 		.input-group {
+		// 			padding-top: 0;
+		// 		}
+		// 	}
+		// }
+		.info-wrap {
+			@include flexBox(between, center);
+			column-gap: 12px;
+			.txt-tit {
+				@include fw-6(16px);
+				line-height: 1.2;
+				color: var(--dt-gray16);
+		}
 	}	
 }
 

@@ -288,10 +288,18 @@ input::placeholder {
 		}
 	}
 }
-.slct-label {
+.slct-label-box {
+	@include flexBox(start, center);
+	flex-wrap: wrap;
+	column-gap: 8px;
 	@include fw-6(12px);
 	line-height: 1.2;
-	color: var(--dt-gray11);
+	.label-tit {
+		color: var(--dt-gray11);
+	}
+	.label-desc {
+		color: var(--dt-gray10);
+	}
 }
 .slct-box-wrap {
 	@include flexBox(between, center);

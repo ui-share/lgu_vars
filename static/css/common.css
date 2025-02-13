@@ -294,6 +294,10 @@ button {
   margin-top: 12px !important;
 }
 
+.mt-16 {
+  margin-top: 16px !important;
+}
+
 .mt-24 {
   margin-top: 24px !important;
 }
@@ -824,7 +828,7 @@ button {
   margin-top: 16px;
 }
 .plan-wrap .list-plan.line .row .txt-desc {
-  max-width: 162px;
+  max-width: 166px;
 }
 .plan-wrap .list-plan.desc {
   padding-top: 16px;
@@ -2911,11 +2915,21 @@ input::placeholder {
   opacity: 0.4;
 }
 
-.slct-label {
+.slct-label-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 8px;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
+}
+.slct-label-box .label-tit {
   color: var(--dt-gray11);
+}
+.slct-label-box .label-desc {
+  color: var(--dt-gray10);
 }
 
 .slct-box-wrap {

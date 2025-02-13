@@ -209,6 +209,7 @@ button {
 .ml-auto {margin-left: auto !important;}
 .mt-8 {margin-top: 8px !important;}
 .mt-12 {margin-top: 12px !important;}
+.mt-16 {margin-top: 16px !important;}
 .mt-24 {margin-top: 24px !important;}
 .mt-28 {margin-top: 28px !important;}
 .mt-40 {margin-top: 40px !important;}
@@ -665,7 +666,7 @@ button {
 					border-top:1px solid var(--dt-gray06);
 				}
 				& + .row {margin-top:16px;}
-				.txt-desc {max-width:162px;}
+				.txt-desc {max-width:166px;}
 			}
 		}
 		&.desc {

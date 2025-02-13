@@ -36,6 +36,9 @@
 .section__cont.summary .cont__wrap-billMthdChng {
   background-image: url(../images/img/img-hm-bill.png);
 }
+.section__cont.summary .cont__wrap-pauseTemp {
+  background-image: url(../images/img/img-hm-pauseTemp.png);
+}
 .section__cont.summary .cont__wrap-MOPaymentUsed {
   background-image: url(../images/img/img-hm-MOpayment.png);
   background-position: right -5px top 16px;
