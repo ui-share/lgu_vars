@@ -1,7 +1,35 @@
-.page-wrapper .container .section__cont {
+.page-wrapper .container .section__cont:first-child {
   padding-top: 56px;
 }
 
+.info-col-wrap:has(.info-price) .col {
+  row-gap: 10px;
+  padding-top: 4px;
+}
+.info-col-wrap:has(.info-price) .col > .txt-title {
+  padding-bottom: 10px;
+  line-height: 120%;
+}
+.info-col-wrap:has(.info-price) .col .row .txt-title, .info-col-wrap:has(.info-price) .col .row .txt-desc {
+  color: var(--dt-gray14);
+  font-size: 14px;
+  font-weight: 500;
+}
+.info-col-wrap:has(.info-price) .col + .info-price.total-last {
+  margin-top: 8px;
+  padding-top: 20px;
+}
+.info-col-wrap:has(.info-price) .col + .info-price.total-last .txt-price {
+  line-height: 120%;
+}
+.info-col-wrap:has(.info-price) .col + .info-price.total-last:after {
+  bottom: unset;
+  top: 0;
+  width: 100%;
+}
+.info-col-wrap:has(.info-price) .btn-group {
+  margin-top: 8px;
+}
 .info-col-wrap .col {
   row-gap: 16px;
 }

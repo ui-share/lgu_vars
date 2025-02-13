@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/moPaymentSetting.css">
+
+     <!-- Scripts -->
+     <script src="../../../../static/js/tooltip/popper.js"></script>
+     <script>
+         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+         function initCheckDevice() {
+             // PC
+             if (!isMobile) {
+                 document.body.classList.add("is-pc");
+             }
+         }
+         window.onload = ()=> {
+            initCheckDevice();
+
+            /*
+                임시코드입니다. 수정하여 사용 요망
+            */
+
+            // 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+            const tooltipBtn = document.querySelector('.btn-tooltip'); 
+            const tooltip = document.querySelector('.tooltip-wrap');
+        
+            const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                placement: 'bottom',
+                modifiers: [
+                    {
+                        name: 'offset',
+                        options: {
+                            offset: [0, 8],
+                        },
+                    },
+                    {
+                        name: 'flip',
+                        options: {
+                            fallbackPlacements: ['top', 'bottom'],
+                        },
+                    },
+                ],
+            });
+
+            function show() {
+                // Make the tooltip visible
+                tooltip.setAttribute('data-show', '');
+
+                // Enable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: true },
+                    ],
+                }));
+
+                // Update its position
+                popperInstance.update();
+            }
+
+            function hide() {
+                // Hide the tooltip
+                tooltip.removeAttribute('data-show');
+
+                // Disable the event listeners
+                popperInstance.setOptions((options) => ({
+                    ...options,
+                    modifiers: [
+                        ...options.modifiers,
+                        { name: 'eventListeners', enabled: false },
+                    ],
+                }));
+            }
+
+            const showEvents = ['click', 'focus'];
+            const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+            showEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, show);
+            });
+
+            hideEvents.forEach((event) => {
+                tooltipBtn.addEventListener(event, hide);
+            });
+         }
+     </script>
+
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <!-- 홀맨 배너 영역// -->
+            <div class="section__cont summary"><!-- 청구요금조회 -->
+                <div class="cont__wrap cont__wrap-MOPaymentUsed">
+                    <div class="select-billdate"><span class="txt-due"></span></div>
+                    <div class="cont__txt-box">
+                        <span class="txt">휴대폰 선결제<button class="img-box btn-tooltip"><img src="../../../../static/images/icon/ic-circle-quesition-gray13.svg" alt=""></button>
+                            <!--
+                                const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+                                    // placement: 'bottom', 으로 툴팁 위치 조작
+                                    
+                                    현재 디자인 케이스 : top, right, bottom
+                                }
+                            -->
+                            <span class="tooltip-wrap" data-popper-placement="top" style="position: absolute; inset: auto auto 0px 0px; transform: translate3d(256.5px, -438px, 0px);">
+                                <!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="right"> -->
+                                <div class="tooltip">
+                                    <div class="tooltip-inner">
+                                        <span class="txt-wrap">
+                                            일반/정기 결제, 스토어/콘텐츠 결제 한도 변경 소진 고객이 당월 이용 금액을 
+                                            선결제(미리 납부)할 경우, 선결제한 금액만큼 잔여 한도가 복원되어 일반/정기 결제를 추가로 이용할 수 있는 서비스
+                                        </span>
+                                        <button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+                                    </div>
+                                    <div data-popper-arrow="" style="position: absolute; left: 0px; transform: translate3d(0px, 0px, 0px);"></div>
+                                </div>
+                            </span>
+                        </span>
+						
+                        
+                        <h4 class="txt price">
+                            <span class="deco deco-sub">가능금액</span>을 확인해 보세요
+						</h4>
+					</div>
+				</div>
+            </div>
+
+            <div class="section__cont desc">
+                <div class="cont__wrap cont__wrap-vertical">
+                    <div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">
+								<span class="color-prim">12월</span>
+								요금 상세
+							</span>
+						</h6>
+						<ul class="bullet-list info">
+							<li class="bullet-item">
+								본인 명의의 카드만 등록 가능합니다
+							</li>
+						</ul>
+					</div>
+
+                    <div class="info-col-wrap">
+                        <div class="col">
+                            <span class="txt-title">일반/정기 결제</span>
+                            <div class="row">
+                                <span class="txt-title">이용 금액</span>
+                                <span class="txt-desc">
+                                    <span>50만원</span>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="txt-title">결제 한도</span>
+                                <span class="txt-desc">
+                                    <span>100만원</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">선결제 가능금액</span>
+								<span class="txt-price">
+									<span>50만원</span>
+								</span>
+							</span>
+						</div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-md">
+                                <span class="txt">일반/정기 선결제</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="info-col-wrap">
+                        <div class="col">
+                            <span class="txt-title">스토어/콘텐츠 결제</span>
+                            <div class="row">
+                                <span class="txt-title">이용 금액</span>
+                                <span class="txt-desc">
+                                    <span>50만원</span>
+                                </span>
+                            </div>
+                            <div class="row">
+                                <span class="txt-title">결제 한도</span>
+                                <span class="txt-desc">
+                                    <span>100만원</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">선결제 가능금액</span>
+								<span class="txt-price">
+									<span>50만원</span>
+								</span>
+							</span>
+						</div>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-md">
+                                <span class="txt">스토어/콘텐츠 선결제</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 디바이더 영역 -->
+            <div class="section__divider"></div>
+
+            <!-- 상담 영역 -->
+            <div class="section__cont counsel">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">아래 메뉴도 추천해요</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+					<div class="card-group">
+                        <div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment_setting.png" alt="휴대폰 결제 설정">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰 결제 설정</h3>
+									<p class="txt">차단ㆍ차단해제 및<br>한도변경</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment_history.png" alt="휴대폰 결제 이용내역">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰 결제<br>이용내역</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-counsel accordion-container">
+					<div class="con__tit-box accordion-header" role="button" tabindex="0">
+						<span class="txt-sub">문의사항을 찾기 어려우신가요</span>
+						<h6 class="tit-head">
+							<span class="txt-title">다른 상담채널을 이용해 보세요</span>
+						</h6>
+						<div class="tit-tail">
+							<span class="img-box ico-toggle">
+								<img src="../../../../static/images/icon/ic-councel-down.svg" alt="">
+							</span>
+						</div>
+					</div>
+					<div class="card-group threeby accordion-content">
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-chatbot2.svg" alt="챗봇 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">챗봇 상담</span>
+									<span class="txt">대기없이 바로</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-ars-ai.svg" alt="AI 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">AI 상담</span>
+									<span class="txt">언제든지 빠른</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-calls.png" alt="전화 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">전화 상담</span>
+									<span class="txt">상세하고 친절한</span>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="chips chips-tag hidden">
+									<span class="txt">점심시간</span>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+
+	</div>
+</body>
+</html>

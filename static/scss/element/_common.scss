@@ -735,19 +735,19 @@ button {
 		justify-content: space-between;
 		align-items:center;
 		flex-wrap:wrap;
-		&.title-wrap {
-			align-items: center;
-			.txt-title {
-				color:var(--dt-gray12);
-				@include fw-5();
-				line-height:24px;
-			}
-			.chips.neutral {background-color:transparent;}
-			.current {color:var(--dt-black);}
-			.total {
-				margin-left:2px;
-				color:var(--dt-gray11);
-			}
+		&.title-wrap {align-items: center;}
+	}
+	.title-wrap {
+		.txt-title {
+			color:var(--dt-gray12);
+			@include fw-5();
+			line-height:24px;
+		}
+		.chips.neutral {background-color:transparent;}
+		.current {color:var(--dt-black);}
+		.total {
+			margin-left:2px;
+			color:var(--dt-gray11);
 		}
 	}
 	.txt-title {
