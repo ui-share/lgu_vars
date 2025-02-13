@@ -2,6 +2,9 @@
 .page-wrapper .container .section__cont {
   padding: 92px 0 155px;
 }
+.page-wrapper .container .section__cont.finish {
+  padding-top: 92px;
+}
 
 .section__cont.scan {
   position: relative;
