@@ -3111,6 +3111,12 @@ input::placeholder {
   margin-bottom: 0;
 }
 
+@media screen and (max-width: 359px) {
+  .slct-box-wrap .slct-box {
+    min-width: fit-content;
+    width: 12.5rem;
+  }
+}
 .popup-wrapper {
   display: none;
   position: fixed;
