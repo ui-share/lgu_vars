@@ -897,19 +897,19 @@ button {
 .info-col-wrap .row.title-wrap {
   align-items: center;
 }
-.info-col-wrap .row.title-wrap .txt-title {
+.info-col-wrap .title-wrap .txt-title {
   color: var(--dt-gray12);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
 }
-.info-col-wrap .row.title-wrap .chips.neutral {
+.info-col-wrap .title-wrap .chips.neutral {
   background-color: transparent;
 }
-.info-col-wrap .row.title-wrap .current {
+.info-col-wrap .title-wrap .current {
   color: var(--dt-black);
 }
-.info-col-wrap .row.title-wrap .total {
+.info-col-wrap .title-wrap .total {
   margin-left: 2px;
   color: var(--dt-gray11);
 }
@@ -2839,6 +2839,9 @@ input::placeholder {
 .input-control.disabled .input-field {
   opacity: 0.4;
 }
+.input-control.disabled .btn-field-dropdown {
+  opacity: 0.4;
+}
 .input-control .input-row:has(input:disabled) {
   border-bottom: 2px solid var(--dt-gray08);
 }
@@ -2852,34 +2855,44 @@ input::placeholder {
   border-bottom: 2px solid var(--dt-gray08);
 }
 
-.btn-field-dropdown {
+.input-row:has(.btn-field-dropdown) {
+  padding: 0;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown {
+  width: 100%;
+  min-height: 44px;
+  padding: 4px 0;
   background-image: url(../images/icon/chevron_down_line_24.svg);
   background-size: 24px;
   background-repeat: no-repeat;
   background-position: right 2px center;
-  width: 100%;
-  height: 100%;
   text-align: left;
 }
-.btn-field-dropdown:active {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.btn-field-dropdown .ico {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .ico {
   display: none;
   width: 24px;
   height: 24px;
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.btn-field-dropdown .ico img {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .ico img {
   width: 100%;
   transform: translateY(-2px);
 }
-.btn-field-dropdown .txt {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .txt {
   color: var(--dt-gray11);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .ico {
+  display: inline-block;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .txt {
+  color: var(--dt-gray16);
 }
 
 /* dropdown 선택 버튼 영역 */
@@ -3005,7 +3018,7 @@ input::placeholder {
 
 .email-form .input-group {
   display: flex;
-  gap: 4px;
+  gap: 8px;
 }
 .email-form .input-row {
   width: 100%;
