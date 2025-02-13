@@ -11,6 +11,12 @@
   z-index: 999;
 }
 
+.accnt-username {
+  color: var(--dt-gray16);
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .cont__wrap.wd-full .con__tit-box {
   padding-top: 20px;
   padding-left: 20px;

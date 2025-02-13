@@ -1404,12 +1404,12 @@ button {
   padding: 8px;
   background-color: var(--dt-gray07);
 }
-.btn-between.bg-bank .txt-wrap .img-box {
-  width: 24px;
-  height: 24px;
-}
 .btn-between.bg-bank .txt-wrap .txt {
   margin-left: 2px;
+}
+.btn-between.bg-bank .img-box {
+  width: 24px;
+  height: 24px;
 }
 .btn-between.btn-payment {
   padding: 16px 20px;
@@ -4094,7 +4094,6 @@ table td {
   flex-direction: row;
   column-gap: 4px;
   align-items: center;
-  width: calc(100% - 32px);
 }
 .tooltip-wrap .txt-wrap .ico, .bubble-box .txt-wrap .ico {
   align-self: flex-start;
@@ -4106,6 +4105,15 @@ table td {
   background-size: 100%;
 }
 
+.tooltip-wrap .txt-wrap:has(.ico) {
+  width: calc(100% - 32px);
+}
+
+.bubble-box .txt-wrap:has(.ico) {
+  width: 100%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
 .bubble-box.show {
   display: block;
 }
