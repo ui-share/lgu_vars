@@ -113,6 +113,12 @@
   font-size: 30px;
   line-height: 1.2;
 }
+.cont__wrap .cont__txt-box .txt.price .deco-sub {
+  font-size: 22px;
+  font-weight: 700;
+  margin-right: 2px;
+  line-height: 1.5;
+}
 .cont__wrap .cont__txt-box .txt.price .color-prim {
   font-size: 30px;
   line-height: 1.2;
