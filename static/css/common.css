@@ -3023,7 +3023,7 @@ input::placeholder {
 
 .email-form .input-group {
   display: flex;
-  gap: 4px;
+  gap: 8px;
 }
 .email-form .input-row {
   width: 100%;
