@@ -55,47 +55,47 @@
         }
 	}
 }
-.popup-wrapper {
-    .popup__wrap {
-        .popup-body {
-            padding: 4px 20px 20px 20px;
-            .appPaid-wrap {
-                background-color: var(--dt-gray02);
-                border-radius: 8px;
-                padding: 24px 20px;
-                .appStore {
-                    padding: 18px 20px;
-                    background-color: var(--dt-white);
-                    border: none;
-                    border-radius: 8px;
-                    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
-                    .txt-wrap {
-                        gap: 4;
-                        .txt {
-                            @include fw-5(14px);
-                            line-height: 21px;
-                            color: var(--dt-black);
-                        }
-                    }
-                }
-                .info-box {
-                    @include flexBox();
-                    flex-wrap: wrap;
-                    gap: 6px;
-                    margin-top: 24px;
-                    margin-bottom: 45px;
-                    .txt {
-                        @include fw-5(16px); line-height: 17px;
-                        color: var(--dt-black);
-                    }
-                    .img-box {
-                        img {
-                            width: 20px;
-                            height: 20px;
-                            vertical-align: middle;
-                        }
-                    }
-                }
+.appPaid-wrap {
+    background-color: var(--dt-gray02);
+    border-radius: 8px;
+    padding: 24px 20px;
+    .appStore {
+        padding: 18px 20px;
+        background-color: var(--dt-white);
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+        .txt-wrap {
+            gap: 4px;
+            .txt {
+                @include fw-5(14px);
+                line-height: 21px;
+                color: var(--dt-black);
+            }
+        }
+        .img-box {
+            img {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .info-box {
+        @include flexBox();
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 24px;
+        margin-bottom: 45px;
+        .txt {
+            @include fw-5(16px); line-height: 17px;
+            color: var(--dt-black);
+        }
+        .img-box {
+            img {
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
             }
         }
     }

@@ -55,31 +55,33 @@
   padding: 4px 6px;
 }
 
-.popup-wrapper .popup__wrap .popup-body {
-  padding: 4px 20px 20px 20px;
-}
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap {
+.appPaid-wrap {
   background-color: var(--dt-gray02);
   border-radius: 8px;
   padding: 24px 20px;
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore {
+.appPaid-wrap .appStore {
   padding: 18px 20px;
   background-color: var(--dt-white);
   border: none;
   border-radius: 8px;
   box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore .txt-wrap {
-  gap: 4;
+.appPaid-wrap .appStore .txt-wrap {
+  gap: 4px;
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .appStore .txt-wrap .txt {
+.appPaid-wrap .appStore .txt-wrap .txt {
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   color: var(--dt-black);
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box {
+.appPaid-wrap .appStore .img-box img {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.appPaid-wrap .info-box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,13 +90,13 @@
   margin-top: 24px;
   margin-bottom: 45px;
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box .txt {
+.appPaid-wrap .info-box .txt {
   font-size: 16px;
   font-weight: 500;
   line-height: 17px;
   color: var(--dt-black);
 }
-.popup-wrapper .popup__wrap .popup-body .appPaid-wrap .info-box .img-box img {
+.appPaid-wrap .info-box .img-box img {
   width: 20px;
   height: 20px;
   vertical-align: middle;
