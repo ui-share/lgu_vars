@@ -114,6 +114,7 @@
 				row-gap: 4px;
 				color: var(--dt-gray14);
 				.deco {margin-right:2px;font-size:30px;line-height:1.2;}
+				.deco-sub {@include fw-7(22px);margin-right:2px;line-height:1.5;}
 				.color-prim {font-size:30px;line-height:1.2;}
 				&:has(.deco + .color-prim) {
 					.color-prim {@include fw-6(18px);line-height:1.2;}
