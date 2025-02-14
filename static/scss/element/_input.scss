@@ -320,7 +320,7 @@ input::placeholder {
 }
 .multi-box{ 
 	display: flex;
-    align-items: center;
+	align-items: center;
 	margin-left: auto;
 	width: calc(50% + 10px);
 	.hyphen { 
@@ -500,11 +500,11 @@ input::placeholder {
 		}
 	}
 }
-.auth_birth {
+.auth_birth, .auth_number {
 	> .txt {
-		@include fw-6(24px);
+		@include fw-6(20px);
 		color: var(--dt-black);
-		line-height: 1.4;
+		line-height: 1.5;
 		margin-bottom: 0;
 	}
 }
