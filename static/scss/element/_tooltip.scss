@@ -230,7 +230,6 @@ div[data-popper-arrow]::before {
 	}
 	.error + .bubble-box.topleft,
 	.error + .bubble-box.topright{
-		border: 1px solid orange;
 		bottom:calc(100% - 36px) !important;
 	}
 }
