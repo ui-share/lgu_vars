@@ -31,7 +31,7 @@
 	
 		<!-- container -->
 		<div class="container">
-            <div class="section__cont">
+            <div class="section__cont desc">
                 <div class="cont__wrap cont__wrap-service">
                     <div class="cont__txt-box">
 						<h4 class="txt">
@@ -96,57 +96,66 @@
                             <div class="validation-txt">validation 메시지 노출</div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- focused + 은행/카드사 Chip + error -->
+                <div class="cont__wrap">
+                    <!-- 납부할 금액 입력영역 -->
+                    <div class="cont__txt-box">
+                        <h4 class="txt">
+                            납부할 금액을 입력해 주세요
+                        </h4> 
+                    </div>
                     <div class="input-col-wrap">
-                        <div class="input-control error">
+                        <div class="input-control error"><!-- 포커스 시 focused 클래스로 변경 -->
                             <div class="input-group">
-                                <label class="input-label">카드번호</label>
+                                <label class="input-label">납부 금액</label>
                                 <div class="input-row">
-                                    <input type="tel" class="input-field" placeholder="카드번호 입력">
+                                    <input type="tel" class="input-field" placeholder="납부 금액"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
                                     <div class="util-box">
-                                        <button type="button" class="clear-btn"></button>
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
                                         <span class="input-unit hidden">
                                             <span class="unit-point">1</span>단위가늘어납니다
                                         </span>
                                     </div>
                                 </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
                             </div>
-
-                            <!-- 카드번호 입력 시 노출 -->
+                            <div class="notice-txt">
+                                <span>잔여요금 <span>60,000원</span></span></div>
                             <div class="chips-group">
-                                <button type="button" class="chips chips-bank">
-                                    <span class="ico-bank shinhan">로고아이콘</span>
-                                    <span class="txt">신한카드</span>
-                                </button>
-
-                                <button type="button" class="chips chips-bank">
-                                    <span class="ico-bank kb">로고아이콘</span>
-                                    <span class="txt">국민카드</span>
-                                </button>
-
-                                <button type="button" class="chips chips-bank">
-                                    <span class="ico-bank hana">로고아이콘</span>
-                                    <span class="txt">하나카드</span>
+                                <button type="button" class="chips chips-tag tag-lg primary">
+                                    <span class="txt">전액</span>
                                 </button>
                             </div>
-                            <div class="validation-txt">validation 메시지 노출</div>
+                            <span class="bubble-box topleft show"><!-- input-control error 시 show 추가-->
+                                <!-- <span class="bubble-box topleft show"> -->
+                                <span class="txt-wrap">
+                                    <span class="ico"></span>
+                                    잔여요금 이상 납부할 수 없어요
+                                </span>
+                                <div class="bubble-box-arrow"></div>
+                            </span>
                         </div>
 
-                        <div class="input-control floating">	
+                        <!-- 드롭다운 버튼 Case : 클릭 시 할부기간팝업 출력
+                         : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
+                         <div class="input-control focused">
                             <div class="input-group">
-                                <label class="input-label">유효기간 입력</label>
+                                <label class="input-label">할부기간</label>
                                 <div class="input-row">
-                                    <input type="tel" class="input-field" placeholder="유효기간 입력">
-                                    <div class="util-box">
-                                        <button type="button" class="clear-btn hidden"></button>
-                                        <span class="input-unit hidden">
-                                            <span class="unit-point">1</span>단위가늘어납니다
+                                    <button type="button" class="btn-field-dropdown done">
+                                    <!-- 할부기간선택완료시 : <button type="button" class="btn-field-dropdown done"></button> -->
+                                        <span class="value">
+                                            <span class="txt">일시불</span>
                                         </span>
-                                    </div>
+                                        <span class="txt">할부기간 선택</span>
+                                    </button>
                                 </div>
                             </div>
-                            <div class="validation-txt">validation 메시지 노출</div>
                         </div>
                     </div>
                 </div>

@@ -2661,7 +2661,7 @@ button {
 .input-col-wrap .segment__wrap {
   padding-top: 14px;
 }
-.input-col-wrap:has(.bubble-box) input:valid {
+.input-col-wrap:has(.bubble-box) input[type=text]:valid {
   color: var(--dt-error) !important;
 }
 
@@ -4299,10 +4299,10 @@ div[data-popper-arrow]::before {
   width: 100%;
 }
 
-.error + .bubble-box.topleft,
-.error + .bubble-box.topright {
+.error .bubble-box.topleft,
+.error .bubble-box.topright {
   max-width: max-content;
-  bottom: calc(100% - 34px) !important;
+  bottom: calc(100% - 16px) !important;
 }
 
 .chckbox-area .bubble-box.topleft {
@@ -4328,9 +4328,5 @@ div[data-popper-arrow]::before {
     width: 100%;
     padding-left: 0;
     padding-right: 0px;
-  }
-  .error + .bubble-box.topleft,
-  .error + .bubble-box.topright {
-    bottom: calc(100% - 36px) !important;
   }
 }

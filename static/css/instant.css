@@ -1,6 +1,19 @@
 .page-wrapper .container .section__cont {
   padding: 72px 0 95px;
 }
+.page-wrapper .container .section__cont .cont__wrap.cont__wrap-service {
+  padding-bottom: 40px;
+}
+.page-wrapper .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
+  margin-top: 24px;
+  gap: 16px;
+}
+.page-wrapper .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
+  padding-bottom: 10px;
+}
+.page-wrapper .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
+  padding-bottom: 0;
+}
 
 .cont__wrap .cont__txt-box .txt {
   font-size: 20px;

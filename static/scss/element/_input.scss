@@ -21,7 +21,7 @@
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
 	&:has(.bubble-box) {
-		input:valid{
+		input[type="text"]:valid{
 			color:var(--dt-error) !important;
 		}
 	}
