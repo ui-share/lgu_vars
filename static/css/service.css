@@ -2,6 +2,9 @@
 .page-wrapper .container .section__cont {
   padding: 72px 0 155px;
 }
+.page-wrapper .container .section__cont.finish {
+  padding-top: 92px;
+}
 
 .section__cont.scan {
   position: relative;
@@ -120,6 +123,7 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 1.2;
+  color: var(--dt-gray16);
 }
 
 .txt-infoWrap {

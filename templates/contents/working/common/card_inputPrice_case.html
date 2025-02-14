@@ -36,16 +36,16 @@
                     <div class="cont__txt-box">
 						<h4 class="txt">
 							납부할 금액을 입력해 주세요<br />
-                            선결제할 금액을 입력해 주세요
+                            <!-- 선결제할 금액을 입력해 주세요 -->
                             <!-- 페이지별로 타이틀이 상이하게 들어갑니다 -->
 						</h4> 
 					</div>
                     <div class="input-col-wrap">
-                        <div class="input-control floating focused">
+                        <div class="input-control error"><!-- 포커스 시 floating>>focused 클래스 변경 -->
                             <div class="input-group">
                                 <label class="input-label">납부 금액</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="납부 금액">
+                                    <input type="text" class="input-field" placeholder="납부 금액" value="200,000원 납부">
                                     <div class="util-box">
                                         <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                         <button type="button" class="clear-btn hidden"></button>
@@ -68,7 +68,14 @@
                             </div>
                             <!-- <div class="validation-txt">validation 메시지 노출</div> -->
                         </div>
-
+                        <span class="bubble-box topleft show">
+                            <!-- <span class="bubble-box"> -->
+                                <span class="txt-wrap">
+                                    <span class="ico"></span>
+                                    잔여요금 이상 납부할 수 없어요
+                                </span>
+                                <div class="bubble-box-arrow"></div>
+                            </span>
                     </div>
                 </div>
 

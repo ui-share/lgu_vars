@@ -31,7 +31,6 @@
 			@include flexRow;
 			column-gap:4px;
 			align-items:center;
-			width:calc(100% - 32px);
 		}
 		.ico {
 			align-self: flex-start;
@@ -43,7 +42,17 @@
 		}
 	}
 } 
+.tooltip-wrap {
+	.txt-wrap:has(.ico) {
+		width:calc(100% - 32px);
+	}
+}
 .bubble-box {
+	.txt-wrap:has(.ico) {
+		width:100%;
+		padding-left:6px;
+		padding-right:6px;
+	}
 	&.show {display:block}
 	
 	&.topleft {

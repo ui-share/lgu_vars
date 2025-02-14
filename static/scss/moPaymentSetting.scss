@@ -1,7 +1,9 @@
 @import "../scss/base/mixin";
 
 .page-wrapper .container .section__cont:first-child {padding-top:56px;}
-
+.summary {
+	.cont__wrap .cont__txt-box .txt.price .deco {font-size:22px;line-height:150%;}
+}
 .info-col-wrap {
 	&:has(.info-price) {
 		.col {

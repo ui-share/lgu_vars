@@ -1134,7 +1134,7 @@ button {
   height: 16px;
 }
 .bank-wrap .img-box img {
-  transform: translateY(-1px);
+  transform: translateY(0px);
 }
 .bank-wrap .txt {
   font-size: 14px;
@@ -1404,12 +1404,12 @@ button {
   padding: 8px;
   background-color: var(--dt-gray07);
 }
-.btn-between.bg-bank .txt-wrap .img-box {
-  width: 24px;
-  height: 24px;
-}
 .btn-between.bg-bank .txt-wrap .txt {
   margin-left: 2px;
+}
+.btn-between.bg-bank .img-box {
+  width: 24px;
+  height: 24px;
 }
 .btn-between.btn-payment {
   padding: 16px 20px;
@@ -3117,11 +3117,11 @@ input::placeholder {
   margin-top: 28px;
 }
 
-.auth_birth > .txt {
-  font-size: 24px;
+.auth_birth > .txt, .auth_number > .txt {
+  font-size: 20px;
   font-weight: 600;
   color: var(--dt-black);
-  line-height: 1.4;
+  line-height: 1.5;
   margin-bottom: 0;
 }
 
@@ -3944,6 +3944,7 @@ input::placeholder {
 .toast-wrap .toast .toast-txt {
   font-size: 16px;
   font-weight: 500;
+  line-height: 150%;
   width: 100%;
   max-width: 240px;
   color: var(--dt-white);
@@ -4102,7 +4103,6 @@ table td {
   flex-direction: row;
   column-gap: 4px;
   align-items: center;
-  width: calc(100% - 32px);
 }
 .tooltip-wrap .txt-wrap .ico, .bubble-box .txt-wrap .ico {
   align-self: flex-start;
@@ -4114,6 +4114,15 @@ table td {
   background-size: 100%;
 }
 
+.tooltip-wrap .txt-wrap:has(.ico) {
+  width: calc(100% - 32px);
+}
+
+.bubble-box .txt-wrap:has(.ico) {
+  width: 100%;
+  padding-left: 6px;
+  padding-right: 6px;
+}
 .bubble-box.show {
   display: block;
 }
