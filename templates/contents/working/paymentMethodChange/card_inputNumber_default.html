@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>[공통]카드번호 입력_기본화면 | LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+    
+    <!-- Scripts -->
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="section__cont">
+                <div class="cont__wrap cont__wrap-service">
+                    <div class="cont__txt-box">
+						<h4 class="txt">
+							납부할 카드 정보를 입력해 주세요
+						</h4>
+                        <ul class="bullet-list info">
+                            <li class="bullet-item">
+                                본인 명의의 카드만 등록 가능합니다
+                            </li>
+                        </ul>
+					</div>
+                    <div class="input-col-wrap">
+                        <div class="input-control floating"><!-- 포커스 시 floating>>focused 로 변경 -->
+                            <div class="input-group">
+                                <label class="input-label">카드번호</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="카드번호 입력">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+
+                            <!-- 카드번호 입력 시 노출 -->
+                            <div class="chips-group hidden">
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank woori">로고아이콘</span>
+                                    <span class="txt">우리은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank kb">로고아이콘</span>
+                                    <span class="txt">국민은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank hana">로고아이콘</span>
+                                    <span class="txt">하나은행</span>
+                                </button>
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+
+                        <div class="input-control floating"><!-- 포커스 시 floating>>focused 로 변경 -->
+                            <div class="input-group">
+                                <label class="input-label">유효기간 입력</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="유효기간 입력">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-btBtn hidden">
+                    <div class="btn-group flex-row is-confirm">
+                        <button class="btn" type="button">
+                            <span class="txt">다음</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 토스트 팝업// -->
+            <div class="toast-wrap show">
+				<div class="toast">
+					<div class="toast-txt">
+						카드번호를 입력해 주세요
+						<!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
+					<button class="btn btn-util close" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div> 
+</body>
+</html>
