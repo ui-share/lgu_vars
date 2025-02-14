@@ -48,7 +48,7 @@
                             <div class="input-group">
                                 <label class="input-label">계좌번호</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="계좌번호 입력">
+                                    <input type="tel" class="input-field" placeholder="계좌번호 입력">
                                     <div class="util-box">
                                         <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                         <button type="button" class="clear-btn hidden"></button>
@@ -66,23 +66,42 @@
                         </div>
 
 
-                        <!-- 드롭다운 버튼 Default
+                        <!-- 드롭다운 버튼 Case 계좌번호입력완료 or 은행선택팝업에서 선택
                          : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
-                        <div class="input-control floating">
+                         <div class="input-control floating">
                             <div class="input-group">
                                 <label class="input-label">은행/증권사</label>
                                 <div class="input-row">
                                     <button type="button" class="btn-field-dropdown">
-                                        <!-- <span class="ico">
-                                            <img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                                    <!-- 은행선택완료시 : <button type="button" class="btn-field-dropdown done"></button> -->
+                                        <!-- <span class="value">
+                                            <span class="ico">
+                                                <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                                            </span>
+                                            <span class="txt">신한은행</span>
                                         </span> -->
-                                        <span class="txt">
-                                            은행/증권사 선택
-                                            <!-- 신한은행 -->
-                                        </span>
+                                        <span class="txt">은행/증권사 선택</span>
                                     </button>
                                 </div>
                             </div>
+
+                            <!-- 계좌번호 입력 시 노출 -->
+                            <!-- <div class="chips-group hidden">
+                               <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank woori">로고아이콘</span>
+                                    <span class="txt">우리은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank kb">로고아이콘</span>
+                                    <span class="txt">국민은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank hana">로고아이콘</span>
+                                    <span class="txt">하나은행</span>
+                                </button>
+                            </div> -->
                         </div>
                     </div>
                 </div>
