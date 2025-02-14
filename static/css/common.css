@@ -2653,12 +2653,19 @@ button {
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  position: relative;
 }
 .input-col-wrap .input-control:first-of-type {
   margin-top: 18px;
 }
 .input-col-wrap .segment__wrap {
   padding-top: 14px;
+}
+.input-col-wrap .bubble-box.topleft {
+  top: -2px;
+}
+.input-col-wrap:has(.bubble-box) input:valid {
+  color: var(--dt-error) !important;
 }
 
 .input-row-wrap {
@@ -2697,6 +2704,7 @@ input {
   background: transparent;
   font-size: 18px;
   font-weight: 600;
+  font-family: "Pretendard", system-ui, sans-serif;
   color: var(--dt-gray16);
 }
 
@@ -2839,6 +2847,9 @@ input::placeholder {
 .input-control.disabled .input-field {
   opacity: 0.4;
 }
+.input-control.disabled .btn-field-dropdown {
+  opacity: 0.4;
+}
 .input-control .input-row:has(input:disabled) {
   border-bottom: 2px solid var(--dt-gray08);
 }
@@ -2855,8 +2866,7 @@ input::placeholder {
 .input-row:has(.btn-field-dropdown) {
   padding: 0;
 }
-
-.btn-field-dropdown {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown {
   width: 100%;
   min-height: 44px;
   padding: 4px 0;
@@ -2866,25 +2876,39 @@ input::placeholder {
   background-position: right 2px center;
   text-align: left;
 }
-.btn-field-dropdown:active {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.btn-field-dropdown .ico {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value {
   display: none;
+  width: max-content;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico {
+  display: inline-block;
   width: 24px;
   height: 24px;
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.btn-field-dropdown .ico img {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico img {
   width: 100%;
   transform: translateY(-2px);
 }
-.btn-field-dropdown .txt {
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .txt {
+  display: inline-block;
   color: var(--dt-gray11);
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done > .txt {
+  display: none;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .value {
+  display: inline-block;
+}
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown.done .value .txt {
+  color: var(--dt-gray16);
 }
 
 /* dropdown 선택 버튼 영역 */
