@@ -195,38 +195,53 @@
                         </span>
                     </h4>
                     <!-- 인풋박스에 포함된 경우 -->
-                    <div class="input-control normal" style="margin-bottom:60px;">				
-                        <div class="input-group">
-                            <label class="input-label">플레이스홀더가 곧 레이블이 됩니다.</label>
-                            <div class="input-row">
-                                <input type="text" class="input-field" placeholder="플레이스홀더가 곧 레이블이 됩니다.">
-                                <div class="util-box">
-                                    <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
-                                    <button type="button" class="clear-btn hidden"></button>
-                                    <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
-                                    <span class="input-unit hidden">
-                                        <span class="unit-point">1</span>단위가늘어납니다
-                                    </span>
+                    <div class="input-col-wrap">
+                        <!-- input-control : 포커스 시 floating>>focused 클래스 변경 -->
+                        <div class="input-control error"><!-- 에러케이스 : floating>>error 변경 및 bubble-box 출력  -->
+                            <div class="input-group">
+                                <label class="input-label">납부 금액</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="납부 금액" value="50만원 납부"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
                                 </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
                             </div>
-                            <!-- 
-                                <div class="util-box"> : clear button 과 unit이 들어감 
-                            -->
+                            <div class="notice-txt">
+                                <span>선결제 가능 <span>0</span>만원</span></div>
+                            <div class="chips-group">
+                                <button type="button" class="chips chips-tag tag-lg primary">
+                                    <span class="txt">전액</span>
+                                </button>
+                            </div>
+                            <!-- <div class="validation-txt">validation 메시지 노출</div> -->
                         </div>
-
-                        <!-- 인풋박스 validation에 따라서 출력되는 bubble-box
-                            : 조건에 따라 show 클래스 추가 및 삭제
-                        -->
                         <span class="bubble-box topleft show">
-                        <!-- <span class="bubble-box"> -->
+                            <!-- <span class="bubble-box"> -->
                             <span class="txt-wrap">
                                 <span class="ico"></span>
-                                잔여요금 이상 납부할 수 없어요<br>
-                                잔여요금 이상 납부할 수 없어요<br>
+                                선결제 가능금액 이상 결제할 수 없어요
                             </span>
                             <div class="bubble-box-arrow"></div>
                         </span>
                     </div>
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+
                     <!-- 체크박스에 포함된 경우 -->
                     <div class="accordion-container open"><!-- 체크박스 영역의 경우 btn-toggle 클릭 시 accordion-container open 클래스 추가 -->
                         <div class="chckbox-area accordion-header">

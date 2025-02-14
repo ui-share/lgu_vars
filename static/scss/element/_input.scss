@@ -20,7 +20,6 @@
 	position:relative;
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
-	.bubble-box.topleft {top:-2px}
 	&:has(.bubble-box) {
 		input:valid{
 			color:var(--dt-error) !important;

@@ -2661,9 +2661,6 @@ button {
 .input-col-wrap .segment__wrap {
   padding-top: 14px;
 }
-.input-col-wrap .bubble-box.topleft {
-  top: -2px;
-}
 .input-col-wrap:has(.bubble-box) input:valid {
   color: var(--dt-error) !important;
 }
@@ -4124,6 +4121,7 @@ table td {
   align-self: flex-start;
   display: inline-block;
   width: 16px;
+  min-width: 16px;
   height: 16px;
   background-image: url(../images/icon/ic-info-white.svg);
   background-repeat: no-repeat;
@@ -4134,6 +4132,9 @@ table td {
   width: calc(100% - 32px);
 }
 
+.bubble-box {
+  max-height: max-content;
+}
 .bubble-box .txt-wrap:has(.ico) {
   width: 100%;
   padding-left: 6px;
@@ -4298,13 +4299,14 @@ div[data-popper-arrow]::before {
   width: 100%;
 }
 
-.input-control .bubble-box.topleft,
-.input-control .bubble-box.topright {
-  bottom: 42px;
+.error + .bubble-box.topleft,
+.error + .bubble-box.topright {
+  max-width: max-content;
+  bottom: calc(100% - 34px) !important;
 }
 
 .chckbox-area .bubble-box.topleft {
-  bottom: 33px;
+  bottom: calc(100% - 20px) !important;
   left: -12px;
 }
 
@@ -4316,7 +4318,20 @@ div[data-popper-arrow]::before {
 }
 
 @media screen and (max-width: 359px) {
-  .tooltip-wrap, .bubble-box {
+  .tooltip-wrap {
     max-width: 60vw !important;
+  }
+  .bubble-box {
+    max-width: 70vw !important;
+  }
+  .bubble-box .txt-wrap:has(.ico) {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0px;
+  }
+  .error + .bubble-box.topleft,
+  .error + .bubble-box.topright {
+    border: 1px solid orange;
+    bottom: calc(100% - 36px) !important;
   }
 }
