@@ -3394,6 +3394,9 @@ input::placeholder {
 .popup-body .btn {
   /* popup-solid */
 }
+.popup-body .btn.btn-popSolid-md {
+  padding: 12px 20px;
+}
 .popup-body .btn.btn-popSolid {
   display: flex;
   align-items: center;

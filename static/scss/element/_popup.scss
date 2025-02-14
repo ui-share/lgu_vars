@@ -256,6 +256,9 @@
 	}
 	.btn {
 		/* popup-solid */
+		&.btn-popSolid-md { 
+			padding: 12px 20px;
+		}
 		&.btn-popSolid {
 			@include flexBox();
 			padding:16px 20px;
