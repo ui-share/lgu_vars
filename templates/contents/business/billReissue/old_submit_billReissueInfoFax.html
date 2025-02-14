@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+	
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-service">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							청구서 재발행 정보를 입력해 주세요
+						</h4>
+					</div>
+					<div class="slct-control">
+						<div class="slct-label">
+							신청 월
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+								<span class="arrow"></span>								
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<span class="arrow"></span>								
+								</button>
+							</span>
+						</div>
+					</div>
+					<!--						
+						## 입력 폼 관련 클래스 요약
+						기본 : <div class="input-control ">
+						포커스 : <div class="input-control focused">
+						유효성 검사 성공 : <div class="input-control success">
+						유효성 검사 에러 : <div class="input-control error">
+					-->
+					<!-- 연락처 입력 -->
+					<div class="input-control normal">				
+						<div class="input-group">
+							<label class="input-label">팩스</label>
+							<div class="input-row">
+								<input type="tel" class="input-field" placeholder="팩스 번호 입력" autocomplete='off' />
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+									<!-- 
+									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
+									-->
+								</div>
+							</div>
+						</div>
+						<div class="validation-txt"><span>validation 메시지 노출</span></div>
+					</div>
+				</div>								
+				<div class="cont__wrap cont__wrap-btBtn ">
+					<div class="btn-group flex-row is-confirm">
+						<!-- 
+							## 버튼 형태 class (input 입력 키패드 노출 상태 버튼 형태 변경 필요) 
+							input focus 시 full 추가: <div class="btn-group flex-row is-confirm full">
+						-->	
+						<button class="btn btn-prim is-disabled" type="button">
+							<span class="txt">청구서 재발행</span>
+						</button>
+						<!-- 
+							## 버튼 상태 class 
+							버튼 활성 : <button class="btn btn-prim" type="button"> 
+							버튼 비활성 is-disabled : <button class="btn btn-prim is-disabled" type="button">  
+						-->
+					</div>
+				</div>
+				
+			</div>
+			<!-- 
+				toast 상태 class : 기본 display:none 상태				
+				toast in(show 모션) show : <div class="toast-wrap show">
+				toast out(out 모션 X)    : <div class="toast-wrap">
+			-->
+			<div class="toast-wrap" tabindex="-1">
+				<div class="toast">
+					<div class="toast-txt">
+						연락처를 입력해 주세요
+						<!-- 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
+					<button class="btn btn-util close" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
