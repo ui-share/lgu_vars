@@ -2,16 +2,26 @@
 
 // 공통
 .page-wrapper .container .section__cont {
-	padding-top:56px;
+	padding: 72px 0 95px;
 }
-.cont__wrap.cont__wrap-service {
-	padding-bottom:280px;
+// .cont__wrap.cont__wrap-service {
+// 	padding-bottom:280px;
+// }
+.cont__wrap {
+	.cont__txt-box {
+		.txt {
+			@include fw-7(20px);
+		}
+	}
 }
 .cont__wrap.cont__wrap-btBtn {
 	&:has(.accordion-container) {
 		background-color:var(--dt-white);
 		z-index: 999;
 	}
+}
+.list-payment {
+    row-gap: 0;
 }
 
 // 실시간출금 : 예금주명
@@ -21,8 +31,28 @@
 }
 
 // 나의 납부 내역
-.cont__wrap.wd-full{
-	.con__tit-box {padding-top:20px;padding-left:20px;}
+.wd-full {
+	@include flexColum();
+	gap : 12px;
+	.cont__txt-box, .btn-group {
+		padding: 0 20px;
+	}
+}
+.txt-title {
+	@include fw-5();
+	line-height: 1.5;
+	text-align: left;
+}
+.txt-price {	
+	@include fw-7();
+	line-height: 1.5;
+	text-align: right;
+}
+.txt-sub-date {
+	@include fw-5(12px);
+	color: var(--dt-gray10);
+	line-height: 1.5;
+	text-align: left;
 }
 .mypay-list {
 	width:100%;
@@ -30,36 +60,28 @@
 	&:last-of-type {
 		border-bottom:1px solid var(--dt-gray17);
 	}
-	.detail {
-		position:relative;
+	.btn {
+		@include flexRow();
+		gap: 4px;
 		width:100%;
-		padding:20px;
+		padding: 20px 12px 20px 20px;
 		&::after {
+			flex: none;
 			content:'';
 			display:inline-block;
-			position:absolute;
-			top:20px;right:20px;
-			width:20px;height:24px;
-			margin-left:4px;
+			width:24px;
+			height:24px;
 			background-image:url(../images/icon/ic-24-arrow-right-gray10.svg);
-			background-size:24px;
+			background-size: 100%;
 			background-repeat:no-repeat;
-			background-position: center -1px;
+			background-position: center;
 		}
-		.row {
-			width:calc(100% - 24px);
-			justify-content:space-between;
-			.txt-title {
-				@include fw-5();
-				line-height:24px;
-			}
-			.txt-price {
-				text-align:right;
-				@include fw-7();
-				line-height:24px;
-			}
-			& + .row {margin-top:4px;}
-		}
+	}
+	.detail {
+		@include flexColum();
+		gap: 4px;
+		width:100%;		
+		
 		.txt-sub {
 			margin-top:0;
 			margin-left:auto;
@@ -67,10 +89,8 @@
 			font-size:14px;
 			line-height:150%;
 		}
-		.txt-sub-date {
-			color:var(--dt-gray10);
-			@include fw-5(12px);
-			line-height:180%;
-		}
+	}
+	.row {
+		justify-content:space-between;
 	}
 }

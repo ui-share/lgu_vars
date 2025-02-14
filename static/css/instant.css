@@ -1,14 +1,19 @@
 .page-wrapper .container .section__cont {
-  padding-top: 56px;
+  padding: 72px 0 95px;
 }
 
-.cont__wrap.cont__wrap-service {
-  padding-bottom: 280px;
+.cont__wrap .cont__txt-box .txt {
+  font-size: 20px;
+  font-weight: 700;
 }
 
 .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
   background-color: var(--dt-white);
   z-index: 999;
+}
+
+.list-payment {
+  row-gap: 0;
 }
 
 .accnt-username {
@@ -17,9 +22,35 @@
   font-weight: 600;
 }
 
-.cont__wrap.wd-full .con__tit-box {
-  padding-top: 20px;
-  padding-left: 20px;
+.wd-full {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.wd-full .cont__txt-box, .wd-full .btn-group {
+  padding: 0 20px;
+}
+
+.txt-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.txt-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+}
+
+.txt-sub-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dt-gray10);
+  line-height: 1.5;
+  text-align: left;
 }
 
 .mypay-list {
@@ -29,42 +60,29 @@
 .mypay-list:last-of-type {
   border-bottom: 1px solid var(--dt-gray17);
 }
-.mypay-list .detail {
-  position: relative;
+.mypay-list .btn {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 12px 20px 20px;
 }
-.mypay-list .detail::after {
+.mypay-list .btn::after {
+  flex: none;
   content: "";
   display: inline-block;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 20px;
+  width: 24px;
   height: 24px;
-  margin-left: 4px;
   background-image: url(../images/icon/ic-24-arrow-right-gray10.svg);
-  background-size: 24px;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center -1px;
+  background-position: center;
 }
-.mypay-list .detail .row {
-  width: calc(100% - 24px);
-  justify-content: space-between;
-}
-.mypay-list .detail .row .txt-title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-}
-.mypay-list .detail .row .txt-price {
-  text-align: right;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-}
-.mypay-list .detail .row + .row {
-  margin-top: 4px;
+.mypay-list .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
 }
 .mypay-list .detail .txt-sub {
   margin-top: 0;
@@ -73,9 +91,6 @@
   font-size: 14px;
   line-height: 150%;
 }
-.mypay-list .detail .txt-sub-date {
-  color: var(--dt-gray10);
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 180%;
+.mypay-list .row {
+  justify-content: space-between;
 }

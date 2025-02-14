@@ -11,16 +11,16 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/instant.css">
-    <!-- Scripts -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/instant.css">
+	<!-- Scripts -->
 
 </head>
 <body>
-    <div class="page-wrapper">
+	<div class="page-wrapper">
 		<!-- header -->
-        <header class="header">
+		<header class="header">
 			<div class="header__util">
 				<button type="button" class="btn btn-util prev"><span>이전</span></button>
 			</div>
@@ -28,112 +28,116 @@
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
 		</header>
-        <!-- //header -->
+		<!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
-            <!-- 홀맨 배너 영역// -->
-            <div class="section__cont">
-                <div class="cont__wrap cont__wrap-service wd-full">
-                    <div class="cont__txt-box">
-                        <h4 class="txt">나의 납부내역</h4>
-						<p class="tit">최근 1년 동안 나의 납부내역을 확인가능 합니다.</p>
-                    </div>
-					
-					<!-- 내역 5개까지 기분 노출 : 더보기 버튼 클릭 후 전체 노출출 -->
-                    <div class="list-payment">
-                        <!-- 납부 내역 반복복 -->
-                        <div class="mypay-list">
-                            <button type="button" class="detail">
-                                <div class="row">
-                                    <span class="txt-title">
-                                        <span>자동이체</span>(<span>카드</span>)
-                                    </span>
-                                    <span class="txt-price">NN원</span>
-                                </div>
-                                <div class="row">
-                                    <span class="txt-sub-date">
-                                        납부일: <span>NNNN-NN-NN</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="mypay-list">
-                            <button type="button" class="detail">
-                                <div class="row">
-                                    <span class="txt-title">
-                                        <span>자동이체</span>(<span>은행</span>)
-                                    </span>
-                                    <span class="txt-price">NN원</span>
-                                </div>
-                                <div class="row">
-                                    <span class="txt-sub-date">
-                                        납부일: <span>NNNN-NN-NN</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="mypay-list">
-                            <button type="button" class="detail">
-                                <div class="row">
-                                    <span class="txt-title">
-                                        <span>자동이체</span>(<span>카드</span>)
-                                    </span>
-                                    <span class="txt-price">NN원</span>
-                                </div>
-                                <div class="row">
-                                    <span class="txt-sub-date">
-                                        납부일: <span>NNNN-NN-NN</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="mypay-list">
-                            <button type="button" class="detail">
-                                <div class="row">
-                                    <span class="txt-title">
-                                        <span>자동이체</span>(<span>카드</span>)
-                                    </span>
-                                    <span class="txt-price">NN원</span>
-                                </div>
-                                <div class="row">
-                                    <span class="txt-sub-date">
-                                        납부일: <span>NNNN-NN-NN</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-                        <div class="mypay-list">
-                            <button type="button" class="detail">
-                                <div class="row">
-                                    <span class="txt-title">
-                                        <span>자동이체</span>(<span>카드</span>)
-                                    </span>
-                                    <span class="txt-price">NN원</span>
-                                </div>
-                                <div class="row">
-                                    <span class="txt-sub-date">
-                                        납부일: <span>NNNN-NN-NN</span>
-                                    </span>
-                                </div>
-                            </button>
-                        </div>
-						<div class="btn-group">
-							<button class="btn line" type="button">
-								<span class="txt">더보기</span>
+			<!-- 홀맨 배너 영역// -->
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-service wd-full">	
+					<div class="cont__txt-box">
+						<h5 class="txt">나의 납부내역</h5>
+						<ul class="bullet-list info">
+							<li class="bullet-item">
+								최근 1년 동안 나의 납부내역을 확인가능 합니다.
+							</li>
+						</ul>
+					</div>					
+
+					<!-- 내역 5개까지 기q 노출 : 더보기 버튼 클릭 후 전체 노출 -->
+					<div class="list-payment">
+						<!-- 납부 내역 반복 -->
+						<div class="mypay-list">
+							<button type="button" class="btn">
+								<div class="detail">
+									<div class="row">
+										<span class="txt-title">자동이체(카드)</span>
+										<span class="txt-price">9,999,999원</span>
+									</div>
+									<div class="row">
+										<span class="txt-sub-date">
+											납부일: <span>NNNN-NN-NN</span>
+										</span>
+									</div>
+								</div>
 							</button>
 						</div>
-                    </div>
+						<div class="mypay-list">
+							<button type="button" class="btn">
+								<div class="detail">
+									<div class="row">
+										<span class="txt-title">자동이체(카드)</span>
+										<span class="txt-price">9,999,999원</span>
+									</div>
+									<div class="row">
+										<span class="txt-sub-date">
+											납부일: <span>NNNN-NN-NN</span>
+										</span>
+									</div>
+								</div>
+							</button>
+						</div>
+						<div class="mypay-list">
+							<button type="button" class="btn">
+								<div class="detail">
+									<div class="row">
+										<span class="txt-title">자동이체(카드)</span>
+										<span class="txt-price">9,999,999원</span>
+									</div>
+									<div class="row">
+										<span class="txt-sub-date">
+											납부일: <span>NNNN-NN-NN</span>
+										</span>
+									</div>
+								</div>
+							</button>
+						</div>
+						<div class="mypay-list">
+							<button type="button" class="btn">
+								<div class="detail">
+									<div class="row">
+										<span class="txt-title">자동이체(카드)</span>
+										<span class="txt-price">9,999,999원</span>
+									</div>
+									<div class="row">
+										<span class="txt-sub-date">
+											납부일: <span>NNNN-NN-NN</span>
+										</span>
+									</div>
+								</div>
+							</button>
+						</div>
+						<div class="mypay-list">
+							<button type="button" class="btn">
+								<div class="detail">
+									<div class="row">
+										<span class="txt-title">자동이체(카드)</span>
+										<span class="txt-price">9,999,999원</span>
+									</div>
+									<div class="row">
+										<span class="txt-sub-date">
+											납부일: <span>NNNN-NN-NN</span>
+										</span>
+									</div>
+								</div>
+							</button>
+						</div>
+					</div>
+					<div class="btn-group">
+						<button class="btn line" type="button">
+							<span class="txt">더보기</span>
+						</button>
+					</div>
 
-                </div>
-                <div class="cont__wrap cont__wrap-btBtn">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-sec">
-                            <span class="txt">납부 확인서 신청</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
+				</div>
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<button type="button" class="btn" >
+							<span class="txt">납부 확인서 신청</span>
+						</button>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- //container -->
 	</div>

@@ -613,7 +613,7 @@ button {
   color: var(--dt-gray16);
   font-size: 22px;
   font-weight: 600;
-  line-height: 33px;
+  line-height: 1.2;
 }
 .cont__wrap .cont__txt-box .txt .deco {
   font-size: 22px;
