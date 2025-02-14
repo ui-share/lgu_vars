@@ -2896,7 +2896,7 @@ input::placeholder {
   color: var(--dt-gray11);
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 150%;
 }
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown.done > .txt {
   display: none;

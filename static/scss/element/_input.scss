@@ -275,7 +275,7 @@ input::placeholder {
 			display:inline-block;
 			color: var(--dt-gray11);
 			@include fw-6(18px);
-			line-height: 1.2;
+			line-height: 150%;
 		}
 		&.done {
 			> .txt {
