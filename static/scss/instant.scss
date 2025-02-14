@@ -3,10 +3,17 @@
 // 공통
 .page-wrapper .container .section__cont {
 	padding: 72px 0 95px;
+	.cont__wrap.cont__wrap-service {
+		padding-bottom:40px;
+		&:has(.input-col-wrap .chck-group) {
+			.input-col-wrap + .input-col-wrap {
+				margin-top:24px;gap:16px;
+				.accordion-header.chckbox-area {padding-bottom:10px;}
+			}
+			.accordion-content .bullet-list {padding-bottom:0}
+		}
+	}
 }
-// .cont__wrap.cont__wrap-service {
-// 	padding-bottom:280px;
-// }
 .cont__wrap {
 	.cont__txt-box {
 		.txt {

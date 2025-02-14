@@ -46,7 +46,7 @@
 					</div>
 
                     <div class="input-col-wrap">
-                        <div class="input-control">
+                        <div class="input-control floating">
                             <div class="input-group">
                                 <label class="input-label">계좌번호</label>
                                 <div class="input-row">
@@ -69,7 +69,7 @@
 
                         <!-- 드롭다운 버튼 Case 계좌번호입력완료 or 은행선택팝업에서 선택
                          : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
-                        <div class="input-control">
+                         <div class="input-control floating">
                             <div class="input-group">
                                 <label class="input-label">은행/증권사</label>
                                 <div class="input-row">
@@ -85,9 +85,27 @@
                                     </button>
                                 </div>
                             </div>
+
+                            <!-- 계좌번호 입력 시 노출 -->
+                            <!-- <div class="chips-group">
+                               <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank woori">로고아이콘</span>
+                                    <span class="txt">우리은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank kb">로고아이콘</span>
+                                    <span class="txt">국민은행</span>
+                                </button>
+
+                                <button type="button" class="chips chips-bank">
+                                    <span class="ico-bank hana">로고아이콘</span>
+                                    <span class="txt">하나은행</span>
+                                </button>
+                            </div> -->
                         </div>
 
-                        <div class="input-control">
+                        <div class="input-control floating">
                             <div class="input-group">
                                 <label class="input-label">납부 금액</label>
                                 <div class="input-row">
@@ -138,7 +156,7 @@
                             <p class="seg-label">예금주명</p>
                             <span class="accnt-username">김*플</span>
                         </div>
-                        <div class="input-control">
+                        <div class="input-control floating">
                             <div class="input-group">
                                 <label class="input-label">생년월일</label>
                                 <div class="input-row">
@@ -172,47 +190,46 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="input-col-wrap">
-                        <div class="accordion-container open"><!-- 체크박스 영역의 경우 btn-toggle 클릭 시 accordion-container open 클래스 추가 -->
-                            <div class="chckbox-area accordion-header">
-                                <div class="chck-group">
-                                    <input type="checkbox" id="chck01" class="chck-input">
-                                    <label for="chck01" class="chck-label">
-                                        <span class="chck-box"></span>
-                                        전자서명을 위한 고객정보 활용동의
-                                    </label>
-                                </div>
-                                <span class="bubble-box topleft">
-                                    <!-- <span class="bubble-box"> -->
+                <div class="cont__wrap cont__wrap-btBtn">
+                    <div class="accordion-container"><!-- 체크박스 영역의 경우 btn-toggle 클릭 시 accordion-container open 클래스 추가 -->
+                        <div class="chckbox-area accordion-header">
+                            <div class="chck-group">
+                                <input type="checkbox" id="chck01" class="chck-input">
+                                <label for="chck01" class="chck-label">
+                                    <span class="chck-box"></span>
+                                    전자서명을 위한 고객정보 활용동의
+                                </label>
+                            </div>
+                            <span class="bubble-box topleft">
+                                <!-- <span class="bubble-box"> -->
                                     <span class="txt-wrap">
                                         활용동의를 체크해 주세요
                                     </span>
                                     <div class="bubble-box-arrow"></div>
                                 </span>
-                            </div>
-                            <div class="accordion-content">
-                                <ul class="bullet-list">
-                                    <li class="bullet-item">
-                                        은행계좌 자동이체를 선택할 경우, 매달 등록한 계좌에서 LG유플러스 서비스 이용요금이 자동으로 출금됩니다.
-                                    </li>
-                                    <li class="bullet-item">
-                                        은행계좌 자동출금에 동의 후 납부방법이 가능합니다.
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="btn-group">
-                            <button class="btn line btn-md btn-sec" type="button">
-                                <span class="txt">실명확인 계좌 인증</span>
+                            <button type="button" class="btn-toggle">
+                                <span class="img-box ico-toggle">
+                                    <img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
+                                </span>
                             </button>
                         </div>
+                        <div class="accordion-content">
+                            <ul class="bullet-list">
+                                <li class="bullet-item">
+                                    은행계좌 자동이체를 선택할 경우, 매달 등록한 계좌에서 LG유플러스 서비스 이용요금이 자동으로 출금됩니다.
+                                </li>
+                                <li class="bullet-item">
+                                    은행계좌 자동출금에 동의 후 납부방법이 가능합니다.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                </div>
-
-                <div class="cont__wrap cont__wrap-btBtn">
                     <div class="btn-group flex-column is-confirm">
+                        <button class="btn line" type="button">
+                            <span class="txt">실명확인 계좌 인증</span>
+                        </button>
                         <button class="btn btn-prim is-disabled" type="button">
                             <span class="txt">다음</span>
                         </button>
