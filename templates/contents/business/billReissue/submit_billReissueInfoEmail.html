@@ -35,21 +35,29 @@
 				<div class="cont__wrap cont__wrap-service">
 					<div class="cont__txt-box">
 						<h4 class="txt">
-							청구서를 받을 이메일을<br>입력해 주세요
+							청구서 재발행 정보를 입력해 주세요
 						</h4>
 					</div>
-					<div class="txt-infoWrap">
-						신청 월
-					</div>					
-					<button class="slct-perd-wrap">
-						<span class="slct-perd">
-							<span class="slct-txt" type="button">월 선택</span>
-							<!-- 
-								## 캘린더 선택 월일자 변경 노출 시 point 추가
-								<span class="slct-txt point" type="button">25년 1월</span> 
-							-->
-						</span>
-					</button>
+					<!--						
+						## 입력 폼 관련 클래스 요약
+						기본 : <div class="slct-control">
+						포커스 : <div class="slct-control focused">
+						유효성 검사 성공 : <div class="slct-control error">
+						유효성 검사 에러 : <div class="slct-control disabled">
+					-->
+					<div class="slct-control mt-28">
+						<div class="slct-label-box">
+							<span class="label-tit">신청 월</span>
+							<!-- <span class="label-desc">남은 가능 일수 180일</span> -->
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<span class="txt"><span>월 선택</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span></span> -->
+								<span class="arrow"></span>								
+							</button>
+						</div>
+					</div>
 					<!--						
 						## 입력 폼 관련 클래스 요약
 						기본 : <div class="input-control ">
@@ -58,7 +66,7 @@
 						유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 이메일 입력 -->
-					<div class="input-control email-form mt-28">				
+					<div class="input-control email-form mt-24">				
 						<div class="input-group">
 							<label class="input-label">이메일</label>
 							<div class="input-row">
@@ -70,13 +78,16 @@
 									-->
 								</div>
 							</div>
-							<button class="slct-email-wrap">
-								<span class="slct-txt" type="button">직접 입력</span>
-								<!-- 
-								이메일 선택 후 point 클래스 추가 
-								<span class="slct-txt point" type="button">@hotmail.com</span> 
+							<div class="slct-box-wrap">
+
+								<!-- 선택완료시 
+									<button type="button" class="slct-box done"> 
 								-->
-							</button>
+								<button type="button" type="button" class="slct-box">
+									<span class="txt">이메일 선택</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
 						</div>
 						<div class="validation-txt">validation 메시지 노출</div>
 					</div>

@@ -38,24 +38,24 @@
 							청구서 재발행 정보를 입력해 주세요
 						</h4>
 					</div>
-					<!--						
-						## 입력 폼 관련 클래스 요약
-						기본 : <div class="slct-control">
-						포커스 : <div class="slct-control focused">
-						유효성 검사 성공 : <div class="slct-control error">
-						유효성 검사 에러 : <div class="slct-control disabled">
-					-->
-					<div class="slct-control mt-28">
-						<div class="slct-label-box">
-							<span class="label-tit">신청 월</span>
-							<!-- <span class="label-desc">남은 가능 일수 180일</span> -->
+					<div class="slct-control">
+						<div class="slct-label">
+							신청 월
 						</div>
 						<div class="slct-box-wrap">
 							<button type="button" class="slct-box">
-								<span class="txt"><span>월 선택</span></span>
-								<!-- <span class="txt"><span>24년</span><span>11월</span></span> -->
+								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
 								<span class="arrow"></span>								
 							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<span class="arrow"></span>								
+								</button>
+							</span>
 						</div>
 					</div>
 					<!--						
@@ -66,23 +66,23 @@
 						유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 연락처 입력 -->
-					<div class="input-control mt-24">				
+					<div class="input-control normal">				
 						<div class="input-group">
-							<label class="input-label">연락처</label>
+							<label class="input-label">팩스</label>
 							<div class="input-row">
-								<input type="tel" class="input-field" placeholder="‘-’없이 숫자만 입력" autocomplete='off' />
+								<input type="tel" class="input-field" placeholder="팩스 번호 입력" autocomplete='off' />
 								<div class="util-box">
 									<button type="button" class="clear-btn hidden"></button>
 									<!-- 
 									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
 									-->
 								</div>
-							</div>                            
+							</div>
 						</div>
 						<div class="validation-txt"><span>validation 메시지 노출</span></div>
 					</div>
-				</div>                
-				<div class="cont__wrap cont__wrap-btBtn">
+				</div>								
+				<div class="cont__wrap cont__wrap-btBtn ">
 					<div class="btn-group flex-row is-confirm">
 						<!-- 
 							## 버튼 형태 class (input 입력 키패드 노출 상태 버튼 형태 변경 필요) 
@@ -98,6 +98,7 @@
 						-->
 					</div>
 				</div>
+				
 			</div>
 			<!-- 
 				toast 상태 class : 기본 display:none 상태				
@@ -110,6 +111,11 @@
 						연락처를 입력해 주세요
 						<!-- 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
 					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
 					<button class="btn btn-util close" type="button" alt="닫기"></button>
 				</div>
 			</div>

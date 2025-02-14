@@ -46,11 +46,11 @@
 					</div>
 
                     <div class="input-col-wrap">
-                        <div class="input-control">
+                        <div class="input-control focused"><!-- 포커스 시 floating>>focused 로 변경 -->
                             <div class="input-group">
                                 <label class="input-label">계좌번호</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="계좌번호 입력">
+                                    <input type="tel" class="input-field" placeholder="계좌번호 입력">
                                     <div class="util-box">
                                         <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                         <button type="button" class="clear-btn hidden"></button>
@@ -69,25 +69,27 @@
 
                         <!-- 드롭다운 버튼 Case 계좌번호입력완료 or 은행선택팝업에서 은행선택완료 했을 경우
                          : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
-                        <div class="input-control"> <!-- floating >> to normal -->
+                         <div class="input-control focused"><!-- 포커스 시 floating>>focused 로 변경 -->
                             <div class="input-group">
                                 <label class="input-label">은행/증권사</label>
                                 <div class="input-row">
-                                    <button type="button" class="btn-field-dropdown">
-                                        <span class="ico">
-                                            <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                                    <button type="button" class="btn-field-dropdown done"><!-- 선택완료 시 done 클래스 추가 -->
+                                        <span class="value"><!-- 선택완료 시 노출 -->
+                                            <span class="ico">
+                                                <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                                            </span>
+                                            <span class="txt">신한은행</span>
                                         </span>
-                                        <span class="txt">
-                                            <!-- 은행/증권사 선택 -->
-                                            신한은행
-                                        </span>
+                                        <span class="txt">은행/증권사 선택</span><!-- 선택완료 시 hidden -->
                                     </button>
                                 </div>
                             </div>
+
+                            <!-- 계좌번호 입력 시 노출 -->
                             <div class="chips-group">
                                 <button type="button" class="chips chips-bank">
-                                    <span class="ico-bank shinhan">로고아이콘</span>
-                                    <span class="txt">신한은행</span>
+                                    <span class="ico-bank woori">로고아이콘</span>
+                                    <span class="txt">우리은행</span>
                                 </button>
 
                                 <button type="button" class="chips chips-bank">
@@ -102,11 +104,11 @@
                             </div>
                         </div>
 
-                        <div class="input-control">
+                        <div class="input-control focused"><!-- 포커스 시 floating>>focused 로 변경 -->
                             <div class="input-group">
                                 <label class="input-label">납부 금액</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="납부 금액">
+                                    <input type="tel" class="input-field" placeholder="납부 금액"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
                                     <div class="util-box">
                                         <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                         <button type="button" class="clear-btn hidden"></button>
@@ -153,11 +155,11 @@
                             <p class="seg-label">예금주명</p>
                             <span class="accnt-username">김*플</span>
                         </div>
-                        <div class="input-control">
+                        <div class="input-control focused"><!-- 포커스 시 floating>>focused 로 변경 -->
                             <div class="input-group">
                                 <label class="input-label">생년월일</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="생년월일 8자리">
+                                    <input type="tel" class="input-field" placeholder="생년월일 8자리">
                                     <div class="util-box">
                                         <!-- <button type="button" class="clear-btn hidden"> : clear-btn 사용 안 할 때 hidden 클래스 추가 -->
                                         <button type="button" class="clear-btn hidden"></button>

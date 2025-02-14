@@ -17,8 +17,15 @@
 .input-col-wrap {
 	@include flexColum;
 	row-gap:24px;
+	position:relative;
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
+	.bubble-box.topleft {top:-2px}
+	&:has(.bubble-box) {
+		input:valid{
+			color:var(--dt-error) !important;
+		}
+	}
 }
 .input-row-wrap {
 	@include flexRow;
@@ -47,6 +54,7 @@ input {
 	appearance: none;
 	background: transparent;
 	@include fw-6(18px);
+	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray16);
 }
 input::placeholder {
@@ -252,25 +260,33 @@ input::placeholder {
 		background-position: right 2px center;
 		text-align: left;
 		&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
-		.ico {
+		.value {
 			display:none;
-			width:24px;
-			height:24px;
-			padding-top:1px;
-			padding-bottom:1px;
-			img {width:100%;transform:translateY(-2px);}
+			width:max-content;
+			.ico {
+				display:inline-block;
+				width:24px;
+				height:24px;
+				padding-top:1px;
+				padding-bottom:1px;
+				img {width:100%;transform:translateY(-2px);}
+			}
 		}
 		.txt {
+			display:inline-block;
 			color: var(--dt-gray11);
 			@include fw-6(18px);
 			line-height: 1.2;
 		}
 		&.done {
-			.ico {
-				display: inline-block;
+			> .txt {
+				display:none;
 			}
-			.txt {
-				color: var(--dt-gray16);
+			.value{
+				display:inline-block;
+				.txt {
+					color: var(--dt-gray16);
+				}
 			}
 		}
 	}
