@@ -58,7 +58,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[포커스 상태]</h2>
@@ -78,7 +79,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[입력중 상태]</h2>
@@ -98,7 +100,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[포커스 아웃 상태]</h2>
@@ -118,7 +121,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 					
 					<br/><br/><br/><br/><h2>[비활성 상태]</h2>
@@ -138,7 +142,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[읽기전용 상태]</h2>
@@ -158,7 +163,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 
@@ -180,7 +186,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 					
 					<br/><br/><br/><br/><h2>[에러 상태]</h2>
@@ -199,7 +206,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[이메일 폼]</h2>
@@ -220,7 +228,8 @@
 								</button>
 							</div>
 						</div>
-						<div class="validation-txt">이메일 주소를 확인해주세요</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/><h2>[이메일 폼 : 선택 완료]</h2>
@@ -242,23 +251,30 @@
 								</button>
 							</div>
 						</div>
-						<div class="validation-txt">이메일 주소를 확인해주세요</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
 					<br/><br/><br/><br/>
-					<h2>드롭다운 normal</h2>	
+					<h2>드롭다운 normal</h2>
 					<div class="input-control">
 						<div class="input-group">
 							<label class="input-label">은행/증권사</label>
 							<div class="input-row">
 								<button type="button" class="btn-field-dropdown">
-									<span class="ico">
-										<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
-									</span>
-									<span class="txt">은행/증권사 선택</span>
+									<!-- 은행/증권사 선택 값 -->
+									<!-- <span class="value">
+										<span class="ico">
+											<img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+										</span>
+										<span class="txt">신한은행</span>
+									</span> -->
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt ">은행/증권사 선택</span>
 								</button>
 							</div>
 						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
 						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
@@ -268,17 +284,46 @@
 						<div class="input-group">
 							<label class="input-label">은행/증권사</label>
 							<div class="input-row">
-								<!-- 선택 완료 시 done 클래스 추가 : <button type="button" class="btn-field-dropdown">	-->
 								<button type="button" class="btn-field-dropdown">
-									<span class="ico">
-										<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+									<!-- 은행/증권사 선택 값 -->
+									<span class="value">
+										<span class="ico">
+											<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+										</span>
+										<span class="txt">신한은행</span>
 									</span>
-									<span class="txt">신한은행</span>
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt hidden">은행/증권사 선택</span>
 								</button>
 							</div>
 						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
 						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
+
+					<br/><br/><br/><br/>
+					<h2>드롭다운 focused</h2>
+					<div class="input-control focused"><!-- 포커스 시 focused 클래스 추가 -->
+						<div class="input-group">
+							<label class="input-label">은행/증권사</label>
+							<div class="input-row">
+								<button type="button" class="btn-field-dropdown ">
+									<!-- 은행/증권사 선택 값 -->
+									<span class="value">
+										<span class="ico">
+											<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+										</span>
+										<span class="txt">신한은행</span>
+									</span>
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt hidden">은행/증권사 선택</span>
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
 
 					<br/><br/><br/><br/>
 					<h2>드롭다운 비활성화</h2>	
@@ -286,17 +331,46 @@
 						<div class="input-group">
 							<label class="input-label">은행/증권사</label>
 							<div class="input-row">
-								<!-- 선택 완료 시 done 클래스 추가 : <button type="button" class="btn-field-dropdown">	-->
 								<button type="button" class="btn-field-dropdown">
-									<span class="ico">
-										<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+									<!-- 은행/증권사 선택 값 -->
+									<span class="value">
+										<span class="ico">
+											<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+										</span>
+										<span class="txt">신한은행</span>
 									</span>
-									<span class="txt">신한은행</span>
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt hidden">은행/증권사 선택</span>
 								</button>
 							</div>
 						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
 						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
+
+					<br/><br/><br/><br/>
+					<h2>드롭다운 에러상태</h2>
+					<div class="input-control error"><!-- 에러 시 error 클래스 추가 -->
+						<div class="input-group">
+							<label class="input-label">은행/증권사</label>
+							<div class="input-row">
+								<button type="button" class="btn-field-dropdown ">
+									<!-- 은행/증권사 선택 값 -->
+									<span class="value">
+										<span class="ico">
+											<img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+										</span>
+										<span class="txt">신한은행</span>
+									</span>
+									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">은행/증권사 선택</span> -->
+									<span class="txt hidden">은행/증권사 선택</span>
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
 
 					<br/><br/><br/><br/>
 					<!-- 드롭다운 박스 -->
