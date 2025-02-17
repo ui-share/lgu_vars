@@ -115,6 +115,9 @@
 			<!-- 홀맨 배너 영역// -->
 			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-payment">
+					<div class="select-billdate">
+						<span class="txt-due"></span>
+					</div>
 					<div class="cont__txt-box">
 						<span class="txt">현재 요금 납부방법은</span>
 						<span class="txt price">
@@ -130,7 +133,7 @@
 							<span class="txt-title">납부방법 상세</span>
 						</h6> 
 					</div>
-					<!-- 추가된 납부방법이 있는 경우 -->
+
 					<div class="info-col-wrap">
 						<div class="plan-wrap">
 							<div class="list-plan line">
@@ -158,7 +161,6 @@
 											<img src="../../../../static/images/icon/ic-bullet-info.svg" alt="">
 										</button>
 										<span class="tooltip-wrap">
-											<!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="right"> -->
 											<div class="tooltip">
 												<div class="tooltip-inner">
 													<span class="txt-wrap">
@@ -171,31 +173,21 @@
 										</span>
 									</span>
 									<button class="txt-desc ico">
-										NN월 NN일<span class="img-box ico20"><img src="../../../../static/images/icon/ic-chips-arrow-gray.svg"></span>
+										<span>NN월 NN일</span><span class="img-box ico20"><img src="../../../../static/images/icon/ic-chips-arrow-gray.svg"></span>
 									</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 추가된 납부방법이 없는 경우 출력 -->
-					<!-- <div class="card solid center">
-						<div class="card-body">
-							<span class="img-box">
-								<img src="../../../../static/images/icon/ic-card-card.png" alt="신용카드 자동이체 신청 가능">
-							</span>
-							<div class="text-box">
-								<span class="txt">은행/신용카드 자동이체를<br>신청할 수 있어요</span>
-							</div>
-						</div>
-					</div> -->
 
 					<div class="btn-group flex-column">
 						<button type="button" class="btn btn-sec">
 							<span class="txt">납부방법 변경</span>
 						</button>
-						<!-- 이전 납부내역이 있는 경우 노출 : <button type="button" class="btn line btn-sec">
+						<button type="button" class="btn line btn-sec">
+						<!-- 이전 납부내역 없는 경우 : hidden추가 <button type="button" class="btn line btn-sec hidden"> -->
 							<span class="txt">이전 납부 내역</span>
-						</button> -->
+						</button>
 					</div>
 
 					<div class="bullet-wrap caution">

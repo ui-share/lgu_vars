@@ -26,74 +26,6 @@
 		}
 		window.onload = ()=> {
 			initCheckDevice();
-
-			/*
-				임시코드입니다. 수정하여 사용 요망
-			*/
-			
-			// 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
-			const tooltipBtn = document.querySelector('.btn-tooltip'); 
-			const tooltip = document.querySelector('.tooltip-wrap');
-		
-			const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
-				placement: 'right',
-				modifiers: [
-					{
-						name: 'offset',
-						options: {
-							offset: [0, 8],
-						},
-					},
-					{
-						name: 'flip',
-						options: {
-							fallbackPlacements: ['top', 'right'],
-						},
-					},
-				],
-			});
-
-			function show() {
-				// Make the tooltip visible
-				tooltip.setAttribute('data-show', '');
-
-				// Enable the event listeners
-				popperInstance.setOptions((options) => ({
-					...options,
-					modifiers: [
-						...options.modifiers,
-						{ name: 'eventListeners', enabled: true },
-					],
-				}));
-
-				// Update its position
-				popperInstance.update();
-			}
-
-			function hide() {
-				// Hide the tooltip
-				tooltip.removeAttribute('data-show');
-
-				// Disable the event listeners
-				popperInstance.setOptions((options) => ({
-					...options,
-					modifiers: [
-						...options.modifiers,
-						{ name: 'eventListeners', enabled: false },
-					],
-				}));
-			}
-
-			const showEvents = ['click', 'focus'];
-			const hideEvents = ['click(.tooltip-close);', 'blur'];
-
-			showEvents.forEach((event) => {
-				tooltipBtn.addEventListener(event, show);
-			});
-
-			hideEvents.forEach((event) => {
-				tooltipBtn.addEventListener(event, hide);
-			});
 		}
 	</script>
 </head>
@@ -115,6 +47,9 @@
 			<!-- 홀맨 배너 영역// -->
 			<div class="section__cont summary">
 				<div class="cont__wrap cont__wrap-payment">
+					<div class="select-billdate">
+						<span class="txt-due"></span>
+					</div>
 					<div class="cont__txt-box">
 						<span class="txt">현재 요금 납부방법은</span>
 						<span class="txt price">
@@ -131,7 +66,6 @@
 							<span class="txt-title">납부방법 상세</span>
 						</h6> 
 					</div>
-					<!-- 추가된 납부방법이 없는 경우 -->
 					<div class="card solid center">
 						<div class="card-body">
 							<span class="img-box">
@@ -147,9 +81,10 @@
 						<button type="button" class="btn btn-sec">
 							<span class="txt">납부방법 변경</span>
 						</button>
-						<!-- 이전 납부내역이 있는 경우 노출 : <button type="button" class="btn line btn-sec">
+						<button type="button" class="btn line btn-sec">
+						<!-- 이전 납부내역 없는 경우 : hidden추가 <button type="button" class="btn line btn-sec hidden"> -->
 							<span class="txt">이전 납부 내역</span>
-						</button> -->
+						</button>
 					</div>
 
 					<div class="bullet-wrap caution">
