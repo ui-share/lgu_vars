@@ -21,7 +21,8 @@
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
 	&:has(.bubble-box) {
-		input[type="text"]:valid{
+		input[type="text"]:valid,
+		input[type="tel"]:valid{
 			color:var(--dt-error) !important;
 		}
 	}
@@ -204,6 +205,7 @@ input::placeholder {
 				background-image: url(../images/icon/ic-error_circle_16.svg);
 			}
 		}
+
 	}
 	&.focused {
 		.input-row {
