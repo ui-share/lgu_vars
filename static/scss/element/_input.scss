@@ -259,8 +259,7 @@ input::placeholder {
 		background-position: right 2px center;
 		text-align: left;
 		&:active {box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);}
-		.value {
-			display:none;
+		.value { // 바텀시트 내 옵션 선택 시 출력
 			width:max-content;
 			.ico {
 				display:inline-block;
@@ -270,23 +269,15 @@ input::placeholder {
 				padding-bottom:1px;
 				img {width:100%;transform:translateY(-2px);}
 			}
+			.txt { 
+				color: var(--dt-gray16);
+			}
 		}
-		.txt {
+		.txt { // 플레이스홀더 텍스트
 			display:inline-block;
 			color: var(--dt-gray11);
 			@include fw-6(18px);
 			line-height: 150%;
-		}
-		&.done {
-			> .txt {
-				display:none;
-			}
-			.value{
-				display:inline-block;
-				.txt {
-					color: var(--dt-gray16);
-				}
-			}
 		}
 	}
 }
