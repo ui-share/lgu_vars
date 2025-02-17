@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>[공통]카드번호 입력_기본화면 | LGU+ 눈으로 보는 ARS</title>
+	<title>[공통]카드번호 입력 | LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
@@ -33,7 +33,6 @@
 		<div class="container">
 			<div class="section__cont desc">
 				<div class="cont__wrap cont__wrap-service">
-					<!-- 납부할 카드정보 입력 영역 -->
 					<div class="cont__txt-box">
 						<h4 class="txt">
 							납부할 카드 정보를 입력해 주세요
@@ -44,33 +43,36 @@
 							</li>
 						</ul>
 					</div>
+
+					<!-- focused + 은행/카드사 Chip -->
 					<div class="input-col-wrap">
 						<!-- 
-								[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
-									** 포커스 : focused 
-									** 유효성 검사 성공 : success
-									** 유효성 검사 에러 : error
-									** 읽기 전용 : disabled
-									** 비활성 : disabled
-									기본 : <div class="input-control">
-									포커스 : <div class="input-control focused">
-									비활성, 읽기 전용 : <div class="input-control disabled">
-									유효성 검사 성공 : <div class="input-control success">
-									유효성 검사 에러 : <div class="input-control error">
-							-->
-						<div class="input-control"><!-- 포커스 시 focused 추가 로 변경 -->
+							[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+								** 포커스 : focused 
+								** 유효성 검사 성공 : success
+								** 유효성 검사 에러 : error
+								** 읽기 전용 : disabled
+								** 비활성 : disabled
+								기본 : <div class="input-control">
+								포커스 : <div class="input-control focused">
+								비활성, 읽기 전용 : <div class="input-control disabled">
+								유효성 검사 성공 : <div class="input-control success">
+								유효성 검사 에러 : <div class="input-control error">
+						-->
+						<!-- 에러 상태 -->
+						<div class="input-control error">
 							<div class="input-group">
 								<label class="input-label">카드번호</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="0000-0000-0000-0000">
+									<input type="tel" class="input-field" placeholder="0000-0000-0000-0000" value="1234-5678">
 									<div class="util-box">
-										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
-										<button type="button" class="clear-btn hidden"></button>
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
+										<button type="button" class="clear-btn "></button>
 									</div>
 								</div>
 							</div>							
 							<!-- 카드번호 전부 입력 시 노출 -->
-							<div class="chips-group hidden">
+							<div class="chips-group">
 								<button type="button" class="chips chips-bank">
 									<span class="ico-bank shinhan">로고아이콘</span>
 									<span class="txt">신한카드</span>
@@ -79,14 +81,14 @@
 							<div class="validation-txt">카드번호를 모두 입력해 주세요</div>
 						</div>
 
-						<div class="input-control"><!-- 포커스 시 focused 추가 로 변경 -->
+						<div class="input-control error">	
 							<div class="input-group">
 								<label class="input-label">유효기간 입력</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="MM월 / YY년">
+									<input type="tel" class="input-field" placeholder="MM월 / YY년" value="12월 / "><!-- 숫자만 입력가능, 입력시 '월 / 년' 문자 자동완성 -->
 									<div class="util-box">
-										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
-										<button type="button" class="clear-btn hidden"></button>
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
+										<button type="button" class="clear-btn "></button>
 									</div>
 								</div>
 							</div>
@@ -101,47 +103,52 @@
 							납부할 금액을 입력해 주세요
 						</h4> 
 					</div>
-					<!-- 
-						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
-						** 포커스 : focused 
-						** 유효성 검사 성공 : success
-						** 유효성 검사 에러 : error
-						** 읽기 전용 : disabled
-						** 비활성 : disabled
-						기본 : <div class="input-control">
-						포커스 : <div class="input-control focused">
-						비활성, 읽기 전용 : <div class="input-control disabled">
-						유효성 검사 성공 : <div class="input-control success">
-						유효성 검사 에러 : <div class="input-control error">
-					-->
-					<!-- 납부 금액 입력 -->
-					<div class="input-col-wrap">
-						<div class="input-control">
+					<div class="input-col-wrap">						
+						<!-- 
+							[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+						-->
+						<!-- 납부 금액 입력 -->
+						<div class="input-control ">
 							<div class="input-group">
 								<label class="input-label">납부 금액</label>
 								<div class="input-row">
 									<input type="tel" class="input-field" placeholder="납부 금액" value="99,999원"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
 									<div class="util-box">
 										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
-										<button type="button" class="clear-btn "></button>
+										<button type="button hidden" class="clear-btn"></button>
 									</div>
 								</div>
 							</div>
 							<div class="notice-txt">
 								<span>1천원 이상 ~ 50만원 미만일 때만 납부할 수 있습니다</span>
 							</div>
+                            <div class="validation-txt">validation 필요시 노출</div>
 						</div>
 
 						<!-- 할부기간 -->
-						<!-- 드롭다운 버튼 Case : 클릭 시 할부기간팝업 출력
-						 : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
+						<!-- 드롭다운 버튼 Case : 클릭 시 할부기간 팝업 출력
+							: input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
 						 <div class="input-control">
 							<div class="input-group">
 								<label class="input-label">할부기간</label>
 								<div class="input-row">
 									<button type="button" class="btn-field-dropdown done"><!-- 할부기간선택의 경우 디폴트 done -->
 										<span class="value">
-											<span class="txt">일시불</span><!-- 디폴트 : 일시불 선택 상태 -->
+											<span class="txt">2개월</span>
+											<!-- 디폴트 : 일시불 선택 상태
+											<span class="txt">2개월</span>
+											<span class="txt">3개월</span>
+											-->
 										</span>
 									</button>
 								</div>
@@ -152,7 +159,6 @@
 						</div>
 					</div>
 				</div>
-
 				<!-- 
 					## 버튼 상태 class 
 					버튼 활성 : <button class="btn btn-prim" type="button"> 
@@ -165,11 +171,12 @@
 						</button>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 		<!-- //container -->
 		<!-- 토스트 팝업// -->
-		<div class="toast-wrap ">
+		<div class="toast-wrap show">
 			<div class="toast">
 				<div class="toast-txt">
 					카드번호를 입력해 주세요
@@ -182,8 +189,8 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 		</div>
-		<div class="toast-wrap">
-			<div class="toast">
+        <div class="toast-wrap show">
+            <div class="toast">
 				<div class="toast-txt">
 					유효기간을 입력해 주세요
 				</div>
@@ -195,6 +202,6 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 		</div>
-	</div> 
+	</div>
 </body>
 </html>
