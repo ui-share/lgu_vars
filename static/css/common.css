@@ -3939,7 +3939,6 @@ input::placeholder {
   justify-content: space-between;
   column-gap: 10px;
   margin: 0 auto;
-  min-width: 220px;
   max-width: 320px;
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
 }
@@ -3962,6 +3961,7 @@ input::placeholder {
 .toast-wrap .toast .btn-util {
   display: inline-block;
   width: 24px;
+  min-width: 24px;
   height: 24px;
   background-image: url(../images/icon/ic-toast-close.svg);
   background-repeat: no-repeat;
