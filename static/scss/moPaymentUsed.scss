@@ -55,6 +55,16 @@
         }
 	}
 }
+.btn-box {
+    .appStore {
+        .img-box {
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
 .appPaid-wrap {
     background-color: var(--dt-gray02);
     border-radius: 8px;
