@@ -358,7 +358,7 @@ input::placeholder {
 		// flex: 1; // 추가: 텍스트 영역이 남은 공간을 차지하도록 설정
 		@include fw-6(15px);
 		line-height: 1.2;
-		color: var(--dt-gray16);
+		color: var(--dt-gray11);
 		> * {
 			flex-grow: 1;
 			flex-shrink: 1;
@@ -370,9 +370,8 @@ input::placeholder {
 		}
 		&:has(span:nth-child(1):last-child) * {
 			flex: 1;
-			@include fw-6(18px);
+			@include fw-6(16px);
 			line-height: 1.2;
-			color: var(--dt-gray11);
 			min-width: auto;
 		}
 		// span이 2개일 때
@@ -397,7 +396,11 @@ input::placeholder {
 		background-position: center center;
 		margin-left: auto
 	}
-
+	&.done {
+		.txt {
+			color: var(--dt-gray16);
+		}
+	}
 }	
 
 // 컴포넌트별 스타일 - email
