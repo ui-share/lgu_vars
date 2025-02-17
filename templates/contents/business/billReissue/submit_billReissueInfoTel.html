@@ -48,12 +48,10 @@
 					<div class="slct-control mt-28">
 						<div class="slct-label-box">
 							<span class="label-tit">신청 월</span>
-							<!-- <span class="label-desc">남은 가능 일수 180일</span> -->
 						</div>
 						<div class="slct-box-wrap">
 							<button type="button" class="slct-box">
 								<span class="txt"><span>월 선택</span></span>
-								<!-- <span class="txt"><span>24년</span><span>11월</span></span> -->
 								<span class="arrow"></span>								
 							</button>
 						</div>
@@ -79,7 +77,7 @@
 								</div>
 							</div>                            
 						</div>
-						<div class="validation-txt"><span>validation 메시지 필요시 노출</span></div>
+						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 					</div>
 				</div>                
 				<div class="cont__wrap cont__wrap-btBtn">
@@ -99,22 +97,34 @@
 					</div>
 				</div>
 			</div>
-			<!-- 
-				toast 상태 class : 기본 display:none 상태				
-				toast in(show 모션) show : <div class="toast-wrap show">
-				toast out(out 모션 X)    : <div class="toast-wrap">
-			-->
-			<div class="toast-wrap" tabindex="-1">
-				<div class="toast">
-					<div class="toast-txt">
-						연락처를 입력해 주세요
-						<!-- 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
-					</div>
-					<button class="btn btn-util close" type="button" alt="닫기"></button>
-				</div>
-			</div>
 		</div>
 		<!-- //container -->
+	</div>
+
+	<!-- 
+		toast 상태 class : 기본 display:none 상태				
+		toast in(show 모션) show : <div class="toast-wrap show">
+		toast out(out 모션 X)    : <div class="toast-wrap">
+	-->
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">연락처를 입력해 주세요</div>
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
+	</div>
+
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">신청월을 선택해 주세요</div>
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
+	</div>
+
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">연락처를 확인해 주세요</div>
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
 	</div>
 </body>
 </html>
