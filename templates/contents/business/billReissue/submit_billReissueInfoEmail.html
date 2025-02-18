@@ -45,6 +45,7 @@
 						유효성 검사 성공 : <div class="slct-control error">
 						유효성 검사 에러 : <div class="slct-control disabled">
 					-->
+					<!-- 신청월 선택 -->
 					<div class="slct-control mt-28">
 						<div class="slct-label-box">
 							<span class="label-tit">신청 월</span>
@@ -68,13 +69,21 @@
 							</button>
 						</div>
 					</div>
-					<!--						
-						## 입력 폼 관련 클래스 요약
-						기본 : <div class="input-control ">
-						포커스 : <div class="input-control focused">
-						유효성 검사 성공 : <div class="input-control success">
-						유효성 검사 에러 : <div class="input-control error">
+
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
 					-->
+
 					<!-- 이메일 입력 -->
 					<div class="input-control email-form mt-24">				
 						<div class="input-group">
@@ -100,6 +109,7 @@
 						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 					</div>
 				</div>
+
 				<div class="cont__wrap cont__wrap-btBtn">
 					<!-- full 
 						## 키보드 노출시 : 풀 버튼 ##
@@ -132,6 +142,10 @@
 	<div class="toast-wrap show" tabindex="-1">
 		<div class="toast">
 			<div class="toast-txt">이메일 주소를 입력해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
 			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
@@ -139,6 +153,10 @@
 	<div class="toast-wrap" tabindex="-1">
 		<div class="toast">
 			<div class="toast-txt">신청 월을 선택해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
 			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
@@ -146,6 +164,10 @@
 	<div class="toast-wrap" tabindex="-1">
 		<div class="toast">
 			<div class="toast-txt">이메일 주소를 확인해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
 			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
