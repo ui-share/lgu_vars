@@ -684,7 +684,7 @@ button {
 		.row + .row {margin-top:12px;}
 		.txt-title {
 			color:var(--dt-gray14);
-			line-height:24px;
+			line-height:150%;
 			align-self:flex-start;
 			// .img-box.tooltip{
 			// 	cursor: pointer;
@@ -917,12 +917,12 @@ button {
 		flex-wrap: wrap;
 		.head {
 			@include fw-5(14px);
-			line-height:24px;
+			line-height:150%;
 			color: var( --dt-gray14);
 		}
 		.tail {
 			@include fw-5(14px);
-			line-height: 21px;
+			line-height: 150%;
 			color: var(--dt-black);
 			text-align: right;
 			max-width:166px;

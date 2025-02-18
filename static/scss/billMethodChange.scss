@@ -3,15 +3,28 @@
 .page-wrapper {
     .container {
         .section__cont {
-            padding: 72px 0 74px;
+            padding: 76px 0 74px;
+            &:has(.addr-wrap){
+                height:var(--vh);
+                .cont__wrap-service {
+                    height:100%;
+                    .cont__txt-box .txt {line-height:150%;}
+                }
+            }
         }
     }
 }
 .addr-wrap {
     margin-top: 8px;
+    height: calc(100% - 124px);
+    min-height: 120px;
+    overflow-y: auto;
     .addr-box {
-        padding: 16px 0;
+        padding: 16px 0 17px;
         border-bottom: 1px solid var(--dt-gray17);
+        &[role="button"]:active {
+            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+        }
         .zip-code {
             @include fw-6(14px);
             line-height: 17px;
