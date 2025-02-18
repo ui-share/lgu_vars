@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>제출_청구서방법변경_우편변경</title>
+	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
@@ -39,28 +39,36 @@
 							청구서를 받을 주소를 입력해 주세요
 						</h4>
 					</div>
-					<!--						
-						## 입력 폼 관련 클래스 요약
-						기본 : <div class="input-control ">
-						포커스 : <div class="input-control focused">
-						유효성 검사 성공 : <div class="input-control success">
-						유효성 검사 에러 : <div class="input-control error">
+
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 주소 입력 입력 -->
 					<div class="input-control mt-28">				
 						<div class="input-group">
 							<label class="input-label">주소 입력</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete='off' />
+								<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete='off' autofocus>
 								<div class="util-box">									
 									<button type="button" class="clear-btn hidden"></button>
 									<button type="button" class="srch-btn">검색</button>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>메시지 노출</span></div>
+						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 					</div>
 				</div>
+				
 				<div class="cont__wrap cont__wrap-btBtn">
 					<!-- full 
 						## 키보드 노출시 : 풀 버튼 ##

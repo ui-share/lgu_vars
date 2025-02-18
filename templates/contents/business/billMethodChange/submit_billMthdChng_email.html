@@ -47,13 +47,14 @@
 							** 읽기 전용 : disabled
 							** 비활성 : disabled
 							기본 : <div class="input-control">
-							포커스 : <div class="input-control disabled">
-							비활성, 읽기 전용 : <div class="input-control focused">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
 							유효성 검사 성공 : <div class="input-control success">
 							유효성 검사 에러 : <div class="input-control error">
 					-->
+
 					<!-- 이메일 입력 -->
-					<div class="input-control email-form mt-28">				
+					<div class="input-control email-form mt-28">
 						<div class="input-group">
 							<label class="input-label">이메일</label>
 							<div class="input-row">
@@ -73,9 +74,10 @@
 								</button>
 							</div>
 						</div>
-						<div class="validation-txt">validation 메시지 필요시 노출</div>
+						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 					</div>
 				</div>
+
 				<div class="cont__wrap cont__wrap-btBtn">
 					<!-- 버튼 형태 클래스 full 
 						## 키보드 노출시 : 풀 버튼 ##
@@ -85,7 +87,7 @@
 					-->
 					<div class="btn-group flex-row is-confirm full">
 						<button class="btn btn-prim is-disabled" type="button">
-							<span class="txt">청구서 재발행</span>
+							<span class="txt">청구서 받는 방법 변경</span>
 						</button>
                         <!-- 
 							## 버튼 상태 class 
@@ -96,21 +98,27 @@
 				</div>
 				
 			</div>
-			<!-- 
-				## 토스트 팝업 클래스 ##
-				default: <div class="toast-wrap">
-				toast-in: <div class="toast-wrap show">
-			-->
-			<div class="toast-wrap show" tabindex="-1">
-				<div class="toast">
-					<div class="toast-txt">
-						이메일 주소를 확인해 주세요
-					</div>
-					<button class="btn btn-util close" type="button" alt="닫기"></button>
-				</div>
-			</div>
 		</div>
 		<!-- //container -->
+	</div>
+
+	<!-- 
+		## 토스트 팝업 클래스 ##
+		default: <div class="toast-wrap">
+		toast-in: <div class="toast-wrap show">
+	-->
+	<div class="toast-wrap">
+		<div class="toast">
+			<div class="toast-txt">
+				이메일 주소를 확인해 주세요
+			</div>
+			<!-- 
+				####### 퍼블공지 #######
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
 	</div>
 </body>
 </html>
