@@ -605,6 +605,7 @@ button {
 .txt-caution {
     color:var(--dt-gray11);
     @include fw-5(12px);
+	line-height: 1.5;
     text-align:center;
 }
 
