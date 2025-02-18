@@ -1,5 +1,5 @@
 .page-wrapper .container .section__cont:first-child {
-  padding-top: 56px;
+  padding-top: 76px;
 }
 
 .summary .cont__wrap .cont__txt-box .txt.price .deco {
@@ -80,26 +80,45 @@
   transform: translateY(-1px);
 }
 
-.input-row-wrap {
+.input-row-wrap.al-center {
   justify-content: center;
+  align-items: baseline;
   column-gap: 12px;
   padding: 48px 4px 0;
 }
-.input-row-wrap .ico32 {
+.input-row-wrap.al-center .ico32 {
   min-width: 32px;
   height: 32px;
 }
-.input-row-wrap .input-control {
+.input-row-wrap.al-center .input-control {
   width: 100%;
   padding-top: 0;
 }
-.input-row-wrap .input-control .input-label {
+.input-row-wrap.al-center .input-control.disable input {
+  width: unset;
+}
+.input-row-wrap.al-center .input-control.disable .input-field {
+  max-width: min-content;
+  min-width: max-content;
+}
+.input-row-wrap.al-center .input-control .input-label {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-.input-row-wrap .input-control .input-row {
+.input-row-wrap.al-center .input-control .input-row {
   justify-content: center;
+  column-gap: 0;
+}
+.input-row-wrap.al-center .input-control .input-row .input-field {
+  text-align: center;
+}
+.input-row-wrap.al-center .input-control .input-unit {
+  color: var(--dt-black);
+}
+.input-row-wrap.al-center .input-control .txt-sub {
+  margin-top: 8px;
+  text-align: center;
 }
 
 .list-payment {

@@ -260,7 +260,6 @@
 			padding: 12px 20px;
 		}
 		&.btn-popSolid {
-			@include flexBox();
 			padding:16px 20px;
 			background-color: var(--dt-gray02);
 			gap: 4px;
@@ -268,22 +267,31 @@
 				color:var(--dt-gray12);
 				line-height: var(--dt-lh150);
 			}
-			.txt-wrap {
-				display: none;
-			}
-			&.is-selected {
-				.txt-wrap {
-					display: flex;
-					align-items: center;
-					gap: 2px;
-				}
-				.txt {
-					@include fw-5(14px);
-					color: var(--dt-primary);
-				} 
-			}
+			
 			&.between {
 				justify-content: space-between;
+				gap: 12px;
+				.txt {
+					text-align: left;
+					line-height: 1.2;
+				}
+				.txt-wrap {				
+					display: flex;
+					align-items: center;
+					.txt {
+						@include fw-5(14px);
+						line-height: 1.2;
+						color: var(--dt-primary);
+						text-align: right;
+					} 
+					.img-box {
+						display: inline-block;
+						img {
+							width: 16px;
+							height: 16px;
+						}
+					}
+				}				
 			}
 			.delay-txt {
 				@include fw-5(14px);
