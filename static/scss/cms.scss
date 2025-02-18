@@ -1,0 +1,28 @@
+@import "../scss/base/mixin";
+.cont__wrap-cms {
+	.selectAgree {
+		.card.is-selected {
+			border: 1px solid var(--dt-primary);
+			.card-body {
+				opacity: 1;
+			}
+		}
+	}
+}
+.cont__wrap-agree {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	.chckbox-area + .accordion-content {
+		max-height: none;
+	}
+	.accordion-content {
+		padding: 12px;
+		background-color: var(--dt-gray02);
+		.txt-caution {
+			text-align: left;
+		}
+	}
+}
+
+
