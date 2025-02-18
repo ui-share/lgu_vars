@@ -91,15 +91,10 @@
   height: 32px;
 }
 .input-row-wrap.al-center .input-control {
-  width: 100%;
   padding-top: 0;
 }
-.input-row-wrap.al-center .input-control.disable input {
-  width: unset;
-}
-.input-row-wrap.al-center .input-control.disable .input-field {
-  max-width: min-content;
-  min-width: max-content;
+.input-row-wrap.al-center .input-control .input-group {
+  border-bottom: 2px solid var(--dt-gray08);
 }
 .input-row-wrap.al-center .input-control .input-label {
   display: inline-block;
@@ -107,14 +102,37 @@
   text-align: center;
 }
 .input-row-wrap.al-center .input-control .input-row {
+  max-width: 98px;
+  margin: 0 auto;
   justify-content: center;
   column-gap: 0;
+  border-bottom: unset;
 }
-.input-row-wrap.al-center .input-control .input-row .input-field {
+.input-row-wrap.al-center .input-control .input-row .value {
+  color: var(--dt-black);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.input-row-wrap.al-center .input-control .input-field {
   text-align: center;
+  width: 100%;
+  max-width: calc(100% - 52px);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.input-row-wrap.al-center .input-control .input-field::placeholder {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 .input-row-wrap.al-center .input-control .input-unit {
+  min-width: 48px;
   color: var(--dt-black);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
 }
 .input-row-wrap.al-center .input-control .txt-sub {
   margin-top: 8px;
