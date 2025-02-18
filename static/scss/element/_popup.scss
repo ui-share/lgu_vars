@@ -111,10 +111,10 @@
         }
     }
 }
-// popup-footer hidden일 경우 popup-body 패딩 수정
-.popup-wrapper:has(.popup-footer.hidden) .popup-body {
-	padding-bottom: 20px;
-}
+// popup-footer hidden일 경우 popup-body 패딩 수정 (250218 | 패딩 수정 : 재변경 없을 경우 삭제 예정)
+// .popup-wrapper:has(.popup-footer.hidden) .popup-body {
+// 	padding-bottom: 20px;
+// }
 
 // popbody 내 content
 .popup-body {
