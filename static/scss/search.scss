@@ -115,6 +115,7 @@
 	}
 	.cont__txt-box {
 		.txt {
+			line-height: 1.5;
 			&.price {
 				@include flexRow;
 				align-items: center;
@@ -123,12 +124,31 @@
 				line-height: 1.2;				
 				padding-right: 35%;
 				row-gap: 4px;
-				color: var(--dt-gray14);
-				.deco {margin-right:2px;font-size:30px;line-height:1.2;}
-				.deco-sub {@include fw-7(22px);margin-right:2px;line-height:1.5;}
-				.color-prim {font-size:30px;line-height:1.2;}
+				color: var(--dt-gray16);
+				.deco {
+					@include fw-7(30px);
+					line-height: 1.2;
+					margin-right: 2px;
+				}
+				.deco-sub {
+					@include fw-7(22px);
+					line-height:1.5;
+					margin-right:2px;
+				}
+				.color-prim {
+					@include fw-7(22px);
+					line-height: 1.5;
+				}
+				&:has(.deco),
+				&:has(.color-prim) {
+					color: var(--dt-gray14);
+				}
 				&:has(.deco + .color-prim) {
-					.color-prim {@include fw-6(18px);line-height:1.2;}
+					color: var(--dt-gray14);
+					.color-prim {
+						@include fw-6(18px);
+						line-height:1.2;
+					}
 				}
 				.txt-sub {
 					width:100%;

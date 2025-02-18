@@ -109,6 +109,9 @@
   flex-direction: column;
   row-gap: 6px;
 }
+.cont__wrap .cont__txt-box .txt {
+  line-height: 1.5;
+}
 .cont__wrap .cont__txt-box .txt.price {
   display: flex;
   flex-direction: row;
@@ -119,22 +122,30 @@
   line-height: 1.2;
   padding-right: 35%;
   row-gap: 4px;
-  color: var(--dt-gray14);
+  color: var(--dt-gray16);
 }
 .cont__wrap .cont__txt-box .txt.price .deco {
-  margin-right: 2px;
   font-size: 30px;
+  font-weight: 700;
   line-height: 1.2;
+  margin-right: 2px;
 }
 .cont__wrap .cont__txt-box .txt.price .deco-sub {
   font-size: 22px;
   font-weight: 700;
-  margin-right: 2px;
   line-height: 1.5;
+  margin-right: 2px;
 }
 .cont__wrap .cont__txt-box .txt.price .color-prim {
-  font-size: 30px;
-  line-height: 1.2;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.cont__wrap .cont__txt-box .txt.price:has(.deco), .cont__wrap .cont__txt-box .txt.price:has(.color-prim) {
+  color: var(--dt-gray14);
+}
+.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) {
+  color: var(--dt-gray14);
 }
 .cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .color-prim {
   font-size: 18px;
