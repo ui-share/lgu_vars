@@ -244,9 +244,36 @@
 								</div>
 							</div>
 							<div class="slct-box-wrap">
-								<!-- 선택 완료 시 done 클래스 추가 : <button type="button" class="slct-box done"> -->
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
 								<button type="button" class="slct-box done">
 									<span class="txt">직접 입력</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
+					<br/><br/><br/><br/><h2>[이메일 폼 : 선택 완료]</h2>
+					<!-- input email -->
+					<div class="input-control email-form">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
+								<button type="button" class="slct-box done">
+									<span class="txt">@gmail.com</span>
 									<span class="arrow"></span>								
 								</button>
 							</div>
@@ -358,7 +385,7 @@
 									<!-- 은행/증권사 선택 값 -->
 									<span class="value">
 										<span class="ico">
-											<img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+											<img src="../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
 										</span>
 										<span class="txt">신한은행</span>
 									</span>
@@ -379,14 +406,6 @@
 						** 포커스 : focused <br/>							
 						** 에러 : error<br/>							
 						** 비활성 : disabled<br/>
-					<button class="slct-perd-wrap">
-						<span class="slct-txt" type="button">이메일선택</span>
-						<!-- <span class="slct-txt" type="button">@hotmail.com</span> -->
-						<!-- 
-						<span class="slct-txt point"> 이메일 선택후 point 클래스 추가
-						-->
-						<span class="slct-txt point hidden" type="button">이메일 선택</span>
-					</button>
 		
 					<br/><br/><br/><br/>
 					<h2>[싱글 드롭다운]</h2>			
