@@ -1,6 +1,6 @@
 @import "../scss/base/mixin";
 
-.page-wrapper .container .section__cont:first-child {padding-top:56px;}
+.page-wrapper .container .section__cont:first-child {padding-top:76px;}
 .summary {
 	.cont__wrap .cont__txt-box .txt.price .deco {font-size:22px;line-height:150%;}
 }
@@ -67,22 +67,38 @@
 
 // 변경결제한도입력
 .input-row-wrap {
-	justify-content:center;
-	column-gap:12px;
-	padding: 48px 4px 0;
-	.ico32 {
-		min-width:32px;height:32px;
-	}
-	.input-control {
-		width:100%;
-		padding-top:0;
-		.input-label {
-			display:inline-block;
-			width:100%;
-			text-align:center;
+	&.al-center {
+		justify-content:center;
+		align-items:baseline;
+		column-gap:12px;
+		padding: 48px 4px 0;
+		.ico32 {
+			min-width:32px;height:32px;
 		}
-		.input-row {
-			justify-content:center;
+		.input-control {
+			width:100%;
+			padding-top:0;
+			&.disable {
+				input {width:unset;}
+				.input-field {max-width:min-content; min-width:max-content;}
+			}
+			.input-label {
+				display:inline-block;
+				width:100%;
+				text-align:center;
+			}
+			.input-row {
+				justify-content:center;
+				column-gap: 0;
+				.input-field {
+					text-align:center;
+				}
+			}
+			.input-unit {color:var(--dt-black);}
+			.txt-sub {
+				margin-top:8px;
+				text-align:center;
+			}
 		}
 	}
 }

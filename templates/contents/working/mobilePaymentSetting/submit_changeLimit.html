@@ -45,22 +45,38 @@
                         </ul>
 					</div>
 
-                    <div class="input-row-wrap">
-                        <!-- 현재 한도 -->
-                        <div class="input-control ">
+                    <div class="input-row-wrap al-center">
+                        <!-- 현재 한도 : 입력x 읽기전용 -->
+                        <div class="input-control disable">
+                            <!-- 
+                                [[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+                                ** 포커스 : focused 
+                                ** 유효성 검사 성공 : success
+                                ** 유효성 검사 에러 : error
+                                ** 읽기 전용 : disabled
+                                ** 비활성 : disabled
+                                기본 : <div class="input-control">
+                                포커스 : <div class="input-control focused">
+                                비활성, 읽기 전용 : <div class="input-control disabled">
+                                유효성 검사 성공 : <div class="input-control success">
+                                유효성 검사 에러 : <div class="input-control error">
+                            -->
                             <div class="input-group">
                                 <label class="input-label">현재 한도</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="10" readonly>
+                                    <input type="text" class="input-field" placeholder="플레이스 홀더" autocomplete="off" value="10">
                                     <div class="util-box">
                                         <span class="input-unit">만원</span> 
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <span class="img-box ico32">
                             <img src="../../../../static/images/icon/ic-circle-arrow-bgGray02.svg" alt="">
                         </span>
+
+                        <!-- 변경 한도 : 금액 입력(숫자만 입력) -->
                         <div class="input-control">
                             <div class="input-group">
                                 <label class="input-label">변경 한도</label>
