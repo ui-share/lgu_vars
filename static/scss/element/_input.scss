@@ -155,9 +155,10 @@ input::placeholder {
 		@include fw-6(14px);
 		line-height: 1;
 		color: var(--dt-gray11);
-		padding: 8px 16px;
+		padding: 9px 16px;
 		border-radius: 4px;
 		background-color: var(--dt-gray03);
+		border: 1px solid var(--dt-gray03);
 	}
 	// 헬퍼 텍스트
 	.validation-txt {

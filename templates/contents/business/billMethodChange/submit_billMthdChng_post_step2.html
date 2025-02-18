@@ -8,7 +8,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
 	<!-- Disable automatic phone number detection. -->
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
-	<title>제출_청구서방법변경_우편변경</title>
+	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
@@ -39,68 +39,80 @@
 							청구서를 받을 주소를 입력해 주세요
 						</h4>
 					</div>
-					<!--						
-						## 입력 폼 관련 클래스 요약
-						기본 : <div class="input-control ">
-						포커스 : <div class="input-control focused">
-						유효성 검사 성공 : <div class="input-control success">
-						유효성 검사 에러 : <div class="input-control error">
+
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
 					-->
-					<!-- 주소 입력 입력 -->
+					<!-- 주소 입력 -->
 					<div class="input-control mt-28">				
 						<div class="input-group">
 							<label class="input-label">주소 입력</label>
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete='off' />
+								<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete='off' autofocus/>
 								<div class="util-box">									
+									<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
 									<button type="button" class="clear-btn hidden"></button>
 									<button type="button" class="srch-btn">검색</button>
 								</div>
 							</div>
 						</div>
-						<div class="validation-txt"><span>validation 메시지 필요시 노출</span></div>
+						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 					</div>
+
+
 					<!-- 주소 검색 결과 노출 영역
-						검색 결과 有 -->
+						검색 결과 있을 때 -->
 					<ul class="addr-wrap">
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
-						<li class="addr-box">
+						<li class="addr-box" role="button">
 							<p class="zip-code">06252</p>
 							<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
 							<p class="addr-detail">[지번] 서울특별시 용산구 한강로N가 NN-NN</p>
 						</li>
 					</ul>
+					 
 					<!-- 주소 검색 결과 노출 영역
-						검색 결과 無 -->
+						검색 결과 없을 때 -->
+					<!-- 활성화 시 hidden 클래스 삭제 : <ul class="addr-wrap no-result"> -->
 					<ul class="addr-wrap no-result hidden">
 						<li class="addr-box card solid center">
 							<div class="card-body">
@@ -115,6 +127,7 @@
 						</li>
 					</ul>	
 				</div>
+
 				<div class="cont__wrap cont__wrap-btBtn">
 					<!-- full 
 						## 키보드 노출시 : 풀 버튼 ##
@@ -125,6 +138,12 @@
 					<div class="btn-group flex-row is-confirm full">		
 						<button class="btn btn-prim is-disabled" type="button">
 							<span class="txt">다음</span>
+							<!-- 상세주소 입력 시 :
+							 	<span class="txt">청구서 받는 방법 변경</span>
+
+								상세 주소 입력 전 : 
+								<span class="txt">다음</span>
+							-->
 						</button>
 						<!-- 
 							## 버튼 상태 class 
@@ -133,7 +152,6 @@
 						-->
 					</div>
 				</div>
-				
 			</div>
 		</div>
 		<!-- //container -->

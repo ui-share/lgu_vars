@@ -1,13 +1,28 @@
 .page-wrapper .container .section__cont {
-  padding: 72px 0 74px;
+  padding: 76px 0 74px;
+}
+.page-wrapper .container .section__cont:has(.addr-wrap) {
+  height: var(--vh);
+}
+.page-wrapper .container .section__cont:has(.addr-wrap) .cont__wrap-service {
+  height: 100%;
+}
+.page-wrapper .container .section__cont:has(.addr-wrap) .cont__wrap-service .cont__txt-box .txt {
+  line-height: 150%;
 }
 
 .addr-wrap {
   margin-top: 8px;
+  height: calc(100% - 124px);
+  min-height: 120px;
+  overflow-y: auto;
 }
 .addr-wrap .addr-box {
-  padding: 16px 0;
+  padding: 16px 0 17px;
   border-bottom: 1px solid var(--dt-gray17);
+}
+.addr-wrap .addr-box[role=button]:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
 .addr-wrap .addr-box .zip-code {
   font-size: 14px;

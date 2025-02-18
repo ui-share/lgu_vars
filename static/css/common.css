@@ -846,7 +846,7 @@ button {
 }
 .plan-wrap .list-plan .txt-title {
   color: var(--dt-gray14);
-  line-height: 24px;
+  line-height: 150%;
   align-self: flex-start;
 }
 .plan-wrap .list-plan .txt-desc > span:not(.txt-sub) {
@@ -1104,13 +1104,13 @@ button {
 .list-wrap .list-box .head {
   font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 150%;
   color: var(--dt-gray14);
 }
 .list-wrap .list-box .tail {
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 150%;
   color: var(--dt-black);
   text-align: right;
   max-width: 166px;
@@ -2785,9 +2785,10 @@ input::placeholder {
   font-weight: 600;
   line-height: 1;
   color: var(--dt-gray11);
-  padding: 8px 16px;
+  padding: 9px 16px;
   border-radius: 4px;
   background-color: var(--dt-gray03);
+  border: 1px solid var(--dt-gray03);
 }
 .input-control .validation-txt {
   width: 100%;

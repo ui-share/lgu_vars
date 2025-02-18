@@ -93,7 +93,7 @@
 	}
 	&.desc {//입금전용계좌추가
 		&:has(.accnt-cont-wrap){
-			height:calc(var(--vh) - 258px);
+			height:calc(var(--vh) - 262px);
 		}
 	}
 }
