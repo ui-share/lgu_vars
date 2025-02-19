@@ -79,9 +79,10 @@
                             <div class="input-group">
                                 <label class="input-label">변경 한도</label>
                                 <div class="input-row">
-                                    <input type="text" class="input-field" placeholder="금액" autocomplete="off" value="" /><!-- 숫자만 입력 -->
+                                    <input type="text" class="input-field" placeholder="금액" autocomplete="off" value="" /><!-- 숫자만 입력 : 입력 시 'N + 만원' 형태로 노출됨 -->
                                     <div class="util-box">
-                                        <span class="input-unit">만원</span>
+                                        <!-- <span class="input-unit">만원</span> : 1글자 이상 입력 시, '만원'텍스트 노출 : hidden 삭제  -->
+                                        <span class="input-unit hidden">만원</span>
                                     </div>
                                 </div>
                             </div>
