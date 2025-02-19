@@ -3187,6 +3187,9 @@ input::placeholder {
   left: 0;
   width: 100%;
   max-height: calc(var(--vh) - 45px);
+  height: max-content;
+  padding-top: env(safe-area-inset-top, 45px);
+  padding-bottom: env(safe-area-inset-bottom, 45px);
   display: flex;
   flex-direction: column;
   border-top-left-radius: 20px;

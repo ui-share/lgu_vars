@@ -15,6 +15,12 @@
 		left: 0;
 		width: 100%;
 		max-height: calc(var(--vh) - 45px);
+
+		// 삭제금지 아이폰 테스트 중
+		height:max-content;
+		padding-top: env(safe-area-inset-top, 45px);
+  		padding-bottom: env(safe-area-inset-bottom, 45px);
+
 		@include flexColum;
 		border-top-left-radius: 20px;
 		border-top-right-radius: 20px;
