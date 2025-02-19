@@ -20,6 +20,7 @@
 		height:max-content;
 		padding-top: env(safe-area-inset-top, 45px);
   		padding-bottom: env(safe-area-inset-bottom, 45px);
+		border: 1px solid red;
 
 		@include flexColum;
 		border-top-left-radius: 20px;
