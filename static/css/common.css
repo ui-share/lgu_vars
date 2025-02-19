@@ -184,6 +184,8 @@ body {
   color: var(--dt-black);
   text-overflow: ellipsis;
   background-color: var(--dt-white);
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .is-pc {
@@ -3185,6 +3187,10 @@ input::placeholder {
   left: 0;
   width: 100%;
   max-height: calc(var(--vh) - 45px);
+  padding-top: env(safe-area-inset-top, 80px);
+  padding-bottom: env(safe-area-inset-bottom, 80px);
+  -webkit-transform: translateZ(0);
+  border: 2px solid red;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 20px;
