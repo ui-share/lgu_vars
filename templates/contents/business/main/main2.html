@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/js/swiper-11.1.5/swiper-bundle.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/main.css">
+
+	<!-- Scripts -->
+	<script src="../../../../static/js/swiper-11.1.5/swiper-bundle.js"></script>
+</head>
+<style>
+	.cont__wrap.cont__wrap-message {
+		background-image: none;
+	}
+	.header .header__util .header-tit .header-txt {
+		line-height: 19px;
+	}
+</style>
+<body>
+	<!-- 개발관련 주석 확인 후 필요 없으시면  삭제 -->
+	<!-- 
+		스크롤 감지시 is-scrolled 
+		<div class="page-wrapper">
+	-->
+	<div class="page-wrapper">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<!-- <button type="button" class="btn btn-util prev hidden"><span>이전</span></button> -->
+				<!-- <button type="button" class="btn btn-util end hidden"><span>닫기</span></button> -->
+				<span class="header-tit"><span class="header-txt">보이는 ARS</span></span>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+		
+		<div class="container">
+			<!-- 선제안 배너 영역 -->
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-banner">
+					<!-- 슬라이드 Slider main container -->
+					<div class="swiper">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="card horizon banner">
+									<div class="card-body">
+										<div class="item util">
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-banner-call.png" alt="가입 매장 상담사 연결">
+											</span>
+										</div>
+										<div class="item text">
+											<span class="tit">가입 매장 상담사 연결</span>
+											<span class="txt">가입 매장 상담사와<br>통화를 원하시면 선택해 주세요!</span>
+										</div>
+										<button type="button" class="btn end">종료</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card horizon banner">
+									<div class="card-body">
+										<div class="item util">
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-banner-phone.png" alt="휴대폰 할부/선택약정">
+											</span>
+										</div>
+										<div class="item text">
+											<span class="tit">휴대폰 할부/선택약정</span>
+											<span class="txt">선택약정 할인을 신청하고<br>25% 요금할인을 받아보세요!</span>
+										</div>
+										<button type="button" class="btn end">종료</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card horizon banner">
+									<div class="card-body">
+										<div class="item util">
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-banner-clock.png" alt="휴대폰 할부/선택약정">
+											</span>
+										</div>
+										<div class="item text">
+											<span class="tit">휴대폰 할부/선택약정</span>
+											<span class="txt">선택약정 할인이 곧 종료되어요.<br>예약하고 혜택을 유지해 보세요!</span>
+										</div>
+										<button type="button" class="btn end">종료</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card horizon banner">
+									<div class="card-body">
+										<div class="item util">
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-banner-note.png" alt="납부확인서 신청">
+											</span>
+										</div>
+										<div class="item text">
+											<span class="tit">납부확인서 신청</span>
+											<span class="txt">종합소득세 신고기간입니다.<br>신고용 서류를 신청해 보세요!</span>
+										</div>
+										<button type="button" class="btn end">종료</button>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="card horizon banner">
+									<div class="card-body">
+										<div class="item util">
+											<span class="img-box">
+												<img src="../../../../static/images/icon/ic-banner-travel.png" alt="해외로밍 이용내역">
+											</span>
+										</div>
+										<div class="item text">
+											<span class="tit">해외로밍 이용내역</span>
+											<span class="txt">최근 로밍을 이용하셨네요.<br>로밍 이용내역을 확인해 보세요!</span>
+										</div>
+										<button type="button" class="btn end">종료</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- pagination -->
+						<div class="swiper-pagination"></div>							
+					</div>
+				</div>
+			</div>
+			<!-- 웰컴 메시지 & 메뉴카테고리 영역 -->
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-message">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							궁금하신 내용을<br>
+							<span class="deco">아래에서 선택</span>해주세요
+						</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="section__cont">
+				<!-- 
+					스크롤 맨 앞일 경우 scroll class 삭제
+
+					스크롤 중일 경우 cont__wrap 에 scroll-start 클래스 추가
+					<div class="cont__wrap cont__wrap-category scroll-start">
+
+					스크롤 맨 뒤일 경우 scroll-start를 scroll-end로 변경
+					<div class="cont__wrap cont__wrap-category scroll-end">
+				-->
+				<div class="cont__wrap cont__wrap-category">
+					<div class="chips-group">
+						<!-- 
+							select 시 is-selected class 추가
+							<button type="button" class="chips chips-menu is-selected">
+						-->
+						<button type="button" class="chips chips-menu is-selected">
+							<span class="img-box icon"><img src="../../../../static/images/icon/ic-chips-flag.png" alt="많이 찾는 문의"></span>
+							<span class="txt">많이 찾는 문의</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">요금 및 납부</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">가입정보</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">사용현황</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">휴대폰 결제</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">해외로밍</span>
+						</button>
+			
+						<button type="button" class="chips chips-menu">
+							<!-- <span class="icon"></span> -->
+							<span class="txt">해외로밍 부가서비스</span>
+						</button>
+						
+						<!-- 
+							더보기 필요 없을 경우 hidden 처리
+							<button type="button" class="chips chips-menu chips-more">
+
+							오픈시 is-selected 추가
+							<button type="button" class="chips chips-menu chips-more is-selected">
+						-->
+						<button type="button" class="chips chips-menu chips-more">
+							<span class="arrow"></span>
+						</button>
+
+						<button type="button" class="chips chips-menu chips-more is-selected">
+							<span class="arrow"></span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 전체 메뉴 카드 리스트 영역 -->
+			<div class="section__cont menu">
+				<!-- 많이 찾는 문의 -->
+				<div class="cont__wrap cont__wrap-freqMenu">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="ico"></span>
+							<span class="txt-title">많이 찾는 문의</span>
+						</h6>
+					</div>
+					<div class="card-group">		
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<!-- 
+										아이콘 없는 경우 img-box에 no-icon 추가
+										<span class="img-box no-icon">
+									-->
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-billing.png" alt="청구 요금" />
+									</span>
+									<div class="flag flag-recent">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-myplan.png" alt="나의 요금제" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">나의 요금제</h3>
+									<p class="txt">요금제 확인ㆍ변경</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-added-service.png" alt="부가서비스 신청/해지" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">부가서비스<br>신청ㆍ해지</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">실시간 요금</span>
+									<span class="txt">오늘까지 사용한<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_payment.png" alt="요금 납부방법 변경" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">요금 납부방법 변경</span>
+									<span class="txt">계좌ㆍ카드ㆍ결제일<br>변경</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_bills.png" alt="청구서 받는 방법 변경" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">청구서 받는 방법<br/>변경</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-roaming_application.png" alt="해외로밍 신청">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">해외로밍 신청</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-call_quality.png" alt="통화품질 문의" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<!-- 헤드셋 아이콘 필요 시 icon 클래스 추가 : <h3 class="tit icon"> -->
+									<span class="tit icon">통화품질 문의</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">요금 및 납부</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-billing.png" alt="청구 요금" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">실시간 요금</span>
+									<span class="txt">오늘까지 사용한<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-payment.png" alt="요금 바로납부" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">요금 바로납부</span>
+									<span class="txt">청구요금 미리납부</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_payment.png" alt="요금 납부방법 변경" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">요금 납부방법 변경</span>
+									<span class="txt">계좌ㆍ카드ㆍ결제일<br>변경</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-reissue_invoice.png" alt="청구서 재발행" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">청구서 재발행</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_bills.png" alt="청구서 받는 방법 변경" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">청구서 받는 방법<br/>변경</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-payment_confirm.png" alt="납부확인서 신청" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">납부확인서 신청</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-child's_plan.png" alt="자녀 요금" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">자녀 요금</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">가입정보</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-myplan.png" alt="나의 요금제" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">나의 요금제</h3>
+									<p class="txt">요금제 확인ㆍ변경</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_installment.png" alt="휴대폰 할부 선택약정" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰<br>할부ㆍ선택약정</h3>
+									<p class="txt">남은 할부ㆍ약정 조회</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-added_service.png" alt="부가서비스 신청ㆍ해지" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">부가서비스<br>신청ㆍ해지</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-combined_discount.png" alt="결합할인 정보" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">결합할인 정보</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">사용현황</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-realtime_usage.png" alt="실시간 사용량" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">실시간 사용량</h3>
+									<p class="txt">사용한<br>데이터ㆍ문자ㆍ통화</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-gift.png" alt="데이터 선물ㆍ충전" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">데이터 선물ㆍ충전</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">휴대폰 결제</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment_setting.png" alt="휴대폰 결제 설정" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰 결제 설정</h3>
+									<p class="txt">차단ㆍ차단해제 및<br>한도변경</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment_history.png" alt="휴대폰 결제 이용내역" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰 결제<br>이용내역</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment.png" alt="휴대폰 결제 선결제" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">휴대폰 결제 선결제</h3>
+									<p class="txt">이번 달 이용금액<br>미리 납부</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">해외로밍</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-roaming_application.png" alt="해외로밍 신청" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">해외로밍 신청</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-roaming_added_service.png" alt="해외로밍 부가서비스" />
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">해외로밍<br>부가서비스</h3>
+									<p class="txt">조회ㆍ신청ㆍ해지</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-roaming_usage_status.png" alt="해외로밍 실시간 조회">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">해외로밍<br>실시간 조회</h3>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-phone_payment_roaming.png" alt="해외로밍 이용내역">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">해외로밍 이용내역</h3>
+									<p class="txt">영수증 발급</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">정지ㆍ분실ㆍ통화품질</span>
+						</h6>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-pause.png" alt="일시정지 신청 해제">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<h3 class="tit">일시정지<br>신청ㆍ해제</h3>
+									<p class="txt">일시적인 사용정지</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-lost_claim.png" alt="분실정지 신청 해제">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<!-- 헤드셋 아이콘 필요 시 icon 클래스 추가 : <h3 class="tit icon"> -->
+									<h3 class="tit icon">분실정지<br>신청ㆍ해제</h3>
+									<p class="txt">분실로 인한 사용정지</p>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-call_quality.png" alt="통화품질 문의">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit icon">통화품질 문의</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="card horizon chatbot">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-home-holeman.png" alt="챗봇 상담 문의">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="tit">챗봇 상담 문의</span>
+								<span class="txt">24시간 대기없이 바로 문의</span>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="btn-group">
+								<button class="btn btn-md btn-prim" type="button">
+									<span class="txt">이동</span>
+								</button>
+							</div>
+						</div> 
+					</div>
+				</div>
+
+				<div class="cont__wrap hidden">
+					<div class="card horizon home">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-home-iptv.png" alt="홈 고객센터 문의">
+								</span>
+							</div>
+							<div class="item text">
+								<h3 class="tit">홈 고객센터 문의</h3>
+								<p class="txt">IPTVㆍ인터넷ㆍU+스마트홈</p>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="btn-group">
+								<button class="btn btn-md btn-prim" type="button">
+									<span class="txt">이동</span>
+								</button>
+							</div>
+						</div> 
+					</div>
+				</div>
+			</div>
+			
+			<div class="section__cont counsel">
+				<div class="cont__wrap cont__wrap-counsel">
+					<div class="btn-group conversion">
+						<button class="btn" type="button">
+							<span class="txt">음성 ARS로 이동</span>
+						</button>
+						<span class="divider"></span>
+						<button class="btn" type="button">
+							<span class="txt">홈 고객센터 문의</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- top button -->
+			<!-- page-wrapper 에 is-scrolled 사용할 경우 생기도록 처리함 -->
+			<button class="btn-top" type="button"></button>
+		</div>
+	</div>
+
+	<script>
+		const swiper = new Swiper('.swiper', {
+			spaceBetween: 22,
+			speed: 1000,
+			autoplay: {
+				delay: 4000,
+				disableOnInteraction: true,
+				stopOnLastSlide: true,
+			},
+
+			
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction',
+			},
+		});
+	</script>
+</body>
+</html>
