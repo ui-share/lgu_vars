@@ -80,18 +80,20 @@
                         <!-- 변경 한도 : 금액 입력(숫자만 입력) -->
                         <div class="input-control error">
                             <div class="input-group">
-                                <label class="input-label">변경 한도</label>
+                                <label class="input-label">
+                                    변경 한도
+                                </label>
                                 <div class="input-row">
                                     <input type="text" class="input-field" placeholder="금액" autocomplete="off" value="8만원" /><!-- 숫자만 입력 : 입력 시 'N + 만원' 형태로 노출됨 -->
+                                    <span class="bubble-box topright show"><!-- input-control error 시 show 추가-->
+                                        <!-- <span class="bubble-box topright"> -->
+                                        <span class="txt-wrap">
+                                            <span class="ico"></span>
+                                            최대 한도 이상 입력할 수 없어요
+                                        </span>
+                                        <div class="bubble-box-arrow"></div>
+                                    </span>
                                 </div>
-                                <span class="bubble-box topright show"><!-- input-control error 시 show 추가-->
-									<!-- <span class="bubble-box topright"> -->
-									<span class="txt-wrap">
-										<span class="ico"></span>
-										최대 한도 이상 입력할 수 없어요
-									</span>
-									<div class="bubble-box-arrow"></div>
-								</span>
                             </div>
                             <p class="txt-sub">최대 <span>100</span>만원</p>
                         </div>
