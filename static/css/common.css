@@ -3187,10 +3187,8 @@ input::placeholder {
   left: 0;
   width: 100%;
   max-height: calc(var(--vh) - 45px);
-  padding-top: env(safe-area-inset-top, 80px);
-  padding-bottom: env(safe-area-inset-bottom, 80px);
+  padding-top: env(safe-area-inset-top, 45px);
   -webkit-transform: translateZ(0);
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   border-top-left-radius: 20px;

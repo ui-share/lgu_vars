@@ -17,10 +17,8 @@
 		max-height: calc(var(--vh) - 45px);
 
 		// 삭제금지 아이폰 테스트 중
-		padding-top: env(safe-area-inset-top, 80px);
-  		padding-bottom: env(safe-area-inset-bottom, 80px);
+		padding-top: env(safe-area-inset-top, 45px);
 		-webkit-transform: translateZ(0);
-		border: 2px solid red;
 
 		@include flexColum;
 		border-top-left-radius: 20px;
