@@ -102,20 +102,7 @@
 							선결제할 금액을 입력해 주세요
 						</h4> 
 					</div>
-					<div class="input-col-wrap">						
-						<!-- 
-							[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
-							** 포커스 : focused 
-							** 유효성 검사 성공 : success
-							** 유효성 검사 에러 : error
-							** 읽기 전용 : disabled
-							** 비활성 : disabled
-							기본 : <div class="input-control">
-							포커스 : <div class="input-control focused">
-							비활성, 읽기 전용 : <div class="input-control disabled">
-							유효성 검사 성공 : <div class="input-control success">
-							유효성 검사 에러 : <div class="input-control error">
-						-->
+					<div class="input-col-wrap">
 						<!-- 선결제 금액 입력 -->
 						<div class="input-control focused">
 							<div class="input-group">
@@ -186,32 +173,35 @@
 			</div>
 		</div>
 		<!-- //container -->
-		<!-- 토스트 팝업// -->
-		<div class="toast-wrap ">
-			<div class="toast">
-				<div class="toast-txt">
-					카드번호를 입력해 주세요
-				</div>
-				<!-- 
-					####### 퍼블공지 #######
-					버튼 사용하지 않을 경우 hidden 클래스 추가 
-					<button class="btn btn-util close hidden">
-				-->
-				<button class="btn btn-util close" type="button" alt="닫기"></button>
+	</div>
+
+	<!-- 
+		## 토스트 팝업 클래스 ##
+		default: <div class="toast-wrap">
+		toast-in: <div class="toast-wrap show">
+	-->
+	<div class="toast-wrap">
+		<div class="toast">
+			<div class="toast-txt">
+				카드번호를 입력해 주세요
 			</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
-        <div class="toast-wrap ">
-            <div class="toast">
-				<div class="toast-txt">
-					유효기간을 입력해 주세요
-				</div>
-				<!-- 
-					####### 퍼블공지 #######
-					버튼 사용하지 않을 경우 hidden 클래스 추가 
-					<button class="btn btn-util close hidden">
-				-->
-				<button class="btn btn-util close" type="button" alt="닫기"></button>
+	</div>
+	<div class="toast-wrap">
+		<div class="toast">
+			<div class="toast-txt">
+				유효기간을 입력해 주세요
 			</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
 </body>
