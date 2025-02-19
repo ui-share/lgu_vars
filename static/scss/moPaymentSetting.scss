@@ -67,17 +67,29 @@
 
 // 변경결제한도입력
 .input-row-wrap {
-	&.al-center {
-		justify-content:center;
+	&.al-baseline {
 		align-items:baseline;
+		justify-content:flex-start;
 		column-gap:12px;
 		padding: 48px 4px 0;
 		.ico32 {
 			min-width:32px;height:32px;
 		}
 		.input-control {
-			// width:100%;
+			position:relative;
 			padding-top:0;
+			&.error {
+				input:valid {
+					color:var(--dt-error);
+					& + .util-box .input-unit {color:var(--dt-error);}
+				}
+				.bubble-box.topright {
+					padding-right:10px;
+					padding-left:10px;
+					bottom: calc(100% + 8px) !important;
+					right:40px;
+				}
+			}
 			.input-group {
 				border-bottom:2px solid var(--dt-gray08);
 			}
@@ -87,12 +99,15 @@
 				text-align:center;
 			}
 			.input-row {
-				max-width:98px;
+				width:98px;
 				margin:0 auto;
 				justify-content:center;
 				column-gap: 0;
 				border-bottom:unset;
 				.value {
+					display:flex;
+					justify-content:center;
+					flex-wrap:wrap;
 					color: var(--dt-black);
 					font-size: 24px;
 					font-weight: 600;
@@ -101,8 +116,8 @@
 			}
 			.input-field {
 				text-align:center;
-				width:100%;
-				max-width: calc(100% - 52px); // 999 
+				width:min-content;
+				max-width: 100%;
 
 				font-size: 24px;
 				font-weight: 600;
@@ -113,19 +128,21 @@
 					line-height: 1.2;
 				}
 			}
-			.input-unit {
-				min-width:48px;
-				color:var(--dt-black);
-				font-size: 24px;
-				font-weight: 600;
-				line-height: 1.2;
-			}
+			// .input-unit { //유닛 삭제 확정 02.19
+			// 	min-width:44px;
+			// 	color:var(--dt-black);
+			// 	font-size: 24px;
+			// 	font-weight: 600;
+			// 	line-height: 1.2;
+			// 	text-align:center;
+			// }
 			.txt-sub {
 				margin-top:8px;
 				text-align:center;
 			}
 		}
 	}
+	
 }
 
 // 휴대폰결제변경내역_TAB UI
@@ -169,5 +186,20 @@
 .segment-content {
 	.list-payment {
 		margin-top:2px;
+	}
+}
+@media screen and (max-width:359px) {
+	.input-row-wrap.al-baseline {
+		column-gap:8px;
+	}
+}
+@media screen and (max-width:269px) {
+	.input-row-wrap.al-baseline {
+		flex-wrap:wrap;
+		.input-control {
+			width:calc(100% - 44px);
+			.input-row {max-width:100%;}
+			.input-field {max-width: 100%;}
+		}
 	}
 }
