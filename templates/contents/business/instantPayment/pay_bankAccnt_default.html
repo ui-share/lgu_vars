@@ -11,15 +11,15 @@
 	<title>LGU+ 눈으로 보는 ARS</title>
 
 	<!-- Css -->
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
 
-    <!-- Scripts -->
+	<!-- Scripts -->
 </head>
 <body>
-    <div class="page-wrapper">
+	<div class="page-wrapper">
 		<!-- header -->
-        <header class="header">
+		<header class="header">
 			<div class="header__util">
 				<button type="button" class="btn btn-util end"><span>처음</span></button>
 			</div>
@@ -27,86 +27,89 @@
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
 		</header>
-        <!-- //header -->
+		<!-- //header -->
 	
 		<!-- container -->
 		<div class="container">
-            <!-- 홀맨 배너 영역// -->
-            <div class="section__cont summary">
-                <div class="cont__wrap cont__wrap-account">
-                    <div class="select-billdate">
-                        <span class="txt-notice">입금전용 계좌로</span>
-                    </div>
-                    <div class="cont__txt-box">
-						<h4 class="txt price">
-                            <span class="deco">60,320</span>
-                            <span class="color-prim">원</span>&nbsp;납부 가능해요
-						</h4>
+			<!-- 홀맨 배너 영역// -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-realtime">
+					<div class="select-billdate">
+						<span class="txt-due"></span>
+					</div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<span class="txt">입금전용 계좌로</span>
+						</span>
+						<sapn class="txt price">
+							<span class="deco">60,320</span>
+							<span class="color-prim">원</span>납부 가능해요
+						</sapn>
 					</div>
 				</div>
-            </div>
+			</div>
 
-            <!-- 아코디언 영역 -->
-            <div class="section__cont desc"> 
-                <div class="cont__wrap cont__wrap-vertical wd-full">
-                    <div class="con__tit-box">
-                        <h6 class="tit-head">
-                            <span class="txt-title">입금전용 계좌</span>
-                        </h6>
-                    </div>
-                    <div class="accnt-cont-wrap">
-                        <!-- 계좌 추가 전 버튼만 출력 -->
-                        <div class="btn-group flex-column">
-                            <button type="button" class="btn btn-sec">
-                                <span class="txt">입금전용 계좌 추가</span>
-                            </button>
-                            <!--
-                                최초 진입 시 버블박스 떠 있다가 조건 충족 시 사라짐
-                                : 조건에 따라 show 클래스 추가 및 삭제
-                            -->
-                            <span class="bubble-box bttmcenter show">
-                            <!-- <span class="bubble-box"> -->
-                                <span class="txt-wrap">
-                                    입금전용 계좌를 추가하여 납부해 보세요
-                                </span>
-                                <div class="bubble-box-arrow"></div>
-                            </span>
-                        </div>
-    
-                        <!-- 계좌 추가 후 계좌정보+버튼 형태로 출력 
-                        <div class="card-group flex-column bank">
-                            <div class="card solid bank">
-                                <div class="card-header">
-                                    <div class="item util">
-                                        <span class="ico-bank ibk">로고아이콘</span>
-                                    </div>
-                                    <div class="item text">
-                                        <span class="tit">은행 계좌번호</span>
-                                        <span class="txt">김유플</span>
-                                    </div>
-                                    <button type="button" class="btn end">종료</button>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group flex-row">
-                                        <button class="btn btn-md" type="button">
-                                            <span class="txt">문자로 전송</span>
-                                        </button>
-                                        <button class="btn btn-md" type="button">
-                                            <span class="txt">복사</span>
-                                        </button>
-                                    </div>
-                                </div> 
-                            </div>
-                        </div>
-                        <div class="btn-group flex-column">
-                            <button type="button" class="btn btn-sec">
-                                <span class="txt">입금전용 계좌 추가</span>
-                            </button>
-                        </div>-->
-                    </div>
+			<!-- 아코디언 영역 -->
+			<div class="section__cont desc"> 
+				<div class="cont__wrap cont__wrap-vertical wd-full">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">입금전용 계좌</span>
+						</h6>
+					</div>
+					<div class="accnt-cont-wrap">
+						<!-- 계좌 추가 전 버튼만 출력 -->
+						<div class="btn-group flex-column">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">입금전용 계좌 추가</span>
+							</button>
+							<!--
+								최초 진입 시 버블박스 떠 있다가 조건 충족 시 사라짐
+								: 조건에 따라 show 클래스 추가 및 삭제
+							-->
+							<span class="bubble-box bttmcenter show">
+							<!-- <span class="bubble-box"> -->
+								<span class="txt-wrap">
+									입금전용 계좌를 추가하여 납부해 보세요
+								</span>
+								<div class="bubble-box-arrow"></div>
+							</span>
+						</div>
+	
+						<!-- 계좌 추가 후 계좌정보+버튼 형태로 출력 
+						<div class="card-group flex-column bank">
+							<div class="card solid bank">
+								<div class="card-header">
+									<div class="item util">
+										<span class="ico-bank ibk">로고아이콘</span>
+									</div>
+									<div class="item text">
+										<span class="tit">은행 계좌번호</span>
+										<span class="txt">김유플</span>
+									</div>
+									<button type="button" class="btn end">종료</button>
+								</div>
+								<div class="card-footer">
+									<div class="btn-group flex-row">
+										<button class="btn btn-md" type="button">
+											<span class="txt">문자로 전송</span>
+										</button>
+										<button class="btn btn-md" type="button">
+											<span class="txt">복사</span>
+										</button>
+									</div>
+								</div> 
+							</div>
+						</div>
+						<div class="btn-group flex-column">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">입금전용 계좌 추가</span>
+							</button>
+						</div>-->
+					</div>
 
-                </div>
-            </div>
+				</div>
+			</div>
 		</div>
 		<!-- //container -->
 	</div>
