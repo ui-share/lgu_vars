@@ -60,6 +60,7 @@
     .txt-title {
         // flex: 1;
         column-gap: 4px;
+        color:var(--dt-gray16);
         text-align: left;
         line-height: 23px;
         .badge-round {
@@ -68,7 +69,10 @@
     }
     .txt-price {
         justify-content: flex-end;
-        span:first-of-type {@include fw-7(16px);line-height:150%;}
+        span:first-of-type {
+            color:var(--dt-black);
+            @include fw-7(16px);line-height:150%;
+        }
         // .img-box {margin-left:4px;}
     }
     &.btn-toggle { // 자세히보기 버튼

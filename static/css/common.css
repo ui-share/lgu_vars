@@ -3725,6 +3725,7 @@ input::placeholder {
 }
 .accordion-header .txt-title {
   column-gap: 4px;
+  color: var(--dt-gray16);
   text-align: left;
   line-height: 23px;
 }
@@ -3735,6 +3736,7 @@ input::placeholder {
   justify-content: flex-end;
 }
 .accordion-header .txt-price span:first-of-type {
+  color: var(--dt-black);
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
