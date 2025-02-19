@@ -14,10 +14,11 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		max-height: calc(var(--vh, 1vh) * 100);
+		max-height: calc(var(--vh, 1vh) - 80px);
 
 		// 삭제금지 아이폰 테스트 중
 		padding-top: env(safe-area-inset-top, 80px);
+		padding-bottom: env(safe-area-inset-bottom, 80px);
 		-webkit-transform: translateZ(0);
 
 		@include flexColum;
