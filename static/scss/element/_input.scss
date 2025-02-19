@@ -232,6 +232,12 @@ input::placeholder {
 		.btn-field-dropdown {
 			opacity: 0.4;
 		}
+		.input-row:has(input:focus) {
+			border-bottom: 2px solid var(--dt-gray08);
+			.input-field {
+				caret-color: transparent;
+			}
+		}
 	}
 	.input-row:has(input:disabled) {
 		border-bottom: 2px solid var(--dt-gray08);
@@ -445,6 +451,17 @@ input::placeholder {
 			}
 		}
 	}
+	&.disabled {
+		.slct-box {
+			opacity: 0.4;
+		}
+	}
+	// 이메일 에러시, 이메일 선택 버튼도 에러색 필요시 주석 삭제
+	// &.error {
+	// 	.slct-box {
+	// 		border-color: var(--dt-error);
+	// 	}
+	// }
 }
 
 // UI별 스타일 - code

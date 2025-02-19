@@ -2878,6 +2878,12 @@ input::placeholder {
 .input-control.disabled .btn-field-dropdown {
   opacity: 0.4;
 }
+.input-control.disabled .input-row:has(input:focus) {
+  border-bottom: 2px solid var(--dt-gray08);
+}
+.input-control.disabled .input-row:has(input:focus) .input-field {
+  caret-color: transparent;
+}
 .input-control .input-row:has(input:disabled) {
   border-bottom: 2px solid var(--dt-gray08);
 }
@@ -3087,6 +3093,9 @@ input::placeholder {
 }
 .email-form .slct-box.done .txt {
   color: var(--dt-gray16);
+}
+.email-form.disabled .slct-box {
+  opacity: 0.4;
 }
 
 .code {
