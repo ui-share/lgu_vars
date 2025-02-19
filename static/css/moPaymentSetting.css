@@ -82,7 +82,7 @@
 
 .input-row-wrap.al-baseline {
   align-items: baseline;
-  justify-content: flex-start;
+  justify-content: center;
   column-gap: 12px;
   padding: 48px 4px 0;
 }
@@ -93,6 +93,7 @@
 .input-row-wrap.al-baseline .input-control {
   position: relative;
   padding-top: 0;
+  width: 41.5%;
 }
 .input-row-wrap.al-baseline .input-control.error input:valid {
   color: var(--dt-error);
@@ -104,7 +105,14 @@
   padding-right: 10px;
   padding-left: 10px;
   bottom: calc(100% + 8px) !important;
-  right: 40px;
+  right: 50%;
+  transform: translateX(12.5%);
+}
+.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
+  right: 16px;
+}
+.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow::after {
+  left: 0;
 }
 .input-row-wrap.al-baseline .input-control .input-group {
   border-bottom: 2px solid var(--dt-gray08);
@@ -220,5 +228,15 @@
   }
   .input-row-wrap.al-baseline .input-control .input-field {
     max-width: 100%;
+  }
+  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
+    transform: translateX(-50%);
+    right: unset;
+    left: 50%;
+  }
+  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
+    right: unset;
+    left: 50%;
+    margin-left: -8px;
   }
 }
