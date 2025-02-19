@@ -3480,6 +3480,29 @@ input::placeholder {
   text-align: left;
   line-height: var(--dt-lh150);
 }
+.popup-body .issueCertSignup .con__tit-box {
+  padding-top: 12px;
+}
+.popup-body .issueCertSignup .info-col-wrap {
+  margin-bottom: 16px;
+  padding: 16px 18px;
+}
+.popup-body .issueCertSignup .info-col-wrap .plan-wrap .list-plan.line .row:not(:first-of-type) {
+  padding-top: 12px;
+}
+.popup-body .issueCertSignup .info-col-wrap .plan-wrap .list-plan.line .row + .row {
+  margin-top: 12px;
+}
+.popup-body .issueCertSignup .input-col-wrap {
+  row-gap: 10px;
+  padding-bottom: 20px;
+}
+.popup-body .issueCertSignup .input-col-wrap .input-control {
+  margin-top: 8px;
+}
+.popup-body .issueCertSignup .input-col-wrap .input-control + .input-control {
+  margin-top: 12px;
+}
 
 .popup-body + .popup-footer.hidden {
   padding-bottom: 20px;
