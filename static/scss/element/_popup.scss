@@ -324,6 +324,24 @@
 			}
 		}
 	}
+
+	.issueCertSignup{
+		.con__tit-box {
+			padding-top:12px;
+		}
+		.info-col-wrap { // 팝업 내 조회성 리스트
+			margin-bottom:16px;
+			padding:16px 18px;
+			.plan-wrap .list-plan.line .row:not(:first-of-type) {padding-top:12px;}
+			.plan-wrap .list-plan.line .row + .row {margin-top:12px;}
+		}
+		.input-col-wrap {
+			row-gap:10px;
+			padding-bottom:20px;
+			.input-control {margin-top:8px;}
+			.input-control + .input-control {margin-top:12px;}
+		}
+	}
 }
 
 //popup-body 패딩 수정

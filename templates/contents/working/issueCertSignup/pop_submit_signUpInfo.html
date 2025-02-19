@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="popup-wrapper show">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt">
+						가입사실 확인서 발급을 위해<br />
+						<span class="color-prim">정보를 입력해 주세요</span>
+					</span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="section__cont issueCertSignup">
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">
+									나의 가입 정보
+								</span>
+							</h6>
+						</div>
+						<div class="info-col-wrap">
+							<div class="plan-wrap">
+								<div class="list-plan line">
+									<div class="row">
+										<span class="txt-title">이름</span>
+										<span class="txt-desc">
+											<span>김*플</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">휴대폰 번호</span>
+										<span class="txt-desc">
+											<span>010-****-1234</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">가입일</span>
+										<span class="txt-desc">
+											<span>NNNN년 NN월 NN일</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">현재 사용중인<br />휴대폰 개통일</span>
+										<span class="txt-desc">
+											<span>NNNN년 NN월 NN일</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">휴대폰 정보</span>
+										<span class="txt-desc">
+											<span>SM-F731NS12</span> <!-- 별칭으로 바꿀 수 있으면 별칭으로 노출 -->
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">일련번호</span>
+										<span class="txt-desc">
+											<span>*********1234</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+		
+						<!-- 발급 목적 선택 -->
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">
+									발급 정보 입력
+								</span>
+							</h6>
+						</div>
+						<div class="input-col-wrap">
+							<!-- 드롭다운 버튼 Case 선택완료 했을 경우
+							: input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
+							<div class="input-control">
+								<div class="input-group">
+									<label class="input-label">발급 목적</label>
+									<div class="input-row">
+										<button type="button" class="btn-field-dropdown">
+											<!-- 값 선택 시 출력 <span class="value">
+												<span class="txt">A/S센터 제출용</span>
+											</span> -->
+											<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">발급 목적 선택</span> -->
+											<span class="txt">발급 목적 선택</span>
+										</button>
+									</div>
+								</div>
+							</div>
+			
+							<!-- 이메일 입력 -->
+							<div class="input-control email-form">				
+								<div class="input-group">
+									<label class="input-label">발급 받을 이메일 주소</label>
+									<div class="input-row">
+										<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" >
+										<div class="util-box">									
+											<button type="button" class="clear-btn hidden"></button>
+											<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
+										</div>
+									</div>					
+									<button type="button" class="slct-box">
+										<span class="txt">이메일 선택</span>
+										<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메일 도메인 텍스트 변경
+										  : <button type="button" class="slct-box done"><span class="txt">@naver.com</span> -->
+										<span class="arrow"></span>
+									</button>
+								</div>
+								<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<button class="btn line" type="button">
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn is-disabled" type="button">
+						<span class="txt">확인</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
