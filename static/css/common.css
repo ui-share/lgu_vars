@@ -164,7 +164,7 @@ http://scripts.sil.org/OFL
   --dt-safeBottom: env(safe-area-inset-bottom);
   --dt-safeRight: env(safe-area-inset-right);
   --dt-safeLeft: env(safe-area-inset-left);
-  --vh: 100vh;
+  --vh: 100%;
   --max-devicewidth: 100vw;
 }
 
