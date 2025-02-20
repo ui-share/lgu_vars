@@ -89,7 +89,7 @@
   gap: 0;
 }
 .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(var(--vh) - 262px);
+  height: calc(100% - 262px);
 }
 
 .cont__wrap .con__tit-box .tit-head {
