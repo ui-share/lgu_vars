@@ -220,6 +220,7 @@ button {
 .pt-20 {padding-top: 20px !important;}
 .pt-40 {padding-top: 40px !important;}
 .color-prim {color:var(--dt-primary) !important;}
+.semibold {font-weight:600 !important;}
 .bold {font-weight:700 !important;}
 .t-left {text-align: left !important;}
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
@@ -788,6 +789,7 @@ button {
 		@include fw-5(14px);
 		line-height:21px;
 		text-align:right;
+		word-break: break-all;
 		.flag:first-child {margin-right:8px;}
 	}
 	.info-price.total-last {
@@ -924,12 +926,13 @@ button {
 			color: var( --dt-gray14);
 		}
 		.tail {
+			max-width:166px;
+			margin-left: auto;
 			@include fw-5(14px);
 			line-height: 150%;
 			color: var(--dt-black);
 			text-align: right;
-			max-width:166px;
-			margin-left: auto;
+			word-break:break-all;
 		}
 	}
 }
