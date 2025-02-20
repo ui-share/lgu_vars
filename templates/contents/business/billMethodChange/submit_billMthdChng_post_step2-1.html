@@ -12,8 +12,8 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/changeBillMethod.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/billMethodChange.css">
 	
 	<!-- Scripts -->
 </head>
@@ -54,14 +54,14 @@
 								유효성 검사 에러 : <div class="input-control error">
 						-->
 						<!-- 주소 검색 입력 -->
-						<div class="input-control">				
+						<div class="input-control focused">				
 							<div class="input-group">
 								<label class="input-label">주소 입력</label>
 								<div class="input-row">
-									<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" autocomplete='off' autofocus>
+									<input type="text" class="input-field" placeholder="도로명, 지번, 또는 건물명 검색" value="한강대로 32" autocomplete='off' autofocus>
 									<div class="util-box">									
 										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 <button type="button" class="clear-btn"> -->
-										<button type="button" class="clear-btn hidden"></button>
+										<button type="button" class="clear-btn "></button>
 										<button type="button" class="srch-btn">검색</button>
 									</div>
 								</div>
@@ -82,9 +82,9 @@
 							<!-- <div class="validation-txt"><span>validation 메시지 필요시 노출</span></div> -->
 						</div>
 						<!-- 주소 검색 리스트  -->
-						<div class="addr-wrap ">
+						<div class="addr-wrap">
 							<!-- 주소 검색 : 결과 있음 -->
-							<ul class="col addr-list hidden">
+							<ul class="col addr-list">
 								<li class="addr-box" role="button">
 									<p class="zip-code">06252</p>
 									<p class="addr-main">서울특별시 용산구 한강대로 32 (한강로3가)</p>
@@ -122,7 +122,7 @@
 								</li>
 							</ul>
 							<!-- 주소 검색 : 결과 없음-->
-							<div class="addr-box card solid center hidden">
+							<!-- <div class="addr-box card solid center">
 								<div class="card-body">
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-card-address_x.png" alt="검색결과 없음">
@@ -132,7 +132,7 @@
 										<span class="txt">도로명 주소로 다시 검색해 주세요</span>
 									</div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
