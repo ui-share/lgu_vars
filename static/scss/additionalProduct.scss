@@ -4,14 +4,16 @@
 	.desc {
 		.info-col-wrap {
 			row-gap:24px;
-			.txt-sub{
-				line-height:1.0;
+			.row {align-items:flex-end;row-gap:8px;}
+			.txt-sub{line-height:1.0;}
+			.txt-title {
+				.flag:first-child {margin-right:3px;}
+				.txt-sub {margin-top:5px;}
 			}
 			.txt-desc {
 				> span:not(.txt-sub) {
 					font-size:16px;
 				}
-				.flag:first-child {margin-right:3px;}
 			}
 		}
 	}
