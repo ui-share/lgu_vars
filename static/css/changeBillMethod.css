@@ -103,9 +103,7 @@
 }
 .page-wrapper.changeBillMethod .container .section__cont.counsel {
   height: 100%;
-  padding: 76px 0 0px;
-  justify-content: space-between;
-  gap: 35px;
+  padding: 36px 0 0px;
 }
 .page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) {
   height: 100vh;
