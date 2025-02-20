@@ -1,3 +1,10 @@
+.page-wrapper .container .section__cont {
+  padding: 72px 0 155px;
+}
+.page-wrapper .container .section__cont.finish {
+  padding-top: 92px;
+}
+
 .callQuality .inform-wrap .text-box .tit {
   font-size: 22px;
 }
