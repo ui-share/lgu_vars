@@ -11,12 +11,11 @@
     <script src="../jscal/dist/datepicker-full.min.js"></script>
 </head>
 <body>
-    <input type="text" id="datepicker" placeholder="날짜 범위 선택">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const input = document.querySelector("#datepicker");
             new Datepicker(input, {
-                autohide: true,  // 날짜 선택 후 자동 닫힘
+                // autohide: true,  // 날짜 선택 후 자동 닫힘
                 format: "yyyy-mm-dd", // 날짜 형식 설정
                 language: "ko"  // 한국어 설정 (추가 설정 필요)
             });
@@ -39,6 +38,7 @@
 				<ul class="bullet-list info">
 					<li class="bullet-item">남은 신청 가능 일수는 180일 입니다</li>
 				</ul>
+				<input type="text" id="datepicker" placeholder="날짜 범위 선택">
 				<!-- 캘린더 영역 -->
 			</div>
 			
@@ -60,7 +60,7 @@
 		default: <div class="toast-wrap">
 		toast-in: <div class="toast-wrap show">
 	-->
-	<div class="toast-wrap show">
+	<div class="toast-wrap sho">
 		<div class="toast">
 			<div class="toast-txt">일시정지 기간을 입력해 주세요</div>
 			<button class="btn btn-util close" type="button" alt="닫기"></button>
