@@ -1,0 +1,255 @@
+@import "../scss/base/mixin";
+// search.scss
+
+.section__cont {
+	&.summary {
+		padding-bottom:18px;
+		background-color:#DCE6FF;
+		.cont__wrap {
+			@include flexColum;
+			gap:9px;
+			position:relative;
+			height:max-content;
+			min-height:188px;
+			padding-top:28px;
+			background-repeat: no-repeat;
+			background-size:140px;
+			background-position: right 10px bottom 0;
+			.info-price-wrap{
+				.info-price, .info-price-detail {
+					&.total-last {
+						.row {margin-top:4px;}
+					}
+				}
+			}			
+		}
+		.cont__wrap-bill {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-realtime {
+			background-image: url(../images/img/img-hm-realtime.png);
+		}
+		.cont__wrap-usestate {
+			background-image: url(../images/img/img-hm-usestate.png);
+		}
+		.cont__wrap-account {
+			background-image: url(../images/img/img-hm-account.png);
+			// min-height:158px;
+		}
+		.cont__wrap-payment {
+			background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+		}
+		.cont__wrap-billMthdChng {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-pauseTemp {
+			background-image: url(../images/img/img-hm-pauseTemp.png);
+		}
+		.cont__wrap-MOPaymentUsed {
+			background-image: url(../images/img/img-hm-MOpayment.png);
+			background-position: right -5px top 16px;
+			& + .info-price-single {
+				p.txt-info {font-size:14px;font-weight:500;}
+			}
+		}
+		.cont__wrap-plan {
+			background-image: url(../images/img/img-hm-myplan.png);
+		}
+		.txt-select-wrap {
+			@include flexRow;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px;
+			color:var(--dt-gray16);
+			padding-right: 30%;
+			.txt {
+				@include fw-6(22px);
+				line-height: 1.5;
+			}
+			&:has(.chips-date + .txt) {
+				.txt {
+					@include fw-6(18px);
+					line-height: 1.2;
+				}
+			}
+			.chips-date {
+				.txt {
+					@include fw-6(18px);
+					line-height: 1.2;
+				}
+			}
+		}
+		// 툴팁 있는 경우
+		.btn-tooltip {
+			margin-left:2px;
+			img {width:20px;height:20px;}
+		}
+		.tooltip-wrap {
+			max-width:280px;
+		}
+	}
+	&.segment {
+		padding: 36px 0 48px;
+		gap: 0;
+	}
+	&.desc {//입금전용계좌추가
+		&:has(.accnt-cont-wrap){
+			height:calc(100% - 262px);
+		}
+	}
+}
+
+
+// service.scss
+.page-wrapper {
+	.container {
+		.section__cont {
+			padding: 72px 0 155px;
+			&.finish {
+				padding-top: 92px;
+			}
+		}
+	}
+}
+
+.section__cont {
+	&.scan {
+		position:relative;
+		padding-top:56px;
+		padding-bottom:0;
+		.cont__wrap-service {padding:0;}
+		.cont__wrap.cont__wrap-btBtn .btn-group {
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:calc(100% - 40px);
+			padding:0;
+			margin:0 20px 20px;
+			border-radius: 4px;
+			overflow:hidden;
+			&::before {display:none;}
+		}
+		.scan-area:empty {
+			&:after {
+				content: "카드스캔API영역입니다";
+				display: block;
+				width: 100%;
+				height: calc(100% - 56px);
+				text-align: center;
+				font-size: 14px;
+				border: 1px solid red;
+				padding-top: 40vh;
+			}
+		}
+		.cont__wrap-btBtn {position:absolute;}
+	}
+	&:has(.cont__wrap-cms) {
+		padding: 92px 0 95px;
+		gap: 28px;
+	}
+	&:has(.cont__wrap-btBtn:not(:has(.flex-row)) button:nth-of-type(2)){
+		padding-bottom:240px;
+	}
+}
+.cont__wrap {
+	&.cont__wrap-btBtn {
+		padding: 0;
+		background-color: transparent;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		z-index:999; // 삭제 x
+		width: 100%;
+		.btn-group {
+			position: relative;
+			background-color: var(--dt-white);
+			padding: 0 20px 20px;
+			&::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: -20px;
+				left: 0;
+				width: 100%;
+				height: 20px;
+				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
+			}
+			// 풀버튼일 경우 패딩 0
+			&.full { 
+				padding: 0;
+				.btn {
+					border-radius: 0;
+				}
+			}
+		}
+		.btn.bg-bank {
+			width:calc(100% - 40px);
+			margin:0 auto 20px;
+			background-color:var(--dt-gray01);
+			border:1px solid var(--dt-gray08);
+		}
+		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
+			.accordion-container {
+				padding-left:20px;
+				padding-right:20px;
+				padding-bottom:8px;
+			}
+			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
+		}
+	}
+	// CMS : 실시간출금동의
+	&.cont__wrap-cms {
+		.con__tit-box {
+			&.flex-column {
+				flex-direction: column;
+				align-items: flex-start;
+				margin-bottom: 28px;
+				gap: 12px;
+				.text-box {
+					text-align: left;
+					gap: 6px;
+					.tit {
+						font-size: 14px;
+					}
+					.txt {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+	&.pauseTemp {
+		margin-top: 28px;
+		@include flexColum();
+		row-gap: 24px;
+		// .input-control {
+		// 	.input-group {
+		// 		padding-top: 16px;
+		// 	}
+		// 	&.floating {
+		// 		.input-group {
+		// 			padding-top: 0;
+		// 		}
+		// 	}
+		// }
+		.info-wrap {
+			@include flexBox(between, center);
+			column-gap: 12px;
+			.txt-tit {
+				@include fw-6(16px);
+				line-height: 1.2;
+				color: var(--dt-gray16);
+			}
+		}
+	}
+}
+
+.txt-infoWrap {
+	@include fw-6(12px);
+	color: var(--dt-gray11);
+	margin-top: 28px;
+	.subTxt-info {
+		@include fw-6(12px);
+		color: var(--dt-gray10);
+	}
+}
