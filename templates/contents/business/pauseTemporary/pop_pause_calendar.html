@@ -11,12 +11,11 @@
     <script src="../jscal/dist/datepicker-full.min.js"></script>
 </head>
 <body>
-    <input type="text" id="datepicker" placeholder="날짜 범위 선택">
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const input = document.querySelector("#datepicker");
             new Datepicker(input, {
-                autohide: true,  // 날짜 선택 후 자동 닫힘
+                // autohide: true,  // 날짜 선택 후 자동 닫힘
                 format: "yyyy-mm-dd", // 날짜 형식 설정
                 language: "ko"  // 한국어 설정 (추가 설정 필요)
             });
@@ -27,30 +26,44 @@
 		<div class="popup-wrapper show">
 	-->
 	<div class="popup-wrapper show">
-		<!-- <div class="back-drop"></div> -->
+		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit hidden">
-					<span class="txt"></span>
+				<div class="popup-tit">
+					<span class="txt">일시정지 기간을 선택해 주세요</span>
 				</div>
 				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<div class="jscalender-wrap">
-
-				</div>
+				<ul class="bullet-list info">
+					<li class="bullet-item">남은 신청 가능 일수는 180일 입니다</li>
+				</ul>
+				<input type="text" id="datepicker" placeholder="날짜 범위 선택">
+				<!-- 캘린더 영역 -->
 			</div>
 			
 			<div class="popup-footer">
-				<!-- <div class="btn-group flex-row is-confirm">
+				<div class="btn-group flex-row is-confirm">
 					<button class="btn line" type="button">
-						<span class="txt">아니요</span>
+						<span class="txt">취소</span>
 					</button>
 					<button class="btn" type="button">
-						<span class="txt">예약 취소</span>
+						<span class="txt">확인</span>
 					</button>
-				</div> -->
+				</div>
 			</div>
+		</div>
+	</div>
+
+	<!-- 
+		toast 상태 class : show
+		default: <div class="toast-wrap">
+		toast-in: <div class="toast-wrap show">
+	-->
+	<div class="toast-wrap sho">
+		<div class="toast">
+			<div class="toast-txt">일시정지 기간을 입력해 주세요</div>
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
 </body>
