@@ -1,0 +1,19 @@
+@import "../scss/base/mixin";
+
+.additionalProduct {
+	.desc {
+		.info-col-wrap {
+			row-gap:24px;
+			.txt-sub{
+				line-height:1.0;
+			}
+			.txt-desc {
+				> span:not(.txt-sub) {
+					font-size:16px;
+				}
+				.flag:first-child {margin-right:3px;}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,12 @@
+.additionalProduct .desc .info-col-wrap {
+  row-gap: 24px;
+}
+.additionalProduct .desc .info-col-wrap .txt-sub {
+  line-height: 1;
+}
+.additionalProduct .desc .info-col-wrap .txt-desc > span:not(.txt-sub) {
+  font-size: 16px;
+}
+.additionalProduct .desc .info-col-wrap .txt-desc .flag:first-child {
+  margin-right: 3px;
+}
