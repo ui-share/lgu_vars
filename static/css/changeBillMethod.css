@@ -1,7 +1,8 @@
 @charset "UTF-8";
 .page-wrapper.changeBillMethod .container .section__cont {
-  padding: 76px 0px 74px;
+  padding: 76px 0 66px;
 }
+
 .page-wrapper.changeBillMethod .container .section__cont.summary {
   padding: 56px 0px 0px;
 }
@@ -108,45 +109,6 @@
 }
 .page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) .cont__wrap-service .cont__txt-box .txt {
   line-height: 150%;
-}
-
-.addr-wrap {
-  margin-top: 8px;
-  height: calc(100% - 124px);
-  min-height: 120px;
-  overflow-y: auto;
-}
-.addr-wrap .addr-box {
-  padding: 16px 0 17px;
-  border-bottom: 1px solid var(--dt-gray17);
-}
-.addr-wrap .addr-box[role=button]:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
-.addr-wrap .addr-box .zip-code {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 17px;
-  color: var(--dt-primary);
-  margin-bottom: 4px;
-}
-.addr-wrap .addr-box .addr-main {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 21px;
-  color: var(--dt-gray16);
-  margin-bottom: 2px;
-}
-.addr-wrap .addr-box .addr-detail {
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 18px;
-  color: var(--dt-gray11);
-}
-.addr-wrap .addr-box.card.solid {
-  background-color: transparent;
-  border-bottom: unset;
-  padding-top: 72px;
 }
 
 .cont__wrap .con__tit-box .tit-head {
@@ -462,4 +424,42 @@
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray10);
+}
+
+.changeBillMethod .input-col-wrap {
+  row-gap: 8px;
+}
+
+.addr-wrap {
+  max-height: calc(100vh - 260px);
+  overflow-y: auto;
+}
+.addr-wrap .addr-box {
+  padding: 16px 0 17px;
+  border-bottom: 1px solid var(--dt-gray17);
+}
+.addr-wrap .addr-box .zip-code {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--dt-primary);
+  margin-bottom: 4px;
+}
+.addr-wrap .addr-box .addr-main {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-gray16);
+  margin-bottom: 2px;
+}
+.addr-wrap .addr-box .addr-detail {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--dt-gray11);
+}
+.addr-wrap .addr-box.card.solid {
+  background-color: transparent;
+  border-bottom: unset;
+  padding: 72px 0;
 }
