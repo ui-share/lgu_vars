@@ -44,9 +44,13 @@
 			@include fw-5(16px);
 			line-height: 150%;
 			width: 100%;
-			max-width: 240px;
+			// max-width: 240px;
+			max-width: calc(100% - 34px);
 			color: var(--dt-white);
 			padding: 0 5px;
+			&:has(+ .hidden) {
+				max-width:100%;
+			}
 		}
 		.btn-util {
 			display: inline-block;
