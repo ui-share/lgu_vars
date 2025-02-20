@@ -333,6 +333,10 @@ button {
   color: var(--dt-primary) !important;
 }
 
+.semibold {
+  font-weight: 600 !important;
+}
+
 .bold {
   font-weight: 700 !important;
 }
@@ -957,6 +961,7 @@ button {
   font-weight: 500;
   line-height: 21px;
   text-align: right;
+  word-break: break-all;
 }
 .info-col-wrap .txt-desc .flag:first-child {
   margin-right: 8px;
@@ -1111,13 +1116,14 @@ button {
   color: var(--dt-gray14);
 }
 .list-wrap .list-box .tail {
+  max-width: 166px;
+  margin-left: auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 150%;
   color: var(--dt-black);
   text-align: right;
-  max-width: 166px;
-  margin-left: auto;
+  word-break: break-all;
 }
 
 /* h7 txt 스타일*/
@@ -3484,28 +3490,37 @@ input::placeholder {
   text-align: left;
   line-height: var(--dt-lh150);
 }
-.popup-body .issueCertSignup .con__tit-box {
-  padding-top: 12px;
+.popup-body.submitSignupInfo {
+  padding-top: 18px;
 }
-.popup-body .issueCertSignup .info-col-wrap {
-  margin-bottom: 16px;
+.popup-body.submitSignupInfo .con__tit-box .tit-head .txt-title {
+  color: var(--dt-gray15);
+}
+.popup-body.submitSignupInfo .info-col-wrap {
+  margin-bottom: 24px;
   padding: 16px 18px;
 }
-.popup-body .issueCertSignup .info-col-wrap .plan-wrap .list-plan.line .row:not(:first-of-type) {
+.popup-body.submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row:not(:first-of-type) {
   padding-top: 12px;
 }
-.popup-body .issueCertSignup .info-col-wrap .plan-wrap .list-plan.line .row + .row {
+.popup-body.submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row + .row {
   margin-top: 12px;
 }
-.popup-body .issueCertSignup .input-col-wrap {
-  row-gap: 10px;
-  padding-bottom: 20px;
+.popup-body.submitSignupInfo .input-col-wrap {
+  row-gap: 8px;
+  padding-bottom: 16px;
 }
-.popup-body .issueCertSignup .input-col-wrap .input-control {
-  margin-top: 8px;
+.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type {
+  margin-top: 6px;
 }
-.popup-body .issueCertSignup .input-col-wrap .input-control + .input-control {
-  margin-top: 12px;
+.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control {
+  margin-top: 0;
+}
+.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control .input-group {
+  padding-top: 0;
+}
+.popup-body.submitSignupInfo .input-col-wrap .input-control + .input-control {
+  margin-top: 20px;
 }
 
 .popup-body + .popup-footer.hidden {
@@ -4015,9 +4030,12 @@ input::placeholder {
   font-weight: 500;
   line-height: 150%;
   width: 100%;
-  max-width: 240px;
+  max-width: calc(100% - 34px);
   color: var(--dt-white);
   padding: 0 5px;
+}
+.toast-wrap .toast .toast-txt:has(+ .hidden) {
+  max-width: 100%;
 }
 .toast-wrap .toast .btn-util {
   display: inline-block;
