@@ -102,7 +102,6 @@
   height: calc(100% - 262px);
 }
 .page-wrapper.changeBillMethod .container .section__cont.counsel {
-  height: 100%;
   padding: 36px 0 0px;
 }
 .page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) {

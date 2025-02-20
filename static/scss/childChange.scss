@@ -73,6 +73,9 @@
                         height:calc(100% - 262px);
                     }
                 }
+				&.counsel {
+                    padding: 36px 0 0px;
+                }
                 &:has(.addr-wrap){
                     height:100vh;
                     .cont__wrap-service {

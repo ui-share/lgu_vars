@@ -68,6 +68,9 @@
 .page-wrapper.childChange .container .section__cont.desc:has(.accnt-cont-wrap) {
   height: calc(100% - 262px);
 }
+.page-wrapper.childChange .container .section__cont.counsel {
+  padding: 36px 0 0px;
+}
 .page-wrapper.childChange .container .section__cont:has(.addr-wrap) {
   height: 100vh;
 }
