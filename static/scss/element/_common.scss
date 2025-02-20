@@ -700,7 +700,7 @@ button {
 		}
 		.txt-desc {
 			> span {
-				&:not(.txt-sub) {
+				&:not(.txt-sub, .flag) {
 					display:inline-block;
 					@include fw-5(14px);line-height:21px;
 				}

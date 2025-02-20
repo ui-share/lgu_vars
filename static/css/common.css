@@ -856,7 +856,7 @@ button {
   line-height: 150%;
   align-self: flex-start;
 }
-.plan-wrap .list-plan .txt-desc > span:not(.txt-sub) {
+.plan-wrap .list-plan .txt-desc > span:not(.txt-sub, .flag) {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
