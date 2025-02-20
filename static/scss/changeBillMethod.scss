@@ -112,6 +112,12 @@
 						height:calc(100% - 262px);
 					}
 				}
+                &.counsel {
+                    height: 100%;			
+                    padding: 76px 0 0px;
+                    justify-content: space-between;
+                    gap: 35px;
+                }
 				&:has(.addr-wrap){
 					height:100vh;
 					.cont__wrap-service {
