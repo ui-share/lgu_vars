@@ -13,7 +13,8 @@
 }
 // 로밍기간 카드
 .card.rmPeriod {
-    padding: 22px 16px;
+    // padding: 22px 16px;
+    padding:16px 20px 20px;
     gap: 20px;
     .card-header {
         display: flex;
@@ -51,8 +52,8 @@
                 .txt {
                     text-align: center;
                 }
-                &.date {
-                    gap: 0;
+                &.date { // 3월24일(수) + 09:00 
+                    gap: 4px;
                 }
                 &.period {
                     position: relative;
@@ -166,6 +167,9 @@
 }
 //로밍히스토리 풀팝업
 .full-popup.rmHistory {
+    .con__tit-box .tit-head .txt-title {
+        line-height:1.25;
+    }
     .cont__wrap-message {
         margin-top: 20px;
     }
@@ -178,7 +182,7 @@
         display: flex;
         align-items: center;
         .flag {
-            margin-right: 8px;
+            margin-right: 6px;
         }
         .flag .txt {
             font-size: 11px;
@@ -239,11 +243,14 @@
                         line-height: 150%;
                         color: var(--dt-gray12);
                     }
-                    // 3depth
+                    .head {width:calc(100% - 81px);}
+                    .tail { min-width:81px;}
+                    
+                    // 3depth : ㄴ꺽쇠 리스트
                     .list-box {
                         padding: 0;
                         .head {
-                            padding-left: 12px;
+                            padding-left: 11px;
                             background-image: url(../images/icon/ic-list-brace.svg);
                             background-repeat: no-repeat;
                             background-position: 0px 6px;

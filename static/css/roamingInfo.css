@@ -11,7 +11,7 @@
 }
 
 .card.rmPeriod {
-  padding: 22px 16px;
+  padding: 16px 20px 20px;
   gap: 20px;
 }
 .card.rmPeriod .card-header {
@@ -55,7 +55,7 @@
   text-align: center;
 }
 .card.rmPeriod .card-body .period-wrap .item.date {
-  gap: 0;
+  gap: 4px;
 }
 .card.rmPeriod .card-body .period-wrap .item.period {
   position: relative;
@@ -160,6 +160,9 @@
   margin-top: 0;
 }
 
+.full-popup.rmHistory .con__tit-box .tit-head .txt-title {
+  line-height: 1.25;
+}
 .full-popup.rmHistory .cont__wrap-message {
   margin-top: 20px;
 }
@@ -174,7 +177,7 @@
   align-items: center;
 }
 .full-popup.rmHistory .txt-price .flag {
-  margin-right: 8px;
+  margin-right: 6px;
 }
 .full-popup.rmHistory .txt-price .flag .txt {
   font-size: 11px;
@@ -233,11 +236,17 @@
   line-height: 150%;
   color: var(--dt-gray12);
 }
+.cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box .head {
+  width: calc(100% - 81px);
+}
+.cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
+  min-width: 81px;
+}
 .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box {
   padding: 0;
 }
 .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box .head {
-  padding-left: 12px;
+  padding-left: 11px;
   background-image: url(../images/icon/ic-list-brace.svg);
   background-repeat: no-repeat;
   background-position: 0px 6px;

@@ -1093,6 +1093,8 @@ button {
   background-color: var(--dt-gray02);
   border-radius: 8px;
   padding: 20px;
+}
+.list-wrap:not(:first-child) {
   margin-top: 24px;
 }
 .list-wrap .list-box {
@@ -1240,7 +1242,7 @@ button {
 }
 .btn-group .btn.btn-md {
   width: 100%;
-  padding: 9px 12px;
+  padding: 9px 12px 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3230,13 +3232,19 @@ input::placeholder {
   align-items: center;
   justify-content: flex-start;
   padding: 8px 0;
-  gap: 8px;
+  gap: 10px 8px;
 }
 .popup-wrapper .popup-header .popup-tit > .txt {
   color: var(--dt-gray16);
   font-size: 20px;
   font-weight: 700;
   line-height: var(--dt-lh150);
+}
+.popup-wrapper .popup-header .popup-tit:has(.flag-etc) {
+  flex-wrap: wrap;
+}
+.popup-wrapper .popup-header .popup-tit:has(.flag-etc) > .txt {
+  line-height: 120%;
 }
 .popup-wrapper .popup-header .btn-util {
   width: 40px;
@@ -3627,6 +3635,9 @@ input::placeholder {
 }
 .full-popup .popup-body .section__cont .cont__wrap {
   padding: 0 20px;
+}
+.full-popup .popup-body .section__cont .cont__wrap.cont__wrap-vertical {
+  gap: 16px;
 }
 
 .switch-group .switch-input {
