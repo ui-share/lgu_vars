@@ -67,6 +67,7 @@
 .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .txt-sub {
   font-size: 14px;
   line-height: 150%;
+  margin-top: 0;
 }
 
 .popup-body:has(.appPaid-wrap) {
@@ -100,21 +101,16 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 6px;
-  row-gap: 8px;
   margin-top: 20px;
+  border-radius: 8px;
+  gap: 4px;
 }
 .appPaid-wrap .info-box .txt {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 140%;
-  color: var(--dt-gray16);
+  color: var(--dt-gray14);
   letter-spacing: -0.5px;
-}
-.appPaid-wrap .info-box .img-box img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
 }
 .appPaid-wrap + .bullet-list {
   margin-top: 8px;

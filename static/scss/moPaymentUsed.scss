@@ -60,6 +60,7 @@
                         .txt-sub {
                             font-size:14px;
                             line-height:150%;
+                            margin-top: 0;
                         }
                     }
                 }
@@ -92,21 +93,14 @@
         align-items:center;
         justify-content:center;
         flex-wrap: wrap;
-        column-gap: 6px;
-        row-gap: 8px;
         margin-top: 20px;
+        border-radius: 8px;
+        gap: 4px;
         .txt {
-            @include fw-5(15px);
+            @include fw-5(14px);
             line-height: 140%;
-            color: var(--dt-gray16);
+            color: var(--dt-gray14);
             letter-spacing: -0.5px;
-        }
-        .img-box {
-            img {
-                width: 20px;
-                height: 20px;
-                vertical-align: middle;
-            }
         }
     }
     & + .bullet-list {margin-top:8px;}
