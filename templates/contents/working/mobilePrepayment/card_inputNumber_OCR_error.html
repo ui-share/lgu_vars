@@ -37,7 +37,8 @@
 					<!-- 납부할 카드정보 입력 영역 -->
 					<div class="cont__txt-box">
 						<h4 class="txt">
-							납부할 카드 정보를 입력해 주세요
+							납부할 카드 정보를 확인하시고<br>
+							잘못된 경우 수정해 주세요
 						</h4>
 						<ul class="bullet-list info">
 							<li class="bullet-item">
@@ -63,7 +64,7 @@
 							<div class="input-group">
 								<label class="input-label">카드번호</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="0000-0000-0000-0000">
+									<input type="tel" class="input-field" placeholder="0000-0000-0000-0000" value="1234-5678-9012-3456">
 									<div class="util-box">
 										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
 										<button type="button" class="clear-btn hidden"></button>
@@ -71,7 +72,7 @@
 								</div>
 							</div>							
 							<!-- 카드번호 전부 입력 시 노출 -->
-							<div class="chips-group hidden">
+							<div class="chips-group">
 								<button type="button" class="chips chips-bank">
 									<span class="ico-bank shinhan">로고아이콘</span>
 									<span class="txt">신한카드</span>
@@ -84,7 +85,7 @@
 							<div class="input-group">
 								<label class="input-label">유효기간 입력</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="MM월 / YY년">
+									<input type="tel" class="input-field" placeholder="MM월 / YY년" value="12월 / 25년">
 									<div class="util-box">
 										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
 										<button type="button" class="clear-btn hidden"></button>
@@ -92,6 +93,77 @@
 								</div>
 							</div>
 							<div class="validation-txt">유효기간을 모두 입력해 주세요</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							선결제할 금액을 입력해 주세요
+						</h4> 
+					</div>
+					<div class="input-col-wrap">
+						<!-- 
+							[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+						-->
+
+						<!-- 선결제 금액 입력 -->
+						<div class="input-control error">
+							<div class="input-group">
+								<label class="input-label">선결제 금액</label>
+								<div class="input-row">
+									<input type="tel" class="input-field" placeholder="금액" value="51 만원"><!-- 숫자만 입력 가능 / 입력 시 '만원' 텍스트도 value에 포함되어야 함 -->
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+								<span class="bubble-box topleft show"><!-- input-control error 시 show 추가-->
+									<!-- <span class="bubble-box topleft show"> -->
+									<span class="txt-wrap">
+										<span class="ico"></span>
+										선결제 가능금액 이상 결제할 수 없어요
+									</span>
+									<div class="bubble-box-arrow"></div>
+								</span>
+							</div>
+							<div class="notice-txt">
+								<span>선결제 가능 <span>50만원</span></span>
+							</div>
+							<div class="chips-group">
+                                <button type="button" class="chips chips-tag tag-lg primary">
+                                    <span class="txt">전액</span>
+                                </button>
+                            </div>
+						</div>
+
+						<!-- 할부기간 -->
+						<!-- 드롭다운 버튼 Case : 클릭 시 할부기간팝업 출력 -->
+						<div class="input-control">
+							<div class="input-group">
+								<label class="input-label">할부기간</label>
+								<div class="input-row">
+									<button type="button" class="btn-field-dropdown">
+										<span class="value">
+											<span class="txt">일시불</span><!-- 디폴트 : 일시불 선택 상태 -->
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="notice-txt">
+								<span>5만원 이상 결제 시 할부 가능</span>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -104,7 +176,7 @@
 				<div class="cont__wrap cont__wrap-btBtn">
 					<div class="btn-group flex-row is-confirm">
 						<button class="btn btn-prim is-disabled" type="button">
-							<span class="txt">다음</span>
+							<span class="txt">이용금액 선결제</span>
 						</button>
 					</div>
 				</div>

@@ -16,17 +16,17 @@
     <link rel="stylesheet" type="text/css" href="../../../../static/css/search.css">
     <link rel="stylesheet" type="text/css" href="../../../../static/css/moPaymentSetting.css">
 
-     <!-- Scripts -->
-     <script src="../../../../static/js/tooltip/popper.js"></script>
-     <script>
-         const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
-         function initCheckDevice() {
+    <!-- Scripts -->
+    <script src="../../../../static/js/tooltip/popper.js"></script>
+    <script>
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+        function initCheckDevice() {
              // PC
-             if (!isMobile) {
-                 document.body.classList.add("is-pc");
-             }
-         }
-         window.onload = ()=> {
+            if (!isMobile) {
+                document.body.classList.add("is-pc");
+            }
+        }
+        window.onload = ()=> {
             initCheckDevice();
 
             /*
@@ -96,8 +96,8 @@
             hideEvents.forEach((event) => {
                 tooltipBtn.addEventListener(event, hide);
             });
-         }
-     </script>
+        }
+    </script>
 
 </head>
 <body>
