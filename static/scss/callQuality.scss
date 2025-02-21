@@ -2,11 +2,10 @@
 // 서비스 : 통화품질 문의
 // 통화품질 풀 팝업
 .page-wrapper {
-	.container {
-		.section__cont {
-			padding: 72px 0 155px;
-			&.finish {
-				padding-top: 92px;
+	&.callQuality {
+		.container {
+			.section__cont {
+				padding: 72px 0 155px;
 			}
 		}
 	}
@@ -40,71 +39,71 @@
 		}
 	}
 }
-.cont__wrap {
-	&.cont__wrap-btBtn {
-		padding: 0;
-		background-color: transparent;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		z-index:999; // 삭제 x
-		width: 100%;
-		.btn-group {
-			position: relative;
-			background-color: var(--dt-white);
-			padding: 0 20px 20px;
-			&::before {
-				content: "";
-				display: inline-block;
-				position: absolute;
-				top: -20px;
-				left: 0;
-				width: 100%;
-				height: 20px;
-				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
-			}
-			// 풀버튼일 경우 패딩 0
-			&.full { 
-				padding: 0;
-				.btn {
-					border-radius: 0;
-				}
-			}
-		}
-		.btn.bg-bank {
-			width:calc(100% - 40px);
-			margin:0 auto 20px;
-			background-color:var(--dt-gray01);
-			border:1px solid var(--dt-gray08);
-		}
-		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
-			.accordion-container {
-				padding-left:20px;
-				padding-right:20px;
-				padding-bottom:8px;
-			}
-			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
-		}
-	}
-	// CMS : 실시간출금동의
-	&.cont__wrap-cms {
-		.con__tit-box {
-			&.flex-column {
-				flex-direction: column;
-				align-items: flex-start;
-				margin-bottom: 28px;
-				gap: 12px;
-				.text-box {
-					text-align: left;
-					gap: 6px;
-					.tit {
-						font-size: 14px;
-					}
-					.txt {
-						font-size: 16px;
-					}
-				}
-			}
-		}
-	}
-}
+// .cont__wrap {
+// 	&.cont__wrap-btBtn {
+// 		padding: 0;
+// 		background-color: transparent;
+// 		position: fixed;
+// 		left: 0;
+// 		bottom: 0;
+// 		z-index:999; // 삭제 x
+// 		width: 100%;
+// 		.btn-group {
+// 			position: relative;
+// 			background-color: var(--dt-white);
+// 			padding: 0 20px 20px;
+// 			&::before {
+// 				content: "";
+// 				display: inline-block;
+// 				position: absolute;
+// 				top: -20px;
+// 				left: 0;
+// 				width: 100%;
+// 				height: 20px;
+// 				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
+// 			}
+// 			// 풀버튼일 경우 패딩 0
+// 			&.full { 
+// 				padding: 0;
+// 				.btn {
+// 					border-radius: 0;
+// 				}
+// 			}
+// 		}
+// 		.btn.bg-bank {
+// 			width:calc(100% - 40px);
+// 			margin:0 auto 20px;
+// 			background-color:var(--dt-gray01);
+// 			border:1px solid var(--dt-gray08);
+// 		}
+// 		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
+// 			.accordion-container {
+// 				padding-left:20px;
+// 				padding-right:20px;
+// 				padding-bottom:8px;
+// 			}
+// 			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
+// 		}
+// 	}
+// 	// CMS : 실시간출금동의
+// 	&.cont__wrap-cms {
+// 		.con__tit-box {
+// 			&.flex-column {
+// 				flex-direction: column;
+// 				align-items: flex-start;
+// 				margin-bottom: 28px;
+// 				gap: 12px;
+// 				.text-box {
+// 					text-align: left;
+// 					gap: 6px;
+// 					.tit {
+// 						font-size: 14px;
+// 					}
+// 					.txt {
+// 						font-size: 16px;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
