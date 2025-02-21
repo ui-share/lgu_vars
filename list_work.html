@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>퍼블리싱 리스트 | LGU+ 눈으로 보는 ARS</title>
+	<link rel="stylesheet" type="text/css" href="./static/css/common.css">
+</head>
+<style>
+.transition,.menu-wrap > li i:before, .menu-wrap > li i:after, .accordion-con {transition: all 0.25s ease-in-out;}
+.flipIn, .menu-wrap > li, h1 {animation: flipdown 0.5s ease both;}
+.no-select, h2 {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
+html {width: 100%;height: 100%;perspective: 900;position: relative;}
+body {width: 100%;height: 100%;color: rgba(48, 69, 92, 1);}
+.accordion-wrapper {width: 100%;height: calc(100% - 30px);min-height: 0;display: inline-block;position: relative;background-color: #fafcff;}
+h1 {text-transform: uppercase;font-size: 22px;line-height: 1.5;font-weight: 700;background-color: #fafcff;padding: 10px 20px;z-index: 99;}
+h2 {font-size: 18px;line-height: 3;font-weight: 600;display: block;cursor: pointer; padding: 0 20px}
+.accordion-con {max-height: 500px;position: relative;opacity: 1;transform: translate(0, 0);display: flex;flex-direction: column;padding: 0 20px;overflow-y: auto;z-index: 2;background-color: #f7f7f7;box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04);} /* box-shadow: inset 0px 2px 6px 0px rgba(0, 0, 0, 0.04); */
+ul {list-style: none;perspective: 900;margin: 0;}
+.menu-wrap {border-bottom : 1px solid #dce7eb;}
+.menu-wrap > li {position: relative;border-top: 1px solid #dce7eb;} /* box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.04);*/
+.menu-wrap > li:last-of-type {padding-bottom: 0;}
+.menu-wrap > li i {position: absolute;transform: translate(-28px, 6px);margin-top: 15px;right: 0;}
+.menu-wrap > li i:before,.menu-wrap > li i:after {content: "";position: absolute;background-color: #ff6873;width: 3px;height: 9px;}
+.menu-wrap > li i:before {transform: translate(-2px, 0) rotate(45deg);}
+.menu-wrap > li i:after {transform: translate(2px, 0) rotate(-45deg);}
+.menu-wrap > li input[type=checkbox] {position: absolute;cursor: pointer;width: 100%;height: 100%;opacity: 0;z-index: 1;}
+.menu-wrap > li input[type=checkbox]:checked ~ .accordion-con {margin-top: 0;max-height: 0;opacity: 0;transform: translate(0, 20%);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:before {transform: translate(2px, 0) rotate(45deg);}
+.menu-wrap > li input[type=checkbox]:checked ~ i:after {transform: translate(-2px, 0) rotate(-45deg);}
+.menu,.menu > .txt {display: flex;flex-direction: column;}
+.menu {padding: 20px 0 0 0;}
+.menu:last-child {padding: 20px 0 30px}
+.menu .tit {font-size: 16px;line-height: 1.5;font-weight: 600;color: #ff6873;}
+.menu .txt > a {display: flex;flex-direction: row;align-items: center;gap: 5px;}
+.menu .txt > a > span:not(.flag) {font-size: 16px;line-height: 1.5;color:#333;}
+.menu .txt > h3 {font-size: 12px;line-height: 1.5;font-weight: 600;color: #689fff;padding-top: 10px;}
+.menu > .txt {gap: 5px;padding: 0 10px;}
+.flag .txt {line-height: 1;}
+@keyframes flipdown {
+	0% {
+		opacity: 0;
+		transform-origin: top center;
+		transform: rotateX(-90deg);
+	}
+	5% {
+		opacity: 1;
+	}
+	80% {
+		transform: rotateX(8deg);
+	}
+	83% {
+		transform: rotateX(6deg);
+	}
+	92% {
+		transform: rotateX(-3deg);
+	}
+	100% {
+		transform-origin: top center;
+		transform: rotateX(0deg);
+	}
+}
+</style>
+<body>
+	<div class="accordion-wrapper">
+		<h1>모바일 서비스</h1>
+		<ul class="menu-wrap">
+
+			<!-- 공통_common -->
+			<li>
+				<input type="checkbox" checked><i></i>
+				<h2>⭐ 공통_common</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 샘플입니다</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/main/main2.html" target="_blank"><span>메인(샘플입니다)</span>
+								<span class="flag error"><span class="txt">up 02.19</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/search_directPay2.html" target="_blank"><span>2Depth(샘플입니다)</span>
+								<span class="flag error"><span class="txt">up 02.19</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 메인/2depth : 상담채널</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/counsel_main.html" target="_blank"><span>메인 하단 채널이동 예시</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/counsel_sub.html" target="_blank"><span>2depth 하단 채널이동 예시</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 진입/종료/채널이동</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/common/start.html" target="_blank"><span>진입 분기</span>
+								<span class="flag"><span class="txt">서비스 삭제</span></span>
+							</a>
+							<a href="./templates/contents/common/splash.html" target="_blank"><span>스플래시 화면</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/common/end_service.html" target="_blank"><span>서비스 종료 화면</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span> 
+								<span class="flag flag-recent"><span class="txt">02.07</span></span>
+								<span class="flag error"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/common/end_identityMismatch.html" target="_blank"><span>인증 3회 실패 종료</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag error"><span class="txt">up 02.11</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/common/pop_callEnd_AI.html" target="_blank"><span>AI 상담 이동</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/common/pop_callEnd_chatbot.html" target="_blank"><span>챗봇 상담 이동</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/common/pop_callEnd_app.html" target="_blank"><span>당신의 U+앱 이동</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- 공통_business_common -->
+			<li>
+				<input type="checkbox"  checked><i></i>
+				<h2>⭐ 공통_business_common</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/common/service_iputBirth.html" target="_blank"><span>생년월일 인증</span> 
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/common/pop_corpLimit.html" target="_blank"><span>법인 제한</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/common/pop_underageLimit.html" target="_blank"><span>미성년 제한</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/common/pop_svcCancel.html" target="_blank"><span>서비스 중단</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/common/pop_processError.html" target="_blank"><span>처리중 오류</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/common/pop_callEnd.html" target="_blank"><span>눈으로 보는 ARS 종료</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 상담사 연결_counsel</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/counsel/service_counsel_info.html" target="_blank"><span>전화 상담_업무내 </span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/service_counsel_lunch.html" target="_blank"><span>전화 상담_점심시간 </span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/service_counsel_end.html" target="_blank"><span>전화 상담_업무외</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/service_counsel_delay.html" target="_blank"><span>전화 상담_연결지연</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/service_counsel_limits.html" target="_blank"><span>전화 상담_블랙컨슈머</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/counsel/pop_slctLimitedCounsel.html" target="_blank"><span>상담 항목 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_noticeCounselTime.html" target="_blank"><span>상담 시간 안내</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_counselLimit.html" target="_blank"><span>상담콜 폭주</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/counsel/pop_counselCnfrm.html" target="_blank"><span>상담사 연결 확인</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>						
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- 메인 _main -->
+			<li>
+				<input type="checkbox" checked><i></i>
+				<h2>⭐ 메인_main</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">메인</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/main/main.html" target="_blank"><span>모바일 메인</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag flag-recent"><span class="txt">02.07</span></span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/main/pop_corpLimit_mobilePayment.html" target="_blank"><span>휴대폰 결제_법인 제한</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_underageLimit_mobilePayment.html" target="_blank"><span>휴대폰 결제_미성년 제한</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_slctIpaymentCnfm.html" target="_blank"><span>납부확인서 신청 방법 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_slctInvoiceCnfrm.html" target="_blank"><span>세금계산서 신청 방법 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_slctReissueMthd.html" target="_blank"><span>청구서 재발행 방법 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_callEnd_appCbDiscount.html" target="_blank"><span>결합할인 조회/추가 앱 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_callEnd_appRmPlan.html" target="_blank"><span>해외로밍 신청 앱 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_slctCounsel_pauseLost.html" target="_blank"><span>분실정지 상담 방법 선택</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/main/pop_callEnd_app_pauseLost.html" target="_blank"><span>분실정지 당신의 U+앱 연결</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>						
+							<a href="./templates/contents/business/main/pop_counselCnfrm_pauseLost.html" target="_blank"><span>분실정지 상담사 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 요금 및 납부_business -->
+			<li>
+				<input type="checkbox" checked><i></i>
+				<h2>⭐ 요금 및 납부_business</h2>
+				<div class="accordion-con">
+					
+					<ul class="menu">
+						<li class="tit">↳ 청구 요금_billDlst</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billDlst/search_billing.html" target="_blank"><span>청구 요금 조회</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+								<span class="flag flag-recent"><span class="txt">02.07</span></span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billDlst/pop_calendar.html" target="_blank"><span>청구 월 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 실시간 요금_realTimeAmt</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/realTimeAmt/search_realtimeBill.html" target="_blank"><span>실시간 요금 조회</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+						</li>						
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 요금 바로 납부_instantPayment</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/instantPayment/search_directPay.html" target="_blank"><span>요금 바로 납부</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/finish_InstantPayment.html" target="_blank"><span>요금 바로 납부_ 완료</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/list_myPayment.html" target="_blank"><span>나의 납부내역</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pay_bankAccnt_default.html" target="_blank"><span>입금전용 계좌_case1 </span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pay_bankAccnt_addBankList.html" target="_blank"><span>입금전용 계좌_case2 </span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pay_bankAccnt_addFull.html" target="_blank"><span>입금전용 계좌_case3 </span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+
+							<a href="./templates/contents/business/instantPayment/card_inputNumber_default.html" target="_blank"><span>카드로 납부_카드 정보_기본 </span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/card_inputNumber_case_focused.html" target="_blank"><span>카드로 납부_카드 정보_포커스 상태 예시</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/card_inputNumber_case_error.html" target="_blank"><span>카드로 납부_카드 정보 에러 상태 예시 </span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							
+							<a href="./templates/contents/working/hold/realtimebank_inputAccnt_default.html" target="_blank"><span>실시간 출금_기본 </span>
+								<span class="flag flag-recent"><span class="txt">02.11</span></span>
+								<span class="flag"><span class="txt">서비스 삭제</span></span>
+							</a>
+							<a href="./templates/contents/working/hold/realtimebank_inputAccnt_case_focused.html" target="_blank"><span>실시간 출금_포커스 상태 예시</span>
+								<span class="flag flag-recent"><span class="txt">02.11</span></span>
+								<span class="flag"><span class="txt">서비스 삭제</span></span>
+							</a>
+							<a href="./templates/contents/working/hold/realtimebank_inputAccnt_case_error.html" target="_blank"><span>실시간 출금_에러 상태 예시</span>
+								<span class="flag flag-recent"><span class="txt">02.11</span></span>
+								<span class="flag"><span class="txt">서비스 삭제</span></span>
+							</a>
+							
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/instantPayment/pop_slctPaymentMthd.html" target="_blank"><span>납부 방법 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+								<span class="flag flag-recent"><span class="txt">02.07</span></span>
+								<span class="flag error"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_paymentCorpLimit.html" target="_blank"><span>법인 납부 제한</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_slctAccntBank.html" target="_blank"><span>계좌 선택</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_slctAccntBank.html" target="_blank"><span>할부개월 선택</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_error_someoneElse.html" target="_blank"><span>타인카드 납부 제한</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_error_cardInfo.html" target="_blank"><span>카드정보 확인 불가</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_cnfmDeleteAccnt.html" target="_blank"><span>입금전용계좌 삭제</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/instantPayment/pop_svcCancel_card.html" target="_blank"><span>요금 납부 서비스 중단_카드</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/working/hold/pop_svcCancel_bank.html" target="_blank"><span>요금 납부 서비스 중단_실시간 계좌</span>
+								<span class="flag flag-recent"><span class="txt">02.11</span></span>
+								<span class="flag"><span class="txt">서비스 삭제</span></span>
+							</a>
+						</li>	
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 요금 납부방법 변경_paymentMethodChange</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/paymentMethodChange/search_chngpayMthd_bankaccount.html" target="_blank"><span>요금 납부방법 _은행</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/search_chngpayMthd_credit.html" target="_blank"><span>요금 납부방법 _신용카드</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/search_chngpayMthd_jiro.html" target="_blank"><span>요금 납부방법 _지로</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+
+							<a href="./templates/contents/business/paymentMethodChange/bank_inputAccnt_default.html" target="_blank"><span>요금 납부방법 변경 _to은행_기본</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/bank_inputAccnt_case_focused.html" target="_blank"><span>요금 납부방법 변경 _to은행_포커스</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/bank_inputAccnt_case_error.html" target="_blank"><span>요금 납부방법 변경 _to은행_에러</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/card_inputNumber_default.html" target="_blank"><span>요금 납부방법 변경 _to카드_기본</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/card_inputNumber_case_focused.html" target="_blank"><span>요금 납부방법 변경 _to카드_포커스</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/card_inputNumber_case_error.html" target="_blank"><span>요금 납부방법 변경 _to카드_에러</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/finish_paymentMthdChngToBank.html" target="_blank"><span>요금 납부방법 변경_은행 완료</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/finish_paymentMthdChngToCard.html" target="_blank"><span>요금 납부방법 변경_카드 완료</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/list_myPayment.html" target="_blank"><span>이전 납부 내역</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/paymentMethodChange/pop_chngPaymentMthd.html" target="_blank"><span>요금 납부방법 선택</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_slctBankCorp_bank.html" target="_blank"><span>은행/증권사 선택 _ 은행 탭</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_slctBankCorp_finance.html" target="_blank"><span>은행/증권사 선택 _ 증권사 탭</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_slctPayday_bank.html" target="_blank"><span>결제일 선택 _은행</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_slctPayday_card.html" target="_blank"><span>결제일 선택 _카드</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_cardNum.htmll" target="_blank"><span>카드 확인 불가_카드번호 불일치</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_expiry.html" target="_blank"><span>카드 확인 불가_유효기간 불일치</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_discord.html" target="_blank"><span>카드 확인 불가_카드번호&유효기간 불일치</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_fail.html" target="_blank"><span>카드 확인 불가_등록 불가 카드</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_others.html" target="_blank"><span>타인 명의카드 사용 불가</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_bankNum.html" target="_blank"><span>예금주 확인 불가</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_impossible_bankOthers.html" target="_blank"><span>타인명의 계좌 불가</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentMethodChange/pop_svcCancel_chngPaymentMthd.html" target="_blank"><span>서비스 중단</span>
+								<span class="flag success"><span class="txt">02.11</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 청구서 재발행_billReissue</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billReissue/submit_billReissueInfoEmail.html" target="_blank"><span>청구서 재발행 _ 이메일</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span> 
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/submit_billReissueInfoTel.html" target="_blank"><span>청구서 재발행 _ 휴대폰 문자(MMS)</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span> 
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/submit_billReissueInfoFax.html" target="_blank"><span>청구서 재발행 _ 팩스</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span> 
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/finish_billReissue_email.html" target="_blank"><span>청구서 재발행 완료_이메일</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/finish_billReissue_phone.html" target="_blank"><span>청구서 재발행 완료_ 휴대폰 문자(MMS)</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/finish_billReissue_fax.html" target="_blank"><span>청구서 재발행 완료_ 팩스</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billReissue/pop_slctDomain.html" target="_blank"><span>이메일 도메인 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/pop_calendar.html" target="_blank"><span>신청 월 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+							<a href="./templates/contents/business/billReissue/pop_svcCancel.html" target="_blank"><span>청구서 재발행 서비스 중단</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 청구서 받는방법 변경_billMethodChange</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billMethodChange/search_billMthdChngPhone.html" target="_blank"><span>청구서 받는방법_휴대폰</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/search_billMthdChngMMS.html" target="_blank"><span>청구서 받는방법_문자청구서(구)</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/search_billMthdChngEmail.html" target="_blank"><span>청구서 받는방법_이메일</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/search_billMthdChngPost.html" target="_blank"><span>청구서 받는방법_우편</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/submit_billMthdChng_email.html" target="_blank"><span>변경 이메일 입력</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/submit_billMthdChng_post_step1.html" target="_blank"><span>변경 주소_ 주소 검색</span>
+								<span class="flag flag-recent"><span class="txt">up 02.11</span></span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/submit_billMthdChng_post_step2-1.html" target="_blank"><span>변경 주소_주소 검색 결과 있음</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/submit_billMthdChng_post_step2-2.html" target="_blank"><span>변경 주소_주소 검색 결과 없음</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/submit_billMthdChng_post_step3.html" target="_blank"><span>변경 주소_상세주소 입력</span>
+								<span class="flag flag-recent"><span class="txt">up 02.11</span></span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/finish_billmthdChangeEmail.html" target="_blank"><span>청구서 받는방법 변경 완료_휴대폰</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/finish_billmthdChangeMo.html" target="_blank"><span>청구서 받는방법 변경 완료_이메일</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/finish_billmthdChangePost.html" target="_blank"><span>청구서 받는방법 변경 완료_우편</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billMethodChange/pop_chngBillMthd.html" target="_blank"><span>청구서 받는방법 변경 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/pop_chngBillMthd2.html" target="_blank"><span>청구서 받는방법 변경 선택_현재 받는방법 휴대폰일 경우</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/pop_slctDomain.html" target="_blank"><span>이메일 도메인 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/billMethodChange/pop_cnfmBillMthd.html" target="_blank"><span>휴대폰으로 변경 확인</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+							</a>
+						</li>
+					</ul>				
+					<ul class="menu">
+						<li class="tit">↳ 납부확인서 신청_paymentProof</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/paymentProof/submit_paymntProofEmail.html" target="_blank"><span>납부확인서신청_이메일</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentProof/submit_paymntProofFax.html" target="_blank"><span>납부확인서신청_팩스</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span> 
+							</a>
+							
+							<a href="./templates/contents/business/paymentProof/finish_paymntProofEmail.html" target="_blank"><span>납부확인서신청_완료_이메일</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/paymentProof/finish_paymntProofFax.html" target="_blank"><span>납부확인서신청_완료_팩스</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/paymentProof/pop_slctDomain.html" target="_blank"><span>이메일 도메인 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 세금계산서 신청_taxBill</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/taxBill/submit_taxBillEmail.html" target="_blank"><span>세금계산서신청_이메일</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/taxBill/submit_taxBillFax.html" target="_blank"><span>세금계산서신청_팩스</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/taxBill/finish_taxBillEmail.html" target="_blank"><span>세금계산서신청_완료_이메일</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/taxBill/finish_taxBillFax.html" target="_blank"><span>세금계산서신청_완료_팩스</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/taxBill/pop_slctDomain.html" target="_blank"><span>이메일 도메인 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 자녀요금 조회_billChild</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/billChild/search_childBill_tab1.html" target="_blank"><span>자녀요금 조회_청구요금 TAB</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/billChild/search_childBill_tab2.html" target="_blank"><span>자녀요금 조회_실시간 요금 TAB</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/billChild/pop_slctChild.html" target="_blank"><span>자녀 회선 선택 </span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag error"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billChild/pop_authChildBirth.html" target="_blank"><span>자녀 회선 인증</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag error"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/billChild/pop_calendar.html" target="_blank"><span>청구 월 선택</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 가입정보_signUpInfo -->
+			<li>
+				<input type="checkbox" checked><i></i>
+				<h2>⭐ 가입정보_signUpInfo</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 나의 요금제_myPlan</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/myPlan/search_myPlan.html" target="_blank"><span>나의 요금제</span>
+								<span class="flag flag-recent"><span class="txt">01.23</span></span>
+								<span class="flag flag-line primary"><span class="txt">수정 반영중</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/myPlan/pop_callEnd_app.html" target="_blank"><span>‘요금제 조회/변경’ 앱 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 휴대폰할부/선택약정_optionalDiscount</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_used.html" target="_blank"><span>할부ㆍ선택약정 확인_이용중</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_notUsed.html" target="_blank"><span>할부ㆍ선택약정 확인_미이용</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_reservation.html" target="_blank"><span>할부ㆍ선택약정 확인_예약중</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_beforeExpiration.html" target="_blank"><span>할부ㆍ선택약정 확인_예약가능</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/search_optionalDiscount_beforeExpiration.html" target="_blank"><span>할부ㆍ선택약정 확인_예약가능</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/submit_optionalDiscount.html" target="_blank"><span>선택약정 할인 신청</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/submit_optionalDiscount_reserve.html" target="_blank"><span>선택약정 할인 예약</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/finish_reservation.html" target="_blank"><span>선택약정 할인 예약_완료</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/finish_reservationCancel.html" target="_blank"><span>선택약정 할인 예약 취소_완료</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/optionalDiscount/pop_slctDiscountMnth.html " target="_blank"><span>선택약정 할인 기간 선택</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span> 
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/pop_authNumber.html" target="_blank"><span>인증번호 입력</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag flag-line primary"><span class="txt">수정 반영중</span></span>
+							</a>
+							<a href="./templates/contents/business/optionalDiscount/pop_reservationCancel.html" target="_blank"><span>선택약정 할인 예약 취소</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 부가서비스 신청/해지_additionalProduct</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 결합할인 정보_combinedDiscount</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 사용현황_usageStatus -->
+			<li>
+				<input type="checkbox" checked><i></i>
+				<h2>⭐ 사용현황_usageStatus</h2>
+				<div class="accordion-con">
+					<ul class="menu">
+						<li class="tit">↳ 실시간 사용량_realTimeUsed</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/realTimeUsed/state_realtime.html" target="_blank"><span>실시간 사용량 조회</span>
+								<span class="flag flag-recent"><span class="txt">01.27</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 데이터 선물/충전_dataGift</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 휴대폰 결제_mobilePayment -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 휴대폰 결제_mobilePayment</h2>
+				<div class="accordion-con">
+					<ul class="menu ">
+						<li class="tit">↳ 휴대폰 결제 설정_mobilePaymentSetting</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/working/mobilePaymentSetting/search_mopaySetting_usedAll_regularTooltip.html" target="_blank"><span>휴대폰결제설정_이용중(+정기결제 툴팁)</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/search_mopaySetting_blockedAll_storeTooltip.html" target="_blank"><span>휴대폰결제설정_차단중(+스토어 툴팁)</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/tab1_moPaymentChange.html" target="_blank"><span>휴대폰결제변경내역_차단/해제 내역_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/tab2_regular_moPaymentChange.html" target="_blank"><span>휴대폰결제변경내역_결제한도 변경 내역_일반/정기 결제_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/tab2_store_moPaymentChange.html" target="_blank"><span>휴대폰결제변경내역_결제한도 변경 내역_스토어/콘텐츠 결제_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/submit_changeLimit.html" target="_blank"><span>입력_결제한도변경</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/submit_changeLimit_error.html" target="_blank"><span>입력_결제한도변경_case_error</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_noticeRegPay.html" target="_blank"><span>일반/정기 결제 최대한도 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_noticeStorePay.html" target="_blank"><span>스토어/콘텐츠 결제 최대한도 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_blockCnfrm_nomal.html" target="_blank"><span>일반 결제 차단 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_blockCnfrm_regular.html" target="_blank"><span>정기 결제 차단 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_blockCnfrm_store.html" target="_blank"><span>스토어/콘텐츠 결제 차단 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_useCnfrm_nomal.html" target="_blank"><span>일반결제 이용 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_useCnfrm_regular.html" target="_blank"><span>정기결제 이용 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_useCnfrm_store.html" target="_blank"><span>스토어결제 이용 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_corpLimit_mbpmSetting.html" target="_blank"><span>법인명의 고객 제한 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentSetting/pop_underageLimit_mbpmSetting.html" target="_blank"><span>미성년자 고객 제한 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 휴대폰 결제 이용내역_mobilePaymentUsed</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/working/mobilePaymentUsed/search_MOPaymentUsed_Tab1_case1.html" target="_blank"><span>휴대폰 결제 이용내역_일반/정기 결제_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentUsed/search_MOPaymentUsed_Tab1_case2.html" target="_blank"><span>휴대폰 결제 이용내역_일반/정기 결제_이용내역 없음_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentUsed/search_MOPaymentUsed_Tab2_case1.html" target="_blank"><span>휴대폰 결제 이용내역_스토어/콘텐츠 결제_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentUsed/search_MOPaymentUsed_Tab2_case2.html" target="_blank"><span>휴대폰 결제 이용내역_스토어/콘텐츠 결제_이용내역 없음_TAB</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/working/mobilePaymentUsed/pop_appStoreDetail.html" target="_blank"><span>애플앱스토어 상세 내역 확인 방법</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+
+							<a href="./templates/contents/working/mobilePaymentUsed/pop_corpLimit_mbpm.html" target="_blank"><span>법인명의 고객 제한 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentUsed/pop_underageLimit_mbpm.html" target="_blank"><span>미성년자 고객 제한 안내</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							<a href="./templates/contents/working/mobilePaymentUsed/pop_calendar.html" target="_blank"><span>청구월 선택</span>
+								<span class="flag success"><span class="txt">up 02.18</span></span>
+							</a>
+							
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 휴대폰 결제 선결제_mobilePrepayment</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- 해외로밍_roamingInfo -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 해외로밍_roamingInfo</h2>
+				<div class="accordion-con">
+					<ul class="menu ">
+						<li class="tit">↳ 해외로밍 신청_roamingPlan</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 해외로밍 부가서비스_roamingAdditional</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/roamingAdditional/search_rmAddService_used.html" target="_blank"><span>해외로밍 부가서비스 내역_이용중이 있는 경우</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/search_rmAddService_allUsed.html" target="_blank"><span>해외로밍 부가서비스 내역_모두 이용중인 경우</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/search_rmAddService_notUsed.html" target="_blank"><span>해외로밍 부가서비스 내역_모두 이용하지 않는 경우</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/service_blockVoiceRoming_apply.html" target="_blank"><span>음성 로밍 차단_신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_blockVoiceRoming_applyNpt.html" target="_blank"><span>음성 로밍 차단_미신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/service_blockDataRoming_apply.html" target="_blank"><span>데이터 로밍 차단_신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_blockDataRoming_applyNot.html" target="_blank"><span>데이터 로밍 차단_미신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/service_announceLanding_apply_수신자 미존재" target="_blank"><span>해외 도착 알림_신청중_수신자 미존재</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_announceLanding_apply_수신자 존재" target="_blank"><span>해외 도착 알림_신청중_수신자 존재</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_announceLanding_applyNot_수신자 미존재" target="_blank"><span>해외 도착 알림_미신청중_수신자 미존재</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_announceLanding_applyNot_수신자 존재" target="_blank"><span>해외 도착 알림_미신청중_수신자 존재</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/service_announceRoming_apply.html" target="_blank"><span>로밍 안내방송_신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/service_announceRoming_applyNot.html" target="_blank"><span>로밍 안내방송_미신청중</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
+							<a href="./templates/contents/business/roamingAdditional/finish_acceptVoiceRoaming.html" target="_blank"><span>음성 로밍 차단_신청완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_acceptDataRoaming.html" target="_blank"><span>데이터 로밍 차단_신청완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_changeAnnounceLanding.html" target="_blank"><span>해외 도착 알림_신청완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_acceptAnnounceRoming.html" target="_blank"><span>로밍 안내방송_신청완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/finish_changeAnnounceLanding.html" target="_blank"><span>해외 도착 알림_변경완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_changeAnnounceRoming.html" target="_blank"><span>로밍 안내방송_변경완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/finish_cancelVoiceRoaming.html" target="_blank"><span>음성 로밍 차단_해지완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_cancelDataRoaming.html" target="_blank"><span>데이터 로밍 차단_해지완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_cancelAnnounceLanding.html" target="_blank"><span>해외 도착 알림_해지완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/finish_cancelAnnounceRoming.html" target="_blank"><span>로밍 안내방송_해지완료</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
+							
+							<h3>바텀시트</h3>							
+							<a href="./templates/contents/business/roamingAdditional/pop_chngMent_announceRoaming.html" target="_blank"><span>로밍 안내방송_멘트 설정</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+
+							<a href="./templates/contents/business/roamingAdditional/pop_useCnfrm_voiceRoaming.html" target="_blank"><span>음성 로밍 차단_신청</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_useCnfrm_dataRoaming.html" target="_blank"><span>데이터 로밍 차단_신청</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_inputNumber_announceLanding.html" target="_blank"><span>해외 도착 알림_수신자 연락처 입력</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_chngMent_announceRoaming.html" target="_blank"><span>해외 도착 알림_변경 중단</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_useCnfrm_announceLanding.html" target="_blank"><span>해외 도착 알리미_신청</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>							
+							<a href="./templates/contents/business/roamingAdditional/pop_useCnfrm_announceRoaming.html" target="_blank"><span>로밍 안내방송_신청</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_dropComfirm_announceRoaming.html" target="_blank"><span>로밍 안내방송_변경 중단</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_cancelCnfrm_voiceRoaming.html" target="_blank"><span>음성 로밍 차단_해지</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_cancelCnfrm_dataRoaming.html" target="_blank"><span>데이터 로밍 차단_해지</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_cancelCnfrm_announceLanding.html" target="_blank"><span>해외 도착 알리미_해지</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_cancelCnfrm_announceRoaming.html" target="_blank"><span>로밍 안내방송_해지</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingAdditional/pop_svcCancel_rmAdditional.html" target="_blank"><span>서비스 중단 안내</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
+							
+						</li>
+					</ul>
+					<ul class="menu">
+						<li class="tit">↳ 해외로밍 실시간 조회_roamingRealtime</li>
+						<li class="txt">
+							<h3>화면</h3>							                                    
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_beforeUsed.html" target="_blank"><span>해외로밍 실시간 조회_가입_이용전</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_used_remainPeriod.html" target="_blank"><span>해외로밍 실시간 조회_가입_이용중__남은 기간</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_used_remainTime.html" target="_blank"><span>해외로밍 실시간 조회_가입_이용중__남은 시간</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_completeUsed.html" target="_blank"><span>해외로밍 실시간 조회_가입_이용완료</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/search_roamingRealtime_used_toast.html" target="_blank"><span>데이터 선물/충전_toast 예시시</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/pop_charge_roamingData.html" target="_blank"><span>로밍 데이터 충전</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/pop_chargeCnfm_roamingData.html" target="_blank"><span>로밍 데이터 충전 확인</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/pop_slctChannel_roamingRealtime.html" target="_blank"><span>상담 채널 이동</span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/roamingRealtime/pop_callEnd_app.html" target="_blank"><span>당신의 U+앱 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.04</span></span>
+								<span class="flag success"><span class="txt">up 02.07</span></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 해외로밍 이용내역_roamingHistory</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+				</div>
+			</li>
+			
+			<!-- 정지/분실/통화품질_pause -->
+			<li>
+				<input type="checkbox" ><i></i>
+				<h2>⭐ 정지/분실/통화품질_pause</h2>
+				<div class="accordion-con">
+
+					<ul class="menu ">
+						<li class="tit">↳ 일시정지 신청/해제_pauseTemporary</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/pauseTemporary/search_pauseTempApplyOk.html" target="_blank"><span>일시정지 상태_일시정지 신청 가능</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/search_pauseTempApplyNo.html" target="_blank"><span>일시정지 상태_일시정지 신청중</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/search_pauseTempApplyOk_toast.html" target="_blank"><span>toast 예시</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/submit_pauseTemp.html" target="_blank"><span>일시정시 신청_정보 입력</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/finish_pauseTempApply.html" target="_blank"><span>일시정시 신청_완료</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/finish_pauseTempCancel.html" target="_blank"><span>일시정시 해제_완료</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+
+							<h3>바텀시트</h3>							
+							<a href="./templates/contents/business/pauseTemporary/pop_slctPauseReason.html" target="_blank"><span>일시정지 신청 사유 선택</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/pop_slctCounsel_pauseTemporary.html" target="_blank"><span>군입대 사유 상담 채널 선택</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/pop_callEnd_app_pauseTemporary.html" target="_blank"><span>당신의 U+앱 연결</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/pop_counselCnfrm_pauseTemporary.html" target="_blank"><span>전화 상담 연결</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							<a href="./templates/contents/business/pauseTemporary/pop_svcCancel.html" target="_blank"><span>서비스 중단</span>
+								<span class="flag success"><span class="txt">up 02.11</span></span>
+							</a>
+							
+						</li>
+					</ul>
+					<ul class="menu ">
+						<li class="tit">↳ 일시정지 신청/해제</li>
+						<li class="txt">
+							<h3>화면</h3>
+							
+							<h3>바텀시트</h3>
+							
+						</li>
+					</ul>
+					
+					<ul class="menu ">
+						<li class="tit">↳ 통화품질 문의_callQuality</li>
+						<li class="txt">
+							<h3>화면</h3>
+							<a href="./templates/contents/business/callQuality/service_callQuality.html" target="_blank"><span>통화품질 문의 안내</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
+							<h3>바텀시트</h3>
+							<a href="./templates/contents/business/callQuality/pop_slctCounsel_callQuality.html" target="_blank"><span>상담방법 선택</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							<a href="./templates/contents/business/callQuality/pop_counselCnfrm_callQuality.html" target="_blank"><span>통화품질 상담사 연결</span>
+								<span class="flag flag-recent"><span class="txt">02.03</span></span>
+							</a>
+							<a href="./templates/contents/business/callQuality/pop_callEnd_app_callQuality.html" target="_blank"><span>당신의 U+앱_통화품질 점검 신청하기</span>
+								<span class="flag success"><span class="txt">02.07</span></span>
+							</a>
+							
+							
+						</li>
+					</ul>
+					
+				</div>
+			</li>
+
+			
+		</ul>
+	</div>
+</body>
+</html>

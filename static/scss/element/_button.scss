@@ -191,9 +191,12 @@
         color: var(--dt-gray11);
     }
     .txt-wrap {
-        @include flexBox(center, center);
+        @include flexRow;
+        align-items:center;
+        flex-wrap:wrap;
         column-gap:6px;
         .txt {
+            text-align:left;
             &, > span {
                 color: var(--dt-gray11);
                 font-weight:var(--dt-fw500);;

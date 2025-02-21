@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper billingChange">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="popup-wrapper show">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt">청구 월을 선택해 주세요</span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="calendar-box year-month">
+					<div class="nav-schedule">
+						<!-- 
+							비활성 : 년도의 맨 처음,끝 btn-prev, btn-next hidden
+							<button type="button" class="btn-prev img-box hidden">
+							<button type="button" class="btn-next img-box hidden">                            
+						-->
+						<button type="button" class="btn-prev img-box">
+							<span>이전버튼</span>
+						</button>
+						<span class="txt-wrap">
+							<span>2025</span>
+						</span>
+						<button type="button" class="btn-next img-box hidden">
+							<span>다음버튼</span>
+						</button>
+					</div>
+					<ul class="schedule-cont-wrap list-month">
+						<!--
+							button 클래스 종류 
+							: is-selected(선택함)
+							/ current(당월) 
+							/ is-disabled(선택할수없음) 클래스로 스타일 조작
+						-->
+						<li><button class="btn-month">1월</button></li>
+						<li><button class="btn-month is-selected">2월</button></li>
+						<li><button class="btn-month">3월</button></li>
+						<li><button class="btn-month">4월</button></li>
+
+						<li><button class="btn-month">5월</button></li>
+						<li><button class="btn-month">6월</button></li>
+						<li><button class="btn-month">7월</button></li>
+						<li><button class="btn-month">8월</button></li>
+
+						<li><button class="btn-month current">9월</button></li>
+						<li><button class="btn-month is-disabled">10월</button></li>
+						<li><button class="btn-month is-disabled">11월</button></li>
+						<li><button class="btn-month is-disabled ">12월</button></li>
+					</ul>
+				</div>
+			</div>
+			<div class="popup-footer hidden"></div>
+		</div>
+	</div>
+</body>
+</html>

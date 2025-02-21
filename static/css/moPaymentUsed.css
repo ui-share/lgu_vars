@@ -1,20 +1,33 @@
-.cont__wrap.cont__wrap-segment {
-  padding: 0;
-}
 .cont__wrap.cont__wrap-segment .list-payment {
   padding: 0 20px;
   margin-top: 24px;
 }
-.cont__wrap.cont__wrap-segment .btn-box {
-  margin-top: 16px;
-  padding: 0 20px;
+.cont__wrap.cont__wrap-segment .list-payment > .card.solid:nth-last-child(1) {
+  margin-top: 4px;
 }
-.cont__wrap.cont__wrap-segment .chips-group {
+.cont__wrap.cont__wrap-segment .list-payment + .btn-group {
+  padding: 16px 20px 0;
+}
+.cont__wrap.cont__wrap-segment .btn-box {
+  padding-top: 8px;
+}
+.cont__wrap.cont__wrap-segment .btn-box .chips-group {
   flex-wrap: nowrap;
-  margin-top: 16px;
-  padding: 0 20px;
-  overflow-x: auto;
   gap: 4px;
+  padding-left: 20px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+}
+.cont__wrap.cont__wrap-segment .btn-box .chips-group .chips:last-child {
+  margin-right: 20px;
+}
+.cont__wrap.cont__wrap-segment .btn-box .btn.appStore {
+  width: calc(100% - 40px);
+  margin: 16px auto 0;
+}
+.cont__wrap.cont__wrap-segment .card.payUsed {
+  gap: 12px;
+  padding: 20px;
 }
 .cont__wrap.cont__wrap-segment .card.payUsed .used-date {
   font-size: 12px;
@@ -31,33 +44,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-name {
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 150%;
   color: var(--dt-gray14);
 }
 .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-won {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 150%;
   color: var(--dt-black);
+  text-align: right;
+  flex: 1;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .paid-status {
-  width: fit-content;
-  background-color: rgba(0, 170, 2, 0.1);
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: 500;
-  line-height: 15px;
-  color: var(--dt-success);
-  padding: 4px 6px;
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .flag .txt {
+  line-height: 140%;
+  letter-spacing: -0.5px;
+}
+.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .txt-sub {
+  font-size: 14px;
+  line-height: 150%;
 }
 
-.btn-box .appStore .img-box img {
-  width: 20px;
-  height: 20px;
+.popup-body:has(.appPaid-wrap) {
+  padding-bottom: 30px;
 }
 
 .appPaid-wrap {
@@ -66,12 +79,11 @@
   padding: 24px 20px;
 }
 .appPaid-wrap .appStore {
-  margin-top: 24px;
-  padding: 18px 20px;
+  padding: 16px;
   background-color: var(--dt-white);
   border: none;
   border-radius: 8px;
-  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
 }
 .appPaid-wrap .appStore .txt-wrap {
   gap: 4px;
@@ -82,28 +94,31 @@
   line-height: 21px;
   color: var(--dt-black);
 }
-.appPaid-wrap .appStore .img-box img {
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-}
 .appPaid-wrap .info-box {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 24px;
-  margin-bottom: 45px;
+  column-gap: 6px;
+  row-gap: 8px;
+  margin-top: 20px;
+  border-radius: 8px;
+  column-gap: 4px;
+  row-gap: 8px;
 }
 .appPaid-wrap .info-box .txt {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 17px;
-  color: var(--dt-black);
+  line-height: 140%;
+  color: var(--dt-gray16);
+  letter-spacing: -0.5px;
 }
 .appPaid-wrap .info-box .img-box img {
   width: 20px;
   height: 20px;
   vertical-align: middle;
+}
+.appPaid-wrap + .bullet-list {
+  margin-top: 8px;
 }
