@@ -48,11 +48,15 @@
 		.popup-tit {
 			@include flexBox(start, center);
 			padding: 8px 0;
-			gap: 8px;
+			gap: 10px 8px;
 			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
 				line-height: var(--dt-lh150);
+			}
+			&:has(.flag-etc) {
+				flex-wrap:wrap;
+				> .txt {line-height:120%;}
 			}
 		}
 		.btn-util {
@@ -461,6 +465,7 @@
 			gap: 48px;
 			.cont__wrap {
 				padding: 0 20px;
+				&.cont__wrap-vertical {gap:16px;}
 			}
 		}
 	}
