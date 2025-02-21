@@ -357,6 +357,11 @@
 			}
 		}
 	}
+	.list-wrap {//로밍데이터 팝업
+		&.chrgData {
+			margin-top: 0;
+		}
+	}
 }
 
 //popup-body 패딩 수정
