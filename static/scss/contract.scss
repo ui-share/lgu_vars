@@ -1,0 +1,409 @@
+@import "../scss/base/mixin";
+.page-wrapper {
+	&.contract {
+		.container {
+			.section__cont {
+				padding: 72px 0 95px;
+                &.summary {
+                    padding-bottom:18px;
+                    background-color:#DCE6FF;
+                    .cont__wrap {
+                        @include flexColum;
+                        gap:9px;
+                        position:relative;
+                        height:max-content;
+                        min-height:188px;
+                        padding-top:28px;
+                        background-repeat: no-repeat;
+                        background-size:140px;
+                        background-position: right 10px bottom 0;
+                        .info-price-wrap{
+                            .info-price, .info-price-detail {
+                                &.total-last {
+                                    .row {margin-top:4px;}
+                                }
+                            }
+                        }			
+                    }
+                    .cont__wrap-bill {
+                        background-image: url(../images/img/img-hm-bill.png);
+                    }
+                    .cont__wrap-realtime {
+                        background-image: url(../images/img/img-hm-realtime.png);
+                    }
+                    .cont__wrap-usestate {
+                        background-image: url(../images/img/img-hm-usestate.png);
+                    }
+                    .cont__wrap-account {
+                        background-image: url(../images/img/img-hm-account.png);
+                        // min-height:158px;
+                    }
+                    .cont__wrap-payment {
+                        background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+                    }
+                    .cont__wrap-billMthdChng {
+                        background-image: url(../images/img/img-hm-bill.png);
+                    }
+                    .cont__wrap-pauseTemp {
+                        background-image: url(../images/img/img-hm-pauseTemp.png);
+                    }
+                    .cont__wrap-MOPaymentUsed {
+                        background-image: url(../images/img/img-hm-MOpayment.png);
+                        background-position: right -5px top 16px;
+                        & + .info-price-single {
+                            p.txt-info {font-size:14px;font-weight:500;}
+                        }
+                    }
+                    .cont__wrap-plan {
+                        background-image: url(../images/img/img-hm-myplan.png);
+                    }
+                    .txt-select-wrap {
+                        @include flexRow;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        gap: 4px;
+                        color:var(--dt-gray16);
+                        padding-right: 30%;
+                        .txt {
+                            @include fw-6(22px);
+                            line-height: 1.5;
+                        }
+                        &:has(.chips-date + .txt) {
+                            .txt {
+                                @include fw-6(18px);
+                                line-height: 1.2;
+                            }
+                        }
+                        .chips-date {
+                            .txt {
+                                @include fw-6(18px);
+                                line-height: 1.2;
+                            }
+                        }
+                    }
+                    // 툴팁 있는 경우
+                    .btn-tooltip {
+                        margin-left:2px;
+                        img {width:20px;height:20px;}
+                    }
+                    .tooltip-wrap {
+                        max-width:280px;
+                    }
+                }
+                &.desc {//입금전용계좌추가
+                    padding: 36px 0 48px 0;
+                    gap: 48px;
+                    &:has(.accnt-cont-wrap){
+                        height:calc(100% - 262px);
+                    }
+                    &:has(.cont__wrap-service) {
+                        padding: 72px 0 95px;
+                    }
+                }
+                &.counsel {
+                    padding: 36px 0 0px;
+                }
+            }
+        }
+    }
+}
+// 서비스 : 로밍부가서비스 조회
+.section__cont {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	&.counsel {
+		gap: unset;
+	}
+	.cont__wrap {
+		&.cont__wrap-message {
+			padding-top: 20px;
+		}   
+	}
+}
+// divider가 상담영역과 같이 올 경우
+// .section__divider:has(+ .counsel) {
+// 	margin-top: 48px;
+// }
+
+
+// 서비스 : 상세
+body:has(.cont__wrap-service.rmDetail) {
+	background-color: var(--dt-gray05);
+}
+.section__cont:has(.cont__wrap-service.rmDetail) {
+	padding: 72px 0 95px;
+	gap: 0;
+}
+.cont__wrap-service.rmDetail {
+	padding: 20px 20px 80px;
+	background-color: var(--dt-gray05);
+	.con__tit-box {
+		flex-direction: column;
+		margin-bottom: 20px;
+		gap: 12px;
+		.text-box {
+			text-align: left;
+			gap: 6px;
+			.tit {
+				@include fw-7(22px);
+			}
+			.txt {
+				min-height: 42px;
+				line-height: 1.5;
+			}
+		}
+	}
+	.card {
+		&.rmInform {
+			box-shadow: none;
+			border-radius: 16px;
+			padding: 28px 20px;
+			.card-body {
+				gap: 20px;
+			}
+			.item {
+				flex-direction: column;
+				gap: 6px;
+				.btn-group {
+					.btn {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 14px 4px;
+						gap: 4px;
+					}
+				}
+			}
+			.tit {
+				@include fw-7(18px);
+				color: var(--dt-gray14);
+			}
+			.announceMent {
+				margin-bottom: 28px;
+				gap: 12px;
+				.card {
+					.card-body {
+						gap: 8px;
+					}
+				}
+			}
+			.announcePhone {
+				margin-bottom: 20px;
+				gap: 12px;
+				.tit {
+					span {
+						@include fw-7(18px);
+						color: var(--dt-gray14);
+					}
+				}
+				.phoneList {
+					grid-template-columns: repeat(1, 1fr);
+					gap: 12px;
+					> .card {
+						padding: 14px 20px;
+						.card-body {
+							gap: 8px;
+							.text {
+								align-items: flex-start;
+							}
+							.tit {
+								font-size: 16px;
+								color: var(--dt-gray16);
+							}
+						}
+						.card-footer {
+							.close {
+								width: 24px;
+								height: 24px;
+								background-image: url(../images/icon/ic-card_close_small_line.svg);
+								background-repeat: no-repeat;
+								background-size: cover;
+								background-position: center center;
+							}
+						}
+					}
+				}
+			}
+
+			.use-target {
+				margin:4px 0;
+				padding:28px 20px;
+				.txt {
+					font-weight:600;
+					padding-left: 34px;
+					padding-right: 34px;
+				}
+				.list-target-item {
+					@include flexBox(center, center);
+					gap:32px;
+					margin-top:16px;
+					li {
+						@include flexColum;
+						align-items:center;
+						justify-content:center;
+						&.img-wrap {
+							width:46px;
+							.img-box {
+								width:100%;
+								height:32px;
+								margin-bottom:4px;
+							}
+						}
+						&:not(.img-wrap) {
+							position:relative;
+							width:60px;height:60px;
+							background-color:var(--dt-gray06);
+							border-radius:50%;
+							&::before {
+								content:'';
+								display:block;
+								position:absolute;
+								top:50%;
+								left: -24px;
+								transform:translateY(-50%);
+								width:16px;height:16px;
+								background-image: url(../images/icon/ic-plus-gray10.svg);
+								background-size:100%;
+								background-repeat:no-repeat;
+							}
+						}
+						.desc {
+							display:block;
+							@include fw-6(10px);
+							color:var(--dt-gray16);
+							line-height:normal;
+							text-align:center;
+						}
+					}
+				}
+			}
+			.discnt-price {
+				@include flexBox(center, center);
+				flex-direction:row;
+				flex-wrap:wrap;
+				gap:0;
+				.item-block {
+					width:98px;
+					p {
+						&:not(:first-child) {margin-top: 4px;}
+						padding:9px 0;
+						background-color:var(--dt-gray06);
+						color:var(--dt-gray16);
+						@include fw-6(11px);
+						text-align:center;
+						border-radius: 4px;
+					}
+				}
+				.item-arrowbg {
+					position:relative;
+					width:74px;
+					aspect-ratio: 1 / 1.36;
+					background-image: url(../images/img/bg_discount_arrow.svg);
+					background-size: 100%;
+					background-repeat:no-repeat;
+					background-position: center;
+					> span {
+						display:block;
+						position:absolute;
+						top:46px;
+						left:12px;
+						color:var(--dt-primary);
+						@include fw-6(10px);
+					}
+				}
+				.item-point {
+					display:block;
+					width:60px;
+					height:60px;
+					margin-left:8px;
+					padding-top:24px;
+					background-color:var(--dt-primary);
+					color: var(--dt-white);
+					@include fw-7(10px);
+					border-radius: 50%;
+					text-align:center;
+				}
+			}
+		}
+	}
+}
+// 팝업 : 로밍멘트 수정
+.rmAnnounce {
+	.popup-body {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+		.cont__wrap {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			padding: 0;
+			.con__tit-box {
+				margin-bottom: 0;
+			}
+			&:first-child {
+				padding-top: 12px;
+			}
+		}
+	}
+}
+// 팝업 : 해외도착알리미 핸드폰 입력
+.rmLandingAnnounce {
+	.popup-tit {
+		.txt {
+			span {
+				@include fw-7(20px);
+			}
+		}
+	}
+	.popup-body {
+		padding-top: 16px;
+	}
+}
+
+
+@media screen and (max-width:359px) {
+	.cont__wrap-service.rmDetail {
+		.card {
+			&.rmInform {
+				.use-target {
+					padding:24px 20px;
+					.list-target-item {
+						flex-direction: column;
+						li {
+							&:not(.img-wrap) {
+								&::before {
+									content:'';
+									top:0;
+									left: 50%;
+									transform:translateY(-24px) translateX(-50%);
+								}
+							}
+						}
+					}
+				}
+				.discnt-price {
+					flex-direction:column;
+					.item-block {
+						width:100%;
+					}
+					.item-arrowbg {
+						width:100%;
+						aspect-ratio: 1 / 0.39;
+						background-image: url(../images/img/bg_discount_arrow_down.svg);
+						> span {
+							top:10%;
+							left:50%;
+							transform:translateX(-50%);
+						}
+					}
+					.item-point {
+						margin-left:0;
+						margin-top:8px;
+					}
+				}
+			}
+		}
+	}
+}
