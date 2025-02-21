@@ -373,16 +373,6 @@
 	padding-bottom: 20px;
 }
 
-// @media (max-width: 359px) {
-// 	.popup-body {
-// 		.calendar-box {
-// 			&.mnth-prd {
-// 				column-gap: 20px;
-// 			}
-// 		}
-// 	}
-// }
-
 // 풀 팝업
 .full-popup {
     display: none;
@@ -487,6 +477,10 @@
 				&.cont__wrap-vertical {gap:16px;}
 			}
 		}
+		&:has(.section__cont) {
+			padding: 20px 0 40px;
+			gap: 0;
+		}
 	}
 	.popup-footer {
 		padding: 0 20px 20px 20px;
@@ -525,10 +519,58 @@
     &.show {
         display: block;
     }
+	//로밍 실시간조회 로밍데이터 팝업 내 list-wrap
+	.chrgData {
+		margin-top: 0;
+	}
+	//로밍 이용내역 : roaming history 풀팝업
+	.rmHistory {
+		.con__tit-box .tit-head .txt-title {
+			line-height:1.25;
+		}
+		.txt-day {
+			@include fw-6();
+			line-height: 120%;
+			color: var(--dt-primary);
+		}
+		// 로밍요금 라운드박스
+		.roamingPrice {
+			.info-price {
+				padding: 22px 20px;
+				.row {
+					align-items: center;
+				}
+				.txt-title {
+					font-size: 16px;
+					align-self: unset;
+				}
+				.txt-price {
+					display: flex;
+					align-items: center;
+					font-size: 18px;
+					color: var(--dt-black);
+					.flag {
+						margin-right: 6px;
+					}
+					.flag .txt {
+						font-size: 11px;
+					}
+				}
+				.btn.bg-withdraw {
+					margin-top: 20px;
+				}
+			}
+			.txt-caution { 
+				text-align: right;
+				line-height: 150%;
+				margin-top: 8px;
+			}
+		}
+	}
 }
 
 
-// 2차인증 팝업
+// 2차인증 : twoFactorAuth 팝업
 .twoFactorAuth {
 	.btn-group .btn-radio {
 		flex-direction: column;

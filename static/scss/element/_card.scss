@@ -435,5 +435,136 @@
 			}
 		}
 	}
+	// 로밍기간 카드
+	&.rmPeriod {
+		padding:16px 20px 20px;
+		gap: 20px;
+		.card-header {
+			display: flex;
+			.item {
+				flex-direction: row;
+				align-items: center;
+				gap: 8px;
+			}
+			.tit {
+				@include fw-5(14px);
+				line-height: 150%;
+				color: var(--dt-primary);
+			}
+			.img-box {
+				width: 24px;
+				min-width: 24px;
+				height: 24px;
+			}
+		}
+		.card-body {
+			align-items: center;
+			gap: 20px;
+			.period-wrap {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				.item {
+					flex-direction: column;
+					align-items: center;
+					.tit {
+						font-weight: 600;
+						line-height: 120%;
+						text-align: center;
+					}
+					.txt {
+						text-align: center;
+					}
+					&.date { // 3월24일(수) + 09:00 
+						gap: 4px;
+					}
+					&.period {
+						position: relative;
+						justify-content: center;
+						width: 72px;
+						max-width: 72px;
+						&::before {
+							content: "";
+							display: inline-block;
+							position: absolute;
+							top: 50%;
+							transform: translateY(-50%);
+							left: 0;
+							width: 100%;
+							height: 1px;
+							border: 1px dashed var(--dt-gray09);
+						}
+						.chips-tag {
+							z-index: 1;
+						}
+					}
+				}
+			}
+			.list-wrap {
+				width: 100%;
+				margin-top: 0;
+				padding: 20px 0 0 0;
+				border-top: 1px solid var(--dt-gray06);
+				background-color: transparent;
+				border-radius: unset;
+				.list-box {
+					flex-wrap: nowrap;
+					justify-content: flex-start;
+					align-items: flex-start;
+					padding: 3px 0;
+					border-bottom: none;
+					gap: 12px;
+					&:first-child {
+						padding-top: 0;
+					}
+					&:last-child {
+						padding-bottom: 0;
+					}
+					.head {
+						min-width: 64px;
+						text-align: left;
+						line-height: 150%;
+					}
+					.tail {
+						text-align: left;
+						line-height: 150%;
+						color: var(--dt-gray11);
+						margin-left: 0;
+						max-width: unset;
+						.price {
+							font-weight: 700;
+							color: var(--dt-black);
+						}
+						.info {
+							font-size: 12px;
+						}
+						&.total {
+							display: flex;
+							flex-direction: column;
+							justify-content: flex-start;
+						}
+					}
+				}
+			}
+		}
+		.card-footer {
+			.btn {
+				background-color: var(--dt-gray06);
+				.txt {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
 
+
+@media screen and (max-width: 359px) {
+    // 로밍기간 카드
+    .card.rmPeriod {
+        .period-wrap {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 }

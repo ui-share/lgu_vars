@@ -450,6 +450,9 @@ input::placeholder {
 				color: var(--dt-gray16);
 			}
 		}
+		&:active {
+			box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+		}
 	}
 	&.disabled {
 		.slct-box {

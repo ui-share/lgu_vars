@@ -11,128 +11,7 @@
         margin-left: auto;
     }
 }
-// 로밍기간 카드
-.card.rmPeriod {
-    // padding: 22px 16px;
-    padding:16px 20px 20px;
-    gap: 20px;
-    .card-header {
-        display: flex;
-        .item {
-            flex-direction: row;
-            align-items: center;
-            gap: 8px;
-        }
-        .tit {
-            @include fw-5(14px);
-            line-height: 150%;
-            color: var(--dt-primary);
-        }
-        .img-box {
-            width: 24px;
-            min-width: 24px;
-            height: 24px;
-        }
-    }
-    .card-body {
-        align-items: center;
-        gap: 20px;
-        .period-wrap {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            .item {
-                flex-direction: column;
-                align-items: center;
-                .tit {
-                    font-weight: 600;
-                    line-height: 120%;
-                    text-align: center;
-                }
-                .txt {
-                    text-align: center;
-                }
-                &.date { // 3월24일(수) + 09:00 
-                    gap: 4px;
-                }
-                &.period {
-                    position: relative;
-                    justify-content: center;
-                    width: 72px;
-                    max-width: 72px;
-                    &::before {
-                        content: "";
-                        display: inline-block;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        left: 0;
-                        width: 100%;
-                        height: 1px;
-                        border: 1px dashed var(--dt-gray09);
-                    }
-                    .chips-tag {
-                        z-index: 1;
-                    }
-                }
-            }
-        }
-        .list-wrap {
-            width: 100%;
-            margin-top: 0;
-            padding: 20px 0 0 0;
-            border-top: 1px solid var(--dt-gray06);
-            background-color: transparent;
-            border-radius: unset;
-            .list-box {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                align-items: flex-start;
-                padding: 3px 0;
-                border-bottom: none;
-                gap: 12px;
-                &:first-child {
-                    padding-top: 0;
-                }
-                &:last-child {
-                    padding-bottom: 0;
-                }
-                .head {
-                    min-width: 64px;
-                    text-align: left;
-                    line-height: 150%;
-                }
-                .tail {
-                    text-align: left;
-                    line-height: 150%;
-                    color: var(--dt-gray11);
-                    margin-left: 0;
-                    max-width: unset;
-                    .price {
-                        font-weight: 700;
-                        color: var(--dt-black);
-                    }
-                    .info {
-                        font-size: 12px;
-                    }
-                    &.total {
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: flex-start;
-                    }
-                }
-            }
-        }
-    }
-    .card-footer {
-        .btn {
-            background-color: var(--dt-gray06);
-            .txt {
-                font-size: 14px;
-            }
-        }
-    }
-}
+
 // 로밍요금 라운드박스
 .roamingPrice {
     .roaming {
@@ -159,34 +38,6 @@
         text-align: right;
         line-height: 150%;
         margin-top: 12px;
-    }
-}
-//로밍데이터 팝업
-.list-wrap.chrgData {
-    margin-top: 0;
-}
-//로밍히스토리 풀팝업
-.full-popup.rmHistory {
-    .con__tit-box .tit-head .txt-title {
-        line-height:1.25;
-    }
-    .cont__wrap-message {
-        margin-top: 20px;
-    }
-    .txt-day {
-        @include fw-6();
-        line-height: 120%;
-        color: var(--dt-primary);
-    }
-    .txt-price {
-        display: flex;
-        align-items: center;
-        .flag {
-            margin-right: 6px;
-        }
-        .flag .txt {
-            font-size: 11px;
-        }
     }
 }
 
@@ -236,6 +87,7 @@
                 margin-top: 0;
                 padding: 0;
                 .list-box {
+                    align-items: flex-start;
                     padding: 4px 0;
                     border: none;
                     .head, .tail {
@@ -250,6 +102,7 @@
                     .list-box {
                         padding: 0;
                         .head {
+                            width: 100%;
                             padding-left: 11px;
                             background-image: url(../images/icon/ic-list-brace.svg);
                             background-repeat: no-repeat;
@@ -266,16 +119,4 @@
 .popup-body:has(.invoice) {
     padding-top: 20px;
     .cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
-}
-
-
-
-@media screen and (max-width: 359px) {
-    // 로밍기간 카드
-    .card.rmPeriod {
-        .period-wrap {
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
 }

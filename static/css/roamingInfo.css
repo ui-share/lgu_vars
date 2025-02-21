@@ -10,126 +10,6 @@
   margin-left: auto;
 }
 
-.card.rmPeriod {
-  padding: 16px 20px 20px;
-  gap: 20px;
-}
-.card.rmPeriod .card-header {
-  display: flex;
-}
-.card.rmPeriod .card-header .item {
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-}
-.card.rmPeriod .card-header .tit {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 150%;
-  color: var(--dt-primary);
-}
-.card.rmPeriod .card-header .img-box {
-  width: 24px;
-  min-width: 24px;
-  height: 24px;
-}
-.card.rmPeriod .card-body {
-  align-items: center;
-  gap: 20px;
-}
-.card.rmPeriod .card-body .period-wrap {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.card.rmPeriod .card-body .period-wrap .item {
-  flex-direction: column;
-  align-items: center;
-}
-.card.rmPeriod .card-body .period-wrap .item .tit {
-  font-weight: 600;
-  line-height: 120%;
-  text-align: center;
-}
-.card.rmPeriod .card-body .period-wrap .item .txt {
-  text-align: center;
-}
-.card.rmPeriod .card-body .period-wrap .item.date {
-  gap: 4px;
-}
-.card.rmPeriod .card-body .period-wrap .item.period {
-  position: relative;
-  justify-content: center;
-  width: 72px;
-  max-width: 72px;
-}
-.card.rmPeriod .card-body .period-wrap .item.period::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  width: 100%;
-  height: 1px;
-  border: 1px dashed var(--dt-gray09);
-}
-.card.rmPeriod .card-body .period-wrap .item.period .chips-tag {
-  z-index: 1;
-}
-.card.rmPeriod .card-body .list-wrap {
-  width: 100%;
-  margin-top: 0;
-  padding: 20px 0 0 0;
-  border-top: 1px solid var(--dt-gray06);
-  background-color: transparent;
-  border-radius: unset;
-}
-.card.rmPeriod .card-body .list-wrap .list-box {
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 3px 0;
-  border-bottom: none;
-  gap: 12px;
-}
-.card.rmPeriod .card-body .list-wrap .list-box:first-child {
-  padding-top: 0;
-}
-.card.rmPeriod .card-body .list-wrap .list-box:last-child {
-  padding-bottom: 0;
-}
-.card.rmPeriod .card-body .list-wrap .list-box .head {
-  min-width: 64px;
-  text-align: left;
-  line-height: 150%;
-}
-.card.rmPeriod .card-body .list-wrap .list-box .tail {
-  text-align: left;
-  line-height: 150%;
-  color: var(--dt-gray11);
-  margin-left: 0;
-  max-width: unset;
-}
-.card.rmPeriod .card-body .list-wrap .list-box .tail .price {
-  font-weight: 700;
-  color: var(--dt-black);
-}
-.card.rmPeriod .card-body .list-wrap .list-box .tail .info {
-  font-size: 12px;
-}
-.card.rmPeriod .card-body .list-wrap .list-box .tail.total {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-.card.rmPeriod .card-footer .btn {
-  background-color: var(--dt-gray06);
-}
-.card.rmPeriod .card-footer .btn .txt {
-  font-size: 14px;
-}
-
 .roamingPrice .roaming {
   padding-top: 22px;
 }
@@ -154,33 +34,6 @@
   text-align: right;
   line-height: 150%;
   margin-top: 12px;
-}
-
-.list-wrap.chrgData {
-  margin-top: 0;
-}
-
-.full-popup.rmHistory .con__tit-box .tit-head .txt-title {
-  line-height: 1.25;
-}
-.full-popup.rmHistory .cont__wrap-message {
-  margin-top: 20px;
-}
-.full-popup.rmHistory .txt-day {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 120%;
-  color: var(--dt-primary);
-}
-.full-popup.rmHistory .txt-price {
-  display: flex;
-  align-items: center;
-}
-.full-popup.rmHistory .txt-price .flag {
-  margin-right: 6px;
-}
-.full-popup.rmHistory .txt-price .flag .txt {
-  font-size: 11px;
 }
 
 .page-wrapper .container .section__cont:has(.rmInvoice) {
@@ -227,6 +80,7 @@
   padding: 0;
 }
 .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box {
+  align-items: flex-start;
   padding: 4px 0;
   border: none;
 }
@@ -246,6 +100,7 @@
   padding: 0;
 }
 .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box .head {
+  width: 100%;
   padding-left: 11px;
   background-image: url(../images/icon/ic-list-brace.svg);
   background-repeat: no-repeat;
@@ -258,11 +113,4 @@
 }
 .popup-body:has(.invoice) .cont__wrap .con__tit-box .tit-head {
   flex-wrap: wrap;
-}
-
-@media screen and (max-width: 359px) {
-  .card.rmPeriod .period-wrap {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
