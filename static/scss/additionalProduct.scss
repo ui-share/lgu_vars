@@ -16,6 +16,12 @@
 				}
 			}
 		}
+		.btn-group {
+			.btn.btn-md {
+				border-color:var(--dt-gray06);
+				background-color:var(--dt-gray06);
+			}
+		}
 	}
 
 }

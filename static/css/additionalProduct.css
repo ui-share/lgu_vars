@@ -17,3 +17,7 @@
 .additionalProduct .desc .info-col-wrap .txt-desc > span:not(.txt-sub) {
   font-size: 16px;
 }
+.additionalProduct .desc .btn-group .btn.btn-md {
+  border-color: var(--dt-gray06);
+  background-color: var(--dt-gray06);
+}
