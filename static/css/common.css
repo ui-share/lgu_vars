@@ -1180,7 +1180,7 @@ button {
 }
 .list-payment .info-col-wrap .row.total .txt-price {
   font-size: 18px;
-  line-height: 21px;
+  line-height: 120%;
 }
 
 /* btn-group button */
@@ -1389,9 +1389,13 @@ button {
 }
 .btn-between .txt-wrap {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   column-gap: 6px;
+}
+.btn-between .txt-wrap .txt {
+  text-align: left;
 }
 .btn-between .txt-wrap .txt, .btn-between .txt-wrap .txt > span {
   color: var(--dt-gray11);

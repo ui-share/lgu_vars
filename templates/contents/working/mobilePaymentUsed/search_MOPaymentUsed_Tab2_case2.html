@@ -36,7 +36,7 @@
 		<div class="container">
 			<!-- 홀맨 배너 영역// -->
 			<div class="section__cont summary">
-				<div class="cont__wrap cont__wrap-bill">
+				<div class="cont__wrap cont__wrap-MOPaymentUsed">
 					<div class="select-billdate"><span class="txt-due"></span></div>
 					<div class="cont__txt-box">
 						<span class="txt-select-wrap">
@@ -61,12 +61,14 @@
 							<span class="txt-title">휴대폰 결제 이용내역</span>
 						</h6> 
 					</div>
+
+					<!-- tab button -->
 					<div class="segment__wrap">
 						<div class="segnav">
 							<input type="radio" class="seg-trigger seg1" id="seg1" name="tab">        
 							<label for="seg1" class="segment">일반/정기 결제</label>
 							
-							<input type="radio" class="seg-trigger seg2" id="seg2" name="tab">
+							<input type="radio" class="seg-trigger seg2" id="seg2" name="tab" checked>
 							<label for="seg2" class="segment">스토어/콘텐츠 결제</label>
 							
 							<div class="marker-box">
@@ -75,53 +77,54 @@
 						</div>
 					</div>
 				</div>
-				<div class="cont__wrap cont__wrap-segment">
-					<!-- 스토어/콘텐츠 결제 tab content -->
+
+				<!-- tab content -->
+				<div class="cont__wrap cont__wrap-segment wd-full">
 					<!-- 이용 내역 없을 때 -->
-					<div class="chips-group">
-						<!-- 
-							select 시 is-selected class 추가
-							<button type="button" class="chips chips-menu is-selected">
-						-->
-						<button type="button" class="chips chips-menu is-selected">
-							<span class="txt">전체</span>
-						</button>
-			
-						<button type="button" class="chips chips-menu">
-							<!-- <span class="icon"></span> -->
-							<span class="txt">구글플레이</span>
-						</button>
-			
-						<button type="button" class="chips chips-menu">
-							<!-- <span class="icon"></span> -->
-							<span class="txt">애플스토어</span>
-						</button>
-			
-						<button type="button" class="chips chips-menu">
-							<!-- <span class="icon"></span> -->
-							<span class="txt">원스토어</span>
-						</button>
-			
-						<button type="button" class="chips chips-menu">
-							<!-- <span class="icon"></span> -->
-							<span class="txt">원스토어</span>
-						</button>
-					</div>
+
+					<!-- 상단 버튼영역// -->
 					<div class="btn-box">
+						<!-- 스토어칩스그룹 -->
+						<div class="chips-group">
+							<!-- 
+								select 시 is-selected class 추가
+								<button type="button" class="chips chips-menu is-selected">
+							-->
+							<button type="button" class="chips chips-menu is-selected">
+								<span class="txt">전체</span>
+							</button>
+							<button type="button" class="chips chips-menu">
+								<span class="txt">구글플레이</span>
+							</button>
+							<button type="button" class="chips chips-menu">
+								<span class="txt">애플스토어</span>
+							</button>
+							<button type="button" class="chips chips-menu">
+								<span class="txt">원스토어</span>
+							</button>
+							<button type="button" class="chips chips-menu">
+								<span class="txt">기타앱스토어</span>
+							</button>
+						</div>
+
+						<!-- 상세안내버튼 -->
 						<button class="btn btn-between appStore">
 							<span class="txt-wrap">
-								<span class="img-box">
+								<span class="img-box ico20">
 									<img src="../../../../static/images/icon/ic-btn-error20.svg" alt="애플앱스토어 상세 내역 확인 방법">
 								</span>
 								<span class="txt">
 									애플스토어 상세 내역 확인 방법
 								</span>
 							</span>
-							<span class="img-box">
+							<span class="img-box ico20">
 								<img src="../../../../static/images/icon/ic-btn-arrow-right-sm.png">
 							</span>
 						</button>
 					</div>
+					<!-- //상단 버튼영역 -->
+
+					<!-- 리스트 영역// -->
 					<div class="list-payment">
 						<div class="info-col-wrap">
 							<span class="row total">
@@ -142,6 +145,8 @@
 							</div>
 						</div>
 					</div>
+					<!-- //리스트영역 -->
+
 				</div>
 			</div>
 			<!-- 디바이더 영역 -->
@@ -162,6 +167,9 @@
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-home-phone_payment_setting.png" alt="휴대폰 결제 설정" />
 									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
 								</div>
 								<div class="item text">
 									<h3 class="tit">휴대폰 결제 설정</h3>
@@ -175,6 +183,9 @@
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-home-phone_payment.png" alt="휴대폰 결제 선결제" />
 									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
 								</div>
 								<div class="item text">
 									<h3 class="tit">휴대폰 결제 선결제</h3>
@@ -188,6 +199,9 @@
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-home-billing.png" alt="청구 요금" />
 									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
 								</div>
 								<div class="item text">
 									<span class="tit">청구 요금</span>
@@ -199,12 +213,15 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-home-myplan.png" alt="나의 요금제" />
+										<img src="../../../../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금">
 									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
 								</div>
 								<div class="item text">
-									<h3 class="tit">나의 요금제</h3>
-									<p class="txt">요금제 확인ㆍ변경</p>
+									<span class="tit">실시간 요금</span>
+									<span class="txt">오늘까지 사용한<br>요금 조회</span>
 								</div>
 							</div>
 						</div>
@@ -270,7 +287,7 @@
 						</div>
 					</div>
 				</div>
-			</div>			
+			</div>	
 		</div>
 		<!-- //container -->
 	</div>
