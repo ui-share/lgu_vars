@@ -1,0 +1,19 @@
+@import "../scss/base/mixin";
+.page-wrapper {
+	&.payConfirmation {
+		.container {
+			.section__cont {
+				padding: 72px 0 95px;
+
+                .cont__wrap {
+                    &.cont__wrap-btBtn {
+                        &:has(.accordion-container) {
+                            background-color:var(--dt-white);
+                            z-index: 999;
+                        }
+                    } 
+                }
+            }
+		}
+	}
+}
