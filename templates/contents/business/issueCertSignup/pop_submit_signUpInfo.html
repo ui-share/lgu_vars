@@ -32,8 +32,8 @@
 			<div class="popup-header">
 				<div class="popup-tit">
 					<span class="txt">
-						가입사실 확인서 발급을 위해<br />
-						<span class="color-prim">정보를 입력해 주세요</span>
+						<span class="color-prim">가입사실 확인서 발급</span>을 위해<br/>
+						정보를 입력해 주세요
 					</span>
 				</div>
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
@@ -60,7 +60,7 @@
 									<div class="row">
 										<span class="txt-title">휴대폰 번호</span>
 										<span class="txt-desc">
-											<span>010-****-1234</span>
+											<span>010-**12-**34</span>
 										</span>
 									</div>
 									<div class="row">
@@ -120,20 +120,23 @@
 									<label class="input-label">발급 목적</label>
 									<div class="input-row">
 										<button type="button" class="btn-field-dropdown">
-											<!-- 값 선택 시 출력 <span class="value">
-												<span class="txt">A/S센터 제출용</span>
-											</span> -->
-
-											<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">발급 목적 선택</span> -->
-											<span class="txt">발급 목적 선택</span>
+											<!-- 값 선택 시 출력 -->
+											<span class="value">
+												<span class="txt">직접 입력</span>
+											</span>
+											<!-- placeholder성 안내 문구 노출 
+											 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">발급 목적 선택</span> 
+											-->
+											<span class="txt hidden">발급 목적 선택</span>
 										</button>
 									</div>
 								</div>
 								<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
 							</div>
 
-							<!-- 케이스 : 바텀시트 > 직접입력 선택할 경우 노출 -->
-							<div class="input-control hidden"><!-- 선택 시 hidden 클래스 삭제 -->				
+							
+							<!-- case 직접입력 선택할 경우 노출 : hidden 클래스 삭제-->
+							<div class="input-control ">
 								<div class="input-group">
 									<label class="input-label hidden"></label>
 									<div class="input-row">
@@ -184,6 +187,44 @@
 					</button>
 				</div>
 			</div>
+		</div>
+	</div>
+
+	<!-- 
+		toast 상태 class : 기본 display:none 상태				
+		toast in(show 모션) show : <div class="toast-wrap show">
+		toast out(out 모션 X)    : <div class="toast-wrap">
+	-->
+	<div class="toast-wrap " tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">이메일 주소를 입력해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
+	</div>
+
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">발급 목적을 선택해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
+		</div>
+	</div>
+
+	<div class="toast-wrap" tabindex="-1">
+		<div class="toast">
+			<div class="toast-txt">이메일 주소를 확인해 주세요</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
 </body>
