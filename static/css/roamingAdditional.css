@@ -1,0 +1,251 @@
+.page-wrapper.roamingAdditional .section__cont {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.page-wrapper.roamingAdditional .section__cont.counsel {
+  gap: unset;
+}
+.page-wrapper.roamingAdditional .section__cont .cont__wrap.cont__wrap-message {
+  padding-top: 20px;
+}
+.page-wrapper.roamingAdditional .section__cont:has(.cont__wrap-service) {
+  gap: 0;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail {
+  padding: 20px 20px 80px;
+  background-color: var(--dt-gray05);
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box {
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box .text-box {
+  text-align: left;
+  gap: 6px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box .text-box .tit {
+  font-size: 22px;
+  font-weight: 700;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box .text-box .txt {
+  min-height: 42px;
+  line-height: 1.5;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform {
+  box-shadow: none;
+  border-radius: 16px;
+  padding: 28px 20px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .card-body {
+  gap: 20px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .item {
+  flex-direction: column;
+  gap: 6px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .item .btn-group .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 4px;
+  gap: 4px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .tit {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announceMent {
+  margin-bottom: 28px;
+  gap: 12px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announceMent .card .card-body {
+  gap: 8px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone {
+  margin-bottom: 20px;
+  gap: 12px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .tit span {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--dt-gray14);
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card {
+  padding: 14px 20px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body {
+  gap: 8px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .text {
+  align-items: flex-start;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
+  font-size: 16px;
+  color: var(--dt-gray16);
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-footer .close {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-card_close_small_line.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target {
+  margin: 4px 0;
+  padding: 28px 20px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .txt {
+  font-weight: 600;
+  padding-left: 34px;
+  padding-right: 34px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li.img-wrap {
+  width: 46px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li.img-wrap .img-box {
+  width: 100%;
+  height: 32px;
+  margin-bottom: 4px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap) {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--dt-gray06);
+  border-radius: 50%;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/icon/ic-plus-gray10.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li .desc {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+  line-height: normal;
+  text-align: center;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block {
+  width: 98px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block p {
+  padding: 9px 0;
+  background-color: var(--dt-gray06);
+  color: var(--dt-gray16);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 4px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block p:not(:first-child) {
+  margin-top: 4px;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg {
+  position: relative;
+  width: 74px;
+  aspect-ratio: 1/1.36;
+  background-image: url(../images/img/bg_discount_arrow.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg > span {
+  display: block;
+  position: absolute;
+  top: 46px;
+  left: 12px;
+  color: var(--dt-primary);
+  font-size: 10px;
+  font-weight: 600;
+}
+.page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-point {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: 8px;
+  padding-top: 24px;
+  background-color: var(--dt-primary);
+  color: var(--dt-white);
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 50%;
+  text-align: center;
+}
+
+body:has(.cont__wrap-service.rmDetail) {
+  background-color: var(--dt-gray05);
+}
+
+@media screen and (max-width: 359px) {
+  .cont__wrap-service.rmDetail .card.rmInform .use-target {
+    padding: 24px 20px;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item {
+    flex-direction: column;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
+    content: "";
+    top: 0;
+    left: 50%;
+    transform: translateY(-24px) translateX(-50%);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price {
+    flex-direction: column;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-block {
+    width: 100%;
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg {
+    width: 100%;
+    aspect-ratio: 1/0.39;
+    background-image: url(../images/img/bg_discount_arrow_down.svg);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-arrowbg > span {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .cont__wrap-service.rmDetail .card.rmInform .discnt-price .item-point {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+}

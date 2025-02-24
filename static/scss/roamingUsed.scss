@@ -3,7 +3,6 @@
     &.roamingUsed {
         // 서비스 : 로밍영수증 발급
         .section__cont:has(.rmInvoice) {
-            padding-top: 72px;
             gap: 0;
         }
         // 홀맨 이미지

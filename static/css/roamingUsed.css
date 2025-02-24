@@ -1,5 +1,4 @@
 .page-wrapper.roamingUsed .section__cont:has(.rmInvoice) {
-  padding-top: 72px;
   gap: 0;
 }
 .page-wrapper.roamingUsed .cont__wrap-roamingUsed {

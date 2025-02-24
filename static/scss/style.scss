@@ -3,8 +3,11 @@
 
 .section__cont {
     // service padding
-    .section__cont {
-        padding: 72px 0 155px;
+    &:has(.cont__wrap-service) {
+        padding: 72px 0 95px;
+		&:has(.cont__wrap-service > .inform-wrap) {
+			padding-top: 92px;
+		}
     }
 	&.summary {
         padding: 56px 0px 18px;
