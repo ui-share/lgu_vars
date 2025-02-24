@@ -3431,6 +3431,9 @@ input::placeholder {
   animation: slideInUp 0.6s;
 }
 
+.popup-body:has(.appPaid-wrap) {
+  padding-bottom: 30px;
+}
 .popup-body .section__cont {
   gap: 24px;
 }

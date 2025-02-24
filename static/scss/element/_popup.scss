@@ -127,6 +127,7 @@
 
 // popbody 내 content
 .popup-body {
+	&:has(.appPaid-wrap) {padding-bottom:30px;}
 	.section__cont {
 		gap: 24px;
 	}
