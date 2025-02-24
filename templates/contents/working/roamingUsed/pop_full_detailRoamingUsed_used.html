@@ -12,12 +12,11 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../../../static/css/roamingInfo.css">
 
 	<!-- Scripts -->
 </head>
 <body>
-	<div class="page-wrapper roamingHistory">
+	<div class="page-wrapper roamingUsed">
 		<div class="container">
 			<div class="section__cont"></div>
 		</div>
@@ -43,7 +42,7 @@
 					<div class="cont__wrap cont__wrap-message">
 						<div class="cont__txt-box">
 							<h4 class="txt">
-								N월 N일에 이용하실<br>
+								N월 N일부터 이용 중인<br>
 								로밍 내역이에요
 							</h4>
 						</div>
@@ -53,7 +52,6 @@
 						<div class="con__tit-box">
 							<h6 class="tit-head">
 								<span class="txt-title">가입 상세</span>
-								<span class="txt-day">D-23일</span>
 							</h6>
 						</div>
 						<div class="card solid rmPeriod">
@@ -107,19 +105,26 @@
 								<span class="txt-title">납부 요금</span>
 							</h6>
 						</div>
-	
+						
 						<div class="info-price-wrap roamingPrice">
 							<div class="info-price total-last">
 								<span class="row">
 									<span class="txt-title">로밍요금</span>
 									<span class="txt-price">
 										<div class="flag flag-line primary">
-											<span class="txt">11월 청구예정</span>
+											<span class="txt">청구 전</span>
 										</div>
 										<span>0</span>원
 									</span>
 								</span>
+								<p class="txt-caution">사용 완료 후 청구요금 조회가 가능합니다</p>
 							</div>
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">실시간 조회</span>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -147,12 +152,13 @@
 							<div class="plan-wrap">
 								<div class="col">
 									<div class="txt-plan">
-										<span class="current"><span>14GB</span> 제공</span>
+										<span class="current"><span>13.58GB</span></span>
+										<span class="total">/ 14GB</span>
 									</div>
 									<div class="progress-area realtime">
 										<span class="progress-bg">
 											<!-- style.width %로 조절 -->
-											<span class="progress-bar" style="width:0%;"></span>
+											<span class="progress-bar" style="width:80%;"></span>
 										</span>
 									</div>
 								</div>
@@ -173,14 +179,14 @@
 									<div class="row">
 										<span class="txt-title">현지발신</span>
 										<span class="txt-desc">
-											<span class="current">-초</span>
+											<span class="current">2건 5초</span>
 											<span class="total">/ 무료</span>
 										</span>
 									</div>
 									<div class="row">
 										<span class="txt-title">국제발신</span>
 										<span class="txt-desc">
-											<span class="current">-초</span>
+											<span class="current">1건 3초</span>
 											<span class="total">/ 1.98원</span>
 										</span>
 									</div>
@@ -194,19 +200,13 @@
 									<span class="img-box">
 										<img src="../../../../static/images/icon/ic-circle-message.svg" alt="문자">
 									</span>
-									문자
+									문자 
 								</span>
 								<span class="txt-desc">
-									<span class="current">-건</span>
+									<span class="current">4건</span>
 									<span class="total">/ 300건</span>
 								</span>
 							</div>
-						</div>
-
-						<div class="btn-group">
-							<button type="button" class="btn btn-sec">
-								<span class="txt">해지</span>
-							</button>
 						</div>
 					</div>
 				</div>

@@ -4,10 +4,6 @@
 		.container {
 			.section__cont {
 				padding: 72px 0 95px;
-                &:has(.rmInvoice) {// 서비스 : 로밍영수증 발급
-                    padding-top: 72px;
-                    gap: 0;
-                }
                 &.summary {
                     padding-bottom:18px;
                     background-color:#DCE6FF;
@@ -115,9 +111,6 @@
                 }
                 .cont__wrap {
                     &.cont__wrap-realtimeRoaming {
-                        background-image: url(../images/img/img-hm-roaming.png);
-                    }
-                    &.cont__wrap-roamingHistory {
                         background-image: url(../images/img/img-hm-roaming.png);
                     }
                     &.cont__wrap-btBtn {
@@ -281,99 +274,6 @@
         margin-top: 12px;
     }
 }
-
-//로밍히스토리 풀팝업
-.full-popup.rmHistory {
-    .cont__wrap-message {
-        margin-top: 20px;
-    }
-    .txt-day {
-        @include fw-6();
-        line-height: 120%;
-        color: var(--dt-primary);
-    }
-    .txt-price {
-        display: flex;
-        align-items: center;
-        .flag {
-            margin-right: 8px;
-        }
-        .flag .txt {
-            font-size: 11px;
-        }
-    }
-}
-
-
-// 토스트 팝업 위치 조정
-.page-wrapper:has(.rmInvoice) {
-    & + .toast-wrap {
-        bottom: 154px;
-    }
-}
-.cont__wrap-service.rmInvoice {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    .con__tit-box {
-        margin-bottom: 0;
-    }
-    .list-wrap {
-        margin-top: 0;
-        .list-box {
-            .tail {
-                color: var(--dt-gray14);
-            }
-            &.title, &.total {
-                .head {
-                    display: flex;
-                    align-items: center;
-                    @include fw-7();
-                    line-height: 150%;
-                    color: var(--dt-gray16);
-                    gap: 6px;
-                }
-                .tail {
-                    @include fw-7();
-                    line-height: 150%;
-                    color: var(--dt-gray16);
-                }
-            }
-            // 2depth
-            .list-wrap {
-                width: 100%;
-                margin-top: 0;
-                padding: 0;
-                .list-box {
-                    padding: 4px 0;
-                    border: none;
-                    .head, .tail {
-                        @include fw-5(14px);
-                        line-height: 150%;
-                        color: var(--dt-gray12);
-                    }
-                    // 3depth
-                    .list-box {
-                        padding: 0;
-                        .head {
-                            padding-left: 12px;
-                            background-image: url(../images/icon/ic-list-brace.svg);
-                            background-repeat: no-repeat;
-                            background-position: 0px 6px;
-                            background-size: 8px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-//청구서 팝업
-.popup-body:has(.invoice) {
-    padding-top: 20px;
-    .cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
-}
-
 
 
 @media screen and (max-width: 359px) {
