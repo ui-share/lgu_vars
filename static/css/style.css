@@ -1,13 +1,10 @@
 @charset "UTF-8";
-.section__cont:has(.cont__wrap-service) {
-  padding: 72px 0 95px;
+.container .section__cont.summary {
+  padding: 64px 0 18px;
+  gap: 9px;
 }
-.section__cont:has(.cont__wrap-service):has(.cont__wrap-service > .inform-wrap) {
-  padding-top: 92px;
-}
+
 .section__cont.summary {
-  padding: 56px 0px 18px;
-  padding-bottom: 18px;
   background-color: #DCE6FF;
 }
 .section__cont.summary .cont__wrap {
@@ -15,13 +12,12 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
-  min-height: 158px;
-  padding-top: 28px;
+  min-height: 130px;
+  padding: 0 20px;
   background-repeat: no-repeat;
-  background-size: 140px;
-  background-position: right 10px bottom 0;
+  background-size: 120px;
+  background-position: right 5px bottom -12px;
 }
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
@@ -49,14 +45,15 @@
 }
 .section__cont.summary .cont__wrap-MOPaymentUsed {
   background-image: url(../images/img/img-hm-MOpayment.png);
-  background-position: right -5px top 16px;
-}
-.section__cont.summary .cont__wrap-MOPaymentUsed + .info-price-single p.txt-info {
-  font-size: 14px;
-  font-weight: 500;
 }
 .section__cont.summary .cont__wrap-plan {
   background-image: url(../images/img/img-hm-myplan.png);
+}
+.section__cont.summary .cont__wrap-realtimeRoaming {
+  background-image: url(../images/img/img-hm-roaming.png);
+}
+.section__cont.summary .cont__wrap-roamingUsed {
+  background-image: url(../images/img/img-hm-roaming.png);
 }
 .section__cont.summary .txt-select-wrap {
   display: flex;
@@ -65,14 +62,11 @@
   align-items: center;
   gap: 4px;
   color: var(--dt-gray16);
-  padding-right: 30%;
 }
 .section__cont.summary .txt-select-wrap .txt {
-  font-size: 22px;
-  font-weight: 600;
   line-height: 1.5;
 }
-.section__cont.summary .txt-select-wrap:has(.chips-date + .txt) .txt {
+.section__cont.summary .txt-select-wrap:has(.chips-date + .txt) > .txt {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
@@ -81,6 +75,52 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
+}
+.section__cont.summary .txt.price {
+  width: calc(100% - 70px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 18px;
+  font-weight: 600;
+  row-gap: 4px;
+}
+.section__cont.summary .txt.price .deco {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-right: 2px;
+}
+.section__cont.summary .txt.price .deco-sub {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-right: 2px;
+}
+.section__cont.summary .txt.price .color-prim {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.section__cont.summary .txt.price .txt {
+  line-height: 1.5;
+}
+.section__cont.summary .txt.price:has(.deco), .section__cont.summary .txt.price:has(.color-prim) {
+  color: var(--dt-gray14);
+}
+.section__cont.summary .txt.price:has(.deco + .color-prim) {
+  color: var(--dt-gray14);
+}
+.section__cont.summary .txt.price:has(.deco + .color-prim) .color-prim {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.section__cont.summary .txt.price .txt-sub {
+  width: 100%;
+  font-size: 16px;
+  color: var(--dt-black);
 }
 .section__cont.summary .btn-tooltip {
   margin-left: 2px;
@@ -91,6 +131,18 @@
 }
 .section__cont.summary .tooltip-wrap {
   max-width: 280px;
+}
+
+@media screen and (max-width: 280px) {
+  .section__cont.summary .cont__wrap {
+    min-height: 146px;
+  }
+}
+.section__cont:has(.cont__wrap-service) {
+  padding: 72px 0 95px;
+}
+.section__cont:has(.cont__wrap-service):has(.cont__wrap-service > .inform-wrap) {
+  padding-top: 92px;
 }
 .section__cont.segment {
   padding: 36px 0 48px;
@@ -158,7 +210,6 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -300,8 +351,7 @@
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
@@ -477,8 +527,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;
