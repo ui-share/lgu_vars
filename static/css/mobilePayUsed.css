@@ -102,9 +102,9 @@
   gap: 4px;
 }
 .appPaid-wrap .info-box .txt {
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 140%;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--dt-gray14);
   letter-spacing: -0.5px;
 }

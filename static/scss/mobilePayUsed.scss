@@ -98,8 +98,8 @@
         border-radius: 8px;
         gap: 4px;
         .txt {
-            @include fw-5(14px);
-            line-height: 140%;
+            @include fw-6(16px);
+            line-height: 1.5;
             color: var(--dt-gray14);
             letter-spacing: -0.5px;
         }
