@@ -230,91 +230,16 @@
 		}
 	}
 }
-
-// 변경결제한도입력
-.input-row-wrap {
-	&.al-baseline {
-		align-items:baseline;
-		justify-content:center;
-		column-gap:12px;
-		padding: 48px 4px 0;
-		.ico32 {
-			min-width:32px;height:32px;
+// 선결제 입력 케이스
+.input-control {
+	&.error { // 에러케이스
+		input:valid {
+			color:var(--dt-error);
 		}
-		.input-control {
-			position:relative;
-			padding-top:0;
-			width:41.5%;
-			&.error {
-				input:valid {
-					color:var(--dt-error);
-					& + .util-box .input-unit {color:var(--dt-error);}
-				}
-				.bubble-box.topright {
-					padding-right:10px;
-					padding-left:10px;
-					bottom: calc(100% + 8px) !important;
-					right: 50%;
-    				transform: translateX(12.5%);
-					.bubble-box-arrow {
-						right:16px;
-						&::after {left: 0;}
-					}
-				}
-			}
-			.input-group {
-				border-bottom:2px solid var(--dt-gray08);
-			}
-			.input-label {
-				display:inline-block;
-				width:100%;
-				text-align:center;
-			}
-			.input-row {
-				width:98px;
-				margin:0 auto;
-				justify-content:center;
-				column-gap: 0;
-				border-bottom:unset;
-				.value {
-					display:flex;
-					justify-content:center;
-					flex-wrap:wrap;
-					color: var(--dt-black);
-					font-size: 24px;
-					font-weight: 600;
-					line-height: 1.2;
-				}
-			}
-			.input-field {
-				text-align:center;
-				width:min-content;
-				max-width: 100%;
-
-				font-size: 24px;
-				font-weight: 600;
-				line-height: 1.2;
-				&::placeholder {
-					font-size: 24px;
-					font-weight: 600;
-					line-height: 1.2;
-				}
-			}
-			// .input-unit { //유닛 삭제 확정 02.19
-			// 	min-width:44px;
-			// 	color:var(--dt-black);
-			// 	font-size: 24px;
-			// 	font-weight: 600;
-			// 	line-height: 1.2;
-			// 	text-align:center;
-			// }
-			.txt-sub {
-				margin-top:8px;
-				text-align:center;
-			}
+		.input-row {
+			border-color:var(--dt-error);
 		}
 	}
-	
 }
 
 // 휴대폰결제변경내역_TAB UI

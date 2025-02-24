@@ -227,80 +227,11 @@
   transform: translateY(-1px);
 }
 
-.input-row-wrap.al-baseline {
-  align-items: baseline;
-  justify-content: center;
-  column-gap: 12px;
-  padding: 48px 4px 0;
-}
-.input-row-wrap.al-baseline .ico32 {
-  min-width: 32px;
-  height: 32px;
-}
-.input-row-wrap.al-baseline .input-control {
-  position: relative;
-  padding-top: 0;
-  width: 41.5%;
-}
-.input-row-wrap.al-baseline .input-control.error input:valid {
+.input-control.error input:valid {
   color: var(--dt-error);
 }
-.input-row-wrap.al-baseline .input-control.error input:valid + .util-box .input-unit {
-  color: var(--dt-error);
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
-  padding-right: 10px;
-  padding-left: 10px;
-  bottom: calc(100% + 8px) !important;
-  right: 50%;
-  transform: translateX(12.5%);
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
-  right: 16px;
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow::after {
-  left: 0;
-}
-.input-row-wrap.al-baseline .input-control .input-group {
-  border-bottom: 2px solid var(--dt-gray08);
-}
-.input-row-wrap.al-baseline .input-control .input-label {
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-}
-.input-row-wrap.al-baseline .input-control .input-row {
-  width: 98px;
-  margin: 0 auto;
-  justify-content: center;
-  column-gap: 0;
-  border-bottom: unset;
-}
-.input-row-wrap.al-baseline .input-control .input-row .value {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: var(--dt-black);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.input-row-wrap.al-baseline .input-control .input-field {
-  text-align: center;
-  width: min-content;
-  max-width: 100%;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.input-row-wrap.al-baseline .input-control .input-field::placeholder {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.input-row-wrap.al-baseline .input-control .txt-sub {
-  margin-top: 8px;
-  text-align: center;
+.input-control.error .input-row {
+  border-color: var(--dt-error);
 }
 
 .list-payment {

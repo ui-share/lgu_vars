@@ -5,3 +5,7 @@
   background-color: var(--dt-white);
   z-index: 999;
 }
+
+.input-row-wrap .input-control {
+  width: calc((100% - 30px) / 2);
+}
