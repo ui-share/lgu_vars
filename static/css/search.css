@@ -1,135 +1,139 @@
 @charset "UTF-8";
-.summary {
-  padding-bottom: 18px;
+.container .section__cont.summary {
+  padding: 64px 0 18px;
+  gap: 9px;
+}
+
+.section__cont.summary {
   background-color: #DCE6FF;
 }
-.summary .cont__wrap {
+.section__cont.summary .cont__wrap {
   display: flex;
   flex-direction: column;
   gap: 9px;
   position: relative;
   height: max-content;
-  min-height: 131px;
-  padding: 14px 20px 0;
+  min-height: 103px;
+  padding: 0 20px;
   background-repeat: no-repeat;
   background-size: 80px;
   background-position: right 10px bottom 0;
 }
-.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
+.section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
 }
-.summary .cont__wrap-bill {
+.section__cont.summary .cont__wrap-bill {
   background-image: url(../images/img/img-hm-bill.png);
 }
-.summary .cont__wrap-realtime {
+.section__cont.summary .cont__wrap-realtime {
   background-image: url(../images/img/img-hm-realtime.png);
 }
-.summary .cont__wrap-usestate {
+.section__cont.summary .cont__wrap-usestate {
   background-image: url(../images/img/img-hm-usestate.png);
 }
-.summary .cont__wrap-account {
+.section__cont.summary .cont__wrap-account {
   background-image: url(../images/img/img-hm-account.png);
 }
-.summary .cont__wrap-payment {
+.section__cont.summary .cont__wrap-payment {
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 }
-.summary .cont__wrap-billMthdChng {
+.section__cont.summary .cont__wrap-billMthdChng {
   background-image: url(../images/img/img-hm-bill.png);
 }
-.summary .cont__wrap-pauseTemp {
+.section__cont.summary .cont__wrap-pauseTemp {
   background-image: url(../images/img/img-hm-pauseTemp.png);
 }
-.summary .cont__wrap-MOPaymentUsed {
+.section__cont.summary .cont__wrap-MOPaymentUsed {
   background-image: url(../images/img/img-hm-MOpayment.png);
 }
-.summary .cont__wrap-plan {
+.section__cont.summary .cont__wrap-plan {
   background-image: url(../images/img/img-hm-myplan.png);
 }
-.summary .cont__wrap-realtimeRoaming {
+.section__cont.summary .cont__wrap-realtimeRoaming {
   background-image: url(../images/img/img-hm-roaming.png);
 }
-.summary .cont__wrap-roamingHistory {
+.section__cont.summary .cont__wrap-roamingHistory {
   background-image: url(../images/img/img-hm-roaming.png);
 }
-.summary .txt-select-wrap {
+.section__cont.summary .cont__txt-box {
+  margin: auto 0;
+}
+.section__cont.summary .txt-select-wrap {
+  width: calc(100% - 20px);
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: 4px;
   color: var(--dt-gray16);
-  margin-right: auto;
 }
-.summary .txt-select-wrap .txt {
-  font-size: 22px;
-  font-weight: 600;
+.section__cont.summary .txt-select-wrap .txt {
   line-height: 1.5;
 }
-.summary .txt-select-wrap:has(.chips-date + .txt) > .txt {
+.section__cont.summary .txt-select-wrap:has(.chips-date + .txt) > .txt {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-.summary .txt-select-wrap .chips-date .txt {
+.section__cont.summary .txt-select-wrap .chips-date .txt {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-.summary .cont__txt-box .txt {
-  line-height: 1.5;
-}
-.summary .cont__txt-box .txt.price {
+.section__cont.summary .txt.price {
+  width: calc(100% - 60px);
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
   font-size: 18px;
   font-weight: 600;
-  line-height: 1.2;
   row-gap: 4px;
-  color: var(--dt-gray16);
 }
-.summary .cont__txt-box .txt.price .deco {
+.section__cont.summary .txt.price .deco {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
   margin-right: 2px;
 }
-.summary .cont__txt-box .txt.price .deco-sub {
+.section__cont.summary .txt.price .deco-sub {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
   margin-right: 2px;
 }
-.summary .cont__txt-box .txt.price .color-prim {
+.section__cont.summary .txt.price .color-prim {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
 }
-.summary .cont__txt-box .txt.price:has(.deco), .summary .cont__txt-box .txt.price:has(.color-prim) {
+.section__cont.summary .txt.price .txt {
+  line-height: 1.5;
+}
+.section__cont.summary .txt.price:has(.deco), .section__cont.summary .txt.price:has(.color-prim) {
   color: var(--dt-gray14);
 }
-.summary .cont__txt-box .txt.price:has(.deco + .color-prim) {
+.section__cont.summary .txt.price:has(.deco + .color-prim) {
   color: var(--dt-gray14);
 }
-.summary .cont__txt-box .txt.price:has(.deco + .color-prim) .color-prim {
+.section__cont.summary .txt.price:has(.deco + .color-prim) .color-prim {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-.summary .cont__txt-box .txt.price .txt-sub {
+.section__cont.summary .txt.price .txt-sub {
   width: 100%;
   font-size: 16px;
   color: var(--dt-black);
 }
-.summary .btn-tooltip {
+.section__cont.summary .btn-tooltip {
   margin-left: 2px;
 }
-.summary .btn-tooltip img {
+.section__cont.summary .btn-tooltip img {
   width: 20px;
   height: 20px;
 }
-.summary .tooltip-wrap {
+.section__cont.summary .tooltip-wrap {
   max-width: 280px;
 }
 
