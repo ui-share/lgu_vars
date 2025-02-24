@@ -1,0 +1,148 @@
+@import "../scss/base/mixin";
+.container {
+	.section__cont {
+		&.summary {
+			padding: 64px 0 18px;
+			gap: 9px;
+		}
+	}
+}
+
+.section__cont {
+	&.summary {
+		background-color: #DCE6FF;
+		.cont__wrap {
+			@include flexColum;
+			gap: 9px;
+			position: relative;
+			height: max-content;
+			min-height: 130px;
+			padding: 0 20px;
+			background-repeat: no-repeat;
+			background-size: 120px;
+			background-position: right 5px bottom -12px;
+			.info-price-wrap {
+				.info-price, .info-price-detail {
+					&.total-last {
+						.row {margin-top: 4px;}
+					}
+				}
+			}			
+		}
+		.cont__wrap-bill {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-realtime {
+			background-image: url(../images/img/img-hm-realtime.png);
+		}
+		.cont__wrap-usestate {
+			background-image: url(../images/img/img-hm-usestate.png);
+		}
+		.cont__wrap-account {
+			background-image: url(../images/img/img-hm-account.png);
+		}
+		.cont__wrap-payment {
+			background-image: url(../images/img/img-hm-automatic-withdrawal.png);
+		}
+		.cont__wrap-billMthdChng {
+			background-image: url(../images/img/img-hm-bill.png);
+		}
+		.cont__wrap-pauseTemp {
+			background-image: url(../images/img/img-hm-pauseTemp.png);
+		}
+		.cont__wrap-MOPaymentUsed {
+			background-image: url(../images/img/img-hm-MOpayment.png);
+			
+		}
+		.cont__wrap-plan {
+			background-image: url(../images/img/img-hm-myplan.png);
+		}
+		.cont__wrap-realtimeRoaming {
+			background-image: url(../images/img/img-hm-roaming.png);
+		}
+		.cont__wrap-roamingUsed {
+			background-image: url(../images/img/img-hm-roaming.png);
+		}
+		.txt-select-wrap {
+			@include flexRow;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 4px;
+			color: var(--dt-gray16);
+			.txt {
+				line-height: 1.5;
+			}
+			&:has(.chips-date + .txt) {
+				> .txt {
+					@include fw-6(18px);
+					line-height: 1.2;
+				}
+			}
+			.chips-date {
+				.txt {
+					@include fw-6(18px);
+					line-height: 1.2;
+				}
+			}
+		}
+		.txt {
+			&.price {
+				width: calc(100% - 70px);
+				@include flexRow;
+				align-items: center;
+				flex-wrap: wrap;
+				@include fw-6(18px);
+				row-gap: 4px;
+				.deco {
+					@include fw-7(30px);
+					line-height: 1.2;
+					margin-right: 2px;
+				}
+				.deco-sub {
+					@include fw-7(22px);
+					line-height: 1.5;
+					margin-right: 2px;
+				}
+				.color-prim {
+					@include fw-7(22px);
+					line-height: 1.5;
+				}
+				.txt {
+					line-height: 1.5;
+				}
+				&:has(.deco),
+				&:has(.color-prim) {
+					color: var(--dt-gray14);
+				}
+				&:has(.deco + .color-prim) {
+					color: var(--dt-gray14);
+					.color-prim {
+						@include fw-6(18px);
+						line-height: 1.2;						
+					}
+				}
+				.txt-sub {
+					width:100%;
+					font-size:16px;color:var(--dt-black);
+				}
+			}
+		}
+		// 툴팁 있는 경우
+		.btn-tooltip {
+			margin-left: 2px;
+			img { width:20px; height:20px;}
+		}
+		.tooltip-wrap {
+			max-width: 280px;
+		}
+	}
+}
+@media screen and (max-width: 280px) {
+	.section__cont {
+		&.summary {
+			.cont__wrap {
+				min-height: 146px;
+			}
+		}
+	}
+}
