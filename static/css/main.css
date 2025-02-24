@@ -13,6 +13,10 @@
   background-size: cover;
 }
 
+.section__cont:first-child {
+  padding-top: 56px;
+}
+
 .cont__wrap.cont__wrap-banner {
   padding: 10px 20px 0;
 }
