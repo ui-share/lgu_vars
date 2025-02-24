@@ -7,15 +7,6 @@
 		}
 	}
 }
-// @media screen and (max-width: 289px) {
-// 	.container {
-// 		.section__cont {
-// 			&.summary {
-// 				padding: 64px 0 18px;
-// 			}
-// 		}
-// 	}
-// }
 
 .section__cont {
 	&.summary {
@@ -25,11 +16,11 @@
 			gap: 9px;
 			position: relative;
 			height: max-content;
-			min-height: 136px;
+			min-height: 130px;
 			padding: 0 20px;
 			background-repeat: no-repeat;
 			background-size: 120px;
-			background-position: right 5px bottom -10px;
+			background-position: right 5px bottom -14px;
 			.info-price-wrap {
 				.info-price, .info-price-detail {
 					&.total-last {
@@ -72,18 +63,13 @@
 		.cont__wrap-roamingUsed {
 			background-image: url(../images/img/img-hm-roaming.png);
 		}
-		// .cont__txt-box {
-		// 	margin: auto 0;
-		// }
 		.txt-select-wrap {
-			// width: calc(100% - 40px);
 			@include flexRow;
 			flex-wrap: wrap;
 			align-items: center;
 			gap: 4px;
 			color: var(--dt-gray16);
 			.txt {
-				// @include fw-6(22px);
 				line-height: 1.5;
 			}
 			&:has(.chips-date + .txt) {
@@ -151,11 +137,11 @@
 		}
 	}
 }
-@media screen and (max-width:290px) {
+@media screen and (max-width: 280px) {
 	.section__cont {
 		&.summary {
 			.cont__wrap {
-				min-height: 162px;
+				min-height: 146px;
 			}
 		}
 	}

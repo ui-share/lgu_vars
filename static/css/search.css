@@ -13,11 +13,11 @@
   gap: 9px;
   position: relative;
   height: max-content;
-  min-height: 136px;
+  min-height: 130px;
   padding: 0 20px;
   background-repeat: no-repeat;
   background-size: 120px;
-  background-position: right 5px bottom -10px;
+  background-position: right 5px bottom -14px;
 }
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
@@ -133,9 +133,9 @@
   max-width: 280px;
 }
 
-@media screen and (max-width: 290px) {
+@media screen and (max-width: 280px) {
   .section__cont.summary .cont__wrap {
-    min-height: 162px;
+    min-height: 146px;
   }
 }
 .section__cont.segment {
