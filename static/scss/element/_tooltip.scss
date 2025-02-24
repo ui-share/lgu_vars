@@ -194,7 +194,11 @@ div[data-popper-arrow]::before {
 	}
 	.bubble-box {// chck-group, validation-txt 이랑 동레벨
 		padding:10px 16px;
-		.txt-wrap {width:100%;}
+		.txt-wrap {
+			width:100%;
+			padding-left:0;
+			padding-right:0;
+		}
 	}
 }
 .error .bubble-box.topleft,

@@ -194,56 +194,32 @@
   transform: translateY(-1px);
 }
 
-.input-row-wrap.al-baseline {
+.al-baseline {
   align-items: baseline;
   justify-content: center;
   column-gap: 12px;
-  padding: 48px 4px 0;
+  padding-top: 48px;
 }
-.input-row-wrap.al-baseline .ico32 {
+.al-baseline .ico32 {
   min-width: 32px;
   height: 32px;
 }
-.input-row-wrap.al-baseline .input-control {
+.al-baseline .input-control {
   position: relative;
+  width: calc((100% - 32px) / 2);
   padding-top: 0;
-  width: 41.5%;
 }
-.input-row-wrap.al-baseline .input-control.error input:valid {
-  color: var(--dt-error);
-}
-.input-row-wrap.al-baseline .input-control.error input:valid + .util-box .input-unit {
-  color: var(--dt-error);
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
-  padding-right: 10px;
-  padding-left: 10px;
-  bottom: calc(100% + 8px) !important;
-  right: 50%;
-  transform: translateX(12.5%);
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
-  right: 16px;
-}
-.input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow::after {
-  left: 0;
-}
-.input-row-wrap.al-baseline .input-control .input-group {
-  border-bottom: 2px solid var(--dt-gray08);
-}
-.input-row-wrap.al-baseline .input-control .input-label {
+.al-baseline .input-control .input-label {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-.input-row-wrap.al-baseline .input-control .input-row {
-  width: 98px;
+.al-baseline .input-control .input-row {
   margin: 0 auto;
   justify-content: center;
   column-gap: 0;
-  border-bottom: unset;
 }
-.input-row-wrap.al-baseline .input-control .input-row .value {
+.al-baseline .input-control .input-row .value {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -252,22 +228,51 @@
   font-weight: 600;
   line-height: 1.2;
 }
-.input-row-wrap.al-baseline .input-control .input-field {
+.al-baseline .input-control .input-field {
   text-align: center;
-  width: min-content;
-  max-width: 100%;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
 }
-.input-row-wrap.al-baseline .input-control .input-field::placeholder {
+.al-baseline .input-control .input-field::placeholder {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
 }
-.input-row-wrap.al-baseline .input-control .txt-sub {
+.al-baseline .input-control.error input:valid {
+  color: var(--dt-error);
+}
+.al-baseline .input-control.error .input-row {
+  border-color: var(--dt-black);
+}
+.al-baseline .input-control.focused .input-row {
+  border-bottom: 2px solid var(--dt-black);
+}
+.al-baseline .input-control.focused .input-row .input-field {
+  caret-color: var(--dt-black);
+}
+.al-baseline .input-control .input-row:has(input:focus) {
+  border-bottom: 2px solid var(--dt-black);
+}
+.al-baseline .input-control .input-row:has(input:focus) .input-field {
+  caret-color: var(--dt-black);
+}
+.al-baseline .input-control .txt-sub {
   margin-top: 8px;
   text-align: center;
+}
+.al-baseline .bubble-box.topright {
+  padding-right: 10px;
+  padding-left: 10px;
+  bottom: calc(100% + 8px) !important;
+  right: 50%;
+  transform: translateX(12.5%);
+}
+.al-baseline .bubble-box.topright .bubble-box-arrow {
+  right: 16px;
+}
+.al-baseline .bubble-box.topright .bubble-box-arrow::after {
+  left: 0;
 }
 
 .list-payment {
@@ -326,29 +331,29 @@
 }
 
 @media screen and (max-width: 359px) {
-  .input-row-wrap.al-baseline {
+  .al-baseline {
     column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {
-  .input-row-wrap.al-baseline {
+  .al-baseline {
     flex-wrap: wrap;
   }
-  .input-row-wrap.al-baseline .input-control {
+  .al-baseline .input-control {
     width: calc(100% - 44px);
   }
-  .input-row-wrap.al-baseline .input-control .input-row {
+  .al-baseline .input-control .input-row {
     max-width: 100%;
   }
-  .input-row-wrap.al-baseline .input-control .input-field {
+  .al-baseline .input-control .input-field {
     max-width: 100%;
   }
-  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
+  .al-baseline .input-control.error .bubble-box.topright {
     transform: translateX(-50%);
     right: unset;
     left: 50%;
   }
-  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
+  .al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
     right: unset;
     left: 50%;
     margin-left: -8px;
