@@ -1,7 +1,6 @@
 @import "../scss/base/mixin";
 // 서비스 : 해외로밍 실시간 조회
-.cont__wrap-realtimeRoaming,
-.cont__wrap-roamingHistory {
+.cont__wrap-realtimeRoaming {
     background-image: url(../images/img/img-hm-roaming.png);
 }
 // 이용중:새로고침 버튼 있는 경우
@@ -41,80 +40,6 @@
     }
 }
 
-
-// 서비스 : 로밍영수증 발급
-.page-wrapper .container .section__cont:has(.rmInvoice) {
-    padding-top: 72px;
-    gap: 0;
-}
-// 토스트 팝업 위치 조정
-.page-wrapper:has(.rmInvoice) {
-    & + .toast-wrap {
-        bottom: 154px;
-    }
-}
-.cont__wrap-service.rmInvoice {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    .con__tit-box {
-        margin-bottom: 0;
-    }
-    .list-wrap {
-        margin-top: 0;
-        .list-box {
-            .tail {
-                color: var(--dt-gray14);
-            }
-            &.title, &.total {
-                .head {
-                    display: flex;
-                    align-items: center;
-                    @include fw-7();
-                    line-height: 150%;
-                    color: var(--dt-gray16);
-                    gap: 6px;
-                }
-                .tail {
-                    @include fw-7();
-                    line-height: 150%;
-                    color: var(--dt-gray16);
-                }
-            }
-            // 2depth
-            .list-wrap {
-                width: 100%;
-                margin-top: 0;
-                padding: 0;
-                .list-box {
-                    align-items: flex-start;
-                    padding: 4px 0;
-                    border: none;
-                    .head, .tail {
-                        @include fw-5(14px);
-                        line-height: 150%;
-                        color: var(--dt-gray12);
-                    }
-                    .head {width:calc(100% - 81px);}
-                    .tail { min-width:81px;}
-                    
-                    // 3depth : ㄴ꺽쇠 리스트
-                    .list-box {
-                        padding: 0;
-                        .head {
-                            width: 100%;
-                            padding-left: 11px;
-                            background-image: url(../images/icon/ic-list-brace.svg);
-                            background-repeat: no-repeat;
-                            background-position: 0px 6px;
-                            background-size: 8px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 //청구서 팝업
 .popup-body:has(.invoice) {
     padding-top: 20px;
