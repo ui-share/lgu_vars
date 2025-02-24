@@ -39,7 +39,12 @@
 				<a href="./templates/element/tooltip.html" target="_blank"><span>툴팁_html 내 주석 확인 요망</span></a>
 				<a href="./templates/element/table.html" target="_blank"><span>테이블 레이아웃</span></a>
 				<a href="./templates/element/inform_element.html" target="_blank"><span>Inform(안내) 레이아웃</span></a>
-				<a href="./templates/component/search_common.html" target="_blank"><span>조회(써머리) 페이지 레이아웃</span></a>
+				<a href="./templates/component/summary_common.html" target="_blank">
+					<span>조회(써머리) 페이지 레이아웃</span>
+					<span class="flag error">
+						<span class="txt">up 02.24</span>
+					</span>
+				</a>
 			</div>
 			<div style="margin:14px 0;color: var(--dt-gray11);">----------------------</div>
 			<p style="color:var(--dt-gray16);font-size: 17px;font-weight: 600;">공통 페이지</p>
@@ -106,10 +111,18 @@
 					<span>바텀시트 : (공통)법인명의 제한</span>
 					
 				</a>
-				<a href="./templates/contents/working/instantPayment/pop_slctAccntBank.html" target="_blank">
+				<a href="./templates/contents/business/instantPayment/pop_slctAccntBank.html" target="_blank">
 					<span>바텀시트 : 은행 선택(공통)</span>
-					
 				</a>
+            </div>
+        </div>
+
+		<div class="lg-prototype-linkwrap">
+            <p>2단계 인증</p>
+            <div class="link-container">
+                <a href="./templates/contents/business/twoFactorAuth/pop_full_twoFactorAuth.html" target="_blank"><span>풀팝업_본인인증서비스</span></a>
+                <a href="./templates/contents/business/twoFactorAuth/pop_twoFactorAuth_kakao.html" target="_blank"><span>바텀시트_카카오인증</span></a>
+                <a href="./templates/contents/business/twoFactorAuth/pop_twoFactorAuth_pass.html" target="_blank"><span>바텀시트_패스인증</span></a>
             </div>
         </div>
         
@@ -147,7 +160,12 @@
         <div class="lg-prototype-linkwrap">
             <p>요금 및 납부</p>
             <div class="link-container">
-                <a href="./templates/component/search_common.html" target="_blank" style="margin-bottom:10px;"><span>[공통]조회페이지 케이스</span></a>
+                <a href="./templates/component/summary_common.html" target="_blank" style="margin-bottom:10px;">
+					<span>[공통]조회페이지 케이스</span>
+					<span class="flag error">
+						<span class="txt">up 02.24</span>
+					</span>
+				</a>
             </div>
 
 			<div class="link-container" style="margin-top:10px;margin-left:10px;">
@@ -487,16 +505,16 @@
             <div class="link-container">
 				<span style="margin:10px 0 0;color:#E30084;font-size:17px;font-weight:600;">부가서비스 신청/해지
 				</span>
-				<a href="./templates/contents/working/additionalProduct/search_additionalProduct.html" target="_blank">
+				<a href="./templates/contents/business/additionalProduct/search_additionalProduct.html" target="_blank">
 					<span>조회 : 가입된 부가서비스</span>
 				</a>
-				<a href="./templates/contents/working/additionalProduct/finish_cancle_additionalService.html" target="_blank">
+				<a href="./templates/contents/business/additionalProduct/finish_cancle_additionalService.html" target="_blank">
 					<span>완료 : 부가서비스 해지</span>
 				</a>
-				<a href="./templates/contents/working/additionalProduct/pop_cancel_additionalService.html" target="_blank">
+				<a href="./templates/contents/business/additionalProduct/pop_cancel_additionalService.html" target="_blank">
 					<span>바텀시트 : 부가서비스 해지 안내</span>
 				</a>
-				<a href="./templates/contents/working/additionalProduct/pop_callEnd_additionalProduct.html" target="_blank">
+				<a href="./templates/contents/business/additionalProduct/pop_callEnd_additionalProduct.html" target="_blank">
 					<span>바텀시트 : 당신의 U+앱으로 이동</span>
 				</a>
 
@@ -722,6 +740,20 @@
 					<span>입력 : 카드로납부-직접입력 + 선결제 금액 입력 : Case_error</span>
 					
 				</a>
+				<a href="./templates/contents/business/mobilePrepayment/card_inputNumber_OCR_defalt.html" target="_blank">
+					<span>입력 : OCR 카드번호 직접입력 Default</span>
+					
+				</a>
+				<a href="./templates/contents/business/mobilePrepayment/card_inputNumber_OCR_error.html" target="_blank">
+					<span>입력 :  OCR 카드번호 직접입력 Case_error</span>
+				</a>
+				<a href="./templates/contents/business/mobilePrepayment/card_inputPrepayPrice_default.html" target="_blank">
+					<span>입력 : 선결제 금액</span>	
+				</a>
+				<a href="./templates/contents/business/mobilePrepayment/card_inputPrepayPrice_error.html" target="_blank">
+					<span>입력 : 선결제 금액 Case_error</span>	
+				</a>
+
 				<a href="./templates/contents/business/mobilePrepayment/finish_prepayment_regular.html" target="_blank">
 					<span>완료_휴대폰결제 선결제_일반/정기 결제</span>
 					
@@ -995,77 +1027,77 @@
 
             <div class="link-container" style="margin:20px 0 0;">
 				<span style="color:#E30084;font-size:17px;font-weight:600;">해외로밍 이용내역</span>
-				<a href="./templates/contents/working/roamingHistory/search_roamingHistory_notUsed.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/search_roamingHistory_notUsed.html" target="_blank">
 					<span>조회 : 해외로밍 이용내역 내역없음 CASE</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/search_roamingHistory_used.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/search_roamingHistory_used.html" target="_blank">
 					<span>조회 : 해외로밍 이용내역 내역있음 CASE</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/service_rmInvoice.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/service_rmInvoice.html" target="_blank">
 					<span>서비스 : 로밍영수증 발급</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/service_rmInvoice_toast_pdf.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/service_rmInvoice_toast_pdf.html" target="_blank">
 					<span>서비스 : 로밍영수증 발급 pdf 저장 토스트팝업 예시</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/service_rmInvoice_toast_email.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/service_rmInvoice_toast_email.html" target="_blank">
 					<span>서비스 : 로밍영수증 발급 이메일 전송송 토스트팝업 예시</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/toast_rmInvoice_pdf.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/toast_rmInvoice_pdf.html" target="_blank">
 					<span>토스트팝업 : pdf 저장 안내 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/toast_rmInvoice_email.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/toast_rmInvoice_email.html" target="_blank">
 					<span>토스트팝업 : 이메일 전송 안내 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_callEnd_app.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_callEnd_app.html" target="_blank">
 					<span>바텀시트 : 당신의U+ 앱 연결 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_cnfm_cancelrmPlan.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_cnfm_cancelrmPlan.html" target="_blank">
 					<span>바텀시트 : 로밍요금제 해지 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_rmInvoice.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_rmInvoice.html" target="_blank">
 					<span>바텀시트 : 청구영수증 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_slctDomain.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_slctDomain.html" target="_blank">
 					<span>바텀시트 : 이메일 도메인 선택 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_submitEmail.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_submitEmail.html" target="_blank">
 					<span>바텀시트 : 이메일 주소 입력 팝업</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_full_detailRmhistory_used.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_full_detailRmhistory_used.html" target="_blank">
 					<span>풀팝업 : 로밍이용내역 상세 사용중 CASE</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_full_detailRmhistory_usedBefore.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_full_detailRmhistory_usedBefore.html" target="_blank">
 					<span>풀팝업 : 로밍이용내역 상세 사용전 CASE</span>
 					
 				</a>
 
-				<a href="./templates/contents/working/roamingHistory/pop_full_detailRmhistory_usedComplete.html" target="_blank">
+				<a href="./templates/contents/business/roamingUsed/pop_full_detailRmhistory_usedComplete.html" target="_blank">
 					<span>풀팝업 : 로밍이용내역 상세 사용완료 CASE</span>
 					
 				</a>
