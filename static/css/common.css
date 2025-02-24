@@ -579,10 +579,6 @@ button {
   flex-direction: column;
 }
 
-.container > .section__cont:first-child {
-  padding-top: 56px;
-}
-
 .section__divider {
   width: 100%;
   min-height: 10px;
