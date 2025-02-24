@@ -367,6 +367,10 @@
 			margin-top: 0;
 		}
 	}
+	&:has(.invoice) { //로밍 이용내역 : rmInvoice 청구서 팝업
+		padding-top: 20px;
+		.cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
+	}
 }
 
 //popup-body 패딩 수정
@@ -524,8 +528,8 @@
 	.chrgData {
 		margin-top: 0;
 	}
-	//로밍 이용내역 : roaming history 풀팝업
-	.rmHistory {
+	//로밍 이용내역 : roamingUsed 팝업
+	.rmUsed {
 		.con__tit-box .tit-head .txt-title {
 			line-height:1.25;
 		}
