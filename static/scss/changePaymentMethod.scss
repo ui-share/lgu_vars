@@ -3,16 +3,6 @@
 	&.changePaymentMethod {
 		.container {
 			.section__cont {
-                &.desc {//입금전용계좌추가
-                    padding: 36px 0 48px 0;
-                    gap: 48px;
-                    &:has(.accnt-cont-wrap){
-                        height:calc(100% - 262px);
-                    }
-                    &:has(.cont__wrap-service) {
-                        padding: 72px 0 95px;
-                    }
-                }
                 &.counsel {
                     padding: 36px 0 0px;
                 }

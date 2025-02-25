@@ -1,13 +1,3 @@
-.page-wrapper.changePaymentMethod .container .section__cont.desc {
-  padding: 36px 0 48px 0;
-  gap: 48px;
-}
-.page-wrapper.changePaymentMethod .container .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(100% - 262px);
-}
-.page-wrapper.changePaymentMethod .container .section__cont.desc:has(.cont__wrap-service) {
-  padding: 72px 0 95px;
-}
 .page-wrapper.changePaymentMethod .container .section__cont.counsel {
   padding: 36px 0 0px;
 }
