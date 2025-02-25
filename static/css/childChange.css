@@ -1,9 +1,0 @@
-.page-wrapper.childChange .container .section__cont.summary {
-  padding-top: 28px;
-}
-.page-wrapper.childChange .container .section__cont.desc {
-  padding: 36px 0 48px 0;
-}
-.page-wrapper.childChange .container .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(100% - 262px);
-}
