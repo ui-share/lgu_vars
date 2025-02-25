@@ -368,6 +368,8 @@
 			.txt {color:var(--dt-gray15); font-size:16px;font-weight:600;}
 		}
 		.accordion-header.chckbox-area {padding-top:0;}
+		.accordion-header.chckbox-area + .accordion-content {max-height:max-content;}
+		.accordion-header.chckbox-area + .accordion-content .bullet-list {padding-bottom:0;}
 		.card.solid {padding:16px 20px;}
 		.bullet-list .bullet-item::before {
 			--bulletList-font-size: 14px;

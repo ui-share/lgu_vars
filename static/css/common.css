@@ -3784,6 +3784,12 @@ input::placeholder {
 .popup-body.contract .accordion-header.chckbox-area {
   padding-top: 0;
 }
+.popup-body.contract .accordion-header.chckbox-area + .accordion-content {
+  max-height: max-content;
+}
+.popup-body.contract .accordion-header.chckbox-area + .accordion-content .bullet-list {
+  padding-bottom: 0;
+}
 .popup-body.contract .card.solid {
   padding: 16px 20px;
 }
