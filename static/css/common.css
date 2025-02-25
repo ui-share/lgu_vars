@@ -3359,6 +3359,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 2px;
 }
 .datePicker-control .datePicker-multi {
   display: flex;
@@ -3376,6 +3377,8 @@ input::placeholder {
   text-align: center;
   background: transparent;
   field-sizing: content;
+  pointer-events: none;
+  user-select: none;
 }
 
 .datePicker-txt {
@@ -3392,6 +3395,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   flex: 1;
+  column-gap: 2px;
 }
 .datePicker-multi .hyphen {
   font-size: 18px;

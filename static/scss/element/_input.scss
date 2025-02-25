@@ -565,6 +565,7 @@ input::placeholder {
 	.datePicker-box {
 		flex-wrap: nowrap;
 		@include flexBox();
+		column-gap: 2px;
 
 	}
 	.datePicker-multi {
@@ -580,7 +581,8 @@ input::placeholder {
 	text-align: center;
 	background: transparent;
 	field-sizing: content;
-
+	pointer-events: none;
+	user-select: none;
 }
 .datePicker-txt {
 	@include fw-5(14px);
@@ -595,6 +597,7 @@ input::placeholder {
 		justify-content: center;
 		align-items: center;
 		flex: 1;
+		column-gap: 2px;
 	}
 	.hyphen {
 		@include fw-6(18px);
