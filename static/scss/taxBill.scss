@@ -2,14 +2,11 @@
 .page-wrapper {
 	&.taxBill {
 		.container {
-			.section__cont {
-				padding: 72px 0 95px;
-            }
+			.input-row-wrap {
+				.input-control {
+					width:calc((100% - 30px) / 2);
+				}
+			}
         }
     }
-}
-.input-row-wrap {
-	.input-control {
-		width:calc((100% - 30px) / 2);
-	}
 }
