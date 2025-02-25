@@ -1,9 +1,13 @@
 @import "../scss/base/mixin";
 .page-wrapper {
 	.container {
+		.section__cont:has(.switch__wrap) {
+			padding-top: 56px;
+		}
 		.section__cont:has(.cont__wrap-service) {
 			padding: 72px 0 95px;
 		}
+
 	}
 }
 

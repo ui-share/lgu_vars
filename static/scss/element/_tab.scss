@@ -16,9 +16,10 @@
 			display: block;
 			background-color: var(--dt-white);
 			color: var(--dt-gray11);
-			font-weight: 500;
+			font-weight: 600;
 			padding: 12px 8px;
 			font-size:16px;
+			line-height: 1.2;
 			white-space:nowrap;
 			&:hover,
 			&.active {
