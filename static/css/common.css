@@ -3360,7 +3360,7 @@ input::placeholder {
   align-items: center;
   justify-content: center;
 }
-.datePicker-control .multi-box {
+.datePicker-control .datePicker-multi {
   display: flex;
   align-items: center;
   justify-content: center;
