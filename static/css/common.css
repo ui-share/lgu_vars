@@ -3328,8 +3328,6 @@ input::placeholder {
   max-width: 100%; /* 부모 요소에 맞게 자동 조정 */
   text-align: center;
   background: transparent;
-  border: none;
-  outline: none;
   /* 실제 너비를 결정할 span과 동기화 */
   position: absolute;
   z-index: 1;
