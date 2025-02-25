@@ -1,36 +1,6 @@
-.page-wrapper.mobilePaySetting .container .section__cont.desc {
-  padding: 36px 0 48px 0;
-  gap: 48px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(100% - 262px);
-}
-.page-wrapper.mobilePaySetting .container .section__cont.desc:has(.cont__wrap-service) {
-  padding: 72px 0 95px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont.counsel {
-  padding: 36px 0 0px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.cont__wrap-service {
+.page-wrapper.mobilePaySetting .container .section__cont:has(.tabnav__wrap) {
+  padding-top: 56px;
   padding-bottom: 40px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
-  margin-top: 24px;
-  gap: 16px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
-  padding-bottom: 10px;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
-  padding-bottom: 0;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.wd-full .cont__txt-box .txt {
-  font-size: 20px;
-  font-weight: 700;
-}
-.page-wrapper.mobilePaySetting .container .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
-  background-color: var(--dt-white);
-  z-index: 999;
 }
 
 .info-col-wrap:has(.info-price) .col {
@@ -109,7 +79,8 @@
 .al-baseline {
   align-items: baseline;
   justify-content: center;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   padding-top: 48px;
 }
 .al-baseline .ico32 {
@@ -129,7 +100,8 @@
 .al-baseline .input-control .input-row {
   margin: 0 auto;
   justify-content: center;
-  column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
 }
 .al-baseline .input-control .input-row .value {
   display: flex;
@@ -142,6 +114,11 @@
 }
 .al-baseline .input-control .input-field {
   text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.al-baseline .input-control .input-field::-moz-placeholder {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
@@ -219,7 +196,8 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
@@ -244,7 +222,8 @@
 
 @media screen and (max-width: 359px) {
   .al-baseline {
-    column-gap: 8px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {
