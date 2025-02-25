@@ -9,7 +9,7 @@
 		padding: 36px 0 48px;
 		gap: 0;
 	}
-    &.scan {
+	&.scan {
 		position:relative;
 		padding-top:56px;
 		padding-bottom:0;
@@ -39,9 +39,7 @@
 		}
 		.cont__wrap-btBtn {position:absolute;}
 	}
-    &.counsel {
-        padding: 36px 0 0px;
-    }
+	
 	&:has(.cont__wrap-cms) {
 		padding: 92px 0 95px;
 		gap: 28px;

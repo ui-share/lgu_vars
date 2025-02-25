@@ -12,7 +12,6 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
   min-height: 130px;
   padding: 0 20px;
@@ -48,6 +47,9 @@
   background-image: url(../images/img/img-hm-myplan.png);
 }
 .section__cont.summary .cont__wrap-realtimeRoaming {
+  background-image: url(../images/img/img-hm-roaming.png);
+}
+.section__cont.summary .cont__wrap-roamingUsed {
   background-image: url(../images/img/img-hm-roaming.png);
 }
 .section__cont.summary .txt-select-wrap {
@@ -177,9 +179,6 @@
 .section__cont.scan .cont__wrap-btBtn {
   position: absolute;
 }
-.section__cont.counsel {
-  padding: 36px 0 0px;
-}
 .section__cont:has(.cont__wrap-cms) {
   padding: 92px 0 95px;
   gap: 28px;
@@ -202,7 +201,6 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -296,8 +294,7 @@
   /* 화살표 아이콘 */
 }
 .btn-srch-childline .txt-title {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
@@ -473,8 +470,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;
