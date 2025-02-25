@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper contract">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="popup-wrapper show">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit">
+					<span class="txt"><span class="color-prim">프리미어 요금제 약정할인 가입 동의</span> 선택해 주세요</span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body contract">
+				<div class="accordion-group">
+					<!-- 펼침상태 기본 / btn-toggle 클릭 시 <div class="accordion-container"> 에 클래스로 조정
+						열림 : <div class="accordion-container open"> 
+						닫힘 : <div class="accordion-container">
+					-->
+					<div class="accordion-container open"><!-- 기본 노출 상태 확인 필요 !! -->
+						<div class="chckbox-area accordion-header">
+							<div class="chck-group">
+								<!-- checkbox id, label for 값 임시 : 개발시 변경 필요하며 id = for 값 동일하게 맞춰야 함 -->
+								<input type="checkbox" id="chck01" class="chck-input">
+								<label for="chck01" class="chck-label">
+									<span class="chck-box"></span>
+									<span>프리미어 요금제 약정할인 신청 동의</span>
+								</label>
+							</div>
+							<button type="button" class="btn-toggle">
+								<span class="img-box ico-toggle">
+									<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
+								</span>
+							</button>
+						</div>
+						<div class="accordion-content">
+							<div class="card solid">
+								<ul class="bullet-list">
+									<li class="bullet-item">프리미어 요금제 약정할인 신청 시 24개월 동안 매달 5,250원씩(부가가치세 포함) 할인 받으실 수 있습니다.</li>
+									<li class="bullet-item">24개월 이내 해지, 약정해지, 요금제 하향 변경시 누적 할인액에 대한 반환금이 발생됩니다.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-footer">
+				<div class="btn-group flex-row is-confirm">
+					<!-- 기본 disabled 상태 | 필수동의 후 활성화 is-disabled 삭제 -->
+					<button class="btn line" type="button">
+						<span class="txt">미동의</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">동의</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 토스트 팝업// -->
+	<div class="toast-wrap">
+		<div class="toast">
+			<div class="toast-txt">
+				미동의시 프리미어 약정할인 신청이 불가합니다.
+			</div>
+			<!-- 
+				버튼 사용하지 않을 경우 hidden 클래스 추가 
+				<button class="btn btn-util close hidden">
+			-->
+			<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+		</div>
+	</div>
+</body>
+</html>

@@ -362,6 +362,27 @@
 			}
 		}
 	}
+	&.contract {//선택약정 프리미어
+		.cont__txt-box {
+			padding:10px 0 12px;
+			.txt {color:var(--dt-gray15); font-size:16px;font-weight:600;}
+		}
+		.accordion-header.chckbox-area {padding-top:0;}
+		.card.solid {padding:16px 20px;}
+		.bullet-list .bullet-item::before {
+			--bulletList-font-size: 14px;
+			--bulletList-bullet-size: 0.21em;
+			--bulletList-bullet-translateY:calc( var(--bulletList-font-size) - calc( var(--bulletList-bullet-size) + calc( var(--bulletList-bullet-size) / 2.5 ) ) );
+		}
+		.bullet-list .bullet-item {
+			&:first-child {margin-top:0;}
+			margin-top:12px;
+			font-size:14px;
+			color:var(--dt-gray14);
+			letter-spacing: -0.3px;
+		}
+	}
+
 	.list-wrap {//로밍데이터 팝업
 		&.chrgData {
 			margin-top: 0;
