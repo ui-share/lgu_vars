@@ -21,7 +21,7 @@
   padding: 10px 20px 0;
 }
 .cont__wrap.cont__wrap-banner .swiper {
-  animation: fadeInDown 1s;
+  animation: fadeInDown 0.8s;
 }
 .cont__wrap.cont__wrap-banner .swiper-slide {
   height: auto;
