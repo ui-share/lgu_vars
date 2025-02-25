@@ -132,6 +132,30 @@
 		}
 	}
 }
+
+// i 아이콘 있는 그레이박스 : 해외로밍 이용내역
+.caption-wrap {
+	width: 100%;
+	padding: 10px 8px;
+	text-align: center;
+	border-radius: 4px;
+	background-color: var(--dt-gray03);
+	.caption {
+		@include fw-6(12px);
+		line-height: 120%;
+		color: var(--dt-gray11);
+	}
+	.caption::before {
+		content: "";
+		display: inline;
+		padding-left: 20px;
+		background-image: url(../images/icon/ic-bullet-info.svg);
+		background-size: 16px 16px;
+		background-repeat: no-repeat;
+		background-position: left 0 center;
+	}
+}
+
 @media screen and (max-width: 280px) {
 	.section__cont {
 		&.summary {
