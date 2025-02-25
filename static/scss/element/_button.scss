@@ -1,159 +1,159 @@
 @import '../base/mixin';
 /* btn-group button */
 .btn-group {
-    //default
-    .btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding:17px 4px 16px;
-        background-color:var(--dt-gray03);
-        border: 1px solid var(--dt-gray03);
-        border-radius: 4px;
-        gap: 4px;
-        .txt {
-            color: var(--dt-gray11);
-            @include fw-6($fs: 16px);
-            letter-spacing: -0.5px;
-        }
-        &:active { // pressed 인터렉션
-            box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-        }
-        &.is-disabled {
-            opacity: 0.6;
-        }
-        &.btn-prim { // 버튼 1레벨
-            background-color: var(--dt-primary);
-            border: 1px solid var(--dt-primary);
-        }
-        &.btn-sec { // 버튼 2레벨
-            background-color: var(--dt-gray13);
-            border: 1px solid var(--dt-gray13);
-        }
-        &.btn-prim, &.btn-sec {
-            .txt {color:var(--dt-white);}
-        }
-        &.line {
-            background-color:transparent;
-            border: 1px solid var(--dt-gray17);
-            &.btn-prim {
-                border: 1px solid var(--dt-primary);
-                .txt {color:var(--dt-primary);}
-            }
-            &.btn-sec {
-                border: 1px solid var(--dt-gray13);
-                .txt {color:var(--dt-gray13);}
-            }
-        }
-        &.full {
-            border-radius: 0;
-        }
+	//default
+	.btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		padding:17px 4px 16px;
+		background-color:var(--dt-gray03);
+		border: 1px solid var(--dt-gray03);
+		border-radius: 4px;
+		gap: 4px;
+		.txt {
+			color: var(--dt-gray11);
+			@include fw-6($fs: 16px);
+			letter-spacing: -0.5px;
+		}
+		&:active { // pressed 인터렉션
+			box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+		}
+		&.is-disabled {
+			opacity: 0.6;
+		}
+		&.btn-prim { // 버튼 1레벨
+			background-color: var(--dt-primary);
+			border: 1px solid var(--dt-primary);
+		}
+		&.btn-sec { // 버튼 2레벨
+			background-color: var(--dt-gray13);
+			border: 1px solid var(--dt-gray13);
+		}
+		&.btn-prim, &.btn-sec {
+			.txt {color:var(--dt-white);}
+		}
+		&.line {
+			background-color:transparent;
+			border: 1px solid var(--dt-gray17);
+			&.btn-prim {
+				border: 1px solid var(--dt-primary);
+				.txt {color:var(--dt-primary);}
+			}
+			&.btn-sec {
+				border: 1px solid var(--dt-gray13);
+				.txt {color:var(--dt-gray13);}
+			}
+		}
+		&.full {
+			border-radius: 0;
+		}
 
-        /* sizing */
-        &.btn-md { // 중간높이
-            width:100%;
-            padding:9px 12px 8px;
-            @include flexBox();
-            align-items:center;
-            .txt {
-                line-height: normal;
-                letter-spacing:normal;
-                font-size:12px;
-            }
-        }
-    }
+		/* sizing */
+		&.btn-md { // 중간높이
+			width:100%;
+			padding:9px 12px 8px;
+			@include flexBox();
+			align-items:center;
+			.txt {
+				line-height: normal;
+				letter-spacing:normal;
+				font-size:12px;
+			}
+		}
+	}
 
-    // multi
-    &.flex-row {
-        @include flexRow();
-        justify-content: space-between;align-items:center;
-        width: 100%;
-        &:not(.accordion-header) {
-            gap: 8px;
-        }
-        .btn {
-            flex: 1;
-        }
-        &.is-confirm {// 버튼2개 + 확인,취소 영역의 경우 우측버튼(마지막버튼) 언제나 primary full bg
-            .btn {
-                background-color:transparent;
-                border: 1px solid var(--dt-gray17);
-                &.btn-sec { 
-                    background-color: var(--dt-gray13);
-                    border: 1px solid var(--dt-gray13);
-                }
-                &:last-of-type {
-                    background-color: var(--dt-primary);
-                    border: 1px solid var(--dt-primary);
-                    .txt {color:var(--dt-white);}
-                }
-            }
-        }
-    }
-    &.flex-column {
-        @include flexColum();
-        justify-content: center;align-items:flex-start;
-        row-gap: 8px;
-        .btn {
-            width: 100%;
-        }
-    }
-    // 로밍요금 선택 버튼
-    .btn-remain-data {
-        justify-content: flex-start;
-        padding:16px 20px;
-        background-color: var(--dt-white);
-        @include border(var(--dt-gray17));
-        .txt-wrap {
-            gap: 0;
-            .txt {
-                &:nth-of-type(1) {
-                    @include fw-6();
-                    color: var(--dt-gray16);
-                    &::after {
-                        display: inline-block;
-                        content: '';
-                        margin: 0 12px;
-                        width: 1px;
-                        height: 10px;
-                        background-color: var(--dt-gray09);
-                    }
-                }
-                &:nth-of-type(2) {
-                    @include fw-5(14px);
-                }
-            }
-        }
-        &.is-selected {
-            border: 2px solid var(--dt-primary);
-            .txt-wrap {
-                .txt {
-                    color: var(--dt-primary);
-                    &:nth-of-type(1) {
-                        &::after {
-                            background-color: var(--dt-primary);
-                        }
-                    }
-                } 
-            }
-        }
-    }
+	// multi
+	&.flex-row {
+		@include flexRow();
+		justify-content: space-between;align-items:center;
+		width: 100%;
+		&:not(.accordion-header) {
+			gap: 8px;
+		}
+		.btn {
+			flex: 1;
+		}
+		&.is-confirm {// 버튼2개 + 확인,취소 영역의 경우 우측버튼(마지막버튼) 언제나 primary full bg
+			.btn {
+				background-color:transparent;
+				border: 1px solid var(--dt-gray17);
+				&.btn-sec { 
+					background-color: var(--dt-gray13);
+					border: 1px solid var(--dt-gray13);
+				}
+				&:last-of-type {
+					background-color: var(--dt-primary);
+					border: 1px solid var(--dt-primary);
+					.txt {color:var(--dt-white);}
+				}
+			}
+		}
+	}
+	&.flex-column {
+		@include flexColum();
+		justify-content: center;align-items:flex-start;
+		row-gap: 8px;
+		.btn {
+			width: 100%;
+		}
+	}
+	// 로밍요금 선택 버튼
+	.btn-remain-data {
+		justify-content: flex-start;
+		padding:16px 20px;
+		background-color: var(--dt-white);
+		@include border(var(--dt-gray17));
+		.txt-wrap {
+			gap: 0;
+			.txt {
+				&:nth-of-type(1) {
+					@include fw-6();
+					color: var(--dt-gray16);
+					&::after {
+						display: inline-block;
+						content: '';
+						margin: 0 12px;
+						width: 1px;
+						height: 10px;
+						background-color: var(--dt-gray09);
+					}
+				}
+				&:nth-of-type(2) {
+					@include fw-5(14px);
+				}
+			}
+		}
+		&.is-selected {
+			border: 2px solid var(--dt-primary);
+			.txt-wrap {
+				.txt {
+					color: var(--dt-primary);
+					&:nth-of-type(1) {
+						&::after {
+							background-color: var(--dt-primary);
+						}
+					}
+				} 
+			}
+		}
+	}
 }
 
 /* single button util */
 .btn-top { // 탑버튼
-    display: flex;
+	display: flex;
 	justify-content: center;
-    align-items: center;
-    width: 48px;
-    height: 48px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
-    @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
-    padding: 9px;
-    font-size:0;text-indent:-9999px;
-    &::before {
+	align-items: center;
+	width: 48px;
+	height: 48px;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 50%;
+	@include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+	padding: 9px;
+	font-size:0;text-indent:-9999px;
+	&::before {
 		content: "";
 		display: inline-block;
 		width: 24px;
@@ -163,96 +163,96 @@
 	}
 }
 .btn-scroll {
-    @include flexBox(center, center);
-    column-gap:4px;
-    min-width: 184px;
-    padding:13px 4px 12px;
-    background-color: rgba(0, 0, 0, 0.74);
-    border-radius:100px;
-    @include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
-    .txt {
-        @include fw-6(16px);
-        color:var(--dt-white);
-    }
+	@include flexBox(center, center);
+	column-gap:4px;
+	min-width: 184px;
+	padding:13px 4px 12px;
+	background-color: rgba(0, 0, 0, 0.74);
+	border-radius:100px;
+	@include boxShadow(0, 8px, 12px, 0, rgba(0, 0, 0, 0.2));
+	.txt {
+		@include fw-6(16px);
+		color:var(--dt-white);
+	}
 }
 .btn-toggle { // 자세히보기 버튼
-    .txt {
-        @include fw-6(14px);
-        color: var(--dt-gray12);
-    }
-    .img-box {width:20px;height:20px;}
+	.txt {
+		@include fw-6(14px);
+		color: var(--dt-gray12);
+	}
+	.img-box {width:20px;height:20px;}
 }
 .btn-between {
-    @include flexBox(between, center);
-    width: 100%;
-    border-radius: 4px;
-    .txt {
-        @include fw-6(14px);
-        color: var(--dt-gray11);
-    }
-    .txt-wrap {
-        @include flexRow;
-        align-items:center;
-        flex-wrap:wrap;
-        column-gap:6px;
-        .txt {
-            text-align:left;
-            &, > span {
-                color: var(--dt-gray11);
-                font-weight:var(--dt-fw500);;
-            }
-        }
-    }
-    &:active {
-        box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-    }
-    &.is-disabled {
-        opacity: 0.6;
-    }
-    &.bg-withdraw {
-        padding: 8px 10px;
-        background-color: var(--dt-white);
-        border:1px solid var(--dt-gray08);
-    }
-    &.appStore {
-        padding: 8px 10px;
-        background-color: var(--dt-white);
-        border:1px solid var(--dt-gray08);
-    }
-    &.bg-bank {
-        padding: 8px;
-        background-color: var(--dt-gray07);
-        .txt-wrap {
-            .txt {margin-left:2px;}
-        }
-        .img-box {width:24px;height:24px;}
-    }
-    &.btn-payment {
-        padding:16px 20px;
-        background-color:var(--dt-gray02);
-        .txt {
-            @include fw-6(16px);
-            color:var(--dt-gray12);
-        }
-        .txt-wrap {
-            visibility:hidden;
-        }
-        &.is-selected {
-            .txt-wrap {
-                visibility:visible;
-                .txt {
-                    @include fw-5(14px);
-                    color: var(--dt-primary);
-                } 
-            }
-        }
-    }
+	@include flexBox(between, center);
+	width: 100%;
+	border-radius: 4px;
+	.txt {
+		@include fw-6(14px);
+		color: var(--dt-gray11);
+	}
+	.txt-wrap {
+		@include flexRow;
+		align-items:center;
+		flex-wrap:wrap;
+		column-gap:6px;
+		.txt {
+			text-align:left;
+			&, > span {
+				color: var(--dt-gray11);
+				font-weight:var(--dt-fw500);;
+			}
+		}
+	}
+	&:active {
+		box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+	}
+	&.is-disabled {
+		opacity: 0.6;
+	}
+	&.bg-withdraw {
+		padding: 8px 10px;
+		background-color: var(--dt-white);
+		border:1px solid var(--dt-gray08);
+	}
+	&.appStore {
+		padding: 8px 10px;
+		background-color: var(--dt-white);
+		border:1px solid var(--dt-gray08);
+	}
+	&.bg-bank {
+		padding: 8px;
+		background-color: var(--dt-gray07);
+		.txt-wrap {
+			.txt {margin-left:2px;}
+		}
+		.img-box {width:24px;height:24px;}
+	}
+	&.btn-payment {
+		padding:16px 20px;
+		background-color:var(--dt-gray02);
+		.txt {
+			@include fw-6(16px);
+			color:var(--dt-gray12);
+		}
+		.txt-wrap {
+			visibility:hidden;
+		}
+		&.is-selected {
+			.txt-wrap {
+				visibility:visible;
+				.txt {
+					@include fw-5(14px);
+					color: var(--dt-primary);
+				} 
+			}
+		}
+	}
 }
 
 
 
 @media screen and (max-width: 359px) {
-    .btn-group.flex-row {
-        flex-direction: column;
-    }
+	.btn-group.flex-row {
+		flex-direction: column;
+	}
 }
