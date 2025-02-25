@@ -1,19 +1,17 @@
-.page-wrapper.roamingAdditional .section__cont {
+.page-wrapper.roamingAdditional .section__cont:not(.counsel) {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding-top: 76px;
 }
-.page-wrapper.roamingAdditional .section__cont.counsel {
-  gap: unset;
-}
-.page-wrapper.roamingAdditional .section__cont .cont__wrap.cont__wrap-message {
-  padding-top: 20px;
+.page-wrapper.roamingAdditional .card-group.flex-column {
+  gap: 16px;
 }
 .page-wrapper.roamingAdditional .section__cont:has(.cont__wrap-service) {
+  padding-bottom: 155px;
   gap: 0;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail {
-  padding: 20px 20px 80px;
   background-color: var(--dt-gray05);
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box {
@@ -30,7 +28,6 @@
   font-weight: 700;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .con__tit-box .text-box .txt {
-  min-height: 42px;
   line-height: 1.5;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform {
@@ -39,7 +36,7 @@
   padding: 28px 20px;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .card-body {
-  gap: 20px;
+  gap: 28px;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .item {
   flex-direction: column;
@@ -58,14 +55,14 @@
   color: var(--dt-gray14);
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announceMent {
-  margin-bottom: 28px;
+  margin-bottom: 12px;
   gap: 12px;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announceMent .card .card-body {
   gap: 8px;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   gap: 12px;
 }
 .page-wrapper.roamingAdditional .cont__wrap-service.rmDetail .card.rmInform .announcePhone .tit span {

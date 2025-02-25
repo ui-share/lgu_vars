@@ -1,4 +1,14 @@
 @import "../scss/base/mixin";
+
+.page-wrapper {
+	&.roamingUsed {
+		.container {
+			.section__cont {
+				// padding: 72px 0 155px;
+			}
+		}
+	}
+}
 .page-wrapper {
     &.roamingUsed {
         // 서비스 : 로밍영수증 발급
