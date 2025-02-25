@@ -600,7 +600,6 @@ button {
 .section__cont:has(+ .section__divider) {
   padding-bottom: 48px;
 }
-
 .cont__wrap {
   padding: 0 20px;
 }
@@ -1179,6 +1178,37 @@ button {
 .list-payment .info-col-wrap .row.total .txt-price {
   font-size: 18px;
   line-height: 120%;
+}
+
+.btn-srch-childline {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-height: 62px;
+  padding: 10px 20px;
+  border-radius: 0;
+  background-color: var(--dt-gray15);
+  /* 화살표 아이콘 */
+}
+.btn-srch-childline .txt-title {
+  column-gap: 8px;
+  flex-wrap: wrap;
+  line-height: 150%;
+}
+.btn-srch-childline .txt-title > span {
+  font-size: 14px;
+}
+.btn-srch-childline .txt-childname {
+  color: var(--dt-white);
+  font-weight: 700;
+}
+.btn-srch-childline .txt-phone {
+  color: #A8B3BD;
+  font-weight: 500;
+}
+.btn-srch-childline .img-box {
+  width: 24px;
+  height: 24px;
 }
 
 /* btn-group button */
