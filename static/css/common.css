@@ -4241,7 +4241,6 @@ input::placeholder {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  border-bottom: 1px solid #efefef;
   overflow-x: auto;
 }
 .tabnav .tab {
@@ -4253,11 +4252,12 @@ input::placeholder {
   flex-grow: 1;
   display: block;
   background-color: var(--dt-white);
+  border-bottom: 1px solid #efefef;
   color: var(--dt-gray11);
-  font-weight: 600;
-  padding: 12px 8px;
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.2;
+  padding: 12px 8px;
   white-space: nowrap;
 }
 .tabnav .tab a:hover, .tabnav .tab a.active {
@@ -4265,12 +4265,13 @@ input::placeholder {
   color: var(--dt-primary);
 }
 .tabnav .tab a::before {
+  display: inline-block;
   content: "";
+  width: 100%;
+  height: 2px;
   position: absolute;
   left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
+  bottom: -1px;
 }
 .tabnav .tab a.active::before {
   background: var(--dt-primary);
