@@ -579,10 +579,6 @@ button {
   flex-direction: column;
 }
 
-.container > .section__cont:first-child {
-  padding-top: 56px;
-}
-
 .section__divider {
   width: 100%;
   min-height: 10px;
@@ -4009,6 +4005,48 @@ input::placeholder {
 }
 .rmLandingAnnounce .popup-body {
   padding-top: 16px;
+}
+
+.appPaid-wrap {
+  background-color: var(--dt-gray02);
+  border-radius: 8px;
+  padding: 24px 20px;
+}
+.appPaid-wrap .appStore {
+  padding: 16px;
+  background-color: var(--dt-white);
+  border: none;
+  border-radius: 8px;
+  pointer-events: none;
+}
+.appPaid-wrap .appStore .txt-wrap {
+  gap: 4px;
+}
+.appPaid-wrap .appStore .txt-wrap .txt {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: var(--dt-black);
+}
+.appPaid-wrap .info-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  border-radius: 8px;
+  gap: 4px;
+}
+.appPaid-wrap .info-box .txt {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--dt-gray13);
+  letter-spacing: -0.5px;
+}
+.appPaid-wrap + .bullet-list {
+  margin-top: 8px;
 }
 
 .twoFactorAuth .btn-group .btn-radio {
