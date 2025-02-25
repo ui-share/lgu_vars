@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<!-- Set the viewport. -->
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+		<!-- Disable automatic phone number detection. -->
+		<meta name="format-detection" content="telephone=no, address=no, email=no">
+		<title>LGU+ 눈으로 보는 ARS</title>
+	
+		<!-- Css -->
+		<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+		<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+		<link rel="stylesheet" type="text/css" href="../../../../static/css/temporaryPause.css">
+	
+		<!-- Scripts -->
+	</head>
+<body>
+	<div class="page-wrapper temporaryPause">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="popup-wrapper show">
+		<div class="back-drop"></div>
+		<div class="popup__wrap">
+			<div class="popup-header">
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
+				</div>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
+			</div>
+			<div class="popup-body">
+				<div class="auth-wrap auth_number">
+					<p class="txt"><span>일시정지 해제</span>를 위해, 문자로 받은</p>
+					<h3 class="tit"><span class="color-prim">인증번호 6자리</span>를 입력해 주세요</h3>
+
+					<!-- [Case 기본 상태]-->
+					<div class="badge badge-time">
+						<span class="icon"></span>
+						<span class="txt">02:56</span>
+					</div>
+					<div class="input-control code">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
+						</div>
+						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
+
+					</div>
+
+					<!--[Case 인증 시간 초과]
+						- 시간 벳지 에러 : badge-time에 error 추가
+							<div class="badge badge-time error">
+						- 에러메시지 표출: input-control에 error 추가
+							<div class="input-control code error">
+					-->
+					<div class="badge badge-time error">
+						<span class="icon"></span>
+						<span class="txt">00:00</span>
+					</div>
+					<div class="input-control code error">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
+						</div>
+						<div class="validation-txt">입력 시간이 지났어요. 인증번호를 다시 받아 주세요.</div>
+					</div>					
+
+					<!-- [Case 인증 번호 오류]
+						- 에러메시지 표출: input-control에 error 추가
+							<div class="input-control code error">
+					-->
+					<div class="badge badge-time">
+						<span class="icon"></span>
+						<span class="txt">02:59</span>
+					</div>
+					<div class="input-control code error">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
+						</div>
+						<div class="validation-txt">인증번호를 다시 확인해 주세요</div>
+					</div>
+					
+					<div class="btn-group">
+						<button class="btn btn-md" type="button">
+							<span class="txt">다시 받기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 
+				toast 상태 class : 기본 display:none 상태				
+				toast in(show 모션) show : <div class="toast-wrap show">
+				toast out(out 모션 X)    : <div class="toast-wrap">
+			-->
+			<div class="toast-wrap" tabindex="-1">
+				<div class="toast">
+					<div class="toast-txt ">
+						문자로 인증번호를 다시 보냈어요
+					</div>
+					<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

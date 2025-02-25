@@ -41,6 +41,19 @@
 					</div>
 				</div>
 				<div class="cont__wrap pauseTemp">
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 포커스 : focused 
+							** 유효성 검사 성공 : success
+							** 유효성 검사 에러 : error
+							** 읽기 전용 : disabled
+							** 비활성 : disabled
+							기본 : <div class="input-control">
+							포커스 : <div class="input-control focused">
+							비활성, 읽기 전용 : <div class="input-control disabled">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+					-->
 					<div class="input-control">
 						<div class="input-group">
 							<label class="input-label">일시정지 사유</label>
@@ -99,12 +112,6 @@
 					</ul>
 				</div>
 				<div class="cont__wrap cont__wrap-btBtn">
-					<!-- full 
-						## 키보드 노출시 : 풀 버튼 ##
-							<div class="btn-group flex-row is-confirm full">
-						## 키보드 미노출시: 일반 버튼 ##
-							<div class="btn-group flex-row is-confirm">
-					-->
 					<div class="btn-group flex-row is-confirm">
 						<button class="btn btn-prim is-disabled" type="button">
 							<span class="txt">일시정지 신청</span>

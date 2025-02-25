@@ -16,7 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/temporaryPause.css">
 
 	<!-- Scripts -->
-
 </head>
 <body>
 	<div class="page-wrapper temporaryPause">
@@ -33,16 +32,19 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit">
-					<span class="txt"><span class="color-prim">일시정지 기간</span>을 선택해 주세요</span>
+				<div class="popup-tit hidden">
+					<span class="txt"></span>
 				</div>
 				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<ul class="bullet-list info">
-					<li class="bullet-item">남은 신청 가능 일수는 175일 입니다</li>
-				</ul>
-				<div style="width: 100%; height: 240px;">캘린더 영역입니다.</div>
+				<div class="inform-wrap">
+					<span class="inform-img warning"></span>
+					<div class="text-box">
+						<span class="tit"><span class="color-prim">일시정지 신청</span>을<br />취소하시겠어요?</span>
+						<span class="txt">입력하신 정보는 저장되지 않아요</span>
+					</div>
+				</div>
 			</div>
 			
 			<div class="popup-footer">
@@ -55,33 +57,6 @@
 					</button>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- 
-		토스트 팝업
-		default: <div class="toast-wrap">
-		toast-in: <div class="toast-wrap show">
-	-->
-	<div class="toast-wrap show">
-		<div class="toast">
-			<div class="toast-txt">일시정지 기간을 입력해 주세요</div>
-			<!-- 
-					버튼 사용하지 않을 경우 hidden 클래스 추가 
-					<button class="btn btn-util close hidden">
-				-->
-			<button class="btn btn-util close" type="button" alt="닫기"></button>
-		</div>
-	</div>
-
-	<div class="toast-wrap">
-		<div class="toast">
-			<div class="toast-txt">신청 가능한 일수보다 길게 신청할 수 없어요</div>
-			<!-- 
-					버튼 사용하지 않을 경우 hidden 클래스 추가 
-					<button class="btn btn-util close hidden">
-				-->
-			<button class="btn btn-util close" type="button" alt="닫기"></button>
 		</div>
 	</div>
 </body>
