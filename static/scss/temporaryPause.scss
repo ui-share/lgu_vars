@@ -1,6 +1,6 @@
 @import "../scss/base/mixin";
 .page-wrapper {
-	&.tamporaryPause {
+	&.temporaryPause {
 		.container {
 			.section__cont {
                 &.desc {//입금전용계좌추가
@@ -45,5 +45,3 @@
 		}
 	}
 }
-
-// 캘린더 인풋 상단
