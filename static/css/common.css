@@ -1180,35 +1180,37 @@ button {
   line-height: 120%;
 }
 
-.btn-srch-childline {
+.switch__wrap > button {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  min-height: 62px;
-  padding: 10px 20px;
+  padding: 10px 12px 10px 20px;
   border-radius: 0;
   background-color: var(--dt-gray15);
-  /* 화살표 아이콘 */
 }
-.btn-srch-childline .txt-title {
+.switch__wrap > button .txt-title {
   column-gap: 8px;
   flex-wrap: wrap;
-  line-height: 150%;
 }
-.btn-srch-childline .txt-title > span {
+.switch__wrap > button .txt-title > span {
   font-size: 14px;
-}
-.btn-srch-childline .txt-childname {
+  font-weight: 600;
+  line-height: 1.5;
   color: var(--dt-white);
-  font-weight: 700;
 }
-.btn-srch-childline .txt-phone {
-  color: #A8B3BD;
-  font-weight: 500;
+.switch__wrap > button .img-box { /* 화살표 아이콘 */
+  padding: 8px;
 }
-.btn-srch-childline .img-box {
+.switch__wrap > button .img-box img {
   width: 24px;
   height: 24px;
+}
+.switch__wrap > button.btn-srch-childline .txt-childname {
+  font-weight: 700;
+}
+.switch__wrap > button.btn-srch-childline .txt-phone {
+  color: #A8B3BD;
+  font-weight: 500;
 }
 
 /* btn-group button */

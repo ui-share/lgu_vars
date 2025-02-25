@@ -991,22 +991,35 @@ button {
 	}
 }
 
-//자녀요금선택버튼
-.btn-srch-childline {
-	justify-content:space-between;
-	align-items:center;
-	width:100%;
-	min-height:62px;
-	padding:10px 20px;
-	border-radius:0;
-	background-color:var(--dt-gray15);
-	.txt-title {
-		column-gap:8px;
-		flex-wrap:wrap;
-		line-height:150%;
-		>span {font-size:14px;}
+//서비스 변경 버튼
+.switch__wrap {
+	>button {
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		padding: 10px 12px 10px 20px;
+		border-radius: 0;
+		background-color: var(--dt-gray15);
+		.txt-title {
+			column-gap: 8px;
+			flex-wrap: wrap;
+			>span {
+				@include fw-6(14px);
+				line-height: 1.5;
+				color: var(--dt-white);
+			}
+		}
+		.img-box {/* 화살표 아이콘 */
+			padding: 8px;
+			img {
+				width: 24px;
+				height: 24px;
+			}
+		}
+		&.btn-srch-childline {//자녀 선택 버튼
+			.txt-childname {font-weight:700;}
+			.txt-phone {color:#A8B3BD;font-weight:500;}
+		}
 	}
-	.txt-childname {color:var(--dt-white);font-weight:700;}
-	.txt-phone {color:#A8B3BD;font-weight:500;}
-	.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
+	
 }
