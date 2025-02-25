@@ -238,22 +238,6 @@
   min-height: 120px;
   overflow-y: auto;
 }
-.cont__wrap.cont__wrap-btBtn {
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  pointer-events: auto;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-.cont__wrap.cont__wrap-btBtn.is-scrolled {
-  opacity: 0;
-  pointer-events: none;
-}
-.cont__wrap.cont__wrap-btBtn .btn-scroll {
-  margin: 0 auto;
-}
 
 .info-price-single {
   margin: 0 20px;

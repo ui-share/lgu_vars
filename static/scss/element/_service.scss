@@ -99,21 +99,6 @@
 			}
 		}
 	}
-	// 스크롤버튼
-	&.cont__wrap-btBtn {
-		position:fixed;
-		bottom:20px;
-		left:0;
-		width:100%;
-		pointer-events:auto;
-		opacity:1;
-		transition:opacity 0.2s ease-in-out;
-		&.is-scrolled {
-			opacity:0;
-			pointer-events:none;
-		}
-		.btn-scroll {margin:0 auto;}
-	}
 }
 .info-price-single { // 써머리bg영역 내 증감, 주의사항 공지 영역
 	margin:0 20px;

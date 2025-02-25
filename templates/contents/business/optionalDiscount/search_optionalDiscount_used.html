@@ -48,8 +48,8 @@
 				<!-- 프리미어 요금제의 경우 추가됨 -->
 				<div class="info-price-single">
 					<span class="txt-info">
-						<span><span class="color"></span> 프리미어 요금제 약정 할인기간이 곧 종료돼요.</span>
-						<span><span class="color-prim">선택약정 할인 예약</span>을 통해 혜택을 유지해 보세요!</span>
+						<span><span class="color-prim">프리미어 요금제 약정 할인기간</span>이 곧 종료돼요.</span>
+						<span> 약정할인 예약을 통해 혜택을 유지해 보세요!</span>
 					</span>
 				</div>
 			</div>
@@ -216,6 +216,71 @@
 							</span>
 						</div>
 					</div>
+					<div class="btn-group">
+						<button type="button" class="btn btn-sec">
+							<span class="txt">선택약정 할인 예약</span>
+						</button>
+					</div>
+				</div>
+
+				<!-- 프리미어 요금제 약정할인 상세// -->
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">
+								프리미어 요금제 약정 할인 상세
+							</span>
+						</h6>
+					</div>
+					<div class="info-col-wrap">
+						<div class="plan-wrap">
+							<div class="col">
+								<div class="txt-plan">
+									<span class="current sm">1개월<span class="color-prim">(D-23일)</span>남음</span>
+									<span class="total">/<span>24개월</span></span>
+								</div>
+								<div class="progress-area realtime">
+									<span class="progress-bg">
+										<!-- style.width %로 조절 -->
+										<span class="progress-bar" style="width:10%;"></span>
+									</span>
+								</div>
+							</div>
+							<div class="list-plan desc">
+								<div class="row">
+									<span class="txt-title">할인유형</span>
+									<span class="txt-desc">
+										<span class="color-prim bold">프리미어 요금제 약정할인</span>
+									</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">신청일</span>
+									<span class="txt-desc">NN년 N월 NN일</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">종료일</span>
+									<span class="txt-desc">
+										NN년 N월 NN일
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="info-price total-last">
+							<span class="row">
+								<span class="txt-title">예상 반환금</span>
+								<span class="txt-price">
+									<span>NN,000원</span>
+									<span class="txt-sub">부가가치세포함</span>
+								</span>
+							</span>
+						</div>
+					</div>
+
+					<div class="btn-group">
+						<button type="button" class="btn btn-sec">
+							<span class="txt">프리미어 약정할인 재약정 예약</span>
+						</button>
+					</div>
 					<div class="bullet-wrap">
 						<h5 class="bullet-caption">
 							유의사항
@@ -233,6 +298,20 @@
 						</ul>
 					</div>
 				</div>
+				<!-- //프리미어 -->
+
+				<!--
+					버튼 클릭 시 '휴대폰약정할인정보' 부분으로 스크롤 되며, 하단으로 스크롤 시 미노출(스크롤 원점으로 돌아갈 경우 다시 노출)
+				-->
+				<div class="cont__wrap cont__wrap-btBtn"><!-- 'is-scrolled' 클래스 추가 시 미노출 -->
+					<!-- <div class="cont__wrap cont__wrap-btBtn is-scrolled"> -->
+						<button class="btn-scroll">
+							<span class="txt">선택약정 할인 신청</span>
+							<span class="img-box">
+								<img src="../../../../static/images/icon/ic-arrowdouble-white.svg">
+							</span>
+						</button>
+					</div>
 			</div>
 
 			<!-- 디바이더 영역 -->

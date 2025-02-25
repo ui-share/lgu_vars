@@ -11,6 +11,9 @@
 .page-wrapper.contract .container .section__cont.counsel {
   padding: 36px 0 0px;
 }
+.page-wrapper.contract .container .list-wrap .list-box .tail {
+  max-width: max-content;
+}
 
 .section__cont {
   display: flex;
@@ -256,6 +259,23 @@ body:has(.cont__wrap-service.rmDetail) {
 }
 .rmLandingAnnounce .popup-body {
   padding-top: 16px;
+}
+
+.cont__wrap-btBtn:has(.btn-scroll) {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+.cont__wrap-btBtn:has(.btn-scroll).is-scrolled {
+  opacity: 0;
+  pointer-events: none;
+}
+.cont__wrap-btBtn:has(.btn-scroll) .btn-scroll {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 359px) {
