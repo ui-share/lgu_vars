@@ -40,7 +40,13 @@
 				padding-top: 40vh;
 			}
 		}
-		.cont__wrap-btBtn {position:absolute;}
+		.cont__wrap-btBtn {
+			position:absolute;
+			&:has(.accordion-container) {
+				background-color:var(--dt-white);
+				z-index: 999;
+			}
+		}
 	}
 	
 	&:has(.cont__wrap-cms) {
@@ -78,7 +84,14 @@
 			}
 			row-gap:0;
 			> div {padding-right:20px;padding-left:20px;}
-			.con__tit-box {padding-bottom:16px;}
+			.con__tit-box {
+				padding-bottom:16px;
+				.cont__txt-box {
+					.txt {
+						@include fw-7(20px);
+					}
+				}
+			}
 			.card-group.bank {margin-bottom:16px;}
 			.accnt-cont-wrap {
 				min-height:120px;
