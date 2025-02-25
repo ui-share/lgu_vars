@@ -253,7 +253,7 @@ input::placeholder {
 	}
 }
 
-// 드롭다운\
+// 드롭다운
 .input-row:has(.btn-field-dropdown) {
 	padding: 0;
 	.btn-field-dropdown {
@@ -553,6 +553,77 @@ input::placeholder {
 	}
 }
 
+// 캘린더 input
+.datePicker-wrap {
+	background-color: var(--dt-gray02);
+	border-radius: 8px;
+	padding: 14px 18px;
+}
+.datePicker-control {
+	@include flexBox();
+	flex-wrap: wrap;
+	.datePicker-box {
+		width: calc(50% - 18px);
+		flex-wrap: nowrap;
+		position: relative;
+		@include flexBox();
+		gap: 4px;
+	}
+	.multi-box {
+		width: calc(50% + 18px);
+	}
+}
+.datePicker-field {
+	@include fw-6(14px);
+	line-height: 1.2;
+	color: var(--dt-gray16);
+	flex: 1;
+    display: inline-block; /* 가변적인 크기 조정 가능하도록 변경 */
+    width: fit-content;
+    min-width: 40px; /* 최소 크기 유지 */
+    max-width: 100%; /* 부모 요소에 맞게 자동 조정 */
+	text-align: center;
+	background: transparent;
+    /* 실제 너비를 결정할 span과 동기화 */
+    position: absolute;
+    z-index: 1;
+}
+.datePicker-dummy {
+	@include fw-6(14px);
+	color: var(--dt-gray16);
+    visibility: hidden; /* 화면에서는 안 보이게 */
+    white-space: nowrap; /* 한 줄 유지 */
+    padding: 0 4px; /* input과 동일한 패딩 */
+	&::after {
+		content: attr(data-value) " "; /* input 값 반영 */
+	}
+}
+.datePicker-txt {
+	@include fw-5(14px);
+	line-height: 1.5;
+	color: var(--dt-gray11);
+	white-space: nowrap; /* 줄바꿈 방지 */
+}
+.multi-box {
+	.datePicker-inWrap {
+		display: inline-flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		flex: 1;
+		gap: 4px;
+	}
+	.hyphen {
+		@include fw-6(18px);
+		line-height: 1.2;
+		color: var(--dt-gray10);
+		width: 36px;
+		padding: 0 12px;
+	}
+}
+
+
+// 드롭다운 반응형
 @media screen and (max-width:359px) {
 	.slct-box-wrap {
 		&:has(.slct-box:first-child:last-child) {
@@ -569,6 +640,14 @@ input::placeholder {
 				width: calc(100% + 10px);
 			}
 		} 
+	}
+	.datePicker-control {
+		.datePicker-box {
+			width: calc(100% - 18px);
+		}
+		.multi-box {
+			width: calc(100% + 18px);
+		}
 	}
 	
 	
