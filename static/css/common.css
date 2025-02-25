@@ -3386,18 +3386,14 @@ input::placeholder {
   white-space: nowrap; /* 줄바꿈 방지 */
 }
 
-.multi-box {
-  margin-left: unset;
-  width: unset;
-}
-.multi-box .datePicker-inWrap {
+.datePicker-multi .datePicker-inWrap {
   display: inline-flex;
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
   flex: 1;
 }
-.multi-box .hyphen {
+.datePicker-multi .hyphen {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;

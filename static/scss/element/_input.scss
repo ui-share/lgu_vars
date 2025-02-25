@@ -588,9 +588,7 @@ input::placeholder {
 	color: var(--dt-gray11);
 	white-space: nowrap; /* 줄바꿈 방지 */
 }
-.multi-box {
-	margin-left: unset;
-    width: unset;
+.datePicker-multi {
 	.datePicker-inWrap {
 		display: inline-flex;
 		flex-wrap: nowrap;
