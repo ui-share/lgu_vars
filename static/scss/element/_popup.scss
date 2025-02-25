@@ -605,6 +605,44 @@
 	}
 }
 
+// 앱스토어 상세구매내역 확인방법 팝업 : 휴대폰결제 이용내역
+.appPaid-wrap {
+    background-color: var(--dt-gray02);
+    border-radius: 8px;
+    padding: 24px 20px;
+    .appStore {
+        padding: 16px;
+        background-color: var(--dt-white);
+        border: none;
+        border-radius: 8px;
+        pointer-events:none;
+        .txt-wrap {
+            gap: 4px;
+            .txt {
+                @include fw-5(14px);
+                line-height: 21px;
+                color: var(--dt-black);
+            }
+        }
+    }
+    .info-box {
+        @include flexRow;
+        align-items:center;
+        justify-content:center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        border-radius: 8px;
+        gap: 4px;
+        .txt {
+            @include fw-6(14px);
+            line-height: 1.5;
+            color: var(--dt-gray13);
+            letter-spacing: -0.5px;
+        }
+    }
+    & + .bullet-list {margin-top:8px;}
+}
+
 
 // 2차인증 : twoFactorAuth 팝업
 .twoFactorAuth {

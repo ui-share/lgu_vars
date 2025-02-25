@@ -70,39 +70,39 @@
 	}
 }
 
-.appPaid-wrap {
-    background-color: var(--dt-gray02);
-    border-radius: 8px;
-    padding: 24px 20px;
-    .appStore {
-        padding: 16px;
-        background-color: var(--dt-white);
-        border: none;
-        border-radius: 8px;
-        pointer-events:none;
-        .txt-wrap {
-            gap: 4px;
-            .txt {
-                @include fw-5(14px);
-                line-height: 21px;
-                color: var(--dt-black);
-            }
-        }
-    }
-    .info-box {
-        @include flexRow;
-        align-items:center;
-        justify-content:center;
-        flex-wrap: wrap;
-        margin-top: 20px;
-        border-radius: 8px;
-        gap: 4px;
-        .txt {
-            @include fw-6(16px);
-            line-height: 1.5;
-            color: var(--dt-gray14);
-            letter-spacing: -0.5px;
-        }
-    }
-    & + .bullet-list {margin-top:8px;}
-}
+// .appPaid-wrap { //250225 : _popup.scss로 이동 / 이상없을 경우 삭제예정
+//     background-color: var(--dt-gray02);
+//     border-radius: 8px;
+//     padding: 24px 20px;
+//     .appStore {
+//         padding: 16px;
+//         background-color: var(--dt-white);
+//         border: none;
+//         border-radius: 8px;
+//         pointer-events:none;
+//         .txt-wrap {
+//             gap: 4px;
+//             .txt {
+//                 @include fw-5(14px);
+//                 line-height: 21px;
+//                 color: var(--dt-black);
+//             }
+//         }
+//     }
+//     .info-box {
+//         @include flexRow;
+//         align-items:center;
+//         justify-content:center;
+//         flex-wrap: wrap;
+//         margin-top: 20px;
+//         border-radius: 8px;
+//         gap: 4px;
+//         .txt {
+//             @include fw-6(14px);
+//             line-height: 1.5;
+//             color: var(--dt-gray13);
+//             letter-spacing: -0.5px;
+//         }
+//     }
+//     & + .bullet-list {margin-top:8px;}
+// }
