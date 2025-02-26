@@ -575,6 +575,7 @@ input::placeholder {
 		line-height: 1.2;
 		color: var(--dt-gray16);
 		field-sizing: content;
+		pointer-events: none;
 	}
 	.datePicker-txt {
 		display: inline-block;
