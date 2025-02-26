@@ -561,6 +561,7 @@ input::placeholder {
 	padding: 14px 18px;
 	align-items: center;
 	justify-content: center;
+	margin: 20px 0;
 	.datePicker-box {
 		display: flex;
 		flex-wrap: nowrap;
@@ -592,9 +593,9 @@ input::placeholder {
 }
 
 
-// 드롭다운 반응형
+
 @media screen and (max-width:359px) {
-	.slct-box-wrap {
+	.slct-box-wrap {// 드롭다운 반응형
 		&:has(.slct-box:first-child:last-child) {
 			.slct-box {
 				max-width: 150px;
@@ -610,7 +611,7 @@ input::placeholder {
 			}
 		} 
 	}
-	.datePicker-wrap {
+	.datePicker-wrap {// 데이트피커 반응형
 		flex-wrap: wrap;
 		.datePicker-box:first-child {
 			width: 100%;
