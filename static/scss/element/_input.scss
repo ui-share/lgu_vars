@@ -555,49 +555,32 @@ input::placeholder {
 
 // 캘린더 input
 .datePicker-wrap {
+	display: flex;
 	background-color: var(--dt-gray02);
 	border-radius: 8px;
 	padding: 14px 18px;
-}
-.datePicker-control {
-	@include flexBox();
-	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
 	.datePicker-box {
-		flex-wrap: nowrap;
-		@include flexBox();
-		column-gap: 2px;
-
-	}
-	.datePicker-multi {
-		@include flexBox();
-	}
-}
-.datePicker-field {
-	@include fw-6(14px);
-	line-height: 1.2;
-	color: var(--dt-gray16);
-	flex: 1;
-    display: inline-block; /* 가변적인 크기 조정 가능하도록 변경 */
-	text-align: center;
-	background: transparent;
-	field-sizing: content;
-	pointer-events: none;
-	user-select: none;
-}
-.datePicker-txt {
-	@include fw-5(14px);
-	line-height: 1.5;
-	color: var(--dt-gray11);
-	white-space: nowrap; /* 줄바꿈 방지 */
-}
-.datePicker-multi {
-	.datePicker-inWrap {
-		display: inline-flex;
+		display: flex;
 		flex-wrap: nowrap;
 		justify-content: center;
-		align-items: center;
-		flex: 1;
-		column-gap: 2px;
+		max-width: 124px;
+		gap: 2px;
+	}
+	.datePicker-field {
+		width: auto;
+		@include fw-6(14px);
+		line-height: 1.2;
+		color: var(--dt-gray16);
+		field-sizing: content;
+	}
+	.datePicker-txt {
+		display: inline-block;
+		@include fw-5(14px);
+		line-height: 1.5;
+		color: var(--dt-gray11);
+		white-space: nowrap; /* 줄바꿈 방지 */
 	}
 	.hyphen {
 		@include fw-6(18px);
@@ -627,14 +610,14 @@ input::placeholder {
 			}
 		} 
 	}
-	// .datePicker-control {
-	// 	.datePicker-box {
-	// 		width: calc(100% - 18px);
-	// 	}
-	// 	.multi-box {
-	// 		width: calc(100% + 18px);
-	// 	}
-	// }
-	
-	
+	.datePicker-wrap {
+		flex-wrap: wrap;
+		.datePicker-box:first-child {
+			width: 100%;
+			max-width: unset;
+		}
+		.datePicker-field {
+			padding-bottom: 1px;
+		}
+	}
 }
