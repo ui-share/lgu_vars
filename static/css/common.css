@@ -2045,6 +2045,8 @@ button {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+}
+.card.chngCode .item.text {
   gap: 4px;
 }
 .card.chngCode .item.text .tit {
