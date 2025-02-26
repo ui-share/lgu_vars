@@ -2716,6 +2716,7 @@ button {
 }
 .counsel .cont__wrap.accordion-container.open .accordion-content {
   display: grid;
+  padding: 0;
 }
 
 .conversion {
