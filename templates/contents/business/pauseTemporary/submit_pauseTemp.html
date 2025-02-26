@@ -54,18 +54,18 @@
 							유효성 검사 성공 : <div class="input-control success">
 							유효성 검사 에러 : <div class="input-control error">
 					-->
+					<!-- 일시정지 사유 선택 -->
 					<div class="input-control">
 						<div class="input-group">
 							<label class="input-label">일시정지 사유</label>
 							<div class="input-row">
 								<button type="button" class="btn-field-dropdown">
-									<!-- 일시정지 사유 선택 값 -->
-									<!-- 사유 선택 시 출력 : <span class="value">
+									<!-- placeholder성 안내 문구 노출 -->
+									<span class="txt">일시정지 사유 선택</span>
+									<!-- 값 출력 시  -->
+									<!-- <span class="value">
 										<span class="txt">경제적 사정</span>
 									</span> -->
-
-									<!-- placeholder성 안내 문구 노출 상태 : 값 노출 상태에서는 hidden 추가 <span class="txt hidden">일시정지 사유 선택</span> -->
-									<span class="txt">일시정지 사유 선택</span>
 								</button>
 							</div>
 						</div>
@@ -74,31 +74,59 @@
 
 					<div class="slct-control">
 						<div class="slct-label-box">
-							<span class="label-tit">일시정지 기간</span><span class="label-desc">남은 가능 일수 180일</span>
+							<span class="label-tit">일시정지 기간</span><span class="label-desc">남은 가능 일수 <span>180</span>일</span>
 						</div>
 						<div class="slct-box-wrap">
+							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
+								<button type="button" class="slct-box">
+									<span class="txt">
+										<span>시작일 선택</span>
+									</span>
+									<span class="arrow"></span>
+								</button>
+								<button type="button" class="slct-box done">
+									<span class="txt">
+										<span>24년</span><span>11월</span><span>29일</span>
+									</span>
+									<span class="arrow"></span>
+								</button>
+							-->
 							<button type="button" class="slct-box">
 								<span class="txt"><span>시작일 선택</span></span>
-								<span class="arrow"></span>								
+								<span class="arrow"></span>
 							</button>
 							<span class="multi-box">
-								<span class="hyphen">~</span>
+								<span class="hyphen"> ~ </span>
 								<button type="button" class="slct-box">
 									<span class="txt"><span>종료일 선택</span></span>
-									<span class="arrow"></span>								
+									<span class="arrow"></span>
 								</button>
 							</span>
 						</div>
 					</div>
 
 					<div class="info-wrap">
-						<span class="txt-tit">
-							모바일 수신 금지 설정
-						</span>
+						<span class="txt-tit">모바일 수신 금지 설정</span>
+						<!-- ON/OFF 상태
+							ON 상태 : 
+							<input type="checkbox" id="switch1" class="switch-input" checked>
+							<label for="switch1" class="switch-label">
+								<span>ON 상태 문구</span>
+								<span class="switch-box"></span>
+							</label>						
+
+							OFF 상태 :
+							<input type="checkbox" id="switch1" class="switch-input" checked>
+							<label for="switch1" class="switch-label">
+								<span>OFF 상태 문구</span>
+								<span class="switch-box"></span>
+							</label>
+						-->
 						<div class="switch-group">
-							<input type="checkbox" id="모바일 수신 금지 설정" class="switch-input" checked>
-							<label for="모바일 수신 금지 설정" class="switch-label">
-								사용
+							<input type="checkbox" id="switch1" class="switch-input" checked>
+							<label for="switch1" class="switch-label">
+								<span>사용</span>
+								<!-- <span>사용안함</span> -->
 								<span class="switch-box"></span>
 							</label>
 						</div>
