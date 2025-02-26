@@ -1,42 +1,42 @@
 @import "../scss/base/mixin";
-.issueCertSignup {
-	.plan-wrap {
-		.btn {
-			display: inline-flex;
-			justify-content: center;
-			align-items: center;
-			border-radius: 4px;
-			gap: 4px;
-			.txt {
-				@include fw-6($fs: 16px);
-				line-height: 1;
-			}
-			&:active { // pressed 인터렉션
-				box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-			}
-			&.is-disabled {
-				opacity: 0.6;
-			}
-			&.line {
-				background-color:transparent;
-				&.btn-sec {
-					border: 1px solid var(--dt-gray13);
-					.txt {
-						color:var(--dt-gray13);
+.page-wrapper {
+	&.issueCertSignup {
+		.plan-wrap {
+			.btn {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 4px;
+				gap: 4px;
+				.txt {
+					@include fw-6($fs: 16px);
+					line-height: 1;
+				}
+				&:active { // pressed 인터렉션
+					box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+				}
+				&.is-disabled {
+					opacity: 0.6;
+				}
+				&.line {
+					background-color:transparent;
+					&.btn-sec {
+						border: 1px solid var(--dt-gray13);
+						.txt {
+							color:var(--dt-gray13);
+						}
 					}
 				}
-			}
-			/* sizing */
-			&.btn-md { // 중간높이
-				padding: 8px 12px;
-				.txt {
-					font-size: 12px;
+				/* sizing */
+				&.btn-md { // 중간높이
+					padding: 8px 12px;
+					.txt {
+						font-size: 12px;
+					}
 				}
+				
+				
 			}
-			
-			
 		}
 	}
-	
-	
 }
