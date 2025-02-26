@@ -2036,6 +2036,24 @@ button {
 .card.rmPeriod .card-footer .btn .txt {
   font-size: 14px;
 }
+.card.chngCode {
+  border: 1px solid var(--dt-gray17);
+  box-shadow: none;
+  padding: 16px;
+}
+.card.chngCode .item {
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.card.chngCode .item.text .tit {
+  font-size: 16px;
+}
+.card.chngCode .card-footer .btn {
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
 
 @media screen and (max-width: 359px) {
   .card.rmPeriod .period-wrap {

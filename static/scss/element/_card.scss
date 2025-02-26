@@ -556,6 +556,26 @@
 			}
 		}
 	}
+	// 회선 변경 카드
+	&.chngCode {
+		border: 1px solid var(--dt-gray17);
+		box-shadow: none;
+		padding: 16px;
+		.item {
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 4px;
+			&.text {
+				.tit {
+					font-size: 16px;
+				}
+			}
+		}
+		.card-footer .btn {
+			min-width: max-content;
+		}
+	}
 }
 
 
