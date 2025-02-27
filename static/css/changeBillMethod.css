@@ -349,6 +349,9 @@
   padding: 16px 0 17px;
   border-bottom: 1px solid var(--dt-gray17);
 }
+.addr-wrap .addr-box[role=button]:active {
+  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+}
 .addr-wrap .addr-box .zip-code {
   font-size: 14px;
   font-weight: 600;
