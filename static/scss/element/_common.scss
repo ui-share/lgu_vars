@@ -931,6 +931,9 @@ button {
 			color: var(--dt-black);
 			text-align: right;
 			word-break:break-all;
+			&.color-prim {
+				color: var(--dt-primary);
+			}
 		}
 	}
 }

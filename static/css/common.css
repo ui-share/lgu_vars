@@ -1125,6 +1125,9 @@ button {
   text-align: right;
   word-break: break-all;
 }
+.list-wrap .list-box .tail.color-prim {
+  color: var(--dt-primary);
+}
 
 /* h7 txt 스타일*/
 .tit-h7 {
@@ -3781,6 +3784,33 @@ input::placeholder {
   line-height: var(--dt-lh150);
 }
 .popup-body .btn.btn-child .txt {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  line-height: var(--dt-lh150);
+}
+.popup-body .btn.btn-phoneLine {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: var(--dt-gray02);
+}
+.popup-body .btn.btn-phoneLine .txt-wrap {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+}
+.popup-body .btn.btn-phoneLine .tit {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--dt-black);
+  text-align: left;
+  line-height: var(--dt-lh150);
+}
+.popup-body .btn.btn-phoneLine .txt {
   font-size: 14px;
   font-weight: 500;
   text-align: left;

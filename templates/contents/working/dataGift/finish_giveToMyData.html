@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/dataGift.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper dataGift">
+		<!-- header -->
+		<header class="header">
+			<!-- <div class="header__util">
+			</div> -->
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont">
+				<div class="cont__wrap cont__wrap-service">
+					<div class="inform-wrap">
+						<span class="inform-img success"></span>
+						<div class="text-box">
+							<span class="tit">
+								<span>강*환</span>&nbsp;님에게<br/>
+								내 데이터<span class="color-prim">1GB</span>를 보냈어요
+							</span>
+						</div>
+					</div>
+					<!-- 매달 자동주기 등록 -->
+					<!-- 
+						[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+							** 체크드 됨 : input 내 checked
+							** 체크드된 disabled : is-disabled / input 내 checked
+							** 비활성 : is-disabled
+							기본 : 	<div class="chck-group">
+										<input type="checkbox" id="chck01" class="chck-input">
+							체크드 됨 :  <div class="chck-group">
+											<input type="checkbox" id="chck01" class="chck-input" checked>
+							체크드 된 비활성 : <div class="chck-group is-disabled">
+												<input type="checkbox" id="chck01" class="chck-input" checked> 
+							비활성 :  <div class="chck-group is-disabled">
+										<input type="checkbox" id="chck01" class="chck-input"> 
+					-->
+					<div class="flex-col mt-8">
+						<div class="chck-group">
+							<input type="checkbox" id="chck01" class="chck-input">
+							<label for="chck01" class="chck-label">
+								<span class="chck-box"></span>
+								매달 자동주기 등록
+							</label>
+						</div>
+						<div class="btn-group mt-24">
+							<button class="btn btn-md line" type="button">
+								<span class="txt">데이터 주고받기 내역 자세히 보기</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<button class="btn" type="button">
+							<span class="txt">확인</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
