@@ -2354,6 +2354,7 @@ button {
   color: var(--dt-white);
 }
 .chips.chips-menu.chips-more {
+  width: 35px;
   padding: 8px;
 }
 .chips.chips-menu.chips-more .arrow {
