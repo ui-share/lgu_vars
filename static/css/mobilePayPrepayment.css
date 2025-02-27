@@ -110,8 +110,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  -moz-column-gap: 2px;
-       column-gap: 2px;
+  column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
@@ -136,8 +135,7 @@
 
 @media screen and (max-width: 359px) {
   .input-row-wrap.al-baseline {
-    -moz-column-gap: 8px;
-         column-gap: 8px;
+    column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {

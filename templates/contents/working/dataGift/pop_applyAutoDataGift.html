@@ -30,29 +30,40 @@
 		<div class="back-drop"></div>
 		<div class="popup__wrap">
 			<div class="popup-header">
-				<div class="popup-tit hidden">
-					<span class="txt"></span>
+				<div class="popup-tit">
+					<span class="txt">데이터 자동주기를&nbsp;<span class="color-prim">등록</span>할까요?</span>
 				</div>
-				<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-			<!-- 데이터 노출되는 리스트 -->
-			<div class="inform-wrap">
-				<!-- error/success/check -->
-				<span class="inform-img success"></span>
-				<div class="text-box">
-					<span class="tit">
-						매일 <span class="color-prim">1일</span> <span class="color-prim">강*환</span> 님에게<br/>
-						<span class="color-prim">데이터 1GB</span>를 보낼게요
-					</span>
-					<span class="txt">최대 2번까지 자동 주기로 보낼 수 있습니다</span>
-				</div>
-			</div>
+				<!-- 데이터 노출되는 리스트 -->
+				<ul class="list-wrap">
+					<li class="list-box">
+						<span class="head">받는사람</span>
+						<span class="tail">강*환</span>
+					</li>
+					<li class="list-box">
+						<span class="head">연락처</span>
+						<span class="tail">010-80**-60**</span>
+					</li>
+					<li class="list-box">
+						<span class="head">데이터</span>
+						<span class="tail color-prim">1G</span>
+					</li>
+				</ul>
+				<ul class="bullet-list info mt-12">
+					<li class="bullet-item">
+						생년월일로 로그인 한 경우 자동으로 인증처리됩니다.<br/>그 외 고객님은 별도의 인증으로 연결됩니다.
+					</li>
+				</ul>
 			</div>			
 			<div class="popup-footer">
 				<div class="btn-group flex-row is-confirm">
 					<button class="btn" type="button">
-						<span class="txt">확인</span>
+						<span class="txt">취소</span>
+					</button>
+					<button class="btn" type="button">
+						<span class="txt">등록하기</span>
 					</button>
 				</div>
 			</div>
