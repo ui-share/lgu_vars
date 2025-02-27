@@ -80,6 +80,7 @@
   border-radius: 40px;
 }
 .datepicker .dow {
+  height: 2.25rem;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.5;
@@ -113,10 +114,23 @@
 }
 .datepicker .datepicker-cell.focused:not(.selected) {
   background-color: #F3F5F6;
+  border: 1px solid #F3F5F6;
   color: var(--dt-gray14);
 }
-.datepicker .datepicker-cell.today:not(.selected) {
+.datepicker .datepicker-cell.selected, .datepicker .datepicker-cell.range-end, .datepicker .datepicker-cell.range-start {
+  border-radius: 40px;
+  background-color: var(--dt-white);
+  border: 1px solid var(--dt-primary);
+  color: var(--dt-primary);
+}
+.datepicker .datepicker-cell.range:not(.disabled) {
+  height: 22px;
+  background-color: rgba(227, 0, 132, 0.2);
+  color: var(--dt-gray14);
+}
+.datepicker .datepicker-cell.today:not(.range):not(.selected) {
   background-color: #F3F5F6;
+  border: 1px solid #F3F5F6;
   color: var(--dt-gray14);
 }
 .datepicker .datepicker-cell.today::before {
@@ -137,7 +151,7 @@
   display: inline-block;
   content: "";
   position: absolute;
-  top: 6.5px;
+  top: 7px;
   left: 50%;
   transform: translateX(-50%);
   width: 7px;
@@ -147,31 +161,15 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.datepicker .datepicker-cell.range {
-  height: 22px;
+.datepicker .datepicker-cell.today.range {
   background-color: rgba(227, 0, 132, 0.2);
+  color: var(--dt-gray14);
 }
-.datepicker .datepicker-cell.selected, .datepicker .datepicker-cell.range-end:not(.selected), .datepicker .datepicker-cell.range-start:not(.selected) {
-  border-radius: 40px;
-  background-color: var(--dt-white);
-  border: 1px solid var(--dt-primary);
-  color: var(--dt-primary);
+.datepicker .datepicker-cell.today.range::before {
+  top: -14px;
 }
-.datepicker .datepicker-cell.range-start:not(.range-end)::before, .datepicker .datepicker-cell.range-end:not(.range-start)::before {
-  display: inline-block;
-  content: "";
-  width: 4px;
-  height: 22px;
-  background-color: rgba(227, 0, 132, 0.2);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.datepicker .datepicker-cell.range-start:not(.range-end)::before {
-  right: -1px;
-}
-.datepicker .datepicker-cell.range-end:not(.range-start)::before {
-  left: -1px;
+.datepicker .datepicker-cell.today.range::after {
+  top: 1px;
 }
 .datepicker .datepicker-header .datepicker-controls {
   width: 203px;
