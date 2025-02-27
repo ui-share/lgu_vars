@@ -2759,6 +2759,7 @@ button {
     flex-direction: row;
     padding: 16px;
     gap: 12px;
+    min-height: unset;
   }
   .cont__wrap-counsel .card-group .card .card-body {
     align-items: center;

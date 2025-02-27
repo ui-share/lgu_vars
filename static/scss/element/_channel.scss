@@ -151,6 +151,7 @@
 				flex-direction: row;
 				padding: 16px;
 				gap: 12px;
+				min-height: unset;
 				.card-body {
 					align-items: center;
 					flex-direction: row;
