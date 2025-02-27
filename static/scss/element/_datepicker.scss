@@ -124,12 +124,19 @@
 		}
 		&.focused:not(.selected) {
 			background-color: #F3F5F6;
+			color: var(--dt-gray14);			
+		}
+		&.today:not(.selected) {
+			background-color: #F3F5F6;
+			color: var(--dt-gray14);			
+		}
+		&.today {
 			&::before {
 				display: inline-block;
 				content: "오늘";
 				padding: 0 6px;
 				font-size: 8px;
-				line-height: 1.5;
+				line-height: 14px;
 				font-weight: 600;
 				position: absolute;
 				top: -8px;
@@ -138,20 +145,21 @@
 				color: var(--dt-primary);
 				border-radius: 20px;
 			}
-			&:after {
-				display: inline-block;
-				content: '';
-				position: absolute;
-				top: 5px;
-				left: 50%;
-				transform:translateX(-50%);
-				width: 7px;
-				height: 4px;
-				background-image: url(../images/icon/triangle-border.svg);
-				background-size: 100%;
-				background-repeat: no-repeat;
-				background-position: center;
-			}
+		}
+		
+		&.today::after {
+			display: inline-block;
+			content: '';
+			position: absolute;
+			top: 6.5px;
+			left: 50%;
+			transform:translateX(-50%);
+			width: 7px;
+			height: 4px;
+			background-image: url(../images/icon/triangle-border.svg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+			background-position: center;
 		}
 		&.range {
 			height: 22px;
