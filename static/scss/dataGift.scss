@@ -1,0 +1,13 @@
+@import "../scss/base/mixin";
+// 완료 페이지 버튼
+.btn-group {
+    .btn {
+        &.btn-md {
+            width: fit-content;
+        }
+    }
+}
+.flex-col {
+    @include flexColum();
+    @include flexBox();
+}

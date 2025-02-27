@@ -333,6 +333,28 @@
 				line-height: var(--dt-lh150);
 			}
 		}
+		&.btn-phoneLine {
+			display: flex;
+			justify-content: space-between;
+			padding:16px;
+			background-color: var(--dt-gray02);
+			.txt-wrap {
+				@include flexColum();
+				@include flexBox(center, start);
+				gap: 2px;
+			}
+			.tit {
+				@include fw-7(16px);
+				color:var(--dt-black);
+				text-align: left;
+				line-height: var(--dt-lh150);
+			}
+			.txt {
+				@include fw-5(14px);
+				text-align: left;
+				line-height: var(--dt-lh150);
+			}
+		}
 	}
 	&.submitSignupInfo{ //가입확인서발급
 		padding-top:18px;
