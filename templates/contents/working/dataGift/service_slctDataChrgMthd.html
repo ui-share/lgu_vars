@@ -39,76 +39,81 @@
 							선택해주세요
 						</h4>
 					</div>
-				</div>
-				<div class="cont__wrap cont__wrap-vertical mt-24">
-					<div class="card horizon chngCode">
-						<div class="card-body">
-							<div class="item text">
-								<span class="txt">모바일</span>
-								<span class="tit">010-12**-56**</span>
-								<span class="sub">외 1건</span>
+					<div class="cont__wrap-dataGift">
+						<div class="card horizon chngCode">
+							<div class="card-body">
+								<div class="item text">
+									<span class="txt">모바일</span>
+									<span class="tit">010-12**-56**</span>
+									<span class="sub">외 1건</span>
+								</div>
 							</div>
-						</div>
-						<div class="card-footer">
-							<div class="btn-group">
-								<button class="btn btn-md" type="button">
-									<span class="txt">다른 번호 선택</span>
-								</button>
-							</div>
-						</div> 
-					</div>
-				</div>
-				<div class="cont__wrap cont__wrap-vertical mt-40">
-					<div class="card horizon dataGift">
-						<div class="card-body">
-							<div class="item util">
-								<span class="img-box">
-									<img src="../../../../static/images/icon/ic-data-2gb.png" alt="데이터 2GB 쿠폰">
-								</span>
-							</div>
-							<div class="item text">
-								<span class="tit">내 2GB 쿠폰으로 충전해요</span>
-								<span class="num">5장<span class="num-txt">사용 가능</span></span>
-								<span class="txt">데이터 2GB 쿠폰</span>
-							</div>
+							<div class="card-footer">
+								<div class="btn-group">
+									<button class="btn btn-md" type="button">
+										<span class="txt">다른 번호 선택</span>
+									</button>
+								</div>
+							</div> 
 						</div>
 					</div>
-					<div class="card horizon dataGift">
-						<div class="card-body">
-							<div class="item util">
-								<span class="img-box">
-									<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
-								</span>
+					<!-- 가족 공유 데이터 미 소진시 -->
+					<div class="card-group flex-column mt-40">
+						<div class="card horizon dataGift">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-2gb.png" alt="데이터 2GB 쿠폰">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">내 2GB 쿠폰으로 충전해요</span>
+									<span class="num">5장<span class="num-txt">사용 가능</span></span>
+									<span class="txt">데이터 2GB 쿠폰</span>
+								</div>
 							</div>
-							<div class="item text">
-								<span class="tit">가족 공용 데이터로 충전해요</span>
-								<span class="txt">가족사랑데이터</span>
+						</div>
+						<div class="card horizon dataGift">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<span class="txt">가족사랑데이터</span>
+								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 
-						가족 공유데이터 소진시 : is-disabled
+					<!-- 가족 공유 데이터 소진시 -->
+					<div class="card-group flex-column mt-40">
+						<!-- 
+							가족 공유데이터 소진시 : is-disabled
+							<div class="card horizon dataGift is-disabled">
+						-->
 						<div class="card horizon dataGift is-disabled">
-					-->
-					<div class="card horizon dataGift is-disabled">
-						<div class="card-body">
-							<div class="item util">
-								<span class="img-box">
-									<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
-								</span>
-							</div>
-							<div class="item text">
-								<!-- 
-									가족 공유데이터 소진시 : chips 붙음
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
+									</span>
+								</div>
+								<div class="item text">
+									<!-- 
+										가족 공유데이터 소진시 : chips 붙음
+										<div class="chips chips-tag">
+									-->
 									<div class="chips chips-tag">
-								-->
-								<div class="chips chips-tag">
-										<span class="txt">가족사랑데이터 소진</span>
-									</div>
-								<span class="tit">가족 공용 데이터로 충전해요</span>
-								<span class="txt">가족사랑데이터</span>
+											<span class="txt">가족사랑데이터 소진</span>
+										</div>
+									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<span class="txt">가족사랑데이터</span>
+								</div>
 							</div>
 						</div>
+
 					</div>
 				</div>
 			</div>
