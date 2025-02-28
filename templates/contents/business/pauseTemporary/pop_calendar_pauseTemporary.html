@@ -15,6 +15,12 @@
 </head>
 
 <script>
+
+
+
+
+
+
 	// 한국어 데이터 임시로 직접 추가 -> 개발시 바꾸세요
 	Datepicker.locales.ko = {
 		days: ['일요일', '월요일', '화요일', '수요일', '목요일', '금요일', '토요일'],
@@ -97,15 +103,15 @@
 				<ul class="bullet-list info">
 					<li class="bullet-item">남은 신청 가능 일수는 <span>180</span>일 입니다</li>
 				</ul>
-				<div class="vanillajs-datepicker year-month-day" >
-					<div class="datepicker__input-wrap" id="datepicker">
+				<div class="vanillajs-datepicker year-month-day" id="datepicker">
+					<div class="datepicker__input-wrap" >
 						<span class="datePicker__input-box">
-							<input type="text" name="start" class="input-field" readonly/>							
+							<input type="text" name="start" class="input-field" disabled/>							
 							<span class="input-field-unit">부터</span>
 						</span>						
 						<span class="datePicker__input-box">
 							<span class="input-field-unit hyphen">~</span>
-							<input type="text" name="end" class="input-field" readonly/>							
+							<input type="text" name="end" class="input-field" disabled/>							
 							<span class="input-field-unit">까지</span>
 						</span>
 					</div>
