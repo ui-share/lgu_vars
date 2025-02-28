@@ -58,6 +58,9 @@
 		.cont__wrap-roamingUsed {
 			background-image: url(../images/img/img-hm-roaming.png);
 		}
+		.cont__wrap-dataGift {
+			// background-image: url(../images/img/img-hm-roaming.png); 이미지 필요
+		}
 		.txt-select-wrap {
 			@include flexRow;
 			flex-wrap: wrap;

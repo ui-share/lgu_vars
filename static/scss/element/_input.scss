@@ -355,8 +355,8 @@ input::placeholder {
 		.btn-group {
 			max-width: fit-content;
 			.search {
-				padding: 16px;
-				max-height: 48px;
+				padding: 10px;
+				height: 48px;
 			}
 		}
 	}
@@ -450,30 +450,6 @@ input::placeholder {
 			width: calc(50% - 10px);
 		}
 	} 
-}
-
-// 검색버튼이 있는 드롭다운
-.flex-row {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	> * {
-		flex: 1;
-	}
-	.hyphen { 
-		max-width: fit-content;
-		@include fw-6(20px);
-		text-align: center;
-		color: var(--dt-gray16);
-	}
-	.btn-group {
-		max-width: fit-content;
-		.search {
-			padding: 16px;
-			max-height: 48px;
-		}
-	}
 }
 
 
