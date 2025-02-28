@@ -10,6 +10,7 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 158px;
   padding-top: 28px;

@@ -12,6 +12,7 @@
   padding: 36px 0 0px;
 }
 .page-wrapper.contract .container .list-wrap .list-box .tail {
+  max-width: -moz-max-content;
   max-width: max-content;
 }
 
