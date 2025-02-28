@@ -395,6 +395,33 @@
         }
     }
 }
+.coupon-wrap {
+    @include flexColum();
+    @include flexBox();
+    margin-top: 40px;
+    row-gap: 20px;
+    .img-box {
+        width: 75%;
+        max-width:250px;
+        min-width: 200px;
+    }
+    .txt-box {
+        color: var(--dt-gray16);
+        @include fw-6(14px);
+        .txt-tit {
+            @include fw-5(14px);
+            line-height: 1.2;
+            color: var(--dt-gray12);
+        }
+        .color-prim {
+            @include fw-7(16px);
+            line-height: 1.5;
+            color: var(--dt-primary);
+            padding-left: 5px;
+            padding-top: 2px;
+        }
+    }
+}
 .info-data-box {
 	margin: 18px 0 0;
     .content-row {

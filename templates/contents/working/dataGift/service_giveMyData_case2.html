@@ -15,6 +15,87 @@
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/dataGift.css">
 	
 	<!-- Scripts -->
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script>
+		const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+		function initCheckDevice() {
+			// PC
+			if (!isMobile) {
+				document.body.classList.add("is-pc");
+			}
+		}
+		window.onload = ()=> {
+			initCheckDevice();
+
+			/*
+				임시코드입니다. 수정하여 사용 요망
+			*/
+			
+			// 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+			const tooltipBtn = document.querySelector('.btn-tooltip'); 
+			const tooltip = document.querySelector('.tooltip-wrap');
+		
+			const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+				placement: 'bottom',
+				modifiers: [
+					{
+						name: 'offset',
+						options: {
+							offset: [0, 8],
+						},
+					},
+					{
+						name: 'flip',
+						options: {
+							fallbackPlacements: ['top', 'bottom'],
+						},
+					},
+				],
+			});
+
+			function show() {
+				// Make the tooltip visible
+				tooltip.setAttribute('data-show', '');
+
+				// Enable the event listeners
+				popperInstance.setOptions((options) => ({
+					...options,
+					modifiers: [
+						...options.modifiers,
+						{ name: 'eventListeners', enabled: true },
+					],
+				}));
+
+				// Update its position
+				popperInstance.update();
+			}
+
+			function hide() {
+				// Hide the tooltip
+				tooltip.removeAttribute('data-show');
+
+				// Disable the event listeners
+				popperInstance.setOptions((options) => ({
+					...options,
+					modifiers: [
+						...options.modifiers,
+						{ name: 'eventListeners', enabled: false },
+					],
+				}));
+			}
+
+			const showEvents = ['click', 'focus'];
+			const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+			showEvents.forEach((event) => {
+				tooltipBtn.addEventListener(event, show);
+			});
+
+			hideEvents.forEach((event) => {
+				tooltipBtn.addEventListener(event, hide);
+			});
+		}
+	</script>
 </head>
 <body>
 	<div class="page-wrapper dataGift">
@@ -43,7 +124,27 @@
 				<div class="cont__wrap cont__wrap-vertical mt-40">
 					<div class="con__tit-box">
 						<h6 class="tit-head">
-							<span class="txt-title">데이터 주고받기</span>
+							<span class="txt-title">데이터 주고받기<button class="img-box btn-tooltip"><img src="../../../../static/images/icon/ic-circle-quesition.svg" alt=""></button>
+								<span class="tooltip-wrap">
+									<!-- 브라우저 띄울 때 다음과 같이 출력됨 <span class="tooltip-wrap" role="tooltip" data-show data-popper-placement^="top"> -->
+									<!--
+										const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+											// placement: 'bottom', 으로 툴팁 위치 조작
+											
+											현재 디자인 케이스 : bottom, right, top
+										}
+									-->
+									<div class="tooltip">
+										<div class="tooltip-inner">
+											<span class="txt-wrap">
+												LG유플러스를 이용하는 가족/친구와 내 데이터를 주고받을 수 있는 혜택이에요.
+											</span>
+											<button type="button" class="tooltip-close"><span>툴팁닫기</span></button>
+										</div>
+										<div data-popper-arrow=""></div>
+									</div>
+								</span>
+							</span>
 						</h6>
 					</div>
 					<div class="data-box">

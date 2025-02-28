@@ -406,6 +406,40 @@
   content: none;
 }
 
+.coupon-wrap {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  row-gap: 20px;
+}
+.coupon-wrap .img-box {
+  width: 75%;
+  max-width: 250px;
+  min-width: 200px;
+}
+.coupon-wrap .txt-box {
+  color: var(--dt-gray16);
+  font-size: 14px;
+  font-weight: 600;
+}
+.coupon-wrap .txt-box .txt-tit {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--dt-gray12);
+}
+.coupon-wrap .txt-box .color-prim {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--dt-primary);
+  padding-left: 5px;
+  padding-top: 2px;
+}
+
 .info-data-box {
   margin: 18px 0 0;
 }
