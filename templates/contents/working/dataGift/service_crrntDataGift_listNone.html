@@ -35,11 +35,13 @@
 				<div class="cont__wrap cont__wrap-service">
 					<div class="cont__txt-box">
 						<h4 class="txt">
-							데이터 <span class="deco">충전하실 방법</span>을<br/>
-							선택해주세요
+							<span class="deco">데이터 선물·충전 현황</span>을<br/>
+							한 곳에 모았어요
 						</h4>
 					</div>
+
 					<div class="cont__wrap-dataGift">
+						<!-- 회선 변경 -->
 						<div class="card horizon chngCode">
 							<div class="card-body">
 								<div class="item text">
@@ -56,65 +58,51 @@
 								</div>
 							</div> 
 						</div>
-					</div>
-					<!-- 가족 공유 데이터 미 소진시 -->
-					<div class="card-group flex-column mt-40">
-						<div class="card horizon dataGift">
-							<div class="card-body">
-								<div class="item util">
-									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-data-2gb.png" alt="데이터 2GB 쿠폰">
-									</span>
-								</div>
-								<div class="item text">
-									<span class="tit">내 2GB 쿠폰으로 충전해요</span>
-									<span class="num">5장<span class="num-txt">사용 가능</span></span>
-									<span class="txt">데이터 2GB 쿠폰</span>
-								</div>
-							</div>
-						</div>
-						<div class="card horizon dataGift">
-							<div class="card-body">
-								<div class="item util">
-									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
-									</span>
-								</div>
-								<div class="item text">
-									<span class="tit">가족 공용 데이터로 충전해요</span>
-									<span class="txt">가족사랑데이터</span>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- 가족 공유 데이터 소진시 -->
-					<div class="card-group flex-column mt-40">
-						<!-- 
-							가족 공유데이터 소진시 : is-disabled
-							<div class="card horizon dataGift is-disabled">
-						-->
-						<div class="card horizon dataGift is-disabled">
-							<div class="card-body">
-								<div class="item util">
-									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
-									</span>
-								</div>
-								<div class="item text">
-									<!-- 
-										가족 공유데이터 소진시 : chips 붙음
-										<div class="chips chips-tag">
-									-->
-									<div class="chips chips-tag">
-											<span class="txt">가족사랑데이터 소진</span>
-										</div>
-									<span class="tit">가족 공용 데이터로 충전해요</span>
-									<span class="txt">가족사랑데이터</span>
-								</div>
-							</div>
-						</div>
 
+						<div class="slct-control mt-28">
+							<div class="slct-box-wrap flex-row">
+								<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
+									: <button type="button" class="slct-box done">
+									<span class="txt"></span> -->
+								<button type="button" class="slct-box done">
+									<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+									<!-- <span class="txt"><span>시작일</span></span> -->
+									<span class="arrow"></span>								
+								</button>
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<span class="txt"><span>종료일</span></span>
+									<span class="arrow"></span>								
+								</button>
+								
+								<div class="btn-group">
+									<button type="button" class="btn btn-sec search">
+										<span class="txt">검색</span>
+									</button>
+								</div>
+							</div>
+						</div>
+	
+						<div class="card-group flex-column mt-28">
+							<div class="card solid center">
+								<div class="card-body">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-bill_x.png" alt="결제 이용 내역 없음">
+									</span>
+									<div class="text-box">
+										<span class="txt">조회된 데이터가 없습니다</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="btn-group mt-28">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">데이터 매월 자동주기 등록</span>
+							</button>
+						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
