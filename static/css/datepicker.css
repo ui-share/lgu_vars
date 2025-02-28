@@ -1,26 +1,31 @@
-.vanillajs-datepicker {
+.range-datepicker .resetDate {
+  min-width: 256px;
+  max-width: 250px;
+  margin: auto;
+}
+.range-datepicker .vanillajs-datepicker {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   margin: auto;
   gap: 4px;
 }
-.vanillajs-datepicker .datepicker:not(.active),
-.vanillajs-datepicker .datepicker.active {
-  display: block;
+.range-datepicker .vanillajs-datepicker .datepicker:not(.active) {
+  display: block !important;
 }
-.vanillajs-datepicker.year-month-day {
-  min-height: 400px;
+.range-datepicker .vanillajs-datepicker.year-month-day {
+  min-height: 380px;
   padding-top: 12px;
 }
-.vanillajs-datepicker .datepicker__input-wrap {
+.range-datepicker .vanillajs-datepicker .datepicker__input-wrap {
   position: relative;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   background-color: var(--dt-gray02);
   border-radius: 8px;
   padding: 14px 16px;
@@ -29,7 +34,7 @@
   line-height: 1.5;
   color: var(--dt-gray11);
 }
-.vanillajs-datepicker .datePicker__input-box {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -37,10 +42,10 @@
   min-width: 86px;
   max-width: 124px;
 }
-.vanillajs-datepicker .datePicker__input-box:has(.hyphen) {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box:has(.hyphen) {
   max-width: 148px;
 }
-.vanillajs-datepicker .datePicker__input-box .input-field {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box .input-field {
   flex: 1;
   font-size: 14px;
   font-weight: 600;
@@ -48,32 +53,31 @@
   color: var(--dt-gray16);
   text-align: center;
 }
-.vanillajs-datepicker .datePicker__input-box .input-field-unit {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box .input-field-unit {
   flex: 0 auto;
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--dt-gray11);
 }
-.vanillajs-datepicker .datePicker__input-box .input-field-unit.hyphen {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box .input-field-unit.hyphen {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
   padding-right: 12px;
 }
-.vanillajs-datepicker .datePicker__input-box .datepicker-picker {
+.range-datepicker .vanillajs-datepicker .datePicker__input-box .datepicker-picker {
   align-items: center;
   box-shadow: none;
   min-width: 220px;
   max-width: 320px;
   margin: auto;
 }
-
-.datepicker .datepicker-grid {
+.range-datepicker .datepicker .datepicker-grid {
   align-items: center;
 }
-.datepicker.datepicker-dropdown {
+.range-datepicker .datepicker.datepicker-dropdown {
   left: 50% !important;
   transform: translateX(-50%);
-  top: 60px !important;
+  top: 70px !important;
 }
