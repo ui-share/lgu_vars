@@ -1,41 +1,41 @@
-.dataGift .btn-group .btn.btn-md {
+.page-wrapper.dataGift .container .btn-group .btn.btn-md {
   width: -moz-fit-content;
   width: fit-content;
 }
-.dataGift .flex-col {
+.page-wrapper.dataGift .container .flex-col {
   display: flex;
   flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.dataGift .cont__wrap .tit-sub .txt-tit {
+.page-wrapper.dataGift .container .cont__wrap .tit-sub .txt-tit {
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--dt-gray11);
 }
-.dataGift .cont__wrap .cont__wrap-dataGift {
+.page-wrapper.dataGift .container .cont__wrap .cont__wrap-dataGift {
   padding: 0;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
 }
-.dataGift .cont__wrap .cont__wrap-dataGift:has(.chngCode) {
+.page-wrapper.dataGift .container .cont__wrap .cont__wrap-dataGift:has(.chngCode) {
   gap: 8px;
 }
-.dataGift .cont__wrap .cont__wrap-dataGift:has(.tit-sub) {
+.page-wrapper.dataGift .container .cont__wrap .cont__wrap-dataGift:has(.tit-sub) {
   gap: 8px;
 }
-.dataGift .cont__wrap .cont__wrap-dataGift .slct-box-wrap .slct-box .txt > * {
+.page-wrapper.dataGift .container .cont__wrap .cont__wrap-dataGift .slct-box-wrap .slct-box .txt > * {
   font-size: 14px;
 }
-.dataGift .txt-title {
+.page-wrapper.dataGift .container .txt-title {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.dataGift .txt-title .txt-sub {
+.page-wrapper.dataGift .container .txt-title .txt-sub {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -43,55 +43,52 @@
   margin-top: unset;
   margin-left: 8px;
 }
-.dataGift .bullet-wrap {
-  margin-top: 24px;
-}
-.dataGift .card.horizon:not(.chngCode) {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode) {
   padding: 16px;
   background-color: var(--dt-gray02);
   box-shadow: unset;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift {
   padding: 16px 16px 16px 24px;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body .item.text {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body .item.text {
   gap: 6px;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body .item.text .tit {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body .item.text .tit {
   font-size: 16px;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body .item.text .num {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body .item.text .num {
   font-size: 15px;
   font-weight: 600;
   color: var(--dt-primary);
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body .item.text .num .num-txt {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body .item.text .num .num-txt {
   font-size: 14px;
   font-weight: 500;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift .card-body .item.text .txt {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift .card-body .item.text .txt {
   font-size: 12px;
   font-weight: 500;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift.is-disabled {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift.is-disabled {
   padding-top: 45px;
   position: relative;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift.is-disabled .item.text {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift.is-disabled .item.text {
   gap: 6px;
 }
-.dataGift .card.horizon:not(.chngCode).dataGift.is-disabled .item.text .tit {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift.is-disabled .item.text .tit {
   font-size: 16px;
   color: var(-dt-gray11);
 }
-.dataGift .card.horizon:not(.chngCode).dataGift.is-disabled .item.text .txt {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift.is-disabled .item.text .txt {
   color: var(--dt-gray11);
 }
-.dataGift .card.horizon:not(.chngCode).dataGift.is-disabled .chips {
+.page-wrapper.dataGift .container .card.horizon:not(.chngCode).dataGift.is-disabled .chips {
   position: absolute;
   width: -moz-fit-content;
   width: fit-content;
@@ -99,38 +96,38 @@
   left: 16px;
   border: 1px solid var(--dt-gray09);
 }
-.dataGift .card.listGift {
+.page-wrapper.dataGift .container .card.listGift {
   gap: 12px;
   padding: 20px;
 }
-.dataGift .card.listGift .gift-date {
+.page-wrapper.dataGift .container .card.listGift .gift-date {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   color: var(--dt-gray11);
 }
-.dataGift .card.listGift .card-body {
+.page-wrapper.dataGift .container .card.listGift .card-body {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.dataGift .card.listGift .card-body:not(:last-child) {
+.page-wrapper.dataGift .container .card.listGift .card-body:not(:last-child) {
   padding-bottom: 12px;
   border-bottom: 1px solid var(--dt-gray06);
 }
-.dataGift .card.listGift .card-body .gift-info {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.dataGift .card.listGift .card-body .gift-info .used-name {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .used-name {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   color: var(--dt-gray14);
 }
-.dataGift .card.listGift .card-body .gift-info .used-won {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .used-won {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -138,20 +135,20 @@
   text-align: right;
   flex: 1;
 }
-.dataGift .card.listGift .card-body .gift-info .flag {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .flag {
   padding: 6px 10px;
 }
-.dataGift .card.listGift .card-body .gift-info .flag .txt {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .flag .txt {
   line-height: 1.5;
   letter-spacing: -0.5px;
   font-size: 13px;
 }
-.dataGift .card.listGift .card-body .gift-info .txt-sub {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .txt-sub {
   font-size: 13px;
   line-height: 1.5;
   margin-top: 0;
 }
-.dataGift .card.listGift .card-body .gift-info .txt-sub .sub-tel::before {
+.page-wrapper.dataGift .container .card.listGift .card-body .gift-info .txt-sub .sub-tel::before {
   content: "";
   display: inline-block;
   width: 1px;
@@ -160,64 +157,64 @@
   margin: 0 8px;
   transform: translateY(2px);
 }
-.dataGift .card.rmInform {
+.page-wrapper.dataGift .container .card.rmInform {
   box-shadow: none;
   border-radius: 16px;
   padding: unset;
 }
-.dataGift .card.rmInform .card-body {
+.page-wrapper.dataGift .container .card.rmInform .card-body {
   gap: 28px;
 }
-.dataGift .card.rmInform .item {
+.page-wrapper.dataGift .container .card.rmInform .item {
   flex-direction: column;
   gap: 6px;
 }
-.dataGift .card.rmInform .item .btn-group .btn {
+.page-wrapper.dataGift .container .card.rmInform .item .btn-group .btn {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 14px 4px;
   gap: 4px;
 }
-.dataGift .card.rmInform .announcePhone {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone {
   margin-bottom: 12px;
   gap: 12px;
 }
-.dataGift .card.rmInform .announcePhone .tit span {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .tit span {
   font-size: 18px;
   font-weight: 700;
   color: var(--dt-gray14);
 }
-.dataGift .card.rmInform .announcePhone .phoneList {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList {
   grid-template-columns: repeat(1, 1fr);
   gap: 12px;
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card {
   padding: 14px 20px;
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-body {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-body {
   gap: 12px;
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-body .text {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-body .text {
   align-items: flex-start;
   flex: unset;
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
   font-size: 16px;
   color: var(--dt-gray12);
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-body .name {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-body .name {
   font-size: 16px;
   font-weight: 700;
   color: var(--dt-gray16);
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-body .num {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-body .num {
   padding-left: 8px;
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray09);
 }
-.dataGift .card.rmInform .announcePhone .phoneList > .card .card-footer .close {
+.page-wrapper.dataGift .container .card.rmInform .announcePhone .phoneList > .card .card-footer .close {
   width: 24px;
   height: 24px;
   background-image: url(../images/icon/ic-card_close_small_line.svg);
@@ -225,44 +222,44 @@
   background-size: cover;
   background-position: center center;
 }
-.dataGift .card.rmInform .use-target {
+.page-wrapper.dataGift .container .card.rmInform .use-target {
   margin: 4px 0;
   padding: 28px 20px;
 }
-.dataGift .card.rmInform .use-target .txt {
+.page-wrapper.dataGift .container .card.rmInform .use-target .txt {
   font-weight: 600;
   padding-left: 34px;
   padding-right: 34px;
 }
-.dataGift .card.rmInform .use-target .list-target-item {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 32px;
   margin-top: 16px;
 }
-.dataGift .card.rmInform .use-target .list-target-item li {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.dataGift .card.rmInform .use-target .list-target-item li.img-wrap {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li.img-wrap {
   width: 46px;
 }
-.dataGift .card.rmInform .use-target .list-target-item li.img-wrap .img-box {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li.img-wrap .img-box {
   width: 100%;
   height: 32px;
   margin-bottom: 4px;
 }
-.dataGift .card.rmInform .use-target .list-target-item li:not(.img-wrap) {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li:not(.img-wrap) {
   position: relative;
   width: 60px;
   height: 60px;
   background-color: var(--dt-gray06);
   border-radius: 50%;
 }
-.dataGift .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li:not(.img-wrap)::before {
   content: "";
   display: block;
   position: absolute;
@@ -275,7 +272,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.dataGift .card.rmInform .use-target .list-target-item li .desc {
+.page-wrapper.dataGift .container .card.rmInform .use-target .list-target-item li .desc {
   display: block;
   font-size: 10px;
   font-weight: 600;
@@ -283,7 +280,7 @@
   line-height: normal;
   text-align: center;
 }
-.dataGift .card.rmInform .discnt-price {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -291,10 +288,10 @@
   flex-wrap: wrap;
   gap: 0;
 }
-.dataGift .card.rmInform .discnt-price .item-block {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-block {
   width: 98px;
 }
-.dataGift .card.rmInform .discnt-price .item-block p {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-block p {
   padding: 9px 0;
   background-color: var(--dt-gray06);
   color: var(--dt-gray16);
@@ -303,10 +300,10 @@
   text-align: center;
   border-radius: 4px;
 }
-.dataGift .card.rmInform .discnt-price .item-block p:not(:first-child) {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-block p:not(:first-child) {
   margin-top: 4px;
 }
-.dataGift .card.rmInform .discnt-price .item-arrowbg {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-arrowbg {
   position: relative;
   width: 74px;
   aspect-ratio: 1/1.36;
@@ -315,7 +312,7 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.dataGift .card.rmInform .discnt-price .item-arrowbg > span {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-arrowbg > span {
   display: block;
   position: absolute;
   top: 46px;
@@ -324,7 +321,7 @@
   font-size: 10px;
   font-weight: 600;
 }
-.dataGift .card.rmInform .discnt-price .item-point {
+.page-wrapper.dataGift .container .card.rmInform .discnt-price .item-point {
   display: block;
   width: 60px;
   height: 60px;
@@ -337,24 +334,24 @@
   border-radius: 50%;
   text-align: center;
 }
-.dataGift .data-box {
+.page-wrapper.dataGift .container .data-box {
   display: flex;
   flex-direction: column;
   margin-top: 24px;
 }
-.dataGift .data-box .data {
+.page-wrapper.dataGift .container .data-box .data {
   color: var(--dt-primary);
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.04em;
 }
-.dataGift .data-box .data-slide {
+.page-wrapper.dataGift .container .data-box .data-slide {
   display: flex;
   flex-direction: column;
   margin-top: 4px;
 }
-.dataGift .data-box .data-slide .content-row {
+.page-wrapper.dataGift .container .data-box .data-slide .content-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -364,7 +361,7 @@
   font-weight: 500;
   line-height: 1.2;
 }
-.dataGift .data-box .data-slide .range-custom {
+.page-wrapper.dataGift .container .data-box .data-slide .range-custom {
   width: 100%;
   height: 6px;
   position: relative;
@@ -375,10 +372,10 @@
           appearance: none;
   z-index: 1;
 }
-.dataGift .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
+.page-wrapper.dataGift .container .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
   background: transparent;
 }
-.dataGift .data-box .data-slide .range-custom::-webkit-slider-thumb {
+.page-wrapper.dataGift .container .data-box .data-slide .range-custom::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
   width: 32px;
@@ -389,19 +386,19 @@
   background-color: #fff;
   cursor: pointer;
 }
-.dataGift .data-box .data-slide .scale-line {
+.page-wrapper.dataGift .container .data-box .data-slide .scale-line {
   display: flex;
   justify-content: space-between;
   margin: 9px 20px 0;
   height: 6px;
 }
-.dataGift .data-box .data-slide .scale-line > * {
+.page-wrapper.dataGift .container .data-box .data-slide .scale-line > * {
   /* flex: 1; */
   position: relative;
   z-index: 0;
   height: 6px;
 }
-.dataGift .data-box .data-slide .scale-line > *:before {
+.page-wrapper.dataGift .container .data-box .data-slide .scale-line > *:before {
   display: block;
   width: 2px;
   height: 6px;
@@ -409,13 +406,13 @@
   background: var(--dt-gray09);
   content: "";
 }
-.dataGift .data-box .data-slide .scale-line > *:before:first-child::before {
+.page-wrapper.dataGift .container .data-box .data-slide .scale-line > *:before:first-child::before {
   content: none;
 }
-.dataGift .data-box .data-slide .scale-line > *:before:last-child::before {
+.page-wrapper.dataGift .container .data-box .data-slide .scale-line > *:before:last-child::before {
   content: none;
 }
-.dataGift .coupon-wrap {
+.page-wrapper.dataGift .container .coupon-wrap {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -424,23 +421,23 @@
   margin-top: 40px;
   row-gap: 20px;
 }
-.dataGift .coupon-wrap .img-box {
+.page-wrapper.dataGift .container .coupon-wrap .img-box {
   width: 75%;
   max-width: 250px;
   min-width: 200px;
 }
-.dataGift .coupon-wrap .txt-box {
+.page-wrapper.dataGift .container .coupon-wrap .txt-box {
   color: var(--dt-gray16);
   font-size: 14px;
   font-weight: 600;
 }
-.dataGift .coupon-wrap .txt-box .txt-tit {
+.page-wrapper.dataGift .container .coupon-wrap .txt-box .txt-tit {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.2;
   color: var(--dt-gray12);
 }
-.dataGift .coupon-wrap .txt-box .color-prim {
+.page-wrapper.dataGift .container .coupon-wrap .txt-box .color-prim {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -448,49 +445,49 @@
   padding-left: 5px;
   padding-top: 2px;
 }
-.dataGift .info-data-box {
+.page-wrapper.dataGift .container .info-data-box {
   margin: 18px 0 0;
 }
-.dataGift .info-data-box .content-row {
+.page-wrapper.dataGift .container .info-data-box .content-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.dataGift .info-data-box .content-row:not(:last-child) {
+.page-wrapper.dataGift .container .info-data-box .content-row:not(:last-child) {
   margin-bottom: 4px;
 }
-.dataGift .info-data-box .content-row .head {
+.page-wrapper.dataGift .container .info-data-box .content-row .head {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--dt-gray12);
 }
-.dataGift .info-data-box .content-row .tail {
+.page-wrapper.dataGift .container .info-data-box .content-row .tail {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--dt-gray16);
 }
-.dataGift .info-data-box .content-row .tail.color-prim {
+.page-wrapper.dataGift .container .info-data-box .content-row .tail.color-prim {
   font-size: 20px;
   color: var(--dt-primary);
 }
-.dataGift .btn.btn-between {
+.page-wrapper.dataGift .container .btn.btn-between {
   padding: 16px;
   border-radius: 8px;
 }
-.dataGift .btn .txt-wrap {
+.page-wrapper.dataGift .container .btn .txt-wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 6px;
 }
-.dataGift .btn .txt-wrap .txt-head {
+.page-wrapper.dataGift .container .btn .txt-wrap .txt-head {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--dt-gray16);
 }
-.dataGift .btn .txt-wrap .txt {
+.page-wrapper.dataGift .container .btn .txt-wrap .txt {
   font-size: 14px;
 }
