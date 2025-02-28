@@ -4,6 +4,15 @@
 %hidden {display: none;}
 %block {display: block;}
 %flex {display: flex;}
+.flex-row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	> * {
+		flex: 1;
+	}
+}
 .chips-group {margin-top:8px;}
 // 공지 텍스트 fw-7 gray11
 .notice-txt {
@@ -335,6 +344,22 @@ input::placeholder {
 	flex-wrap: wrap;
 	row-gap: 6px;
 	width: 100%;
+	// 검색버튼이 있는 드롭다운
+	&.flex-row {
+		.hyphen { 
+			max-width: fit-content;
+			@include fw-6(20px);
+			text-align: center;
+			color: var(--dt-gray16);
+		}
+		.btn-group {
+			max-width: fit-content;
+			.search {
+				padding: 16px;
+				max-height: 48px;
+			}
+		}
+	}
 }
 .multi-box{ 
 	display: flex;
@@ -354,7 +379,6 @@ input::placeholder {
 		width: unset;
 	}
 }
-
 .slct-box {
 	display: inline-flex;
 	flex-wrap: nowrap;
@@ -364,7 +388,6 @@ input::placeholder {
 	padding: 9px 10px 9px 12px;
 	min-height: 48px;
 	// width: calc(50% - 10px);
-
 	.txt {
 		display: flex;
 		flex-wrap: nowrap;
@@ -415,7 +438,6 @@ input::placeholder {
 		}
 	}
 }	
-
 .slct-box-wrap {
 	&:has(.slct-box:first-child:last-child) {
 		.slct-box {
@@ -429,6 +451,32 @@ input::placeholder {
 		}
 	} 
 }
+
+// 검색버튼이 있는 드롭다운
+.flex-row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	> * {
+		flex: 1;
+	}
+	.hyphen { 
+		max-width: fit-content;
+		@include fw-6(20px);
+		text-align: center;
+		color: var(--dt-gray16);
+	}
+	.btn-group {
+		max-width: fit-content;
+		.search {
+			padding: 16px;
+			max-height: 48px;
+		}
+	}
+}
+
+
 // 컴포넌트별 스타일 - email
 .email-form {
 	.input-group {
