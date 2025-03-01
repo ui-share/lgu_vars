@@ -59,7 +59,7 @@
 
 					<!-- 가족 공유 데이터 미 소진시 -->
 					<div class="card-group flex-column">
-						<div class="card horizon data">
+						<div class="card horizon sendData" role="button">
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
@@ -73,8 +73,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="card horizon dataGift">
-							<div class="card-header">
+						<div class="card horizon sendData" role="button">
+							<!-- 사용가능 시 card-header hidden -->
+							<div class="card-header hidden">
 								<div class="chips chips-tag">
 									<span class="txt">가족사랑데이터 소진</span>
 								</div>
@@ -93,30 +94,28 @@
 						</div>
 						<!-- 
 							가족 공유데이터 소진시 : is-disabled
-							<div class="card horizon dataGift is-disabled">
+							<div class="card horizon sendData is-disabled">
 						-->
-						<div class="card-group flex-column">
-							<div class="card horizon dataGift is-disabled">
-								<div class="card-header">
-									<div class="chips chips-tag">
-										<span class="txt">가족사랑데이터 소진</span>
-									</div>
+						<div class="card horizon sendData is-disabled" role="button">
+							<!-- 소진 시 card-header hidden 삭제 -->
+							<div class="card-header">
+								<div class="chips chips-tag">
+									<span class="txt">가족사랑데이터 소진</span>
 								</div>
-								<div class="card-body">
-									<div class="item util">
-										<span class="img-box">
-											<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
-										</span>
-									</div>
-									<div class="item text">
-										<span class="tit">가족 공용 데이터로 충전해요</span>
-										<span class="txt">가족사랑데이터</span>
-									</div>
+							</div>
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<span class="txt">가족사랑데이터</span>
 								</div>
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</div>

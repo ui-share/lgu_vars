@@ -260,34 +260,29 @@
   margin: 0 8px;
   transform: translateY(2px);
 }
-.dataGift .resendData {
-  padding: 16px;
+.dataGift .sendData {
+  flex-direction: column;
+  align-items: flex-start;
   background-color: var(--dt-gray02);
   box-shadow: unset;
-}
-.dataGift .resendData.dataGift {
-  padding: 16px 16px 16px 24px;
-}
-.dataGift .resendData.dataGift .card-body {
-  -moz-column-gap: 24px;
-       column-gap: 24px;
-}
-.dataGift .resendData.dataGift .card-body .item.text {
+  padding: 16px;
   gap: 6px;
 }
-.dataGift .resendData.dataGift .card-body .item.text .tit {
+.dataGift .sendData .item.text {
+  gap: 4px;
+}
+.dataGift .sendData .item.text .tit {
   font-size: 16px;
 }
-.dataGift .resendData.dataGift .card-body .item.text .num {
+.dataGift .sendData .item.text .num {
   font-size: 15px;
   font-weight: 600;
   color: var(--dt-primary);
 }
-.dataGift .resendData.dataGift .card-body .item.text .num .num-txt {
+.dataGift .sendData .item.text .num .num-txt {
   font-size: 14px;
   font-weight: 500;
 }
-.dataGift .resendData.dataGift .card-body .item.text .txt {
-  font-size: 12px;
-  font-weight: 500;
+.dataGift .sendData.is-disabled .chips {
+  opacity: 0.6;
 }
