@@ -12,7 +12,6 @@
   flex-direction: column;
   gap: 9px;
   position: relative;
-  height: -moz-max-content;
   height: max-content;
   min-height: 130px;
   padding: 0 20px;
@@ -23,38 +22,38 @@
 .section__cont.summary .cont__wrap .info-price-wrap .info-price.total-last .row, .section__cont.summary .cont__wrap .info-price-wrap .info-price-detail.total-last .row {
   margin-top: 4px;
 }
-.section__cont.summary .cont__wrap-bill {
+.section__cont.summary .cont__wrap-bill { /* 청구요금 외 공통, 홀맨 + 편지지 */
   background-image: url(../images/img/img-hm-bill.png);
 }
-.section__cont.summary .cont__wrap-realtime {
+.section__cont.summary .cont__wrap-realtime { /* 실시간요금, 홀맨 + 동전 */
   background-image: url(../images/img/img-hm-realtime.png);
 }
-.section__cont.summary .cont__wrap-usestate {
+.section__cont.summary .cont__wrap-usestate { /* 사용현황, 홀맨 + 원형그래프 */
   background-image: url(../images/img/img-hm-usestate.png);
 }
-.section__cont.summary .cont__wrap-account {
+.section__cont.summary .cont__wrap-account { /* 입금전용계좌, 홀맨 + 반지갑,동전 */
   background-image: url(../images/img/img-hm-account.png);
 }
-.section__cont.summary .cont__wrap-payment {
+.section__cont.summary .cont__wrap-payment { /* 요금납부방법, 홀맨 + 카드2개,동전 */
   background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 }
-.section__cont.summary .cont__wrap-pauseTemp {
+.section__cont.summary .cont__wrap-pauseTemp { /* 일시정지, 홀맨 + 휴대폰,일시정지아이콘 */
   background-image: url(../images/img/img-hm-pauseTemp.png);
 }
-.section__cont.summary .cont__wrap-MOPaymentUsed {
+.section__cont.summary .cont__wrap-MOPaymentUsed { /* 휴대폰결제 외 공통, 홀맨 + 휴대폰,카드 */
   background-image: url(../images/img/img-hm-MOpayment.png);
 }
-.section__cont.summary .cont__wrap-plan {
+.section__cont.summary .cont__wrap-plan { /* 나의요금제, 홀맨 + 카드지갑,동전 */
   background-image: url(../images/img/img-hm-myplan.png);
 }
-.section__cont.summary .cont__wrap-realtimeRoaming {
+.section__cont.summary .cont__wrap-realtimeRoaming { /* 실시간로밍 , 홀맨 + 비행기 */
   background-image: url(../images/img/img-hm-roaming.png);
 }
-.section__cont.summary .cont__wrap-roamingUsed {
+.section__cont.summary .cont__wrap-roamingUsed { /* 로밍이용내역 , 홀맨 + 비행기 */
   background-image: url(../images/img/img-hm-roaming.png);
 }
-.section__cont.summary .cont__wrap-dataGift {
-  background-image: url(../images/img/img-hm-dataGift.png);
+.section__cont.summary .cont__wrap-dataGift { /* 데이터기프트 */
+  background-image: url(../images/img/img-hm-dataGift.png); /* 미존재 */
 }
 .section__cont.summary .txt-select-wrap {
   display: flex;
@@ -212,7 +211,6 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -416,8 +414,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;
