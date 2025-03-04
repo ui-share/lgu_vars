@@ -582,10 +582,12 @@ button {
 	.tit {
 		@include fw-6();
 		color: var(--dt-gray16);
+		line-height: 1.2;
 	}
 	.txt{
 		@include fw-5(14px);
 		color: var(--dt-gray11);
+		line-height: 1.2;
 		.btn-tooltip {
 			transform: translateY(-1px);
 		}
@@ -593,6 +595,7 @@ button {
 	.txt-prim-md {
 		@include fw-7(16px);
 		color: var(--dt-primary);
+		line-height: 1.2;
 	}
 }
 .txt-sub {

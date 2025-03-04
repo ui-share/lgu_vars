@@ -726,11 +726,13 @@ button {
   font-size: 16px;
   font-weight: 600;
   color: var(--dt-gray16);
+  line-height: 1.2;
 }
 .text-box .txt {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
+  line-height: 1.2;
 }
 .text-box .txt .btn-tooltip {
   transform: translateY(-1px);
@@ -739,6 +741,7 @@ button {
   font-size: 16px;
   font-weight: 700;
   color: var(--dt-primary);
+  line-height: 1.2;
 }
 
 .txt-sub {
