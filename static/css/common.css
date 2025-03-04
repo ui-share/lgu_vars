@@ -3749,6 +3749,7 @@ input::placeholder {
   pointer-events: none;
 }
 .popup-body .slctInfo-box {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
