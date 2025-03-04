@@ -4227,6 +4227,7 @@ input::placeholder {
 }
 .twoFactorAuth .slctAuth .btn-radio.is-selected {
   border: 1px solid var(--dt-primary);
+  box-shadow: 0 0 0 1px var(--dt-primary) inset;
 }
 .twoFactorAuth .slctAuth .btn-radio.is-selected .txt {
   color: var(--dt-primary);
@@ -4237,8 +4238,9 @@ input::placeholder {
   margin-top: 36px;
 }
 .twoFactorAuth .auth-status .txt {
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
   color: #563aff;
 }
 .twoFactorAuth .auth-status .txt::before {
@@ -4251,6 +4253,16 @@ input::placeholder {
   background-image: url(../../static/images/icon/ic-auth_blue.svg);
   background-size: 20px 20px;
   background-position: 50% 50%;
+}
+.twoFactorAuth .auth-status.ready {
+  margin: 16px 0;
+}
+.twoFactorAuth .auth-status.ready .txt {
+  font-weight: 400;
+  color: var(--dt-gray16);
+}
+.twoFactorAuth .auth-status.ready .txt::before {
+  display: none;
 }
 
 .switch-group .switch-input {
