@@ -1,147 +1,147 @@
 @import "../scss/base/mixin";
 
-.page-wrapper {
-	&.mobilePayPrepayment {
-		
+.mobilePayPrepayment {
+	.section__cont.flex-row {
+		align-items: unset;
+		gap: 44px;
 	}
-}
-
-.info-col-wrap {
-	&:has(.info-price) {
-		.col {
-			row-gap:10px;
-			padding-top:4px;
-			> .txt-title {padding-bottom:10px;line-height:120%;}
-			.row {
-				.txt-title, .txt-desc {
-					color:var(--dt-gray14);
-					@include fw-5(14px);
+	.info-col-wrap {
+		&:has(.info-price) {
+			.col {
+				row-gap:10px;
+				padding-top:4px;
+				> .txt-title {padding-bottom:10px;line-height:120%;}
+				.row {
+					.txt-title, .txt-desc {
+						color:var(--dt-gray14);
+						@include fw-5(14px);
+					}
+				}
+				& + .info-price.total-last {
+					margin-top:8px;
+					padding-top:20px;
+					.txt-price {line-height:120%;}
+				}
+				& + .info-price.total-last:after {
+					bottom:unset;
+					top:0;
+					width:100%;
 				}
 			}
-			& + .info-price.total-last {
-				margin-top:8px;
-				padding-top:20px;
-				.txt-price {line-height:120%;}
-			}
-			& + .info-price.total-last:after {
-				bottom:unset;
-				top:0;
-				width:100%;
-			}
+			.btn-group {margin-top:8px;}
 		}
-		.btn-group {margin-top:8px;}
-	}
-	.col {row-gap:16px;}
-	.txt-title {
-		color:var(--dt-gray16);
-		@include fw-6(16px);
-		line-height:150%;
-	}
-	.btn-group {
-		margin-top:20px;
-		.btn {
-			background-color:var(--dt-gray06);
-			border:1px solid var(--dt-gray06);
-			.txt {color:var(--dt-gray11);font-size:14px;}
-		}
-	}
-}
-.plan-wrap.line {
-	margin-top:4px;
-	.list-plan {
-		padding-top:20px;
+		.col {row-gap:16px;}
 		.txt-title {
 			color:var(--dt-gray16);
-		}
-		.txt-price {
-			text-align:right;
-			@include fw-7(16px);
+			@include fw-6(16px);
 			line-height:150%;
 		}
-	}
-	.txt-sub {
-		.img-box {
-			width:24px;height:24px;
-			img {width:18px;transform:translateY(-1px);}
-		}
-	}
-}
-// 선결제 입력 케이스
-.input-control {
-	&.error { // 에러케이스
-		input:valid {
-			color:var(--dt-error);
-		}
-		.input-row {
-			border-color:var(--dt-error);
-		}
-	}
-}
-
-// 휴대폰결제변경내역_TAB UI
-.list-payment {
-	margin-top:20px;
-	.card.solid {
-		row-gap:8px;
-		padding:18px 24px 22px;
-		.row {
-			justify-content:space-between;
-			flex-wrap:wrap;
-			gap:8px;
-			&.detail {
-				.txt-title {color: var(--dt-gray11);}
+		.btn-group {
+			margin-top:20px;
+			.btn {
+				background-color:var(--dt-gray06);
+				border:1px solid var(--dt-gray06);
+				.txt {color:var(--dt-gray11);font-size:14px;}
 			}
 		}
-		.txt-title {
-			@include fw-5(14px);
-			color:var(--dt-gray16);
-		}
-		.txt-date {
-			color: var(--dt-gray11);
-			@include fw-5(12px);
-			line-height:150%;
-			padding-bottom:4px;
-		}
-		.txt-desc {
-			@include flexRow;
-			justify-content:flex-end;
-			align-items:center;
-			column-gap:2px;
-			margin-left:auto;
-			color:var(--dt-gray16);
-			@include fw-5(14px);
-			.img-box {width:16px;min-width:16px;height:16px;}
-		}
-		.color-prim {font-weight:600;}
 	}
-}
-.segment__wrap {margin-top:10px;}
-.segment-content {
+	.plan-wrap.line {
+		margin-top:4px;
+		.list-plan {
+			padding-top:20px;
+			.txt-title {
+				color:var(--dt-gray16);
+			}
+			.txt-price {
+				text-align:right;
+				@include fw-7(16px);
+				line-height:150%;
+			}
+		}
+		.txt-sub {
+			.img-box {
+				width:24px;height:24px;
+				img {width:18px;transform:translateY(-1px);}
+			}
+		}
+	}
+	// 선결제 입력 케이스
+	.input-control {
+		&.error { // 에러케이스
+			input:valid {
+				color:var(--dt-error);
+			}
+			.input-row {
+				border-color:var(--dt-error);
+			}
+		}
+	}
+	
+	// 휴대폰결제변경내역_TAB UI
 	.list-payment {
-		margin-top:2px;
+		margin-top:20px;
+		.card.solid {
+			row-gap:8px;
+			padding:18px 24px 22px;
+			.row {
+				justify-content:space-between;
+				flex-wrap:wrap;
+				gap:8px;
+				&.detail {
+					.txt-title {color: var(--dt-gray11);}
+				}
+			}
+			.txt-title {
+				@include fw-5(14px);
+				color:var(--dt-gray16);
+			}
+			.txt-date {
+				color: var(--dt-gray11);
+				@include fw-5(12px);
+				line-height:150%;
+				padding-bottom:4px;
+			}
+			.txt-desc {
+				@include flexRow;
+				justify-content:flex-end;
+				align-items:center;
+				column-gap:2px;
+				margin-left:auto;
+				color:var(--dt-gray16);
+				@include fw-5(14px);
+				.img-box {width:16px;min-width:16px;height:16px;}
+			}
+			.color-prim {font-weight:600;}
+		}
 	}
-}
-@media screen and (max-width:359px) {
-	.input-row-wrap.al-baseline {
-		column-gap:8px;
+	.segment__wrap {margin-top:10px;}
+	.segment-content {
+		.list-payment {
+			margin-top:2px;
+		}
 	}
-}
-@media screen and (max-width:269px) {
-	.input-row-wrap.al-baseline {
-		flex-wrap:wrap;
-		.input-control {
-			width:calc(100% - 44px);
-			.input-row {max-width:100%;}
-			.input-field {max-width: 100%;}
-			&.error {
-				.bubble-box.topright {
-					transform: translateX(-50%);
-					right: unset;
-					left: 50%;
-					.bubble-box-arrow {
-						right:unset;
-						left:50%;
-						margin-left:-8px;
+	@media screen and (max-width:359px) {
+		.input-row-wrap.al-baseline {
+			column-gap:8px;
+		}
+	}
+	@media screen and (max-width:269px) {
+		.input-row-wrap.al-baseline {
+			flex-wrap:wrap;
+			.input-control {
+				width:calc(100% - 44px);
+				.input-row {max-width:100%;}
+				.input-field {max-width: 100%;}
+				&.error {
+					.bubble-box.topright {
+						transform: translateX(-50%);
+						right: unset;
+						left: 50%;
+						.bubble-box-arrow {
+							right:unset;
+							left:50%;
+							margin-left:-8px;
+						}
 					}
 				}
 			}

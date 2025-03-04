@@ -1,111 +1,112 @@
-.info-col-wrap:has(.info-price) .col {
+.mobilePayPrepayment .section__cont.flex-row {
+  align-items: unset;
+  gap: 44px;
+}
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col {
   row-gap: 10px;
   padding-top: 4px;
 }
-.info-col-wrap:has(.info-price) .col > .txt-title {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col > .txt-title {
   padding-bottom: 10px;
   line-height: 120%;
 }
-.info-col-wrap:has(.info-price) .col .row .txt-title, .info-col-wrap:has(.info-price) .col .row .txt-desc {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col .row .txt-title, .mobilePayPrepayment .info-col-wrap:has(.info-price) .col .row .txt-desc {
   color: var(--dt-gray14);
   font-size: 14px;
   font-weight: 500;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col + .info-price.total-last {
   margin-top: 8px;
   padding-top: 20px;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last .txt-price {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col + .info-price.total-last .txt-price {
   line-height: 120%;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last:after {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .col + .info-price.total-last:after {
   bottom: unset;
   top: 0;
   width: 100%;
 }
-.info-col-wrap:has(.info-price) .btn-group {
+.mobilePayPrepayment .info-col-wrap:has(.info-price) .btn-group {
   margin-top: 8px;
 }
-.info-col-wrap .col {
+.mobilePayPrepayment .info-col-wrap .col {
   row-gap: 16px;
 }
-.info-col-wrap .txt-title {
+.mobilePayPrepayment .info-col-wrap .txt-title {
   color: var(--dt-gray16);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
 }
-.info-col-wrap .btn-group {
+.mobilePayPrepayment .info-col-wrap .btn-group {
   margin-top: 20px;
 }
-.info-col-wrap .btn-group .btn {
+.mobilePayPrepayment .info-col-wrap .btn-group .btn {
   background-color: var(--dt-gray06);
   border: 1px solid var(--dt-gray06);
 }
-.info-col-wrap .btn-group .btn .txt {
+.mobilePayPrepayment .info-col-wrap .btn-group .btn .txt {
   color: var(--dt-gray11);
   font-size: 14px;
 }
-
-.plan-wrap.line {
+.mobilePayPrepayment .plan-wrap.line {
   margin-top: 4px;
 }
-.plan-wrap.line .list-plan {
+.mobilePayPrepayment .plan-wrap.line .list-plan {
   padding-top: 20px;
 }
-.plan-wrap.line .list-plan .txt-title {
+.mobilePayPrepayment .plan-wrap.line .list-plan .txt-title {
   color: var(--dt-gray16);
 }
-.plan-wrap.line .list-plan .txt-price {
+.mobilePayPrepayment .plan-wrap.line .list-plan .txt-price {
   text-align: right;
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
 }
-.plan-wrap.line .txt-sub .img-box {
+.mobilePayPrepayment .plan-wrap.line .txt-sub .img-box {
   width: 24px;
   height: 24px;
 }
-.plan-wrap.line .txt-sub .img-box img {
+.mobilePayPrepayment .plan-wrap.line .txt-sub .img-box img {
   width: 18px;
   transform: translateY(-1px);
 }
-
-.input-control.error input:valid {
+.mobilePayPrepayment .input-control.error input:valid {
   color: var(--dt-error);
 }
-.input-control.error .input-row {
+.mobilePayPrepayment .input-control.error .input-row {
   border-color: var(--dt-error);
 }
-
-.list-payment {
+.mobilePayPrepayment .list-payment {
   margin-top: 20px;
 }
-.list-payment .card.solid {
+.mobilePayPrepayment .list-payment .card.solid {
   row-gap: 8px;
   padding: 18px 24px 22px;
 }
-.list-payment .card.solid .row {
+.mobilePayPrepayment .list-payment .card.solid .row {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
 }
-.list-payment .card.solid .row.detail .txt-title {
+.mobilePayPrepayment .list-payment .card.solid .row.detail .txt-title {
   color: var(--dt-gray11);
 }
-.list-payment .card.solid .txt-title {
+.mobilePayPrepayment .list-payment .card.solid .txt-title {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray16);
 }
-.list-payment .card.solid .txt-date {
+.mobilePayPrepayment .list-payment .card.solid .txt-date {
   color: var(--dt-gray11);
   font-size: 12px;
   font-weight: 500;
   line-height: 150%;
   padding-bottom: 4px;
 }
-.list-payment .card.solid .txt-desc {
+.mobilePayPrepayment .list-payment .card.solid .txt-desc {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -117,48 +118,45 @@
   font-size: 14px;
   font-weight: 500;
 }
-.list-payment .card.solid .txt-desc .img-box {
+.mobilePayPrepayment .list-payment .card.solid .txt-desc .img-box {
   width: 16px;
   min-width: 16px;
   height: 16px;
 }
-.list-payment .card.solid .color-prim {
+.mobilePayPrepayment .list-payment .card.solid .color-prim {
   font-weight: 600;
 }
-
-.segment__wrap {
+.mobilePayPrepayment .segment__wrap {
   margin-top: 10px;
 }
-
-.segment-content .list-payment {
+.mobilePayPrepayment .segment-content .list-payment {
   margin-top: 2px;
 }
-
 @media screen and (max-width: 359px) {
-  .input-row-wrap.al-baseline {
+  .mobilePayPrepayment .input-row-wrap.al-baseline {
     -moz-column-gap: 8px;
          column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {
-  .input-row-wrap.al-baseline {
+  .mobilePayPrepayment .input-row-wrap.al-baseline {
     flex-wrap: wrap;
   }
-  .input-row-wrap.al-baseline .input-control {
+  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control {
     width: calc(100% - 44px);
   }
-  .input-row-wrap.al-baseline .input-control .input-row {
+  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control .input-row {
     max-width: 100%;
   }
-  .input-row-wrap.al-baseline .input-control .input-field {
+  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control .input-field {
     max-width: 100%;
   }
-  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
+  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
     transform: translateX(-50%);
     right: unset;
     left: 50%;
   }
-  .input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
+  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
     right: unset;
     left: 50%;
     margin-left: -8px;
