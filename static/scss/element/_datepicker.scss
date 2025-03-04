@@ -16,6 +16,12 @@
 		.datepicker:not(.active) {
 			display: block !important;
 		}
+		input[name="start"] + .datepicker:not(.active) {
+			display: none !important;
+		}
+		input[name="end"] + .datepicker:not(.active) {
+			display: block !important;
+		}
 
 		// &.start_day {
 		// 	input[name="start"] + .datepicker:not(.active) {
