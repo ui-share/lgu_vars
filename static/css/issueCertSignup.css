@@ -1,4 +1,4 @@
-.page-wrapper.issueCertSignup .plan-wrap .btn {
+.issueCertSignup .plan-wrap .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -6,29 +6,29 @@
   gap: 4px;
   /* sizing */
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn .txt {
+.issueCertSignup .plan-wrap .btn .txt {
   font-size: 16px;
   font-weight: 600;
   line-height: 1;
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn:active {
+.issueCertSignup .plan-wrap .btn:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.is-disabled {
+.issueCertSignup .plan-wrap .btn.is-disabled {
   opacity: 0.6;
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.line {
+.issueCertSignup .plan-wrap .btn.line {
   background-color: transparent;
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.line.btn-sec {
+.issueCertSignup .plan-wrap .btn.line.btn-sec {
   border: 1px solid var(--dt-gray13);
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.line.btn-sec .txt {
+.issueCertSignup .plan-wrap .btn.line.btn-sec .txt {
   color: var(--dt-gray13);
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.btn-md {
+.issueCertSignup .plan-wrap .btn.btn-md {
   padding: 8px 12px;
 }
-.page-wrapper.issueCertSignup .plan-wrap .btn.btn-md .txt {
+.issueCertSignup .plan-wrap .btn.btn-md .txt {
   font-size: 12px;
 }

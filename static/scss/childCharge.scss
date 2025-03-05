@@ -1,17 +1,9 @@
 @import "../scss/base/mixin";
-.page-wrapper {
-	&.childCharge {
-		.container {
-			.section__cont {
-				&.summary {
-					padding-top: 28px;
-				}
-				&.desc {//입금전용계좌추가
-					padding: 36px 0 48px 0;
-					&:has(.accnt-cont-wrap){
-						height:calc(100% - 262px);
-					}
-				}
+.childCharge {
+	.container {
+		.section__cont {
+			&.summary {
+				padding-top: 28px;
 			}
 		}
 	}

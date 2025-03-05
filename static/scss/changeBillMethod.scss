@@ -1,350 +1,334 @@
 @import "../scss/base/mixin";
 // 청구서 받는방법 변경 changeBillMethod
-.page-wrapper {
-	&.changeBillMethod {
-		.container {
-			.section__cont {
-				// padding: 76px 0 66px;
-			}
-		}
-	}
-}
-.page-wrapper {
-	&.changeBillMethod {
-		.container {
-			.section__cont {
-				&.segment {
-					padding: 36px 0 48px;
-					gap: 0;
-				}
-				&.desc {//입금전용계좌추가
-					padding: 36px 0 48px 0;
-					&:has(.accnt-cont-wrap){
-						height:calc(100% - 262px);
-					}
-				}
-                &.counsel {		
-                    padding: 36px 0 0px;
-                }
-				&:has(.addr-wrap){
-					height:100vh;
-					.cont__wrap-service {
-						height:100%;
-						.cont__txt-box .txt {line-height:150%;}
-					}
-				}
-
-			}
-		}
-	}
-}
-
-.cont__wrap {
-	.con__tit-box {
-		.tit-head {
-			flex-wrap:wrap;
-			.txt-title {line-height:22px;}
-			.color-prim {font-size: 18px;font-weight: 700;}
-		}
-		.tit-tail {min-width:max-content;}
-		&:not(:has(.tit-tail)) {
-			&:has(.bullet-list) {
-				flex-direction:column;
-				row-gap:6px;
-			}
-		}
-	}
-	.cont__txt-box {
-		.txt {
-			line-height: 1.5;
-			&.price {
-				@include flexRow;
-				align-items: center;
-				flex-wrap: wrap;
-				@include fw-6(18px);
-				line-height: 1.2;				
-				padding-right: 35%;
-				row-gap: 4px;
-				color: var(--dt-gray16);
-				.deco {
-					@include fw-7(30px);
-					line-height: 1.2;
-					margin-right: 2px;
-				}
-				.deco-sub {
-					@include fw-7(22px);
-					line-height:1.5;
-					margin-right:2px;
-				}
-				.color-prim {
-					@include fw-7(22px);
-					line-height: 1.5;
-				}
-				&:has(.deco),
-				&:has(.color-prim) {
-					color: var(--dt-gray14);
-				}
-				&:has(.deco + .color-prim) {
-					color: var(--dt-gray14);
-					.color-prim {
-						@include fw-6(18px);
-						line-height:1.2;
-					}
-				}
-				.txt-sub {
-					width:100%;
-					font-size:16px;color:var(--dt-black);
-				}
-			}
-		}
-	}
-	&.cont__wrap-vertical {
-		&.wd-full {
-			&:has(.card-group.bank) {
-				height:100%;
-			}
-			row-gap:0;
-			> div {padding-right:20px;padding-left:20px;}
-			.con__tit-box {padding-bottom:16px;}
-			.card-group.bank {margin-bottom:16px;}
-			.accnt-cont-wrap {
-				min-height:120px;
-				overflow-y: auto;
-			}
-		}
-	}
-	// 스크롤버튼
-	&.cont__wrap-btBtn {
-		position:fixed;
-		bottom:20px;
-		left:0;
-		width:100%;
-		pointer-events:auto;
-		opacity:1;
-		transition:opacity 0.2s ease-in-out;
-		&.is-scrolled {
-			opacity:0;
-			pointer-events:none;
-		}
-		.btn-scroll {margin:0 auto;}
-	}
-}
-.info-price-single { // 써머리bg영역 내 증감, 주의사항 공지 영역
-	margin:0 20px;
-	padding:18px 20px;
-	background-color:var(--dt-white);
-	border-radius:8px;
-	span {
-		text-align:center;
-	}
-	.txt-info {
-		@include flexBox(center, center);
-		flex-wrap:wrap;
-		color:var(--dt-gray11);
-		gap:4px; 
-		@include fw-6();
-		&.decrease {
-			.img-box {transform: rotate(180deg)}
-		}
-		> span:first-child {
-			&:not(:has(.color-prim)) {
-				color:var(--dt-primary);
-			}
-		}
-	}
-	.txt-price {
-		display:inline-block;
-		margin-right:4px;
-		@include fw-7(18px);
-		color:var(--dt-primary); /* 추후 변경 예정 */
-	}
-	.img-box {
-		min-width:18px;
-		width:18px;height:18px;
-		margin-left:2px;
-	}
-}
-.btn-srch-childline {
-	justify-content:space-between;
-	align-items:center;
-	width:100%;
-	min-height:62px;
-	padding:10px 20px;
-	border-radius:0;
-	background-color:var(--dt-gray15);
-	.txt-title {
-		column-gap:8px;
-		flex-wrap:wrap;
-		line-height:150%;
-		>span {font-size:14px;}
-	}
-	.txt-childname {color:var(--dt-white);font-weight:700;}
-	.txt-phone {color:#A8B3BD;font-weight:500;}
-	.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
-}
-.select-billdate {
-	@include flexColum;
-	min-height: 21px;	
-	.txt-due {
-		color: var(--dt-gray13);
-		@include fw-5(14px);
-		line-height:1.5;
-	}
-}
-.card-group {
-	&.benefit {
-		padding:22px 4px;
-		gap:0;
-		background-color: var(--dt-gray02);
-		border-radius:8px;
-		.card {
-			padding:0 16px;
-			border-radius:unset;
-			box-shadow:unset;
-			background-color:unset;
-			&:nth-of-type(2) {border-left:1px solid var(--dt-gray08);}
-			.txt {/* 타이틀 */
-				font-size:12px;
-				line-height:18px;
-			}
-			.item.util {
-				justify-content:flex-start;
-				flex-wrap: wrap;
-				gap:8px;
-			}
-		}
-		.img-box {width:48px;height:48px; /* 유투브, 미디어 아이콘 */}
-		.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
-		.card-body {row-gap:6px;}
-	}
-	&.bank {
-		row-gap:16px;
-		.item.util {min-width:20px;}
-		.item.text{width:calc(100% - 52px);}
-	}
-}
-
-.caption-wrap {
-	width: 100%;
-	padding: 10px 8px;
-	text-align: center;
-	border-radius: 4px;
-	background-color: var(--dt-gray03);
-	.caption {
-		@include fw-6(12px);
-		line-height: 120%;
-		color: var(--dt-gray11);
-	}
-	.caption::before {
-		content: "";
-		display: inline;
-		padding-left: 20px;
-		background-image: url(../images/icon/ic-bullet-info.svg);
-		background-size: 16px 16px;
-		background-repeat: no-repeat;
-		background-position: left 0 center;
-	}
-}
-
-// 자녀요금 billChild section__cont 내 section__cont 로 인한 divider 조정
-.section__cont:has(.section__cont):has(+.section__divider) {
-	padding-bottom: 0;
-}
-.cont__wrap {
-	&.cont__wrap-btBtn {
-		padding: 0;
-		background-color: transparent;
-		position: fixed;
-		left: 0;
-		bottom: 0;
-		z-index:999; // 삭제 x
-		width: 100%;
-		.btn-group {
-			position: relative;
-			background-color: var(--dt-white);
-			padding: 0 20px 20px;
-			&::before {
-				content: "";
-				display: inline-block;
-				position: absolute;
-				top: -20px;
-				left: 0;
-				width: 100%;
-				height: 20px;
-				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
-			}
-			// 풀버튼일 경우 패딩 0
-			&.full { 
-				padding: 0;
-				.btn {
-					border-radius: 0;
-				}
-			}
-		}
-		.btn.bg-bank {
-			width:calc(100% - 40px);
-			margin:0 auto 20px;
-			background-color:var(--dt-gray01);
-			border:1px solid var(--dt-gray08);
-		}
-		&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
-			.accordion-container {
-				padding-left:20px;
-				padding-right:20px;
-				padding-bottom:8px;
-			}
-			box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
-		}
-	}
-
-}
-.txt-infoWrap {
-	@include fw-6(12px);
-	color: var(--dt-gray11);
-	margin-top: 28px;
-	.subTxt-info {
-		@include fw-6(12px);
-		color: var(--dt-gray10);
-	}
-}
-
-// 주소 검색
 .changeBillMethod {
-	.input-col-wrap {
-		row-gap: 8px;
+	.container {
+		.section__cont {
+			&.segment {
+				padding: 36px 0 48px;
+				gap: 0;
+			}
+			&.desc {//입금전용계좌추가
+				padding: 36px 0 48px 0;
+				&:has(.accnt-cont-wrap){
+					height:calc(100% - 262px);
+				}
+			}
+			&.counsel {		
+				padding: 36px 0 0px;
+			}
+			&:has(.addr-wrap){
+				height:100vh;
+				.cont__wrap-service {
+					height:100%;
+					.cont__txt-box .txt {line-height:150%;}
+				}
+			}
+
+		}
 	}
 }
 
-.addr-wrap {
-	max-height: calc(100vh - 260px);
-	overflow-y: auto;
-	.addr-box {
-		padding: 16px 0 17px;
-		border-bottom: 1px solid var(--dt-gray17);
-		&[role="button"]:active {
-			box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+.changeBillMethod {
+	.cont__wrap {
+		.con__tit-box {
+			.tit-head {
+				flex-wrap:wrap;
+				.txt-title {line-height:22px;}
+				.color-prim {font-size: 18px;font-weight: 700;}
+			}
+			.tit-tail {min-width:max-content;}
+			&:not(:has(.tit-tail)) {
+				&:has(.bullet-list) {
+					flex-direction:column;
+					row-gap:6px;
+				}
+			}
 		}
-		.zip-code {
-			@include fw-6(14px);
-			line-height: 17px;
-			color: var(--dt-primary);
-			margin-bottom: 4px;
+		.cont__txt-box {
+			.txt {
+				line-height: 1.5;
+				&.price {
+					@include flexRow;
+					align-items: center;
+					flex-wrap: wrap;
+					@include fw-6(18px);
+					line-height: 1.2;				
+					padding-right: 35%;
+					row-gap: 4px;
+					color: var(--dt-gray16);
+					.deco {
+						@include fw-7(30px);
+						line-height: 1.2;
+						margin-right: 2px;
+					}
+					.deco-sub {
+						@include fw-7(22px);
+						line-height:1.5;
+						margin-right:2px;
+					}
+					.color-prim {
+						@include fw-7(22px);
+						line-height: 1.5;
+					}
+					&:has(.deco),
+					&:has(.color-prim) {
+						color: var(--dt-gray14);
+					}
+					&:has(.deco + .color-prim) {
+						color: var(--dt-gray14);
+						.color-prim {
+							@include fw-6(18px);
+							line-height:1.2;
+						}
+					}
+					.txt-sub {
+						width:100%;
+						font-size:16px;color:var(--dt-black);
+					}
+				}
+			}
 		}
-		.addr-main {
+		&.cont__wrap-vertical {
+			&.wd-full {
+				&:has(.card-group.bank) {
+					height:100%;
+				}
+				row-gap:0;
+				> div {padding-right:20px;padding-left:20px;}
+				.con__tit-box {padding-bottom:16px;}
+				.card-group.bank {margin-bottom:16px;}
+				.accnt-cont-wrap {
+					min-height:120px;
+					overflow-y: auto;
+				}
+			}
+		}
+	}
+	.info-price-single { // 써머리bg영역 내 증감, 주의사항 공지 영역
+		margin:0 20px;
+		padding:18px 20px;
+		background-color:var(--dt-white);
+		border-radius:8px;
+		span {
+			text-align:center;
+		}
+		.txt-info {
+			@include flexBox(center, center);
+			flex-wrap:wrap;
+			color:var(--dt-gray11);
+			gap:4px; 
+			@include fw-6();
+			&.decrease {
+				.img-box {transform: rotate(180deg)}
+			}
+			> span:first-child {
+				&:not(:has(.color-prim)) {
+					color:var(--dt-primary);
+				}
+			}
+		}
+		.txt-price {
+			display:inline-block;
+			margin-right:4px;
+			@include fw-7(18px);
+			color:var(--dt-primary); /* 추후 변경 예정 */
+		}
+		.img-box {
+			min-width:18px;
+			width:18px;height:18px;
+			margin-left:2px;
+		}
+	}
+	.btn-srch-childline {
+		justify-content:space-between;
+		align-items:center;
+		width:100%;
+		min-height:62px;
+		padding:10px 20px;
+		border-radius:0;
+		background-color:var(--dt-gray15);
+		.txt-title {
+			column-gap:8px;
+			flex-wrap:wrap;
+			line-height:150%;
+			>span {font-size:14px;}
+		}
+		.txt-childname {color:var(--dt-white);font-weight:700;}
+		.txt-phone {color:#A8B3BD;font-weight:500;}
+		.img-box {width:24px;height:24px;}/* 화살표 아이콘 */
+	}
+	.select-billdate {
+		@include flexColum;
+		min-height: 21px;	
+		.txt-due {
+			color: var(--dt-gray13);
 			@include fw-5(14px);
-			line-height: 21px;
-			color: var(--dt-gray16);
-			margin-bottom: 2px;
+			line-height:1.5;
 		}
-		.addr-detail {
-			@include fw-5(12px);
-			line-height: 18px;
+	}
+	.card-group {
+		&.benefit {
+			padding:22px 4px;
+			gap:0;
+			background-color: var(--dt-gray02);
+			border-radius:8px;
+			.card {
+				padding:0 16px;
+				border-radius:unset;
+				box-shadow:unset;
+				background-color:unset;
+				&:nth-of-type(2) {border-left:1px solid var(--dt-gray08);}
+				.txt {/* 타이틀 */
+					font-size:12px;
+					line-height:18px;
+				}
+				.item.util {
+					justify-content:flex-start;
+					flex-wrap: wrap;
+					gap:8px;
+				}
+			}
+			.img-box {width:48px;height:48px; /* 유투브, 미디어 아이콘 */}
+			.item-tit {max-width:51px;@include fw-5(14px);line-height:21px;}
+			.card-body {row-gap:6px;}
+		}
+		&.bank {
+			row-gap:16px;
+			.item.util {min-width:20px;}
+			.item.text{width:calc(100% - 52px);}
+		}
+	}
+	
+	.caption-wrap {
+		width: 100%;
+		padding: 10px 8px;
+		text-align: center;
+		border-radius: 4px;
+		background-color: var(--dt-gray03);
+		.caption {
+			@include fw-6(12px);
+			line-height: 120%;
 			color: var(--dt-gray11);
 		}
-		&.card.solid {
-			background-color: transparent;
-			border-bottom: unset;
-			padding: 72px 0;
+		.caption::before {
+			content: "";
+			display: inline;
+			padding-left: 20px;
+			background-image: url(../images/icon/ic-bullet-info.svg);
+			background-size: 16px 16px;
+			background-repeat: no-repeat;
+			background-position: left 0 center;
 		}
-	}    
+	}
+	
+	// 자녀요금 billChild section__cont 내 section__cont 로 인한 divider 조정
+	.section__cont:has(.section__cont):has(+.section__divider) {
+		padding-bottom: 0;
+	}
+	.cont__wrap {
+		&.cont__wrap-btBtn {
+			padding: 0;
+			background-color: transparent;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			z-index:999; // 삭제 x
+			width: 100%;
+			pointer-events:auto;
+			opacity:1;
+			transition:opacity 0.2s ease-in-out;
+			&.is-scrolled {
+				opacity:0;
+				pointer-events:none;
+			}
+			.btn-scroll {margin:0 auto;}
+			.btn-group {
+				position: relative;
+				background-color: var(--dt-white);
+				padding: 0 20px 20px;
+				&::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: -20px;
+					left: 0;
+					width: 100%;
+					height: 20px;
+					background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
+				}
+				// 풀버튼일 경우 패딩 0
+				&.full { 
+					padding: 0;
+					.btn {
+						border-radius: 0;
+					}
+				}
+			}
+			.btn.bg-bank {
+				width:calc(100% - 40px);
+				margin:0 auto 20px;
+				background-color:var(--dt-gray01);
+				border:1px solid var(--dt-gray08);
+			}
+			&:has(.accordion-container:first-child) { // 버튼 위 아코디언(동의영역) 올라가는 케이스
+				.accordion-container {
+					padding-left:20px;
+					padding-right:20px;
+					padding-bottom:8px;
+				}
+				box-shadow:0px -8px 13px rgba(0, 0, 0, 0.04);
+			}
+		}
+	
+	}
+	.txt-infoWrap {
+		@include fw-6(12px);
+		color: var(--dt-gray11);
+		margin-top: 28px;
+		.subTxt-info {
+			@include fw-6(12px);
+			color: var(--dt-gray10);
+		}
+	}
+	
+	// 주소 검색
+	.changeBillMethod {
+		.input-col-wrap {
+			row-gap: 8px;
+		}
+	}
+	
+	.addr-wrap {
+		max-height: calc(100vh - 260px);
+		overflow-y: auto;
+		.addr-box {
+			padding: 16px 0 17px;
+			border-bottom: 1px solid var(--dt-gray17);
+			&[role="button"]:active {
+				box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
+			}
+			.zip-code {
+				@include fw-6(14px);
+				line-height: 17px;
+				color: var(--dt-primary);
+				margin-bottom: 4px;
+			}
+			.addr-main {
+				@include fw-5(14px);
+				line-height: 21px;
+				color: var(--dt-gray16);
+				margin-bottom: 2px;
+			}
+			.addr-detail {
+				@include fw-5(12px);
+				line-height: 18px;
+				color: var(--dt-gray11);
+			}
+			&.card.solid {
+				background-color: transparent;
+				border-bottom: unset;
+				padding: 72px 0;
+			}
+		}    
+	}
 }

@@ -1,48 +1,48 @@
 @charset "UTF-8";
-.page-wrapper.changeBillMethod .container .section__cont.segment {
+.changeBillMethod .container .section__cont.segment {
   padding: 36px 0 48px;
   gap: 0;
 }
-.page-wrapper.changeBillMethod .container .section__cont.desc {
+.changeBillMethod .container .section__cont.desc {
   padding: 36px 0 48px 0;
 }
-.page-wrapper.changeBillMethod .container .section__cont.desc:has(.accnt-cont-wrap) {
+.changeBillMethod .container .section__cont.desc:has(.accnt-cont-wrap) {
   height: calc(100% - 262px);
 }
-.page-wrapper.changeBillMethod .container .section__cont.counsel {
+.changeBillMethod .container .section__cont.counsel {
   padding: 36px 0 0px;
 }
-.page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) {
+.changeBillMethod .container .section__cont:has(.addr-wrap) {
   height: 100vh;
 }
-.page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) .cont__wrap-service {
+.changeBillMethod .container .section__cont:has(.addr-wrap) .cont__wrap-service {
   height: 100%;
 }
-.page-wrapper.changeBillMethod .container .section__cont:has(.addr-wrap) .cont__wrap-service .cont__txt-box .txt {
+.changeBillMethod .container .section__cont:has(.addr-wrap) .cont__wrap-service .cont__txt-box .txt {
   line-height: 150%;
 }
 
-.cont__wrap .con__tit-box .tit-head {
+.changeBillMethod .cont__wrap .con__tit-box .tit-head {
   flex-wrap: wrap;
 }
-.cont__wrap .con__tit-box .tit-head .txt-title {
+.changeBillMethod .cont__wrap .con__tit-box .tit-head .txt-title {
   line-height: 22px;
 }
-.cont__wrap .con__tit-box .tit-head .color-prim {
+.changeBillMethod .cont__wrap .con__tit-box .tit-head .color-prim {
   font-size: 18px;
   font-weight: 700;
 }
-.cont__wrap .con__tit-box .tit-tail {
+.changeBillMethod .cont__wrap .con__tit-box .tit-tail {
   min-width: max-content;
 }
-.cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
+.changeBillMethod .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
   flex-direction: column;
   row-gap: 6px;
 }
-.cont__wrap .cont__txt-box .txt {
+.changeBillMethod .cont__wrap .cont__txt-box .txt {
   line-height: 1.5;
 }
-.cont__wrap .cont__txt-box .txt.price {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -54,86 +54,69 @@
   row-gap: 4px;
   color: var(--dt-gray16);
 }
-.cont__wrap .cont__txt-box .txt.price .deco {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price .deco {
   font-size: 30px;
   font-weight: 700;
   line-height: 1.2;
   margin-right: 2px;
 }
-.cont__wrap .cont__txt-box .txt.price .deco-sub {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price .deco-sub {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
   margin-right: 2px;
 }
-.cont__wrap .cont__txt-box .txt.price .color-prim {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price .color-prim {
   font-size: 22px;
   font-weight: 700;
   line-height: 1.5;
 }
-.cont__wrap .cont__txt-box .txt.price:has(.deco), .cont__wrap .cont__txt-box .txt.price:has(.color-prim) {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price:has(.deco), .changeBillMethod .cont__wrap .cont__txt-box .txt.price:has(.color-prim) {
   color: var(--dt-gray14);
 }
-.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) {
   color: var(--dt-gray14);
 }
-.cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .color-prim {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price:has(.deco + .color-prim) .color-prim {
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
 }
-.cont__wrap .cont__txt-box .txt.price .txt-sub {
+.changeBillMethod .cont__wrap .cont__txt-box .txt.price .txt-sub {
   width: 100%;
   font-size: 16px;
   color: var(--dt-black);
 }
-.cont__wrap.cont__wrap-vertical.wd-full {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full {
   row-gap: 0;
 }
-.cont__wrap.cont__wrap-vertical.wd-full:has(.card-group.bank) {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full:has(.card-group.bank) {
   height: 100%;
 }
-.cont__wrap.cont__wrap-vertical.wd-full > div {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full > div {
   padding-right: 20px;
   padding-left: 20px;
 }
-.cont__wrap.cont__wrap-vertical.wd-full .con__tit-box {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full .con__tit-box {
   padding-bottom: 16px;
 }
-.cont__wrap.cont__wrap-vertical.wd-full .card-group.bank {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full .card-group.bank {
   margin-bottom: 16px;
 }
-.cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap {
+.changeBillMethod .cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap {
   min-height: 120px;
   overflow-y: auto;
 }
-.cont__wrap.cont__wrap-btBtn {
-  position: fixed;
-  bottom: 20px;
-  left: 0;
-  width: 100%;
-  pointer-events: auto;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
-}
-.cont__wrap.cont__wrap-btBtn.is-scrolled {
-  opacity: 0;
-  pointer-events: none;
-}
-.cont__wrap.cont__wrap-btBtn .btn-scroll {
-  margin: 0 auto;
-}
-
-.info-price-single {
+.changeBillMethod .info-price-single {
   margin: 0 20px;
   padding: 18px 20px;
   background-color: var(--dt-white);
   border-radius: 8px;
 }
-.info-price-single span {
+.changeBillMethod .info-price-single span {
   text-align: center;
 }
-.info-price-single .txt-info {
+.changeBillMethod .info-price-single .txt-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,27 +126,26 @@
   font-size: 16px;
   font-weight: 600;
 }
-.info-price-single .txt-info.decrease .img-box {
+.changeBillMethod .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
 }
-.info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
+.changeBillMethod .info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
   color: var(--dt-primary);
 }
-.info-price-single .txt-price {
+.changeBillMethod .info-price-single .txt-price {
   display: inline-block;
   margin-right: 4px;
   font-size: 18px;
   font-weight: 700;
   color: var(--dt-primary); /* 추후 변경 예정 */
 }
-.info-price-single .img-box {
+.changeBillMethod .info-price-single .img-box {
   min-width: 18px;
   width: 18px;
   height: 18px;
   margin-left: 2px;
 }
-
-.btn-srch-childline {
+.changeBillMethod .btn-srch-childline {
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -173,100 +155,97 @@
   background-color: var(--dt-gray15);
   /* 화살표 아이콘 */
 }
-.btn-srch-childline .txt-title {
+.changeBillMethod .btn-srch-childline .txt-title {
   column-gap: 8px;
   flex-wrap: wrap;
   line-height: 150%;
 }
-.btn-srch-childline .txt-title > span {
+.changeBillMethod .btn-srch-childline .txt-title > span {
   font-size: 14px;
 }
-.btn-srch-childline .txt-childname {
+.changeBillMethod .btn-srch-childline .txt-childname {
   color: var(--dt-white);
   font-weight: 700;
 }
-.btn-srch-childline .txt-phone {
+.changeBillMethod .btn-srch-childline .txt-phone {
   color: #A8B3BD;
   font-weight: 500;
 }
-.btn-srch-childline .img-box {
+.changeBillMethod .btn-srch-childline .img-box {
   width: 24px;
   height: 24px;
 }
-
-.select-billdate {
+.changeBillMethod .select-billdate {
   display: flex;
   flex-direction: column;
   min-height: 21px;
 }
-.select-billdate .txt-due {
+.changeBillMethod .select-billdate .txt-due {
   color: var(--dt-gray13);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
-
-.card-group.benefit {
+.changeBillMethod .card-group.benefit {
   padding: 22px 4px;
   gap: 0;
   background-color: var(--dt-gray02);
   border-radius: 8px;
 }
-.card-group.benefit .card {
+.changeBillMethod .card-group.benefit .card {
   padding: 0 16px;
   border-radius: unset;
   box-shadow: unset;
   background-color: unset;
 }
-.card-group.benefit .card:nth-of-type(2) {
+.changeBillMethod .card-group.benefit .card:nth-of-type(2) {
   border-left: 1px solid var(--dt-gray08);
 }
-.card-group.benefit .card .txt { /* 타이틀 */
+.changeBillMethod .card-group.benefit .card .txt { /* 타이틀 */
   font-size: 12px;
   line-height: 18px;
 }
-.card-group.benefit .card .item.util {
+.changeBillMethod .card-group.benefit .card .item.util {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 8px;
 }
-.card-group.benefit .img-box {
+.changeBillMethod .card-group.benefit .img-box {
   width: 48px;
   height: 48px; /* 유투브, 미디어 아이콘 */
 }
-.card-group.benefit .item-tit {
+.changeBillMethod .card-group.benefit .item-tit {
   max-width: 51px;
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
 }
-.card-group.benefit .card-body {
+.changeBillMethod .card-group.benefit .card-body {
   row-gap: 6px;
 }
-.card-group.bank {
+.changeBillMethod .card-group.bank {
   row-gap: 16px;
 }
-.card-group.bank .item.util {
+.changeBillMethod .card-group.bank .item.util {
   min-width: 20px;
 }
-.card-group.bank .item.text {
+.changeBillMethod .card-group.bank .item.text {
   width: calc(100% - 52px);
 }
-
-.caption-wrap {
+.changeBillMethod .caption-wrap {
   width: 100%;
   padding: 10px 8px;
   text-align: center;
   border-radius: 4px;
   background-color: var(--dt-gray03);
 }
-.caption-wrap .caption {
+.changeBillMethod .caption-wrap .caption {
   font-size: 12px;
   font-weight: 600;
   line-height: 120%;
   color: var(--dt-gray11);
 }
-.caption-wrap .caption::before {
+.changeBillMethod .caption-wrap .caption::before {
   content: "";
   display: inline;
   padding-left: 20px;
@@ -275,12 +254,10 @@
   background-repeat: no-repeat;
   background-position: left 0 center;
 }
-
-.section__cont:has(.section__cont):has(+ .section__divider) {
+.changeBillMethod .section__cont:has(.section__cont):has(+ .section__divider) {
   padding-bottom: 0;
 }
-
-.cont__wrap.cont__wrap-btBtn {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn {
   padding: 0;
   background-color: transparent;
   position: fixed;
@@ -288,13 +265,23 @@
   bottom: 0;
   z-index: 999;
   width: 100%;
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
-.cont__wrap.cont__wrap-btBtn .btn-group {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn.is-scrolled {
+  opacity: 0;
+  pointer-events: none;
+}
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn-scroll {
+  margin: 0 auto;
+}
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn-group {
   position: relative;
   background-color: var(--dt-white);
   padding: 0 20px 20px;
 }
-.cont__wrap.cont__wrap-btBtn .btn-group::before {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn-group::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -304,75 +291,72 @@
   height: 20px;
   background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
 }
-.cont__wrap.cont__wrap-btBtn .btn-group.full {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn-group.full {
   padding: 0;
 }
-.cont__wrap.cont__wrap-btBtn .btn-group.full .btn {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn-group.full .btn {
   border-radius: 0;
 }
-.cont__wrap.cont__wrap-btBtn .btn.bg-bank {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn .btn.bg-bank {
   width: calc(100% - 40px);
   margin: 0 auto 20px;
   background-color: var(--dt-gray01);
   border: 1px solid var(--dt-gray08);
 }
-.cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) {
   box-shadow: 0px -8px 13px rgba(0, 0, 0, 0.04);
 }
-.cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) .accordion-container {
+.changeBillMethod .cont__wrap.cont__wrap-btBtn:has(.accordion-container:first-child) .accordion-container {
   padding-left: 20px;
   padding-right: 20px;
   padding-bottom: 8px;
 }
-
-.txt-infoWrap {
+.changeBillMethod .txt-infoWrap {
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray11);
   margin-top: 28px;
 }
-.txt-infoWrap .subTxt-info {
+.changeBillMethod .txt-infoWrap .subTxt-info {
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray10);
 }
-
-.changeBillMethod .input-col-wrap {
+.changeBillMethod .changeBillMethod .input-col-wrap {
   row-gap: 8px;
 }
-
-.addr-wrap {
+.changeBillMethod .addr-wrap {
   max-height: calc(100vh - 260px);
   overflow-y: auto;
 }
-.addr-wrap .addr-box {
+.changeBillMethod .addr-wrap .addr-box {
   padding: 16px 0 17px;
   border-bottom: 1px solid var(--dt-gray17);
 }
-.addr-wrap .addr-box[role=button]:active {
+.changeBillMethod .addr-wrap .addr-box[role=button]:active {
   box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
 }
-.addr-wrap .addr-box .zip-code {
+.changeBillMethod .addr-wrap .addr-box .zip-code {
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
   color: var(--dt-primary);
   margin-bottom: 4px;
 }
-.addr-wrap .addr-box .addr-main {
+.changeBillMethod .addr-wrap .addr-box .addr-main {
   font-size: 14px;
   font-weight: 500;
   line-height: 21px;
   color: var(--dt-gray16);
   margin-bottom: 2px;
 }
-.addr-wrap .addr-box .addr-detail {
+.changeBillMethod .addr-wrap .addr-box .addr-detail {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   color: var(--dt-gray11);
 }
-.addr-wrap .addr-box.card.solid {
+.changeBillMethod .addr-wrap .addr-box.card.solid {
   background-color: transparent;
   border-bottom: unset;
   padding: 72px 0;
