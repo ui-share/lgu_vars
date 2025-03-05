@@ -1,212 +1,108 @@
 @import "../scss/base/mixin";
+.roamingAdditional {
+	// search : 로밍부가서비스 조회
+	.section__cont:not(.counsel) {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+		padding-top: 76px;
+	}
+	.card-group {
+		&.flex-column {
+			gap: 16px;
+		}
+	}
 
-.page-wrapper {
-	&.roamingAdditional {
-		// search : 로밍부가서비스 조회
-		.section__cont:not(.counsel) {
-			display: flex;
+	// 서비스 : 상세
+	.section__cont:has(.cont__wrap-service) {
+		// gap: 0;
+	}
+	
+	.cont__wrap-service.rmDetail {
+		// background-color: var(--dt-gray05);
+		.con__tit-box {
 			flex-direction: column;
-			gap: 48px;
-			padding-top: 76px;
-		}
-		.card-group {
-			&.flex-column {
-				gap: 16px;
-			}
-		}
-
-		// 서비스 : 상세
-		.section__cont:has(.cont__wrap-service) {
-			padding-bottom: 155px;
-			gap: 0;
-		}
-		
-		.cont__wrap-service.rmDetail {
-			background-color: var(--dt-gray05);
-			.con__tit-box {
-				flex-direction: column;
-				margin-bottom: 20px;
-				gap: 12px;
-				.text-box {
-					text-align: left;
-					gap: 6px;
-					.tit {
-						@include fw-7(22px);
-					}
-					.txt {
-						line-height: 1.5;
-					}
+			margin-bottom: 20px;
+			gap: 12px;
+			.text-box {
+				text-align: left;
+				gap: 6px;
+				.tit {
+					@include fw-7(22px);
+				}
+				.txt {
+					line-height: 1.5;
 				}
 			}
-			.card {
-				&.rmInform {
-					box-shadow: none;
-					border-radius: 16px;
-					padding: 28px 20px;
-					.card-body {
-						gap: 28px;
-					}
-					.item {
-						flex-direction: column;
-						gap: 6px;
-						.btn-group {
-							.btn {
-								display: flex;
-								align-items: center;
-								justify-content: center;
-								padding: 14px 4px;
-								gap: 4px;
-							}
+		}
+		.card {
+			&.rmInform {
+				box-shadow: none;
+				border-radius: 16px;
+				padding: 28px 20px;
+				.card-body {
+					gap: 28px;
+				}
+				.item {
+					flex-direction: column;
+					gap: 6px;
+					.btn-group {
+						.btn {
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							padding: 14px 4px;
+							gap: 4px;
 						}
 					}
-					.tit {
-						@include fw-7(18px);
-						color: var(--dt-gray14);
+				}
+				.tit {
+					@include fw-7(18px);
+					color: var(--dt-gray14);
+				}
+				.announceMent {
+					margin-bottom: 12px;
+					gap: 12px;
+					.card {
+						.card-body {
+							gap: 8px;
+						}
 					}
-					.announceMent {
-						margin-bottom: 12px;
+				}
+				.announcePhone {
+					margin-bottom: 12px;
+					gap: 12px;
+					.tit {
+						span {
+							@include fw-7(18px);
+							color: var(--dt-gray14);
+						}
+					}
+					.phoneList {
+						grid-template-columns: repeat(1, 1fr);
 						gap: 12px;
-						.card {
+						> .card {
+							padding: 14px 20px;
 							.card-body {
 								gap: 8px;
-							}
-						}
-					}
-					.announcePhone {
-						margin-bottom: 12px;
-						gap: 12px;
-						.tit {
-							span {
-								@include fw-7(18px);
-								color: var(--dt-gray14);
-							}
-						}
-						.phoneList {
-							grid-template-columns: repeat(1, 1fr);
-							gap: 12px;
-							> .card {
-								padding: 14px 20px;
-								.card-body {
-									gap: 8px;
-									.text {
-										align-items: flex-start;
-									}
-									.tit {
-										font-size: 16px;
-										color: var(--dt-gray16);
-									}
+								.text {
+									align-items: flex-start;
 								}
-								.card-footer {
-									.close {
-										width: 24px;
-										height: 24px;
-										background-image: url(../images/icon/ic-card_close_small_line.svg);
-										background-repeat: no-repeat;
-										background-size: cover;
-										background-position: center center;
-									}
+								.tit {
+									font-size: 16px;
+									color: var(--dt-gray16);
 								}
 							}
-						}
-					}
-
-					.use-target {
-						margin:4px 0;
-						padding:28px 20px;
-						.txt {
-							font-weight:600;
-							padding-left: 34px;
-							padding-right: 34px;
-						}
-						.list-target-item {
-							@include flexBox(center, center);
-							gap:32px;
-							margin-top:16px;
-							li {
-								@include flexColum;
-								align-items:center;
-								justify-content:center;
-								&.img-wrap {
-									width:46px;
-									.img-box {
-										width:100%;
-										height:32px;
-										margin-bottom:4px;
-									}
-								}
-								&:not(.img-wrap) {
-									position:relative;
-									width:60px;height:60px;
-									background-color:var(--dt-gray06);
-									border-radius:50%;
-									&::before {
-										content:'';
-										display:block;
-										position:absolute;
-										top:50%;
-										left: -24px;
-										transform:translateY(-50%);
-										width:16px;height:16px;
-										background-image: url(../images/icon/ic-plus-gray10.svg);
-										background-size:100%;
-										background-repeat:no-repeat;
-									}
-								}
-								.desc {
-									display:block;
-									@include fw-6(10px);
-									color:var(--dt-gray16);
-									line-height:normal;
-									text-align:center;
+							.card-footer {
+								.close {
+									width: 24px;
+									height: 24px;
+									background-image: url(../images/icon/ic-card_close_small_line.svg);
+									background-repeat: no-repeat;
+									background-size: cover;
+									background-position: center center;
 								}
 							}
-						}
-					}
-					.discnt-price {
-						@include flexBox(center, center);
-						flex-direction:row;
-						flex-wrap:wrap;
-						gap:0;
-						.item-block {
-							width:98px;
-							p {
-								&:not(:first-child) {margin-top: 4px;}
-								padding:9px 0;
-								background-color:var(--dt-gray06);
-								color:var(--dt-gray16);
-								@include fw-6(11px);
-								text-align:center;
-								border-radius: 4px;
-							}
-						}
-						.item-arrowbg {
-							position:relative;
-							width:74px;
-							aspect-ratio: 1 / 1.36;
-							background-image: url(../images/img/bg_discount_arrow.svg);
-							background-size: 100%;
-							background-repeat:no-repeat;
-							background-position: center;
-							> span {
-								display:block;
-								position:absolute;
-								top:46px;
-								left:12px;
-								color:var(--dt-primary);
-								@include fw-6(10px);
-							}
-						}
-						.item-point {
-							display:block;
-							width:60px;
-							height:60px;
-							margin-left:8px;
-							padding-top:24px;
-							background-color:var(--dt-primary);
-							color: var(--dt-white);
-							@include fw-7(10px);
-							border-radius: 50%;
-							text-align:center;
 						}
 					}
 				}
@@ -218,51 +114,4 @@
 // 서비스 : 상세 페이지 배경변경용
 body:has(.cont__wrap-service.rmDetail) {
 	background-color: var(--dt-gray05);
-}
-
-
-
-@media screen and (max-width:359px) {
-	.cont__wrap-service.rmDetail {
-		.card {
-			&.rmInform {
-				.use-target {
-					padding:24px 20px;
-					.list-target-item {
-						flex-direction: column;
-						li {
-							&:not(.img-wrap) {
-								&::before {
-									content:'';
-									top:0;
-									left: 50%;
-									transform:translateY(-24px) translateX(-50%);
-								}
-							}
-						}
-					}
-				}
-				.discnt-price {
-					flex-direction:column;
-					.item-block {
-						width:100%;
-					}
-					.item-arrowbg {
-						width:100%;
-						aspect-ratio: 1 / 0.39;
-						background-image: url(../images/img/bg_discount_arrow_down.svg);
-						> span {
-							top:10%;
-							left:50%;
-							transform:translateX(-50%);
-						}
-					}
-					.item-point {
-						margin-left:0;
-						margin-top:8px;
-					}
-				}
-			}
-		}
-	}
 }
