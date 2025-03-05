@@ -62,7 +62,10 @@
 					font-size:14px;
 					line-height:normal;
 				}
-				.tit-head {justify-content: center;}
+				.tit-head {
+					align-items: center;
+					justify-content: center;
+				}
 			}
 			.card-group {
 				.card {
