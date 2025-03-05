@@ -28,16 +28,16 @@
 				}
 			}			
 		}
-		.cont__wrap-bill { /* 청구요금 외 공통, 홀맨 + 편지지 */
+		.cont__wrap-bill { /* 청구요금 자녀요금 청구서받는방법 , 홀맨 + 편지지 */
 			background-image: url(../images/img/img-hm-bill.png);
 		}
 		.cont__wrap-realtime { /* 실시간요금, 홀맨 + 동전 */
 			background-image: url(../images/img/img-hm-realtime.png);
 		}
-		.cont__wrap-usestate { /* 사용현황, 홀맨 + 원형그래프 */
+		.cont__wrap-usestate { /* 실시간 사용량 , 홀맨 + 원형그래프 */
 			background-image: url(../images/img/img-hm-usestate.png);
 		}
-		.cont__wrap-account { /* 입금전용계좌, 홀맨 + 반지갑,동전 */
+		.cont__wrap-account { /* 바로납부-입금전용계좌, 홀맨 + 반지갑,동전 */
 			background-image: url(../images/img/img-hm-account.png);
 		}
 		.cont__wrap-payment { /* 요금납부방법, 홀맨 + 카드2개,동전 */
