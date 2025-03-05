@@ -111,8 +111,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  -moz-column-gap: 2px;
-       column-gap: 2px;
+  column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
