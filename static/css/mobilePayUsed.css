@@ -1,58 +1,58 @@
-.cont__wrap.cont__wrap-segment .list-payment {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .list-payment {
   padding: 0 20px;
   margin-top: 24px;
 }
-.cont__wrap.cont__wrap-segment .list-payment > .card.solid:nth-last-child(1) {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .list-payment > .card.solid:nth-last-child(1) {
   margin-top: 4px;
 }
-.cont__wrap.cont__wrap-segment .list-payment + .btn-group {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .list-payment + .btn-group {
   padding: 16px 20px 0;
 }
-.cont__wrap.cont__wrap-segment .btn-box {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .btn-box {
   padding-top: 8px;
 }
-.cont__wrap.cont__wrap-segment .btn-box .chips-group {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .btn-box .chips-group {
   flex-wrap: nowrap;
   gap: 4px;
   padding-left: 20px;
   padding-bottom: 6px;
   overflow-x: auto;
 }
-.cont__wrap.cont__wrap-segment .btn-box .chips-group .chips:last-child {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .btn-box .chips-group .chips:last-child {
   margin-right: 20px;
 }
-.cont__wrap.cont__wrap-segment .btn-box .btn.appStore {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .btn-box .btn.appStore {
   width: calc(100% - 40px);
   margin: 16px auto 0;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed {
   gap: 12px;
   padding: 20px;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .used-date {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .used-date {
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
   color: var(--dt-gray11);
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-name {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-name {
   font-size: 14px;
   font-weight: 500;
   line-height: 150%;
   color: var(--dt-gray14);
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-won {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .used-won {
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
@@ -60,11 +60,11 @@
   text-align: right;
   flex: 1;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .flag .txt {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .flag .txt {
   line-height: 140%;
   letter-spacing: -0.5px;
 }
-.cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .txt-sub {
+.mobilePayUsed .cont__wrap.cont__wrap-segment .card.payUsed .card-body .used-info .txt-sub {
   font-size: 14px;
   line-height: 150%;
   margin-top: 0;

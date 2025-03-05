@@ -1,3 +1,3 @@
-.page-wrapper.taxBill .container .input-row-wrap .input-control {
+.taxBill .input-row-wrap .input-control {
   width: calc((100% - 30px) / 2);
 }

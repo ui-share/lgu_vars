@@ -111,7 +111,8 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
@@ -130,33 +131,4 @@
 }
 .mobilePayPrepayment .segment-content .list-payment {
   margin-top: 2px;
-}
-@media screen and (max-width: 359px) {
-  .mobilePayPrepayment .input-row-wrap.al-baseline {
-    column-gap: 8px;
-  }
-}
-@media screen and (max-width: 269px) {
-  .mobilePayPrepayment .input-row-wrap.al-baseline {
-    flex-wrap: wrap;
-  }
-  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control {
-    width: calc(100% - 44px);
-  }
-  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control .input-row {
-    max-width: 100%;
-  }
-  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control .input-field {
-    max-width: 100%;
-  }
-  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control.error .bubble-box.topright {
-    transform: translateX(-50%);
-    right: unset;
-    left: 50%;
-  }
-  .mobilePayPrepayment .input-row-wrap.al-baseline .input-control.error .bubble-box.topright .bubble-box-arrow {
-    right: unset;
-    left: 50%;
-    margin-left: -8px;
-  }
 }

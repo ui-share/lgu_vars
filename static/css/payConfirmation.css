@@ -1,7 +1,3 @@
-.page-wrapper.payConfirmation .container .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
-  background-color: var(--dt-white);
-  z-index: 999;
-}
-.page-wrapper.payConfirmation .container .input-row-wrap .input-control {
+.payConfirmation .input-row-wrap .input-control {
   width: calc((100% - 30px) / 2);
 }

@@ -1,5 +1,4 @@
 @import "../scss/base/mixin";
-
 .mobilePayPrepayment {
 	.section__cont.flex-row {
 		align-items: unset;
@@ -118,33 +117,6 @@
 	.segment-content {
 		.list-payment {
 			margin-top:2px;
-		}
-	}
-	@media screen and (max-width:359px) {
-		.input-row-wrap.al-baseline {
-			column-gap:8px;
-		}
-	}
-	@media screen and (max-width:269px) {
-		.input-row-wrap.al-baseline {
-			flex-wrap:wrap;
-			.input-control {
-				width:calc(100% - 44px);
-				.input-row {max-width:100%;}
-				.input-field {max-width: 100%;}
-				&.error {
-					.bubble-box.topright {
-						transform: translateX(-50%);
-						right: unset;
-						left: 50%;
-						.bubble-box-arrow {
-							right:unset;
-							left:50%;
-							margin-left:-8px;
-						}
-					}
-				}
-			}
 		}
 	}
 }

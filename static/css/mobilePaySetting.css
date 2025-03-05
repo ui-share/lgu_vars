@@ -1,107 +1,106 @@
-.page-wrapper.mobilePaySetting .container .section__cont:has(.tabnav__wrap) {
+.mobilePaySetting .section__cont:has(.tabnav__wrap) {
   padding-top: 56px;
   padding-bottom: 40px;
 }
-
-.info-col-wrap:has(.info-price) .col {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col {
   row-gap: 10px;
   padding-top: 4px;
 }
-.info-col-wrap:has(.info-price) .col > .txt-title {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col > .txt-title {
   padding-bottom: 10px;
   line-height: 120%;
 }
-.info-col-wrap:has(.info-price) .col .row .txt-title, .info-col-wrap:has(.info-price) .col .row .txt-desc {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col .row .txt-title, .mobilePaySetting .info-col-wrap:has(.info-price) .col .row .txt-desc {
   color: var(--dt-gray14);
   font-size: 14px;
   font-weight: 500;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col + .info-price.total-last {
   margin-top: 8px;
   padding-top: 20px;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last .txt-price {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col + .info-price.total-last .txt-price {
   line-height: 120%;
 }
-.info-col-wrap:has(.info-price) .col + .info-price.total-last:after {
+.mobilePaySetting .info-col-wrap:has(.info-price) .col + .info-price.total-last:after {
   bottom: unset;
   top: 0;
   width: 100%;
 }
-.info-col-wrap:has(.info-price) .btn-group {
+.mobilePaySetting .info-col-wrap:has(.info-price) .btn-group {
   margin-top: 8px;
 }
-.info-col-wrap .col {
+.mobilePaySetting .info-col-wrap .col {
   row-gap: 16px;
 }
-.info-col-wrap .txt-title {
+.mobilePaySetting .info-col-wrap .txt-title {
   color: var(--dt-gray16);
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
 }
-.info-col-wrap .btn-group {
+.mobilePaySetting .info-col-wrap .btn-group {
   margin-top: 20px;
 }
-.info-col-wrap .btn-group .btn {
+.mobilePaySetting .info-col-wrap .btn-group .btn {
   background-color: var(--dt-gray06);
   border: 1px solid var(--dt-gray06);
 }
-.info-col-wrap .btn-group .btn .txt {
+.mobilePaySetting .info-col-wrap .btn-group .btn .txt {
   color: var(--dt-gray11);
   font-size: 14px;
 }
-
-.plan-wrap.line {
+.mobilePaySetting .plan-wrap.line {
   margin-top: 4px;
 }
-.plan-wrap.line .list-plan {
+.mobilePaySetting .plan-wrap.line .list-plan {
   padding-top: 20px;
 }
-.plan-wrap.line .list-plan .txt-title {
+.mobilePaySetting .plan-wrap.line .list-plan .txt-title {
   color: var(--dt-gray16);
 }
-.plan-wrap.line .list-plan .txt-price {
+.mobilePaySetting .plan-wrap.line .list-plan .txt-price {
   text-align: right;
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
 }
-.plan-wrap.line .txt-sub .img-box {
+.mobilePaySetting .plan-wrap.line .txt-sub .img-box {
   width: 24px;
   height: 24px;
 }
-.plan-wrap.line .txt-sub .img-box img {
+.mobilePaySetting .plan-wrap.line .txt-sub .img-box img {
   width: 18px;
   transform: translateY(-1px);
 }
-
-.al-baseline {
+.mobilePaySetting .al-baseline {
   align-items: baseline;
   justify-content: center;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
   padding-top: 48px;
 }
-.al-baseline .ico32 {
+.mobilePaySetting .al-baseline .ico32 {
   min-width: 32px;
   height: 32px;
 }
-.al-baseline .input-control {
+.mobilePaySetting .al-baseline .input-control {
   position: relative;
   width: calc((100% - 32px) / 2);
   padding-top: 0;
 }
-.al-baseline .input-control .input-label {
+.mobilePaySetting .al-baseline .input-control .input-label {
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-.al-baseline .input-control .input-row {
+.mobilePaySetting .al-baseline .input-control .input-row {
   margin: 0 auto;
   justify-content: center;
-  column-gap: 0;
+  -moz-column-gap: 0;
+       column-gap: 0;
 }
-.al-baseline .input-control .input-row .value {
+.mobilePaySetting .al-baseline .input-control .input-row .value {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -110,111 +109,115 @@
   font-weight: 600;
   line-height: 1.2;
 }
-.al-baseline .input-control .input-field {
+.mobilePaySetting .al-baseline .input-control .input-field {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
 }
-.al-baseline .input-control .input-field::placeholder {
+.mobilePaySetting .al-baseline .input-control .input-field::-moz-placeholder {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
 }
-.al-baseline .input-control.error input:valid {
+.mobilePaySetting .al-baseline .input-control .input-field::placeholder {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.mobilePaySetting .al-baseline .input-control.error input:valid {
   color: var(--dt-error);
 }
-.al-baseline .input-control.error .input-row {
+.mobilePaySetting .al-baseline .input-control.error .input-row {
   border-color: var(--dt-black);
 }
-.al-baseline .input-control.focused .input-row {
+.mobilePaySetting .al-baseline .input-control.focused .input-row {
   border-bottom: 2px solid var(--dt-black);
 }
-.al-baseline .input-control.focused .input-row .input-field {
+.mobilePaySetting .al-baseline .input-control.focused .input-row .input-field {
   caret-color: var(--dt-black);
 }
-.al-baseline .input-control .input-row:has(input:focus) {
+.mobilePaySetting .al-baseline .input-control .input-row:has(input:focus) {
   border-bottom: 2px solid var(--dt-black);
 }
-.al-baseline .input-control .input-row:has(input:focus) .input-field {
+.mobilePaySetting .al-baseline .input-control .input-row:has(input:focus) .input-field {
   caret-color: var(--dt-black);
 }
-.al-baseline .input-control .txt-sub {
+.mobilePaySetting .al-baseline .input-control .txt-sub {
   margin-top: 8px;
   text-align: center;
 }
-.al-baseline .bubble-box.topright {
+.mobilePaySetting .al-baseline .bubble-box.topright {
   padding-right: 10px;
   padding-left: 10px;
   bottom: calc(100% + 8px) !important;
   right: 50%;
   transform: translateX(12.5%);
 }
-.al-baseline .bubble-box.topright .bubble-box-arrow {
+.mobilePaySetting .al-baseline .bubble-box.topright .bubble-box-arrow {
   right: 16px;
 }
-.al-baseline .bubble-box.topright .bubble-box-arrow::after {
+.mobilePaySetting .al-baseline .bubble-box.topright .bubble-box-arrow::after {
   left: 0;
 }
-
-.list-payment {
+.mobilePaySetting .list-payment {
   margin-top: 20px;
 }
-.list-payment .card.solid {
+.mobilePaySetting .list-payment .card.solid {
   row-gap: 8px;
   padding: 18px 24px 22px;
 }
-.list-payment .card.solid .row {
+.mobilePaySetting .list-payment .card.solid .row {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
 }
-.list-payment .card.solid .row.detail .txt-title {
+.mobilePaySetting .list-payment .card.solid .row.detail .txt-title {
   color: var(--dt-gray11);
 }
-.list-payment .card.solid .txt-title {
+.mobilePaySetting .list-payment .card.solid .txt-title {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray16);
 }
-.list-payment .card.solid .txt-date {
+.mobilePaySetting .list-payment .card.solid .txt-date {
   color: var(--dt-gray11);
   font-size: 12px;
   font-weight: 500;
   line-height: 150%;
   padding-bottom: 4px;
 }
-.list-payment .card.solid .txt-desc {
+.mobilePaySetting .list-payment .card.solid .txt-desc {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  column-gap: 2px;
+  -moz-column-gap: 2px;
+       column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
   font-weight: 500;
 }
-.list-payment .card.solid .txt-desc .img-box {
+.mobilePaySetting .list-payment .card.solid .txt-desc .img-box {
   width: 16px;
   min-width: 16px;
   height: 16px;
 }
-.list-payment .card.solid .color-prim {
+.mobilePaySetting .list-payment .card.solid .color-prim {
   font-weight: 600;
 }
-
-.segment__wrap {
+.mobilePaySetting .segment__wrap {
   margin-top: 10px;
 }
-
-.segment-content .list-payment {
+.mobilePaySetting .segment-content .list-payment {
   margin-top: 2px;
 }
 
 @media screen and (max-width: 359px) {
   .al-baseline {
-    column-gap: 8px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {
