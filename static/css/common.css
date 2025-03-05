@@ -860,13 +860,13 @@ button {
   font-weight: 500;
   line-height: 21px;
 }
-.plan-wrap .list-plan .txt-desc.ico .img-box {
-  height: 100% !important;
-}
-.plan-wrap .list-plan .txt-desc.ico .img-box img {
-  margin-top: 2px;
+.plan-wrap .list-plan .txt-desc.ico {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
 }
 .plan-wrap .list-plan button.txt-desc .img-box {
+  margin-top: 2px;
   transform: rotate(-90deg);
 }
 .plan-wrap .list-plan .current {
