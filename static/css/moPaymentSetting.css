@@ -74,8 +74,7 @@
 .input-row-wrap.al-baseline {
   align-items: baseline;
   justify-content: center;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   padding: 48px 4px 0;
 }
 .input-row-wrap.al-baseline .ico32 {
@@ -118,8 +117,7 @@
   width: 98px;
   margin: 0 auto;
   justify-content: center;
-  -moz-column-gap: 0;
-       column-gap: 0;
+  column-gap: 0;
   border-bottom: unset;
 }
 .input-row-wrap.al-baseline .input-control .input-row .value {
@@ -133,14 +131,8 @@
 }
 .input-row-wrap.al-baseline .input-control .input-field {
   text-align: center;
-  width: -moz-min-content;
   width: min-content;
   max-width: 100%;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.input-row-wrap.al-baseline .input-control .input-field::-moz-placeholder {
   font-size: 24px;
   font-weight: 600;
   line-height: 1.2;
@@ -187,8 +179,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  -moz-column-gap: 2px;
-       column-gap: 2px;
+  column-gap: 2px;
   margin-left: auto;
   color: var(--dt-gray16);
   font-size: 14px;
@@ -213,8 +204,7 @@
 
 @media screen and (max-width: 359px) {
   .input-row-wrap.al-baseline {
-    -moz-column-gap: 8px;
-         column-gap: 8px;
+    column-gap: 8px;
   }
 }
 @media screen and (max-width: 269px) {

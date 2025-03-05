@@ -36,6 +36,10 @@
   line-height: 150%;
   color: var(--dt-gray16);
 }
+.page-wrapper.roamingUsed .cont__wrap-service.rmInvoice .list-wrap .list-box .ico-bank {
+  width: 20px;
+  height: 20px;
+}
 .page-wrapper.roamingUsed .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap {
   width: 100%;
   margin-top: 0;
