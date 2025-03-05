@@ -1,94 +1,53 @@
-.page-wrapper.immePayment .container .section__cont.desc {
-  padding: 36px 0 48px 0;
-  gap: 48px;
-}
-.page-wrapper.immePayment .container .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(100% - 262px);
-}
-.page-wrapper.immePayment .container .section__cont.desc:has(.cont__wrap-service) {
-  padding: 72px 0 95px;
-}
-.page-wrapper.immePayment .container .section__cont.counsel {
-  padding: 36px 0 0px;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.cont__wrap-service {
-  padding-bottom: 40px;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
-  margin-top: 24px;
-  gap: 16px;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
-  padding-bottom: 10px;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
-  padding-bottom: 0;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.wd-full .cont__txt-box .txt {
-  font-size: 20px;
-  font-weight: 700;
-}
-.page-wrapper.immePayment .container .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
-  background-color: var(--dt-white);
-  z-index: 999;
-}
-
-.list-payment {
+.immePayment .list-payment {
   row-gap: 0;
 }
-
-.accnt-username {
+.immePayment .accnt-username {
   color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 600;
 }
-
-.wd-full {
+.immePayment .wd-full {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.wd-full .cont__txt-box, .wd-full .btn-group {
+.immePayment .wd-full .cont__txt-box, .immePayment .wd-full .btn-group {
   padding: 0 20px;
 }
-
-.txt-title {
+.immePayment .txt-title {
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
 }
-
-.txt-price {
+.immePayment .txt-price {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
   text-align: right;
 }
-
-.txt-sub-date {
+.immePayment .txt-sub-date {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray10);
   line-height: 1.5;
   text-align: left;
 }
-
-.mypay-list {
+.immePayment .mypay-list {
   width: 100%;
   border-top: 1px solid var(--dt-gray17);
 }
-.mypay-list:last-of-type {
+.immePayment .mypay-list:last-of-type {
   border-bottom: 1px solid var(--dt-gray17);
 }
-.mypay-list .btn {
+.immePayment .mypay-list .btn {
   display: flex;
   flex-direction: row;
   gap: 4px;
   width: 100%;
   padding: 20px 12px 20px 20px;
 }
-.mypay-list .btn::after {
+.immePayment .mypay-list .btn::after {
   flex: none;
   content: "";
   display: inline-block;
@@ -99,19 +58,19 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.mypay-list .detail {
+.immePayment .mypay-list .detail {
   display: flex;
   flex-direction: column;
   gap: 4px;
   width: 100%;
 }
-.mypay-list .detail .txt-sub {
+.immePayment .mypay-list .detail .txt-sub {
   margin-top: 0;
   margin-left: auto;
   text-align: right;
   font-size: 14px;
   line-height: 150%;
 }
-.mypay-list .row {
+.immePayment .mypay-list .row {
   justify-content: space-between;
 }
