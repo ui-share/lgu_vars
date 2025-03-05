@@ -705,14 +705,17 @@ button {
 				}
 			}
 			&.ico {
-				.img-box {
-					height:100% !important;
-					img {margin-top:2px;}
-				}
+				display:flex;
+				align-items:center;
+				column-gap:4px;
 			}
+			
 		}
 		button.txt-desc {
-			.img-box {transform:rotate(-90deg)}
+			.img-box {
+				margin-top:2px;
+				transform:rotate(-90deg);
+			}
 		}
 		.current {
 			color:var(--dt-black);

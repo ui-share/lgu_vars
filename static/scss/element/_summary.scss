@@ -28,38 +28,38 @@
 				}
 			}			
 		}
-		.cont__wrap-bill {
+		.cont__wrap-bill { /* 청구요금 자녀요금 청구서받는방법 , 홀맨 + 편지지 */
 			background-image: url(../images/img/img-hm-bill.png);
 		}
-		.cont__wrap-realtime {
+		.cont__wrap-realtime { /* 실시간요금, 홀맨 + 동전 */
 			background-image: url(../images/img/img-hm-realtime.png);
 		}
-		.cont__wrap-usestate {
+		.cont__wrap-usestate { /* 실시간 사용량 , 홀맨 + 원형그래프 */
 			background-image: url(../images/img/img-hm-usestate.png);
 		}
-		.cont__wrap-account {
+		.cont__wrap-account { /* 바로납부-입금전용계좌, 홀맨 + 반지갑,동전 */
 			background-image: url(../images/img/img-hm-account.png);
 		}
-		.cont__wrap-payment {
+		.cont__wrap-payment { /* 요금납부방법, 홀맨 + 카드2개,동전 */
 			background-image: url(../images/img/img-hm-automatic-withdrawal.png);
 		}
-		.cont__wrap-pauseTemp {
+		.cont__wrap-pauseTemp { /* 일시정지, 홀맨 + 휴대폰,일시정지아이콘 */
 			background-image: url(../images/img/img-hm-pauseTemp.png);
 		}
-		.cont__wrap-MOPaymentUsed {
+		.cont__wrap-MOPaymentUsed { /* 휴대폰결제 외 공통, 홀맨 + 휴대폰,카드 */
 			background-image: url(../images/img/img-hm-MOpayment.png);
 		}
-		.cont__wrap-plan {
+		.cont__wrap-plan { /* 나의요금제, 홀맨 + 카드지갑,동전 */
 			background-image: url(../images/img/img-hm-myplan.png);
 		}
-		.cont__wrap-realtimeRoaming {
+		.cont__wrap-realtimeRoaming { /* 실시간로밍 , 홀맨 + 비행기 */
 			background-image: url(../images/img/img-hm-roaming.png);
 		}
-		.cont__wrap-roamingUsed {
+		.cont__wrap-roamingUsed { /* 로밍이용내역 , 홀맨 + 비행기 */
 			background-image: url(../images/img/img-hm-roaming.png);
-		}
-		.cont__wrap-dataGift {
-			background-image: url(../images/img/img-hm-dataGift.png);
+		} 
+		.cont__wrap-dataGift { /* 데이터기프트 */
+			background-image: url(../images/img/img-hm-dataGift.png); /* 미존재 */
 		}
 		.txt-select-wrap {
 			@include flexRow;

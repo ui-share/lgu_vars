@@ -860,13 +860,13 @@ button {
   font-weight: 500;
   line-height: 21px;
 }
-.plan-wrap .list-plan .txt-desc.ico .img-box {
-  height: 100% !important;
-}
-.plan-wrap .list-plan .txt-desc.ico .img-box img {
-  margin-top: 2px;
+.plan-wrap .list-plan .txt-desc.ico {
+  display: flex;
+  align-items: center;
+  column-gap: 4px;
 }
 .plan-wrap .list-plan button.txt-desc .img-box {
+  margin-top: 2px;
   transform: rotate(-90deg);
 }
 .plan-wrap .list-plan .current {
@@ -1240,6 +1240,31 @@ button {
 .switch__wrap > button.btn-srch-childline .txt-phone {
   color: #A8B3BD;
   font-weight: 500;
+}
+
+/* 아이콘 버튼 */
+.btn-ico {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  text-indent: -9999px;
+}
+.btn-ico:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0);
+  display: inline-block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.btn-ico.btn-search:before {
+  background-image: url(../images/icon/ic-search24-gray15.svg);
+  background-size: 28px 28px;
 }
 
 /* btn-group button */
@@ -3118,16 +3143,10 @@ input::placeholder {
   width: max-content;
   color: var(--dt-gray16);
 }
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico {
-  display: inline-block;
+.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico-bank {
   width: 24px;
+  min-width: 24px;
   height: 24px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-.input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico img {
-  width: 100%;
-  transform: translateY(-2px);
 }
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .txt {
   color: var(--dt-gray16);
@@ -3137,7 +3156,7 @@ input::placeholder {
   color: var(--dt-gray11);
   font-size: 18px;
   font-weight: 600;
-  line-height: 150%;
+  line-height: 1.2;
 }
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown .txt.done {
   color: var(--dt-gray16);
@@ -3482,7 +3501,7 @@ input::placeholder {
   bottom: 0;
   left: 0;
   width: 100%;
-  max-height: calc(100% - 45px);
+  max-height: calc(100% - 8px);
   padding-top: env(safe-area-inset-top, 45px);
   -webkit-transform: translateZ(0);
   display: flex;

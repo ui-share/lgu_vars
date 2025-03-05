@@ -13,6 +13,12 @@
 .datepicker-UI .vanillajs-datepicker .datepicker:not(.active), .range-datepicker .vanillajs-datepicker .datepicker:not(.active) {
   display: block !important;
 }
+.datepicker-UI .vanillajs-datepicker input[name=start] + .datepicker:not(.active), .range-datepicker .vanillajs-datepicker input[name=start] + .datepicker:not(.active) {
+  display: none !important;
+}
+.datepicker-UI .vanillajs-datepicker input[name=end] + .datepicker:not(.active), .range-datepicker .vanillajs-datepicker input[name=end] + .datepicker:not(.active) {
+  display: block !important;
+}
 .datepicker-UI .vanillajs-datepicker.year-month-day, .range-datepicker .vanillajs-datepicker.year-month-day {
   min-height: 380px;
   padding-top: 12px;

@@ -14,7 +14,7 @@
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		max-height: calc(100% - 45px);
+		max-height: calc(100% - 8px);
 
 		// 삭제금지 아이폰 테스트 중
 		padding-top: env(safe-area-inset-top, 45px);
