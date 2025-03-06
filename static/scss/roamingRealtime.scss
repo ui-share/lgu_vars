@@ -28,4 +28,13 @@
             margin-top: 12px;
         }
     }
+    .cont__wrap.cont__wrap-vertical {
+        &:has( > .chips-refresh) {
+            gap:8px;
+            .con__tit-box {margin-bottom:8px;}
+            .chips-refresh {// 새로고침버튼
+                align-self: flex-end;
+            }
+        }
+    }
 }
