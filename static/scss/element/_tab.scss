@@ -6,6 +6,7 @@
 	flex-direction: row;
 	flex-wrap: nowrap;
 	overflow-x: auto;
+	overflow-y: hidden;
 	.tab {
 		flex-grow: 1;
 		text-align: center;

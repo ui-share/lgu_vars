@@ -258,16 +258,11 @@
   padding-bottom: 0;
 }
 .changeBillMethod .cont__wrap.cont__wrap-btBtn {
-  padding: 0;
-  background-color: transparent;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 999;
-  width: 100%;
-  pointer-events: auto;
-  opacity: 1;
-  transition: opacity 0.2s ease-in-out;
+  /* 히스토리 확인 후 삭제 예정
+  	// pointer-events:auto;
+  	// opacity:1;
+  	// transition:opacity 0.2s ease-in-out;
+  */
 }
 .changeBillMethod .cont__wrap.cont__wrap-btBtn.is-scrolled {
   opacity: 0;

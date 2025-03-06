@@ -348,10 +348,12 @@
   padding: 0;
   background-color: transparent;
   position: fixed;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 0;
   z-index: 999;
   width: 100%;
+  max-width: var(--max-devicewidth) !important;
 }
 .cont__wrap.cont__wrap-btBtn .btn-group {
   position: relative;
