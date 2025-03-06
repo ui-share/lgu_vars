@@ -13,22 +13,18 @@
 		flex: 1;
 	}
 }
-.chips-group {margin-top:8px;}
-// 공지 텍스트 fw-7 gray11
-.notice-txt {
-	margin-top: 8px;
-	span {
-		color: var(--dt-gray11);
-		@include fw-7(14px);
-		line-height:21px;
-	}
-}
 .input-col-wrap {
 	@include flexColum;
 	row-gap:24px;
 	position:relative;
 	.input-control:first-of-type {margin-top:18px;}
 	.segment__wrap {padding-top:14px;}
+	&:has(.bubble-box) {
+		input[type="text"]:valid,
+		input[type="tel"]:valid{
+			color:var(--dt-error) !important;
+		}
+	}
 }
 .input-row-wrap {
 	@include flexRow;
@@ -51,7 +47,8 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 	margin: 0;
 }
-input {
+input,
+textarea {
 	width: 100%;
 	margin: 0;
 	padding: 0;
@@ -63,8 +60,15 @@ input {
 	@include fw-6(18px);
 	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray16);
+	line-height: 1.2;
 }
-input::placeholder {
+textarea {
+	min-height: 60px;
+	word-break: break-all;
+	resize:none;
+}
+input::placeholder,
+textarea::placeholder {
 	font-family: "Pretendard", system-ui, sans-serif;
 	color: var(--dt-gray11);
 	@include fw-6(18px);
@@ -87,6 +91,42 @@ input::placeholder {
 		border-bottom: 2px solid var(--dt-gray08);
 		padding: 4px 0;
 		gap: 12px;
+	}
+	.textarea-group {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		.input-label {
+			position: relative;
+		}
+	}
+	.textarea-box {
+		width: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		flex: 1 1 auto;
+		border: 2px solid var(--dt-gray08);
+		border-radius: 0.725em;
+		text-align: left;
+		padding: 12px;
+	}
+	.textarea-info {
+		position: relative;
+		display: flex;
+	}
+	.textarea-limit {
+		margin-left: auto;
+		text-align: right;
+		@include fw-6(14px);
+		color: var(--dt-gray10);
+	}
+	.limit-point {
+		@include fw-6(14px);
+		color: var(--dt-gray16);
 	}
 	// 라벨 스타일
 	.input-label {
@@ -186,6 +226,17 @@ input::placeholder {
 			background-size: 100%;
 			background-position: 0 0;
 		}	
+	}
+	// 카드 납부 input 내 은행 chips-group
+	.chips-group {margin-top:8px;}
+	// 공지 텍스트 fw-7 gray11
+	.notice-txt {
+		margin-top: 8px;
+		span {
+			color: var(--dt-gray11);
+			@include fw-7(14px);
+			line-height:21px;
+		}
 	}
 	// 상태별 스타일
 	&.success {
