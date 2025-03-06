@@ -1,44 +1,16 @@
 @import "../scss/base/mixin";
-.page-wrapper {
-	&.contract {
-		.container {
-			.section__cont {
-                &.desc {//입금전용계좌추가
-                    padding: 36px 0 48px 0;
-                    gap: 48px;
-                    &:has(.accnt-cont-wrap){
-                        height:calc(100% - 262px);
-                    }
-                    &:has(.cont__wrap-service) {
-                        padding: 72px 0 95px;
-                    }
-                }
-                &.counsel {
-                    padding: 36px 0 0px;
-                }
-            }
-			.list-wrap .list-box .tail {max-width:max-content;}
-        }
-    }
-}
-// 서비스 : 로밍부가서비스 조회
-.section__cont {
-	display: flex;
-	flex-direction: column;
-	gap: 48px;
-	&.counsel {
-		gap: unset;
+.contract {
+	// search : 로밍부가서비스 조회
+	.section__cont:not(.counsel) {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+		padding-top: 76px;
 	}
-	.cont__wrap {
-		&.cont__wrap-message {
-			padding-top: 20px;
-		}   
+	.list-wrap .list-box .tail {
+		max-width:max-content;
 	}
 }
-// divider가 상담영역과 같이 올 경우
-// .section__divider:has(+ .counsel) {
-// 	margin-top: 48px;
-// }
 
 
 // 서비스 : 상세
@@ -93,53 +65,6 @@ body:has(.cont__wrap-service.rmDetail) {
 				@include fw-7(18px);
 				color: var(--dt-gray14);
 			}
-			.announceMent {
-				margin-bottom: 28px;
-				gap: 12px;
-				.card {
-					.card-body {
-						gap: 8px;
-					}
-				}
-			}
-			.announcePhone {
-				margin-bottom: 20px;
-				gap: 12px;
-				.tit {
-					span {
-						@include fw-7(18px);
-						color: var(--dt-gray14);
-					}
-				}
-				.phoneList {
-					grid-template-columns: repeat(1, 1fr);
-					gap: 12px;
-					> .card {
-						padding: 14px 20px;
-						.card-body {
-							gap: 8px;
-							.text {
-								align-items: flex-start;
-							}
-							.tit {
-								font-size: 16px;
-								color: var(--dt-gray16);
-							}
-						}
-						.card-footer {
-							.close {
-								width: 24px;
-								height: 24px;
-								background-image: url(../images/icon/ic-card_close_small_line.svg);
-								background-repeat: no-repeat;
-								background-size: cover;
-								background-position: center center;
-							}
-						}
-					}
-				}
-			}
-
 			.use-target {
 				margin:4px 0;
 				padding:28px 20px;
@@ -242,39 +167,7 @@ body:has(.cont__wrap-service.rmDetail) {
 		}
 	}
 }
-// 팝업 : 로밍멘트 수정
-.rmAnnounce {
-	.popup-body {
-		display: flex;
-		flex-direction: column;
-		gap: 36px;
-		.cont__wrap {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-			padding: 0;
-			.con__tit-box {
-				margin-bottom: 0;
-			}
-			&:first-child {
-				padding-top: 12px;
-			}
-		}
-	}
-}
-// 팝업 : 해외도착알리미 핸드폰 입력
-.rmLandingAnnounce {
-	.popup-tit {
-		.txt {
-			span {
-				@include fw-7(20px);
-			}
-		}
-	}
-	.popup-body {
-		padding-top: 16px;
-	}
-}
+
 // 스크롤버튼
 .cont__wrap-btBtn:has(.btn-scroll) {
 	position:fixed;

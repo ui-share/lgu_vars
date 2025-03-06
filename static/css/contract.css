@@ -1,30 +1,12 @@
-.page-wrapper.contract .container .section__cont.desc {
-  padding: 36px 0 48px 0;
-  gap: 48px;
-}
-.page-wrapper.contract .container .section__cont.desc:has(.accnt-cont-wrap) {
-  height: calc(100% - 262px);
-}
-.page-wrapper.contract .container .section__cont.desc:has(.cont__wrap-service) {
-  padding: 72px 0 95px;
-}
-.page-wrapper.contract .container .section__cont.counsel {
-  padding: 36px 0 0px;
-}
-.page-wrapper.contract .container .list-wrap .list-box .tail {
-  max-width: max-content;
-}
-
-.section__cont {
+.contract .section__cont:not(.counsel) {
   display: flex;
   flex-direction: column;
   gap: 48px;
+  padding-top: 76px;
 }
-.section__cont.counsel {
-  gap: unset;
-}
-.section__cont .cont__wrap.cont__wrap-message {
-  padding-top: 20px;
+.contract .list-wrap .list-box .tail {
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 
 body:has(.cont__wrap-service.rmDetail) {
@@ -80,47 +62,6 @@ body:has(.cont__wrap-service.rmDetail) {
   font-size: 18px;
   font-weight: 700;
   color: var(--dt-gray14);
-}
-.cont__wrap-service.rmDetail .card.rmInform .announceMent {
-  margin-bottom: 28px;
-  gap: 12px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announceMent .card .card-body {
-  gap: 8px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone {
-  margin-bottom: 20px;
-  gap: 12px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .tit span {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--dt-gray14);
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList {
-  grid-template-columns: repeat(1, 1fr);
-  gap: 12px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card {
-  padding: 14px 20px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body {
-  gap: 8px;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .text {
-  align-items: flex-start;
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-body .tit {
-  font-size: 16px;
-  color: var(--dt-gray16);
-}
-.cont__wrap-service.rmDetail .card.rmInform .announcePhone .phoneList > .card .card-footer .close {
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/icon/ic-card_close_small_line.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
 }
 .cont__wrap-service.rmDetail .card.rmInform .use-target {
   margin: 4px 0;
@@ -233,32 +174,6 @@ body:has(.cont__wrap-service.rmDetail) {
   font-weight: 700;
   border-radius: 50%;
   text-align: center;
-}
-
-.rmAnnounce .popup-body {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
-}
-.rmAnnounce .popup-body .cont__wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0;
-}
-.rmAnnounce .popup-body .cont__wrap .con__tit-box {
-  margin-bottom: 0;
-}
-.rmAnnounce .popup-body .cont__wrap:first-child {
-  padding-top: 12px;
-}
-
-.rmLandingAnnounce .popup-tit .txt span {
-  font-size: 20px;
-  font-weight: 700;
-}
-.rmLandingAnnounce .popup-body {
-  padding-top: 16px;
 }
 
 .cont__wrap-btBtn:has(.btn-scroll) {
