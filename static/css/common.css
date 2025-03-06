@@ -1256,7 +1256,6 @@ button {
   flex: 1;
 }
 .timetable .list-box .head {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin-top: 4px;
 }
@@ -2120,8 +2119,6 @@ button {
   /* input은 숨김 */
   -webkit-appearance: none;
   appearance: none;
-  position: absolute;
-  top: -9999px;
   margin: 0px;
   padding-inline: 0;
   padding-block: 0;
@@ -3863,7 +3860,6 @@ textarea::placeholder {
 .popup-body .btn.btn-popSolid.between .txt-wrap {
   display: flex;
   align-items: center;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   opacity: 0;
 }
