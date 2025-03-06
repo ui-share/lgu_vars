@@ -139,6 +139,16 @@
 		background-color: var(--dt-gray09);
 		margin: 0 1px;
 	}
+	&.flex-column {
+		border-radius: unset;
+		background-color: transparent;
+		.btn {
+			border-color: rgba(24, 26, 27, 0.02);
+		}
+	}
+	& + .conversion {
+		margin-top: 8px;
+	}
 }
 
 

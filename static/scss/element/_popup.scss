@@ -156,6 +156,7 @@
 		.tab-cont {padding-top:24px;}
 	}
 	
+	//월선택
 	.calendar-box {
 		@include flexBox(center, center);
 		flex-direction:column;
@@ -265,6 +266,7 @@
 		flex-direction: column;
 		gap: 20px;
 	}
+	// popup btn solid 
 	.btn {
 		/* popup-solid */
 		&.btn-popSolid-md { 
@@ -289,6 +291,8 @@
 				.txt-wrap {				
 					display: flex;
 					align-items: center;
+					min-width: fit-content;
+					opacity: 0;
 					.txt {
 						@include fw-5(14px);
 						line-height: 1.2;
@@ -302,7 +306,12 @@
 							height: 16px;
 						}
 					}
-				}				
+				}		
+				&.is-selected {
+					.txt-wrap {
+						opacity: 1;
+					}
+				}			
 			}
 			.delay-txt {
 				@include fw-5(14px);
@@ -526,6 +535,7 @@
 			.cont__wrap {
 				padding: 0 20px;
 				&.cont__wrap-vertical {gap:16px;}
+				&.cont__wrap-btBtn {padding:0;}
 			}
 		}
 		&:has(.section__cont) {

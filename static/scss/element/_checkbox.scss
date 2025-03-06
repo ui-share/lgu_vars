@@ -89,6 +89,14 @@
   }
 }
 
+// 2배열
+.chckbox-wrap {
+  flex-wrap:wrap;
+  gap:10px 6px;
+  .chck-group {
+    width:calc((100% - 6px) / 2);
+  }
+}
 
 
 
