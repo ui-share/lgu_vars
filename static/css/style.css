@@ -230,16 +230,16 @@
 .cont__wrap.cont__wrap-vertical.wd-full .con__tit-box {
   padding-bottom: 16px;
 }
-.cont__wrap.cont__wrap-vertical.wd-full .con__tit-box .cont__txt-box .txt {
-  font-size: 20px;
-  font-weight: 700;
-}
 .cont__wrap.cont__wrap-vertical.wd-full .card-group.bank {
   margin-bottom: 16px;
 }
 .cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap {
   min-height: 120px;
   overflow-y: auto;
+}
+.cont__wrap.cont__wrap-vertical.wd-full .accnt-cont-wrap .btn-group {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .info-price-single {

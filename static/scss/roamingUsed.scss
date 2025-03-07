@@ -37,6 +37,7 @@
                         @include fw-7();
                         line-height: 150%;
                         color: var(--dt-gray16);
+                        max-width:max-content;
                     }
                 }
                 // 2depth
