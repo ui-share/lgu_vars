@@ -2418,7 +2418,7 @@ button {
   font-size: 14px;
 }
 .chips.chips-all .arrow {
-  background-image: url(../images/icon/ic-chips-arrow-gray.png);
+  background-image: url(../images/icon/ic-chips-arrow-gray.svg);
 }
 .chips.chips-all:active .arrow, .chips.chips-all.is-selected .arrow {
   transform: rotate(-180deg);
