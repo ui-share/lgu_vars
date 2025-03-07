@@ -10,23 +10,23 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-    }
-    .con__tit-box {
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: unset;
-        .tit-tail {
-            display: flex;
+        .con__tit-box {
+            justify-content: flex-start;
             align-items: center;
-            @include fw-5(14px);
-            color: var(--dt-gray10);
-            &::before {
-                content: '';
-                display: inline-block;
-                width: 1px;
-                height: 12px;
-                background-color: var(--dt-gray10);
-                margin: 0 8px;
+            margin-bottom: unset;
+            .tit-tail {
+                display: flex;
+                align-items: center;
+                @include fw-5(14px);
+                color: var(--dt-gray10);
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 1px;
+                    height: 12px;
+                    background-color: var(--dt-gray10);
+                    margin: 0 8px;
+                }
             }
         }
     }
