@@ -3297,6 +3297,15 @@ textarea::placeholder {
   row-gap: 8px;
   width: 100%;
 }
+.slct-control .focused {
+  border-color: var(--dt-primary);
+}
+.slct-control .error {
+  border-color: var(--dt-error);
+}
+.slct-control .disabled {
+  opacity: 0.4;
+}
 .slct-control.focused .slct-box {
   border-color: var(--dt-primary);
 }
