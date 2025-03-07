@@ -384,47 +384,79 @@ button {
 	border-radius:50%;
 	background-repeat:no-repeat;
 	background-size:100%;
-	background-color:var(--dt-gray06);
+	background-image: url(../images/icon/ic-bank/ic-20-default.png);
 
 	&.ibk {
-		background-image: url(../images/icon/ic-bank/ic-20-ibk.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-ibk.png);
 	}
 	&.kb {
-		background-image: url(../images/icon/ic-bank/ic-20-kb.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-kb.png);
 	}
 	&.hana {
-		background-image: url(../images/icon/ic-bank/ic-20-hana.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-hana.png);
 	}
 	&.nh {
-		background-image: url(../images/icon/ic-bank/ic-20-nh.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-nh.png);
 	}
 	&.woori {
-		background-image: url(../images/icon/ic-bank/ic-20-woori.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-woori.png);
 	}
 	&.sc {
-		background-image: url(../images/icon/ic-bank/ic-20-sc.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-sc.png);
 	}
 	&.citi {
-		background-image: url(../images/icon/ic-bank/ic-20-citi.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-citi.png);
 	}
 	&.daegu {
-		background-image: url(../images/icon/ic-bank/ic-20-daegu.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-daegu.png);
 	}
 	&.bnk {
-		background-image: url(../images/icon/ic-bank/ic-20-bnk.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-bnk.png);
 	}
 	&.kj {
-		background-image: url(../images/icon/ic-bank/ic-20-kj.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-kj.png);
 	}
 	&.post {
-		background-image: url(../images/icon/ic-bank/ic-20-post.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-post.png);
 	}
 	&.shinhan {
-		background-image: url(../images/icon/ic-bank/ic-20-shinhan.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-shinhan.png);
 	}
 	&.kbank {
-		background-image: url(../images/icon/ic-bank/ic-20-kbank.svg);
+		background-image: url(../images/icon/ic-bank/ic-20-kbank.png);
 	}
+	&.kdb{ /* 한국산업은행 */
+		background-image: url(../images/icon/ic-bank/ic-48-kdb.png);
+	}
+	&.toss{
+		background-image: url(../images/icon/ic-bank/ic-48-toss.png);
+	}
+	&.kko{/* 카카오 */
+		background-image: url(../images/icon/ic-bank/ic-48-kko.png);
+	}
+	&.shinhyup{/* 신협 */
+		background-image: url(../images/icon/ic-bank/ic-48-shinhyup.png);
+	}
+	&.suhyup{ /* 수협 */
+		background-image: url(../images/icon/ic-bank/ic-48-suhyup.png);
+	}
+	// 카드사
+	&.samsungcard{
+		background-image: url(../images/icon/ic-bank/ic-20-samsungcard.png);
+	}
+	&.hyundaicard{
+		background-image: url(../images/icon/ic-bank/ic-20-hyundaicard.png);
+	}
+	&.lotte{
+		background-image: url(../images/icon/ic-bank/ic-20-lotte.png);
+	}
+	&.bc{
+		background-image: url(../images/icon/ic-bank/ic-20-bc.png);
+	}
+	&.amex{
+		background-image: url(../images/icon/ic-bank/ic-20-amex.png);
+	}
+
 }
 
 

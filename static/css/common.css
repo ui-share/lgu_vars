@@ -522,46 +522,76 @@ button {
   border-radius: 50%;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-color: var(--dt-gray06);
+  background-image: url(../images/icon/ic-bank/ic-20-default.png);
 }
 .ico-bank.ibk {
-  background-image: url(../images/icon/ic-bank/ic-20-ibk.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-ibk.png);
 }
 .ico-bank.kb {
-  background-image: url(../images/icon/ic-bank/ic-20-kb.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-kb.png);
 }
 .ico-bank.hana {
-  background-image: url(../images/icon/ic-bank/ic-20-hana.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-hana.png);
 }
 .ico-bank.nh {
-  background-image: url(../images/icon/ic-bank/ic-20-nh.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-nh.png);
 }
 .ico-bank.woori {
-  background-image: url(../images/icon/ic-bank/ic-20-woori.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-woori.png);
 }
 .ico-bank.sc {
-  background-image: url(../images/icon/ic-bank/ic-20-sc.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-sc.png);
 }
 .ico-bank.citi {
-  background-image: url(../images/icon/ic-bank/ic-20-citi.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-citi.png);
 }
 .ico-bank.daegu {
-  background-image: url(../images/icon/ic-bank/ic-20-daegu.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-daegu.png);
 }
 .ico-bank.bnk {
-  background-image: url(../images/icon/ic-bank/ic-20-bnk.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-bnk.png);
 }
 .ico-bank.kj {
-  background-image: url(../images/icon/ic-bank/ic-20-kj.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-kj.png);
 }
 .ico-bank.post {
-  background-image: url(../images/icon/ic-bank/ic-20-post.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-post.png);
 }
 .ico-bank.shinhan {
-  background-image: url(../images/icon/ic-bank/ic-20-shinhan.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-shinhan.png);
 }
 .ico-bank.kbank {
-  background-image: url(../images/icon/ic-bank/ic-20-kbank.svg);
+  background-image: url(../images/icon/ic-bank/ic-20-kbank.png);
+}
+.ico-bank.kdb { /* 한국산업은행 */
+  background-image: url(../images/icon/ic-bank/ic-48-kdb.png);
+}
+.ico-bank.toss {
+  background-image: url(../images/icon/ic-bank/ic-48-toss.png);
+}
+.ico-bank.kko { /* 카카오 */
+  background-image: url(../images/icon/ic-bank/ic-48-kko.png);
+}
+.ico-bank.shinhyup { /* 신협 */
+  background-image: url(../images/icon/ic-bank/ic-48-shinhyup.png);
+}
+.ico-bank.suhyup { /* 수협 */
+  background-image: url(../images/icon/ic-bank/ic-48-suhyup.png);
+}
+.ico-bank.samsungcard {
+  background-image: url(../images/icon/ic-bank/ic-20-samsungcard.png);
+}
+.ico-bank.hyundaicard {
+  background-image: url(../images/icon/ic-bank/ic-20-hyundaicard.png);
+}
+.ico-bank.lotte {
+  background-image: url(../images/icon/ic-bank/ic-20-lotte.png);
+}
+.ico-bank.bc {
+  background-image: url(../images/icon/ic-bank/ic-20-bc.png);
+}
+.ico-bank.amex {
+  background-image: url(../images/icon/ic-bank/ic-20-amex.png);
 }
 
 /* Layout Common */
@@ -672,7 +702,6 @@ button {
   color: var(--dt-gray16);
 }
 .con__tit-box .tit-tail {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .con__tit-box .tit-tail.btn-group .btn-md {
@@ -864,8 +893,7 @@ button {
 .plan-wrap .list-plan .txt-desc.ico {
   display: flex;
   align-items: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .plan-wrap .list-plan button.txt-desc .img-box {
   margin-top: 2px;
@@ -933,8 +961,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   align-self: flex-start;
 }
 .info-col-wrap .txt-title.ico .img-box {
@@ -945,8 +972,7 @@ button {
   width: 100%;
 }
 .info-col-wrap .txt-title.ico:has(.btn-tooltip) {
-  -moz-column-gap: 1px;
-       column-gap: 1px;
+  column-gap: 1px;
 }
 .info-col-wrap .txt-title.ico:has(.btn-tooltip) .img-box {
   width: 22px;
@@ -1146,8 +1172,7 @@ button {
 .bank-wrap {
   display: flex;
   align-items: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
 }
 .bank-wrap .img-box {
   min-width: 16px;
@@ -1223,8 +1248,7 @@ button {
   background-color: var(--dt-gray15);
 }
 .switch__wrap > button .txt-title {
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   flex-wrap: wrap;
 }
 .switch__wrap > button .txt-title > span {
@@ -1469,8 +1493,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   min-width: 184px;
   padding: 13px 4px 12px;
   background-color: rgba(0, 0, 0, 0.74);
@@ -1510,8 +1533,7 @@ button {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .btn-between .txt-wrap .txt {
   text-align: left;
@@ -1813,7 +1835,6 @@ button {
   height: 48px;
 }
 .card.chatbot .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -1828,7 +1849,6 @@ button {
   height: 48px;
 }
 .card.home .card-footer .btn-group .btn {
-  width: -moz-max-content;
   width: max-content;
   height: 34px;
   padding: 10px 12px;
@@ -2116,7 +2136,6 @@ button {
   color: var(--dt-gray11);
 }
 .card.chngCode .card-footer .btn {
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 
@@ -2129,8 +2148,7 @@ button {
 .chck-group input[type=checkbox] {
   /* input은 숨김 */
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   margin: 0px;
   padding-inline: 0;
   padding-block: 0;
@@ -2255,54 +2273,69 @@ button {
   margin: 0 auto 5px;
   width: 48px;
   height: 48px;
+  background-image: url(../images/icon/ic-bank/ic-48-default.png);
   /* DB금융투자 */
   /* jp모건 */
   /* 뱅크오브아메리카 */
-  /* 한국산업은행 */
   /* 저축은행 */
-  /* 카카오 */
   /* 케이프투자증권 */
   /* 하이투자증권 */
   /* 한국투자증권 */
+  /* 현대차증권 */
 }
 .chips-bank-col .ico-bank.ibk {
-  background-image: url(../images/icon/ic-bank/ic-48-kyup.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-ibk.png);
 }
 .chips-bank-col .ico-bank.kb {
-  background-image: url(../images/icon/ic-bank/ic-48-kb.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-kb.png);
 }
 .chips-bank-col .ico-bank.hana {
-  background-image: url(../images/icon/ic-bank/ic-48-hana.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-hana.png);
 }
 .chips-bank-col .ico-bank.nh {
-  background-image: url(../images/icon/ic-bank/ic-48-nh.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-nh.png);
 }
 .chips-bank-col .ico-bank.woori {
-  background-image: url(../images/icon/ic-bank/ic-48-woori.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-woori.png);
 }
 .chips-bank-col .ico-bank.sc {
-  background-image: url(../images/icon/ic-bank/ic-48-sc.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-sc.png);
 }
 .chips-bank-col .ico-bank.citi {
-  background-image: url(../images/icon/ic-bank/ic-48-citi.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-citi.png);
 }
 .chips-bank-col .ico-bank.daegu {
-  background-image: url(../images/icon/ic-bank/ic-48-daegu.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-daegu.png);
 }
 .chips-bank-col .ico-bank.bnk {
-  background-image: url(../images/icon/ic-bank/ic-48-bnk.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-bnk.png);
 }
 .chips-bank-col .ico-bank.kj {
-  background-image: url(../images/icon/ic-bank/ic-48-kj.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-kj.png);
 }
 .chips-bank-col .ico-bank.post {
-  background-image: url(../images/icon/ic-bank/ic-48-post.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-post.png);
 }
 .chips-bank-col .ico-bank.shinhan {
-  background-image: url(../images/icon/ic-bank/ic-48-shinhan.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-shinhan.png);
 }
 .chips-bank-col .ico-bank.kbank {
-  background-image: url(../images/icon/ic-bank/ic-48-kbank.svg);
+  background-image: url(../images/icon/ic-bank/ic-48-kbank.png);
+}
+.chips-bank-col .ico-bank.kdb { /* 한국산업은행 */
+  background-image: url(../images/icon/ic-bank/ic-48-kdb.png);
+}
+.chips-bank-col .ico-bank.toss {
+  background-image: url(../images/icon/ic-bank/ic-48-toss.png);
+}
+.chips-bank-col .ico-bank.kko { /* 카카오 */
+  background-image: url(../images/icon/ic-bank/ic-48-kko.png);
+}
+.chips-bank-col .ico-bank.shinhyup { /* 신협 */
+  background-image: url(../images/icon/ic-bank/ic-48-shinhyup.png);
+}
+.chips-bank-col .ico-bank.suhyup { /* 수협 */
+  background-image: url(../images/icon/ic-bank/ic-48-suhyup.png);
 }
 .chips-bank-col .txt {
   display: flex;
@@ -2385,7 +2418,7 @@ button {
   font-size: 14px;
 }
 .chips.chips-all .arrow {
-  background-image: url(../images/icon/ic-chips-arrow-gray.svg);
+  background-image: url(../images/icon/ic-chips-arrow-gray.png);
 }
 .chips.chips-all:active .arrow, .chips.chips-all.is-selected .arrow {
   transform: rotate(-180deg);
@@ -2544,7 +2577,6 @@ button {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  width: -moz-fit-content;
   width: fit-content;
   min-height: 22px;
   background-color: var(--dt-gray10);
@@ -2632,7 +2664,6 @@ button {
 }
 .badge.badge-round {
   min-width: 26px;
-  max-width: -moz-max-content;
   max-width: max-content;
   min-height: 26px;
   border-radius: 27.78vw;
@@ -2913,8 +2944,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   margin-left: auto;
 }
 .header .header__btn .btn {
@@ -2922,7 +2952,6 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .header .header__btn .btn .txt {
@@ -2978,8 +3007,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 .input-row-wrap .hyphen {
   width: 18px;
@@ -3005,8 +3033,7 @@ textarea {
   border: none;
   outline: none;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   background: transparent;
   font-size: 18px;
   font-weight: 600;
@@ -3019,14 +3046,6 @@ textarea {
   min-height: 60px;
   word-break: break-all;
   resize: none;
-}
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  font-family: "Pretendard", system-ui, sans-serif;
-  color: var(--dt-gray11);
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 input::placeholder,
@@ -3118,8 +3137,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   flex: none;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
 }
 .input-control .clear-btn {
   width: 24px;
@@ -3239,9 +3257,6 @@ textarea::placeholder {
 .input-control.read-only .input-row:has(input:focus) {
   border-color: var(--dt-gray08);
 }
-.input-control .input-row:has(input:-moz-read-only) {
-  border-bottom: 2px solid var(--dt-gray08);
-}
 .input-control .input-row:has(input:read-only) {
   border-bottom: 2px solid var(--dt-gray08);
 }
@@ -3265,9 +3280,7 @@ textarea::placeholder {
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown .value {
   display: flex;
   align-items: center;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
-  width: -moz-max-content;
+  column-gap: 4px;
   width: max-content;
   color: var(--dt-gray16);
 }
@@ -3324,8 +3337,7 @@ textarea::placeholder {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
   font-size: 12px;
   font-weight: 600;
   line-height: 1.2;
@@ -3346,7 +3358,6 @@ textarea::placeholder {
   width: 100%;
 }
 .slct-box-wrap.flex-row .hyphen {
-  max-width: -moz-fit-content;
   max-width: fit-content;
   font-size: 20px;
   font-weight: 600;
@@ -3354,7 +3365,6 @@ textarea::placeholder {
   color: var(--dt-gray16);
 }
 .slct-box-wrap.flex-row .btn-group {
-  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 .slct-box-wrap.flex-row .btn-group .search {
@@ -3478,7 +3488,6 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: -moz-fit-content;
   max-width: fit-content;
   margin: 0 auto;
   padding: 42px 0 0 0;
@@ -3662,8 +3671,7 @@ textarea::placeholder {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  -moz-column-gap: 12px;
-       column-gap: 12px;
+  column-gap: 12px;
   padding: 20px 8px 8px 20px;
 }
 .popup-wrapper .popup-header:has(.popup-tit.hidden) {
@@ -3906,7 +3914,6 @@ textarea::placeholder {
 .popup-body .btn.btn-popSolid.between .txt-wrap {
   display: flex;
   align-items: center;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   opacity: 0;
 }
@@ -4028,7 +4035,6 @@ textarea::placeholder {
   padding-top: 0;
 }
 .popup-body.contract .accordion-header.chckbox-area + .accordion-content {
-  max-height: -moz-max-content;
   max-height: max-content;
 }
 .popup-body.contract .accordion-header.chckbox-area + .accordion-content .bullet-list {
@@ -4135,8 +4141,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 6px;
-       column-gap: 6px;
+  column-gap: 6px;
   margin-left: auto;
 }
 .full-popup .popup-header .header__btn .btn {
@@ -4144,7 +4149,6 @@ textarea::placeholder {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
   min-width: max-content;
 }
 .full-popup .popup-header .header__btn .btn .txt {
@@ -4525,8 +4529,7 @@ textarea::placeholder {
   line-height: 150%;
 }
 .accordion-header .txt-title {
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   color: var(--dt-gray16);
   text-align: left;
   line-height: 23px;
@@ -4601,8 +4604,7 @@ textarea::placeholder {
 .info-price-detail .info-wrap .row {
   display: flex;
   justify-content: space-between;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 .info-price-detail .txt-title {
   padding-left: 10px;
@@ -4661,7 +4663,6 @@ textarea::placeholder {
 @media screen and (max-width: 359px) {
   .accordion-header.info-price > .txt-title {
     flex-wrap: wrap;
-    width: -moz-max-content;
     width: max-content;
   }
 }
@@ -4801,8 +4802,7 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin: 0 auto;
   max-width: 320px;
   box-shadow: 0px 8px 13px 0px rgba(0, 0, 0, 0.04);
@@ -4921,7 +4921,6 @@ table.table-bullet-desc + .bullet-list {
 }
 table th, table td {
   width: auto;
-  max-width: -moz-max-content;
   max-width: max-content;
   color: var(--dt-gray12);
   font-size: 12px;
@@ -4984,7 +4983,6 @@ table .slct-area .radio-group::before {
 .tooltip-wrap, .bubble-box {
   display: none;
   position: absolute;
-  width: -moz-max-content;
   width: max-content;
   max-width: 220px;
   background-color: rgba(24, 26, 27, 0.9);
@@ -5003,8 +5001,7 @@ table .slct-area .radio-group::before {
 .tooltip-wrap .txt-wrap:has(.ico), .bubble-box .txt-wrap:has(.ico) {
   display: flex;
   flex-direction: row;
-  -moz-column-gap: 4px;
-       column-gap: 4px;
+  column-gap: 4px;
   align-items: center;
 }
 .tooltip-wrap .txt-wrap .ico, .bubble-box .txt-wrap .ico {
@@ -5023,7 +5020,6 @@ table .slct-area .radio-group::before {
 }
 
 .bubble-box {
-  max-height: -moz-max-content;
   max-height: max-content;
 }
 .bubble-box .txt-wrap:has(.ico) {
@@ -5102,8 +5098,7 @@ table .slct-area .radio-group::before {
   display: flex;
   flex-direction: row;
   align-items: center;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  column-gap: 8px;
 }
 
 .tooltip-close {
@@ -5195,7 +5190,6 @@ div[data-popper-arrow]::before {
 
 .error .bubble-box.topleft,
 .error .bubble-box.topright {
-  max-width: -moz-max-content;
   max-width: max-content;
   bottom: calc(100% - 16px) !important;
 }

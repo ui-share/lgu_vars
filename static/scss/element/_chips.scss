@@ -32,7 +32,8 @@
 	display:inline-block;
 	max-width:100px;
 	height:100px;
-	padding-top:10px;padding-bottom:4px;
+	padding-top:10px;
+	padding-bottom:4px;
 	border-radius: 4px;
 	&:active {
 		box-shadow: inset 0 0 0 300px rgba(0, 0, 0, 0.12);
@@ -52,46 +53,63 @@
 		margin:0 auto 5px;
 		width:48px;
 		height:48px;
+		background-image: url(../images/icon/ic-bank/ic-48-default.png);
 
 		&.ibk {
-			background-image: url(../images/icon/ic-bank/ic-48-kyup.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-ibk.png);
 		}
 		&.kb {
-			background-image: url(../images/icon/ic-bank/ic-48-kb.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-kb.png);
 		}
 		&.hana {
-			background-image: url(../images/icon/ic-bank/ic-48-hana.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-hana.png);
 		}
 		&.nh {
-			background-image: url(../images/icon/ic-bank/ic-48-nh.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-nh.png);
 		}
 		&.woori {
-			background-image: url(../images/icon/ic-bank/ic-48-woori.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-woori.png);
 		}
 		&.sc {
-			background-image: url(../images/icon/ic-bank/ic-48-sc.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-sc.png);
 		}
 		&.citi {
-			background-image: url(../images/icon/ic-bank/ic-48-citi.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-citi.png);
 		}
 		&.daegu {
-			background-image: url(../images/icon/ic-bank/ic-48-daegu.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-daegu.png);
 		}
 		&.bnk {
-			background-image: url(../images/icon/ic-bank/ic-48-bnk.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-bnk.png);
 		}
 		&.kj {
-			background-image: url(../images/icon/ic-bank/ic-48-kj.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-kj.png);
 		}
 		&.post {
-			background-image: url(../images/icon/ic-bank/ic-48-post.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-post.png);
 		}
 		&.shinhan {
-			background-image: url(../images/icon/ic-bank/ic-48-shinhan.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-shinhan.png);
 		}
 		&.kbank {
-			background-image: url(../images/icon/ic-bank/ic-48-kbank.svg);
+			background-image: url(../images/icon/ic-bank/ic-48-kbank.png);
 		}
+		&.kdb{ /* 한국산업은행 */
+			background-image: url(../images/icon/ic-bank/ic-48-kdb.png);
+		}
+		&.toss{
+			background-image: url(../images/icon/ic-bank/ic-48-toss.png);
+		}
+		&.kko{/* 카카오 */
+			background-image: url(../images/icon/ic-bank/ic-48-kko.png);
+		}
+		&.shinhyup{/* 신협 */
+			background-image: url(../images/icon/ic-bank/ic-48-shinhyup.png);
+		}
+		&.suhyup{ /* 수협 */
+			background-image: url(../images/icon/ic-bank/ic-48-suhyup.png);
+		}
+
 		&.dbfi{} /* DB금융투자 */
 		&.hsbc{}
 		&.jpm{} /* jp모건 */
@@ -104,24 +122,19 @@
 		&.america{} /* 뱅크오브아메리카 */
 		&.bookook{}
 		&.sanlim{}
-		&.kdb{} /* 한국산업은행 */
 		&.samsung{}
 		&.saemaeul{}
-		&.suhyup{}
 		&.shinyoung{}
-		&.shinhyup{}
 		&.yuanta{}
 		&.eugenefn{}
 		&.ebest{}
 		&.fsb{} /* 저축은행 */
-		&.kko{} /* 카카오 */
 		&.capefn{} /* 케이프투자증권 */
 		&.kiwoom {}
-		&.toss{}
 		&.imfnsec {} /* 하이투자증권 */
 		&.koreaIs{} /* 한국투자증권 */
 		&.hanhwa {}
-		&.hyundai {}
+		&.hyundai {}/* 현대차증권 */
 
 	}
 	.txt {
@@ -206,7 +219,7 @@
 			@include fz(14px);
 		}
 		.arrow {
-			background-image: url(../images/icon/ic-chips-arrow-gray.svg);
+			background-image: url(../images/icon/ic-chips-arrow-gray.png);
 		}
 		&:active, &.is-selected {
 			.arrow {

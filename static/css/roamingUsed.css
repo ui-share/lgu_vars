@@ -36,6 +36,7 @@
   font-weight: 700;
   line-height: 150%;
   color: var(--dt-gray16);
+  max-width: max-content;
 }
 .roamingUsed .cont__wrap-service.rmInvoice .list-wrap .list-box .list-wrap {
   width: 100%;
