@@ -236,7 +236,7 @@ textarea::placeholder {
 			color: var(--dt-gray11);
 			@include fw-7(14px);
 			line-height:21px;
-		}
+		}	
 	}
 	// 상태별 스타일
 	&.success {
@@ -360,15 +360,6 @@ textarea::placeholder {
 	flex-direction: column;
 	row-gap: 8px;
 	width: 100%;
-	.focused {
-		border-color: var(--dt-primary);
-	}
-	.error {
-		border-color: var(--dt-error);
-	}
-	.disabled {
-		opacity: 0.4;
-	}
 	&.focused {
 		.slct-box {
 			border-color: var(--dt-primary);
