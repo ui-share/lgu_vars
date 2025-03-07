@@ -78,6 +78,14 @@
   min-height: 136px;
 }
 
+.btn-top {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+
 .is-scrolled .section__cont:has(.cont__wrap-category) {
   position: sticky;
   top: 56px;
@@ -127,15 +135,6 @@
   overflow-x: auto;
   gap: 4px;
 }
-
-.btn-top {
-  display: none;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 1;
-}
-
 .is-scrolled .btn-top {
   display: flex;
 }
