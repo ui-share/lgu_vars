@@ -4202,30 +4202,37 @@ textarea::placeholder {
   text-align: left;
 }
 
-.rmAnnounce .popup-body {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+.auth-status {
+  width: 100%;
+  text-align: center;
+  margin-top: 36px;
 }
-.rmAnnounce .popup-body .cont__wrap {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  padding: 0;
+.auth-status .txt {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #563aff;
 }
-.rmAnnounce .popup-body .cont__wrap .con__tit-box {
-  margin-bottom: 0;
+.auth-status .txt::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin: -2px 8px 0 0;
+  background-image: url(../../static/images/icon/ic-auth_blue.svg);
+  background-size: 20px 20px;
+  background-position: 50% 50%;
 }
-.rmAnnounce .popup-body .cont__wrap:first-child {
-  padding-top: 12px;
+.auth-status.ready {
+  margin: 16px 0;
 }
-
-.rmLandingAnnounce .popup-tit .txt span {
-  font-size: 20px;
-  font-weight: 700;
+.auth-status.ready .txt {
+  font-weight: 400;
+  color: var(--dt-gray16);
 }
-.rmLandingAnnounce .popup-body {
-  padding-top: 16px;
+.auth-status.ready .txt::before {
+  display: none;
 }
 
 .appPaid-wrap {
@@ -4270,37 +4277,30 @@ textarea::placeholder {
   margin-top: 8px;
 }
 
-.auth-status {
-  width: 100%;
-  text-align: center;
-  margin-top: 36px;
+.rmAnnounce .popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
 }
-.auth-status .txt {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #563aff;
+.rmAnnounce .popup-body .cont__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
 }
-.auth-status .txt::before {
-  content: "";
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  vertical-align: middle;
-  margin: -2px 8px 0 0;
-  background-image: url(../../static/images/icon/ic-auth_blue.svg);
-  background-size: 20px 20px;
-  background-position: 50% 50%;
+.rmAnnounce .popup-body .cont__wrap .con__tit-box {
+  margin-bottom: 0;
 }
-.auth-status.ready {
-  margin: 16px 0;
+.rmAnnounce .popup-body .cont__wrap:first-child {
+  padding-top: 12px;
 }
-.auth-status.ready .txt {
-  font-weight: 400;
-  color: var(--dt-gray16);
+
+.rmLandingAnnounce .popup-tit .txt span {
+  font-size: 20px;
+  font-weight: 700;
 }
-.auth-status.ready .txt::before {
-  display: none;
+.rmLandingAnnounce .popup-body {
+  padding-top: 16px;
 }
 
 .switch-group .switch-input {

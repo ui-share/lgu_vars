@@ -536,41 +536,40 @@
 	}
 }
 
-
-
-// 로밍 부가서비스 팝업 : 로밍멘트 수정
-.rmAnnounce {
-	.popup-body {
-		display: flex;
-		flex-direction: column;
-		gap: 36px;
-		.cont__wrap {
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-			padding: 0;
-			.con__tit-box {
-				margin-bottom: 0;
-			}
-			&:first-child {
-				padding-top: 12px;
-			}
+// 개인정보 보호모드 이미지+텍스트
+.auth-status {
+	width: 100%;
+	text-align: center;
+	margin-top: 36px;
+	.txt {
+		@include fw-6(14px);
+		line-height: 1.4;
+		color: #563aff;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			margin: -2px 8px 0 0;
+			background-image: url(../../static/images/icon/ic-auth_blue.svg);
+			background-size: 20px 20px;
+			background-position: 50% 50%;
 		}
 	}
-}
-// 로밍 부가서비스 팝업 : 해외도착알리미 핸드폰 입력
-.rmLandingAnnounce {
-	.popup-tit {
+	// 2차인증 대기화면 footer 내 안내 문구
+	&.ready {
+		margin: 16px 0;
 		.txt {
-			span {
-				@include fw-7(20px);
+			font-weight: 400;
+			color: var(--dt-gray16);
+			&::before {
+				display: none;
 			}
 		}
 	}
-	.popup-body {
-		padding-top: 16px;
-	}
 }
+
 
 // 앱스토어 상세구매내역 확인방법 팝업 : 휴대폰결제 이용내역
 .appPaid-wrap {
@@ -610,36 +609,37 @@
     & + .bullet-list {margin-top:8px;}
 }
 
-// 개인정보 보호모드 이미지+텍스트
-.auth-status {
-	width: 100%;
-	text-align: center;
-	margin-top: 36px;
-	.txt {
-		@include fw-6(14px);
-		line-height: 1.4;
-		color: #563aff;
-		&::before {
-			content: "";
-			display: inline-block;
-			width: 20px;
-			height: 20px;
-			vertical-align: middle;
-			margin: -2px 8px 0 0;
-			background-image: url(../../static/images/icon/ic-auth_blue.svg);
-			background-size: 20px 20px;
-			background-position: 50% 50%;
-		}
-	}
-	// 2차인증 대기화면 footer 내 안내 문구
-	&.ready {
-		margin: 16px 0;
-		.txt {
-			font-weight: 400;
-			color: var(--dt-gray16);
-			&::before {
-				display: none;
+
+// 로밍 부가서비스 팝업 : 로밍멘트 수정
+.rmAnnounce {
+	.popup-body {
+		display: flex;
+		flex-direction: column;
+		gap: 36px;
+		.cont__wrap {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			padding: 0;
+			.con__tit-box {
+				margin-bottom: 0;
+			}
+			&:first-child {
+				padding-top: 12px;
 			}
 		}
+	}
+}
+// 로밍 부가서비스 팝업 : 해외도착알리미 핸드폰 입력
+.rmLandingAnnounce {
+	.popup-tit {
+		.txt {
+			span {
+				@include fw-7(20px);
+			}
+		}
+	}
+	.popup-body {
+		padding-top: 16px;
 	}
 }
