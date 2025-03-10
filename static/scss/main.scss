@@ -15,6 +15,73 @@
 			background-size: cover;
 		}
 	}
+	.search__wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		background-color: var(--dt-white);
+		padding-bottom: 20px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+		.search__util {
+			@include flexBox(end, center);
+			width: 100%;
+			height: 56px;
+			border-bottom: 1px solid var(--dt-gray06);
+			.btn-util {
+				width: 32px;
+				height: 32px;
+				background-repeat: no-repeat;
+				background-size: 24px 24px;
+				background-position: center center;
+				padding: 4px;
+				font-size:0px;
+				text-indent: -9999px;
+				&.end {
+					background-image: url(../images/icon/ic-close24-gray15.svg);
+				}
+			}
+		}
+		.search-area {
+			overflow: auto;
+		}
+		.input-group {
+			padding: 8px 20px 4px;
+		}
+		.no-result {
+			background: transparent;
+			padding: 0;
+		}
+		.searchResult {
+			max-height: 440px;
+			margin-top: 16px;
+			padding: 0 20px;
+			.list-item {
+				@include fw-5();
+				color: var(--dt-gray16);
+				line-height: 1.4;
+				padding: 4px 0;
+				&:first-child {
+					padding-top: 0;
+				}
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+		&::after {
+			content: "";
+			display: inline-block;
+			position: absolute;
+			bottom: 20px;
+			left: 0;
+			width: 100%;
+			height: 8px;
+			background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
 }
 
 .section__cont:first-child {
