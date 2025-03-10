@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper roamingUsed">
+		<div class="container">
+			<div class="section__cont"></div>
+		</div>
+	</div>
+
+	<!-- popup 위치 : page-wrapper 바깥 -->
+	<!-- popup 오픈 시 show 추가 / 닫을 경우 show 삭제 / 불러올 경우 show 붙은채로 사용
+		<div class="popup-wrapper show">
+	-->
+	<div class="full-popup show">
+		<div class="popup__wrap rmUsed">
+			<div class="popup-header">
+				<div class="header__util">
+					<button type="button" class="btn btn-util end"><span>처음</span></button>
+				</div>
+				<div class="header__btn">
+					<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+				</div>
+			</div>
+			<div class="popup-body">
+				<div class="section__cont">
+					<!-- 메시지 영역 -->
+					<div class="cont__wrap cont__wrap-message">
+						<div class="cont__txt-box">
+							<h4 class="txt">
+								N월 N일부터 이용 중인<br>
+								로밍 내역이에요
+							</h4>
+						</div>
+					</div>
+
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">가입 상세</span>
+							</h6>
+						</div>
+						<div class="card solid rmPeriod">
+							<div class="card-body">
+								<div class="period-wrap">
+									<div class="item date">
+										<span class="tit">3월 21일 (일)</span>
+										<span class="txt">9:00</span>
+									</div>
+									<div class="item period">
+										<div class="chips chips-tag">
+											<span class="txt">3일</span>
+										</div>
+									</div>
+									<div class="item date">
+										<span class="tit">3월 24일 (수)</span>
+										<span class="txt">9:00</span>
+									</div>
+								</div>
+	
+								<!-- 데이터 리스트 -->
+								<ul class="list-wrap">
+									<li class="list-box">
+										<span class="head">요금제</span>
+										<span class="tail">로밍패스 7GB</span>
+									</li> 
+									<li class="list-box">
+										<span class="head">방문국가</span>
+										<span class="tail">스페인, 이탈리아, 그리스</span>
+									</li>
+								</ul>
+							</div>
+							<div class="card-footer">
+								<div class="btn-group">
+									<button class="btn btn-md" type="button">
+										<span class="txt">요금제 자세히 보기</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 디바이더 영역 -->
+				<div class="section__divider"></div>
+				<!-- 납부 요금 영역 -->
+				<div class="section__cont">
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">납부 요금</span>
+							</h6>
+						</div>
+						
+						<div class="info-price-wrap roamingPrice">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">로밍요금</span>
+									<span class="txt-price">
+										<div class="flag flag-line primary">
+											<span class="txt">청구 전</span>
+										</div>
+										<span>0</span>원
+									</span>
+								</span>
+								<p class="txt-caution">사용 완료 후 청구요금 조회가 가능합니다</p>
+							</div>
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">실시간 조회</span>
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- 디바이더 영역 -->
+				<div class="section__divider"></div>
+				<!-- 사용량 영역 -->
+				<div class="section__cont">
+					<div class="cont__wrap cont__wrap-vertical">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">사용량</span>
+							</h6>
+						</div>
+
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-chart.svg" alt="데이터">
+									</span>
+									데이터
+								</span>
+							</div>
+							<div class="plan-wrap">
+								<div class="col">
+									<div class="txt-plan">
+										<span class="current"><span>13.58GB</span></span>
+										<span class="total">/ 14GB</span>
+									</div>
+									<div class="progress-area realtime">
+										<span class="progress-bg">
+											<!-- style.width %로 조절 -->
+											<span class="progress-bar" style="width:80%;"></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-call.svg" alt="음성통화">
+									</span>
+									음성통화
+								</span>
+							</div>
+							<div class="plan-wrap line">
+								<div class="list-plan">
+									<div class="row">
+										<span class="txt-title">현지발신</span>
+										<span class="txt-desc">
+											<span class="current">2건 5초</span>
+										</span>
+									</div>
+									<div class="row">
+										<span class="txt-title">국제발신</span>
+										<span class="txt-desc">
+											<span class="current">1건 3초</span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<div class="info-col-wrap">
+							<div class="row title-wrap">
+								<span class="txt-title ico">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-circle-message.svg" alt="문자">
+									</span>
+									문자 
+								</span>
+								<span class="txt-desc">
+									<span class="current">4건</span>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

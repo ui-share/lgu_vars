@@ -3,6 +3,7 @@
 .chck-group {
   input[type="checkbox"] {
     /* input은 숨김 */
+    display: none; 
     -webkit-appearance: none;
     appearance: none;
     margin: 0px;
