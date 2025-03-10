@@ -1,301 +1,533 @@
 @import '../base/mixin';
-.datepicker-UI, .range-datepicker {
 
-	.resetDate {
-		min-width: 256px;
-		max-width: 250px;
-		margin: auto;
+// 선택 날짜 초기화 버튼
+.resetDate {
+	// min-width: 256px;
+	// max-width: 250px;
+	margin: auto;
+}
+// datepicker 정렬
+.vanillajs-datepicker {		
+	.datepicker {
+		width: 100%;
 	}
-	.vanillajs-datepicker {
-		
-		display: flex;
-		align-items: flex-start;
-		justify-content: center;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin: auto;
+	gap: 4px;
+	.datepicker-picker {
+		background-color: transparent;
+		// 켈린더 정렬
+		align-items: center;
+		min-width: 220px;
+		max-width: 320px;
 		margin: auto;
-		gap: 4px;
-		.datepicker:not(.active) {
-			display: block !important;
-		}
-		input[name="start"] + .datepicker:not(.active) {
-			display: none !important;
-		}
-		input[name="end"] + .datepicker:not(.active) {
-			display: block !important;
-		}
+		gap: 12px;
+	}
+}
 
-		// &.start_day {
-		// 	input[name="start"] + .datepicker:not(.active) {
-		// 		display: block !important;
-		// 	}
-		// 	input[name="end"] + .datepicker:not(.active) {
-		// 		display: none !important;
-		// 	}
-		// }
-		// &.end_day {
-		// 	input[name="start"] + .datepicker:not(.active) {
-		// 		display: none !important;
-		// 	}
-		// 	input[name="end"] + .datepicker:not(.active) {
-		// 		display: block !important;
-		// 	}
-		// }
-		
-		&.year-month-day {
-			min-height: 380px;
-			padding-top: 12px;
+// range datepicker 강제 active
+.range-datepicker {
+	.vanillajs-datepicker {
+		position: relative;
+		min-height: 440px;
+		padding-top: 12px;
+	}
+	.datepicker:not(.active) {
+		display: flex !important;
+	}
+	input[name="start"] + .datepicker-dropdown:not(.active) {
+		display: none !important;
+	}
+	input[name="end"] + .datepicker-dropdown:not(.active) {
+		display: flex !important;
+	}
+	.datepicker-dropdown {
+		// 켈린더 고정 위치
+		left: 50% !important;
+		top: 0 !important;
+		// bottom: 50% !important;
+		transform: translate(-50%, 78px) !important;
+		z-index: unset;
+		.datepicker-picker {
+			box-shadow: none;
 		}
-		// 켈린더 인풋 회색 박스
-		.datepicker__input-wrap {
-			position: relative;
-			width: 100%;
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			column-gap: 12px;
-			background-color: var(--dt-gray02);
-			border-radius: 8px;
-			padding: 14px 16px;
-			@include fw-6(18px);
+	}
+
+	// 입력 박스
+	.datepicker__input-wrap {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		column-gap: 12px;
+		background-color: var(--dt-gray02);
+		border-radius: 8px;
+		padding: 14px 16px;
+		// @include fw-6(18px);
+		// line-height: 1.5;
+		// color: var(--dt-gray11);
+	}
+	// 입력 영역 + 유닛
+	.datePicker__input-box {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-width: 86px;
+		max-width: 124px;
+		&:has(.hyphen) {
+			max-width: calc(124px + 24px);
+		}		
+		// 입력 영역
+		.input-field {
+			flex: 1;
+			@include fw-6(14px);
+			line-height: 1.2;
+			color: var(--dt-gray16);
+			text-align: center;
+		}
+		// 유닛
+		.input-field-unit {
+			flex: 0 auto;
+			@include fw-5(14px);
 			line-height: 1.5;
 			color: var(--dt-gray11);
-			
-		}
-		// 인풋 입력 영역 + 인풋 유닛
-		.datePicker__input-box {
-			display: flex;
-			flex-wrap: nowrap;
-			align-items: center;
-			justify-content: center;
-			min-width: 86px;
-			max-width: 124px;
-			&:has(.hyphen) {
-				max-width: calc(124px + 24px);
-			}		
-			// 인풋 입력 영역
-			.input-field {
-				flex: 1;
-				@include fw-6(14px);
+			&.hyphen {
+				@include fw-6(18px);
 				line-height: 1.2;
-				color: var(--dt-gray16);
-				text-align: center;
+				padding-right: 12px;
 			}
-			// 인풋 유닛
-			.input-field-unit {
-				flex: 0 auto;
-				@include fw-5(14px);
-				line-height: 1.5;
-				color: var(--dt-gray11);
-				&.hyphen {
-					@include fw-6(18px);
-					line-height: 1.2;
-					padding-right: 12px;
+		}
+	}
+}
+
+
+
+
+// vanillajs-datepicker-1.3.4 커스텀
+.datepicker {
+	.datepicker-main {
+		padding: 0;
+	}
+	.datepicker-view {
+		width: auto;
+		justify-content: center;
+	}
+	.days-of-week, .datepicker-grid  {
+		justify-content: center;
+	}
+}
+.datepicker-title {
+	background-color: var(--dt-white);
+	box-shadow: none;
+	@include fw-6(16px);
+	line-height: 1.5;
+	text-align: center;
+}
+.datepicker-controls {
+	.button {
+		height: auto;
+		line-height: 1.2;
+		color: var(--dt-gray16);
+		vertical-align: middle;
+		box-shadow: none;
+		margin: 0;
+		padding: 0;
+		&:hover {
+			border-color: #b8b8b8;
+			color: #363636;
+		}
+		&:focus {
+			border-color: #3273dc;
+			color: #363636;
+			&:not(:active) {
+				box-shadow: 0 0 0 .125em rgba(50,115,220,.25);
+			}
+		}
+		&:active {
+			border-color: #474747;
+			color: #363636;
+		}
+	}
+}
+
+
+
+// 켈린더 푸터 
+.datepicker-footer {
+	background-color: var(--dt-white);
+	box-shadow: none;
+	display: none;
+	.datepicker-controls {
+		width: 100%;
+		min-width: 256px;
+		max-width: 250px;
+		.button {
+			align-items: center;
+			background-color: var(--dt-gray03);
+			border: 1px solid var(--dt-gray03);
+			border-radius: 4px;
+			@include fw-6(12px);
+			line-height: 1.2;
+			color: var(--dt-gray11);
+		}
+	}
+}
+// 켈린더 헤더 
+.datepicker-header {
+	.datepicker-controls {
+		width: 203px;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		padding: 0;
+		.button {
+			height: auto;
+			border-color: transparent;
+			@include fw-7(20px);
+			line-height: 1.2;
+			color:var(--dt-gray16);
+			&:hover {
+				background-color: var(--dt-white);
+			}
+			&:active {
+				background-color: #f2f2f2;
+			}
+			&.next-button, &.prev-button {
+				color: transparent;
+				font-size: 0;
+				flex: 0 0 24px;
+				width: 24px;
+				height: 24px;
+				background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 100%;
+				&:hover, &:focus, &:active {
+					background-color: transparent;
+					box-shadow: none;
+					border-color: transparent;
+					color: transparent;
+				}
+				&[class~="disabled"] {
+					opacity: 0;
 				}
 			}
-			// 켈린더 정렬
-			.datepicker-picker {
-				align-items: center;		
-				box-shadow: none;
-				min-width: 220px;
-				max-width: 320px;
-				margin: auto;
+			&.next-button {
+				transform: rotate(180deg);
 			}
 		}
 	}
+}
 
-	// vanillajs-datepicker-1.3.4
-	.datepicker {
-		.datepicker-grid {
-			align-items: center;
+
+
+
+
+
+
+
+
+.datepicker {
+	justify-content: flex-start;
+	align-items: center;
+	--dp-size: 16px;
+	.datepicker-cell {
+		position: relative;
+		background-color: transparent !important;
+		color: var(--dt-gray14);
+		&::after {
+			display: inline-block;
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+
+			border-radius: 4.5em;
+			width: calc(100% - 4px);
+			height: calc(100% - 4px);
+			background-color: var(--dt-white);
+			border-color: var(--dt-white);
+			border-style: solid;
+			border-width: 1px;
+			z-index: -1;
 		}
-		&.datepicker-dropdown  {
-			// position: static;
-			// display: unset;
-			left: 50% !important;
-			transform:translateX(-50%);
-			top: 70px !important;
-			//bottom: -300px !important;
+		&:not(.day) {
+			border-radius: 4.5em;
+			font-size: var(--dp-size);
+			font-weight: 600;
+			line-height: 1.5;
+			flex-basis: 4.5em;
+			height: 4.5em;
+			&::after {
+				border-width: 2px;
+			}
 		}
-		// span {
-		// 	border-radius: 40px;
-		// }
-		// .dow {
-		// 	height: 2.25rem;
-		// 	// flex-basis: 40px !important;
-		// 	@include fw-7(12px);
-		// 	line-height: 1.5;
-		// 	color: var(--dt-gray11);
-		// }
-		// .datepicker-cell {	
-		// 	position: relative;
-		// 	// height: 40px;
-		// 	// flex-basis: 40px !important;
-		// 	background-color: var(--dt-white);
-		// 	&.day {
-		// 		position: relative;
-		// 		@include fw-6(11px);
-		// 		line-height: 1;
-		// 		color: var(--dt-gray14);
-				
-		// 	}
-		// 	&.day::nth-child(7n) {
-		// 		&.range {
-		// 			border-radius: 0 0 40px 40px;
-		// 		}
-		// 	}
-		// 	&.next, &.prev {
-		// 		opacity: 0.4;
-		// 	}
-		// 	&.disabled {
-		// 		opacity: 0.4;
-		// 	}
-		// 	&:hover {
-		// 		background-color: transparent;
-		// 	}
-		// 	&:not(.disabled):active {
-		// 		box-shadow: inset 0 0 0px 20em rgba(0, 0, 0, 0.06);
-		// 	}
-		// 	&.focused:not(.selected) {
-		// 		background-color: #F3F5F6;
-		// 		border: 1px solid #F3F5F6;
-		// 		color: var(--dt-gray14);			
-		// 	}
-		// 	&.selected, &.range-end, &.range-start {
-		// 		border-radius: 40px;
-		// 		background-color: var(--dt-white);
-		// 		border: 1px solid var(--dt-primary);
-		// 		color: var(--dt-primary);
-		// 	}
-		// 	&.range {
-		// 		&:not(.disabled) {
-		// 			height: 22px;
-		// 			background-color: rgb(227 0 132 / 20%);
-		// 			color: var(--dt-gray14);
-		// 		}
-		// 	}
-		// 	&.today {
-		// 		&:not(.range):not(.selected) {				
-		// 			background-color: #F3F5F6;
-		// 			border: 1px solid #F3F5F6;
-		// 			color: var(--dt-gray14);
-		// 		}
-		// 		&::before {
-		// 			display: inline-block;
-		// 			content: "오늘";
-		// 			padding: 0 6px;
-		// 			font-size: 8px;
-		// 			line-height: 14px;
-		// 			font-weight: 600;
-		// 			position: absolute;
-		// 			top: -8px;
-		// 			background-color: var(--dt-white);
-		// 			border: 1px solid var(--dt-primary);
-		// 			color: var(--dt-primary);
-		// 			border-radius: 20px;
-		// 		}
-		// 		&::after {
-		// 			display: inline-block;
-		// 			content: '';
-		// 			position: absolute;
-		// 			top: 7px;
-		// 			left: 50%;
-		// 			transform:translateX(-50%);
-		// 			width: 7px;
-		// 			height: 4px;
-		// 			background-image: url(../images/icon/triangle-border.svg);
-		// 			background-size: 100%;
-		// 			background-repeat: no-repeat;
-		// 			background-position: center;
-		// 		}
-		// 		&.range {
-		// 			background-color: rgb(227 0 132 / 20%);
-		// 			color: var(--dt-gray14);
-		// 			&::before {
-		// 				top: -14px;
-		// 			}
-		// 			&::after {
-		// 				top: 1px;
-						
-		// 			}
-		// 		}
-			
-				
-		// 	}
-			
-			
+		&.selected, &.selected:hover {
+			color: var(--dt-primary);
+			font-weight: 600;
+			&::after {
+				background-color: var(--dt-white);
+				border-color: var(--dt-primary);
+			}
+		}
+		&.disabled {
+			background-color: var(--dt-white);
+			opacity: 0.4;
+		} 
+		&.next, &.prev {
+			&:not(.disabled) {
+				color: var(--dt-gray14);
+			}
+		}
+		&.next, &.prev {
+			&.selected {
+				color: var(--dt-primary);
+				&::after {
+					background-color: var(--dt-white);
+					border-color: var(--dt-primary);
+				}
+			}
+		}
+		&.highlighted {
+			&:not(.selected) {
+				&:not(.range) {
+					&:not(.today) {
+						&::after {
+							background-color: var(--dt-white);
+							border-color: var(--dt-white);
+						}
+					}
+				}
+			}
+		}
+		&.highlighted {
+			&:not(.selected) {
+				&:not(.range) {
+					&:not(.today) {
+						&:not(.disabled):hover {
+							&::after {
+								background-color: var(--dt-white);
+								border-color: var(--dt-white);
+							}
+						}
+						&.focused {
+							&::after {
+								background-color: var(--dt-white);
+								border-color: var(--dt-white);
+							}
+						}
+						&::after {
+							background-color: var(--dt-white);
+							border-color: var(--dt-white);
+						}
+					}
+					&::after {
+						background-color: var(--dt-white);
+						border-color: var(--dt-white);
+					}
+				}
+				&::after {
+					background-color: var(--dt-white);
+					border-color: var(--dt-white);
+				}
+			}
+		}
+		&.today {
+			&:not(.selected) {
+				&:not(.disabled) {
+					&:not(.range) {color: var(--dt-primary); }					
+					// &::after {
+					// 	background-color: var(--dt-gray03);
+					// 	border-color: var(--dt-gray03);
+					// }
+				}
+				// &::after {
+				// 	background-color: var(--dt-gray03);
+				// 	border-color: var(--dt-gray03);
+				// }
+				color: var(--dt-gray14);
+			}
+			&.focused {
+				&:not(.selected) {
+					&::after {
+						background-color: var(--dt-gray03);
+						border-color: var(--dt-gray03);
+					}
+				}
+			}
+			&::before {
+				display: inline-block;
+				width: 27px;
+				height: 18px;
+				vertical-align: top;
+				content: "오늘";
+				@include fw-6(8px);
+				line-height: 15px;
+				color: var(--dt-primary);
+				text-align: center;
+				background-image: url(../images/img/datepicker-today.svg);				
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: 100%;
+				// background-color: var(--dt-white);
+				// border-color: var(--dt-primary);
+				// border-radius: 14px;
+				// border-width: 1px;
+				// border-style: solid;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 1;
+
+			}
+		}
+		&.range-end, &.range-start {
+			&:not(.selected) {				
+				color: var(--dt-primary);
+				&::after {
+					background-color: var(--dt-white);
+					border-color: var(--dt-primary);
+				}
+			}
+			&.focused {
+				&:not(.selected) {
+					color: var(--dt-primary);
+				}
+			}
+		}
 		
-			
-		// 	// &.range-start:not(.range-end) + .range, 
-		// 	// &.range-end:not(.range-start) {
-		// 	// 	&::before {
-		// 	// 		display: inline-block;
-		// 	// 		content: "";
-		// 	// 		width: 4px;
-		// 	// 		height: 22px;
-		// 	// 		background-color: rgb(227 0 132 / 20%);
-		// 	// 		position: absolute;
-		// 	// 		top: 50%;
-		// 	// 		transform: translateY(-50%);
-		// 	// 	}
-		// 	// }
-		// 	// &.range-start:not(.range-end) {
-		// 	// 	&::before  {
-		// 	// 		right: -1px;
-		// 	// 	}
-		// 	// }
-		// 	// &.range-end:not(.range-start) {
-		// 	// 	&::before {
-		// 	// 		left: -1px;
-		// 	// 	}
-		// 	// }
-			
-			
-			
-			
-		// }
-		// .datepicker-header {
-		// 	.datepicker-controls {
-		// 		width: 203px;
-		// 		justify-content: center;
-		// 		align-items: center;
-		// 		padding: 0;
-		// 		.button {
-		// 			height: auto;
-		// 			background-color: transparent;
-		// 			@include fw-7(20px);
-		// 			line-height: 1.2;
-		// 			color:var(--dt-gray16);
-		// 			padding: 0;
-		// 			[disabled] {
-		// 				opacity: 0;
-		// 			}
-		// 			&.next-button, &.prev-button {
-		// 				color: transparent;
-		// 				font-size: 0;
-		// 				flex: 0 0 32px;
-		// 				width: 100%;
-		// 				height: 32px;
-		// 				background-image: url(../images/icon/ic-btn-arrow-right-lg.svg);
-		// 				background-position: center;
-		// 				background-repeat: no-repeat;
-		// 				background-size: 24px;
-		// 				padding: 8px;
-		// 				&:hover, &:focus, &:active {
-		// 					background-color: transparent;
-		// 					box-shadow: none;
-		// 					border-color: transparent;
-		// 					color: transparent;
-		// 				}
-						
-		// 			}
-		// 			&.next-button {
-		// 				transform: rotate(180deg);
-		// 			}
-		// 		}
+		&.range-start {
+			&:not(.range-end) {
 				
-		// 	}
-		// }
+				&::after {
+					border-radius: 4.5em;
+				}
+			}
+		}
+		&.range-end {
+			&:not(.range-start) {
+				
+				&::after {
+					border-radius: 4.5em;
+				}
+			}
+		}
+		&.range {
+			position: relative;
+			&::after {
+				background-color: #F9CCE6;
+				border-color: #F9CCE6;
+				border-radius: 0;
+				width: calc(100% + 0px);
+				height: 24px;
+				z-index: -2;
+			}
+			
+			&:not(.disabled) {
+				&:not(.focused) {
+					&:not(.today) {
+						&:hover {
+							&::after {
+								background-color: #F9CCE6;
+							}
+						}
+					}
+				}
+			}
+		}
+		
 	}
+	
+	.days {		
+		.dow, .datepicker-cell {		
+			@include fw-6(var(--dp-size));
+			line-height: 1.5;
+			// color: var(--dt-gray14);
+			flex-basis: 2.75em;
+			height: 2.75em;
+		}
+		.dow {
+			@include fw-7(var(--dp-size));
+			color: var(--dt-gray11);
+		}
+		
+	}
+	.week {
+		color: #b8b8b8;
+		flex: auto;
+		font-size: .75rem;
+	}
+}
 
+
+
+
+
+
+
+
+
+.datepicker-input {
+	&.in-edit {
+		border-color: #276bda;
+		&:active, &:focus {
+			box-shadow: 0 0 .25em .25em rgba(39,107,218,.2);
+		}
+	}
+}
+
+
+@media screen and (min-width: 360px) {
+	.vanillajs-datepicker {
+		.datepicker-picker {
+			max-width: 320px;
+		}
+	}
+	.resetDate {
+		max-width: 320px;
+	}
+}
+@media screen and (max-width: 359px) {
+	.vanillajs-datepicker {
+		.datepicker-picker {
+			max-width: 220px;
+		}
+	}
+	.resetDate {
+		max-width: 220px;
+	}
+	.range-datepicker .datepicker-dropdown {
+		transform: translate(-50%, 108px) !important;
+	}
+}
+
+@media screen and (min-width: 360px) {
+	.datepicker {
+		--dp-size: 16px;
+	}
+}
+@media screen and (max-width: 359px) {
+	.datepicker {
+		--dp-size: 12px;
+		.days .dow, .days .datepicker-cell {
+			flex-basis: 2.834em;
+			height: 2.834em;
+		}
+		.datepicker-cell {
+			&:not(.day) {
+				--dp-size: 16px;
+				line-height: 1.2;
+				flex-basis: 4.5em;
+				height: 4.5em;
+			}
+		}
+	}
+	
 }
 
