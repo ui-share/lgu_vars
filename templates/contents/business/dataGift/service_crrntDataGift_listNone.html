@@ -59,10 +59,19 @@
 					</div>
 					
 					<div class="slct-control">
+						<!-- 
+							- 멀티 제어 (드롭다운 여러개 동시 제어 필요 시) : slct-control에 클래스를 추가
+							** 포커스 : <div class="slct-control focused">
+							** 에러 : <div class="slct-control error">
+							** 비활성 : <div class="slct-control disabled">
+						-->
 						<div class="slct-box-wrap flex-row">
-							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
-								: <button type="button" class="slct-box done">
-								<span class="txt"></span> -->
+						<!--
+							- 싱글 제어 (드롭다운 각각 제어 필요 시) : slct-box(버튼)에 클래스를 추가
+							** 포커스 : <button type="button" class="slct-box focused">
+							** 에러 : <button type="button" class="slct-box error">
+							** 비활성 : <button type="button" class="slct-box disabled">
+						-->
 							<button type="button" class="slct-box done">
 								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
 								<!-- <span class="txt"><span>시작일</span></span> -->
