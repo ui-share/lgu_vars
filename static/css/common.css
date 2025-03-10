@@ -4114,13 +4114,16 @@ textarea::placeholder {
 .full-popup .container {
   padding: 72px 0 95px;
 }
+.full-popup .container:has(.twoFactorAuth) {
+  padding-bottom: 175px;
+}
+.full-popup .container:has(.rmUsed) {
+  padding-bottom: 48px;
+}
 .full-popup .section__cont {
   gap: 48px;
 }
 
-.rmUsed .container {
-  padding-bottom: 48px;
-}
 .rmUsed .con__tit-box .tit-head .txt-title {
   line-height: 1.25;
 }
@@ -4161,9 +4164,6 @@ textarea::placeholder {
   margin-top: 8px;
 }
 
-.twoFactorAuth .container {
-  padding-bottom: 175px;
-}
 .twoFactorAuth .btn-group .btn-radio {
   flex-direction: column;
   justify-content: flex-start;
