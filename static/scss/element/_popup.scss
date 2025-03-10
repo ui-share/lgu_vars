@@ -433,198 +433,109 @@
 	padding-bottom: 20px;
 }
 
-// 풀 팝업
+//풀팝업
 .full-popup {
-    display: none;
-	position: fixed;
-	top: 0;
-	left: 50%;
-	transform:translateX(-50%);
-	width: 100vw;
-	max-width:var(--max-devicewidth);
-	height: 100%;
-	z-index: 9999;
-	.popup__wrap {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		max-height: unset;
-		@include flexColum;
-		background-color: var(--dt-white);
-		overflow-y: auto;
+	.container {
+		padding: 72px 0 95px;
 	}
-	// popup-common 
-	.popup-header {
-		@include flexBox(between, center);
-		flex-wrap: wrap;
-		width: 100%;
-		max-width:var(--max-devicewidth) !important;
-		min-height: 56px;
-		padding: 2px 20px 2px 12px;
-		z-index: 2;
-		.header__util {
-			@include flexBox(start, center);
-			.btn-util {
-				width: 32px;
-				height: 32px;
-				background-repeat: no-repeat;
-				background-size: 24px 24px;
-				background-position: center center;
-				padding: 4px;
-				font-size:0px;
-				text-indent: -9999px;
-				&.prev {
-					background-image: url(../images/icon/ic_chevron_previous_line.svg);
-				}
-				&.end {
-					background-image: url(../images/icon/ic-close24-gray15.svg);
-				}
-			}
-			.header-tit {
-				@include fw-7(16px);
-				color: var(--dt-gray16);
-				margin-left: 4px;
-				.header-txt {
-					@include fw-7(16px);
-					color: var(--dt-gray10);
-				}
-			}
-		}
-		.header__btn {
-			@include flexBox(end, center);
-			column-gap:6px;
-			margin-left: auto;
-			.btn {
-				display: flex;
-				border-radius: 4px;
-				padding: 9px 12px 8px;
-				gap: 2px;
-				min-width:max-content;
-				.txt {@include fw-6(14px);}
-			}
-			.btn-callEnd { // 종료버튼
-				background-color: var(--dt-primary);
-				border-color:var(--dt-primary);
-				.icon {
-					display: inline-block;
-					content: "";
-					width: 16px;
-					min-width: 16px;
-					height: 16px;
-					background-image: url(../images/icon/call_end.svg);
-					background-repeat: no-repeat;
-					background-size: 16px 16px;
-				}
-				.txt {
-					color: var(--dt-white);
-				}
-			}
-		}
-	}
-	.popup-body {
-		display: flex;
-		flex-direction: column;
-		height: 100%;
-		padding: 20px 20px 40px;
-		overflow-y: auto;
+	.section__cont {
 		gap: 48px;
-		.section__cont {
-			gap: 48px;
-			.cont__wrap {
-				padding: 0 20px;
-				&.cont__wrap-vertical {gap:16px;}
-				&.cont__wrap-btBtn {padding:0;}
-			}
-		}
-		&:has(.section__cont) {
-			padding: 20px 0 40px;
-			gap: 0;
-		}
 	}
-	.popup-footer {
-		padding: 0 20px 20px 20px;
-		&.full {// 풀버튼일 경우 패딩 0
-			padding: 0;
-			.btn-group {
-				.btn {
-					border-radius: 0 !important;
-				}
-			}
-		}
-		.btn-group {
-			position: relative;
-			&::before {
-				content: "";
-				display: inline-block;
-				position: absolute;
-				top: -20px;
-				left: 0;
-				width: 100%;
-				height: 20px;
-				background: linear-gradient(0deg, #FFF 17.5%, rgba(255, 255, 255, 0.00) 100%);
-			}
-		}
+}
+//로밍 이용내역 : roamingUsed 풀팝업
+.rmUsed {
+	.container {
+		padding-bottom: 48px;
 	}
-    .back-drop {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: var(--dt-black);
-        opacity: .6;
-    }
-    // show animation
-    &.show {
-        display: block;
-    }
-	//로밍 이용내역 : roamingUsed 풀팝업
-	.rmUsed {
-		.con__tit-box .tit-head .txt-title {
-			line-height:1.25;
-		}
-		.txt-day {
-			@include fw-6();
-			line-height: 120%;
-			color: var(--dt-primary);
-		}
-		// 로밍요금 라운드박스
-		.roamingPrice {
-			.info-price {
-				padding: 22px 20px;
-				.row {
-					align-items: center;
+	.con__tit-box .tit-head .txt-title {
+		line-height:1.25;
+	}
+	.txt-day {
+		@include fw-6();
+		line-height: 120%;
+		color: var(--dt-primary);
+	}
+	// 로밍요금 라운드박스
+	.roamingPrice {
+		.info-price {
+			padding: 22px 20px;
+			.row {
+				align-items: center;
+			}
+			.txt-title {
+				font-size: 16px;
+				align-self: unset;
+			}
+			.txt-price {
+				display: flex;
+				align-items: center;
+				font-size: 18px;
+				color: var(--dt-black);
+				.flag {
+					margin-right: 6px;
 				}
-				.txt-title {
-					font-size: 16px;
-					align-self: unset;
-				}
-				.txt-price {
-					display: flex;
-					align-items: center;
-					font-size: 18px;
-					color: var(--dt-black);
-					.flag {
-						margin-right: 6px;
-					}
-					.flag .txt {
-						font-size: 11px;
-					}
-				}
-				.btn.bg-withdraw {
-					margin-top: 20px;
+				.flag .txt {
+					font-size: 11px;
 				}
 			}
-			.txt-caution { 
-				text-align: right;
-				line-height: 150%;
-				margin-top: 8px;
+			.btn.bg-withdraw {
+				margin-top: 20px;
 			}
+		}
+		.txt-caution { 
+			text-align: right;
+			line-height: 150%;
+			margin-top: 8px;
 		}
 	}
 }
+
+// 2차인증 : twoFactorAuth 팝업
+.twoFactorAuth {
+	.container {
+		padding-bottom: 175px;
+	}
+	.btn-group .btn-radio {
+		flex-direction: column;
+		justify-content: flex-start;
+		height: 100%;
+	}
+	.slctAuth {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr); // 네이버 이용시 3, 1fr 로 변경
+		gap: 8px;
+		grid-auto-rows: 1fr;
+		// 선택형 버튼
+		.btn-radio {
+			background-color: var(--dt-white);
+			@include border(var(--dt-gray17));
+			.txt {
+				&:nth-of-type(1) {
+					@include fw-6();
+					color: var(--dt-gray16);
+				}
+				&:nth-of-type(2) {
+					@include fw-5(14px);
+				}
+			}
+			&.is-selected {
+				border: 1px solid var(--dt-primary);
+				box-shadow: 0 0 0 1px var(--dt-primary) inset;
+				.txt {
+					color: var(--dt-primary);
+				} 
+			}
+		}
+	}
+	// 바텀시트용 아코디온 조정
+	.accordion-header.chckbox-area + .accordion-content {
+		max-height: unset;
+		.txt-caution {
+			text-align: left;
+		}
+	}
+}
+
 
 
 // 로밍 부가서비스 팝업 : 로밍멘트 수정
@@ -699,75 +610,35 @@
     & + .bullet-list {margin-top:8px;}
 }
 
-
-// 2차인증 : twoFactorAuth 팝업
-.twoFactorAuth {
-	.btn-group .btn-radio {
-		flex-direction: column;
-		justify-content: flex-start;
-		height: 100%;
-	}
-	.accordion-header.chckbox-area + .accordion-content {
-		max-height: unset;
-		.txt-caution {
-			text-align: left;
+// 개인정보 보호모드 이미지+텍스트
+.auth-status {
+	width: 100%;
+	text-align: center;
+	margin-top: 36px;
+	.txt {
+		@include fw-6(14px);
+		line-height: 1.4;
+		color: #563aff;
+		&::before {
+			content: "";
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			vertical-align: middle;
+			margin: -2px 8px 0 0;
+			background-image: url(../../static/images/icon/ic-auth_blue.svg);
+			background-size: 20px 20px;
+			background-position: 50% 50%;
 		}
 	}
-	.slctAuth {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr); // 네이버 이용시 3, 1fr 로 변경
-		gap: 8px;
-		grid-auto-rows: 1fr;
-		// 선택형 버튼
-		.btn-radio {
-			background-color: var(--dt-white);
-			@include border(var(--dt-gray17));
-			.txt {
-				&:nth-of-type(1) {
-					@include fw-6();
-					color: var(--dt-gray16);
-				}
-				&:nth-of-type(2) {
-					@include fw-5(14px);
-				}
-			}
-			&.is-selected {
-				border: 1px solid var(--dt-primary);
-				box-shadow: 0 0 0 1px var(--dt-primary) inset;
-				.txt {
-					color: var(--dt-primary);
-				} 
-			}
-		}
-	}
-	.auth-status {
-		width: 100%;
-		text-align: center;
-		margin-top: 36px;
+	// 2차인증 대기화면 footer 내 안내 문구
+	&.ready {
+		margin: 16px 0;
 		.txt {
-			@include fw-6(14px);
-			line-height: 1.4;
-			color: #563aff;
+			font-weight: 400;
+			color: var(--dt-gray16);
 			&::before {
-				content: "";
-				display: inline-block;
-				width: 20px;
-				height: 20px;
-				vertical-align: middle;
-				margin: -2px 8px 0 0;
-				background-image: url(../../static/images/icon/ic-auth_blue.svg);
-				background-size: 20px 20px;
-				background-position: 50% 50%;
-			}
-		}
-		&.ready {
-			margin: 16px 0;
-			.txt {
-				font-weight: 400;
-				color: var(--dt-gray16);
-				&::before {
-					display: none;
-				}
+				display: none;
 			}
 		}
 	}

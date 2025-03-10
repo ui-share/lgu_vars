@@ -12,6 +12,7 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
 
 	<!-- Scripts -->
 </head>
@@ -28,7 +29,7 @@
 	-->
 	<div class="popup-wrapper show">
 		<div class="back-drop"></div>
-		<div class="popup__wrap twoFactorAuth">
+		<div class="popup__wrap">
 			<div class="popup-header">
 				<div class="popup-tit">
 					<span class="txt">PASS로 인증하기</span>
@@ -36,8 +37,7 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<!-- 기본 hidden / PASS 인증 선택 시 노출 -->
-				<div class="cont__wrap cont__wrap-agree pass">
+				<div class="cont__wrap cont__wrap-vertical twoFactorAuth">
 					<ul class="bullet-list">
 						<li class="bullet-item">PASS 인증이 정상 진행되지 않을 경우, PASS 인증서를 재발급 받으신 후 이용이 가능합니다.</li>
 						<li class="bullet-item">
