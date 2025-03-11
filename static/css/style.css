@@ -10,7 +10,7 @@
 .section__cont.summary .cont__wrap {
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 6px;
   position: relative;
   height: max-content;
   min-height: 130px;
