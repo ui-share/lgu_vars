@@ -224,7 +224,6 @@
   border-color: var(--dt-white);
   border-style: solid;
   border-width: 1px;
-  z-index: -1;
 }
 .datepicker .datepicker-cell:not(.day) {
   border-radius: 4.5em;
@@ -288,6 +287,10 @@
 }
 .datepicker .datepicker-cell.today:not(.selected):not(.disabled):not(.range) {
   color: var(--dt-primary);
+}
+.datepicker .datepicker-cell.today:not(.selected)::after {
+  background-color: var(--dt-gray03);
+  border-color: var(--dt-gray03);
 }
 .datepicker .datepicker-cell.today.focused:not(.selected)::after {
   background-color: var(--dt-gray03);
@@ -360,6 +363,35 @@
   color: #b8b8b8;
   flex: auto;
   font-size: 0.75rem;
+}
+
+.datepicker.datepicker-inline {
+  border: 1px solid red;
+}
+.datepicker.datepicker-inline .datepicker-cell {
+  z-index: 0;
+}
+.datepicker.datepicker-inline .datepicker-cell::after {
+  z-index: -1;
+}
+.datepicker.datepicker-inline .datepicker-cell.today:not(.selected) {
+  z-index: 0;
+}
+.datepicker.datepicker-inline .datepicker-cell.today:not(.selected)::after {
+  z-index: -1;
+}
+
+.range-datepicker .datepicker .datepicker-cell {
+  z-index: 0;
+}
+.range-datepicker .datepicker .datepicker-cell::after {
+  z-index: -1;
+}
+.range-datepicker .datepicker .datepicker-cell.today:not(.selected) {
+  z-index: 0;
+}
+.range-datepicker .datepicker .datepicker-cell.today:not(.selected)::after {
+  z-index: -1;
 }
 
 .datepicker-input.in-edit {
