@@ -89,7 +89,7 @@ textarea::placeholder {
 		width: 100%;
 		min-height: 44px;
 		border-bottom: 2px solid var(--dt-gray08);
-		padding: 4px 0;
+		padding: 4px 30px 4px 0;
 		gap: 12px;
 	}
 	.textarea-group {
@@ -319,7 +319,7 @@ textarea::placeholder {
 	.btn-field-dropdown {
 		width: 100%;
 		min-height: 44px;
-		padding: 4px 0;
+		padding: 4px 30px 4px 0;
 		background-image: url(../images/icon/chevron_down_line_24.svg);
 		background-size: 24px;
 		background-repeat: no-repeat;
@@ -688,12 +688,11 @@ select {
     -webkit-appearance: none;
 		-moz-appearance: none;
 			appearance: none;
-	background-size: 0.65rem auto;
     background-image: url(../images/icon/chevron_down_line_24.svg);
     background-size: 24px 24px;
     background-repeat: no-repeat;
     background-position: right 12px top 50%;
-    // margin-left: auto;
+	// margin-left: auto;
 }
 
 /* IE 에서 Select box 화살표 제거 */ 
@@ -702,7 +701,7 @@ select::-ms-expand { display: none; }
 .form-select {
 	border-radius: 10px;
 	border: 2px solid var(--dt-gray08);
-	padding: 10px 12px;
+	padding: 10px 40px 10px 12px;
 	min-height: 48px;
 	@include fw-6(18px);
 	line-height: 1.2;
@@ -713,36 +712,27 @@ select::-ms-expand { display: none; }
         outline: none;
 		color: var(--dt-gray16);
 	}
+	&:active {
+		border: 2px solid var(--dt-gray08);
+		outline: none;
+		color: var(--dt-gray16);
+	}
+	&:disabled {
+		opacity: .4;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+	&[readonly] {
+		opacity: .4;
+		pointer-events: none;
+	}
 }
 // select box에서 validation check
 .input-control {
-	&.focused {
-		.form-select {
-			border: 2px solid var(--dt-primary);
-			color: var(--dt-gray16);
-		}
-	}
-	&.success {
-		.form-select {
-			border: 2px solid var(--dt-gray08);
-			color: var(--dt-gray11);
-		}
-	}
-	&.done {
-		.form-select {
-			border: 2px solid var(--dt-gray08);
-			color: var(--dt-gray16);
-		}
-	}
 	&.error {
 		.form-select {
 			border: 2px solid var(--dt-error);
 			color: var(--dt-gray16);
-		}
-	}
-	&.disabled {
-		.form-select {
-			opacity: .4;
 		}
 	}
 }

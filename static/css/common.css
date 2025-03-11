@@ -3073,7 +3073,7 @@ textarea::placeholder {
   width: 100%;
   min-height: 44px;
   border-bottom: 2px solid var(--dt-gray08);
-  padding: 4px 0;
+  padding: 4px 30px 4px 0;
   gap: 12px;
 }
 .input-control .textarea-group {
@@ -3268,7 +3268,7 @@ textarea::placeholder {
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown {
   width: 100%;
   min-height: 44px;
-  padding: 4px 0;
+  padding: 4px 30px 4px 0;
   background-image: url(../images/icon/chevron_down_line_24.svg);
   background-size: 24px;
   background-repeat: no-repeat;
@@ -3619,7 +3619,6 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-size: 0.65rem auto;
   background-image: url(../images/icon/chevron_down_line_24.svg);
   background-size: 24px 24px;
   background-repeat: no-repeat;
@@ -3634,7 +3633,7 @@ select::-ms-expand {
 .form-select {
   border-radius: 10px;
   border: 2px solid var(--dt-gray08);
-  padding: 10px 12px;
+  padding: 10px 40px 10px 12px;
   min-height: 48px;
   font-size: 18px;
   font-weight: 600;
@@ -3647,25 +3646,24 @@ select::-ms-expand {
   outline: none;
   color: var(--dt-gray16);
 }
+.form-select:active {
+  border: 2px solid var(--dt-gray08);
+  outline: none;
+  color: var(--dt-gray16);
+}
+.form-select:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.form-select[readonly] {
+  opacity: 0.4;
+  pointer-events: none;
+}
 
-.input-control.focused .form-select {
-  border: 2px solid var(--dt-primary);
-  color: var(--dt-gray16);
-}
-.input-control.success .form-select {
-  border: 2px solid var(--dt-gray08);
-  color: var(--dt-gray11);
-}
-.input-control.done .form-select {
-  border: 2px solid var(--dt-gray08);
-  color: var(--dt-gray16);
-}
 .input-control.error .form-select {
   border: 2px solid var(--dt-error);
   color: var(--dt-gray16);
-}
-.input-control.disabled .form-select {
-  opacity: 0.4;
 }
 
 @media screen and (max-width: 359px) {

@@ -570,17 +570,15 @@
 					<h2>[select box]</h2><br/>
 					<!-- select box
 					[[입력 값 클래스]]
-					드롭다운 선택 후 입력 값 : form-select에 각각의 상태값 클래스 추가
-					[[ 상태 class ]]
+					드롭다운 선택 후 입력 값 : form-select에 각각의 상태값 클래스 or 선택자 추가
+					[[ 상태 class or 선택자 ]]
 						** 포커스 : focused
 						** 에러 : error
 						** 비활성 : disabled
-						** 완료 : done
-					- 제어 (셀렉박스 각제어 필요 시) : input-control에 클래스를 추가
-						** 포커스 : <div class="input-control focused">
-						** 에러 : <div class="input-control error">
-						** 비활성 : <div class="input-control disabled">
-						** 비활성 : <div class="input-control done">
+					- 제어 (셀렉박스 각제어 필요 시) : form-select에 클래스 or 선택자 추가
+						** 에러 : <div class="form-select error">
+						** 비활성 : <div class="form-select" disabled>
+						** 읽기전용 : <div class="form-select" readonly>
 					-->
 					<div class="input-control">
 						<select id="" class="form-select">
