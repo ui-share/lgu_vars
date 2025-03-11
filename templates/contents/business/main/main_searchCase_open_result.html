@@ -36,7 +36,7 @@
 				<button type="button" class="btn-ico btn-search"><span>검색</span></button>
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
-			<div class="search__wrap hidden">
+			<div class="search__wrap">
 				<!-- 검색결과 영역 -->
 				<div class="search-area">
 					<!-- 
@@ -53,12 +53,12 @@
 							유효성 검사 에러 : <div class="input-control error">
 					-->
 					<!-- 검색어 입력 -->
-					<div class="input-control">				
+					<div class="input-control focused">				
 						<div class="input-group">
 							<div class="input-row">
-								<input type="text" class="input-field" placeholder="검색어를 입력해주세요." autocomplete='off' />
+								<input type="text" class="input-field" placeholder="검색어를 입력해주세요." value="청구" autocomplete='off' />
 								<div class="util-box">
-									<button type="button" class="clear-btn hidden"></button>
+									<button type="button" class="clear-btn"></button>
 									<!-- 
 									<button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 
 									-->
@@ -83,7 +83,7 @@
 					</div>
 					
 					<!-- 검색결과 있을 경우 -->
-					<ul class="searchResult hidden">
+					<ul class="searchResult">
 						<li class="list-item" role="button"><span class="color-prim">청구</span>요금</li>
 						<li class="list-item" role="button"><span class="color-prim">청구</span>서 받는 방법 변경</li>
 					</ul>
