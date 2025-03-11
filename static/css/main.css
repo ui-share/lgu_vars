@@ -50,10 +50,8 @@
   padding: 0;
 }
 .header .search__wrap .searchResult {
-  max-height: 440px;
   margin-top: 16px;
   padding: 0 20px;
-  overflow: auto;
 }
 .header .search__wrap .searchResult .list-item {
   font-size: 16px;

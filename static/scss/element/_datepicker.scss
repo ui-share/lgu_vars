@@ -225,12 +225,6 @@
 
 
 
-
-
-
-
-
-
 .datepicker {
 	justify-content: flex-start;
 	align-items: center;
@@ -254,7 +248,6 @@
 			border-color: var(--dt-white);
 			border-style: solid;
 			border-width: 1px;
-			z-index: -1;
 		}
 		&:not(.day) {
 			border-radius: 4.5em;
@@ -346,10 +339,11 @@
 					// 	border-color: var(--dt-gray03);
 					// }
 				}
-				// &::after {
-				// 	background-color: var(--dt-gray03);
-				// 	border-color: var(--dt-gray03);
-				// }
+				&::after { // range 선택시 투데이의 회색박스를 유지하기 위한 코드
+					background-color: var(--dt-gray03);
+					border-color: var(--dt-gray03);
+					
+				}
 				color: var(--dt-gray14);
 			}
 			&.focused {
@@ -360,7 +354,7 @@
 					}
 				}
 			}
-			&::before {
+			&::before { // 오늘 버블툴팁
 				display: inline-block;
 				width: 27px;
 				height: 18px;
@@ -465,7 +459,42 @@
 	}
 }
 
-
+// 이제하 작성
+.datepicker {
+	&.datepicker-inline { // 단일선택( range X )
+		border: 1px solid red;
+		.datepicker-cell {
+			z-index: 0;
+			&::after {
+				z-index:-1;
+			}
+			&.today {
+				&:not(.selected) {
+					z-index:0;
+					&::after { // 회색박스
+						z-index:-1;
+					}
+				}
+			}
+		}
+	}
+}
+.range-datepicker .datepicker { // range O
+	.datepicker-cell {
+		z-index: 0;
+		&::after {
+			z-index:-1;
+		}
+		&.today {
+			&:not(.selected) {
+				z-index:0;
+				&::after { // 회색박스
+					z-index:-1;
+				}
+			}
+		}
+	}
+}// 이제하 작성
 
 
 
