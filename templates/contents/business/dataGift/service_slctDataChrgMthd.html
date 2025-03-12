@@ -57,9 +57,14 @@
 						</div> 
 					</div>
 
-					<!-- 가족 공유 데이터 미 소진시 -->
 					<div class="card-group flex-column">
+						<!-- 데이터 2GB 쿠폰 : 사용가능 -->
 						<div class="card horizon sendData" role="button">
+							<div class="card-header hidden"> <!-- 사용가능 시 card-header hidden -->
+								<div class="chips chips-tag">
+									<span class="txt">데이터 2GB 쿠폰 소진</span>
+								</div>
+							</div>
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
@@ -73,9 +78,31 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- 데이터 2GB 쿠폰 : 소진 is-disabled 추가-->
+						<div class="card horizon sendData is-disabled" role="button">
+							<div class="card-header"> <!-- 소진 시 card-header hidden 삭제 -->
+								<div class="chips chips-tag">
+									<span class="txt">데이터 2GB 쿠폰 소진</span>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-2gb-disabled.png" alt="데이터 2GB 쿠폰 소진">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">내 2GB 쿠폰으로 충전해요</span>
+									<!-- <span class="num">5장<span class="num-txt">사용 가능</span></span> -->
+									<span class="txt">데이터 2GB 쿠폰</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 가족 공유 데이터 쿠폰 : 사용가능 -->
 						<div class="card horizon sendData" role="button">
-							<!-- 사용가능 시 card-header hidden -->
-							<div class="card-header hidden">
+							<div class="card-header hidden"> <!-- 사용가능 시 card-header hidden -->
 								<div class="chips chips-tag">
 									<span class="txt">가족사랑데이터 소진</span>
 								</div>
@@ -88,17 +115,15 @@
 								</div>
 								<div class="item text">
 									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<span class="num">3,000MB<span class="num-txt">가능</span></span>
 									<span class="txt">가족사랑데이터</span>
 								</div>
 							</div>
 						</div>
-						<!-- 
-							가족 공유데이터 소진시 : is-disabled
-							<div class="card horizon sendData is-disabled">
-						-->
+
+						<!-- 가족 공유 데이터 쿠폰 : 소진 is-disabled 추가 -->
 						<div class="card horizon sendData is-disabled" role="button">
-							<!-- 소진 시 card-header hidden 삭제 -->
-							<div class="card-header">
+							<div class="card-header"> <!-- 소진 시 card-header hidden 삭제 -->
 								<div class="chips chips-tag">
 									<span class="txt">가족사랑데이터 소진</span>
 								</div>
@@ -106,12 +131,55 @@
 							<div class="card-body">
 								<div class="item util">
 									<span class="img-box">
-										<img src="../../../../static/images/icon/ic-data-fam.png" alt="가족사랑데이터">
+										<img src="../../../../static/images/icon/ic-data-fam-disabled.png" alt="가족사랑데이터 소진">
 									</span>
 								</div>
 								<div class="item text">
 									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<!-- <span class="num">3,000MB<span class="num-txt">가능</span></span> -->
 									<span class="txt">가족사랑데이터</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 참 쉬운 가족 데이터 쿠폰 : 사용가능 -->
+						<div class="card horizon sendData" role="button">
+							<div class="card-header hidden"> <!-- 사용가능 시 card-header hidden -->
+								<div class="chips chips-tag">
+									<span class="txt">데이터 추가 불가 요금제[5G 슬림+]</span>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-easy-fam.png" alt="참 쉬운 가족 데이터">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<span class="num">3,000MB<span class="num-txt">가능</span></span>
+									<span class="txt">참 쉬운 가족 데이터</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 참 쉬운 가족 데이터 쿠폰 : : 소진 is-disabled 추가 -->
+						<div class="card horizon sendData is-disabled" role="button">
+							<div class="card-header"> <!-- 소진 시 card-header hidden 삭제 -->
+								<div class="chips chips-tag">
+									<span class="txt">데이터 추가 불가 요금제[5G 슬림+]</span>
+								</div>
+							</div>
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-data-easy-fam-disabled.png" alt="참 쉬운 가족 데이터 불가">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">가족 공용 데이터로 충전해요</span>
+									<!-- <span class="num">3,000MB<span class="num-txt">가능</span></span> -->
+									<span class="txt">참 쉬운 가족 데이터</span>
 								</div>
 							</div>
 						</div>

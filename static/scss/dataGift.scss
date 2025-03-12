@@ -257,10 +257,21 @@
     .sendData {
         flex-direction: column;
         align-items: flex-start;
-        background-color: var(--dt-gray02);
+        border: 1px solid var(--dt-gray17);
+        background-color: var(--dt-white);
         box-shadow: unset;
         padding: 16px;
         gap: 6px;
+        .chips.chips-tag {
+            margin-left: auto;
+            min-height: 24px;
+            background-color: var(--dt-gray11);
+            padding: 3px 12px;
+            .txt {
+                font-size: 11px;
+                color: var(--dt-white);
+            }
+        }
         .item.text {
             gap: 4px;
             .tit {
@@ -275,6 +286,7 @@
             }
         }
         &.is-disabled {
+            background-color: var(--dt-gray17);
             .chips {
                 opacity: 0.6;
             }

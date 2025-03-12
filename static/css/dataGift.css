@@ -158,14 +158,17 @@
   position: relative;
   border-radius: 6px;
   background: var(--dt-gray03);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   z-index: 1;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
   background: transparent;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   width: 32px;
   height: 32px;
   border: 1px solid var(--dt-gray08);
@@ -260,10 +263,21 @@
 .dataGift .sendData {
   flex-direction: column;
   align-items: flex-start;
-  background-color: var(--dt-gray02);
+  border: 1px solid var(--dt-gray17);
+  background-color: var(--dt-white);
   box-shadow: unset;
   padding: 16px;
   gap: 6px;
+}
+.dataGift .sendData .chips.chips-tag {
+  margin-left: auto;
+  min-height: 24px;
+  background-color: var(--dt-gray11);
+  padding: 3px 12px;
+}
+.dataGift .sendData .chips.chips-tag .txt {
+  font-size: 11px;
+  color: var(--dt-white);
 }
 .dataGift .sendData .item.text {
   gap: 4px;
@@ -279,6 +293,9 @@
 .dataGift .sendData .item.text .num .num-txt {
   font-size: 14px;
   font-weight: 500;
+}
+.dataGift .sendData.is-disabled {
+  background-color: var(--dt-gray17);
 }
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
