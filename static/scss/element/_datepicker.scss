@@ -1,11 +1,6 @@
 @import '../base/mixin';
 
-// 선택 날짜 초기화 버튼
-.resetDate {
-	// min-width: 256px;
-	// max-width: 250px;
-	margin: auto;
-}
+
 // datepicker 정렬
 .vanillajs-datepicker {		
 	.datepicker {
@@ -31,18 +26,26 @@
 .range-datepicker {
 	.vanillajs-datepicker {
 		position: relative;
-		min-height: 440px;
+		min-height: 463px;
 		padding-top: 12px;
 	}
-	.datepicker:not(.active) {
-		display: flex !important;
+	.datepicker-dropdown {
+		&:not(.active) {
+			display: flex !important;
+		}
 	}
-	input[name="start"] + .datepicker-dropdown:not(.active) {
+	input[name="start"] + .datepicker-dropdown {
 		display: none !important;
 	}
-	input[name="end"] + .datepicker-dropdown:not(.active) {
-		display: flex !important;
+	input[name="start"].in-edit + .datepicker-dropdown {
+		display: none !important;
 	}
+	// input[name="end"] + .datepicker-dropdown {
+	// 	display: flex !important;
+	// }
+	// input[name="end"].in-edit + .datepicker-dropdown {
+	// 	display: none !important;
+	// }
 	.datepicker-dropdown {
 		// 켈린더 고정 위치
 		left: 50% !important;
@@ -54,7 +57,6 @@
 			box-shadow: none;
 		}
 	}
-
 	// 입력 박스
 	.datepicker__input-wrap {
 		width: 100%;
@@ -88,6 +90,14 @@
 			line-height: 1.2;
 			color: var(--dt-gray16);
 			text-align: center;
+			&.datepicker-input {
+				&.in-edit {
+					border-color: transparent;
+					&:active, &:focus {
+						box-shadow: none;
+					}
+				}
+			}
 		}
 		// 유닛
 		.input-field-unit {
@@ -101,11 +111,9 @@
 				padding-right: 12px;
 			}
 		}
+		
 	}
 }
-
-
-
 
 // vanillajs-datepicker-1.3.4 커스텀
 .datepicker {
@@ -137,35 +145,33 @@
 		margin: 0;
 		padding: 0;
 		&:hover {
-			border-color: #b8b8b8;
-			color: #363636;
+			border-color: transparent;
+			color: var(--dt-gray16);
 		}
 		&:focus {
-			border-color: #3273dc;
-			color: #363636;
+			border-color: transparent;
+			color: var(--dt-gray16);
 			&:not(:active) {
-				box-shadow: 0 0 0 .125em rgba(50,115,220,.25);
+				box-shadow: none;
 			}
 		}
 		&:active {
-			border-color: #474747;
-			color: #363636;
+			border-color: transparent;
+			color: var(--dt-gray16);
 		}
 	}
 }
-
-
-
 // 켈린더 푸터 
 .datepicker-footer {
+	width: 100%;
 	background-color: var(--dt-white);
 	box-shadow: none;
-	display: none;
 	.datepicker-controls {
 		width: 100%;
-		min-width: 256px;
-		max-width: 250px;
 		.button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			align-items: center;
 			background-color: var(--dt-gray03);
 			border: 1px solid var(--dt-gray03);
@@ -173,6 +179,7 @@
 			@include fw-6(12px);
 			line-height: 1.2;
 			color: var(--dt-gray11);
+			padding: 9px 12px 8px;
 		}
 	}
 }
@@ -186,15 +193,16 @@
 		padding: 0;
 		.button {
 			height: auto;
+			background-color: transparent;
 			border-color: transparent;
 			@include fw-7(20px);
 			line-height: 1.2;
-			color:var(--dt-gray16);
+			color: var(--dt-gray16);
 			&:hover {
-				background-color: var(--dt-white);
+				background-color: transparent;
 			}
 			&:active {
-				background-color: #f2f2f2;
+				background-color: transparent;
 			}
 			&.next-button, &.prev-button {
 				color: transparent;
@@ -219,11 +227,13 @@
 			&.next-button {
 				transform: rotate(180deg);
 			}
+			&.view-switch {
+				-webkit-tap-highlight-color: transparent;
+				cursor: default;
+			}
 		}
 	}
 }
-
-
 
 .datepicker {
 	justify-content: flex-start;
@@ -244,10 +254,11 @@
 			border-radius: 4.5em;
 			width: calc(100% - 4px);
 			height: calc(100% - 4px);
-			background-color: var(--dt-white);
-			border-color: var(--dt-white);
+			background-color: transparent;
+			border-color: transparent;
 			border-style: solid;
 			border-width: 1px;
+			z-index:-1;
 		}
 		&:not(.day) {
 			border-radius: 4.5em;
@@ -275,6 +286,7 @@
 		&.next, &.prev {
 			&:not(.disabled) {
 				color: var(--dt-gray14);
+				opacity: 0.4;
 			}
 		}
 		&.next, &.prev {
@@ -291,42 +303,22 @@
 				&:not(.range) {
 					&:not(.today) {
 						&::after {
-							background-color: var(--dt-white);
-							border-color: var(--dt-white);
+							background-color: transparent;
+							border-color: transparent;
 						}
-					}
-				}
-			}
-		}
-		&.highlighted {
-			&:not(.selected) {
-				&:not(.range) {
-					&:not(.today) {
 						&:not(.disabled):hover {
 							&::after {
-								background-color: var(--dt-white);
-								border-color: var(--dt-white);
+								background-color: transparent;
+								border-color: transparent;
 							}
 						}
 						&.focused {
 							&::after {
-								background-color: var(--dt-white);
-								border-color: var(--dt-white);
+								background-color: transparent;
+								border-color: transparent;
 							}
 						}
-						&::after {
-							background-color: var(--dt-white);
-							border-color: var(--dt-white);
-						}
 					}
-					&::after {
-						background-color: var(--dt-white);
-						border-color: var(--dt-white);
-					}
-				}
-				&::after {
-					background-color: var(--dt-white);
-					border-color: var(--dt-white);
 				}
 			}
 		}
@@ -356,12 +348,12 @@
 			}
 			&::before { // 오늘 버블툴팁
 				display: inline-block;
-				width: 27px;
-				height: 18px;
+				width: 33px;
+				height: 22px;
 				vertical-align: top;
 				content: "오늘";
-				@include fw-6(8px);
-				line-height: 15px;
+				@include fw-6(9px);
+				line-height: 18px;
 				color: var(--dt-primary);
 				text-align: center;
 				background-image: url(../images/img/datepicker-today.svg);				
@@ -376,13 +368,16 @@
 				position: absolute;
 				top: 0;
 				left: 50%;
-				transform: translate(-50%, -50%);
+				transform: translate(-50%, -40%);
 				z-index: 1;
 
 			}
 		}
 		&.range-end, &.range-start {
-			&:not(.selected) {				
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 100%;
+			&:not(.selected) {
 				color: var(--dt-primary);
 				&::after {
 					background-color: var(--dt-white);
@@ -395,18 +390,17 @@
 				}
 			}
 		}
-		
 		&.range-start {
 			&:not(.range-end) {
-				
+				background-image: url(../images/img/range-start_bg.svg);
 				&::after {
 					border-radius: 4.5em;
 				}
 			}
 		}
-		&.range-end {
+		&.range-end {			
 			&:not(.range-start) {
-				
+				background-image: url(../images/img/range-end_bg.svg);
 				&::after {
 					border-radius: 4.5em;
 				}
@@ -419,7 +413,7 @@
 				border-color: #F9CCE6;
 				border-radius: 0;
 				width: calc(100% + 0px);
-				height: 24px;
+				height: 1.85em;
 				z-index: -2;
 			}
 			
@@ -439,7 +433,7 @@
 	}
 	
 	.days {		
-		.dow, .datepicker-cell {		
+		.dow, .datepicker-cell {
 			@include fw-6(var(--dp-size));
 			line-height: 1.5;
 			// color: var(--dt-gray14);
@@ -453,33 +447,12 @@
 		
 	}
 	.week {
-		color: #b8b8b8;
-		flex: auto;
-		font-size: .75rem;
+		color: var(--dt-gray16);
 	}
 }
 
-// 이제하 작성
-.datepicker {
-	&.datepicker-inline { // 단일선택( range X )
-		border: 1px solid red;
-		.datepicker-cell {
-			z-index: 0;
-			&::after {
-				z-index:-1;
-			}
-			&.today {
-				&:not(.selected) {
-					z-index:0;
-					&::after { // 회색박스
-						z-index:-1;
-					}
-				}
-			}
-		}
-	}
-}
-.range-datepicker .datepicker { // range O
+// inline
+.datepicker-inline {
 	.datepicker-cell {
 		z-index: 0;
 		&::after {
@@ -488,28 +461,31 @@
 		&.today {
 			&:not(.selected) {
 				z-index:0;
-				&::after { // 회색박스
+				&::after { 
 					z-index:-1;
 				}
 			}
 		}
 	}
-}// 이제하 작성
-
-
-
-
-
-
-
-.datepicker-input {
-	&.in-edit {
-		border-color: #276bda;
-		&:active, &:focus {
-			box-shadow: 0 0 .25em .25em rgba(39,107,218,.2);
+}
+// range
+.datepicker-dropdown { 
+	.datepicker-cell {
+		z-index: 0;
+		&::after {
+			z-index:-1;
+		}
+		&.today {
+			&:not(.selected) {
+				z-index:0;
+				&::after { 
+					z-index:-1;
+				}
+			}
 		}
 	}
 }
+
 
 
 @media screen and (min-width: 360px) {
@@ -555,8 +531,13 @@
 				flex-basis: 4.5em;
 				height: 4.5em;
 			}
+			&.range::after {
+				height: 2em;
+			}
 		}
 	}
 	
 }
+
+
 
