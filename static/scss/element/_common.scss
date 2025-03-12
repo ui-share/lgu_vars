@@ -466,6 +466,9 @@ button {
 	// width:100%;
 	margin:0 auto;
 	// overflow-x:hidden;
+	&:has(.singleCont) {
+		height: 100%;
+	}
 }
 .page-wrapper.is-scrolled .header {
 	background-color: var(--dt-white);
@@ -473,6 +476,12 @@ button {
 .container {
 	display: flex;
 	flex-direction: column;
+	&:has(.singleCont) {
+		height: 100%;
+	}
+	&:has(.middleAlign) {
+		justify-content: center;
+	}
 }
 .section__divider {
 	width: 100%;
@@ -495,6 +504,14 @@ button {
 	}
 	&:has(.switch__wrap) { // summary, service 
 		// padding-top: 56px;
+	}
+}
+.cont__wrap-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	&.singleCont {
+		height: 100%;
 	}
 }
 .cont__wrap {
