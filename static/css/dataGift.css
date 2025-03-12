@@ -271,7 +271,8 @@
 }
 .dataGift .sendData .chips.chips-tag {
   margin-left: auto;
-  min-height: 24px;
+  min-height: 22px;
+  border: none;
   background-color: var(--dt-gray11);
   padding: 3px 12px;
 }
