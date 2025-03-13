@@ -3659,8 +3659,7 @@ select::-ms-expand {
   opacity: 0.4;
   pointer-events: none;
 }
-
-.input-control.error .form-select {
+.form-select.error {
   border: 2px solid var(--dt-error);
   color: var(--dt-gray16);
 }
