@@ -3684,6 +3684,7 @@ select {
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: right 12px top 50%;
+  background-color: transparent;
 }
 
 /* IE 에서 Select box 화살표 제거 */
