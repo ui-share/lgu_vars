@@ -61,14 +61,16 @@
 							-->
 
 						<!-- 현재 한도 : 입력x 읽기전용 -->
-						<div class="input-control disable">
+						<div class="input-control read-only">
 							<div class="input-group">
 								<label class="input-label">현재 한도</label>
 								<div class="input-row">
-									<span class="value">
-										<span>10</span>
-										<span>만원</span>
-									</span>
+									<input type="tel" class="input-field" value="10" readonly>
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
+										<button type="button" class="clear-btn hidden"></button>
+										<span class="input-unit">만원</span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -92,21 +94,17 @@
 						<!-- 변경 한도 : 금액 입력(숫자만 입력) -->
 						<div class="input-control error">
 							<div class="input-group">
-								<label class="input-label">
-									변경 한도
-								</label>
+								<label class="input-label">변경 한도</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="금액" autocomplete="off" value="100만원" /><!-- 숫자만 입력 : 입력 시 'N + 만원' 형태로 노출됨 -->
+									<input type="tel" class="input-field" placeholder="금액" value="11">
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
+										<button type="button" class="clear-btn"></button>
+										<span class="input-unit">만원</span>
+									</div>
 								</div>
 							</div>
-							<span class="bubble-box topright show"><!-- input-control error 시 show 추가-->
-								<!-- <span class="bubble-box topright"> -->
-								<span class="txt-wrap">
-									<span class="ico"></span>
-									최대 한도 이상 입력할 수 없어요
-								</span>
-								<div class="bubble-box-arrow"></div>
-							</span>
+							<div class="validation-txt">최대 한도 이상 입력할 수 없어요</div>
 							<p class="txt-sub">최대 <span>100</span>만원</p>
 						</div>
 					</div>
