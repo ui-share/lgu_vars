@@ -288,6 +288,9 @@
         }
         &.is-disabled {
             background-color: var(--dt-gray17);
+            &:active {
+                box-shadow: none;
+            }
             .chips {
                 opacity: 0.6;
             }
