@@ -1,78 +1,10 @@
 @import "../scss/base/mixin";
 
-.immePayment {
-	.list-payment {
-		row-gap: 0;
-	}	
+.immePayment {	
 	// 실시간출금 : 예금주명
 	.accnt-username {
 		color: var(--dt-gray16);
 		@include fw-6(18px);
-	}
-	
-	// 나의 납부 내역
-	.wd-full {
-		@include flexColum();
-		gap : 12px;
-		.cont__txt-box, .btn-group {
-			padding: 0 20px;
-		}
-	}
-	.txt-title {
-		@include fw-5();
-		line-height: 1.5;
-		text-align: left;
-	}
-	.txt-price {	
-		@include fw-7();
-		line-height: 1.5;
-		text-align: right;
-	}
-	.txt-sub-date {
-		@include fw-5(12px);
-		color: var(--dt-gray10);
-		line-height: 1.5;
-		text-align: left;
-	}
-	.mypay-list {
-		width:100%;
-		border-top:1px solid var(--dt-gray17);
-		&:last-of-type {
-			border-bottom:1px solid var(--dt-gray17);
-		}
-		.btn {
-			@include flexRow();
-			gap: 4px;
-			width:100%;
-			padding: 20px 12px 20px 20px;
-			&::after {
-				flex: none;
-				content:'';
-				display:inline-block;
-				width:24px;
-				height:24px;
-				background-image:url(../images/icon/ic-24-arrow-right-gray10.svg);
-				background-size: 100%;
-				background-repeat:no-repeat;
-				background-position: center;
-			}
-		}
-		.detail {
-			@include flexColum();
-			gap: 4px;
-			width:100%;		
-			
-			.txt-sub {
-				margin-top:0;
-				margin-left:auto;
-				text-align:right;
-				font-size:14px;
-				line-height:150%;
-			}
-		}
-		.row {
-			justify-content:space-between;
-		}
 	}
 }
 

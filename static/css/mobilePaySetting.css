@@ -91,67 +91,17 @@
 .mobilePaySetting .al-baseline .input-control .input-label {
   display: inline-block;
   width: 100%;
-  text-align: center;
 }
 .mobilePaySetting .al-baseline .input-control .input-row {
   margin: 0 auto;
   justify-content: center;
   column-gap: 0;
 }
-.mobilePaySetting .al-baseline .input-control .input-row .value {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  color: var(--dt-black);
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.mobilePaySetting .al-baseline .input-control .input-field {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-.mobilePaySetting .al-baseline .input-control .input-field::placeholder {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.2;
-}
 .mobilePaySetting .al-baseline .input-control.error input:valid {
   color: var(--dt-error);
 }
-.mobilePaySetting .al-baseline .input-control.error .input-row {
-  border-color: var(--dt-black);
-}
-.mobilePaySetting .al-baseline .input-control.focused .input-row {
-  border-bottom: 2px solid var(--dt-black);
-}
-.mobilePaySetting .al-baseline .input-control.focused .input-row .input-field {
-  caret-color: var(--dt-black);
-}
-.mobilePaySetting .al-baseline .input-control .input-row:has(input:focus) {
-  border-bottom: 2px solid var(--dt-black);
-}
-.mobilePaySetting .al-baseline .input-control .input-row:has(input:focus) .input-field {
-  caret-color: var(--dt-black);
-}
 .mobilePaySetting .al-baseline .input-control .txt-sub {
   margin-top: 8px;
-  text-align: center;
-}
-.mobilePaySetting .al-baseline .bubble-box.topright {
-  padding-right: 10px;
-  padding-left: 10px;
-  bottom: calc(100% + 8px) !important;
-  right: 50%;
-  transform: translateX(12.5%);
-}
-.mobilePaySetting .al-baseline .bubble-box.topright .bubble-box-arrow {
-  right: 16px;
-}
-.mobilePaySetting .al-baseline .bubble-box.topright .bubble-box-arrow::after {
-  left: 0;
 }
 .mobilePaySetting .list-payment {
   margin-top: 20px;

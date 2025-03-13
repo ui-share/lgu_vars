@@ -938,13 +938,16 @@ button {
   border-top: 1px solid var(--dt-gray06);
 }
 
-.info-col-wrap { /* default 회색, 배경 바뀔 시 &.bg-color 형태로 적용 */
+.info-col-wrap {
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 20px;
   border-radius: 8px;
   background-color: var(--dt-gray02);
+}
+.info-col-wrap:has(.progress-area) {
+  padding-bottom: 22px;
 }
 .info-col-wrap .row {
   justify-content: space-between;
@@ -1315,6 +1318,29 @@ button {
 }
 .timetable .chips.is-selected .txt {
   color: var(--dt-primary);
+}
+
+/* 스크롤바 커스텀 */
+.cust-scrollbar::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+.cust-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.cust-scrollbar::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(179, 179, 179, 0.5);
+  -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.cust-scrollbar::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(179, 179, 179, 0.8);
 }
 
 /* 아이콘 버튼 */
@@ -2531,7 +2557,7 @@ button {
   background-color: var(--dt-gray07);
 }
 .chips.neutral {
-  padding: 10px 12px;
+  padding: 9px 12px;
   font-size: 12px;
   font-weight: 600;
   color: var(--dt-gray12);
@@ -3658,6 +3684,7 @@ select {
   background-size: 24px 24px;
   background-repeat: no-repeat;
   background-position: right 12px top 50%;
+  background-color: transparent;
 }
 
 /* IE 에서 Select box 화살표 제거 */
@@ -3695,8 +3722,7 @@ select::-ms-expand {
   opacity: 0.4;
   pointer-events: none;
 }
-
-.input-control.error .form-select {
+.form-select.error {
   border: 2px solid var(--dt-error);
   color: var(--dt-gray16);
 }
@@ -4247,6 +4273,78 @@ select::-ms-expand {
 }
 .twoFactorAuth .accordion-header.chckbox-area + .accordion-content .txt-caution {
   text-align: left;
+}
+
+.immePayment .list-payment {
+  row-gap: 0;
+}
+.immePayment .wd-full {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.immePayment .wd-full .cont__txt-box, .immePayment .wd-full .btn-group {
+  padding: 0 20px;
+}
+.immePayment .txt-title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+.immePayment .txt-price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: right;
+}
+.immePayment .txt-sub-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dt-gray10);
+  line-height: 1.5;
+  text-align: left;
+}
+.immePayment .mypay-list {
+  width: 100%;
+  border-top: 1px solid var(--dt-gray17);
+}
+.immePayment .mypay-list:last-of-type {
+  border-bottom: 1px solid var(--dt-gray17);
+}
+.immePayment .mypay-list .btn {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 100%;
+  padding: 20px 12px 20px 20px;
+}
+.immePayment .mypay-list .btn::after {
+  flex: none;
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon/ic-24-arrow-right-gray10.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.immePayment .mypay-list .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.immePayment .mypay-list .detail .txt-sub {
+  margin-top: 0;
+  margin-left: auto;
+  text-align: right;
+  font-size: 14px;
+  line-height: 150%;
+}
+.immePayment .mypay-list .row {
+  justify-content: space-between;
 }
 
 .auth-status {

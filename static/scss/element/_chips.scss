@@ -91,6 +91,7 @@
 		&.shinhan {
 			background-image: url(../images/icon/ic-bank/ic-48-shinhan.png);
 		}
+		
 		&.kbank {
 			background-image: url(../images/icon/ic-bank/ic-48-kbank.png);
 		}
@@ -109,6 +110,7 @@
 		&.suhyup{ /* 수협 */
 			background-image: url(../images/icon/ic-bank/ic-48-suhyup.png);
 		}
+		&.jeju {}
 
 		&.dbfi{} /* DB금융투자 */
 		&.hsbc{}
@@ -313,7 +315,7 @@
 
 	//chips: neutral
 	&.neutral { 
-		padding:10px 12px;
+		padding:9px 12px;
 		@include fw-6(12px);
 		color:var(--dt-gray12);
 		border:1px solid var(--dt-gray09);

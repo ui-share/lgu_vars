@@ -93,6 +93,20 @@
 							</div>
 							<div class="validation-txt">유효기간을 모두 입력해 주세요</div>
 						</div>
+
+						<div class="input-control"><!-- 포커스 시 focused 추가 로 변경 -->
+							<div class="input-group">
+								<label class="input-label">카드 명의자 고객명</label>
+								<div class="input-row">
+									<input type="tel" class="input-field" placeholder="카드 명의자 고객명">
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>
+							<div class="validation-txt">validation문구 필요시 노출</div>
+						</div>
 					</div>
 				</div>
 
@@ -121,10 +135,11 @@
 							<div class="input-group">
 								<label class="input-label">납부 금액</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="납부 금액" value="99,999원"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
+									<input type="tel" class="input-field" placeholder="금액">
 									<div class="util-box">
 										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
-										<button type="button" class="clear-btn "></button>
+										<button type="button" class="clear-btn hidden"></button>
+										<span class="input-unit">원</span>
 									</div>
 								</div>
 							</div>
