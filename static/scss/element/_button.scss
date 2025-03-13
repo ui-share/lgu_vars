@@ -123,6 +123,31 @@
 			width: 100%;
 		}
 	}
+	&.dynamic-btn {
+		.btn {
+			background-color: transparent;
+			border: 1px solid var(--dt-gray17);
+		}
+		&.flex-row {
+			.btn {
+				&:last-of-type {
+					background-color: var(--dt-gray13);
+					border: 1px solid var(--dt-gray13);
+					.txt {color:var(--dt-white);}
+				}
+			}
+		}
+		&.flex-column {
+			.btn {
+				&:first-of-type {
+					background-color: var(--dt-gray13);
+    				border: 1px solid var(--dt-gray13);
+					.txt {color:var(--dt-white);}
+				}
+			}
+			
+		}
+	}
 	// 로밍요금 선택 버튼
 	.btn-remain-data {
 		justify-content: flex-start;

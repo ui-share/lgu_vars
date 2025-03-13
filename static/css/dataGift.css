@@ -295,6 +295,9 @@
 .dataGift .sendData.is-disabled {
   background-color: var(--dt-gray17);
 }
+.dataGift .sendData.is-disabled:active {
+  box-shadow: none;
+}
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
 }

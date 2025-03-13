@@ -263,7 +263,7 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: 24px;
 	}
 	// popup btn solid 
 	.btn {
@@ -535,6 +535,79 @@
 	}
 }
 
+//나의 납부내역 : immePayment 풀팝업(페이지 > 풀팝업)
+.immePayment {
+	// 나의 납부 내역
+	.list-payment {
+		row-gap: 0;
+	}
+	.wd-full {
+		@include flexColum();
+		gap : 12px;
+		.cont__txt-box, .btn-group {
+			padding: 0 20px;
+		}
+	}
+	.txt-title {
+		@include fw-5();
+		line-height: 1.5;
+		text-align: left;
+	}
+	.txt-price {	
+		@include fw-7();
+		line-height: 1.5;
+		text-align: right;
+	}
+	.txt-sub-date {
+		@include fw-5(12px);
+		color: var(--dt-gray10);
+		line-height: 1.5;
+		text-align: left;
+	}
+	.mypay-list {
+		width:100%;
+		border-top:1px solid var(--dt-gray17);
+		&:last-of-type {
+			border-bottom:1px solid var(--dt-gray17);
+		}
+		.btn {
+			@include flexRow();
+			gap: 4px;
+			width:100%;
+			padding: 20px 12px 20px 20px;
+			&::after {
+				flex: none;
+				content:'';
+				display:inline-block;
+				width:24px;
+				height:24px;
+				background-image:url(../images/icon/ic-24-arrow-right-gray10.svg);
+				background-size: 100%;
+				background-repeat:no-repeat;
+				background-position: center;
+			}
+		}
+		.detail {
+			@include flexColum();
+			gap: 4px;
+			width:100%;		
+			
+			.txt-sub {
+				margin-top:0;
+				margin-left:auto;
+				text-align:right;
+				font-size:14px;
+				line-height:150%;
+			}
+		}
+		.row {
+			justify-content:space-between;
+		}
+	}
+}
+
+
+
 // 개인정보 보호모드 이미지+텍스트
 .auth-status {
 	width: 100%;
@@ -568,7 +641,6 @@
 		}
 	}
 }
-
 
 // 앱스토어 상세구매내역 확인방법 팝업 : 휴대폰결제 이용내역
 .appPaid-wrap {
@@ -607,7 +679,6 @@
     }
     & + .bullet-list {margin-top:8px;}
 }
-
 
 // 로밍 부가서비스 팝업 : 로밍멘트 수정
 .rmAnnounce {
