@@ -84,82 +84,20 @@
 			.input-label {
 				display:inline-block;
 				width:100%;
-				text-align:center;
 			}
 			.input-row {
 				margin:0 auto;
 				justify-content:center;
 				column-gap: 0;
-				.value {
-					display:flex;
-					justify-content:center;
-					flex-wrap:wrap;
-					// width:min-content;
-					// max-width: 100%;
-					color: var(--dt-black);
-					font-size: 24px;
-					font-weight: 600;
-					line-height: 1.2;
-				}
-			}
-			.input-field {
-				text-align:center;
-				// width:min-content;
-				// max-width: 100%;
-				font-size: 24px;
-				font-weight: 600;
-				line-height: 1.2;
-				&::placeholder {
-					font-size: 24px;
-					font-weight: 600;
-					line-height: 1.2;
-				}
 			}
 			&.error { // 에러케이스
 				input:valid {
 					color:var(--dt-error);
 					// & + .util-box .input-unit {color:var(--dt-error);}
 				}
-				.input-row {
-					border-color:var(--dt-black);
-				}
 			}
-			&.focused {
-				.input-row {
-					border-bottom: 2px solid var(--dt-black);
-					.input-field {
-						caret-color: var(--dt-black);
-					}
-				}
-			}
-			.input-row:has(input:focus) {
-				border-bottom: 2px solid var(--dt-black);
-				.input-field {
-					caret-color: var(--dt-black);
-				}
-			}
-			// .input-unit { //유닛 삭제 확정 02.19
-			// 	min-width:44px;
-			// 	color:var(--dt-black);
-			// 	font-size: 24px;
-			// 	font-weight: 600;
-			// 	line-height: 1.2;
-			// 	text-align:center;
-			// }
 			.txt-sub {
 				margin-top:8px;
-				text-align:center;
-			}
-		}
-		.bubble-box.topright {
-			padding-right:10px;
-			padding-left:10px;
-			bottom: calc(100% + 8px) !important;
-			right: 50%;
-			transform: translateX(12.5%);
-			.bubble-box-arrow {
-				right:16px;
-				&::after {left: 0;}
 			}
 		}
 	}

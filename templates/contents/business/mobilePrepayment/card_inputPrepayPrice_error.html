@@ -60,21 +60,15 @@
 							<div class="input-group">
 								<label class="input-label">선결제 금액</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="금액"><!-- 숫자만 입력 가능 / 입력 시 '만원' 텍스트도 value에 포함되어야 함 -->
+									<input type="tel" class="input-field" placeholder="금액" value="51">
 									<div class="util-box">
 										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
 										<button type="button" class="clear-btn hidden"></button>
+										<span class="input-unit">만원</span>
 									</div>
 								</div>
 							</div>
-							<span class="bubble-box topleft show"><!-- input-control error 시 show 추가-->
-								<!-- <span class="bubble-box topleft show"> -->
-								<span class="txt-wrap">
-									<span class="ico"></span>
-									선결제 가능금액 이상 결제할 수 없어요
-								</span>
-								<div class="bubble-box-arrow"></div>
-							</span>
+							<div class="validation-txt">선결제 가능금액 이상 결제할 수 없어요</div>
 							<div class="notice-txt">
 								<span>선결제 가능 <span>50만원</span></span>
 							</div>
