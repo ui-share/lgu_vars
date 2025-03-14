@@ -3722,6 +3722,11 @@ select::-ms-expand {
   opacity: 0.4;
   pointer-events: none;
 }
+.form-select.focused {
+  border: 2px solid var(--dt-primary);
+  outline: none;
+  color: var(--dt-gray16);
+}
 .form-select.error {
   border: 2px solid var(--dt-error);
   color: var(--dt-gray16);
