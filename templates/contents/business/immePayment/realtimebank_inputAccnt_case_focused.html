@@ -94,17 +94,18 @@
 							<div class="input-group">
 								<label class="input-label">납부 금액</label>
 								<div class="input-row">
-									<input type="tel" class="input-field" placeholder="납부 금액" value="9,999원"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
+									<input type="tel" class="input-field" placeholder="금액" value="10,000">
 									<div class="util-box">
-										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제  -->
 										<button type="button" class="clear-btn"></button>
+										<span class="input-unit">원</span>
 									</div>
 								</div>
 							</div>
+							<!-- <div class="validation-txt">validation 필요시 노출</div> -->
 							<div class="notice-txt">
 								<span>1천원 이상 ~ 50만원 미만일 때만 납부할 수 있습니다</span>
 							</div>
-                            <!-- <div class="validation-txt">validation 필요시 노출</div> -->
 						</div>
 
 						<div class="segment__wrap">
