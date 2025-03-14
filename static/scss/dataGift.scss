@@ -294,6 +294,11 @@
             }
         }
     }
+
+    //데이터 선물,충전 현황 검색
+    .slct-control:has(.btn-search) {
+        flex-direction: row;
+    }
 }
 
 //페이지팝업

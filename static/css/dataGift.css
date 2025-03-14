@@ -302,6 +302,9 @@
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
 }
+.dataGift .slct-control:has(.btn-search) {
+  flex-direction: row;
+}
 
 .full-popup .cont__wrap-vertical {
   gap: 28px;

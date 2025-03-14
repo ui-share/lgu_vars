@@ -59,35 +59,33 @@
 					</div>
 					
 					<div class="slct-control">
-						<!-- 
-							- 멀티 제어 (드롭다운 여러개 동시 제어 필요 시) : slct-control에 클래스를 추가
-							** 포커스 : <div class="slct-control focused">
-							** 에러 : <div class="slct-control error">
-							** 비활성 : <div class="slct-control disabled">
-						-->
-						<div class="slct-box-wrap flex-row">
-						<!--
-							- 싱글 제어 (드롭다운 각각 제어 필요 시) : slct-box(버튼)에 클래스를 추가
-							** 포커스 : <button type="button" class="slct-box focused">
-							** 에러 : <button type="button" class="slct-box error">
-							** 비활성 : <button type="button" class="slct-box disabled">
-						-->
+						<div class="slct-box-wrap">
+							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
+								: <button type="button" class="slct-box done">
+								<span class="txt"><span>24년</span><span>12월</span></span> -->
 							<button type="button" class="slct-box done">
-								<span class="txt">NN년 NN월 NN일</span>
-								<!-- <span class="txt">시작일</span> -->
-								<span class="arrow"></span>								
+								<span class="txt">
+									<span>24</span>-<span>11</span>-<span>29</span>
+								</span>
+								<!-- <span class="txt"><span>시작 월</span></span>--> <!-- placeholder 용 텍스트-->
+								<span class="arrow"></span>
 							</button>
-							<span class="hyphen">~</span>
-							<button type="button" class="slct-box">
-								<span class="txt">종료일</span>
-								<span class="arrow"></span>								
-							</button>
-							
-							<div class="btn-group">
-								<button type="button" class="btn btn-sec search">
-									<span class="txt">검색</span>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box">
+									<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
+									: <button type="button" class="slct-box done">  -->
+									<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
+									<span class="txt"><span>종료 월</span></span> <!-- placeholder 용 텍스트-->
+									<span class="arrow"></span>
 								</button>
-							</div>
+							</span>
+						</div>
+
+						<div class="btn-group">
+							<button type="button" class="btn btn-sec">
+								<span class="txt">검색</span>
+							</button>
 						</div>
 					</div>
 
