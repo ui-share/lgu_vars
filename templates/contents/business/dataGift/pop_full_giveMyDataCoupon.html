@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/dataGift.css">
+	
+	<!-- Scripts -->
+	<script src="../../../../static/js/tooltip/popper.js"></script>
+	<script>
+		const isMobile = /iPhone|iPad|iPod|Android/i.test(window.navigator.userAgent);
+		function initCheckDevice() {
+			// PC
+			if (!isMobile) {
+				document.body.classList.add("is-pc");
+			}
+		}
+		window.onload = ()=> {
+			initCheckDevice();
+
+			/*
+				임시코드입니다. 수정하여 사용 요망
+			*/
+			
+			// 툴팁 default : 페이지 내 1개의 툴팁에서만 정상 동작 >> 복수 툴팁의 경우 별로 스크립트 개발 필요
+			const tooltipBtn = document.querySelector('.btn-tooltip'); 
+			const tooltip = document.querySelector('.tooltip-wrap');
+		
+			const popperInstance = Popper.createPopper(tooltipBtn, tooltip, {
+				placement: 'bottom',
+				modifiers: [
+					{
+						name: 'offset',
+						options: {
+							offset: [0, 8],
+						},
+					},
+					{
+						name: 'flip',
+						options: {
+							fallbackPlacements: ['top', 'bottom'],
+						},
+					},
+				],
+			});
+
+			function show() {
+				// Make the tooltip visible
+				tooltip.setAttribute('data-show', '');
+
+				// Enable the event listeners
+				popperInstance.setOptions((options) => ({
+					...options,
+					modifiers: [
+						...options.modifiers,
+						{ name: 'eventListeners', enabled: true },
+					],
+				}));
+
+				// Update its position
+				popperInstance.update();
+			}
+
+			function hide() {
+				// Hide the tooltip
+				tooltip.removeAttribute('data-show');
+
+				// Disable the event listeners
+				popperInstance.setOptions((options) => ({
+					...options,
+					modifiers: [
+						...options.modifiers,
+						{ name: 'eventListeners', enabled: false },
+					],
+				}));
+			}
+
+			const showEvents = ['click', 'focus'];
+			const hideEvents = ['click(.tooltip-close);', 'blur'];
+
+			showEvents.forEach((event) => {
+				tooltipBtn.addEventListener(event, show);
+			});
+
+			hideEvents.forEach((event) => {
+				tooltipBtn.addEventListener(event, hide);
+			});
+		}
+	</script>
+</head>
+<body>
+	<div class="page-wrapper full-popup">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont dataGift">
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							강*환 님에게<br/>
+							<span class="deco">데이터 2GB 쿠폰</span>을 보내요
+						</h4>
+					</div>
+
+					<div class="service-wrap">
+						<div class="con__tit-box">
+							<h6 class="tit-head">
+								<span class="txt-title">데이터 2GB 쿠폰</span>
+							</h6>
+						</div>
+						<div class="coupon-wrap">
+							<span class="img-box">
+								<img src="../../../../static/images/img/img-data-2gbcoupon.png" alt="사용가능 쿠폰">
+							</span>
+							<div class="txt-box">
+								<span class="txt-tit">사용가능 쿠폰 <span class="color-prim">6</span>&nbsp;/&nbsp;6장</span>
+							</div>
+						</div>
+
+						<div class="bullet-wrap">
+							<h5 class="bullet-caption">
+								유의사항
+							</h5>
+							<ul class="bullet-list">
+								<li class="bullet-item">
+									데이터 2GB 쿠폰은 30일동안 1회 1장만 사용할 수 있습니다.
+								</li>
+								<li class="bullet-item">
+									쿠폰으로 충전한 데이터는 30일 동안 사용할 수 있으며, 월 중간에 충전할 경우 다음 달까지 사용할 수 있습니다.
+								</li>
+								<li class="bullet-item">
+									데이터 2GB 쿠폰의 유효기간은 12월 31일까지입니다.
+								</li>
+								<li class="bullet-item">데이터 2GB 쿠폰 사용 신청 후 취소할 수 없습니다.</li>
+								<li class="bullet-item">LTE, 5G 모바일 가입 고객만 데이터 2GB 쿠폰을 사용할 수 있습니다.</li>
+								<li class="bullet-item">데이터 2GB 쿠폰을 받기 전 가입한 요금제의 기본 데이터를 초과 사용하면, 초과 사용한 데이터 이용요금을 내야합니다.</li>
+								<li class="bullet-item">데이터 2GB 쿠폰 데이터로 주고받기, 쉐어링(데이터 나눠쓰기)을 할 수 없습니다.</li>
+								<li class="bullet-item">데이터는 아래와 같은 순서대로 자동 소진됩니다.<br/>데이터 2GB 쿠폰->데이터 주고받기로 받은 데이터->가족사랑데이터->요금제 기본 데이터</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<button class="btn" type="button">
+							<span class="txt">충전하기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
