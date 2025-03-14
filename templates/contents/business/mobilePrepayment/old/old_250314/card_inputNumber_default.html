@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/mobilePayPrepayment.css">
+	
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper mobilePayPrepayment">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont flex-row">
+				<div class="cont__wrap cont__wrap-service">
+					<!-- 납부할 카드정보 입력 영역 -->
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							납부할 카드 정보를 입력해 주세요
+						</h4>
+						<ul class="bullet-list info">
+							<li class="bullet-item">
+								본인 명의의 카드만 등록 가능합니다
+							</li>
+						</ul>
+					</div>
+					<div class="input-col-wrap">
+						<!-- 
+								[[ 입력 상태 별 class ]] : input-control에 클래스를 추가하여 모든 상태를 제어
+									** 포커스 : focused 
+									** 유효성 검사 성공 : success
+									** 유효성 검사 에러 : error
+									** 읽기 전용 : disabled
+									** 비활성 : disabled
+									기본 : <div class="input-control">
+									포커스 : <div class="input-control focused">
+									비활성, 읽기 전용 : <div class="input-control disabled">
+									유효성 검사 성공 : <div class="input-control success">
+									유효성 검사 에러 : <div class="input-control error">
+							-->
+						<div class="input-control"><!-- 포커스 시 focused 추가 로 변경 -->
+							<div class="input-group">
+								<label class="input-label">카드번호</label>
+								<div class="input-row">
+									<input type="tel" class="input-field" placeholder="0000-0000-0000-0000">
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>							
+							<!-- 카드번호 전부 입력 시 노출 -->
+							<div class="chips-group hidden">
+								<button type="button" class="chips chips-bank">
+									<span class="ico-bank shinhan">로고아이콘</span>
+									<span class="txt">신한카드</span>
+								</button>
+							</div>
+							<div class="validation-txt">카드번호를 모두 입력해 주세요</div>
+						</div>
+
+						<div class="input-control"><!-- 포커스 시 focused 추가 로 변경 -->
+							<div class="input-group">
+								<label class="input-label">유효기간 입력</label>
+								<div class="input-row">
+									<input type="tel" class="input-field" placeholder="MM월 / YY년">
+									<div class="util-box">
+										<!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+										<button type="button" class="clear-btn hidden"></button>
+									</div>
+								</div>
+							</div>
+							<div class="validation-txt">유효기간을 모두 입력해 주세요</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+					## 버튼 상태 class 
+					버튼 활성 : <button class="btn btn-prim" type="button"> 
+					버튼 비활성 is-disabled : <button class="btn btn-prim is-disabled" type="button">  
+				-->
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-row is-confirm">
+						<button class="btn btn-prim is-disabled" type="button">
+							<span class="txt">다음</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div> 
+</body>
+</html>
