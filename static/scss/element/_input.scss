@@ -725,6 +725,11 @@ select::-ms-expand { display: none; }
 		opacity: .4;
 		pointer-events: none;
 	}
+	&.focused {
+        border: 2px solid var(--dt-primary);
+        outline: none;
+		color: var(--dt-gray16);
+	}
 	&.error {
 		border: 2px solid var(--dt-error);
 		color: var(--dt-gray16);

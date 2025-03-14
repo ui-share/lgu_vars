@@ -568,14 +568,16 @@
 
 					<br/><br/><br/><br/>
 					<h2>[select box]</h2><br/>
-					<!-- select box
+					<!-- form-select
 					[[입력 값 클래스]]
-					드롭다운 선택 후 입력 값 : form-select에 각각의 상태값 클래스 or 선택자 추가
-					[[ 상태 class or 선택자 ]]
-						** 포커스 : focused
-						** 에러 : error
-						** 비활성 : disabled
-					- 제어 (셀렉박스 각제어 필요 시) : form-select에 클래스 or 선택자 추가
+					드롭다운 선택 후 입력 값 : form-select에 각각의 상태값 클래스 or 속성값 추가
+					[[ 상태 class or 속성값 ]]
+						** 포커스 : focused(클래스로 추가)
+						** 에러 : error(클래스로 추가)
+						** 비활성 : disabled(속성값으로 추가)
+						** 읽기전용 : readonly(속성값으로 추가)
+					- 제어 (셀렉박스 각제어 필요 시) : form-select에 클래스 or 속성값 추가
+						** 포커스 : <select class="form-select focused">
 						** 에러 : <select class="form-select error">
 						** 비활성 : <select class="form-select" disabled>
 						** 읽기전용 : <select class="form-select" readonly>
