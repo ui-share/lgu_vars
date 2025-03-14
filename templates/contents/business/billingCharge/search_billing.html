@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/billingChange.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper billingChange">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- 홀맨 배너 영역// -->
+			<!-- Case 청구서 기본 -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-bill">
+					<div class="select-billdate">
+						<span class="txt-due"><span>2월 1일</span> ~ <span>2월 28일</span></span>
+					</div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<button type="button" class="chips chips-date">
+								<span class="txt"><span>24년</span><span>3월</span></span>
+								<span class="arrow"></span>
+							</button>
+							<span class="txt">청구요금은</span>
+						</span>
+						<span class="txt price">
+							<span class="deco">89,000</span>
+							<span class="color-prim">원</span>이에요
+						</span>
+					</div>
+				</div>
+				<!-- 동일 케이스 : <span class="txt-info"> -->
+				<div class="info-price-single">
+					<span class="txt-info ">
+						지난 달과 납부요금이<span class="color-prim">동일해요</span>
+					</span>
+				</div>
+				<!-- 증가 케이스 : <span class="txt-info increase"> -->
+				<div class="info-price-single">
+					<span class="txt-info increase">
+						지난 달보다
+						<span>
+							<span class="txt-price">38,000원</span>늘었어요
+							<span class="img-box">
+								<img src="../../../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+							</span>
+						</span>
+					</span>
+				</div>
+				<!-- 감소 케이스 : <span class="txt-info decrease"> -->
+				<div class="info-price-single">
+					<span class="txt-info decrease">
+						지난 달보다
+						<span>
+							<span class="txt-price">5,000원</span>줄었어요
+							<span class="img-box">
+								<img src="../../../../static/images/icon/ic-arrowUp-circle-prime.svg" alt="">
+							</span>
+						</span>
+					</span>
+				</div>
+				
+			</div>
+			<!-- Case 청구서 발행 전 -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-bill">
+					<div class="select-billdate">
+						<span class="txt-due">2월 1일 ~ 2월 28일</span>
+					</div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<button type="button" class="chips chips-date">
+								<span class="txt"><span>24년</span><span>3월</span></span>
+								<span class="arrow"></span>
+							</button>
+							<span class="txt">청구요금은</span>
+						</span>
+						<span class="txt price">
+							<span class="color-prim">8일 이후 청구 예정</span>이에요
+						</span>
+					</div>
+				</div>
+			</div>
+			<!-- Case 청구서 없음 -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-bill">
+					<div class="select-billdate"></div>
+					<div class="cont__txt-box">
+						<span class="txt price">
+							<span class="txt">아직 청구서가<br>발행되지 않았어요</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			
+			<!-- 아코디언 영역 -->
+			<div class="section__cont desc">
+				<!-- 발행된 청구서가 있을 경우 -->
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">요금 상세</span>
+							<span class="txt-sub">(부가가치세 포함)</span>
+						</h6>
+						<div class="tit-tail">
+							<button type="button" class="chips chips-all"><!-- 전체접힘 시 : is-selected 추가 -->
+								<span class="txt">전체펼침</span><!-- 전체접힘 시 : 전체접힘 텍스트 변경 -->
+								<span class="arrow"></span>
+							</button>
+						</div>
+					</div>
+					<div class="list-payment">
+						<div class="info-price-wrap">						
+							<div class="list-info-price accordion-container"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">A</span>
+										</div>
+										<span>휴대폰 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													월정액
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													할인요금
+												</span>
+												<span class="txt-price">-NN원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">
+														태블릿/스마트기기 요금무료(슈퍼스페셜 C/D)
+													</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+												<li class="row">
+													<span class="txt-title">선택약정 25% 할인</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">B</span>
+										</div>
+										<span>부가서비스 및 구독 혜택 사용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content">
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)<br />
+													바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)바이브 마음껏 듣기 (음악감상, 뮤직스트리밍무제한)
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													맘대로 폰교체 / 맘대로 폰교체 플러스
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">C</span>
+										</div>
+										<span>기기 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle">
+											<img src="../../../../static/images/icon/ic-chips-arrow-gray.svg" alt="">
+										</span>
+									</span>
+								</button>
+								<div class="accordion-content">
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">
+													항목1111
+												</span>
+												<span class="txt-price">NN원</span>
+											</span>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">
+													항목1-1111
+												</span>
+												<span class="txt-price">-NN원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">항목1-1.상세내용상세내용상세내용상세내용상세내용상세내용</span>
+													<span class="txt-price">-NN원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							<div class="list-info-price accordion-container">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<div class="badge badge-round">
+											<span class="txt">D</span>
+										</div>
+										<span>미납요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>NN원</span>
+										<span class="img-box ico-toggle"></span>
+									</span>
+								</button>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<div class="badge badge-round"><span class="txt">A+B+C+D</span></div>총 청구요금
+									</span>
+									<span class="txt-price">
+										NNN,NNN원
+									</span>
+								</span>
+								<!-- <span class="txt-sub">(부가가치세 포함)</span> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 발행된 청구서가 없을 경우 -->
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">요금 상세</span>
+						</h6>
+					</div>
+					<div class="card solid center">
+						<div class="card-body">
+							<div class="item util">
+								<span class="img-box">
+									<img src="../../../../static/images/icon/ic-card-list_x.svg" alt="">
+								</span>
+							</div>
+							<div class="item text">
+								<span class="txt">아직 발행된 청구서가 없어요</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">납부 상세</span>
+						</h6>
+						<div class="tit-tail btn-group">
+							<button type="button" class="btn btn-sec btn-md">
+								<span class="txt">변경</span>
+							</button>
+						</div>
+					</div>
+					<div class="info-col-wrap">
+						<div class="row">
+							<span class="txt-title">납부방법</span>
+							<span class="txt-desc">
+								은행자동이체
+							</span>
+						</div>
+						<div class="row">
+							<span class="txt-title">납부 예정일</span>
+							<span class="txt-desc">
+								<span>매월 N일</span>
+							</span>
+						</div>
+					</div>
+					<div class="bullet-wrap caution">
+						<h5 class="bullet-caption">
+							유의사항
+						</h5>
+						<ul class="bullet-list">
+							<li class="bullet-item">
+								청구서는 2024년 3월 4일 기준으로 작성되었습니다.
+							</li>
+							<li class="bullet-item">
+								납기일 이후 납부하는 경우 다음달 요금에 2% 연체가산금이 추가됩니다.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 디바이더 영역 -->
+			<div class="section__divider"></div>
+			<!-- 상담 영역 -->
+			<div class="section__cont counsel">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">아래 메뉴도 추천해요</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-realtime_rates.png" alt="실시간 요금">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">실시간 요금</span>
+									<span class="txt">오늘까지 사용한<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_payment.png" alt="요금 납부방법 변경">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">요금 납부방법 변경</span>
+									<span class="txt">계좌ㆍ카드ㆍ결제일<br>변경</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-reissue_invoice.png" alt="청구서 재발행">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">청구서 재발행</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-change_bills.png" alt="청구서 받는 방법 변경">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">청구서 받는 방법<br/>변경</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-counsel accordion-container open">
+					<div class="con__tit-box accordion-header" role="button" tabindex="0">
+						<span class="txt-sub">문의사항을 찾기 어려우신가요</span>
+						<h6 class="tit-head">
+							<span class="txt-title">다른 상담채널을 이용해 보세요</span>
+						</h6>
+						<div class="tit-tail">
+							<span class="img-box ico-toggle">
+								<img src="../../../../static/images/icon/ic-councel-down.svg" alt="">
+							</span>
+						</div>
+					</div>
+					<div class="card-group threeby accordion-content">
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-chatbot2.svg" alt="챗봇 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">챗봇 상담</span>
+									<span class="txt">대기없이 바로</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-ars-ai.svg" alt="AI 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">AI 상담</span>
+									<span class="txt">언제든지 빠른</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-calls.png" alt="전화 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">전화 상담</span>
+									<span class="txt">상세하고 친절한</span>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="chips chips-tag hidden">
+									<span class="txt">점심시간</span>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
