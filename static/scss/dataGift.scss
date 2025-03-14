@@ -122,8 +122,6 @@
                 @include fw-7(16px);
                 line-height: 1.5;
                 color: var(--dt-primary);
-                padding-left: 5px;
-                padding-top: 2px;
             }
         }
     }
@@ -295,5 +293,12 @@
                 opacity: 0.6;
             }
         }
+    }
+}
+
+//페이지팝업
+.full-popup {
+    .cont__wrap-vertical {
+        gap: 28px;
     }
 }

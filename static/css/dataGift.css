@@ -124,8 +124,6 @@
   font-weight: 700;
   line-height: 1.5;
   color: var(--dt-primary);
-  padding-left: 5px;
-  padding-top: 2px;
 }
 .dataGift .data-box {
   display: flex;
@@ -158,14 +156,17 @@
   position: relative;
   border-radius: 6px;
   background: var(--dt-gray03);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   z-index: 1;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
   background: transparent;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   width: 32px;
   height: 32px;
   border: 1px solid var(--dt-gray08);
@@ -300,4 +301,8 @@
 }
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
+}
+
+.full-popup .cont__wrap-vertical {
+  gap: 28px;
 }
