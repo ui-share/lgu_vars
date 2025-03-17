@@ -156,17 +156,14 @@
   position: relative;
   border-radius: 6px;
   background: var(--dt-gray03);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   z-index: 1;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
   background: transparent;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-thumb {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   width: 32px;
   height: 32px;
   border: 1px solid var(--dt-gray08);
