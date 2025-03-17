@@ -3450,6 +3450,23 @@ textarea::placeholder {
   row-gap: 6px;
   width: 100%;
 }
+.slct-box-wrap.flex-row .hyphen {
+  flex: 0 20px;
+  min-width: 20px;
+  max-width: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--dt-gray16);
+}
+.slct-box-wrap.flex-row .btn-group {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+.slct-box-wrap.flex-row .btn-group .search {
+  padding: 10px;
+  height: 48px;
+}
 
 .multi-box {
   display: flex;
@@ -3700,18 +3717,6 @@ select::-ms-expand {
   color: var(--dt-gray16);
 }
 
-@media screen and (max-width: 359px) {
-  .datePicker-wrap {
-    flex-wrap: wrap;
-  }
-  .datePicker-wrap .datePicker-box:first-child {
-    width: 100%;
-    max-width: unset;
-  }
-  .datePicker-wrap .datePicker-field {
-    padding-bottom: 1px;
-  }
-}
 .popup-wrapper {
   display: none;
   position: fixed;
