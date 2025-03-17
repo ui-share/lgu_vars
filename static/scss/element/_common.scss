@@ -219,10 +219,12 @@ button {
 .px-0 {padding-left: 0 !important; padding-right: 0 !important;}
 .pt-20 {padding-top: 20px !important;}
 .pt-40 {padding-top: 40px !important;}
-.color-prim {color:var(--dt-primary) !important;}
 .semibold {font-weight:600 !important;}
 .bold {font-weight:700 !important;}
 .t-left {text-align: left !important;}
+.color-prim {color:var(--dt-primary) !important;}
+.color-sec {color:var(--dt-gray15) !important;}
+.color-error {color:var(--dt-error) !important;}
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
