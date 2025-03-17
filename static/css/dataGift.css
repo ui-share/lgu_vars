@@ -58,6 +58,9 @@
 .dataGift .phoneList .card .item {
   gap: 12px;
 }
+.dataGift .phoneList .card .item:has(.add-txt) {
+  justify-content: center;
+}
 .dataGift .phoneList .card .item .tit {
   font-size: 16px;
   font-weight: 700;
@@ -67,6 +70,10 @@
   font-size: 16px;
   color: var(--dt-gray12);
   margin-left: unset;
+}
+.dataGift .phoneList .card .item .txt.add-txt {
+  font-size: 14px;
+  text-align: center;
 }
 .dataGift .phoneList .card .item .data {
   position: relative;
@@ -298,9 +305,6 @@
 }
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
-}
-.dataGift .slct-control:has(.btn-search) {
-  flex-direction: row;
 }
 
 .full-popup .cont__wrap-vertical {

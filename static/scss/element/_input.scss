@@ -406,7 +406,9 @@ textarea::placeholder {
 	// 검색버튼이 있는 드롭다운
 	&.flex-row {
 		.hyphen { 
-			max-width: fit-content;
+			flex: 0 20px;
+			min-width: 20px;
+			max-width: 20px;
 			@include fw-6(20px);
 			text-align: center;
 			color: var(--dt-gray16);
@@ -424,7 +426,7 @@ textarea::placeholder {
 	display: flex;
 	align-items: center;
 	margin-left: auto;
-	width: calc(50% + 10px);
+	
 	.hyphen { 
 		width: 20px;
 		text-align: center;
@@ -444,9 +446,9 @@ textarea::placeholder {
 	align-items: center;
 	border: 2px solid var(--dt-gray08);
 	border-radius: 10px;
-	padding: 9px 10px 9px 12px;
+	padding: 9px 8px 9px 10px;
 	min-height: 48px;
-	// width: calc(50% - 10px);
+	
 	.txt {
 		display: flex;
 		flex-wrap: nowrap;
@@ -461,27 +463,11 @@ textarea::placeholder {
 			text-align: right;
 			@include fw-6(16px);
 			line-height: 1.2;
-		
-		}
-		&:has(span:nth-child(1):last-child) * {
-			flex: 1;
-			@include fw-6(16px);
-			line-height: 1.2;
-			min-width: auto;
-		}
-		// span이 2개일 때
-		&:has(span:nth-child(2):last-child) * {
-			flex: 1 50%;
-		}
-		// span이 3개일 때
-		&:has(span:nth-child(3):last-child) * {
-			flex: 1 33.333333%;
-			&:last-child {
-				min-width: 34px;
-			}
+			word-break: keep-all;
 		}
 	}
-	.arrow { 
+	.arrow {
+		flex: 0 auto;
 		display: inline-block;
 		width: 24px;
 		height: 24px;
@@ -496,19 +482,20 @@ textarea::placeholder {
 			color: var(--dt-gray16);
 		}
 	}
-}	
-.slct-box-wrap {
-	&:has(.slct-box:first-child:last-child) {
-		.slct-box {
-			max-width: 150px;
-			width: 150px;
-		}
+}
+.slct-box-wrap:not(.flex-row) > * {
+	flex: 1 auto;
+	min-width: 150px;
+	max-width: 100%;
+}
+.slct-box-wrap:has(.multi-box) > *:not(.multi-box) {
+	max-width: calc(50% - 10px);
+}
+
+@media screen and (max-width: 359px) {
+	.slct-box-wrap:has(.multi-box) > *:not(.multi-box) {
+		max-width: calc(100% - 20px);
 	}
-	&:has(.slct-box:nth-child(2):last-child) {
-		.slct-box {
-			width: calc(50% - 10px);
-		}
-	} 
 }
 
 
@@ -641,56 +628,15 @@ textarea::placeholder {
 	}
 }
 
-// 캘린더 input
-.datePicker-wrap {
-	display: flex;
-	background-color: var(--dt-gray02);
-	border-radius: 8px;
-	padding: 14px 18px;
-	align-items: center;
-	justify-content: center;
-	margin: 20px 0;
-	.datePicker-box {
-		display: flex;
-		flex-wrap: nowrap;
-		justify-content: center;
-		max-width: 124px;
-		gap: 2px;
-	}
-	.datePicker-field {
-		width: auto;
-		@include fw-6(14px);
-		line-height: 1.2;
-		color: var(--dt-gray16);
-		field-sizing: content;
-		pointer-events: none;
-	}
-	.datePicker-txt {
-		display: inline-block;
-		@include fw-5(14px);
-		line-height: 1.5;
-		color: var(--dt-gray11);
-		white-space: nowrap; /* 줄바꿈 방지 */
-	}
-	.hyphen {
-		@include fw-6(18px);
-		line-height: 1.2;
-		color: var(--dt-gray10);
-		width: 36px;
-		padding: 0 12px;
-	}
-}
-
-
 /* Select box 스타일 초기화 */ 
 select {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
 		-moz-appearance: none;
 			appearance: none;
-    background-image: url(../images/icon/chevron_down_line_24.svg);
-    background-size: 24px 24px;
-    background-repeat: no-repeat;
-    background-position: right 12px top 50%;
+	background-image: url(../images/icon/chevron_down_line_24.svg);
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	background-position: right 12px top 50%;
 	background-color: transparent;
 }
 
@@ -707,8 +653,8 @@ select::-ms-expand { display: none; }
 	color: var(--dt-gray11);
 	width: 100%;
 	&:focus {
-        border: 2px solid var(--dt-primary);
-        outline: none;
+		border: 2px solid var(--dt-primary);
+		outline: none;
 		color: var(--dt-gray16);
 	}
 	&:active {
@@ -726,8 +672,8 @@ select::-ms-expand { display: none; }
 		pointer-events: none;
 	}
 	&.focused {
-        border: 2px solid var(--dt-primary);
-        outline: none;
+		border: 2px solid var(--dt-primary);
+		outline: none;
 		color: var(--dt-gray16);
 	}
 	&.error {
@@ -737,31 +683,3 @@ select::-ms-expand { display: none; }
 }
 
 
-@media screen and (max-width:359px) {
-	.slct-box-wrap {// 드롭다운 반응형
-		&:has(.slct-box:first-child:last-child) {
-			.slct-box {
-				max-width: 150px;
-				width: 150px;
-			}
-		}
-		&:has(.slct-box:nth-child(2):last-child) {
-			.slct-box {
-				width: calc(100% - 10px);
-			}
-			.multi-box{ 
-				width: calc(100% + 10px);
-			}
-		} 
-	}
-	.datePicker-wrap {// 데이트피커 반응형
-		flex-wrap: wrap;
-		.datePicker-box:first-child {
-			width: 100%;
-			max-width: unset;
-		}
-		.datePicker-field {
-			padding-bottom: 1px;
-		}
-	}
-}

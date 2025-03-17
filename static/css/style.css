@@ -255,6 +255,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
   color: var(--dt-gray11);
   gap: 4px;
@@ -263,6 +264,12 @@
 }
 .info-price-single .txt-info.decrease .img-box {
   transform: rotate(180deg);
+}
+.info-price-single .txt-info:has(> span:nth-child(2)) {
+  flex-direction: column;
+}
+.info-price-single .txt-info > span {
+  letter-spacing: -0.3px;
 }
 .info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
   color: var(--dt-primary);
