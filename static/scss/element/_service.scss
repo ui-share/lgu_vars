@@ -111,6 +111,7 @@
 	}
 	.txt-info {
 		@include flexBox(center, center);
+		flex-direction:row;
 		flex-wrap:wrap;
 		color:var(--dt-gray11);
 		gap:4px; 
@@ -118,6 +119,10 @@
 		&.decrease {
 			.img-box {transform: rotate(180deg)}
 		}
+		&:has(> span:nth-child(2)) {
+			flex-direction:column;
+		}
+		> span {letter-spacing: -0.3px;}
 		> span:first-child {
 			&:not(:has(.color-prim)) {
 				color:var(--dt-primary);

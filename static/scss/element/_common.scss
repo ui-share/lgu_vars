@@ -793,6 +793,7 @@ button {
 	border-radius:8px;
 	background-color:var(--dt-gray02);
 	&:has(.progress-area) {padding-bottom:22px;}
+	
 	.row {
 		justify-content: space-between;
 		align-items:center;
@@ -846,12 +847,19 @@ button {
 	}
 	.info-price.total-last {
 		padding:0;
+		.row {
+			&:has(.txt-price .txt-sub) {
+				.txt-title {align-self:flex-start;}
+				.txt-price {line-height:normal;}
+			}
+		}
 		.row .txt-title {
 			color: var(--dt-gray16);
 			font-size: 14px;
 		}
 		.row .txt-price {
 			font-size: 16px;
+			line-height:150%;
 		}
 	}
 	.txt-caution {
