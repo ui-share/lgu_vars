@@ -3372,7 +3372,7 @@ textarea::placeholder {
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown {
   width: 100%;
   min-height: 44px;
-  padding: 4px 30px 4px 0;
+  padding: 0 36px 0 0;
   background-image: url(../images/icon/chevron_down_line_24.svg);
   background-size: 24px;
   background-repeat: no-repeat;
@@ -3387,8 +3387,6 @@ textarea::placeholder {
   align-items: center;
   -moz-column-gap: 4px;
        column-gap: 4px;
-  width: -moz-max-content;
-  width: max-content;
   color: var(--dt-gray16);
 }
 .input-row:has(.btn-field-dropdown) .btn-field-dropdown .value .ico-bank {

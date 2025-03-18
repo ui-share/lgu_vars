@@ -318,7 +318,7 @@ textarea::placeholder {
 	.btn-field-dropdown {
 		width: 100%;
 		min-height: 44px;
-		padding: 4px 30px 4px 0;
+		padding: 0 36px 0 0;
 		background-image: url(../images/icon/chevron_down_line_24.svg);
 		background-size: 24px;
 		background-repeat: no-repeat;
@@ -329,7 +329,6 @@ textarea::placeholder {
 			display:flex;
 			align-items:center;
 			column-gap:4px;
-			width:max-content;
 			color: var(--dt-gray16);
 			.ico-bank {
 				width:24px;
