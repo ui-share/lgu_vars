@@ -282,6 +282,56 @@
 						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
+					<br/><br/><br/><br/><h2>[이메일 폼 : disabled]</h2>
+					<!-- input email -->
+					<div class="input-control email-form disabled">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus disabled>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
+								<button type="button" class="slct-box done" disabled>
+									<span class="txt">직접 입력</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
+					<br/><br/><br/><br/><h2>[이메일 폼 : error]</h2>
+					<!-- input email -->
+					<div class="input-control email-form error">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
+								<button type="button" class="slct-box done">
+									<span class="txt">직접 입력</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
 					<br/><br/><br/><br/>
 					<h2>드롭다운 normal</h2>
 					<div class="input-control">
@@ -406,48 +456,80 @@
 						** 에러 : <button type="button" class="slct-box error">
 						** 비활성 : <button type="button" class="slct-box disabled">
 					-->
-					<br/><br/><br/><br/>
-					<h2>[싱글 드롭다운]</h2><br/>
-					<div class="slct-control">
-						<div class="slct-label-box">
-							<span class="label-tit">신청 월</span>
-							<!-- <span class="label-desc">남은 가능 일수 180일</span> -->
-						</div>
-						<div class="slct-box-wrap">
 							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
 								: <button type="button" class="slct-box done">
 								<span class="txt"><span>24년</span><span>12월</span></span> -->
-							<button type="button" class="slct-box done">
-								<span class="txt"><span>24년</span><span>12월</span></span>
-								<!-- <span class="txt"><span>신청 월</span></span> -->
-								<span class="arrow"></span>
-							</button>
-						</div>
-					</div>
-					
-					<br/><br/><br/><br/>
-					<h2>[멀티 드롭다운]</h2><br/>
+					<br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+					<h2>Dropdown_라인형 : [싱글]</h2><br/>
+					<h2>싱글라벨</h2><br/>
 					<div class="slct-control">
 						<div class="slct-label-box">
 							<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
 						</div>
 						<div class="slct-box-wrap">
-							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
-								: <button type="button" class="slct-box done">
-								<span class="txt"><span>24년</span><span>12월</span></span> -->
+							<button type="button" class="slct-box">
+								<span class="txt"><span>월 선택</span></span>
+								<span class="arrow"></span>
+							</button>
+						
 							<button type="button" class="slct-box done">
-								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-								<!-- <span class="txt"><span>시작 월</span></span> -->
+								<!-- <span class="txt"><span>월 선택</span></span> -->
+								<span class="txt"><span>24년</span><span>12월</span></span>
+								<span class="arrow"></span>
+							</button>
+						</div>
+					</div>
+					
+					<br/><br/>
+					<h2>멀티라벨</h2><br/>
+					<div class="dropdown-flex">
+						<div class="slct-control">
+							<div class="slct-label-box">
+								<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
+							</div>
+							<div class="slct-box-wrap">
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>월 선택</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span></span>
+									<span class="arrow"></span>
+								</button>
+							</div>
+						</div>
+						<div class="slct-control">
+							<div class="slct-label-box">
+								<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
+							</div>
+							<div class="slct-box-wrap">
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>월 선택</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span></span>
+									<span class="arrow"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					
+					<br/><br/><br/><br/>
+					
+					<h2>Dropdown_라인형 : [조합]</h2><br/>
+					<div class="slct-control">
+						<div class="slct-label-box">
+							<span class="label-tit">신청 기간</span><span class="label-desc">남은 가능 일수 180일</span>
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box">
+								<span class="txt"><span>시작 월</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
+								
 								<span class="arrow"></span>
 							</button>
 							<span class="multi-box">
 								<span class="hyphen">~</span>
-								<button type="button" class="slct-box">
-									<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
-									: <button type="button" class="slct-box done">
-									<span class="txt"><span>24년</span><span>12월</span></span> -->
-									<span class="txt"><span>종료 월</span></span>
-									<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span><span>29일</span></span>
 									<span class="arrow"></span>
 								</button>
 							</span>
@@ -455,43 +537,95 @@
 					</div>
 
 					<br/><br/><br/><br/>
-					<h2>[멀티 드롭다운 : 싱글 제어]</h2><br/>
+
+					<h2>Dropdown_라인형 : [조합] - 싱글 제어</h2><br/>
 					<div class="slct-control ">
 						<div class="slct-label-box">
 							<span class="label-tit">신청 일정</span><span class="label-desc">남은 가능 일수 180일</span>
 						</div>
 						<div class="slct-box-wrap">
-							<button type="button" class="slct-box done focused">
-								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-								<!-- <span class="txt"><span>일정 선택</span></span> -->
+							<button type="button" class="slct-box focused">
+								<span class="txt"><span>일정 선택</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
 								<span class="arrow"></span>
-							</button>
-							<button type="button" class="slct-box error">
-								<span class="txt"><span>시간 선택</span></span>
-								<span class="arrow"></span>	
 							</button>
 							<button type="button" class="slct-box disabled">
 								<span class="txt"><span>시간 선택</span></span>
 								<span class="arrow"></span>
 							</button>
+							<button type="button" class="slct-box done error">
+								<span class="txt"><span>19:00</span></span>
+								<span class="arrow"></span>	
+							</button>
+							
 						</div>
 					</div>
 
 					<br/><br/><br/><br/>
-					<h2>[멀티 드롭다운 : 멀티 제어]</h2><br/>
+
+					<h2>Dropdown_라인형 : [조합] - 멀티 제어]</h2><br/>
+					<h2>focused</h2><br/>
 					<div class="slct-control focused">
 						<div class="slct-label-box">
-							<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
+							<span class="label-tit">신청 기간</span><span class="label-desc">남은 가능 일수 180일</span>
 						</div>
 						<div class="slct-box-wrap">
-							<button type="button" class="slct-box done focused">
-								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
+							<button type="button" class="slct-box ">
+								<span class="txt"><span>시작 월</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
 								<span class="arrow"></span>
 							</button>
 							<span class="multi-box">
 								<span class="hyphen">~</span>
-								<button type="button" class="slct-box error">
-									<span class="txt"><span>종료 월</span></span>
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span><span>29일</span></span>
+									<span class="arrow"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+					
+					<br/><br/>
+					<h2>error</h2><br/>
+					<div class="slct-control error">
+						<div class="slct-label-box">
+							<span class="label-tit">신청 기간</span><span class="label-desc">남은 가능 일수 180일</span>
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box ">
+								<span class="txt"><span>시작 월</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
+								<span class="arrow"></span>
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span><span>29일</span></span>
+									<span class="arrow"></span>
+								</button>
+							</span>
+						</div>
+					</div>
+
+					<br/><br/>
+					<h2>disabled</h2><br/>
+					<div class="slct-control disabled">
+						<div class="slct-label-box">
+							<span class="label-tit">신청 기간</span><span class="label-desc">남은 가능 일수 180일</span>
+						</div>
+						<div class="slct-box-wrap">
+							<button type="button" class="slct-box ">
+								<span class="txt"><span>시작 월</span></span>
+								<!-- <span class="txt"><span>24년</span><span>11월</span><span>29일</span></span> -->
+								<span class="arrow"></span>
+							</button>
+							<span class="multi-box">
+								<span class="hyphen">~</span>
+								<button type="button" class="slct-box done">
+									<!-- <span class="txt"><span>종료 월</span></span> -->
+									<span class="txt"><span>24년</span><span>12월</span><span>29일</span></span>
 									<span class="arrow"></span>
 								</button>
 							</span>
@@ -499,74 +633,40 @@
 					</div>
 					
 					<br/><br/><br/><br/>
-					<div class="slct-control error">
+
+					<h2>Dropdown_라인형 : [조합_드롭다운+검색버튼] </h2><br/>
+					<div class="slct-control combine-element">
 						<div class="slct-label-box">
-							<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
+							<span class="label-tit">기간</span>
 						</div>
 						<div class="slct-box-wrap">
-							<button type="button" class="slct-box done">
-								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-								<span class="arrow"></span>
-							</button>
-							<span class="multi-box">
-								<span class="hyphen">~</span>
-								<button type="button" class="slct-box">
-									<span class="txt"><span>종료 월</span></span>
-									<span class="arrow"></span>
-								</button>
-							</span>
-						</div>
-					</div>
-
-					<br/><br/><br/><br/>
-					<div class="slct-control disabled">
-						<div class="slct-label-box">
-							<span class="label-tit">신청 월</span><span class="label-desc">남은 가능 일수 180일</span>
-						</div>
-						<div class="slct-box-wrap">
-							
-							<button type="button" class="slct-box done">
-								<span class="txt"><span>24년</span><span>11월</span><span>29일</span></span>
-								<span class="arrow"></span>	
-							</button>
-							<span class="multi-box">
-								<span class="hyphen">~</span>
-								<button type="button" class="slct-box">
-									<span class="txt"><span>종료 월</span></span>
-									<span class="arrow"></span>
-								</button>
-							</span>
-						</div>
-					</div>
-
-					<br/><br/><br/><br/>
-					<h2>[드롭다운+검색]</h2><br/>
-					<div class="slct-control">
-						<div class="slct-box-wrap flex-row">
 							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
 								: <button type="button" class="slct-box done">
 								<span class="txt"></span> -->
-							<button type="button" class="slct-box done">
-								<span class="txt">NN-NN-NN</span>
-								<!-- <span class="txt">시작일</span> -->
+							<button type="button" class="slct-box ">
+								<span class="txt"><span>시작 일</span></span>
+								<!-- <span class="txt"><span>NN-NN-NN</span></span> -->
 								<span class="arrow"></span>
 							</button>
 							<span class="hyphen">~</span>
-							<button type="button" class="slct-box">
-								<span class="txt">종료일</span>
+							<button type="button" class="slct-box done">
+								<!-- <span class="txt"><span>종료 일</span></span> -->
+								<span class="txt"><span>NN-NN-NN</span></span>
 								<span class="arrow"></span>
 							</button>
-							
 							<div class="btn-group">
 								<button type="button" class="btn btn-md btn-sec">
 									<span class="txt">검색</span>
 								</button>
 							</div>
 						</div>
+						
 					</div>
-
+					
 
 					<br/><br/><br/><br/>
+
+
 					<h2>[select box]</h2><br/>
 					<!-- form-select
 					[[입력 값 클래스]]
