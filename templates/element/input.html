@@ -282,6 +282,56 @@
 						<div class="validation-txt">validation 메시지 필요시 노출</div>
 					</div>
 
+					<br/><br/><br/><br/><h2>[이메일 폼 : disabled]</h2>
+					<!-- input email -->
+					<div class="input-control email-form disabled">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus disabled>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
+								<button type="button" class="slct-box done" disabled>
+									<span class="txt">직접 입력</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
+					<br/><br/><br/><br/><h2>[이메일 폼 : error]</h2>
+					<!-- input email -->
+					<div class="input-control email-form error">
+						<div class="input-group">
+							<label class="input-label">이메일</label>
+							<div class="input-row">
+								<input type="text" class="input-field" name="email" placeholder="이메일 주소 입력" autofocus>
+								<div class="util-box">
+									<button type="button" class="clear-btn hidden"></button>
+								</div>
+							</div>
+							<div class="slct-box-wrap">
+								<!-- 이메일 선택 후 상태 : done 클래스 추가 및 이메엘 도메인 텍스트 변경
+									: <button type="button" class="slct-box done">
+										<span class="txt">@naver.com</span> -->
+								<button type="button" class="slct-box done">
+									<span class="txt">직접 입력</span>
+									<span class="arrow"></span>								
+								</button>
+							</div>
+						</div>
+						<!-- 퍼블공지 : 있으면 문구 교체하기 / 없으면 주석 -->
+						<div class="validation-txt">validation 메시지 필요시 노출</div>
+					</div>
+
 					<br/><br/><br/><br/>
 					<h2>드롭다운 normal</h2>
 					<div class="input-control">

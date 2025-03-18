@@ -562,38 +562,17 @@ textarea::placeholder {
 		display: flex;
 		gap: 8px;
 	}
-	.input-row {
-		width: 100%;
-	}
-	.slct-box-wrap {
-		width: unset;
-	}
-	.slct-box {
-		width: unset;
-		min-height: 44px;
-		.txt {
-			color: var(--dt-gray11);
-		}
-		&.done {
-			.txt {
-				color: var(--dt-gray16);
-			}
-		}
-		&:active {
-			box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-		}
-	}
 	&.disabled {
 		.slct-box {
 			opacity: 0.4;
 		}
 	}
 	// 이메일 에러시, 이메일 선택 버튼도 에러색 필요시 주석 삭제
-	// &.error {
-	// 	.slct-box {
-	// 		border-color: var(--dt-error);
-	// 	}
-	// }
+	&.error {
+		.slct-box {
+			border-color: var(--dt-error);
+		}
+	}
 }
 
 // UI별 스타일 - code

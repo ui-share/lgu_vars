@@ -3593,27 +3593,11 @@ textarea::placeholder {
   display: flex;
   gap: 8px;
 }
-.email-form .input-row {
-  width: 100%;
-}
-.email-form .slct-box-wrap {
-  width: unset;
-}
-.email-form .slct-box {
-  width: unset;
-  min-height: 44px;
-}
-.email-form .slct-box .txt {
-  color: var(--dt-gray11);
-}
-.email-form .slct-box.done .txt {
-  color: var(--dt-gray16);
-}
-.email-form .slct-box:active {
-  box-shadow: inset 0px 0px 0px 100px rgba(0, 0, 0, 0.12);
-}
 .email-form.disabled .slct-box {
   opacity: 0.4;
+}
+.email-form.error .slct-box {
+  border-color: var(--dt-error);
 }
 
 .code {
