@@ -58,6 +58,8 @@
   line-height: 150%;
 }
 .btn-group > .txt {
-  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
   line-height: 1.5;
+  color: var(--dt-gray11);
 }
