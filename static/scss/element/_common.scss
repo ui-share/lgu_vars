@@ -873,11 +873,15 @@ button {
 	}
 }
 .info-price-wrap{
+	border: 1px solid red;
 	background-color:var(--dt-gray02);
+	border-radius:8px;
 	overflow:hidden;
 	&:first-of-type {
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
 		& + .info-price-wrap{
 			border-top-left-radius: 0px;
 			border-top-right-radius: 0px;
@@ -888,9 +892,6 @@ button {
 				.row {row-gap:8px;}
 			}
 		}
-	}
-	&:nth-last-of-type(1){
-		border-radius:8px;
 	}
 }
 .list-info-price {

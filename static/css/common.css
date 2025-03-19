@@ -1050,12 +1050,16 @@ button {
 }
 
 .info-price-wrap {
+  border: 1px solid red;
   background-color: var(--dt-gray02);
+  border-radius: 8px;
   overflow: hidden;
 }
 .info-price-wrap:first-of-type {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
 }
 .info-price-wrap:first-of-type + .info-price-wrap {
   border-top-left-radius: 0px;
@@ -1068,9 +1072,6 @@ button {
 }
 .info-price-wrap:first-of-type + .info-price-wrap .total-last .row {
   row-gap: 8px;
-}
-.info-price-wrap:nth-last-of-type(1) {
-  border-radius: 8px;
 }
 
 .list-info-price:first-of-type {
