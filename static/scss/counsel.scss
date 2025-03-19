@@ -52,8 +52,9 @@
 		}
 	}
 	> .txt {
-		text-align: center;
+		@include fw-5(14px);
 		line-height: 1.5;
+		color: var(--dt-gray11);
 	}
 }
 
