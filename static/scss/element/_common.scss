@@ -878,16 +878,18 @@ button {
 	&:first-of-type {
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
-	}
-	&:last-of-type {
-		border-bottom-left-radius: 8px;
-		border-bottom-right-radius: 8px;
-		.total-last {
-			padding-bottom:22px;
-			.row {row-gap:8px;}
+		& + .info-price-wrap{
+			border-top-left-radius: 0px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+			.total-last {
+				padding-bottom:22px;
+				.row {row-gap:8px;}
+			}
 		}
 	}
-	&:only-child {
+	&:nth-last-of-type(1){
 		border-radius:8px;
 	}
 }
