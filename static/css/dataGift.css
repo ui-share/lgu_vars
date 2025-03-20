@@ -163,14 +163,17 @@
   position: relative;
   border-radius: 6px;
   background: var(--dt-gray03);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   z-index: 1;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-runnable-track {
   background: transparent;
 }
 .dataGift .data-box .data-slide .range-custom::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   width: 32px;
   height: 32px;
   border: 1px solid var(--dt-gray08);
@@ -305,6 +308,15 @@
 }
 .dataGift .sendData.is-disabled .chips {
   opacity: 0.6;
+}
+.dataGift .slct-control.combine-element .slct-box {
+  min-width: 120px;
+}
+.dataGift .slct-control.combine-element .slct-box .txt {
+  font-size: 16px;
+}
+.dataGift .slct-control.combine-element .slct-box.done .txt {
+  font-size: 14px;
 }
 
 .full-popup .cont__wrap-vertical {

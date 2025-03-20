@@ -303,17 +303,17 @@
     }
 
     //데이터 선물,충전 현황 검색
-    // .slct-control:has(.btn-search) {
-    //     flex-direction: row;
-    //     gap: 4px;
-    //     .slct-box:not(.multi-box) {
-    //         max-width: calc(50% - 12px);
-    //     }
-    //     .btn-search {
-    //         min-width: 64px;
-    //         height: 48px;
-    //     }
-    // }
+    .slct-control.combine-element {
+        .slct-box {
+            min-width: 120px;
+            .txt {
+                font-size: 16px;
+            }
+            &.done .txt {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 //페이지팝업
