@@ -527,7 +527,7 @@
 			color: var(--dt-primary);
 		}
 		.icon {
-			background-image: url(../images/icon/ic-badge-clock.png);
+			background-image: url(../images/icon/ic-badge-clock.svg);
 			background-size: 18px 18px;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -538,7 +538,7 @@
 				color: var(--dt-error);
 			}
 			.icon {
-				background-image: url(../images/icon/ic-badge-clock-error.png);
+				background-image: url(../images/icon/ic-badge-clock-error.svg);
 			}
 		}
 	}
