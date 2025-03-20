@@ -554,11 +554,13 @@
 		}
 	}
 	.txt-title {
+		color:var(--dt-gray14);
 		@include fw-5();
 		line-height: 1.5;
 		text-align: left;
 	}
-	.txt-price {	
+	.txt-price {
+		color:var(--dt-gray16);
 		@include fw-7();
 		line-height: 1.5;
 		text-align: right;

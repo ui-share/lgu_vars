@@ -125,6 +125,10 @@ body {
 	padding-top: env(safe-area-inset-top);
   	padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+body * {
+	color: var(--dt-black);
+}
+
 // body * {
 // 	font-family: 'Pretendard', system-ui, sans-serif;
 //     font-size: var(--dt-fz16);

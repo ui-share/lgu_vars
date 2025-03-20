@@ -188,6 +188,10 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+body * {
+  color: var(--dt-black);
+}
+
 .is-pc {
   --max-devicewidth: 568px !important;
 }
@@ -4256,12 +4260,14 @@ select::-ms-expand {
   padding: 0 20px;
 }
 .immePayment .txt-title {
+  color: var(--dt-gray14);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
 }
 .immePayment .txt-price {
+  color: var(--dt-gray16);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
