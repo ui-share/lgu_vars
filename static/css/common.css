@@ -1746,7 +1746,7 @@ button {
   min-width: 20px;
   height: 20px;
   background: no-repeat center/cover;
-  background-image: url(../images/icon/ic-card-headphone.png);
+  background-image: url(../images/icon/ic-card-headphone.svg);
   margin-left: 4px;
   margin-bottom: -4px;
 }
@@ -2616,7 +2616,7 @@ button {
 .chips.chips-refresh .text-box .icon {
   width: 18px;
   height: 18px;
-  background-image: url(../images/icon/ic-chips-refresh.png);
+  background-image: url(../images/icon/ic-chips-refresh.svg);
   background-size: 18px 18px;
   background-repeat: no-repeat;
   background-position: center center;
