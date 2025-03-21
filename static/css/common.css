@@ -3603,6 +3603,7 @@ textarea::placeholder {
 }
 .email-form .input-group .slct-box {
   flex: 1 50%;
+  flex: auto;
 }
 .email-form.disabled .slct-box {
   opacity: 0.4;
