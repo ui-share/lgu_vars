@@ -1,21 +1,20 @@
-.roamingRealtime .roamingPrice .roaming {
+.roamingRealtime .roamingPrice .info-col-wrap {
   padding-top: 22px;
+  padding-bottom: 22px;
 }
-.roamingRealtime .roamingPrice .roaming .row {
+.roamingRealtime .roamingPrice .info-col-wrap .row {
   align-items: center;
 }
-.roamingRealtime .roamingPrice .roaming .txt-title {
+.roamingRealtime .roamingPrice .info-col-wrap .txt-title {
   font-size: 16px;
   align-self: unset;
 }
-.roamingRealtime .roamingPrice .roaming .txt-price {
+.roamingRealtime .roamingPrice .info-col-wrap .txt-price {
   font-size: 18px;
   color: var(--dt-black);
+  line-height: 130%;
 }
-.roamingRealtime .roamingPrice .roaming .txt-price span:first-of-type {
-  font-size: 18px;
-}
-.roamingRealtime .roamingPrice .roaming .btn.bg-withdraw {
+.roamingRealtime .roamingPrice .info-col-wrap .btn.bg-withdraw {
   margin-top: 20px;
 }
 .roamingRealtime .roamingPrice .txt-caution {
