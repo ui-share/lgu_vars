@@ -982,13 +982,13 @@ button {
 		}
 		@include flexBox(between, center);
 		flex-wrap: wrap;
+		column-gap: 3px;
 		.head {
 			@include fw-5(14px);
 			line-height:150%;
 			color: var( --dt-gray14);
 		}
 		.tail {
-			max-width:166px;
 			margin-left: auto;
 			@include fw-5(14px);
 			line-height: 150%;
