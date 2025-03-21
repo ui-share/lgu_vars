@@ -1,5 +1,9 @@
 @import "../scss/base/mixin";
 .changePaymentMethod {
+    // 전자서명 영역 간격
+    .input-col-wrap + .input-col-wrap {margin-top:12px ;}
+
+    // 나의 납부내역
     .list-payment {
         row-gap: 0;
         .mypay-list {

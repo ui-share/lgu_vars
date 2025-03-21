@@ -3,3 +3,6 @@
   font-size: 18px;
   font-weight: 600;
 }
+.immePayment .input-col-wrap + .input-col-wrap {
+  margin-top: 12px;
+}

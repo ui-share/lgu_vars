@@ -1,3 +1,6 @@
+.changePaymentMethod .input-col-wrap + .input-col-wrap {
+  margin-top: 12px;
+}
 .changePaymentMethod .list-payment {
   row-gap: 0;
 }

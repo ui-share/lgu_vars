@@ -6,5 +6,8 @@
 		color: var(--dt-gray16);
 		@include fw-6(18px);
 	}
+
+	// 전자서명 영역 간격
+	.input-col-wrap + .input-col-wrap {margin-top:12px;}
 }
 
