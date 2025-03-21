@@ -182,14 +182,9 @@ body {
   font-weight: var(--dt-fw400);
   line-height: 1;
   color: var(--dt-black);
-  text-overflow: ellipsis;
   background-color: var(--dt-white);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-
-body * {
-  color: var(--dt-black);
 }
 
 .is-pc {
@@ -209,6 +204,7 @@ body * {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: var(--dt-gray15);
 }
 
 a:focus,
@@ -1449,12 +1445,7 @@ button {
   border-radius: 0;
 }
 .btn-group .btn.btn-md {
-  width: 100%;
   padding: 9px 12px 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-items: center;
 }
 .btn-group .btn.btn-md .txt {
   line-height: normal;
@@ -1677,6 +1668,37 @@ button {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-primary);
+}
+
+.unlockBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 110%;
+  color: #E6007E;
+  text-align: left;
+  margin-left: auto;
+  padding: 4px;
+}
+.unlockBtn::before, .unlockBtn::after {
+  display: block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+}
+.unlockBtn::before {
+  width: 18px;
+  height: 18px;
+  background-image: url(../../static/images/icon/m_ic_lock.png);
+}
+.unlockBtn::after {
+  width: 12px;
+  height: 12px;
+  background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
 }
 
 @media screen and (max-width: 359px) {
@@ -3574,10 +3596,13 @@ textarea::placeholder {
   flex: 1 33.3333%;
 }
 .combine-element .slct-box {
-  min-width: 129px;
+  min-width: 120px;
 }
-.combine-element .slct-box .txt {
-  min-width: unset;
+.combine-element .slct-box .txt > * {
+  min-width: 80px;
+}
+.combine-element .slct-box.done .txt {
+  font-size: 15px;
 }
 .combine-element .btn-group {
   display: flex;
@@ -3586,16 +3611,25 @@ textarea::placeholder {
   gap: 6px;
 }
 .combine-element .btn-group .btn {
-  flex: 0;
-  min-width: 50px;
+  flex: 0 auto;
+  min-width: 48px;
+  min-height: 40px;
 }
 .combine-element .btn-group .btn:first-child {
-  margin-left: 10px;
+  margin-left: 6px;
 }
 
 .email-form .input-group {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+.email-form .input-group .input-row {
+  flex: 1 50%;
+  min-width: 50%;
+}
+.email-form .input-group .slct-box {
+  flex: 1 50%;
 }
 .email-form.disabled .slct-box {
   opacity: 0.4;
