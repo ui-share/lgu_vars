@@ -2447,15 +2447,16 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  text-align: center;
   width: 90px;
   max-width: 90px;
   margin: auto;
   min-height: 34px;
   max-height: 34px;
+  color: var(--dt-gray16);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
   word-break: break-all;
   overflow: hidden;
 }
@@ -4297,14 +4298,12 @@ select::-ms-expand {
   padding: 0 20px;
 }
 .immePayment .txt-title {
-  color: var(--dt-gray14);
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
   text-align: left;
 }
 .immePayment .txt-price {
-  color: var(--dt-gray16);
   font-size: 16px;
   font-weight: 700;
   line-height: 1.5;
@@ -4341,6 +4340,12 @@ select::-ms-expand {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
+}
+.immePayment .mypay-list .btn .txt-title {
+  color: var(--dt-gray14);
+}
+.immePayment .mypay-list .btn .txt-price {
+  color: var(--dt-gray16);
 }
 .immePayment .mypay-list .detail {
   display: flex;

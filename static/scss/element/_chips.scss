@@ -139,17 +139,19 @@
 		&.hyundai {}/* 현대차증권 */
 
 	}
+
 	.txt {
 		@include flexColum;
 		justify-content:center;
-		@include fw-5(14px);
-		line-height:16px;
-		text-align:center;
 		width: 90px;
 		max-width:90px;
 		margin:auto;
 		min-height:34px;
 		max-height:34px;
+		color: var(--dt-gray16);
+		@include fw-5(14px);
+		line-height:16px;
+		text-align:center;
 		word-break:break-all;
 		overflow:hidden;
 	}
