@@ -533,9 +533,16 @@ textarea::placeholder {
 		}
 	}
 	.slct-box {
-		min-width: 129px;
+		min-width: 120px;
 		.txt {
-			min-width: unset;
+			> * {
+				min-width: 80px;
+			}
+		}
+		&.done {
+			.txt {
+				font-size: 15px;
+			}
 		}
 	}
 	.btn-group {
@@ -544,10 +551,11 @@ textarea::placeholder {
 		margin-left: auto;
 		gap: 6px;
 		.btn {
-			flex: 0;
-			min-width: 50px;
+			flex: 0 auto;
+			min-width: 48px;
+			min-height: 40px;
 			&:first-child {
-				margin-left: 10px;
+				margin-left: 6px;
 			}
 			
 		}
@@ -559,7 +567,15 @@ textarea::placeholder {
 .email-form {
 	.input-group {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 8px;
+		.input-row {
+			flex: 1 50%;
+			min-width: 50%;
+		}
+		.slct-box {
+			flex: 1 50%;
+		}
 	}
 	&.disabled {
 		.slct-box {
@@ -715,5 +731,3 @@ select::-ms-expand { display: none; }
 		color: var(--dt-gray16);
 	}
 }
-
-
