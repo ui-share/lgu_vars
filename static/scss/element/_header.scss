@@ -7,6 +7,7 @@
     transform:translateX(-50%);
     @include flexBox(between, center);
     flex-wrap: wrap;
+    column-gap: 3px;
     width: 100%;
     max-width:var(--max-devicewidth) !important;
     min-height: 56px;
@@ -31,9 +32,10 @@
             }
         }
         .header-tit {
+            margin-left: 4px;
             @include fw-7(16px);
             color: var(--dt-gray16);
-            margin-left: 4px;
+            letter-spacing: -0.04em;
             .header-txt {
                 @include fw-7(16px);
                 color: var(--dt-gray10);
