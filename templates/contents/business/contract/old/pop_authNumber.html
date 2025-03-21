@@ -15,7 +15,7 @@
 		<!-- Scripts -->
 	</head>
 <body>
-	<div class="page-wrapper">
+	<div class="page-wrapper contract">
 		<div class="container">
 			<div class="section__cont"></div>
 		</div>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="popup-body">
 				<div class="auth-wrap auth_number">
-					<p class="txt"><span>선택약정 할인 신청</span>을 위해, 문자로 받은</p>
+					<p class="txt">선택약정 할인 신청을 위해, 문자로 받은</p>
 					<h3 class="tit"><span class="color-prim">인증번호 6자리</span>를 입력해 주세요</h3>
 
 					<!-- [Case 기본 상태]-->
@@ -44,18 +44,16 @@
 						<span class="icon"></span>
 						<span class="txt">02:59</span>
 					</div>
-					<div class="input-control">				
-						<div class="input-group">
-							<div class="input-row">
-								<input type="tel" class="input-field" placeholder="인증번호 6자리 입력" autocomplete="off" autofocus="">
-								<div class="util-box">
-									<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 
-										<button type="button" class="clear-btn"> -->
-									<button type="button" class="clear-btn hidden" aria-label="삭제"></button>
-								</div>
-							</div>
+					<div class="input-control code">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
 						</div>
-						<!-- <div class="validation-txt">validation 메시지 필요시 노출</div> -->
+						<div class="validation-txt">에러 메시지</div>
 					</div>
 
 					<!--[Case 인증 시간 초과]
@@ -68,19 +66,17 @@
 						<span class="icon"></span>
 						<span class="txt">00:00</span>
 					</div>
-					<div class="input-control error">				
-						<div class="input-group">
-							<div class="input-row">
-								<input type="tel" class="input-field" placeholder="인증번호 6자리 입력" autocomplete="off" autofocus="">
-								<div class="util-box">
-									<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 
-										<button type="button" class="clear-btn"> -->
-									<button type="button" class="clear-btn hidden" aria-label="삭제"></button>
-								</div>
-							</div>
+					<div class="input-control code error">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
 						</div>
 						<div class="validation-txt">입력 시간이 지났어요. 인증번호를 다시 받아 주세요.</div>
-					</div>				
+					</div>					
 
 					<!-- [Case 인증 번호 오류]
 						- 에러메시지 표출: input-control에 error 추가
@@ -90,16 +86,14 @@
 						<span class="icon"></span>
 						<span class="txt">02:59</span>
 					</div>
-					<div class="input-control error">				
-						<div class="input-group">
-							<div class="input-row">
-								<input type="tel" class="input-field" placeholder="인증번호 6자리 입력" autocomplete="off" autofocus="">
-								<div class="util-box">
-									<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 
-										<button type="button" class="clear-btn"> -->
-									<button type="button" class="clear-btn hidden" aria-label="삭제"></button>
-								</div>
-							</div>
+					<div class="input-control code error">
+						<div class="code-group">
+							<input type="tel" class="code-box" placeholder="" autofocus>
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input type="tel" class="code-box" placeholder="">
+							<input tDpe="tel" class="code-box" placeholder="">
 						</div>
 						<div class="validation-txt">인증번호를 다시 확인해 주세요</div>
 					</div>
