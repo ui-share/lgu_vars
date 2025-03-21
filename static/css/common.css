@@ -4347,6 +4347,7 @@ select::-ms-expand {
 }
 .list_myPayment .mypay-list .btn .txt-price {
   color: var(--dt-gray16);
+  margin-left: auto;
 }
 .list_myPayment .mypay-list .detail {
   display: flex;
@@ -4362,6 +4363,7 @@ select::-ms-expand {
   line-height: 150%;
 }
 .list_myPayment .mypay-list .row {
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }

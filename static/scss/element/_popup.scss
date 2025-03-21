@@ -597,6 +597,7 @@
 			}
 			.txt-price {
 				color:var(--dt-gray16);
+				margin-left: auto;
 			}
 		}
 		.detail {
@@ -612,6 +613,7 @@
 			}
 		}
 		.row {
+			flex-wrap: wrap;
 			align-items: center;
 			justify-content:space-between;
 		}
