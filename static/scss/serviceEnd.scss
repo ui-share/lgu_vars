@@ -45,16 +45,18 @@ body {
             @include fw-6(22px);
             line-height: 33px;
             color: var(--dt-gray16);
-            text-align: center
+            text-align: center;
+            word-break: keep-all;
         }
         .sub-txt {
             @include fw-5(16px);
             line-height: 24px;
             color: var(--dt-gray11);
             text-align: center;
+            word-break: keep-all;
             .color-prim {
                 color: var(--dt-primary);
-            }
+            } 
         }
     }
     .sub-tit {
