@@ -98,6 +98,12 @@
 					}
 				}
 			}
+			&::placeholder {
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 1.5;
+				color: var(--dt-gray16);
+			}
 		}
 		// 유닛
 		.input-field-unit {
