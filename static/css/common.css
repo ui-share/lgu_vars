@@ -1081,15 +1081,15 @@ button {
 .list-info-price:only-child {
   padding-bottom: 6px;
 }
-.list-info-price:not(:has(.accordion-content)) {
+.list-info-price:not(:has(.accordion-content)), .list-info-price:not(:has(.accordion-content .info-wrap)) {
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 0px;
   padding-bottom: 0;
 }
-.list-info-price:not(:has(.accordion-content)) .info-price {
+.list-info-price:not(:has(.accordion-content)) .info-price, .list-info-price:not(:has(.accordion-content .info-wrap)) .info-price {
   pointer-events: none;
 }
-.list-info-price:not(:has(.accordion-content)) .info-price .ico-toggle img {
+.list-info-price:not(:has(.accordion-content)) .info-price .ico-toggle img, .list-info-price:not(:has(.accordion-content .info-wrap)) .info-price .ico-toggle img {
   display: none;
 }
 
