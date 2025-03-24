@@ -81,13 +81,13 @@
 .range-datepicker .datePicker__input-box .input-field::-moz-placeholder {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   color: var(--dt-gray16);
 }
 .range-datepicker .datePicker__input-box .input-field::placeholder {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   color: var(--dt-gray16);
 }
 .range-datepicker .datePicker__input-box .input-field-unit {
