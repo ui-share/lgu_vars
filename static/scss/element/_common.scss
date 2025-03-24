@@ -717,7 +717,6 @@ button {
 				}
 				& + .row {margin-top:16px;}
 				.txt-desc {
-					max-width:166px;
 					&.ico {
 						.img-box {width:16px;height:16px;}
 					}
@@ -901,7 +900,8 @@ button {
 	&:only-child {
 		padding-bottom:6px;
 	}
-	&:not(:has(.accordion-content)) {
+	&:not(:has(.accordion-content)),
+	&:not(:has( .accordion-content .info-wrap)) {
 		border-bottom-left-radius: 0px;
 		border-bottom-right-radius: 0px;
 		padding-bottom:0;
@@ -909,7 +909,6 @@ button {
 			pointer-events:none;
 			.ico-toggle img{display:none;}
 		}
-
 	}
 }
 
