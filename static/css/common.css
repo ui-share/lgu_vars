@@ -462,6 +462,7 @@ button {
   color: var(--bulletList-font-color);
   line-height: var(--bulletList-infoFont-lineHeight);
   padding: var(--bulletList-between-pd) 0;
+  word-break: keep-all;
 }
 .bullet-list.info .bullet-item::before {
   content: " ";
@@ -499,6 +500,7 @@ button {
   color: var(--bulletList-font-color);
   line-height: unset;
   padding: var(--bulletList-between-pd) 0;
+  word-break: keep-all;
 }
 .bullet-list .bullet-item span {
   font-size: 1em;
@@ -1287,6 +1289,7 @@ button {
   padding: 10px 12px 10px 20px;
   border-radius: 0;
   background-color: var(--dt-gray15);
+  min-height: 60px;
 }
 .switch__wrap > button .txt-title {
   -moz-column-gap: 8px;
