@@ -311,6 +311,7 @@ button {
 			color: var(--bulletList-font-color);
 			line-height: var(--bulletList-infoFont-lineHeight);
 			padding: var(--bulletList-between-pd) 0;
+			word-break: keep-all;
 			&::before {
 				content: " ";
 				display: inline-block;
@@ -353,6 +354,7 @@ button {
 	color: var(--bulletList-font-color);
 	line-height: unset;
 	padding: var(--bulletList-between-pd) 0;
+	word-break: keep-all;
 	span {
 		font-size: 1em;
 		color: var(--bulletList-font-color);

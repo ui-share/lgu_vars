@@ -1,0 +1,22 @@
+.cont__wrap-cms .selectAgree .card.is-selected {
+  border: 1px solid var(--dt-primary);
+}
+.cont__wrap-cms .selectAgree .card.is-selected .card-body {
+  opacity: 1;
+}
+
+.cont__wrap-agree {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cont__wrap-agree .chckbox-area + .accordion-content {
+  max-height: none;
+}
+.cont__wrap-agree .accordion-content {
+  padding: 12px;
+  background-color: var(--dt-gray02);
+}
+.cont__wrap-agree .accordion-content .txt-caution {
+  text-align: left;
+}
