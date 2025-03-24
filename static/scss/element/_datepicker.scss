@@ -78,21 +78,18 @@
 		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
-		// min-width: 86px;
-		// max-width: 124px;
+		min-width: 86px;
+		max-width: 124px;
 		&:has(.hyphen) {
 			max-width: calc(124px + 24px);
-		}
-		gap: 4px;	
+		}		
 		// 입력 영역
 		.input-field {
-			width: auto;
-			// flex: 1;
+			flex: 1;
 			@include fw-6(14px);
 			line-height: 1.2;
 			color: var(--dt-gray16);
 			text-align: center;
-			field-sizing: content;
 			&.datepicker-input {
 				&.in-edit {
 					border-color: transparent;
@@ -101,18 +98,11 @@
 					}
 				}
 			}
-			&::placeholder {
-				font-size: 14px;
-				font-weight: 500;
-				line-height: 1.5;
-				color: var(--dt-gray16);
-			}
 		}
 		// 유닛
 		.input-field-unit {
-			// flex: 0 auto;
+			flex: 0 auto;
 			@include fw-5(14px);
-			min-width: 25px;
 			line-height: 1.5;
 			color: var(--dt-gray11);
 			&.hyphen {
