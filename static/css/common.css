@@ -888,9 +888,6 @@ button {
 .plan-wrap .list-plan.line .row + .row {
   margin-top: 16px;
 }
-.plan-wrap .list-plan.line .row .txt-desc {
-  max-width: 166px;
-}
 .plan-wrap .list-plan.line .row .txt-desc.ico .img-box {
   width: 16px;
   height: 16px;
