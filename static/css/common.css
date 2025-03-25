@@ -3095,8 +3095,10 @@ button {
   border-radius: 4px;
   padding: 9px 12px 8px;
   gap: 2px;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  width: auto;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  max-width: max-content;
 }
 .header__btn .btn .txt {
   font-size: 14px;
