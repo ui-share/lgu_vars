@@ -72,7 +72,7 @@
 		padding: 9px 12px 8px;
 		gap: 2px;
 		width: auto;
-		max-width: max-content;
+		min-width: max-content;
 		max-width: max-content;
 		.txt {@include fw-6(14px);}
 	}

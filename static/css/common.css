@@ -3096,8 +3096,9 @@ button {
   padding: 9px 12px 8px;
   gap: 2px;
   width: auto;
+  min-width: -moz-max-content;
+  min-width: max-content;
   max-width: -moz-max-content;
-  max-width: max-content;
   max-width: max-content;
 }
 .header__btn .btn .txt {
