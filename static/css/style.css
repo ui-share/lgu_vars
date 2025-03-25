@@ -275,7 +275,7 @@
   flex-direction: column;
 }
 .info-price-single .txt-info > span {
-  letter-spacing: -0.06em;
+  word-break: keep-all;
 }
 .info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
   color: var(--dt-primary);

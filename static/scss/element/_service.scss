@@ -123,7 +123,7 @@
 		&:has(> span:nth-child(2)) {
 			flex-direction:column;
 		}
-		> span {letter-spacing: -0.06em;}
+		> span {word-break: keep-all;}
 		> span:first-child {
 			&:not(:has(.color-prim)) {
 				color:var(--dt-primary);
