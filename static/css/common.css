@@ -5085,6 +5085,7 @@ select::-ms-expand {
   font-weight: 600;
   color: var(--dt-black);
   line-height: 1.4;
+  word-break: keep-all;
 }
 .inform-wrap .text-box .tit .color-prim {
   font-size: 24px;
@@ -5095,6 +5096,7 @@ select::-ms-expand {
   font-weight: 500;
   color: var(--dt-gray11);
   line-height: 1.5;
+  word-break: keep-all;
 }
 .inform-wrap .text-box .txt .color-prim {
   color: var(--dt-primary);

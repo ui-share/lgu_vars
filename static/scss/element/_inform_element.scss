@@ -49,6 +49,7 @@
 			@include fw-6(24px);
 			color: var(--dt-black);
 			line-height: 1.4;
+			word-break: keep-all;
 			.color-prim {
 				@include fw-6(24px);
 			}
@@ -57,6 +58,7 @@
 			@include fw-5();
 			color: var(--dt-gray11);
 			line-height: 1.5;
+			word-break: keep-all;
 			.color-prim {
 				color: var(--dt-primary);
 			}
