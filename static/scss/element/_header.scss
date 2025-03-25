@@ -1,74 +1,163 @@
 @import '../base/mixin';
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform:translateX(-50%);
-    @include flexBox(between, center);
-    flex-wrap: wrap;
-    column-gap: 3px;
-    width: 100%;
-    max-width:var(--max-devicewidth) !important;
-    min-height: 56px;
-    padding: 2px 20px 2px 12px;
-    z-index: 2;
-    .header__util {
-        @include flexBox(start, center);
-        .btn-util {
-            width: 32px;
-            height: 32px;
-            background-repeat: no-repeat;
-            background-size: 24px 24px;
-            background-position: center center;
-            padding: 4px;
-            font-size:0px;
-            text-indent: -9999px;
-            &.prev {
-                background-image: url(../images/icon/chevron_prev_line.png);
-            }
-            &.end {
-                background-image: url(../images/icon/ic-close24-gray15.svg);
-            }
-        }
-        .header-tit {
-            margin-left: 4px;
-            @include fw-7(16px);
-            color: var(--dt-gray16);
-            letter-spacing: -0.04em;
-            .header-txt {
-                @include fw-7(16px);
-                color: var(--dt-gray10);
-            }
-        }
-    }
-    .header__btn {
-        @include flexBox(end, center);
-        column-gap:6px;
-        margin-left: auto;
-        .btn {
-            display: flex;
-            border-radius: 4px;
-            padding: 9px 12px 8px;
-            gap: 2px;
-            min-width:max-content;
-            .txt {@include fw-6(14px);}
-        }
-        .btn-callEnd { // 종료버튼
-            background-color: var(--dt-primary);
-            border-color:var(--dt-primary);
-			.icon {
-				display: inline-block;
-				content: "";
-				width: 16px;
-				min-width: 16px;
-				height: 16px;
-				background-image: url(../images/icon/call_end.svg);
-				background-repeat: no-repeat;
-				background-size: 16px 16px;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform:translateX(-50%);
+	@include flexBox(center, center);
+	flex-wrap: wrap;
+	column-gap: 3px;
+	width: 100%;
+	max-width: var(--max-devicewidth) !important;
+	min-height: 56px;
+	padding: 11px 20px 11px 8px;
+	z-index: 2;
+	> * {
+		flex: 1 auto;
+	}	
+}
+// 서비스타이틀, 화면 타이틀
+.header__util {
+	@include flexBox(start, center);
+	gap: 4px;
+	.header-tit {
+		flex: 0 auto;
+		@include flexBox(start, center);
+		flex-wrap: wrap;
+		gap: 1px;
+		@include fw-7(16px);
+		line-height: 19px;
+		color: var(--dt-gray16);
+	}
+	&:not(:has(.btn-util)) {
+		.header-tit {
+			padding-left: 12px;
+		}
+	}
+	.header-txt {
+		@include fw-7(16px);
+		line-height: 19px;
+		color: var(--dt-gray10);
+	}
+}
+// 화면 이동 버튼 : 이전, 처음 등
+.btn-util {
+	flex: 0 auto;
+	display: inline-block;
+	min-width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: 24px 24px;
+	background-position: center center;
+	padding: 4px;
+	font-size: 0px;
+	text-indent: -9999px;
+	&.prev {
+		background-image: url(../images/icon/chevron_prev_line.svg);
+	}
+	&.end {
+		background-image: url(../images/icon/ic-close24-gray15.svg);
+	}
+}
+// 서비스 공통 버튼 : 종료, 검색, 상담사 연결 등
+.header__btn {
+	@include flexBox(end, center);
+	flex-wrap: wrap;
+	column-gap:6px;
+	margin-left: auto;
+	.btn {
+		display: flex;
+		border-radius: 4px;
+		padding: 9px 12px 8px;
+		gap: 2px;
+		min-width:max-content;
+		.txt {@include fw-6(14px);}
+	}
+	.btn-callEnd { // 종료
+		background-color: var(--dt-primary);
+		border-color:var(--dt-primary);
+		.icon {
+			display: inline-block;
+			content: "";
+			width: 16px;
+			min-width: 16px;
+			height: 16px;
+			background-image: url(../images/icon/call_end.svg);
+			background-repeat: no-repeat;
+			background-size: 16px 16px;
+		}
+		.txt {
+			color: var(--dt-white);
+		}
+	}
+}
+.main {
+	.header-txt {
+		@include flexBox(start, center);
+		flex-wrap: nowrap;
+		gap: 1px;
+		&::before {
+			flex: 0 auto;
+			display: inline-block;
+			content: "";
+			min-width: 24px;
+			height: 24px;
+			background-image: url(../images/img/logo.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+	}
+}
+
+.search__wrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	max-height: calc(100vh - 56px);
+	display: flex;
+	flex-direction: column;
+	background-color: var(--dt-white);
+	padding-bottom: 20px;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+	overflow: auto;
+	.search-area {
+		.input-group {
+			display: flex;
+			align-items: center;
+			padding: 8px 12px 4px 20px;
+			gap: 6px;
+		}
+		.btn-util {
+			width: 32px;
+			min-width: 32px;
+			height: 32px;
+			background-repeat: no-repeat;
+			background-size: 24px 24px;
+			background-position: center center;
+			padding: 4px;
+			font-size:0px;
+			text-indent: -9999px;
+			&.end {
+				background-image: url(../images/icon/ic-close24-gray15.svg);
 			}
-			.txt {
-				color: var(--dt-white);
+		}
+	}
+	.no-result {
+		background: transparent;
+		padding: 0;
+	}
+	.searchResult {
+		margin-top: 16px;
+		padding: 0 20px;
+		.list-item {
+			@include fw-5();
+			color: var(--dt-gray16);
+			line-height: 1.4;
+			padding: 4px 0;
+			&:first-child {
+				padding-top: 0;
 			}
 		}
 	}

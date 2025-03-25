@@ -12,6 +12,7 @@
 
 	<!-- Css -->
 	<link rel="stylesheet" type="text/css" href="../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../static/css/style.css">
 
     <!-- 메인에만 필요 -->
 	<!-- <link rel="stylesheet" type="text/css" href="../../static/css/main.css"> -->
@@ -30,24 +31,27 @@
     }
 </style>
 <body>
-	<div class="page-wrapper">
+	<div class="page-wrapper main">
 		<!-- header -->
 		<header class="header">
 			<!-- 
 				※※※※ 사용 안하는 태그 삭제 ※※※※
                 이전 prev / 처음 end
 				header__util 안에 아무것도 없을 경우 주석처리 <div class="header__util"></div>
-
-                -->
+            -->
 			<div class="header__util">
 				<span class="header-tit"><span class="header-txt">보이는 ARS</span></span>
 			</div>
 			<div class="header__btn">
+				<button type="button" class="btn-ico btn-search"><span>검색</span></button>
 				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
 			</div>
 		</header>
 		<!-- //header -->
+	</div>
 
+	
+	<div class="page-wrapper">
         <!-- header -->
 		<header class="header">
 			<div class="header__util">
