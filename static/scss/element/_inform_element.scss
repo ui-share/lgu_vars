@@ -46,12 +46,12 @@
 		align-items: center;
 		gap: 12px;
 		.tit {
-			@include fw-6(24px);
+			@include fw-6(20px);
 			color: var(--dt-black);
 			line-height: 1.4;
 			word-break: keep-all;
 			.color-prim {
-				@include fw-6(24px);
+				@include fw-6(20px);
 			}
 		}
 		.txt {

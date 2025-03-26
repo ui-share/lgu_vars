@@ -5081,14 +5081,14 @@ select::-ms-expand {
   gap: 12px;
 }
 .inform-wrap .text-box .tit {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dt-black);
   line-height: 1.4;
   word-break: keep-all;
 }
 .inform-wrap .text-box .tit .color-prim {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .inform-wrap .text-box .txt {
