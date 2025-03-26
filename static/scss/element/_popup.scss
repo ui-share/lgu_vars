@@ -371,34 +371,6 @@
 			}
 		}
 	}
-	&.submitSignupInfo{ //가입확인서발급
-		padding-top:18px;
-		.con__tit-box {
-			.tit-head .txt-title {
-				color:var(--dt-gray15);
-			}
-		}
-		.info-col-wrap { // 조회 리스트
-			margin-bottom:24px;
-			padding:16px 18px;
-			.plan-wrap .list-plan.line .row:not(:first-of-type) {padding-top:12px;}
-			.plan-wrap .list-plan.line .row + .row {margin-top:12px;}
-		}
-		.input-col-wrap { // 가입확인서발급정보입력
-			row-gap:8px;
-			padding-bottom:16px;
-			.input-control:first-of-type {
-				margin-top:6px;
-				& + .input-control {
-					margin-top:0;
-					.input-group {padding-top:0;}
-				}
-			}
-			.input-control + .input-control {
-				margin-top:20px;
-			}
-		}
-	}
 	&.contract {//선택약정 프리미어
 		.cont__txt-box {
 			padding:10px 0 12px;
@@ -430,6 +402,35 @@
 	&:has(.invoice) { //로밍 이용내역 : rmInvoice 청구서 팝업
 		padding-top: 20px;
 		.cont__wrap .con__tit-box .tit-head{flex-wrap:wrap;}
+	}
+	
+	.submitSignupInfo{ //가입확인서발급
+		padding-top:18px;
+		.con__tit-box {
+			.tit-head .txt-title {
+				color:var(--dt-gray15);
+			}
+		}
+		.info-col-wrap { // 조회 리스트
+			margin-bottom:24px;
+			padding:16px 18px;
+			.plan-wrap .list-plan.line .row:not(:first-of-type) {padding-top:12px;}
+			.plan-wrap .list-plan.line .row + .row {margin-top:12px;}
+		}
+		.input-col-wrap { // 가입확인서발급정보입력
+			row-gap:8px;
+			padding-bottom:16px;
+			.input-control:first-of-type {
+				margin-top:6px;
+				& + .input-control {
+					margin-top:0;
+					.input-group {padding-top:0;}
+				}
+			}
+			.input-control + .input-control {
+				margin-top:20px;
+			}
+		}
 	}
 }
 
