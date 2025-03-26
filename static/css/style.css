@@ -5,13 +5,14 @@
 }
 
 .section__cont.summary {
-  background-color: #DCE6FF;
+  background-color: var(--dt-white);
 }
 .section__cont.summary .cont__wrap {
   display: flex;
   flex-direction: column;
   gap: 6px;
   position: relative;
+  height: -moz-max-content;
   height: max-content;
   min-height: 130px;
   padding: 0 20px;
@@ -53,7 +54,7 @@
   background-image: url(../images/img/img-hm-roaming.png);
 }
 .section__cont.summary .cont__wrap-dataGift { /* 데이터기프트 */
-  background-image: url(../images/img/img-hm-dataGift.png); /* 미존재 */
+  background-image: url(../images/img/img-hm-dataGift.png);
 }
 .section__cont.summary .txt-select-wrap {
   display: flex;
@@ -70,6 +71,9 @@
   font-size: 18px;
   font-weight: 600;
   line-height: 1.2;
+}
+.section__cont.summary .txt-select-wrap .chips-date {
+  background-color: var(--dt-gray02);
 }
 .section__cont.summary .txt-select-wrap .chips-date .txt {
   font-size: 18px;
@@ -211,6 +215,7 @@
   font-weight: 700;
 }
 .cont__wrap .con__tit-box .tit-tail {
+  min-width: -moz-max-content;
   min-width: max-content;
 }
 .cont__wrap .con__tit-box:not(:has(.tit-tail)):has(.bullet-list) {
@@ -246,6 +251,7 @@
   margin: 0 20px;
   padding: 18px 20px;
   background-color: var(--dt-white);
+  border: 1px solid var(--dt-gray08);
   border-radius: 8px;
 }
 .info-price-single span {
@@ -269,7 +275,7 @@
   flex-direction: column;
 }
 .info-price-single .txt-info > span {
-  letter-spacing: -0.3px;
+  word-break: keep-all;
 }
 .info-price-single .txt-info > span:first-child:not(:has(.color-prim)) {
   color: var(--dt-primary);
@@ -423,7 +429,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
 }
 .cont__wrap.pauseTemp .info-wrap .txt-tit {
   font-size: 16px;

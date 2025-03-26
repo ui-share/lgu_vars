@@ -2,8 +2,9 @@
 .roamingRealtime {
     // 로밍요금 라운드박스
     .roamingPrice {
-        .roaming {
+        .info-col-wrap {
             padding-top: 22px;
+            padding-bottom: 22px;
             .row {
                 align-items: center;
             }
@@ -14,9 +15,7 @@
             .txt-price {
                 font-size: 18px;
                 color: var(--dt-black);
-                span:first-of-type {
-                    font-size: 18px;
-                }
+                line-height:130%;
             }
             .btn.bg-withdraw {
                 margin-top: 20px;

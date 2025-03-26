@@ -58,19 +58,19 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  min-width: 86px;
+  max-width: 124px;
 }
 .range-datepicker .datePicker__input-box:has(.hyphen) {
   max-width: 148px;
 }
 .range-datepicker .datePicker__input-box .input-field {
-  width: auto;
+  flex: 1;
   font-size: 14px;
   font-weight: 600;
   line-height: 1.2;
   color: var(--dt-gray16);
   text-align: center;
-  field-sizing: content;
 }
 .range-datepicker .datePicker__input-box .input-field.datepicker-input.in-edit {
   border-color: transparent;
@@ -81,19 +81,19 @@
 .range-datepicker .datePicker__input-box .input-field::-moz-placeholder {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   color: var(--dt-gray16);
 }
 .range-datepicker .datePicker__input-box .input-field::placeholder {
   font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
   color: var(--dt-gray16);
 }
 .range-datepicker .datePicker__input-box .input-field-unit {
+  flex: 0 auto;
   font-size: 14px;
   font-weight: 500;
-  min-width: 25px;
   line-height: 1.5;
   color: var(--dt-gray11);
 }

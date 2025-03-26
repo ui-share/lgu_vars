@@ -139,17 +139,19 @@
 		&.hyundai {}/* 현대차증권 */
 
 	}
+
 	.txt {
 		@include flexColum;
 		justify-content:center;
-		@include fw-5(14px);
-		line-height:16px;
-		text-align:center;
 		width: 90px;
 		max-width:90px;
 		margin:auto;
 		min-height:34px;
 		max-height:34px;
+		color: var(--dt-gray16);
+		@include fw-5(14px);
+		line-height:16px;
+		text-align:center;
 		word-break:break-all;
 		overflow:hidden;
 	}
@@ -180,7 +182,7 @@
 		display: inline-block;
 		width: 24px;
 		height: 24px;
-		background-image: url(../images/icon/ic-chips-arrow-black.png);
+		background-image: url(../images/icon/ic-chips-arrow-black.svg);
 		background-size: 24px 24px;
 		background-repeat: no-repeat;
 		background-position: center center;
@@ -273,7 +275,7 @@
 			.arrow {
 				width: 16px;
 				height: 16px;
-				background-image: url(../images/icon/ic-chips-arrow-sm.png);
+				background-image: url(../images/icon/ic-chips-arrow-sm.svg);
 				background-size: 16px 16px;
 			}
 			&.is-selected {
@@ -352,7 +354,7 @@
 			.icon {
 				width: 18px;
 				height: 18px;
-				background-image: url(../images/icon/ic-chips-refresh.png);
+				background-image: url(../images/icon/ic-chips-refresh.svg);
 				background-size: 18px 18px;
 				background-repeat: no-repeat;
 				background-position: center center;
@@ -527,7 +529,7 @@
 			color: var(--dt-primary);
 		}
 		.icon {
-			background-image: url(../images/icon/ic-badge-clock.png);
+			background-image: url(../images/icon/ic-badge-clock.svg);
 			background-size: 18px 18px;
 			background-repeat: no-repeat;
 			background-position: center center;
@@ -538,7 +540,7 @@
 				color: var(--dt-error);
 			}
 			.icon {
-				background-image: url(../images/icon/ic-badge-clock-error.png);
+				background-image: url(../images/icon/ic-badge-clock-error.svg);
 			}
 		}
 	}

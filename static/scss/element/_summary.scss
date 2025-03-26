@@ -9,7 +9,7 @@
 
 .section__cont {
 	&.summary {
-		background-color: #DCE6FF;
+		background-color: var(--dt-white);
 		.cont__wrap {
 			@include flexColum;
 			gap: 6px;
@@ -59,7 +59,7 @@
 			background-image: url(../images/img/img-hm-roaming.png);
 		} 
 		.cont__wrap-dataGift { /* 데이터기프트 */
-			background-image: url(../images/img/img-hm-dataGift.png); /* 미존재 */
+			background-image: url(../images/img/img-hm-dataGift.png); 
 		}
 		.txt-select-wrap {
 			@include flexRow;
@@ -77,6 +77,7 @@
 				}
 			}
 			.chips-date {
+				background-color: var(--dt-gray02);
 				.txt {
 					@include fw-6(18px);
 					line-height: 1.2;

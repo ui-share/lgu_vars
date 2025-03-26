@@ -1,76 +1,33 @@
-.changePaymentMethod .list-payment {
-  row-gap: 0;
+.page-wrapper.changePaymentMethod .container .section__cont.counsel {
+  padding: 36px 0 0px;
 }
-.changePaymentMethod .list-payment .mypay-list {
-  width: 100%;
-  border-top: 1px solid var(--dt-gray17);
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service {
+  padding-bottom: 40px;
 }
-.changePaymentMethod .list-payment .mypay-list:last-of-type {
-  border-bottom: 1px solid var(--dt-gray17);
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
+  margin-top: 24px;
+  gap: 16px;
 }
-.changePaymentMethod .list-payment .mypay-list .btn {
-  display: flex;
-  flex-direction: row;
-  gap: 4px;
-  width: 100%;
-  padding: 20px 12px 20px 20px;
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
+  padding-bottom: 10px;
 }
-.changePaymentMethod .list-payment .mypay-list .btn::after {
-  flex: none;
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-image: url(../images/icon/ic-24-arrow-right-gray10.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
+  padding-bottom: 0;
 }
-.changePaymentMethod .list-payment .mypay-list .detail {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  width: 100%;
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.wd-full .cont__txt-box .txt {
+  font-size: 20px;
+  font-weight: 700;
 }
-.changePaymentMethod .list-payment .mypay-list .detail .txt-sub {
-  margin-top: 0;
-  margin-left: auto;
-  text-align: right;
-  font-size: 14px;
-  line-height: 150%;
+.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
+  background-color: var(--dt-white);
+  z-index: 999;
 }
-.changePaymentMethod .list-payment .mypay-list .row {
-  justify-content: space-between;
+.page-wrapper.changePaymentMethod .input-col-wrap + .input-col-wrap {
+  margin-top: 12px;
 }
-.changePaymentMethod .accnt-username {
+
+.accnt-username {
   color: var(--dt-gray16);
   font-size: 18px;
   font-weight: 600;
-}
-.changePaymentMethod .wd-full {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.changePaymentMethod .wd-full .cont__txt-box, .changePaymentMethod .wd-full .btn-group {
-  padding: 0 20px;
-}
-.changePaymentMethod .txt-title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: left;
-}
-.changePaymentMethod .txt-price {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: right;
-}
-.changePaymentMethod .txt-sub-date {
-  font-size: 12px;
-  font-weight: 500;
-  color: var(--dt-gray10);
-  line-height: 1.5;
-  text-align: left;
 }

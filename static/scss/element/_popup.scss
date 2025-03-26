@@ -67,7 +67,7 @@
 			padding: 8px;
 			border: none;
 			background-color: transparent;
-			background-image: url(../../static/images/icon/close_line.png);
+			background-image: url(../../static/images/icon/close_line.svg);
 			background-repeat: no-repeat;
 			background-size: 24px 24px;
 			background-position: center center;
@@ -220,6 +220,7 @@
 						width:calc(100% - 12px);
 						height:calc(100% - 12px);
 						padding:17px 0;
+						color:var(--dt-gray16);
 						@include fw-6(16px);
 						text-align:center;
 						border-radius:50%;
@@ -540,8 +541,8 @@
 	}
 }
 
-//나의 납부내역 : immePayment 풀팝업(페이지 > 풀팝업)
-.immePayment {
+//나의 납부내역 : list_myPayment 풀팝업(페이지 > 풀팝업)
+.list_myPayment {
 	// 나의 납부 내역
 	.list-payment {
 		row-gap: 0;
@@ -558,7 +559,7 @@
 		line-height: 1.5;
 		text-align: left;
 	}
-	.txt-price {	
+	.txt-price {
 		@include fw-7();
 		line-height: 1.5;
 		text-align: right;
@@ -591,12 +592,18 @@
 				background-repeat:no-repeat;
 				background-position: center;
 			}
+			.txt-title {
+				color:var(--dt-gray14);
+			}
+			.txt-price {
+				color:var(--dt-gray16);
+				margin-left: auto;
+			}
 		}
 		.detail {
 			@include flexColum();
 			gap: 4px;
-			width:100%;		
-			
+			width:100%;
 			.txt-sub {
 				margin-top:0;
 				margin-left:auto;
@@ -606,6 +613,8 @@
 			}
 		}
 		.row {
+			flex-wrap: wrap;
+			align-items: center;
 			justify-content:space-between;
 		}
 	}
