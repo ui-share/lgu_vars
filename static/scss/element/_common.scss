@@ -747,7 +747,7 @@ button {
 		}
 		.txt-desc {
 			> span {
-				&:not(.txt-sub, .flag) {
+				&:not(.txt-sub, .flag, .ico20) {
 					display:inline-block;
 					@include fw-5(14px);line-height:21px;
 				}
@@ -756,13 +756,6 @@ button {
 				display:flex;
 				align-items:center;
 				column-gap:4px;
-			}
-			
-		}
-		button.txt-desc {
-			.img-box {
-				margin-top:2px;
-				transform:rotate(-90deg);
 			}
 		}
 		.current {

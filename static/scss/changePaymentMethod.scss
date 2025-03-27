@@ -1,42 +1,51 @@
 @import "../scss/base/mixin";
 .page-wrapper {
 	&.changePaymentMethod {
-		.container {
-			.section__cont {
-                &.counsel {
-                    padding: 36px 0 0px;
+        .section__cont {
+            &.counsel {
+                padding: 36px 0 0px;
+            }
+            .cont__wrap {
+                &.cont__wrap-service {
+                    padding-bottom:40px;
+                    &:has(.input-col-wrap .chck-group) {
+                        .input-col-wrap + .input-col-wrap {
+                            margin-top:24px;gap:16px;
+                            .accordion-header.chckbox-area {padding-bottom:10px;}
+                        }
+                        .accordion-content .bullet-list {padding-bottom:0}
+                    }
                 }
-                .cont__wrap {
-                    &.cont__wrap-service {
-                        padding-bottom:40px;
-                        &:has(.input-col-wrap .chck-group) {
-                            .input-col-wrap + .input-col-wrap {
-                                margin-top:24px;gap:16px;
-                                .accordion-header.chckbox-area {padding-bottom:10px;}
-                            }
-                            .accordion-content .bullet-list {padding-bottom:0}
+                &.wd-full {
+                    .cont__txt-box {
+                        .txt {
+                            @include fw-7(20px);
                         }
                     }
-                    &.wd-full {
-                        .cont__txt-box {
-                            .txt {
-                                @include fw-7(20px);
-                            }
-                        }
+                }
+                &.cont__wrap-btBtn {
+                    &:has(.accordion-container) {
+                        background-color:var(--dt-white);
+                        z-index: 999;
                     }
-                    &.cont__wrap-btBtn {
-                        &:has(.accordion-container) {
-                            background-color:var(--dt-white);
-                            z-index: 999;
-                        }
-                    } 
                 }
             }
-		}
+            // 결제일 + 에로우 영역 : 에로우만 클릭 되도록 수정
+            .plan-wrap {
+                .txt-desc {
+                    .img-box.ico20 {
+                        // margin-top:1px;
+                        transform:rotate(-90deg);
+                        pointer-events: auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 
-        // 전자서명 영역 간격
- 	    .input-col-wrap + .input-col-wrap {margin-top:12px;}
-	}
+    // 전자서명 영역 간격
+    .input-col-wrap + .input-col-wrap {margin-top:12px;}
 }
 // 실시간출금 : 예금주명
 .accnt-username {
