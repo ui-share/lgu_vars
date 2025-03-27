@@ -49,14 +49,19 @@
 			@include flexBox(start, center);
 			padding: 8px 0;
 			gap: 10px 8px;
+			word-break: keep-all;
 			> .txt {
 				color: var(--dt-gray16);
 				@include fw-7(20px);
 				line-height: var(--dt-lh150);
+				word-break: keep-all;
 			}
 			&:has(.flag-etc) {
 				flex-wrap:wrap;
-				> .txt {line-height:120%;}
+				> .txt {
+					line-height:120%;
+					word-break: keep-all;
+				}
 			}
 		}
 		.btn-util {
@@ -150,7 +155,8 @@
 		.con__tit-box {
 			margin-bottom:0;
 			padding-bottom:8px;
-			font-size:16px;line-height:24px;
+			font-size:16px;
+			line-height:24px;
 			border-bottom:1px solid var(--dt-gray17);
 			.ic-chaterror {
 				background-image: url(../images/icon/ic-chatsquare-error.svg);
