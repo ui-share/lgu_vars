@@ -613,12 +613,26 @@ textarea::placeholder {
 			border-radius: 4px;
 			background: var(--dt-gray02);
 			@include fw-7(24px);
+			line-height: 1.2;
 			text-align: center;
 			color: var(--dt-gray16);
 		}
 	}
 	.validation-txt {
 		text-align: left;
+	}
+}
+@media screen and (max-width: 359px) {
+	.code {
+		.code-group {
+			.code-box {
+				display: inline-block;
+				width: 35px;
+				min-height: 40px;
+				padding: 6px 4px;
+				@include fw-7(20px);
+			}
+		}
 	}
 }
 
