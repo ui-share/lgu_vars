@@ -370,6 +370,7 @@ button {
 
 .tit, .txt, .txt-title, .txt-sub, .txt-desc {
   word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* animation */
