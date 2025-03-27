@@ -368,6 +368,10 @@ button {
   flex-direction: column;
 }
 
+.tit, .txt, .txt-title, .txt-sub, .txt-desc {
+  word-break: keep-all;
+}
+
 /* animation */
 @keyframes fadeInDown {
   0% {
@@ -785,12 +789,14 @@ button {
   font-weight: 600;
   color: var(--dt-gray16);
   line-height: 1.2;
+  word-break: keep-all;
 }
 .text-box .txt {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
   line-height: 1.2;
+  word-break: keep-all;
 }
 .text-box .txt .btn-tooltip {
   transform: translateY(-1px);
@@ -3757,6 +3763,7 @@ textarea::placeholder {
   background: var(--dt-gray02);
   font-size: 24px;
   font-weight: 700;
+  line-height: 1.2;
   text-align: center;
   color: var(--dt-gray16);
 }
@@ -3764,6 +3771,16 @@ textarea::placeholder {
   text-align: left;
 }
 
+@media screen and (max-width: 359px) {
+  .code .code-group .code-box {
+    display: inline-block;
+    width: 35px;
+    min-height: 40px;
+    padding: 6px 4px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
 .auth-wrap {
   text-align: center;
   padding-bottom: 26px;
@@ -3929,18 +3946,21 @@ select::-ms-expand {
   justify-content: flex-start;
   padding: 8px 0;
   gap: 10px 8px;
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .popup-tit > .txt {
   color: var(--dt-gray16);
   font-size: 20px;
   font-weight: 700;
   line-height: var(--dt-lh150);
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .popup-tit:has(.flag-etc) {
   flex-wrap: wrap;
 }
 .popup-wrapper .popup-header .popup-tit:has(.flag-etc) > .txt {
   line-height: 120%;
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .btn-util {
   min-width: 40px;
