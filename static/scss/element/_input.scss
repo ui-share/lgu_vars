@@ -648,15 +648,15 @@ textarea::placeholder {
 		margin-bottom: 10px;
 	}
 	.tit {
-		@include fw-6(24px);
+		@include fw-6(20px);
 		color: var(--dt-black);
 		line-height: 1.4;
 	}
 	.customer-name {
-		@include fw-6(24px);
+		@include fw-6(20px);
 	}
 	.color-prim {
-		@include fw-6(24px);
+		@include fw-6(20px);
 	}
 	.input-control {
 		padding-top: 42px;

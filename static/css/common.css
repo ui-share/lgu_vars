@@ -3792,17 +3792,17 @@ textarea::placeholder {
   margin-bottom: 10px;
 }
 .auth-wrap .tit {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dt-black);
   line-height: 1.4;
 }
 .auth-wrap .customer-name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .auth-wrap .color-prim {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .auth-wrap .input-control {
