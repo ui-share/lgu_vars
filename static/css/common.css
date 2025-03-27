@@ -4292,6 +4292,9 @@ select::-ms-expand {
 .full-popup .container:has(.rmUsed) {
   padding-bottom: 48px;
 }
+.full-popup .container:has(.rmInvoice) {
+  padding-bottom: 155px;
+}
 .full-popup .section__cont {
   gap: 48px;
 }
@@ -4334,6 +4337,79 @@ select::-ms-expand {
   text-align: right;
   line-height: 150%;
   margin-top: 8px;
+}
+
+.section__cont:has(.rmInvoice) {
+  gap: 0;
+}
+
+.rmInvoice {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rmInvoice .con__tit-box {
+  margin-bottom: 0;
+}
+.rmInvoice .list-wrap {
+  margin-top: 0;
+}
+.rmInvoice .list-wrap .list-box .tail {
+  color: var(--dt-gray14);
+}
+.rmInvoice .list-wrap .list-box.title .head, .rmInvoice .list-wrap .list-box.total .head {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dt-gray16);
+  gap: 6px;
+}
+.rmInvoice .list-wrap .list-box.title .head .ico-bank, .rmInvoice .list-wrap .list-box.total .head .ico-bank {
+  width: 20px;
+  height: 20px;
+}
+.rmInvoice .list-wrap .list-box.title .tail, .rmInvoice .list-wrap .list-box.total .tail {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dt-gray16);
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.rmInvoice .list-wrap .list-box .list-wrap {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box {
+  align-items: flex-start;
+  padding: 4px 0;
+  border: none;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .head, .rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dt-gray12);
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .head {
+  width: calc(100% - 84px);
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
+  min-width: 81px;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box {
+  padding: 0;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box .head {
+  width: calc(100% - 81px);
+  padding-left: 11px;
+  background-image: url(../images/icon/ic-list-brace.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 6px;
+  background-size: 8px;
 }
 
 .twoFactorAuth .btn-group .btn-radio {

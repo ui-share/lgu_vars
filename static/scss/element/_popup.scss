@@ -449,6 +449,9 @@
 		&:has(.rmUsed) {
 			padding-bottom: 48px;
 		}
+		&:has(.rmInvoice) {
+			padding-bottom: 155px;
+		}
 	}
 	.section__cont {
 		gap: 48px;
@@ -495,6 +498,78 @@
 			text-align: right;
 			line-height: 150%;
 			margin-top: 8px;
+		}
+	}
+}
+
+// 로밍이용내역 : 로밍영수증 발급 풀팝업
+.section__cont:has(.rmInvoice) {
+	gap: 0;
+	// & + .toast-wrap {
+	// 	bottom: 154px;
+	// }
+}
+.rmInvoice {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	.con__tit-box {
+		margin-bottom: 0;
+	}
+	.list-wrap {
+		margin-top: 0;
+		.list-box {
+			.tail {
+				color: var(--dt-gray14);
+			}
+			&.title, &.total {
+				.head {
+					display: flex;
+					align-items: center;
+					@include fw-7();
+					line-height: 150%;
+					color: var(--dt-gray16);
+					gap: 6px;
+					.ico-bank {width:20px;height:20px;}
+				}
+				.tail {
+					@include fw-7();
+					line-height: 150%;
+					color: var(--dt-gray16);
+					max-width:max-content;
+				}
+			}
+			// 2depth
+			.list-wrap {
+				width: 100%;
+				margin-top: 0;
+				padding: 0;
+				.list-box {
+					align-items: flex-start;
+					padding: 4px 0;
+					border: none;
+					.head, .tail {
+						@include fw-5(14px);
+						line-height: 150%;
+						color: var(--dt-gray12);
+					}
+					.head {width:calc(100% - 84px);}
+					.tail { min-width:81px;}
+					
+					// 3depth : ㄴ꺽쇠 리스트
+					.list-box {
+						padding: 0;
+						.head {
+							width:calc(100% - 81px);
+							padding-left: 11px;
+							background-image: url(../images/icon/ic-list-brace.svg);
+							background-repeat: no-repeat;
+							background-position: 0px 6px;
+							background-size: 8px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
