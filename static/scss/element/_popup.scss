@@ -456,6 +456,9 @@
 	.section__cont {
 		gap: 48px;
 	}
+	&:has(.rmInvoice) + .toast-wrap { // 로밍영수증 발급 내 토스트팝업 조정정
+		bottom: 154px;
+	}
 }
 //로밍 이용내역 : roamingUsed 풀팝업
 .rmUsed {
