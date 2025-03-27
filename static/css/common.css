@@ -4754,6 +4754,9 @@ select::-ms-expand {
   justify-content: space-between;
   column-gap: 8px;
 }
+.info-price-detail .info-wrap .row > span {
+  line-height: 150%;
+}
 .info-price-detail .txt-title {
   padding-left: 10px;
 }
@@ -4784,7 +4787,6 @@ select::-ms-expand {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray11);
-  line-height: 18px;
 }
 
 .list-payment:has(> .info-price-wrap .total-last) {
