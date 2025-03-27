@@ -224,7 +224,7 @@ button {
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
-.tit, .txt, .txt-title, .txt-sub, .txt-desc {word-break: keep-all;overflow-wrap: break-word;}
+.tit, .txt, .txt-title, .txt-sub, .txt-desc {word-break: keep-all;overflow-wrap: anywhere;}
 /* animation */
 @keyframes fadeInDown {
 	0% {
