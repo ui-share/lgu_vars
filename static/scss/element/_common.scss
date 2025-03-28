@@ -123,10 +123,11 @@ body {
 	background-color: var(--dt-white);
 	padding-top: env(safe-area-inset-top);
   	padding-bottom: env(safe-area-inset-bottom, 0px);
+	overflow-wrap: anywhere;
 }
-// body * {
-// 	color: var(--dt-black);
-// }
+body * {
+	overflow-wrap: anywhere;
+}
 .is-pc {
 	--max-devicewidth: 568px !important;
 }
