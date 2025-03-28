@@ -123,10 +123,11 @@ body {
 	background-color: var(--dt-white);
 	padding-top: env(safe-area-inset-top);
   	padding-bottom: env(safe-area-inset-bottom, 0px);
+	overflow-wrap: anywhere;
 }
-// body * {
-// 	color: var(--dt-black);
-// }
+body * {
+	overflow-wrap: anywhere;
+}
 .is-pc {
 	--max-devicewidth: 568px !important;
 }
@@ -224,7 +225,7 @@ button {
 .wd-full {padding-right:0 !important; padding-left:0 !important;}
 .row {@include flexRow;}
 .col {@include flexColum;}
-
+.tit, .txt, .txt-title, .txt-sub, .txt-desc {word-break: keep-all;overflow-wrap: anywhere;}
 /* animation */
 @keyframes fadeInDown {
 	0% {
@@ -632,11 +633,13 @@ button {
 		@include fw-6();
 		color: var(--dt-gray16);
 		line-height: 1.2;
+		word-break: keep-all;
 	}
 	.txt{
 		@include fw-5(14px);
 		color: var(--dt-gray11);
 		line-height: 1.2;
+		word-break: keep-all;
 		.btn-tooltip {
 			transform: translateY(-1px);
 		}
@@ -747,7 +750,7 @@ button {
 		}
 		.txt-desc {
 			> span {
-				&:not(.txt-sub, .flag) {
+				&:not(.txt-sub, .flag, .ico20) {
 					display:inline-block;
 					@include fw-5(14px);line-height:21px;
 				}
@@ -756,13 +759,6 @@ button {
 				display:flex;
 				align-items:center;
 				column-gap:4px;
-			}
-			
-		}
-		button.txt-desc {
-			.img-box {
-				margin-top:2px;
-				transform:rotate(-90deg);
 			}
 		}
 		.current {

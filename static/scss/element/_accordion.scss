@@ -132,6 +132,7 @@
             display:flex;
             justify-content:space-between;
             column-gap:8px;
+            > span {line-height:150%;}
         }
     }
     .txt-title {
@@ -160,7 +161,6 @@
         .txt-title, .txt-price {
             @include fw-5(12px);
             color:var(--dt-gray11);
-            line-height:18px; 
         }
     }
 }

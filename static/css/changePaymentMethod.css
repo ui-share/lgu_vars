@@ -1,28 +1,33 @@
-.page-wrapper.changePaymentMethod .container .section__cont.counsel {
+.page-wrapper.changePaymentMethod .section__cont.counsel {
   padding: 36px 0 0px;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.cont__wrap-service {
   padding-bottom: 40px;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap {
   margin-top: 24px;
   gap: 16px;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .input-col-wrap + .input-col-wrap .accordion-header.chckbox-area {
   padding-bottom: 10px;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.cont__wrap-service:has(.input-col-wrap .chck-group) .accordion-content .bullet-list {
   padding-bottom: 0;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.wd-full .cont__txt-box .txt {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.wd-full .cont__txt-box .txt {
   font-size: 20px;
   font-weight: 700;
 }
-.page-wrapper.changePaymentMethod .container .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
+.page-wrapper.changePaymentMethod .section__cont .cont__wrap.cont__wrap-btBtn:has(.accordion-container) {
   background-color: var(--dt-white);
   z-index: 999;
 }
-.page-wrapper.changePaymentMethod .input-col-wrap + .input-col-wrap {
+.page-wrapper.changePaymentMethod .section__cont .plan-wrap .txt-desc .img-box.ico20 {
+  transform: rotate(-90deg);
+  pointer-events: auto;
+  cursor: pointer;
+}
+.page-wrapper .input-col-wrap + .input-col-wrap {
   margin-top: 12px;
 }
 

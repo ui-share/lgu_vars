@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/roamingUsed.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper full-popup">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn btn-group">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+		
+		<div class="container">
+			<div class="section__cont roamingUsed">
+				<div class="cont__wrap rmInvoice">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">로밍 영수증 발급</span>
+					</div>
+
+					<!-- 영수증 영역 -->
+					<div class="list-wrap">
+						<li class="list-box title">
+							<span class="head">
+								<span class="ico-bank shinhan"></span>
+								<span>신한카드</span>
+							</span>
+							<span class="tail">123*-****-****-5678</span>
+						</li> 
+						<li class="list-box">
+							<ul class="list-wrap">
+								<li class="list-box">
+									<span class="head">로밍패스 7GB</span>
+									<span class="tail"><span>43,000</span>원</span>
+								</li>
+								<li class="list-box">
+									<span class="head">부가서비스</span>
+									<span class="tail">+<span>1,600</span>원</span>
+									<ul class="list-wrap">
+										<li class="list-box">
+											<span class="head">해외 일시정지 문자수신 / 본인인증</span>
+										</li>
+									</ul>
+								</li>
+								<li class="list-box">
+									<span class="head">음성통화</span>
+									<span class="tail">+<span>673</span>원</span>
+								</li>
+								<li class="list-box">
+									<span class="head">문자</span>
+									<span class="tail">+<span>950</span>원</span>
+								</li>
+							</ul>
+						</li>
+						<li class="list-box">
+							<ul class="list-wrap">
+								<li class="list-box">
+									<span class="head">공급가액</span>
+									<span class="tail"><span>0</span>원</span>
+								</li>
+								<li class="list-box">
+									<span class="head">부가가치세</span>
+									<span class="tail"><span>0</span>원</span>
+								</li>
+							</ul>
+						</li>
+						<li class="list-box total">
+							<span class="head">총 요금</span>
+							<span class="tail">총 <span>44,623</span>원</span>
+						</li>
+					</div>
+				</div>
+
+				<div class="cont__wrap cont__wrap-btBtn">
+					<div class="btn-group flex-column">
+						<button type="button" class="btn line btn-sec">
+							<span class="txt">PDF 저장</span>
+						</button>
+
+						<button type="button" class="btn btn-sec">
+							<span class="txt">이메일로 보내기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 
+		toast 상태 class : show
+		default: <div class="toast-wrap">
+		toast-in: <div class="toast-wrap show">
+	-->
+	<div class="toast-wrap show">
+		<div class="toast">
+			<div class="toast-txt">로밍 영수증을 이메일로 보냈어요</div>
+			<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+		</div>
+	</div>
+
+	<div class="toast-wrap">
+		<div class="toast">
+			<div class="toast-txt">로밍 영수증을 PDF로 저장 했어요</div>
+			<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+		</div>
+	</div>
+</body>
+</html>

@@ -185,6 +185,11 @@ body {
   background-color: var(--dt-white);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom, 0px);
+  overflow-wrap: anywhere;
+}
+
+body * {
+  overflow-wrap: anywhere;
 }
 
 .is-pc {
@@ -366,6 +371,11 @@ button {
 .col {
   display: flex;
   flex-direction: column;
+}
+
+.tit, .txt, .txt-title, .txt-sub, .txt-desc {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
 }
 
 /* animation */
@@ -785,12 +795,14 @@ button {
   font-weight: 600;
   color: var(--dt-gray16);
   line-height: 1.2;
+  word-break: keep-all;
 }
 .text-box .txt {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray11);
   line-height: 1.2;
+  word-break: keep-all;
 }
 .text-box .txt .btn-tooltip {
   transform: translateY(-1px);
@@ -910,7 +922,7 @@ button {
   line-height: 150%;
   align-self: flex-start;
 }
-.plan-wrap .list-plan .txt-desc > span:not(.txt-sub, .flag) {
+.plan-wrap .list-plan .txt-desc > span:not(.txt-sub, .flag, .ico20) {
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
@@ -921,10 +933,6 @@ button {
   align-items: center;
   -moz-column-gap: 4px;
        column-gap: 4px;
-}
-.plan-wrap .list-plan button.txt-desc .img-box {
-  margin-top: 2px;
-  transform: rotate(-90deg);
 }
 .plan-wrap .list-plan .current {
   color: var(--dt-black);
@@ -3761,6 +3769,7 @@ textarea::placeholder {
   background: var(--dt-gray02);
   font-size: 24px;
   font-weight: 700;
+  line-height: 1.2;
   text-align: center;
   color: var(--dt-gray16);
 }
@@ -3768,6 +3777,16 @@ textarea::placeholder {
   text-align: left;
 }
 
+@media screen and (max-width: 359px) {
+  .code .code-group .code-box {
+    display: inline-block;
+    width: 35px;
+    min-height: 40px;
+    padding: 6px 4px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
 .auth-wrap {
   text-align: center;
   padding-bottom: 26px;
@@ -3779,20 +3798,23 @@ textarea::placeholder {
   margin-bottom: 10px;
 }
 .auth-wrap .tit {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--dt-black);
   line-height: 1.4;
 }
 .auth-wrap .customer-name {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .auth-wrap .color-prim {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
 }
 .auth-wrap .input-control {
+  padding-top: 12px;
+}
+.auth-wrap .input-control.code {
   padding-top: 42px;
 }
 .auth-wrap .validation-txt {
@@ -3805,9 +3827,6 @@ textarea::placeholder {
 .auth-wrap .btn-group .btn {
   width: unset;
   margin: 0 auto;
-}
-.auth-wrap:has(.badge-time) .input-control {
-  padding-top: 28px;
 }
 .auth-wrap.auth_number {
   padding-bottom: 4px;
@@ -3933,18 +3952,21 @@ select::-ms-expand {
   justify-content: flex-start;
   padding: 8px 0;
   gap: 10px 8px;
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .popup-tit > .txt {
   color: var(--dt-gray16);
   font-size: 20px;
   font-weight: 700;
   line-height: var(--dt-lh150);
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .popup-tit:has(.flag-etc) {
   flex-wrap: wrap;
 }
 .popup-wrapper .popup-header .popup-tit:has(.flag-etc) > .txt {
   line-height: 120%;
+  word-break: keep-all;
 }
 .popup-wrapper .popup-header .btn-util {
   min-width: 40px;
@@ -4243,38 +4265,6 @@ select::-ms-expand {
   text-align: left;
   line-height: var(--dt-lh150);
 }
-.popup-body.submitSignupInfo {
-  padding-top: 18px;
-}
-.popup-body.submitSignupInfo .con__tit-box .tit-head .txt-title {
-  color: var(--dt-gray15);
-}
-.popup-body.submitSignupInfo .info-col-wrap {
-  margin-bottom: 24px;
-  padding: 16px 18px;
-}
-.popup-body.submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row:not(:first-of-type) {
-  padding-top: 12px;
-}
-.popup-body.submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row + .row {
-  margin-top: 12px;
-}
-.popup-body.submitSignupInfo .input-col-wrap {
-  row-gap: 8px;
-  padding-bottom: 16px;
-}
-.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type {
-  margin-top: 6px;
-}
-.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control {
-  margin-top: 0;
-}
-.popup-body.submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control .input-group {
-  padding-top: 0;
-}
-.popup-body.submitSignupInfo .input-col-wrap .input-control + .input-control {
-  margin-top: 20px;
-}
 .popup-body.contract .cont__txt-box {
   padding: 10px 0 12px;
 }
@@ -4319,6 +4309,38 @@ select::-ms-expand {
 .popup-body:has(.invoice) .cont__wrap .con__tit-box .tit-head {
   flex-wrap: wrap;
 }
+.popup-body .submitSignupInfo {
+  padding-top: 18px;
+}
+.popup-body .submitSignupInfo .con__tit-box .tit-head .txt-title {
+  color: var(--dt-gray15);
+}
+.popup-body .submitSignupInfo .info-col-wrap {
+  margin-bottom: 24px;
+  padding: 16px 18px;
+}
+.popup-body .submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row:not(:first-of-type) {
+  padding-top: 12px;
+}
+.popup-body .submitSignupInfo .info-col-wrap .plan-wrap .list-plan.line .row + .row {
+  margin-top: 12px;
+}
+.popup-body .submitSignupInfo .input-col-wrap {
+  row-gap: 8px;
+  padding-bottom: 16px;
+}
+.popup-body .submitSignupInfo .input-col-wrap .input-control:first-of-type {
+  margin-top: 6px;
+}
+.popup-body .submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control {
+  margin-top: 0;
+}
+.popup-body .submitSignupInfo .input-col-wrap .input-control:first-of-type + .input-control .input-group {
+  padding-top: 0;
+}
+.popup-body .submitSignupInfo .input-col-wrap .input-control + .input-control {
+  margin-top: 20px;
+}
 
 .popup-body + .popup-footer.hidden {
   padding-bottom: 20px;
@@ -4333,8 +4355,14 @@ select::-ms-expand {
 .full-popup .container:has(.rmUsed) {
   padding-bottom: 48px;
 }
+.full-popup .container:has(.rmInvoice) {
+  padding-bottom: 155px;
+}
 .full-popup .section__cont {
   gap: 48px;
+}
+.full-popup:has(.rmInvoice) + .toast-wrap {
+  bottom: 154px;
 }
 
 .rmUsed .con__tit-box .tit-head .txt-title {
@@ -4375,6 +4403,79 @@ select::-ms-expand {
   text-align: right;
   line-height: 150%;
   margin-top: 8px;
+}
+
+.section__cont:has(.rmInvoice) {
+  gap: 0;
+}
+
+.rmInvoice {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.rmInvoice .con__tit-box {
+  margin-bottom: 0;
+}
+.rmInvoice .list-wrap {
+  margin-top: 0;
+}
+.rmInvoice .list-wrap .list-box .tail {
+  color: var(--dt-gray14);
+}
+.rmInvoice .list-wrap .list-box.title .head, .rmInvoice .list-wrap .list-box.total .head {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dt-gray16);
+  gap: 6px;
+}
+.rmInvoice .list-wrap .list-box.title .head .ico-bank, .rmInvoice .list-wrap .list-box.total .head .ico-bank {
+  width: 20px;
+  height: 20px;
+}
+.rmInvoice .list-wrap .list-box.title .tail, .rmInvoice .list-wrap .list-box.total .tail {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--dt-gray16);
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.rmInvoice .list-wrap .list-box .list-wrap {
+  width: 100%;
+  margin-top: 0;
+  padding: 0;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box {
+  align-items: flex-start;
+  padding: 4px 0;
+  border: none;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .head, .rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  color: var(--dt-gray12);
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .head {
+  width: calc(100% - 84px);
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
+  min-width: 81px;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box {
+  padding: 0;
+}
+.rmInvoice .list-wrap .list-box .list-wrap .list-box .list-box .head {
+  width: calc(100% - 81px);
+  padding-left: 11px;
+  background-image: url(../images/icon/ic-list-brace.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 6px;
+  background-size: 8px;
 }
 
 .twoFactorAuth .btn-group .btn-radio {
@@ -4797,6 +4898,9 @@ select::-ms-expand {
   -moz-column-gap: 8px;
        column-gap: 8px;
 }
+.info-price-detail .info-wrap .row > span {
+  line-height: 150%;
+}
 .info-price-detail .txt-title {
   padding-left: 10px;
 }
@@ -4827,7 +4931,6 @@ select::-ms-expand {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray11);
-  line-height: 18px;
 }
 
 .list-payment:has(> .info-price-wrap .total-last) {

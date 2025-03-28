@@ -49,12 +49,14 @@
 					color: var(--dt-white);
 					line-height: var(--dt-lh150);
 					text-align: center;
+					word-break: keep-all;
 				}
 				.txt {
 					@include fw-7(14px);
 					color: var(--dt-white);
 					line-height: var(--dt-lh150);
 					text-align: center;
+					word-break: keep-all;
 				}
 			}
 		}
