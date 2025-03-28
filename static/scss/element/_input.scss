@@ -659,7 +659,10 @@ textarea::placeholder {
 		@include fw-6(20px);
 	}
 	.input-control {
-		padding-top: 42px;
+		padding-top: 12px;
+		&.code {
+			padding-top: 42px;
+		}
 	}
 	.validation-txt {
 		width: 100%;
@@ -670,11 +673,6 @@ textarea::placeholder {
 		.btn {
 			width: unset;
 			margin: 0 auto;
-		}
-	}
-	&:has(.badge-time) {
-		.input-control {
-			padding-top: 28px;
 		}
 	}
 	&.auth_number {

@@ -3812,6 +3812,9 @@ textarea::placeholder {
   font-weight: 600;
 }
 .auth-wrap .input-control {
+  padding-top: 12px;
+}
+.auth-wrap .input-control.code {
   padding-top: 42px;
 }
 .auth-wrap .validation-txt {
@@ -3824,9 +3827,6 @@ textarea::placeholder {
 .auth-wrap .btn-group .btn {
   width: unset;
   margin: 0 auto;
-}
-.auth-wrap:has(.badge-time) .input-control {
-  padding-top: 28px;
 }
 .auth-wrap.auth_number {
   padding-bottom: 4px;
