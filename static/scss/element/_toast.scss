@@ -25,7 +25,6 @@
 		opacity: .9;
 		border-radius: 36px;
 		padding: 12px 20px;
-		@include flexBox(between, center);
 		column-gap: 10px;
 		margin: 0 auto;
 		// min-height: 48px;

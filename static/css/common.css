@@ -3900,6 +3900,83 @@ select::-ms-expand {
   color: var(--dt-gray16);
 }
 
+.progress-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  width: 80%;
+  height: 20px;
+  overflow: hidden;
+  background-color: var(--dt-gray05);
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+}
+.progress.progress-xs {
+  height: 3px;
+  margin-top: 5px;
+}
+.progress.progress-sm {
+  height: 10px;
+  margin-top: 5px;
+}
+.progress.progress-lg {
+  height: 25px;
+}
+
+.progress-text {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--dt-black);
+  text-align: center;
+}
+
+.progressBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  width: 0;
+  height: 100%;
+  text-align: center;
+  background-color: var(--dt-primary);
+  transition: width 0.6s ease;
+}
+.progressBar .progress-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--dt-white);
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.progress.active .progressBar,
+.progressBar.active {
+  animation: progress-bar-stripes 1.5s linear infinite;
+}
+
+.progress-striped .progressBar,
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+
+.progress-bar-default {
+  background-color: var(--dt-gray18);
+}
+
 .popup-wrapper {
   display: none;
   position: fixed;
@@ -5094,9 +5171,6 @@ select::-ms-expand {
   opacity: 0.9;
   border-radius: 36px;
   padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   -moz-column-gap: 10px;
        column-gap: 10px;
   margin: 0 auto;
