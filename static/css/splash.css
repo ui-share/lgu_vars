@@ -51,7 +51,6 @@
   line-height: var(--dt-lh150);
   text-align: center;
   word-break: keep-all;
-  line-height: 1.4;
 }
 .section__cont.splash .splash-box .con__txt-box .txt {
   font-size: 14px;
