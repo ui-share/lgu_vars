@@ -41,9 +41,9 @@ body {
   height: 68px;
 }
 .cont__wrap.serviceEnd .tit-head {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 33px;
+  line-height: 1.5;
   color: var(--dt-gray16);
   text-align: center;
   word-break: keep-all;
@@ -51,7 +51,7 @@ body {
 .cont__wrap.serviceEnd .sub-txt {
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.4;
   color: var(--dt-gray11);
   text-align: center;
   word-break: keep-all;
