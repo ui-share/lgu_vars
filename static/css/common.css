@@ -4951,15 +4951,14 @@ select::-ms-expand {
 }
 .accordion-header.info-price > .txt-title {
   gap: 7px;
-  width: calc(100% - 138px);
-}
-.accordion-header.info-price > .txt-title > span:not(.badge) {
-  min-width: 80px;
 }
 .accordion-header.info-price > .txt-price {
+  display: flex;
   flex-wrap: wrap-reverse;
+  align-content: flex-end;
   gap: 7px;
   min-width: 96px;
+  text-align: right;
 }
 
 .info-price-detail {
@@ -5042,8 +5041,6 @@ select::-ms-expand {
 @media screen and (max-width: 359px) {
   .accordion-header.info-price > .txt-title {
     flex-wrap: wrap;
-    width: -moz-max-content;
-    width: max-content;
   }
 }
 .tabnav {
