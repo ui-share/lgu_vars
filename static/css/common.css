@@ -4951,6 +4951,7 @@ select::-ms-expand {
 }
 .accordion-header.info-price > .txt-title {
   gap: 7px;
+  flex: 1;
 }
 .accordion-header.info-price > .txt-price {
   display: flex;
@@ -4959,6 +4960,7 @@ select::-ms-expand {
   gap: 7px;
   min-width: 96px;
   text-align: right;
+  flex: 1;
 }
 
 .info-price-detail {
