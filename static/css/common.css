@@ -4952,6 +4952,7 @@ select::-ms-expand {
   padding-bottom: 16px;
 }
 .accordion-header.info-price > .txt-title {
+  align-content: flex-start;
   gap: 7px;
   flex: 1;
 }

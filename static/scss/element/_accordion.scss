@@ -106,6 +106,7 @@
     &.info-price  {
         > .txt-title {
             // flex-wrap: wrap;
+            align-content: flex-start;
             gap: 7px;
             flex: 1;
             //width:calc(100% - 138px);
