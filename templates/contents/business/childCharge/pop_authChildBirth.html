@@ -38,21 +38,32 @@
 				<button class="btn btn-util close" type="button" alt="닫기"></button>
 			</div>
 			<div class="popup-body">
-				<div class="auth-wrap auth_birth">
+				<dㅠㅠiv class="auth-wrap auth_birth">
 					<p class="txt">자녀 요금 확인을 위해</p>
 					<h3 class="tit"><span class="customer-name">010-1234-5678</span> 회선 자녀의<br/><span class="color-prim">생년월일</span>을 입력해 주세요</h3>
-					<div class="input-control code">
-						<div class="code-group">
-							<input type="tel" class="code-box" placeholder="Y" autofocus>
-							<input type="tel" class="code-box" placeholder="Y">
-							<input type="tel" class="code-box" placeholder="M">
-							<input type="tel" class="code-box" placeholder="M">
-							<input type="tel" class="code-box" placeholder="D">
-							<input tDpe="tel" class="code-box" placeholder="D">
+					<!--						
+							## 입력 상태 클래스
+							기본 : <div class="input-control ">
+							포커스 : <div class="input-control focused">
+							비활성 : <div class="input-control disabled">
+							읽기전용 : <div class="input-control read-only">
+							유효성 검사 성공 : <div class="input-control success">
+							유효성 검사 에러 : <div class="input-control error">
+						-->
+						<div class="input-control focused">				
+							<div class="input-group">
+								<div class="input-row">
+									<input type="tel" class="input-field" placeholder="YYMMDD" autocomplete='off' autofocus />
+									<div class="util-box">
+										<!-- 1글자 이상 입력 시 [X]버튼 노출 : hidden 삭제 
+											<button type="button" class="clear-btn"> -->
+										<button type="button" class="clear-btn hidden" aria-label="삭제"></button>
+									</div>
+								</div>
+							</div>
+							<div class="validation-txt">생년월일을 다시 확인해주세요</div>
 						</div>
-						<div class="validation-txt">생년월일을 다시 확인해주세요</div>
-					</div>
-				</div>
+				</dㅠㅠiv>
 			</div>
 		</div>
 	</div>
