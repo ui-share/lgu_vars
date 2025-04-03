@@ -4921,6 +4921,8 @@ select::-ms-expand {
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
+  min-width: 96px;
+  max-width: 96px;
 }
 .accordion-header.btn-toggle {
   justify-content: center;
@@ -4958,7 +4960,6 @@ select::-ms-expand {
   flex-wrap: wrap-reverse;
   align-content: flex-end;
   gap: 7px;
-  min-width: 96px;
   text-align: right;
   flex: 1;
 }
