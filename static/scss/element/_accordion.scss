@@ -71,9 +71,11 @@
         justify-content: flex-end;
         span:first-of-type {
             color:var(--dt-black);
-            @include fw-7(16px);line-height:150%;
-            min-width: 96px;
+            @include fw-7(16px);
+            line-height:150%;
+            //min-width: 96px;
             max-width: 96px;
+            white-space: pre;
         }
         // .img-box {margin-left:4px;}
     }
@@ -105,7 +107,7 @@
     }
     &.info-price  {
         > .txt-title {
-            // flex-wrap: wrap;
+            flex-wrap: wrap;
             align-content: flex-start;
             gap: 7px;
             flex: 1;
@@ -199,7 +201,7 @@
 }
 @media screen and (max-width:359px) {
     .accordion-header.info-price > .txt-title {
-        flex-wrap:wrap;
+        //flex-wrap:wrap;
         //width:max-content;
     }
 }

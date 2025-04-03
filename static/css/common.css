@@ -4921,8 +4921,8 @@ select::-ms-expand {
   font-size: 16px;
   font-weight: 700;
   line-height: 150%;
-  min-width: 96px;
   max-width: 96px;
+  white-space: pre;
 }
 .accordion-header.btn-toggle {
   justify-content: center;
@@ -4952,6 +4952,7 @@ select::-ms-expand {
   padding-bottom: 16px;
 }
 .accordion-header.info-price > .txt-title {
+  flex-wrap: wrap;
   align-content: flex-start;
   gap: 7px;
   flex: 1;
@@ -5042,11 +5043,6 @@ select::-ms-expand {
   background-color: var(--dt-gray08);
 }
 
-@media screen and (max-width: 359px) {
-  .accordion-header.info-price > .txt-title {
-    flex-wrap: wrap;
-  }
-}
 .tabnav {
   width: 100%;
   display: flex;
