@@ -987,7 +987,7 @@ button {
   color: var(--dt-gray12);
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 1.5;
 }
 .info-col-wrap .title-wrap .chips.neutral {
   background-color: transparent;
@@ -1003,6 +1003,7 @@ button {
   color: var(--dt-gray12);
   font-size: 14px;
   font-weight: 500;
+  line-height: 1.5;
 }
 .info-col-wrap .txt-title.ico {
   display: flex;
@@ -1036,7 +1037,7 @@ button {
   color: var(--dt-black);
   font-size: 14px;
   font-weight: 500;
-  line-height: 21px;
+  line-height: 1.5;
   text-align: right;
   word-break: break-all;
 }

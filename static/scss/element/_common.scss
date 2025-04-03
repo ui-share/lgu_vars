@@ -802,7 +802,7 @@ button {
 		.txt-title {
 			color:var(--dt-gray12);
 			@include fw-5();
-			line-height:24px;
+			line-height: 1.5;
 		}
 		.chips.neutral {background-color:transparent;}
 		.current {color:var(--dt-black);}
@@ -814,13 +814,15 @@ button {
 	.txt-title {
 		color: var(--dt-gray12);
 		@include fw-5(14px);
+		line-height: 1.5;
 		&.ico {
 			@include flexRow;
 			align-items:center;
 			column-gap:6px;
 			align-self: flex-start;
 			.img-box {
-				width:28px;height:28px;
+				width:28px;
+				height:28px;
 				img {width:100%}
 			}
 			&:has(.btn-tooltip) {
@@ -838,7 +840,7 @@ button {
 		margin-left:auto;
 		color:var(--dt-black);
 		@include fw-5(14px);
-		line-height:21px;
+		line-height: 1.5;
 		text-align:right;
 		word-break: break-all;
 		.flag:first-child {margin-right:8px;}
