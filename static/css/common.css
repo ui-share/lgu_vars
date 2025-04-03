@@ -346,6 +346,14 @@ button {
   text-align: left !important;
 }
 
+.t-right {
+  text-align: right !important;
+}
+
+.t-center {
+  text-align: center !important;
+}
+
 .color-prim {
   color: var(--dt-primary) !important;
 }
