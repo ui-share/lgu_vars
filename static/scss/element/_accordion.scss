@@ -71,11 +71,7 @@
         justify-content: flex-end;
         span:first-of-type {
             color:var(--dt-black);
-            @include fw-7(16px);
-            line-height:150%;
-            //min-width: 96px;
-            max-width: 96px;
-            white-space: pre;
+            @include fw-7(16px);line-height:150%;
         }
         // .img-box {margin-left:4px;}
     }
@@ -107,24 +103,19 @@
     }
     &.info-price  {
         > .txt-title {
-            flex-wrap: wrap;
-            align-content: flex-start;
+            // flex-wrap: wrap;
             gap: 7px;
-            flex: 1;
-            //width:calc(100% - 138px);
+            width:calc(100% - 138px);
             >span:not(.badge) {
                 // max-width: calc(100% - 33px);
                 // width:max-content;
-                //min-width:80px;
+                min-width:80px;
             }
         }
         > .txt-price { // 금액만 가로고정 9,999,999원까지 대응
-            display: flex;
             flex-wrap: wrap-reverse;
-            align-content: flex-end;
             gap: 7px;
-            text-align: right;
-            flex: 1;
+            min-width:96px;
         }
     }
 }
@@ -200,8 +191,5 @@
 	}
 }
 @media screen and (max-width:359px) {
-    .accordion-header.info-price > .txt-title {
-        //flex-wrap:wrap;
-        //width:max-content;
-    }
+    .accordion-header.info-price > .txt-title {flex-wrap:wrap;width:max-content;}
 }
