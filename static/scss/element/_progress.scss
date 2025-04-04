@@ -1,0 +1,94 @@
+@import '../base/mixin';
+
+
+$brand-default: var(--dt-gray18);
+$brand-primary: var(--dt-primary);
+$bg-light-gray: var(--dt-gray05);
+.progress-wrap {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+}
+.progress {
+	width: 80%;
+	height: 20px;
+    overflow: hidden;
+    background-color: $bg-light-gray;
+	border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+	box-shadow: none;
+	&.progress-xs {
+		height: 3px;
+		margin-top: 5px;
+	}
+	&.progress-sm {
+		height: 10px;
+		margin-top: 5px;
+	}
+	&.progress-lg {
+		height: 25px;
+	}
+}
+.progress-text {
+	@include fw-5(12px);
+	line-height: 1.2;
+	color: var(--dt-black);
+	text-align: center;
+}
+.progressBar {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	float: left;
+    width: 0;
+    height: 100%;
+    text-align: center;
+    background-color: $brand-primary;
+    transition: width .6s ease;
+	.progress-text {
+		@include fw-4(12px);
+		color: var(--dt-white);
+	}
+}
+@mixin gradient-striped($color: rgba(255,255,255,.2), $angle: 45deg) {
+	background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+	background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+@-webkit-keyframes progress-bar-stripes {
+	from  { background-position: 40px 0; }
+	to    { background-position: 0 0; }
+}
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+	from  { background-position: 40px 0; }
+	to    { background-position: 0 0; }
+}
+
+@mixin animation($animation) {
+	-webkit-animation: $animation;
+	-o-animation: $animation;
+	animation: $animation;
+}
+.progress.active .progressBar,
+.progressBar.active {
+	@include animation(progress-bar-stripes 1.5s linear infinite);
+}
+.progress-striped .progressBar,
+.progress-bar-striped {
+	@include gradient-striped;
+    background-size: 40px 40px;
+}
+@mixin progress-bar-variant($color) {
+	background-color: $color;
+}
+.progress-bar-default {
+	@include progress-bar-variant($brand-default);
+}
+
+

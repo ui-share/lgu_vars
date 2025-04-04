@@ -42,15 +42,15 @@ body {
             height: 68px;
         }
         .tit-head {
-            @include fw-6(22px);
-            line-height: 33px;
+            @include fw-6(20px);
+            line-height: 1.5;
             color: var(--dt-gray16);
             text-align: center;
             word-break: keep-all;
         }
         .sub-txt {
             @include fw-5(16px);
-            line-height: 24px;
+            line-height: 1.4;
             color: var(--dt-gray11);
             text-align: center;
             word-break: keep-all;

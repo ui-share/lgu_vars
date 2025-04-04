@@ -426,10 +426,8 @@
 					.msg {
 						width: 100%;
 						font-size: 11px;
+						line-height: 1.4;
 						color: var(--dt-gray11);
-						overflow: hidden;
-						white-space: nowrap;
-						text-overflow: ellipsis;
 					}
 				}
 			}
