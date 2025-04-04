@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>실시간출금 계좌정보 입력 | LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/service.css">
+    <link rel="stylesheet" type="text/css" href="../../../../static/css/instant.css">
+    
+    <!-- Scripts -->
+</head>
+<body>
+    <div class="page-wrapper">
+		<!-- header -->
+        <header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+        <!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+            <div class="section__cont">
+                <div class="cont__wrap cont__wrap-service">
+                    <div class="cont__txt-box">
+						<h4 class="txt">
+							납부할 계좌 정보를 확인해 주세요
+						</h4>
+                        <ul class="bullet-list info">
+                            <li class="bullet-item">
+                                본인 계좌에서만 납부 가능합니다
+                            </li>
+                        </ul>
+					</div>
+
+                    <div class="input-col-wrap">
+                        <div class="input-control">
+                            <div class="input-group">
+                                <label class="input-label">계좌번호</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="계좌번호 입력">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+
+                        <!-- 드롭다운 버튼 Case 계좌번호입력완료 or 은행선택팝업에서 선택
+                         : input-row 내 btn-field-dropdown 가 존재할 경우 util-box는 포함하지 않는다 -->
+                         <div class="input-control">
+                            <div class="input-group">
+                                <label class="input-label">은행/증권사</label>
+                                <div class="input-row">
+                                    <button type="button" class="btn-field-dropdown">
+                                    <!-- 은행선택완료시 : <button type="button" class="btn-field-dropdown"></button> -->
+                                        <!-- <span class="value">
+                                            <span class="ico">
+                                                <img src="../../../../static/images/icon/ic-bank/ic-20-shinhan.svg" alt="">
+                                            </span>
+                                            <span class="txt">신한은행</span>
+                                        </span> -->
+                                        <span class="txt">은행/증권사 선택</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-control">
+                            <div class="input-group">
+                                <label class="input-label">납부 금액</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="납부 금액"><!-- 숫자만 입력 가능 / 입력 시 NNN,NNN '원 납부' 텍스트도 value에 포함되어야 함 -->
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <!-- <div class="validation-txt">validation 메시지 노출</div> -->
+                        </div>
+
+                        <div class="segment__wrap">
+                            <p class="seg-label">고객 유형</p>
+                            <div class="segnav">
+                                <input type="radio" class="seg-trigger seg1" id="personal" name="custType">        
+                                <label for="personal" class="segment">개인</label>
+                                
+                                <input type="radio" class="seg-trigger seg2" id="businessperson" name="custType">
+                                <label for="businessperson" class="segment">개인사업자</label>
+                                <div class="marker-box">
+                                    <div class="marker"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="segment__wrap">
+                            <p class="seg-label">예금주 구분</p>
+                            <div class="segnav">
+                                <input type="radio" class="seg-trigger seg1" id="native" name="nationalIdentity">        
+                                <label for="native" class="segment">내국인</label>
+                                
+                                <input type="radio" class="seg-trigger seg2" id="foreigner" name="nationalIdentity">
+                                <label for="foreigner" class="segment">외국인</label>
+                                <div class="marker-box">
+                                    <div class="marker"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="segment__wrap">
+                            <p class="seg-label">예금주명</p>
+                            <span class="accnt-username">김*플</span>
+                        </div>
+                        <div class="input-control">
+                            <div class="input-group">
+                                <label class="input-label">생년월일</label>
+                                <div class="input-row">
+                                    <input type="tel" class="input-field" placeholder="생년월일 8자리">
+                                    <div class="util-box">
+                                        <!-- <button type="button" class="clear-btn"> : 1글자 이상 입력 시, 전체 삭제 [X]버튼 노출 : hidden 삭제 -->
+                                        <button type="button" class="clear-btn hidden"></button>
+                                        <!-- <span class="input-unit hidden"> : unit 사용 안 할 때 hidden 클래스 추가 -->
+                                        <span class="input-unit hidden">
+                                            <span class="unit-point">1</span>단위가늘어납니다
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    <div class="util-box"> : clear button 과 unit이 들어감 
+                                -->
+                            </div>
+                            <div class="validation-txt">validation 메시지 노출</div>
+                        </div>
+                        <div class="segment__wrap">
+                            <p class="seg-label">성별</p>
+                            <div class="segnav">
+                                <input type="radio" class="seg-trigger seg1" id="male" name="gender">        
+                                <label for="male" class="segment">남</label>
+                                
+                                <input type="radio" class="seg-trigger seg2" id="female" name="gender">
+                                <label for="female" class="segment">여</label>
+                                <div class="marker-box">
+                                    <div class="marker"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont__wrap cont__wrap-btBtn">
+                    <div class="accordion-container"><!-- 체크박스 영역의 경우 btn-toggle 클릭 시 accordion-container open 클래스 추가 -->
+                        <div class="chckbox-area accordion-header">
+                            <div class="chck-group">
+                                <input type="checkbox" id="chck01" class="chck-input">
+                                <label for="chck01" class="chck-label">
+                                    <span class="chck-box"></span>
+                                    전자서명을 위한 고객정보 활용동의
+                                </label>
+                            </div>
+                            <span class="bubble-box topleft">
+                                <!-- <span class="bubble-box"> -->
+                                    <span class="txt-wrap">
+                                        고객정보 활용동의를 체크해 주세요
+                                    </span>
+                                    <div class="bubble-box-arrow"></div>
+                                </span>
+                            <button type="button" class="btn-toggle">
+                                <span class="img-box ico-toggle">
+                                    <img src="../../../../static/images/icon/ic-chips-arrow-gray.svg">
+                                </span>
+                            </button>
+                        </div>
+                        <div class="accordion-content">
+                            <ul class="bullet-list">
+                                <li class="bullet-item">
+                                    은행계좌 자동이체를 선택할 경우, 매달 등록한 계좌에서 LG유플러스 서비스 이용요금이 자동으로 출금됩니다.
+                                </li>
+                                <li class="bullet-item">
+                                    은행계좌 자동출금에 동의 후 납부방법이 가능합니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-group flex-column is-confirm">
+                        <button class="btn line" type="button">
+                            <span class="txt">실명확인 계좌 인증</span>
+                        </button>
+                        <button class="btn btn-prim is-disabled" type="button">
+                            <span class="txt">다음</span>
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- 토스트 팝업// -->
+            <div class="toast-wrap">
+				<div class="toast">
+					<div class="toast-txt">
+						계좌번호를 입력해 주세요
+						<!-- 토스트 팝업 문구 입`니다. 토스트 팝업 문구 입니다. 토스트 팝업 문구 입니다. -->
+					</div>
+					<!-- 
+						####### 퍼블공지 #######
+						버튼 사용하지 않을 경우 hidden 클래스 추가 
+						<button class="btn btn-util close hidden">
+					-->
+					<button class="btn btn-util close" type="button" alt="닫기"></button>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
