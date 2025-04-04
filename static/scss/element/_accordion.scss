@@ -2,177 +2,181 @@
 
 // 아코디언 인터랙션 실행 관련 코드
 .accordion-container {
-    /* 마지막요소일 경우 */
-    &:last-of-type {
-        .info-price{
-            &::after {display:none}
-        }
-        .info-price-detail  {
-            padding-bottom:0;
-            &::after {display:none}
-        }
-        &.open {
-            .info-price {&::after {display:block}}
-        }
-    }
+	/* 마지막요소일 경우 */
+	&:last-of-type {
+		.info-price{
+			&::after {display:none}
+		}
+		.info-price-detail  {
+			padding-bottom:0;
+			&::after {display:none}
+		}
+		&.open {
+			.info-price {&::after {display:block}}
+		}
+	}
 
-    /* default */
-    > button.accordion-header {cursor: pointer;}
+	/* default */
+	> button.accordion-header {cursor: pointer;}
 
-    .accordion-header {
-        .ico-toggle{
-            transition: transform 0.3s ease;
-        }
-    }
-    .accordion-content {
-        display: none;
-    }
-    &.open {
-        .accordion-header {
-            padding-bottom:16px;
-            .ico-toggle{
-                transform:rotate(180deg);
-            }
-        }
-        > .accordion-content {
-            display: block;
-            &:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
-                border-top:1px solid var(--dt-gray06);
-                padding-top:20px;
-            }
-        }
-    }
+	.accordion-header {
+		.ico-toggle{
+			transition: transform 0.3s ease;
+		}
+	}
+	.accordion-content {
+		display: none;
+	}
+	&.open {
+		.accordion-header {
+			padding-bottom:16px;
+			.ico-toggle{
+				transform:rotate(180deg);
+			}
+		}
+		> .accordion-content {
+			display: block;
+			&:has(+ .btn-toggle) { /* 자세히보기-간단히보기 */
+				border-top:1px solid var(--dt-gray06);
+				padding-top:20px;
+			}
+		}
+	}
 }
 
 .accordion-header {
-    @include flexRow;
-    justify-content: space-between;
-    width: 100%;
-    padding:16px 20px;
-    gap: 8px;
-    .row {
-        @include flexRow;
-        align-items:center;
-        &.txt-title {
-            > span {@include fw-7(16px);line-height:150%;}
-        }
-    }
-    .txt-title {
-        // flex: 1;
-        column-gap: 4px;
-        color:var(--dt-gray16);
-        text-align: left;
-        line-height: 23px;
-        .badge-round {
-            align-self:baseline;
-        }
-    }
-    .txt-price {
-        justify-content: flex-end;
-        span:first-of-type {
-            color:var(--dt-black);
-            @include fw-7(16px);line-height:150%;
-        }
-        // .img-box {margin-left:4px;}
-    }
-    &.btn-toggle { // 자세히보기 버튼
-        justify-content: center;
-        align-items: center;
-        padding:14px;
-        gap:0;
-        background-color:var(--dt-gray06);
-        border-radius:4px;
-    }
-    &.chckbox-area { // 체크박스 영역의 경우
-        position:relative;
-        align-items:center;
-        padding:20px 0 10px;
-        .chck-group {
-            width:calc(100% - 30px);
-        }
-        .btn-toggle .img-box {
-            width:24px;height:24px;
-        }
-        & + .accordion-content {
-            max-height:112px;
-            overflow-y:auto;
-            .bullet-list {
-                padding-bottom:16px;
-            }
-        }
-    }
-    &.info-price  {
-        > .txt-title {
-            // flex-wrap: wrap;
-            gap: 7px;
-            width:calc(100% - 138px);
-            >span:not(.badge) {
-                // max-width: calc(100% - 33px);
-                // width:max-content;
-                min-width:80px;
-            }
-        }
-        > .txt-price { // 금액만 가로고정 9,999,999원까지 대응
-            flex-wrap: wrap-reverse;
-            gap: 7px;
-            min-width:96px;
-        }
-    }
+	@include flexRow;
+	justify-content: space-between;
+	width: 100%;
+	padding:16px 20px;
+	gap: 8px;
+	.row {
+		@include flexRow;
+		align-items:center;
+		&.txt-title {
+			> span {@include fw-7(16px);line-height:150%;}
+		}
+	}
+	.txt-title {
+		// flex: 1;
+		column-gap: 4px;
+		color:var(--dt-gray16);
+		text-align: left;
+		line-height: 23px;
+		.badge-round {
+			align-self:baseline;
+		}
+	}
+	.txt-price {
+		justify-content: flex-end;
+		span:first-of-type {
+			color:var(--dt-black);
+			@include fw-7(16px);
+			line-height:150%;
+		}
+		// .img-box {margin-left:4px;}
+	}
+	&.btn-toggle { // 자세히보기 버튼
+		justify-content: center;
+		align-items: center;
+		padding:14px;
+		gap:0;
+		background-color:var(--dt-gray06);
+		border-radius:4px;
+	}
+	&.chckbox-area { // 체크박스 영역의 경우
+		position:relative;
+		align-items:center;
+		padding:20px 0 10px;
+		.chck-group {
+			width:calc(100% - 30px);
+		}
+		.btn-toggle .img-box {
+			width:24px;height:24px;
+		}
+		& + .accordion-content {
+			max-height:112px;
+			overflow-y:auto;
+			.bullet-list {
+				padding-bottom:16px;
+			}
+		}
+	}
+	&.info-price  {
+		> .row {
+			align-content: flex-end;
+		}
+		> .txt-title {
+			// flex-wrap: wrap;
+			gap: 7px;
+			width:calc(100% - 138px);
+			>span:not(.badge) {
+				// max-width: calc(100% - 33px);
+				// width:max-content;
+				//min-width:80px;
+			}
+		}
+		> .txt-price { // 금액만 가로고정 9,999,999원까지 대응
+			flex-wrap: wrap-reverse;
+			gap: 7px;
+			min-width:96px;
+		}
+	}
 }
 
 .info-price-detail {
-    padding:0 20px;
-    @include flexColum;
-    row-gap:8px;
-    .info-wrap {
-        &:first-of-type {padding-top:16px;}
-        &:last-of-type {padding-bottom:16px;}
-        padding-right:10px;
-        .row {
-            display:flex;
-            justify-content:space-between;
-            column-gap:8px;
-            > span {line-height:150%;}
-        }
-    }
-    .txt-title {
-        padding-left:10px;
-        &.ico {
-            padding-left:22px;
-            background-image:url(../images/icon/ic-list-brace.svg);
-            background-position:10px 3px;
-            background-size:8px;
-            background-repeat:no-repeat;
-        }
-    }
-    .txt-title, .txt-price {
-        @include fw-5(14px); 
-        color:var(--dt-gray14);
-    }
-    .txt-price {
-        min-width:82px;text-align:right;
-        padding-right: 2px;
-        word-break: break-all;
-    }
-    .list-detail {
-        padding-top:4px;
-        padding-left:14px;
-        row-gap:4px;
-        .txt-title, .txt-price {
-            @include fw-5(12px);
-            color:var(--dt-gray11);
-        }
-    }
+	padding:0 20px;
+	@include flexColum;
+	row-gap:8px;
+	.info-wrap {
+		&:first-of-type {padding-top:16px;}
+		&:last-of-type {padding-bottom:16px;}
+		padding-right:10px;
+		.row {
+			display:flex;
+			justify-content:space-between;
+			column-gap:8px;
+			> span {line-height:150%;}
+		}
+	}
+	.txt-title {
+		padding-left:10px;
+		&.ico {
+			padding-left:22px;
+			background-image:url(../images/icon/ic-list-brace.svg);
+			background-position:10px 3px;
+			background-size:8px;
+			background-repeat:no-repeat;
+		}
+	}
+	.txt-title, .txt-price {
+		@include fw-5(14px); 
+		color:var(--dt-gray14);
+	}
+	.txt-price {
+		min-width:82px;text-align:right;
+		padding-right: 2px;
+		word-break: break-all;
+	}
+	.list-detail {
+		padding-top:4px;
+		padding-left:14px;
+		row-gap:4px;
+		.txt-title, .txt-price {
+			@include fw-5(12px);
+			color:var(--dt-gray11);
+		}
+	}
 }
 .list-payment {
 	&:has(> .info-price-wrap .total-last) {
-        row-gap:0;
-        .list-info-price {
-            &:last-child {
-                padding-bottom:0px;
-            }
-        }
-    }
+		row-gap:0;
+		.list-info-price {
+			&:last-child {
+				padding-bottom:0px;
+			}
+		}
+	}
 	.info-price{
 		&.total-last {
 			position:relative;
@@ -191,5 +195,5 @@
 	}
 }
 @media screen and (max-width:359px) {
-    .accordion-header.info-price > .txt-title {flex-wrap:wrap;width:max-content;}
+	.accordion-header.info-price > .txt-title {flex-wrap:wrap;width:max-content;}
 }

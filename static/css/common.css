@@ -4949,12 +4949,12 @@ select::-ms-expand {
 .accordion-header.chckbox-area + .accordion-content .bullet-list {
   padding-bottom: 16px;
 }
+.accordion-header.info-price > .row {
+  align-content: flex-end;
+}
 .accordion-header.info-price > .txt-title {
   gap: 7px;
   width: calc(100% - 138px);
-}
-.accordion-header.info-price > .txt-title > span:not(.badge) {
-  min-width: 80px;
 }
 .accordion-header.info-price > .txt-price {
   flex-wrap: wrap-reverse;
