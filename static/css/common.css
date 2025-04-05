@@ -978,7 +978,7 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2px;
+  gap: 4px;
 }
 .info-col-wrap .row.title-wrap {
   align-items: center;
@@ -1014,8 +1014,9 @@ button {
   align-self: flex-start;
 }
 .info-col-wrap .txt-title.ico .img-box {
-  width: 28px;
-  height: 28px;
+  flex: 0;
+  min-width: 28px;
+  min-height: 28px;
 }
 .info-col-wrap .txt-title.ico .img-box img {
   width: 100%;
@@ -1156,6 +1157,8 @@ button {
   width: 100%;
 }
 .info-price.total-last .txt-title:has(.badge.badge-round) .badge-round {
+  min-width: 24px;
+  min-height: 24px;
   margin-right: 7px;
 }
 .info-price.total-last .txt-title:has(.badge.badge-round) + .txt-price {
@@ -1167,6 +1170,7 @@ button {
   font-weight: 700;
   line-height: normal;
   text-align: right;
+  margin-left: auto;
 }
 .info-price.total-last .txt-sub {
   margin-left: auto;
@@ -1190,8 +1194,7 @@ button {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  -moz-column-gap: 3px;
-       column-gap: 3px;
+  gap: 4px;
 }
 .list-wrap .list-box:first-child {
   padding-top: 0;
@@ -4846,10 +4849,6 @@ select::-ms-expand {
   cursor: not-allowed; /* 비활성화된 상태에서 커서 변경 */
 }
 
-.accordion-container {
-  /* 마지막요소일 경우 */
-  /* default */
-}
 .accordion-container:last-of-type .info-price::after {
   display: none;
 }
@@ -4862,6 +4861,7 @@ select::-ms-expand {
 .accordion-container:last-of-type.open .info-price::after {
   display: block;
 }
+
 .accordion-container > button.accordion-header {
   cursor: pointer;
 }
@@ -4901,14 +4901,14 @@ select::-ms-expand {
 .accordion-header .row.txt-title > span {
   font-size: 16px;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 1.5;
 }
 .accordion-header .txt-title {
   -moz-column-gap: 4px;
        column-gap: 4px;
   color: var(--dt-gray16);
   text-align: left;
-  line-height: 23px;
+  line-height: 1.5;
 }
 .accordion-header .txt-title .badge-round {
   align-self: baseline;
@@ -4920,7 +4920,7 @@ select::-ms-expand {
   color: var(--dt-black);
   font-size: 16px;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 1.5;
 }
 .accordion-header.btn-toggle {
   justify-content: center;
@@ -4939,6 +4939,7 @@ select::-ms-expand {
   width: calc(100% - 30px);
 }
 .accordion-header.chckbox-area .btn-toggle .img-box {
+  flex: 0;
   width: 24px;
   height: 24px;
 }
@@ -4950,17 +4951,40 @@ select::-ms-expand {
   padding-bottom: 16px;
 }
 .accordion-header.info-price > .txt-title {
-  align-content: flex-start;
-  gap: 7px;
-  width: calc(100% - 138px);
+  gap: 8px;
+  max-width: calc(100% - 134px);
+  flex: 1 auto;
+}
+.accordion-header.info-price > .txt-title > .badge.badge-round {
+  flex: 0;
+  min-width: 24px;
+  min-height: 24px;
 }
 .accordion-header.info-price > .txt-price {
   flex-wrap: wrap-reverse;
   align-content: flex-end;
-  gap: 7px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  row-gap: 8px;
+  max-width: 126px;
+  flex: 1 auto;
+  text-align: right;
+}
+.accordion-header.info-price > .txt-price > span:first-of-type {
   min-width: 96px;
 }
 
+@media screen and (max-width: 359px) {
+  .accordion-header.info-price > .txt-title {
+    flex-wrap: wrap;
+    align-content: flex-start;
+    max-width: calc(100% - 96px);
+  }
+  .accordion-header.info-price > .txt-price {
+    flex-wrap: wrap-reverse;
+    align-content: flex-end;
+  }
+}
 .info-price-detail {
   padding: 0 20px;
   display: flex;
@@ -4983,7 +5007,7 @@ select::-ms-expand {
        column-gap: 8px;
 }
 .info-price-detail .info-wrap .row > span {
-  line-height: 150%;
+  line-height: 1.5;
 }
 .info-price-detail .txt-title {
   padding-left: 10px;
@@ -4999,12 +5023,11 @@ select::-ms-expand {
   font-size: 14px;
   font-weight: 500;
   color: var(--dt-gray14);
+  line-height: 1.5;
 }
 .info-price-detail .txt-price {
   min-width: 82px;
   text-align: right;
-  padding-right: 2px;
-  word-break: break-all;
 }
 .info-price-detail .list-detail {
   padding-top: 4px;
@@ -5015,6 +5038,7 @@ select::-ms-expand {
   font-size: 12px;
   font-weight: 500;
   color: var(--dt-gray11);
+  line-height: 1.5;
 }
 
 .list-payment:has(> .info-price-wrap .total-last) {
@@ -5038,13 +5062,6 @@ select::-ms-expand {
   background-color: var(--dt-gray08);
 }
 
-@media screen and (max-width: 359px) {
-  .accordion-header.info-price > .txt-title {
-    flex-wrap: wrap;
-    width: -moz-max-content;
-    width: max-content;
-  }
-}
 .tabnav {
   width: 100%;
   display: flex;

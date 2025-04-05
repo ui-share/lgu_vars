@@ -2,9 +2,8 @@
 
 // 아코디언 인터랙션 실행 관련 코드
 .accordion-container {
-	/* 마지막요소일 경우 */
-	&:last-of-type {
-		.info-price{
+	&:last-of-type {//마지막요소일 경우
+		.info-price {
 			&::after {display:none}
 		}
 		.info-price-detail  {
@@ -15,9 +14,11 @@
 			.info-price {&::after {display:block}}
 		}
 	}
-
-	/* default */
-	> button.accordion-header {cursor: pointer;}
+}
+.accordion-container {// default
+	> button.accordion-header {
+		cursor: pointer;
+	}
 
 	.accordion-header {
 		.ico-toggle{
@@ -43,18 +44,21 @@
 		}
 	}
 }
-
+// 아코디언 헤더
 .accordion-header {
 	@include flexRow;
 	justify-content: space-between;
 	width: 100%;
-	padding:16px 20px;
+	padding: 16px 20px;
 	gap: 8px;
 	.row {
 		@include flexRow;
 		align-items:center;
 		&.txt-title {
-			> span {@include fw-7(16px);line-height:150%;}
+			> span {
+				@include fw-7(16px);
+				line-height: 1.5;
+			}
 		}
 	}
 	.txt-title {
@@ -62,7 +66,7 @@
 		column-gap: 4px;
 		color:var(--dt-gray16);
 		text-align: left;
-		line-height: 23px;
+		line-height: 1.5;
 		.badge-round {
 			align-self:baseline;
 		}
@@ -72,7 +76,7 @@
 		span:first-of-type {
 			color:var(--dt-black);
 			@include fw-7(16px);
-			line-height:150%;
+			line-height: 1.5;
 		}
 		// .img-box {margin-left:4px;}
 	}
@@ -85,18 +89,20 @@
 		border-radius:4px;
 	}
 	&.chckbox-area { // 체크박스 영역의 경우
-		position:relative;
-		align-items:center;
-		padding:20px 0 10px;
+		position: relative;
+		align-items: center;
+		padding: 20px 0 10px;
 		.chck-group {
-			width:calc(100% - 30px);
+			width: calc(100% - 30px);
 		}
 		.btn-toggle .img-box {
-			width:24px;height:24px;
+			flex: 0;
+			width: 24px;
+			height: 24px;
 		}
 		& + .accordion-content {
-			max-height:112px;
-			overflow-y:auto;
+			max-height: 112px;
+			overflow-y: auto;
 			.bullet-list {
 				padding-bottom:16px;
 			}
@@ -104,95 +110,114 @@
 	}
 	&.info-price  {
 		> .txt-title {
-			// flex-wrap: wrap;
-			align-content: flex-start;
-			gap: 7px;
-			width:calc(100% - 138px);
+			gap: 8px;
+			max-width: calc(100% - 134px);
+			flex: 1 auto;
 			> span:not(.badge) {
-				// max-width: calc(100% - 33px);
-				// width:max-content;
-				//min-width:80px;
+				//word-break: break-all;
+			}
+			> .badge.badge-round {
+				flex: 0;
+				min-width: 24px;
+				min-height: 24px;
 			}
 		}
 		> .txt-price { // 금액만 가로고정 9,999,999원까지 대응
 			flex-wrap: wrap-reverse;
-			align-content: flex-end;
-			gap: 7px;
-			min-width:96px;
-		}
-	}
-}
-
-.info-price-detail {
-	padding:0 20px;
-	@include flexColum;
-	row-gap:8px;
-	.info-wrap {
-		&:first-of-type {padding-top:16px;}
-		&:last-of-type {padding-bottom:16px;}
-		padding-right:10px;
-		.row {
-			display:flex;
-			justify-content:space-between;
-			column-gap:8px;
-			> span {line-height:150%;}
-		}
-	}
-	.txt-title {
-		padding-left:10px;
-		&.ico {
-			padding-left:22px;
-			background-image:url(../images/icon/ic-list-brace.svg);
-			background-position:10px 3px;
-			background-size:8px;
-			background-repeat:no-repeat;
-		}
-	}
-	.txt-title, .txt-price {
-		@include fw-5(14px); 
-		color:var(--dt-gray14);
-	}
-	.txt-price {
-		min-width:82px;text-align:right;
-		padding-right: 2px;
-		word-break: break-all;
-	}
-	.list-detail {
-		padding-top:4px;
-		padding-left:14px;
-		row-gap:4px;
-		.txt-title, .txt-price {
-			@include fw-5(12px);
-			color:var(--dt-gray11);
-		}
-	}
-}
-.list-payment {
-	&:has(> .info-price-wrap .total-last) {
-		row-gap:0;
-		.list-info-price {
-			&:last-child {
-				padding-bottom:0px;
-			}
-		}
-	}
-	.info-price{
-		&.total-last {
-			position:relative;
-			&::after {
-				content:'';
-				display:block;
-				position:absolute;
-				top:0;
-				left:50%;
-				transform:translateX(-50%);
-				width:calc(100% - 40px);
-				height:1px;
-				background-color:var(--dt-gray08);
+    		align-content: flex-end;
+			column-gap: 6px;
+			row-gap:  8px;
+			max-width: 126px;
+			flex: 1 auto;
+			text-align: right;
+			> span:first-of-type {
+				min-width: 96px;
 			}
 		}
 	}
 }
 @media screen and (max-width:359px) {
-	.accordion-header.info-price > .txt-title {flex-wrap:wrap;width:max-content;}
+	.accordion-header.info-price > .txt-title {
+		flex-wrap:wrap;
+		align-content: flex-start;
+		max-width: calc(100% - 96px);
+	}
+	.accordion-header.info-price > .txt-price {
+		flex-wrap:wrap-reverse;
+		align-content: flex-end;
+		//max-width: 96px;
+	}
+}
+.info-price-detail {
+	padding: 0 20px;
+	@include flexColum;
+	row-gap: 8px;
+	.info-wrap {
+		&:first-of-type {padding-top:16px;}
+		&:last-of-type {padding-bottom:16px;}
+		padding-right: 10px;
+		.row {
+			display: flex;
+			justify-content: space-between;
+			column-gap: 8px;
+			> span {
+				line-height: 1.5;
+			}
+		}
+	}
+	.txt-title {
+		padding-left: 10px;
+		&.ico {
+			padding-left: 22px;
+			background-image: url(../images/icon/ic-list-brace.svg);
+			background-position: 10px 3px;
+			background-size: 8px;
+			background-repeat: no-repeat;
+		} 
+	}
+	.txt-title, .txt-price {
+		@include fw-5(14px); 
+		color: var(--dt-gray14);
+		line-height: 1.5;
+	}
+	.txt-price {
+		min-width: 82px;
+		text-align: right;
+	}
+	.list-detail {
+		padding-top: 4px;
+		padding-left: 14px;
+		row-gap: 4px;
+		.txt-title, .txt-price {
+			@include fw-5(12px);
+			color: var(--dt-gray11);
+			line-height: 1.5;
+		}
+	}
+}
+.list-payment {
+	&:has(> .info-price-wrap .total-last) {
+		row-gap: 0;
+		.list-info-price {
+			&:last-child {
+				padding-bottom: 0px;
+			}
+		}
+	}
+	.info-price {
+		&.total-last {
+			position:relative;
+			&::after {
+				content:'';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: calc(100% - 40px);
+				height: 1px;
+				background-color: var(--dt-gray08);
+			}
+		}
+	}
 }

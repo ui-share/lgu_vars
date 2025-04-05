@@ -795,7 +795,7 @@ button {
 		justify-content: space-between;
 		align-items:center;
 		flex-wrap:wrap;
-		gap: 2px;
+		gap: 4px;
 		&.title-wrap {align-items: center;}
 	}
 	.title-wrap {
@@ -821,8 +821,9 @@ button {
 			column-gap:6px;
 			align-self: flex-start;
 			.img-box {
-				width:28px;
-				height:28px;
+				flex: 0;
+				min-width:28px;
+				min-height:28px;
 				img {width:100%}
 			}
 			&:has(.btn-tooltip) {
@@ -946,7 +947,11 @@ button {
 		.txt-title {
 			&:has(.badge.badge-round){
 				width:100%;
-				.badge-round {margin-right:7px;}
+				.badge-round {
+					min-width: 24px;
+					min-height: 24px;
+					margin-right:7px;
+				}
 				& + .txt-price {width:100%;}
 			}
 			@include fw-7(16px);line-height:150%;
@@ -956,6 +961,7 @@ button {
 			@include fw-7(20px);
 			line-height:normal;
 			text-align: right;
+			margin-left: auto;
 		}
 		.txt-sub {
 			margin-left:auto;
@@ -984,7 +990,7 @@ button {
 		}
 		@include flexBox(between, center);
 		flex-wrap: wrap;
-		column-gap: 3px;
+		gap: 4px;
 		.head {
 			@include fw-5(14px);
 			line-height:150%;
