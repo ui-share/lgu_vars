@@ -4949,15 +4949,14 @@ select::-ms-expand {
 .accordion-header.chckbox-area + .accordion-content .bullet-list {
   padding-bottom: 16px;
 }
-.accordion-header.info-price > .row {
-  align-content: flex-end;
-}
 .accordion-header.info-price > .txt-title {
+  align-content: flex-start;
   gap: 7px;
   width: calc(100% - 138px);
 }
 .accordion-header.info-price > .txt-price {
   flex-wrap: wrap-reverse;
+  align-content: flex-end;
   gap: 7px;
   min-width: 96px;
 }

@@ -103,14 +103,12 @@
 		}
 	}
 	&.info-price  {
-		> .row {
-			align-content: flex-end;
-		}
 		> .txt-title {
 			// flex-wrap: wrap;
+			align-content: flex-start;
 			gap: 7px;
 			width:calc(100% - 138px);
-			>span:not(.badge) {
+			> span:not(.badge) {
 				// max-width: calc(100% - 33px);
 				// width:max-content;
 				//min-width:80px;
@@ -118,6 +116,7 @@
 		}
 		> .txt-price { // 금액만 가로고정 9,999,999원까지 대응
 			flex-wrap: wrap-reverse;
+			align-content: flex-end;
 			gap: 7px;
 			min-width:96px;
 		}
