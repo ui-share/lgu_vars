@@ -124,7 +124,7 @@
 		}
 		> .txt-price { // 금액만 가로고정 9,999,999원까지 대응
 			flex-wrap: wrap-reverse;
-    		align-content: flex-end;
+			align-content: flex-end;
 			column-gap: 6px;
 			row-gap:  8px;
 			max-width: 126px;
