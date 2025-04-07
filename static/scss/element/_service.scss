@@ -22,42 +22,6 @@
 		padding: 36px 0 48px;
 		gap: 0;
 	}
-	&.scan {
-		position:relative;
-		padding-top:56px;
-		padding-bottom:0;
-		.cont__wrap-service {padding:0;}
-		.cont__wrap.cont__wrap-btBtn .btn-group {
-			position:absolute;
-			bottom:0;
-			left:0;
-			width:calc(100% - 40px);
-			padding:0;
-			margin:0 20px 20px;
-			border-radius: 4px;
-			overflow:hidden;
-			&::before {display:none;}
-		}
-		.scan-area:empty {
-			&:after {
-				content: "카드스캔API영역입니다";
-				display: block;
-				width: 100%;
-				height: calc(100% - 56px);
-				text-align: center;
-				font-size: 14px;
-				border: 1px solid red;
-				padding-top: 40vh;
-			}
-		}
-		.cont__wrap-btBtn {
-			position:absolute;
-			&:has(.accordion-container) {
-				background-color:var(--dt-white);
-				z-index: 999;
-			}
-		}
-	}
 	
 	&:has(.cont__wrap-cms) {
 		padding: 92px 0 95px;
