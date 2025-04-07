@@ -1724,8 +1724,7 @@ button {
 
 @media screen and (max-width: 281px) {
   .btn-group.flex-row {
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
   }
   .btn-group.flex-row .btn {
     width: 100%;
