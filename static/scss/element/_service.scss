@@ -1,8 +1,18 @@
 .section__cont {
+	&:has(.inform-wrap) {
+		.inform-wrap + table {
+			margin-top: 24px;
+		}
+	}
 	&:has(.cont__wrap-service) {
 		padding: 72px 0 95px;
 		&:has(.cont__wrap-service > .inform-wrap) {
 			padding-top: 92px;
+		}
+	}
+	@media screen and (max-width: 280px) {
+		&:has(.cont__wrap-service) {
+			padding-bottom: 155px;
 		}
 	}
 	&:has(.switch__wrap) { // summary, service 공통
