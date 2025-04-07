@@ -1477,8 +1477,9 @@ button {
 .btn-group.flex-row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
 }
 .btn-group.flex-row:not(.accordion-header) {
@@ -1505,9 +1506,7 @@ button {
 .btn-group.flex-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  row-gap: 8px;
+  gap: 8px;
 }
 .btn-group.flex-column .btn {
   width: 100%;
@@ -1723,9 +1722,13 @@ button {
   background-image: url(../../static/images/icon/m_ic_arrow_pink.png);
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 281px) {
   .btn-group.flex-row {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+  }
+  .btn-group.flex-row .btn {
+    width: 100%;
   }
 }
 .card-group {
@@ -4435,7 +4438,7 @@ select::-ms-expand {
 }
 
 .full-popup .container {
-  padding: 72px 0 95px;
+  padding: 72px 0 105px;
 }
 .full-popup .container:has(.twoFactorAuth) {
   padding-bottom: 175px;
@@ -4445,6 +4448,11 @@ select::-ms-expand {
 }
 .full-popup .container:has(.rmInvoice) {
   padding-bottom: 155px;
+}
+@media screen and (max-width: 281px) {
+  .full-popup .container {
+    padding-bottom: 165px;
+  }
 }
 .full-popup .section__cont {
   gap: 48px;

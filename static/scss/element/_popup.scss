@@ -448,7 +448,7 @@
 //풀팝업
 .full-popup {
 	.container {
-		padding: 72px 0 95px;
+		padding: 72px 0 105px;
 		&:has(.twoFactorAuth) {
 			padding-bottom: 175px;
 		}
@@ -458,7 +458,10 @@
 		&:has(.rmInvoice) {
 			padding-bottom: 155px;
 		}
-	}
+		@media screen and (max-width: 281px) {
+			padding-bottom: 165px;
+		}
+	}	
 	.section__cont {
 		gap: 48px;
 	}
