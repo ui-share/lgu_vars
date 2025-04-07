@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 눈으로 보는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/signUpConfirmation.css">
+
+	<!-- Scripts -->
+
+</head>
+<body>
+	<div class="page-wrapper signUpConfirmation">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util prev"><span>이전</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<!-- 홀맨 배너 영역// -->
+			<div class="section__cont summary">
+				<div class="cont__wrap cont__wrap-MOPaymentUsed">
+					<div class="select-billdate"></div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<span class="txt">이용 중인 휴대폰의</span>
+						</span>
+						<sapn class="txt price">
+							<span class="color-prim">가입 정보</span>예요
+						</sapn>
+					</div>
+				</div>
+			</div>
+
+			<div class="section__cont desc">
+				<div class="cont__wrap cont__wrap-vertical">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">나의 가입 정보</span>
+						</h6>
+					</div>
+
+					<!-- 가입정보데이터리스트 -->
+					<div class="info-col-wrap">
+						<div class="plan-wrap">
+							<div class="list-plan line">
+								<div class="row">
+									<span class="txt-title">이름</span>
+									<span class="txt-desc">
+										<span>김*플</span>
+									</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">휴대폰 번호</span>
+									<span class="txt-desc"><span>010-**12-**34</span></span>
+								</div>
+								<div class="row">
+									<span class="txt-title">가입일</span>
+									<span class="txt-desc"><span>NNNN년 NN월 NN일</span></span>
+								</div>
+								<div class="row">
+									<span class="txt-title">
+										현재 사용중인<br />
+										휴대폰 개통일
+									</span>
+									<span class="txt-desc"><span>NNNN년 NN월 NN일</span></span>
+								</div>
+								<div class="row">
+									<span class="txt-title">휴대폰 정보</span>
+									<span class="txt-desc">
+										<span>SM-F731NS12</span> <!-- 별칭으로 바꿀 수 있으면 별칭으로 노출 -->
+									</span>
+								</div>
+								<div class="row">
+									<span class="txt-title">휴대폰 가격</span>
+									<span class="txt-desc"><span>NN원</span></span>
+								</div>
+								<div class="row">
+									<span class="txt-title">가입대리점</span>
+									<span class="txt-desc">
+										<span>U+.COM_임직원</span>
+									</span>
+								</div>
+
+								<div class="row">
+									<span class="txt-title">가입대리점<br />연락처</span>
+									<span class="txt-desc">
+										<span>02-1644-7009</span>
+										<button class="btn btn-md btn-sec line">
+											<span class="txt">바로 연결</span>
+										</button>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-group flex-column">
+						<button type="button" class="btn btn-sec">
+							<span class="txt">가입 사실 확인서 발급</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 디바이더 영역 -->
+			<div class="section__divider"></div>
+
+			<!-- 상담 영역 -->
+			<div class="section__cont counsel">
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">아래 메뉴도 추천해요</span>
+						</h6>
+						<div class="tit-tail hidden"></div>
+					</div>
+					<div class="card-group">
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-billing.png" alt="청구요금">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">청구 요금</span>
+									<span class="txt">이번달과 지난달<br>요금 조회</span>
+								</div>
+							</div>
+						</div>
+						<div class="card" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-home-payment.png" alt="요금 바로납부">
+									</span>
+									<div class="flag flag-recent hidden">
+										<span class="txt">최근사용</span>
+									</div>
+								</div>
+								<div class="item text">
+									<span class="tit">요금 바로납부</span>
+									<span class="txt">청구요금 미리납부</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 
+					아코디언 닫힘 상태(기본) > 오픈시 : open 클래스 추가 
+					<div class="cont__wrap cont__wrap-counsel accordion-container open">
+				-->
+				<div class="cont__wrap cont__wrap-counsel accordion-container">
+					<div class="con__tit-box accordion-header" role="button" tabindex="0">
+						<span class="txt-sub">문의사항을 찾기 어려우신가요</span>
+						<h6 class="tit-head">
+							<span class="txt-title">다른 상담채널을 이용해 보세요</span>
+						</h6>
+						<div class="tit-tail">
+							<span class="img-box ico-toggle">
+								<img src="../../../../static/images/icon/ic-councel-down.svg" alt="">
+							</span>
+						</div>
+					</div>
+					<div class="card-group threeby accordion-content">
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-chatbot2.svg" alt="챗봇 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">챗봇 상담</span>
+									<span class="txt">대기없이 바로</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-ars-ai.svg" alt="AI 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">AI 상담</span>
+									<span class="txt">언제든지 빠른</span>
+								</div>
+							</div>
+						</div>
+						<div class="card detail" role="button" tabindex="0">
+							<div class="card-body">
+								<div class="item util">
+									<span class="img-box">
+										<img src="../../../../static/images/icon/ic-card-calls.png" alt="전화 상담">
+									</span>
+								</div>
+								<div class="item text">
+									<span class="tit">전화 상담</span>
+									<span class="txt">상세하고 친절한</span>
+								</div>
+							</div>
+							<div class="card-footer">
+								<div class="chips chips-tag hidden">
+									<span class="txt">점심시간</span>
+								</div>
+							</div> 
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+
+</body>
+</html>
