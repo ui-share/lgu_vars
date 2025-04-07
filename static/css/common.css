@@ -3687,8 +3687,8 @@ textarea::placeholder {
   flex: 1 auto;
 }
 .slct-box-wrap:has(.multi-box) .slct-box .txt {
-  min-width: 104px;
-  max-width: 104px;
+  min-width: 108px;
+  max-width: 108px;
 }
 .slct-box-wrap:has(.multi-box) .slct-box .txt > * {
   text-align: left;
@@ -3698,8 +3698,8 @@ textarea::placeholder {
   text-align: right;
 }
 .slct-box-wrap:has(.multi-box) .slct-box.done .txt > *:nth-child(3):nth-last-child(1) {
-  min-width: 31px;
-  max-width: 31px;
+  min-width: 34px;
+  max-width: 34px;
 }
 
 @media screen and (max-width: 359px) {
@@ -4556,7 +4556,7 @@ select::-ms-expand {
   color: var(--dt-gray12);
 }
 .rmInvoice .list-wrap .list-box .list-wrap .list-box .head {
-  width: calc(100% - 84px);
+  width: calc(100% - 85px);
 }
 .rmInvoice .list-wrap .list-box .list-wrap .list-box .tail {
   min-width: 81px;

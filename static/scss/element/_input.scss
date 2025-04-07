@@ -491,8 +491,8 @@ textarea::placeholder {
 		}
 		.slct-box {			
 			.txt {
-				min-width: 104px;
-				max-width: 104px;
+				min-width: 108px;
+				max-width: 108px;
 				> * {
 					text-align: left;
 					min-width: 37px;
@@ -503,8 +503,8 @@ textarea::placeholder {
 					> * {
 						text-align: right;
 						&:nth-child(3):nth-last-child(1) {
-							min-width: 31px;
-							max-width: 31px;
+							min-width: 34px;
+							max-width: 34px;
 						}
 					}
 				}
