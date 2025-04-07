@@ -34,6 +34,7 @@
     .switch-box {
       position: relative;
       width: 44px;
+      min-width: 44px;
       height: 24px;
       background-color: var(--dt-gray09);
       border-radius: 100px;
