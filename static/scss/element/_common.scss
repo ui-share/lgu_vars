@@ -521,7 +521,15 @@ button {
 	}
 	&.middleAlign {
 		margin: auto 0;
-		padding: 20px;
+		padding: 40px;
+	}
+}
+.service-wrap {
+	display: flex;   
+	flex-direction: column;
+	gap: 16px;
+	.con__tit-box {
+		margin-bottom: 0;
 	}
 }
 .cont__wrap {
