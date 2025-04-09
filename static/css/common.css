@@ -5076,6 +5076,36 @@ select::-ms-expand {
   background-color: var(--dt-gray08);
 }
 
+.accordion-group.card {
+  padding: 0;
+  gap: 0;
+}
+.accordion-group.card .accordion-header {
+  align-items: center;
+}
+.accordion-group.card .accordion-header .txt-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dt-gray16);
+  line-height: 24px;
+}
+.accordion-group.card .accordion-header .ico-toggle {
+  flex: 0;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+}
+.accordion-group.card .accordion-content {
+  padding: 0 20px 16px;
+}
+.accordion-group.card .accordion-content > * {
+  padding-top: 16px;
+  border-top: 1px solid var(--dt-gray06);
+}
+.accordion-group.card .accordion-content .bullet-list {
+  --bulletList-font-size: 0.875rem;
+}
+
 .tabnav {
   width: 100%;
   display: flex;

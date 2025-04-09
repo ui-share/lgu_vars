@@ -221,3 +221,34 @@
 		}
 	}
 }
+
+.accordion-group {
+	&.card {
+		padding: 0;
+		gap: 0;
+		.accordion-header {
+			align-items: center;
+			.txt-title {
+				@include fw-6(16px);
+				color: var(--dt-gray16);
+				line-height: 24px;
+			}
+			.ico-toggle {
+				flex: 0;
+				width: 24px;
+				min-width: 24px;
+				height: 24px;
+			}
+		}
+		.accordion-content {
+			padding: 0 20px 16px;
+			> * {
+				padding-top: 16px;
+				border-top: 1px solid var(--dt-gray06);
+			}
+			.bullet-list {
+				--bulletList-font-size: 0.875rem;
+			}
+		}	
+	}	
+}
