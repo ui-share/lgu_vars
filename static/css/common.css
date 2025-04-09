@@ -642,9 +642,6 @@ button {
 .container:has(.singleCont) {
   height: 100%;
 }
-.container:has(.middleAlign) {
-  justify-content: center;
-}
 
 .section__divider {
   width: 100%;
@@ -667,6 +664,10 @@ button {
 .section__cont:has(+ .section__divider) {
   padding-bottom: 48px;
 }
+.section__cont:has(.middleAlign) {
+  margin: auto 0;
+}
+
 .cont__wrap-layout {
   display: flex;
   flex-direction: column;
@@ -674,6 +675,10 @@ button {
 }
 .cont__wrap-layout.singleCont {
   height: 100%;
+}
+.cont__wrap-layout.middleAlign {
+  margin: auto 0;
+  padding: 20px;
 }
 
 .cont__wrap {
