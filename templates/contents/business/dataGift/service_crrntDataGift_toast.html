@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/dataGift.css">
+	
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper dataGift">
+		<!-- header -->
+		<header class="header">
+			<div class="header__util">
+				<button type="button" class="btn btn-util end"><span>처음</span></button>
+			</div>
+			<div class="header__btn">
+				<button type="button" class="btn btn-callEnd"><span class="icon"></span><span class="txt">종료</span></button>
+			</div>
+		</header>
+		<!-- //header -->
+	
+		<!-- container -->
+		<div class="container">
+			<div class="section__cont ">
+				<div class="cont__wrap cont__wrap-service">
+					<div class="cont__txt-box">
+						<h4 class="txt">
+							<span class="deco">데이터 선물·충전 현황</span>을<br/>
+							한 곳에 모았어요
+						</h4>
+					</div>
+
+					<!-- 회선 변경 -->
+					<div class="card horizon chngCode">
+						<div class="card-body">
+							<div class="item text">
+								<span class="txt">모바일</span>
+								<span class="tit">010-1234-5678</span>
+								<span class="sub">외 1건</span>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="btn-group">
+								<button class="btn btn-md" type="button">
+									<span class="txt">다른 번호 선택</span>
+								</button>
+							</div>
+						</div> 
+					</div>
+					
+					<div class="slct-control combine-element">
+						<div class="slct-box-wrap">
+							<!-- 드롭다운 선택 후 상태 : done 클래스 추가 및 텍스트 변경
+								: <button type="button" class="slct-box done">
+								<span class="txt"></span> -->
+							<button type="button" class="slct-box ">
+								<span class="txt"><span>시작 일</span></span>
+								<!-- <span class="txt"><span>NN-NN-NN</span></span> -->
+								<span class="arrow"></span>
+							</button>
+							<span class="hyphen">~</span>
+							<button type="button" class="slct-box done">
+								<!-- <span class="txt"><span>종료 일</span></span> -->
+								<span class="txt"><span>NN-NN-NN</span></span>
+								<span class="arrow"></span>
+							</button>
+							<div class="btn-group">
+								<button type="button" class="btn btn-md btn-sec">
+									<span class="txt">검색</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="card-group flex-column">
+						<!-- 날짜별 선물 리스트 1set -->
+						<div class="card solid listGift">
+							<div class="gift-date">
+								<span>01년 01월 01일</span>
+							</div>
+							<!-- 선물 건 당 1set -->
+							<div class="card-body">
+								<div class="gift-info">
+									<span class="used-name">데이터 선물하기</span>
+									<span class="used-won">
+										<span>1GB</span>
+									</span>
+								</div>
+								<div class="gift-info">
+									<div class="flag success">
+										<span class="txt">선물</span>
+									</div>
+									<span class="txt-sub">김유플<span class="sub-tel">010-1234-5678</span></span>
+								</div>
+							</div>
+						</div>
+	
+						<!-- 날짜별 선물 리스트 1set -->
+						<div class="card solid listGift">
+							<div class="gift-date">
+								<span>01년 01월 01일</span>
+							</div>
+							<!-- 선물 건 당 1set -->
+							<div class="card-body">
+								<div class="gift-info">
+									<span class="used-name">데이터 2GB 쿠폰</span>
+									<span class="used-won">
+										<span>2GB</span>
+									</span>
+								</div>
+								<div class="gift-info">
+									<div class="flag success">
+										<span class="txt">선물</span>
+									</div>
+									<span class="txt-sub">김유플<span class="sub-tel">010-1234-5678</span></span>
+								</div>
+							</div>
+							<!-- 선물 건 당 1set -->
+							<div class="card-body">
+								<div class="gift-info">
+									<span class="used-name">데이터 선물하기</span>
+									<span class="used-won">
+										<span>1GB</span>
+									</span>
+								</div>
+								<div class="gift-info">
+									<div class="flag success">
+										<span class="txt">충전</span>
+									</div>
+									<span class="txt-sub">김유플<span class="sub-tel">010-1234-5678</span></span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="btn-group">
+						<button type="button" class="btn btn-sec">
+							<span class="txt">데이터 매월 자동주기 등록</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+	<div class="toast-wrap show">
+		<div class="toast">
+			<div class="toast-txt">
+				결합된 가족이 없어 데이터 자동주기 등록이 안돼요
+			</div>
+			<button class="btn btn-util close hidden" type="button" alt="닫기"></button>
+		</div>
+	</div>
+</body>
+</html>
