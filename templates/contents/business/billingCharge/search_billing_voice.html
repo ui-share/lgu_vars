@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- Set the viewport. -->
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimum-scale=1.0">
+	<!-- Disable automatic phone number detection. -->
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<title>LGU+ 보이는 ARS</title>
+
+	<!-- Css -->
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../../../../static/css/billingCharge.css">
+
+	<!-- Scripts -->
+</head>
+<body>
+	<div class="page-wrapper billingCharge">
+		
+		<!-- container -->
+		<div class="container">
+			<!-- 홀맨 배너 영역// -->
+			<!-- Case 청구서 기본 -->
+			<!-- <div class="section__cont">
+				<div class="cont__wrap cont__wrap-bill">
+					<div class="select-billdate">
+						<span class="txt-due">사용기간 <span>2월 1일</span> ~ <span>2월 28일</span></span>
+					</div>
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<button type="button" class="chips chips-date">
+								<span class="txt"><span>24년</span><span>3월</span></span>
+								<span class="arrow"></span>
+							</button>
+							<span class="txt">청구요금은</span>
+						</span>
+						<span class="txt price">
+							<span class="deco">214,900</span>
+							<span class="color-prim">원</span>이에요
+						</span>
+					</div>
+				</div>
+			</div> -->
+			
+
+			
+			<!-- 아코디언 영역 -->
+			<div class="section__cont desc">
+				<!-- <div class="cont__wrap cont__wrap-bill">
+				
+					<div class="cont__txt-box">
+						<span class="txt-select-wrap">
+							<span class="txt">청구요금은</span>
+						</span>
+						<span class="txt price">
+							<span class="deco">163,400</span>
+							<span class="color-prim">원</span>이에요
+						</span>
+					</div>
+				</div> -->
+				<!-- 발행된 청구서가 있을 경우 -->
+				<div class="cont__wrap">
+					<div class="con__tit-box">
+						<h6 class="tit-head">
+							<span class="txt-title">요금 상세</span>
+							<span class="txt-sub">(부가가치세 포함)</span>
+						</h6>
+						
+					</div>
+					<div class="list-payment">
+						<div class="info-price-wrap">						
+							<div class="list-info-price accordion-container open"><!-- open 클래스로 show/hide 조정 <div class="list-info-price accordion-container open">-->
+								<button class="info-price accordion-header"><!-- 아코디언 버튼 -->
+									<span class="row txt-title">
+										<!-- <div class="badge badge-round">
+											<span class="txt">A</span>
+										</div> -->
+										<span>휴대폰 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>85,000원</span>										
+									</span>
+								</button>
+								<div class="accordion-content"><!-- 아코디언 컨텐트 -->
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<!-- default -->
+											<span class="row">
+												<span class="txt-title ico">월정액</span>
+												<span class="txt-price">85,000원</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						
+							<div class="list-info-price accordion-container open">
+								<button class="info-price accordion-header">
+									<span class="row txt-title">
+										<!-- <div class="badge badge-round">
+											<span class="txt">B</span>
+										</div> -->
+										<span>부가서비스 이용요금</span>
+									</span>
+									<span class="row txt-price">
+										<span>78,400원</span>
+									</span>
+								</button>
+								<div class="accordion-content">
+									<ul class="info-price-detail">
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">콘텐츠 이용료</span>
+												<span class="txt-price">71,600원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">구글Play스토어이용료</span>
+													<span class="txt-price">69,400원</span>
+												</li>
+												<li class="row">
+													<span class="txt-title">PASS헬스케어(WEB)</span>
+													<span class="txt-price">2,200원</span>
+												</li>
+											</ul>
+										</li>
+										<li class="info-wrap">
+											<span class="row">
+												<span class="txt-title ico">부가서비스 이용료</span>
+												<span class="txt-price">6,800원</span>
+											</span>
+											<ul class="col list-detail">
+												<li class="row">
+													<span class="txt-title">폰 파손 보험 80</span>
+													<span class="txt-price">3,200원</span>
+												</li>
+												<li class="row">
+													<span class="txt-title">휴대폰 보험 플러스</span>
+													<span class="txt-price">2,500원</span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+							
+	
+							<div class="list-info-price accordion-container">
+								<span class="info-price accordion-header">
+									<span class="row txt-title">
+										<span class="badge badge-round"><span class="txt">A</span></span>
+										<span>이번달 요금 계</span>
+									</span>
+									<span class="row txt-price">
+										<span>163,400원</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="list-info-price accordion-container">
+								<span class="info-price accordion-header">
+									<span class="row txt-title">
+										<span class="badge badge-round"><span class="txt">B</span></span>
+										<span>미납요금 계</span>
+									</span>
+									<span class="row txt-price">
+										<span>0원</span>
+									</span>
+								</span>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">A+B</span></span>
+										<span>청구금액</span>
+									</span>
+									<span class="txt-price">163,400원</span>
+								</span>
+							</div>
+						</div>
+						<!-- <div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">B</span></span>미납요금 계</span>
+									<span class="txt-price">0원</span>
+								</span>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">A+B</span></span>청구금액</span>
+									<span class="txt-price">163,400원</span>
+								</span>
+							</div>
+						</div>
+						<div class="info-price-wrap">
+							<div class="info-price total-last">
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">A</span></span>이번달 요금 계</span>
+									<span class="txt-price">163,400원</span>
+								</span>
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">B</span></span>미납요금 계</span>
+									<span class="txt-price">0원</span>
+								</span>
+								<span class="row">
+									<span class="txt-title">
+										<span class="badge badge-round"><span class="txt">A+B</span></span>청구금액</span>
+									<span class="txt-price">163,400원</span>
+								</span>
+							</div>
+						</div> -->
+					</div>
+				</div>
+
+				
+				
+			</div>
+			
+			
+		</div>
+		<!-- //container -->
+	</div>
+</body>
+</html>
